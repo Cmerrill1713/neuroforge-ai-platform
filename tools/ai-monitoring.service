@@ -1,0 +1,26 @@
+[Unit]
+Description=AI System Quality Monitoring Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+User=christianmerrill
+Group=staff
+WorkingDirectory=/Users/christianmerrill/Prompt Engineering
+ExecStart=/Users/christianmerrill/Prompt Engineering/tools/automated_monitoring.sh
+StandardOutput=journal
+StandardError=journal
+
+# Restart policy
+Restart=no
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/Users/christianmerrill/Prompt Engineering/archive/logs
+
+[Install]
+WantedBy=multi-user.target
