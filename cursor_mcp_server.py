@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 from src.core.engines.ollama_adapter import OllamaAdapter
 from src.core.agents.prompt_agent import PromptAgentManager, PromptAgentRegistry
 from src.core.reasoning.parallel_reasoning_engine import ParallelReasoningEngine, ReasoningMode
-from test_knowledge_base import SimpleKnowledgeBase
+from src.core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

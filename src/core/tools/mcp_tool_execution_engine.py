@@ -24,19 +24,14 @@ import logging
 import time
 import uuid
 from abc import ABC, abstractmethod
-from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum
-from typing import Any, Dict, List, Optional, Union, Callable, AsyncGenerator
-from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 import json
-import hashlib
 
-from pydantic import BaseModel, Field, validator
-from pydantic_ai import Agent, Tool
+from pydantic import BaseModel, Field
 
-from ..models.contracts import ToolCall, ToolResult, ToolSchema
-from ..schemas.input_schemas import ProcessedInput
+from ..models.contracts import ToolCall, ToolSchema
 from ..engines.qwen3_omni_engine import ContextAnalysis
 
 logger = logging.getLogger(__name__)
@@ -590,7 +585,7 @@ class ToolIntegrationService:
                 return base_answer
             
             # Create integration prompt
-            integration_prompt = self._create_integration_prompt(
+            self._create_integration_prompt(
                 base_answer, successful_results, context_analysis
             )
             

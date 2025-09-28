@@ -16,14 +16,13 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
-import os
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional
 from uuid import uuid4
 
 import yaml
@@ -321,7 +320,7 @@ class SystemChecker:
         
         try:
             # Run pytest with coverage
-            result = subprocess.run([
+            subprocess.run([
                 "python3", "-m", "pytest", 
                 "--cov=src", 
                 "--cov-report=json",
@@ -812,7 +811,7 @@ async def main():
                 print(f"   ❌ {issue.name}: {issue.message}")
         
         if report.recommendations:
-            print(f"\n💡 RECOMMENDATIONS:")
+            print("\n💡 RECOMMENDATIONS:")
             for rec in report.recommendations:
                 print(f"   • {rec}")
         

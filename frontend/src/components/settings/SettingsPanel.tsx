@@ -168,7 +168,7 @@ const SettingsPanel: React.FC = () => {
 
       {hasChanges && (
         <Alert severity="info" sx={{ mb: 3, backgroundColor: 'rgba(33, 150, 243, 0.1)', color: 'white' }}>
-          You have unsaved changes. Don't forget to save!
+          You have unsaved changes. Don&apos;t forget to save!
         </Alert>
       )}
 

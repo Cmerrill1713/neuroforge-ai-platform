@@ -11,16 +11,13 @@ Complies with:
 - Milestone 1: Core Pipeline Foundation (tasks/milestone_1_core_pipeline.md)
 """
 
-import os
 import time
 import logging
-from typing import Dict, List, Any, Optional, Union
+from typing import Dict, List, Any, Union
 from pathlib import Path
 import torch
 import mlx.core as mx
-import mlx.nn as nn
 from dataclasses import dataclass
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -399,7 +396,7 @@ class Qwen3OmniEngine:
             if self.use_mlx_optimizations:
                 # Convert to MLX tensors for optimization
                 try:
-                    input_ids = mx.array(inputs.input_ids.numpy())
+                    mx.array(inputs.input_ids.numpy())
                     logger.debug("Using MLX optimizations for generation")
                 except Exception as e:
                     logger.debug(f"MLX tensor conversion failed, using standard generation: {e}")

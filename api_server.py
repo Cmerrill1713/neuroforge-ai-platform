@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 import json
+import uuid
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
@@ -22,7 +23,10 @@ try:
     from fastapi.responses import HTMLResponse
     from pydantic import BaseModel
     from enhanced_agent_selection import EnhancedAgentSelector
-    from test_knowledge_base import SimpleKnowledgeBase
+    from core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
+    from src.core.security.sanitizer import sanitize_user_text
+    from src.core.assessment.response_reviewer import evaluate_response
+    from src.core.logging.event_tracker import log_event
 except ImportError as e:
     print(f"❌ Missing dependencies: {e}")
     print("Install with: pip install fastapi uvicorn websockets")
@@ -54,6 +58,12 @@ class ChatResponse(BaseModel):
     confidence: float
     reasoning_paths: Optional[List[Dict[str, Any]]] = None
     timestamp: str
+    fallback_used: bool = False
+    model_name: Optional[str] = None
+    request_id: Optional[str] = None
+    review_required: bool = False
+    review_reasons: Optional[Dict[str, Any]] = None
+    security_flags: int = 0
 
 class AgentStatus(BaseModel):
     """Agent status model."""
@@ -140,14 +150,25 @@ async def chat_endpoint(request: ChatRequest):
     
     if not enhanced_selector:
         raise HTTPException(status_code=503, detail="System not initialized")
-    
+    request_id = str(uuid.uuid4())
+
     try:
         start_time = datetime.now()
         
+        sanitized = sanitize_user_text(request.message)
+        if sanitized.flags:
+            log_event(
+                "security_flag",
+                {
+                    "request_id": request_id,
+                    "flags": sanitized.flags,
+                }
+            )
+
         # Convert to task request format
         task_request = {
             "task_type": request.task_type,
-            "content": request.message,
+            "content": sanitized.text,
             "latency_requirement": request.latency_requirement,
             "input_type": request.input_type,
             "max_tokens": request.max_tokens,
@@ -161,6 +182,8 @@ async def chat_endpoint(request: ChatRequest):
         
         # Extract response content
         response_content = request.message  # Default fallback
+        model_name = None
+        fallback_used = False
         
         # Try to get actual AI response
         try:
@@ -182,11 +205,13 @@ async def chat_endpoint(request: ChatRequest):
                 # Generate actual AI response
                 ai_response = await enhanced_selector.ollama_adapter.generate_response(
                     model_key=model_key,
-                    prompt=request.message,
+                    prompt=sanitized.text,
                     max_tokens=request.max_tokens,
                     temperature=request.temperature
                 )
                 response_content = ai_response.content
+                model_name = ai_response.model
+                fallback_used = bool(ai_response.metadata.get("fallback_used"))
         except Exception as e:
             logger.warning(f"Failed to generate AI response: {e}, falling back to echo")
         
@@ -212,20 +237,57 @@ async def chat_endpoint(request: ChatRequest):
                 for path in pr_result.paths
             ]
         
-        return ChatResponse(
+        confidence_value = result['parallel_reasoning_result'].best_path.confidence if result.get('parallel_reasoning_result') and result['parallel_reasoning_result'].best_path else 0.8
+        review = evaluate_response(
+            confidence=confidence_value,
+            fallback_used=fallback_used,
+            security_flags=len(sanitized.flags)
+        )
+
+        chat_response = ChatResponse(
             response=response_content,
             agent_name=result['selected_agent']['agent_name'],
             task_complexity=result['task_complexity'],
             use_parallel_reasoning=result['use_parallel_reasoning'],
             reasoning_mode=result['reasoning_mode'],
             processing_time=processing_time,
-            confidence=result['parallel_reasoning_result'].best_path.confidence if result.get('parallel_reasoning_result') and result['parallel_reasoning_result'].best_path else 0.8,
+            confidence=confidence_value,
             reasoning_paths=reasoning_paths,
-            timestamp=datetime.now().isoformat()
+            timestamp=datetime.now().isoformat(),
+            fallback_used=fallback_used,
+            model_name=model_name,
+            request_id=request_id,
+            review_required=review.requires_human_review,
+            review_reasons=review.reasons,
+            security_flags=len(sanitized.flags)
         )
+        log_event(
+            "chat_response",
+            {
+                "request_id": request_id,
+                "task_type": request.task_type,
+                "agent": chat_response.agent_name,
+                "model": chat_response.model_name,
+                "fallback_used": chat_response.fallback_used,
+                "processing_time": chat_response.processing_time,
+                "confidence": chat_response.confidence,
+                "parallel_reasoning": chat_response.use_parallel_reasoning,
+                "review_required": chat_response.review_required,
+                "security_flags": chat_response.security_flags,
+            }
+        )
+        return chat_response
         
     except Exception as e:
         logger.error(f"Chat endpoint error: {e}")
+        log_event(
+            "chat_error",
+            {
+                "request_id": request_id,
+                "task_type": request.task_type,
+                "error": str(e),
+            }
+        )
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/agents")
@@ -489,14 +551,14 @@ if __name__ == "__main__":
     import uvicorn
     
     print("🚀 Starting Agentic LLM Core API Server")
-    print("📡 API Documentation: http://localhost:8002/docs")
-    print("🧪 Test Interface: http://localhost:8002/test")
-    print("🔌 WebSocket: ws://localhost:8002/ws/chat")
+    print("📡 API Documentation: http://localhost:8000/docs")
+    print("🧪 Test Interface: http://localhost:8000/test")
+    print("🔌 WebSocket: ws://localhost:8000/ws/chat")
     
     uvicorn.run(
         "api_server:app",
         host="0.0.0.0",
-        port=8002,
+        port=8000,
         reload=True,
         log_level="info"
     )

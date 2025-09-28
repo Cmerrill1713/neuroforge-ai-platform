@@ -10,14 +10,13 @@ import json
 import logging
 import time
 import hashlib
-from typing import Dict, List, Any, Optional, Tuple, Union
+from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 import numpy as np
 
 # Redis imports
 try:
-    import redis
     import redis.asyncio as aioredis
     REDIS_AVAILABLE = True
 except ImportError:

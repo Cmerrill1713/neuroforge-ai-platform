@@ -29,7 +29,7 @@ from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.sqlalchemy import SqlalchemyIntegration
 
 from src.config.settings import settings
-from src.core.engines.enhanced_agent_selector import EnhancedAgentSelector
+from enhanced_agent_selection import EnhancedAgentSelector
 from src.core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
 
 # Configure logging

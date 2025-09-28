@@ -189,10 +189,10 @@ export function ColorOptimizationEngine() {
       setIsOptimizing(false)
       setOptimizationProgress(0)
     }
-  }, [optimizationSettings, selectedAlgorithm])
+  }, [optimizationSettings, selectedAlgorithm, generateBaseTheme, generateOptimizedTheme])
 
   // Generate base theme with 2025 trends
-  const generateBaseTheme = () => {
+  const generateBaseTheme = useCallback(() => {
     const trendColors = Object.keys(colorPsychology2025)
     const selectedTrend = trendColors[Math.floor(Math.random() * trendColors.length)]
     const psychology = colorPsychology2025[selectedTrend as keyof typeof colorPsychology2025]
@@ -222,10 +222,10 @@ export function ColorOptimizationEngine() {
       metrics,
       appliedAt: Date.now()
     }
-  }
+  }, [])
 
   // Generate optimized theme variant
-  const generateOptimizedTheme = (baseTheme: any, iteration: number) => {
+  const generateOptimizedTheme = useCallback((baseTheme: any, iteration: number) => {
     const palette = { ...baseTheme.palette }
     
     // Apply optimization based on selected algorithm
@@ -274,7 +274,7 @@ export function ColorOptimizationEngine() {
       palette,
       metrics
     }
-  }
+  }, [selectedAlgorithm, optimizationSettings])
 
   // Color calculation utilities
   const generatePaletteFromTrend = (trend: string) => {

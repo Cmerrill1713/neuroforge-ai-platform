@@ -8,17 +8,20 @@ Includes GPU acceleration, quantum-inspired reasoning, and chaos theory elements
 import asyncio
 import logging
 import time
-import random
-import math
-from typing import List, Dict, Any, Optional, Tuple
+import os
+from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 from enum import Enum
-import json
+
+# Reduce the likelihood of OpenMP initialisation failures in restricted environments.
+os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
+os.environ.setdefault("KMP_AFFINITY", "disabled")
+os.environ.setdefault("OMP_NUM_THREADS", os.environ.get("OMP_NUM_THREADS", "1"))
+os.environ.setdefault("KMP_USE_SHM", "0")
 
 # HRM-inspired imports
 try:
     import torch
-    import torch.nn.functional as F
     GPU_AVAILABLE = torch.cuda.is_available()
 except ImportError:
     GPU_AVAILABLE = False

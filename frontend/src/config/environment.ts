@@ -6,7 +6,7 @@ export const config = {
     environment: process.env.NODE_ENV || 'development',
   },
   api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000',
+        baseUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000',
     timeout: 10000,
   },
   chat: {

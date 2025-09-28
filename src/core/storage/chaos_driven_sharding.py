@@ -6,12 +6,10 @@ Based on HRM-enhanced AI model suggestions from continuous improvement loop
 """
 
 import asyncio
-import json
 import logging
 import time
-import math
 import hashlib
-from typing import Dict, List, Any, Optional, Tuple, Callable
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, field
 from enum import Enum
 import numpy as np
@@ -391,7 +389,6 @@ class ChaosDrivenSharding:
         
         for shard_id in self.shards.keys():
             # Each quantum state represents a different optimization goal
-            state_score = 0.0
             
             # State 1: Optimize for load balance
             load_balance_score = 1.0 - (self.shards[shard_id].data_count / max(1, self._get_max_shard_load()))

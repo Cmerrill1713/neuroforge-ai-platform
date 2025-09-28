@@ -16,7 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from src.config.settings import settings
-from src.core.engines.enhanced_agent_selector import EnhancedAgentSelector
+from enhanced_agent_selection import EnhancedAgentSelector
 from src.core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
 
 # Configure logging

@@ -12,7 +12,6 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
-import time
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
@@ -21,7 +20,7 @@ from uuid import uuid4
 
 import aiohttp
 import jsonschema
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -328,7 +327,7 @@ class MCPTestManager:
         # Extract test information
         test_name = config_data.get("test_name", "unknown")
         server_type = config_data.get("server_type", "unknown")
-        tool_name = config_data.get("tool_name", "unknown")
+        config_data.get("tool_name", "unknown")
         input_data = config_data.get("input_data", {})
         expected_response = config_data.get("expected_response", {})
         test_config_data = config_data.get("test_config", {})
@@ -385,7 +384,7 @@ class MCPTestManager:
         
         # Print validation results
         if result.validation_results:
-            print(f"\n🔍 Validation Results:")
+            print("\n🔍 Validation Results:")
             for validation_type, validation_result in result.validation_results.items():
                 validation_emoji = "✅" if validation_result.get("valid", False) else "❌"
                 print(f"   {validation_emoji} {validation_type}: {validation_result.get('message', 'N/A')}")
@@ -395,7 +394,7 @@ class MCPTestManager:
         
         # Print input data summary
         if result.input_data:
-            print(f"\n📥 Input Data:")
+            print("\n📥 Input Data:")
             for key, value in result.input_data.items():
                 if isinstance(value, dict) and len(str(value)) > 100:
                     print(f"   {key}: {type(value).__name__} ({len(value)} items)")
@@ -404,7 +403,7 @@ class MCPTestManager:
         
         # Print output data summary
         if result.output_data:
-            print(f"\n📤 Output Data:")
+            print("\n📤 Output Data:")
             for key, value in result.output_data.items():
                 if isinstance(value, (list, dict)) and len(str(value)) > 100:
                     print(f"   {key}: {type(value).__name__} ({len(value)} items)")

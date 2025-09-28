@@ -6,11 +6,10 @@ Based on HRM-enhanced AI model suggestions from continuous improvement loop
 """
 
 import asyncio
-import json
 import logging
 import time
 import random
-from typing import Dict, List, Any, Optional, Tuple, Callable
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, field
 from enum import Enum
 import numpy as np

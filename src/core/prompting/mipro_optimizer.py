@@ -6,14 +6,14 @@ import importlib
 import logging
 from dataclasses import dataclass
 from datetime import datetime
-from typing import TYPE_CHECKING, Any, Callable, Iterable, List, Optional, Sequence, Tuple
+from typing import TYPE_CHECKING, Any, Callable, List, Optional, Sequence, Tuple
 
 from pydantic import BaseModel, Field
 
 from ..agents import PromptAgentProfile
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
-    from dspy import Module  # type: ignore
+    pass  # type: ignore
 
 logger = logging.getLogger(__name__)
 

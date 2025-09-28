@@ -22,7 +22,7 @@ try:
     from fastapi.responses import JSONResponse
     from pydantic import BaseModel
     from enhanced_agent_selection import EnhancedAgentSelector
-    from test_knowledge_base import SimpleKnowledgeBase
+    from src.core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
 except ImportError as e:
     print(f"❌ Missing dependencies: {e}")
     print("Install with: pip install fastapi uvicorn")

@@ -245,7 +245,7 @@ export default function DevilsAdvocateOverlay({
                 </Avatar>
                 <Box sx={{ flexGrow: 1 }}>
                   <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                    🎭 Devil's Advocate Analysis
+                    🎭 Devil&apos;s Advocate Analysis
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Critical thinking challenges for: {currentAction}
@@ -272,7 +272,7 @@ export default function DevilsAdvocateOverlay({
               {isGenerating && (
                 <Box sx={{ mb: 3 }}>
                   <Typography variant="body2" sx={{ mb: 1 }}>
-                    🤔 Devil's Advocate is analyzing...
+                    🤔 Devil&apos;s Advocate is analyzing...
                   </Typography>
                   <LinearProgress />
                 </Box>
@@ -404,7 +404,7 @@ export default function DevilsAdvocateOverlay({
               {challenges.length > 0 && !isGenerating && (
                 <Alert severity="warning" sx={{ mt: 2 }}>
                   <Typography variant="body2">
-                    <strong>Devil's Advocate Summary:</strong> {challenges.length} critical challenges identified. 
+                    <strong>Devil&apos;s Advocate Summary:</strong> {challenges.length} critical challenges identified. 
                     Consider each carefully before proceeding.
                   </Typography>
                 </Alert>

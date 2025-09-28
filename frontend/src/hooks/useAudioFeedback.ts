@@ -23,8 +23,8 @@ class AudioFeedbackManager {
 
   constructor(config: AudioFeedbackConfig) {
     this.config = config
-    // Only initialize on client side
-    if (typeof window !== 'undefined') {
+    // Only initialize on client side - completely skip during SSR
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       this.initializeAudioContext()
     }
   }
@@ -141,8 +141,8 @@ export const useAudioFeedback = (config: AudioFeedbackConfig) => {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    // Only initialize on client side
-    if (typeof window !== 'undefined') {
+    // Only initialize on client side - completely skip during SSR
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       setIsClient(true)
       if (!audioManagerRef.current) {
         audioManagerRef.current = new AudioFeedbackManager(config)

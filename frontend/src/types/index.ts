@@ -13,6 +13,8 @@ export interface ChatMessage {
   content: string;
   sender: 'user' | 'assistant';
   timestamp: Date | string;
+  model?: string;
+  metadata?: Record<string, any>;
 }
 
 export interface AppState {

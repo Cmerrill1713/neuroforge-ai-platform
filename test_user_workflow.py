@@ -16,7 +16,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from enhanced_agent_selection import EnhancedAgentSelector
-from test_knowledge_base import SimpleKnowledgeBase
+from src.core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

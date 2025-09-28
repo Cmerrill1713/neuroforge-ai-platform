@@ -20,6 +20,10 @@ export const useKeyboardShortcuts = (config: KeyboardShortcutsConfig) => {
       event.target instanceof HTMLTextAreaElement ||
       event.target instanceof HTMLSelectElement
     ) {
+      // Explicitly allow spacebar in text inputs
+      if (event.key === ' ') {
+        return
+      }
       return
     }
 

@@ -117,10 +117,10 @@ export function VoiceAssistant({ onCommand, onResponse }: VoiceAssistantProps) {
         setCurrentTranscript('')
       }
     }
-  }, [language])
+  }, [language, processCommand])
 
   // Process voice commands
-  const processCommand = async (command: string) => {
+  const processCommand = useCallback(async (command: string) => {
     setIsProcessing(true)
     
     const voiceCommand: VoiceCommand = {
@@ -166,7 +166,7 @@ export function VoiceAssistant({ onCommand, onResponse }: VoiceAssistantProps) {
     } finally {
       setIsProcessing(false)
     }
-  }
+  }, [confidence, voiceEnabled, onCommand, onResponse, speak])
 
   // AI command processing
   const processAICommand = async (command: string): Promise<string> => {
@@ -225,7 +225,7 @@ export function VoiceAssistant({ onCommand, onResponse }: VoiceAssistantProps) {
   }
 
   // Text-to-speech
-  const speak = (text: string) => {
+  const speak = useCallback((text: string) => {
     if ('speechSynthesis' in window) {
       if (synthesisRef.current) {
         speechSynthesis.cancel()
@@ -242,7 +242,7 @@ export function VoiceAssistant({ onCommand, onResponse }: VoiceAssistantProps) {
       
       speechSynthesis.speak(synthesisRef.current)
     }
-  }
+  }, [voiceSpeed, voicePitch])
 
   const startListening = () => {
     if (recognitionRef.current && !isListening) {
@@ -308,7 +308,7 @@ export function VoiceAssistant({ onCommand, onResponse }: VoiceAssistantProps) {
               </Typography>
               {currentTranscript && (
                 <Typography variant="body1" sx={{ mt: 1, fontStyle: 'italic' }}>
-                  "{currentTranscript}"
+                  &quot;{currentTranscript}&quot;
                 </Typography>
               )}
             </Box>

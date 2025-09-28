@@ -4,11 +4,10 @@ from __future__ import annotations
 
 import json
 import logging
-import random
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence
+from typing import Any, Callable, Dict, List, Optional, Sequence
 
 from ..training import GradeRecord, ParallelR1Pipeline, PromptRecycler
 

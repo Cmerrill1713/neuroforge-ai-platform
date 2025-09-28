@@ -10,20 +10,17 @@ Status: Draft
 from __future__ import annotations
 
 import asyncio
-import json
 import logging
-import ssl
 import subprocess
 import uuid
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Union
+from typing import Any, Dict, List, Optional, Set
 from urllib.parse import urlparse
 
 import aiohttp
-import asyncpg
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -160,7 +157,7 @@ class SupabaseRestConnector(MCPServerConnector):
                     if response.status == 200:
                         self.server.status = ConnectionStatus.CONNECTED
                         self.server.last_connected = datetime.now(timezone.utc)
-                        self.logger.info(f"Successfully connected to Supabase REST API")
+                        self.logger.info("Successfully connected to Supabase REST API")
                         return True
                     else:
                         self.server.status = ConnectionStatus.ERROR
@@ -880,7 +877,7 @@ async def main():
         print(f"   - {tool.name} ({tool.server})")
     
     # Print server status
-    print(f"\n📊 Server Status:")
+    print("\n📊 Server Status:")
     status = manager.get_server_status()
     for server_id, info in status.items():
         print(f"   {server_id}: {info['status']} ({info['allowed_tools_count']}/{info['tools_count']} tools allowed)")

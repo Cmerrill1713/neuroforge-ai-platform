@@ -11,18 +11,16 @@ Status: Draft
 from __future__ import annotations
 
 import asyncio
-import base64
 import logging
 import re
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional
 from uuid import uuid4
 
-import torch
 from PIL import Image
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -521,13 +519,13 @@ async def main():
         print(f"Processing Time: {response.processing_time_ms:.2f}ms")
         
         if response.metadata:
-            print(f"\n📊 Image Metadata:")
+            print("\n📊 Image Metadata:")
             print(f"   Resolution: {response.metadata.width}x{response.metadata.height}")
             print(f"   Format: {response.metadata.format.value}")
             print(f"   Size: {response.metadata.file_size_bytes:,} bytes")
             print(f"   Color Mode: {response.metadata.color_mode}")
         
-        print(f"\n📝 Description:")
+        print("\n📝 Description:")
         print(f"   {response.description}")
         
         if response.defects:
@@ -548,7 +546,7 @@ async def main():
                 print(f"     Confidence: {component.confidence:.2f}")
         
         if response.technical_details:
-            print(f"\n⚙️ Technical Details:")
+            print("\n⚙️ Technical Details:")
             for key, value in response.technical_details.items():
                 print(f"   - {key}: {value}")
         

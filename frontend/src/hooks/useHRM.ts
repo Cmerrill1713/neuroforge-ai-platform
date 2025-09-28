@@ -163,7 +163,7 @@ export function useHRM(initialConfig?: Partial<HRMConfig>): UseHRMReturn {
       setReasoningProgress(100)
       reasoningRef.current = null
     }
-  }, [isReasoning, config])
+  }, [isReasoning])
 
   const simulateReasoningProcess = async (chain: ReasoningChain, signal: AbortSignal) => {
     const steps = [

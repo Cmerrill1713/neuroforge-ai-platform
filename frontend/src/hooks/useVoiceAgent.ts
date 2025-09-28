@@ -152,7 +152,7 @@ export const useVoiceAgent = (options: VoiceAgentOptions = {}): VoiceAgentReturn
     
     // Clear transcript after processing
     voiceInput.clearTranscript();
-  }, [voiceInput.transcript, isActive, wakeWordDetected, config.wakeWordEnabled, processVoiceMessage]);
+  }, [voiceInput.transcript, isActive, wakeWordDetected, config.wakeWordEnabled, processVoiceMessage, voiceInput]);
 
   // Continuous listening mode
   useEffect(() => {

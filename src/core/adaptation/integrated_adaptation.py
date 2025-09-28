@@ -4,15 +4,13 @@ Integrated Model Adaptation System
 Combines adaptive context, hallucination detection, and reasoning assistance
 """
 
-import json
 import logging
-import time
-from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Tuple
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional
 from enum import Enum
 
 from .adaptive_model_context import AdaptiveModelContextSystem, ModelCapability, ReasoningLevel
-from .hallucination_detection import HallucinationDetectionSystem, ConfidenceLevel
+from .hallucination_detection import HallucinationDetectionSystem
 from .reasoning_assistance import ReasoningAssistanceSystem, ReasoningDomain
 
 logger = logging.getLogger(__name__)
@@ -465,7 +463,7 @@ def test_integrated_system():
         mock_response = "I think this might work, but I'm not sure about the details..."
         analysis = system.analyze_response(model_id, mock_response, task_type)
         
-        logger.info(f"   Response Analysis:")
+        logger.info("   Response Analysis:")
         logger.info(f"     Hallucination Detected: {analysis.hallucination_detected}")
         logger.info(f"     Confidence Score: {analysis.confidence_score:.2f}")
         logger.info(f"     Reasoning Quality: {analysis.reasoning_quality:.2f}")

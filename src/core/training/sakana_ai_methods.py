@@ -6,14 +6,11 @@ Implements Text-to-LoRA and Transformer² for revolutionary fine-tuning
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import logging
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Any
 from dataclasses import dataclass
-import json
-import numpy as np
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import LoraConfig, get_peft_model, TaskType
+from transformers import AutoTokenizer
+from peft import LoraConfig, TaskType
 import time
 
 logger = logging.getLogger(__name__)
@@ -481,14 +478,13 @@ def test_sakana_methods():
     
     # Test prompt
     prompt = "Make this model excel at code generation and debugging"
-    test_input = "def fibonacci(n):"
     
     try:
         # Test Text-to-LoRA
         logger.info("🎯 Testing Text-to-LoRA...")
         adapter_result = sakana.generate_adapter_from_text(prompt, "microsoft/DialoGPT-small")
         
-        logger.info(f"✅ Text-to-LoRA Results:")
+        logger.info("✅ Text-to-LoRA Results:")
         logger.info(f"   Detected Skills: {adapter_result['adapter_info']['detected_skills']}")
         logger.info(f"   Skill Weights: {adapter_result['adapter_info']['skill_weights']}")
         

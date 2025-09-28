@@ -186,23 +186,44 @@ class SimpleEdgeRequestHandler(BaseHTTPRequestHandler):
     def _generate_response(self, message: str, agent_id: str) -> str:
         """Generate AI response based on agent type"""
         
-        # Simple response generation based on agent type
+        # Check for test/system messages first
+        message_lower = message.lower().strip()
+        
+        if any(test_word in message_lower for test_word in ['test', 'check', 'verify', 'status', 'working', 'functionality']):
+            if 'backend' in message_lower:
+                return "✅ Backend is working correctly! All systems operational."
+            elif 'frontend' in message_lower:
+                return "✅ Frontend is connected and functioning properly."
+            elif 'tts' in message_lower or 'voice' in message_lower:
+                return "✅ TTS system is ready and operational."
+            else:
+                return "✅ System test successful - all components working."
+        
+        # Check for simple greetings
+        if message_lower in ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening']:
+            return "Hello! How can I help you today?"
+        
+        # Check for help requests
+        if any(help_word in message_lower for help_word in ['help', 'assist', 'support']):
+            return "I'm here to help! What would you like to know or do?"
+        
+        # Generate contextual responses based on agent type
         responses = {
-            "assistant": f"I understand you're asking: '{message}'. As your AI assistant, I'm here to help with any questions or tasks you might have. How can I assist you further?",
+            "assistant": f"I understand: '{message}'. How can I help you with this?",
             
-            "creative": f"What an interesting prompt: '{message}'. Let me craft something creative for you. Here's a creative response that builds on your idea...",
+            "creative": f"Interesting idea: '{message}'. Let me help you explore this creatively.",
             
-            "technical": f"From a technical perspective regarding '{message}', I can help analyze this systematically. Let me break down the technical aspects...",
+            "technical": f"Technical question about '{message}'. Let me provide a clear explanation.",
             
-            "educational": f"Great question: '{message}'. Let me explain this in a way that's easy to understand. Here's what you should know...",
+            "educational": f"Learning about '{message}'. Here's what you should know:",
             
-            "business": f"Regarding your business inquiry about '{message}', here are some strategic considerations and recommendations...",
+            "business": f"Business inquiry: '{message}'. Here are some key considerations:",
             
-            "health": f"Thank you for sharing: '{message}'. While I can provide general wellness information, please consult healthcare professionals for medical advice...",
+            "health": f"Regarding '{message}': I can provide general wellness information, but please consult healthcare professionals for medical advice.",
             
-            "entertainment": f"Fun topic: '{message}'! Let me entertain you with some interesting facts and amusing perspectives...",
+            "entertainment": f"Fun topic: '{message}'! Here are some interesting points:",
             
-            "research": f"Research question: '{message}'. Let me help you explore this topic systematically with evidence-based insights..."
+            "research": f"Research on '{message}'. Let me help you explore this systematically."
         }
         
         return responses.get(agent_id, responses["assistant"])

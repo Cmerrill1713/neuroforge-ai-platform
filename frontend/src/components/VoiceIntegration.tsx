@@ -422,7 +422,7 @@ export function VoiceIntegration({
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
-                "{transcription}"
+                &quot;{transcription}&quot;
               </Typography>
               
               <Stack direction="row" spacing={1} sx={{ mt: 1 }}>

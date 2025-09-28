@@ -10,12 +10,27 @@ import logging
 import os
 import threading
 import time
-import torch
-import torchaudio as ta
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
-import edge_tts
-from chatterbox.tts import ChatterboxTTS
+try:
+    import torch  # type: ignore
+except ImportError:  # pragma: no cover - optional dependency
+    torch = None  # type: ignore
+
+try:
+    import torchaudio as ta  # type: ignore
+except ImportError:  # pragma: no cover - optional dependency
+    ta = None  # type: ignore
+
+try:
+    import edge_tts  # type: ignore
+except ImportError:  # pragma: no cover - optional dependency
+    edge_tts = None  # type: ignore
+
+try:
+    from chatterbox.tts import ChatterboxTTS  # type: ignore
+except ImportError:  # pragma: no cover - optional dependency
+    ChatterboxTTS = None  # type: ignore
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -37,8 +52,12 @@ class ProductionTTSManager:
         
         self.chatterbox_model = None
         self.chatterbox_loaded = False
-        self.device = "mps" if torch.backends.mps.is_available() else "cpu"
+        if torch and hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            self.device = "mps"
+        else:
+            self.device = "cpu"
         self._loading = False
+        self.chatterbox_supported = all(dep is not None for dep in (ChatterboxTTS, torch, ta))
         
         # Voice profiles for both systems
         self.voice_profiles = {
@@ -75,12 +94,15 @@ class ProductionTTSManager:
         }
         
         # Load Chatterbox in background
-        self._load_chatterbox_async()
+        if self.chatterbox_supported:
+            self._load_chatterbox_async()
+        else:
+            logger.info("Chatterbox dependencies unavailable; using Edge TTS only")
         self._initialized = True
     
     def _load_chatterbox_async(self):
         """Load Chatterbox model in background thread"""
-        if self._loading or self.chatterbox_loaded:
+        if not self.chatterbox_supported or self._loading or self.chatterbox_loaded:
             return
             
         self._loading = True
@@ -103,12 +125,13 @@ class ProductionTTSManager:
     async def generate_speech(self, text: str, output_file: str = None, voice_profile: str = "assistant", 
                             emotion: str = "neutral", speed: str = "normal", use_chatterbox: bool = True):
         """Generate speech with Chatterbox primary, Edge TTS fallback"""
-        
+
         # Get profile configuration
         profile_config = self.voice_profiles.get(voice_profile, self.voice_profiles["assistant"])
-        
+        file_size = 0.0
+
         # Try Chatterbox first if available and requested
-        if use_chatterbox and self.chatterbox_loaded and self.chatterbox_model:
+        if use_chatterbox and self.chatterbox_loaded and self.chatterbox_model and ta is not None:
             try:
                 logger.info(f"🎤 Generating with Chatterbox TTS: '{text[:50]}...'")
                 
@@ -159,6 +182,8 @@ class ProductionTTSManager:
         
         # Fallback to Edge TTS
         try:
+            if edge_tts is None:
+                raise RuntimeError("Edge TTS dependency not available")
             logger.info(f"🎤 Generating with Edge TTS: '{text[:50]}...'")
             
             edge_config = profile_config["edge"]

@@ -4,10 +4,9 @@ Adaptive Explainability System
 Implements HRM-inspired adaptive explainability with user feedback
 """
 
-import asyncio
 import logging
 import time
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 from enum import Enum
 
@@ -212,7 +211,7 @@ class AdaptiveExplainabilitySystem:
         
         level_config = self.config["explanation_levels"][level.value]
         max_length = level_config["max_length"]
-        detail_factor = level_config["detail_factor"]
+        level_config["detail_factor"]
         
         # Base explanation
         base_explanation = f"This is an explanation for: {request.content}"

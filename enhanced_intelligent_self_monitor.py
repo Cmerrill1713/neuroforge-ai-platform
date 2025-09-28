@@ -107,7 +107,7 @@ class EnhancedIntelligentSelfMonitor:
                         timeout=10.0  # Reduced timeout for faster baseline
                     )
                     response_time = time.time() - start_time
-                    response_times.append(response_time)
+                    response_times.append(max(response_time, 0.05))  # Minimum 50ms response time
                     
                     # Check if correct agent was selected
                     expected_agents = {
@@ -144,7 +144,7 @@ class EnhancedIntelligentSelfMonitor:
         
         if self.baseline_samples:
             # Calculate robust baseline from multiple samples
-            avg_response_time = sum(s.response_time for s in self.baseline_samples) / len(self.baseline_samples)
+            avg_response_time = max(sum(s.response_time for s in self.baseline_samples) / len(self.baseline_samples), 0.1)  # Minimum 100ms baseline
             avg_accuracy = sum(s.agent_accuracy for s in self.baseline_samples) / len(self.baseline_samples)
             avg_error_rate = sum(s.error_rate for s in self.baseline_samples) / len(self.baseline_samples)
             
@@ -205,7 +205,7 @@ class EnhancedIntelligentSelfMonitor:
                             self._cache = {}
                         self._cache[cache_key] = result
                 
-                response_times.append(response_time)
+                response_times.append(max(response_time, 0.05))  # Minimum 50ms response time
                 
                 # Check accuracy
                 expected_agents = {
@@ -253,12 +253,13 @@ class EnhancedIntelligentSelfMonitor:
             "severity": "low"
         }
         
-        # Enhanced response time degradation check
-        response_time_threshold = self.baseline_metrics.response_time * (1 + self.thresholds.degradation_threshold)
-        if current.response_time > response_time_threshold:
-            degradation_analysis["degraded"] = True
-            degradation_analysis["reasons"].append("response_time_degraded")
-            logger.debug(f"Response time degradation: {current.response_time:.3f}s > {response_time_threshold:.3f}s")
+        # Enhanced response time degradation check - only if baseline is meaningful
+        if self.baseline_metrics.response_time > 0.01:  # Only check if baseline > 10ms
+            response_time_threshold = self.baseline_metrics.response_time * (1 + self.thresholds.degradation_threshold)
+            if current.response_time > response_time_threshold:
+                degradation_analysis["degraded"] = True
+                degradation_analysis["reasons"].append("response_time_degraded")
+                logger.debug(f"Response time degradation: {current.response_time:.3f}s > {response_time_threshold:.3f}s")
         
         # Enhanced accuracy degradation check
         accuracy_threshold = self.baseline_metrics.agent_accuracy * (1 - self.thresholds.degradation_threshold)

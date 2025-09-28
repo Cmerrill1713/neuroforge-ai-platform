@@ -36,7 +36,6 @@ import SettingsPanel from '../settings/SettingsPanel';
 import AgentsManagementPanel from '../agents/AgentsManagementPanel';
 import SelfOptimizationPanel from '../Optimization/SelfOptimizationPanel';
 import { VoiceAgentControlPanel } from '../voice/VoiceAgentControlPanel';
-import { DIALLM } from '../LLM/DIALLM';
 
 export const ChatInterface: React.FC<ChatInterfaceProps> = ({
   activePanel,
@@ -171,10 +170,10 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
     );
   }
 
-  // DIA LLM Panel
-  if (activePanel === 'dia') {
-    return <DIALLM />;
-  }
+  // DIA LLM Panel - Removed (no longer using DIA)
+  // if (activePanel === 'dia') {
+  //   return <DIALLM />;
+  // }
 
   return (
     <Box 

@@ -88,7 +88,7 @@ export function NavigationCard({
           >
             <CardActionArea onClick={onClick}>
               <CardContent sx={{ p: 2, textAlign: 'center', position: 'relative' }}>
-                <FloatingElement intensity="low">
+                <FloatingElement intensity={0.1}>
                   <Box sx={{ 
                     fontSize: '1.8rem',
                     mb: 1,

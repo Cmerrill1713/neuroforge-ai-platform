@@ -5,13 +5,10 @@ Detects and prevents hallucinations in smaller model responses
 """
 
 import re
-import json
 import logging
-import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
-import numpy as np
+from typing import Dict, List
 
 logger = logging.getLogger(__name__)
 
@@ -192,7 +189,7 @@ class HallucinationDetectionSystem:
     def detect_hallucinations(self, response: str, context: str = "") -> HallucinationDetection:
         """Detect potential hallucinations in a response"""
         
-        logger.info(f"🔍 Analyzing response for hallucinations")
+        logger.info("🔍 Analyzing response for hallucinations")
         
         detected_patterns = []
         total_severity = 0.0
@@ -381,7 +378,7 @@ class HallucinationDetectionSystem:
                          domain: str = "general") -> ResponseValidation:
         """Comprehensive response validation"""
         
-        logger.info(f"🔍 Validating response for hallucinations and accuracy")
+        logger.info("🔍 Validating response for hallucinations and accuracy")
         
         # Detect hallucinations
         hallucination_detection = self.detect_hallucinations(response, context)
@@ -499,7 +496,7 @@ def test_hallucination_detection():
         logger.info(f"   Verification Needed: {validation.verification_needed}")
         
         if validation.suggested_corrections:
-            logger.info(f"   Suggested Corrections:")
+            logger.info("   Suggested Corrections:")
             for correction in validation.suggested_corrections[:2]:
                 logger.info(f"     • {correction}")
     

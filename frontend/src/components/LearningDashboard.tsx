@@ -95,7 +95,7 @@ export function LearningDashboard() {
             <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ mb: 2 }}>
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                  Today's Progress
+                  Today&apos;s Progress
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   Keep up the great work!

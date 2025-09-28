@@ -334,7 +334,7 @@ export default function DevilsAdvocateAgent() {
           fontWeight: 'bold',
           mb: 1
         }}>
-          🎭 Devil's Advocate AI Agents
+          🎭 Devil&apos;s Advocate AI Agents
         </Typography>
         <Typography variant="subtitle1" color="text.secondary">
           AI agents that challenge each other, provide counter-arguments, and debate topics from multiple perspectives

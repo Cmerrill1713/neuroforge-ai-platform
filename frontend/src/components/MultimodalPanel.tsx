@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import {
   Box,
   Typography,
@@ -267,9 +268,11 @@ export function MultimodalPanel({ activeModel, onImageAnalysis }: MultimodalPane
                     <Card variant="outlined">
                       <CardContent>
                         <Box sx={{ position: 'relative', mb: 2 }}>
-                          <img
+                          <Image
                             src={image.preview}
                             alt="Uploaded"
+                            width={400}
+                            height={150}
                             style={{
                               width: '100%',
                               height: 150,
@@ -340,7 +343,7 @@ export function MultimodalPanel({ activeModel, onImageAnalysis }: MultimodalPane
             </Typography>
             <Box component="ol" sx={{ pl: 2 }}>
               <li>Upload images by clicking the upload area</li>
-              <li>Click "Analyze" on any uploaded image</li>
+              <li>Click &quot;Analyze&quot; on any uploaded image</li>
               <li>AI will process the image and provide insights</li>
               <li>View analysis results and recommendations</li>
             </Box>

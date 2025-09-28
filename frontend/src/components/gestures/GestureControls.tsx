@@ -346,7 +346,7 @@ export function GestureControls({
             • Arrow keys: Navigate
           </Typography>
           <Typography variant="caption" sx={{ display: 'block' }}>
-            • Voice: Say "next", "previous", etc.
+            • Voice: Say &quot;next&quot;, &quot;previous&quot;, etc.
           </Typography>
         </Box>
       )}

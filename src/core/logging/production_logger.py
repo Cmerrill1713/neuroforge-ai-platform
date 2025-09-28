@@ -26,23 +26,17 @@ import asyncio
 import json
 import logging
 import logging.handlers
-import os
 import sys
-import time
 import uuid
 from abc import ABC, abstractmethod
-from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union, Callable, Set
+from typing import Any, Dict, List, Optional
 import threading
-import traceback
 from contextlib import asynccontextmanager
-import gzip
-import shutil
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 
@@ -351,7 +345,7 @@ class JsonFormatter(logging.Formatter):
             
             return json.dumps(log_data, default=str)
             
-        except Exception as e:
+        except Exception:
             # Fallback to simple format
             return f"{record.levelname}: {record.getMessage()}"
 

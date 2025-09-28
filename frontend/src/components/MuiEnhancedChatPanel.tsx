@@ -78,7 +78,7 @@ export function MuiEnhancedChatPanel({ activeModel, customModelName, onSwitchPan
         msg.id === '1' ? { ...msg, timestamp: new Date() } : msg
       ))
     }
-  }, [])
+  }, [messages])
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -245,6 +245,19 @@ export function MuiEnhancedChatPanel({ activeModel, customModelName, onSwitchPan
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault()
       sendMessage()
+    } else if (event.key === ' ') {
+      // Explicitly handle spacebar to ensure it works
+      event.preventDefault()
+      const target = event.target as HTMLTextAreaElement
+      const start = target.selectionStart
+      const end = target.selectionEnd
+      const newValue = input.substring(0, start) + ' ' + input.substring(end)
+      setInput(newValue)
+      
+      // Restore cursor position after state update
+      setTimeout(() => {
+        target.setSelectionRange(start + 1, start + 1)
+      }, 0)
     }
   }
 
@@ -489,7 +502,7 @@ export function MuiEnhancedChatPanel({ activeModel, customModelName, onSwitchPan
             maxRows={4}
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyPress}
             placeholder="Ask me anything..."
             variant="outlined"
             sx={{

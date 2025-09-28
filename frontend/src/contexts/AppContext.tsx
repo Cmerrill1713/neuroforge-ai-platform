@@ -168,7 +168,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     loadModels();
     loadAgents();
     checkSystemStatus();
-  }, []);
+  }, [loadModels]);
 
   // Actions
   const sendMessage = async (content: string, model?: string) => {
@@ -183,13 +183,55 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       };
       
       dispatch({ type: 'ADD_MESSAGE', payload: userMessage });
-      
-      const response = await apiService.sendMessage(content, model || state.activeModel || undefined);
-      
-      if (response.success && response.data) {
-        dispatch({ type: 'ADD_MESSAGE', payload: response.data });
-      } else {
-        throw new Error(response.error || 'Failed to send message');
+      let assistantMessage: ChatMessage | null = null;
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: content, model: model || state.activeModel || undefined }),
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          assistantMessage = {
+            id: data.id ?? Date.now().toString(),
+            content: data.content ?? '',
+            sender: 'assistant',
+            timestamp: data.timestamp ?? new Date().toISOString(),
+            model: data.model ?? data.metadata?.modelName,
+            metadata: {
+              ...data.metadata,
+              agent: data.metadata?.agent ?? data.model,
+              confidence: data.metadata?.confidence,
+              fallbackUsed: data.metadata?.fallbackUsed ?? false,
+              responseTimeMs: data.metadata?.responseTimeMs,
+            },
+          };
+        } else {
+          console.warn('Chat API request failed, falling back to apiService:', await res.text());
+        }
+      } catch (error) {
+        console.warn('Chat API request error, falling back to apiService:', error);
+      }
+
+      if (!assistantMessage) {
+        const response = await apiService.sendMessage(content, model || state.activeModel || undefined);
+        if (response.success && response.data) {
+          assistantMessage = response.data;
+        } else {
+          throw new Error(response.error || 'Failed to send message');
+        }
+      }
+
+      if (assistantMessage) {
+        assistantMessage.metadata = {
+          ...assistantMessage.metadata,
+          agent: assistantMessage.metadata?.agent || assistantMessage.model,
+        };
+        dispatch({ type: 'ADD_MESSAGE', payload: assistantMessage });
       }
     } catch (error) {
       addNotification('error', `Failed to send message: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -198,7 +240,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     }
   };
 
-  const loadModels = async () => {
+  const loadModels = useCallback(async () => {
     try {
       const response = await apiService.getModels();
       if (response.success && response.data) {
@@ -210,7 +252,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     } catch (error) {
       console.error('Failed to load models:', error);
     }
-  };
+  }, [state.activeModel]);
 
   const loadAgents = async () => {
     try {

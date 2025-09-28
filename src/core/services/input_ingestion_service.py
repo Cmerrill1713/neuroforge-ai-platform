@@ -12,7 +12,7 @@ Complies with:
 
 import asyncio
 import logging
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, Optional
 from pathlib import Path
 from datetime import datetime
 import time

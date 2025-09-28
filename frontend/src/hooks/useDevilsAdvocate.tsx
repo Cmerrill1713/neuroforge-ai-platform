@@ -116,7 +116,7 @@ export function withDevilsAdvocate<T extends object>(
       if (devilsAdvocate.isEnabled) {
         devilsAdvocate.showDevilsAdvocate(actionName)
       }
-    }, [devilsAdvocate.isEnabled, actionName])
+    }, [devilsAdvocate.isEnabled, devilsAdvocate])
 
     return React.createElement(WrappedComponent, props)
   }

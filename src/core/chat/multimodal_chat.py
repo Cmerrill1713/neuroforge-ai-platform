@@ -11,19 +11,15 @@ Status: Draft
 from __future__ import annotations
 
 import asyncio
-import base64
 import json
 import logging
-import uuid
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional
 from uuid import uuid4
 
-import torch
-from PIL import Image
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -494,7 +490,7 @@ async def main():
         print(f"Context Saved: {response.context_saved}")
         
         if response.image_analysis:
-            print(f"\n🖼️ Image Analysis:")
+            print("\n🖼️ Image Analysis:")
             print(f"   Mode: {response.image_analysis.get('analysis_mode', 'unknown')}")
             print(f"   Description: {response.image_analysis.get('description', 'No description')}")
             print(f"   Confidence: {response.image_analysis.get('confidence', 0):.2f}")
@@ -505,11 +501,11 @@ async def main():
                     print(f"     - {defect.get('defect_type', 'Unknown')}: {defect.get('severity', 'Unknown')}")
         
         if response.tools_executed:
-            print(f"\n🔧 Tools Executed:")
+            print("\n🔧 Tools Executed:")
             for tool in response.tools_executed:
                 print(f"   - {tool}")
         
-        print(f"\n💬 Response:")
+        print("\n💬 Response:")
         print(f"   {response.response_text}")
         
         return 0

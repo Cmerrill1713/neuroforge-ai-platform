@@ -14,15 +14,14 @@ import asyncio
 import json
 import logging
 import re
-import time
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union, Tuple
+from typing import Any, Dict, List, Optional, Union
 from uuid import uuid4
 
 import yaml
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -489,7 +488,7 @@ async def main():
         if args.test_redaction:
             # Test redaction
             result = manager.redact_text(args.test_redaction)
-            print(f"\n🔍 Redaction Test:")
+            print("\n🔍 Redaction Test:")
             print(f"   Original: {result.original_text}")
             print(f"   Redacted: {result.redacted_text}")
             print(f"   Redactions: {result.redaction_count}")
@@ -498,7 +497,7 @@ async def main():
         if args.test_tool:
             # Test tool access
             result = manager.check_tool_access(args.test_tool)
-            print(f"\n🛠️ Tool Access Test:")
+            print("\n🛠️ Tool Access Test:")
             print(f"   Tool: {args.test_tool}")
             print(f"   Allowed: {'✅' if result.allowed else '❌'}")
             print(f"   Reason: {result.reason}")

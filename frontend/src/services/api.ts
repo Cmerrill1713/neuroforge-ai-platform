@@ -26,7 +26,7 @@ export interface ChatMessage {
   id: string;
   content: string;
   sender: 'user' | 'assistant';
-  timestamp: Date;
+  timestamp: Date | string;
   model?: string;
   metadata?: Record<string, any>;
 }

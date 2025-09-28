@@ -17,7 +17,7 @@ from typing import Any, Dict, List, Optional, Union
 from enum import Enum
 from pathlib import Path
 
-from pydantic import BaseModel, Field, validator, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -442,7 +442,7 @@ def main():
         print(f"📁 Categories: {len(catalog.categories)}")
         
         if validation_result:
-            print(f"\n🔍 Validation Results:")
+            print("\n🔍 Validation Results:")
             print(f"   Status: {'✅ Valid' if validation_result.is_valid else '❌ Invalid'}")
             print(f"   Errors: {len(validation_result.errors)}")
             print(f"   Warnings: {len(validation_result.warnings)}")

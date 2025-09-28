@@ -4,13 +4,10 @@ Adaptive Model Context System
 Provides appropriate context and assistance based on model capabilities
 """
 
-import json
 import logging
-import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
-import numpy as np
+from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -669,7 +666,7 @@ def test_adaptive_system():
     
     # Test model recommendations
     recommendations = system.get_model_recommendations("programming")
-    logger.info(f"\n📊 Programming Task Recommendations:")
+    logger.info("\n📊 Programming Task Recommendations:")
     logger.info(f"   Best Models: {recommendations['best_models']}")
     logger.info(f"   Good Models: {recommendations['good_models']}")
     logger.info(f"   Avoid Models: {recommendations['avoid_models']}")

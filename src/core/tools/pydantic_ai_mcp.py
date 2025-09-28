@@ -11,20 +11,17 @@ Status: Enhanced
 from __future__ import annotations
 
 import asyncio
-import json
 import logging
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Union, Type, Callable, Awaitable
+from typing import Any, Dict, List, Optional, Callable
 from uuid import uuid4
 
-import pydantic
 from pydantic import BaseModel, Field, field_validator
-from pydantic_ai import Agent, RunContext, Tool
+from pydantic_ai import Agent, RunContext
 
-from .mcp_adapter import MCPAdapter, MCPRequest, MCPResponse, MCPNotification
-from ..models.contracts import ToolCall as ContractToolCall, ToolResult as ContractToolResult
-from ..memory.vector_pg import VectorStore, Document
-from ..engines.ollama_adapter import OllamaAdapter, ModelResponse
+from .mcp_adapter import MCPAdapter, MCPRequest
+from ..memory.vector_pg import VectorStore
+from ..engines.ollama_adapter import OllamaAdapter
 
 
 # ============================================================================

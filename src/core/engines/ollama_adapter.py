@@ -7,27 +7,22 @@ on Apple Silicon, replacing the large Qwen3-Omni model with smaller, optimized m
 """
 
 import os
-import json
 import logging
 import asyncio
-import subprocess
 import time
-from typing import Dict, List, Any, Optional, Union
-from pathlib import Path
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 import requests
 
+logger = logging.getLogger(__name__)
+
 # MLX imports (with fallback)
 try:
-    import mlx.core as mx
-    import mlx.nn as nn
     import mlx_lm
     MLX_AVAILABLE = True
 except ImportError:
     MLX_AVAILABLE = False
     logger.warning("MLX not available - MLX models will be disabled")
-
-logger = logging.getLogger(__name__)
 
 @dataclass
 class OllamaModel:
@@ -188,7 +183,7 @@ class OllamaAdapter:
                     model_key = fallback
                     break
             else:
-                raise ValueError(f"No models available for fallback")
+                raise ValueError("No models available for fallback")
 
         model = self.models[model_key]
         start_time = time.time()
@@ -204,7 +199,7 @@ class OllamaAdapter:
             
             # Try fallback models if the primary model fails
             if model_key != 'primary':
-                logger.info(f"Attempting fallback to primary model")
+                logger.info("Attempting fallback to primary model")
                 try:
                     if 'primary' in self.models:
                         fallback_model = self.models['primary']

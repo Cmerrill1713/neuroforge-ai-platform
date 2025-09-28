@@ -11,15 +11,13 @@ Status: Draft
 from __future__ import annotations
 
 import asyncio
-import json
 import logging
 import time
 import traceback
 from abc import ABC, abstractmethod
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from enum import Enum
-from pathlib import Path
-from typing import Any, Dict, List, Optional, Union, Callable, Awaitable
+from typing import Any, Dict, List, Optional
 from uuid import uuid4
 
 from pydantic import BaseModel, Field, field_validator
@@ -604,7 +602,7 @@ class TaskRunner:
         execution_logger.info("Executing tasks sequentially")
         
         # Create task dependency map
-        task_map = {task.task_id: task for task in task_graph.tasks}
+        {task.task_id: task for task in task_graph.tasks}
         completed_tasks = set()
         
         # Execute tasks in dependency order
@@ -634,7 +632,7 @@ class TaskRunner:
         execution_logger.info("Executing tasks in parallel")
         
         # Create task dependency map
-        task_map = {task.task_id: task for task in task_graph.tasks}
+        {task.task_id: task for task in task_graph.tasks}
         completed_tasks = set()
         running_tasks = set()
         

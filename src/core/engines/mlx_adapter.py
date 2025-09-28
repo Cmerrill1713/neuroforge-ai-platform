@@ -7,15 +7,12 @@ on Apple Silicon, complementing the Ollama adapter with native MLX performance.
 """
 
 import os
-import json
 import logging
 import asyncio
 import time
-from typing import Dict, List, Any, Optional, Union
-from pathlib import Path
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 import mlx.core as mx
-import mlx.nn as nn
 import mlx_lm
 
 logger = logging.getLogger(__name__)

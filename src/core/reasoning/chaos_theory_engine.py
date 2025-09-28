@@ -9,7 +9,7 @@ import logging
 import random
 import time
 import math
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 from enum import Enum
 
@@ -399,7 +399,7 @@ async def test_chaos_engine():
         print(f"Reasoning: {decision.reasoning}")
     
     # Test controlled randomness
-    print(f"\nTesting controlled randomness:")
+    print("\nTesting controlled randomness:")
     base_value = 0.5
     for i in range(5):
         randomized = engine.introduce_controlled_randomness(base_value)

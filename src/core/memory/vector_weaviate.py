@@ -10,13 +10,10 @@ Status: Draft
 
 from __future__ import annotations
 
-import asyncio
 import json
 import logging
-import uuid
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional, Union
-from uuid import UUID
+from typing import Any, Dict, List, Optional
 
 import aiohttp
 from pydantic import BaseModel, Field

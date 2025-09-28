@@ -199,6 +199,10 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
 export const useNotifications = () => {
   const [notifications, setNotifications] = useState<NotificationData[]>([])
 
+  const removeNotification = useCallback((id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id))
+  }, [])
+
   const addNotification = useCallback((notification: Omit<NotificationData, 'id' | 'timestamp'>) => {
     const id = `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     const newNotification: NotificationData = {
@@ -216,11 +220,7 @@ export const useNotifications = () => {
         removeNotification(id)
       }, duration)
     }
-  }, [])
-
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id))
-  }, [])
+  }, [removeNotification])
 
   const clearAll = useCallback(() => {
     setNotifications([])
@@ -319,7 +319,7 @@ export class ErrorBoundary extends React.Component<
             Something went wrong
           </Typography>
           <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary' }}>
-            We're sorry, but something unexpected happened. Please try refreshing the page.
+            We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
           </Typography>
           <Button
             variant="contained"

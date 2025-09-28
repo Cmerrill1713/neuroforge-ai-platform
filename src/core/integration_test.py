@@ -30,9 +30,8 @@ logger = logging.getLogger(__name__)
 # Add src to path for imports
 sys.path.append(str(Path(__file__).parent / "src"))
 
-from core.services.input_ingestion_service import InputIngestionService, InputValidator
-from core.engines.qwen3_omni_engine import Qwen3OmniEngine, ProcessedInput
-from core.schemas.input_schemas import TextInput, ImageInput, DocumentInput
+from core.services.input_ingestion_service import InputIngestionService, InputValidator  # noqa: E402
+from core.engines.qwen3_omni_engine import Qwen3OmniEngine  # noqa: E402
 
 async def test_integration():
     """Test the complete integration pipeline"""

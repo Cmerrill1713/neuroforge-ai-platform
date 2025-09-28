@@ -10,19 +10,15 @@ Status: Enhanced
 
 from __future__ import annotations
 
-import ast
-import json
 import logging
 import re
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Union, Tuple, Set
+from typing import Any, Dict, List, Optional
 from uuid import uuid4
 
-import pydantic
 from pydantic import BaseModel, Field, field_validator
 
-from ..memory.vector_pg import VectorStore, Document, DocumentType
-from ..models.contracts import Task, TaskResult, TaskStatus
+from ..memory.vector_pg import VectorStore, DocumentType
 from ..providers.llm_qwen3 import Qwen3Provider
 
 

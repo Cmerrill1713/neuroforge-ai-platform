@@ -16,10 +16,10 @@ import time
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union, AsyncGenerator
+from typing import Dict, List, Optional, AsyncGenerator
 from uuid import uuid4
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 
 # ============================================================================
@@ -126,7 +126,7 @@ class LogTailer:
                 processing_time_ms=processing_time
             )
             
-        except Exception as e:
+        except Exception:
             processing_time = (time.time() - start_time) * 1000
             return TailResult(
                 config=self.config,
@@ -343,7 +343,7 @@ async def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="Log Tailing System")
-    parser.add_argument("--level", choices=[l.value for l in LogLevel], help="Minimum log level")
+    parser.add_argument("--level", choices=[level.value for level in LogLevel], help="Minimum log level")
     parser.add_argument("--follow", action="store_true", help="Follow logs in real-time")
     parser.add_argument("--filter", help="Component filter (regex patterns separated by |)")
     parser.add_argument("--lines", type=int, default=50, help="Number of recent lines to show")
@@ -408,7 +408,7 @@ async def main():
                 print(f"Filter Level: {result.config.filter_config.level or 'all'}")
                 print(f"Filter Components: {result.config.filter_config.components or 'all'}")
             
-            print(f"\n📋 Recent Log Entries:")
+            print("\n📋 Recent Log Entries:")
             print("-" * 80)
             
             for entry in result.entries:

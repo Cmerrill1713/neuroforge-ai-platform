@@ -12,13 +12,11 @@ Complies with:
 - Milestone 1: Core Pipeline Foundation (tasks/milestone_1_core_pipeline.md)
 """
 
-import os
 import time
 import logging
-from typing import Dict, List, Any, Optional, Union
+from typing import Dict, List, Any, Union
 from pathlib import Path
 from dataclasses import dataclass
-from datetime import datetime
 import json
 
 logger = logging.getLogger(__name__)
