@@ -272,3 +272,7 @@ metrics/
 *.temp
 temp_*
 tmp_*
+
+# Embedded git repositories
+dia-official/
+prompt_engineering/
