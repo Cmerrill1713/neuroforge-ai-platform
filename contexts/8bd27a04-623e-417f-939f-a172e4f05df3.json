@@ -1,0 +1,89 @@
+{
+  "session_id": "8bd27a04-623e-417f-939f-a172e4f05df3",
+  "turns": [
+    {
+      "turn_id": "R-42",
+      "message_type": "user_multimodal",
+      "content": "What's wrong here?",
+      "image_path": "samples/board.png",
+      "image_analysis": {
+        "analysis_mode": "defect_detection",
+        "description": "IPC-A-610 Class 3 compliance analysis: - Solder Bridge: critical severity - Insufficient Solder: major severity - Excess Solder: major severity - Cold Solder Joint: critical severity.",
+        "confidence": 0.85,
+        "defects": [
+          {
+            "defect_type": "Solder Bridge",
+            "severity": "critical",
+            "location": "Multiple locations detected",
+            "confidence": 0.85,
+            "ipc_class": "Class 3",
+            "recommendation": "Address solder bridge for Class 3 compliance"
+          },
+          {
+            "defect_type": "Insufficient Solder",
+            "severity": "major",
+            "location": "Multiple locations detected",
+            "confidence": 0.85,
+            "ipc_class": "Class 3",
+            "recommendation": "Address insufficient solder for Class 3 compliance"
+          },
+          {
+            "defect_type": "Excess Solder",
+            "severity": "major",
+            "location": "Multiple locations detected",
+            "confidence": 0.85,
+            "ipc_class": "Class 3",
+            "recommendation": "Address excess solder for Class 3 compliance"
+          },
+          {
+            "defect_type": "Cold Solder Joint",
+            "severity": "critical",
+            "location": "Multiple locations detected",
+            "confidence": 0.85,
+            "ipc_class": "Class 3",
+            "recommendation": "Address cold solder joint for Class 3 compliance"
+          }
+        ],
+        "components": [],
+        "technical_details": {},
+        "metadata": {
+          "width": 1000,
+          "height": 800,
+          "format": "png",
+          "file_size_bytes": 6004,
+          "color_mode": "RGB",
+          "has_transparency": false,
+          "dpi": null
+        }
+      },
+      "tools_used": [
+        "lc:retriever"
+      ],
+      "tool_results": {
+        "lc:retriever": {
+          "query": "What's wrong here?",
+          "results": [
+            {
+              "category": "troubleshooting",
+              "content": "Visual inspection is the first step in defect detection",
+              "relevance_score": 0.6
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Use magnification to identify small defects",
+              "relevance_score": 0.6
+            }
+          ],
+          "total_results": 2,
+          "context": "Image analysis: IPC-A-610 Class 3 compliance analysis: - Solder Bridge: critical severity - Insufficient Solder: major severity - Excess Solder: major severity - Cold Solder Joint: critical severity."
+        }
+      },
+      "timestamp": "2025-09-25 02:13:00.120590+00:00",
+      "metadata": {}
+    }
+  ],
+  "context_summary": "",
+  "created_at": "2025-09-25 02:13:00.116402+00:00",
+  "updated_at": "2025-09-25 02:13:00.120593+00:00",
+  "metadata": {}
+}

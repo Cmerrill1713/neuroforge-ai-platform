@@ -1,0 +1,142 @@
+{
+  "test_results": [
+    {
+      "model": "llama3.1:8b",
+      "test_name": "simple",
+      "response_time": 2.878683090209961,
+      "word_count": 110,
+      "char_count": 781,
+      "words_per_second": 38.21191723885695,
+      "status": "success",
+      "response_preview": "The main benefits of using larger language models include:\n\n1. **Improved accuracy**: Larger models can capture more nuanced patterns and relationship...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test_name": "simple",
+      "response_time": 3.2008938789367676,
+      "word_count": 131,
+      "char_count": 924,
+      "words_per_second": 40.926067828126165,
+      "status": "success",
+      "response_preview": "The main benefits of using larger language models include:\n\n1. **Increased Context Understanding**: Larger models can process and understand more comp...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "mistral:7b",
+      "test_name": "simple",
+      "response_time": 2.9513587951660156,
+      "word_count": 131,
+      "char_count": 914,
+      "words_per_second": 44.38633493649191,
+      "status": "success",
+      "response_preview": " 1. Improved understanding: Larger language models can better understand complex and nuanced language, making them more effective at tasks like questi...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "test_name": "simple",
+      "response_time": 5.865253925323486,
+      "word_count": 70,
+      "char_count": 534,
+      "words_per_second": 11.934692153356224,
+      "status": "success",
+      "response_preview": "- **Improved understanding of context**: larger models capture subtler nuances, idioms, and long\u2011range dependencies.  \n- **Higher accuracy**: more par...",
+      "model_size": "LARGE (20B)"
+    },
+    {
+      "model": "llama3.1:8b",
+      "test_name": "reasoning",
+      "response_time": 7.2227137088775635,
+      "word_count": 360,
+      "char_count": 2677,
+      "words_per_second": 49.84276194659601,
+      "status": "success",
+      "response_preview": "**Performance Bottleneck Analysis**\n\nBased on the provided metrics, I've identified the top 3 performance bottlenecks for this web application:\n\n1. **...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test_name": "reasoning",
+      "response_time": 7.6811909675598145,
+      "word_count": 362,
+      "char_count": 2474,
+      "words_per_second": 47.128108327060815,
+      "status": "success",
+      "response_preview": "To analyze the given scenario for potential performance bottlenecks, let's review each metric:\n\n1. **Frontend Load Time**: 1.7 seconds.\n2. **API Respo...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "mistral:7b",
+      "test_name": "reasoning",
+      "response_time": 6.700547933578491,
+      "word_count": 361,
+      "char_count": 2362,
+      "words_per_second": 53.876190959088404,
+      "status": "success",
+      "response_preview": " Based on the provided performance metrics, here are three potential performance bottlenecks for the web application and suggestions for addressing ea...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "test_name": "reasoning",
+      "response_time": 6.118895053863525,
+      "word_count": 148,
+      "char_count": 771,
+      "words_per_second": 24.18737348772659,
+      "status": "success",
+      "response_preview": "**Quick\u2011look summary**\n\n| Metric | Value | Rough implication |\n|--------|-------|-------------------|\n| Front\u2011end load | 1.7\u202fs | Mostly waiting on the...",
+      "model_size": "LARGE (20B)"
+    },
+    {
+      "model": "llama3.1:8b",
+      "test_name": "complex",
+      "response_time": 8.475122928619385,
+      "word_count": 322,
+      "char_count": 2363,
+      "words_per_second": 37.99354920418298,
+      "status": "success",
+      "response_preview": "**Comprehensive Optimization Plan**\n\n**Root Cause Analysis of Bottlenecks:**\n\nBased on the provided metrics, I've identified the following bottlenecks...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test_name": "complex",
+      "response_time": 7.755101919174194,
+      "word_count": 338,
+      "char_count": 2452,
+      "words_per_second": 43.584211209953004,
+      "status": "success",
+      "response_preview": "### Comprehensive Optimization Plan for Distributed System\n\n#### 1. Root Cause Analysis of Bottlenecks\n\n**Microservices:**\n- **Response Times:** The r...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "mistral:7b",
+      "test_name": "complex",
+      "response_time": 6.859058141708374,
+      "word_count": 314,
+      "char_count": 2267,
+      "words_per_second": 45.778880060898935,
+      "status": "success",
+      "response_preview": " Title: Distributed System Optimization Plan\n\n1. **Root Cause Analysis of Bottlenecks**\n   - Microservices: High response times (200ms-2s) could be du...",
+      "model_size": "SMALL (7-8B)"
+    },
+    {
+      "model": "gpt-oss:20b",
+      "test_name": "complex",
+      "response_time": 6.245788097381592,
+      "word_count": 29,
+      "char_count": 175,
+      "words_per_second": 4.643129025167794,
+      "status": "success",
+      "response_preview": "## Distributed\u2011System Optimization Plan  \n*(Target: bring overall health score \u2265\u202f95\u202f/\u202f100, reduce micro\u2011service latency to <\u202f300\u202fms, Next.js load time...",
+      "model_size": "LARGE (20B)"
+    }
+  ],
+  "timestamp": "2025-09-25T22:44:04.532559",
+  "summary": {
+    "total_tests": 12,
+    "successful_tests": 12,
+    "failed_tests": 0
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "backtest_summary": {
+    "timestamp": "2025-09-25T23:51:06.921214",
+    "duration": "10.36s",
+    "total_tests": 7,
+    "success_rate": "71.43%",
+    "throughput": "0.68 tests/sec"
+  },
+  "performance_metrics": {
+    "total_tests": 7,
+    "passed_tests": 5,
+    "failed_tests": 2,
+    "success_rate": 0.7142857142857143,
+    "average_execution_time": 2.2148830550057546,
+    "median_execution_time": 1.0696449279785156,
+    "p95_execution_time": 10.358008623123169,
+    "total_duration": 10.358287,
+    "error_rate": 0.2857142857142857,
+    "throughput": 0.6757874154288253,
+    "memory_efficiency": 0.85
+  },
+  "model_performance": {
+    "qwen2.5-7b": {
+      "model_name": "qwen2.5-7b",
+      "total_requests": 2,
+      "success_rate": 1.0,
+      "average_response_time": 6.113042950630188,
+      "median_response_time": 0.0,
+      "p95_response_time": 0.0,
+      "tokens_per_second": 42.556168097958775,
+      "error_count": 0,
+      "memory_usage": 0.0
+    },
+    "phi3-3.8b": {
+      "model_name": "phi3-3.8b",
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "average_response_time": 2.2082788944244385,
+      "median_response_time": 0.0,
+      "p95_response_time": 0.0,
+      "tokens_per_second": 30.340370579624068,
+      "error_count": 0,
+      "memory_usage": 0.0
+    },
+    "llama3.2-3b": {
+      "model_name": "llama3.2-3b",
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "average_response_time": 1.0696346759796143,
+      "median_response_time": 0.0,
+      "p95_response_time": 0.0,
+      "tokens_per_second": 4.67449318190886,
+      "error_count": 0,
+      "memory_usage": 0.0
+    }
+  },
+  "test_results_by_category": {
+    "ollama_generation": {
+      "total": 5,
+      "passed": 4,
+      "failed": 1,
+      "avg_time": 3.1008112907409666,
+      "success_rate": 0.8
+    },
+    "mcp_tool": {
+      "total": 2,
+      "passed": 1,
+      "failed": 1,
+      "avg_time": 6.246566772460938e-05,
+      "success_rate": 0.5
+    }
+  },
+  "test_results_by_type": {
+    "performance": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "avg_time": 1.2865285873413086,
+      "success_rate": 1.0
+    },
+    "reliability": {
+      "total": 3,
+      "passed": 1,
+      "failed": 2,
+      "avg_time": 3.452689011891683,
+      "success_rate": 0.3333333333333333
+    }
+  },
+  "failed_tests": [
+    {
+      "test_id": "rel_001",
+      "test_name": "Error Handling - Invalid Tool",
+      "category": "mcp_tool",
+      "type": "reliability",
+      "error_message": "Tool not found: nonexistent_tool",
+      "execution_time": 5.316734313964844e-05,
+      "metadata": {
+        "parameters": {
+          "param": "value"
+        }
+      }
+    },
+    {
+      "test_id": "rel_002",
+      "test_name": "Error Handling - Invalid Model",
+      "category": "ollama_generation",
+      "type": "reliability",
+      "error_message": "Model nonexistent_model not found in configuration",
+      "execution_time": 5.245208740234375e-06,
+      "metadata": {
+        "model_key": "nonexistent_model"
+      }
+    }
+  ],
+  "recommendations": [
+    "Success rate is 71.4%. Investigate failed tests and improve error handling.",
+    "95th percentile execution time is 10.36s. Some tests are significantly slower.",
+    "Throughput is 0.68 tests/sec. Consider parallel execution for better performance.",
+    "Model qwen2.5-7b average response time is 6.11s. Consider optimization."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "timestamp": 1759030205.198123,
+  "overall_grade": "B",
+  "overall_score": 83.75,
+  "metrics": {
+    "training_loss": 0.8,
+    "validation_loss": 1.2,
+    "training_time": 45.0,
+    "convergence_epochs": 4,
+    "perplexity": 15.0,
+    "bleu_score": 0.75,
+    "rouge_score": 0.82,
+    "memory_usage": 12.0,
+    "gpu_utilization": 85.0,
+    "throughput": 75.0,
+    "knowledge_retention": 0.88,
+    "domain_accuracy": 0.92,
+    "response_quality": 0.89
+  },
+  "detailed_scores": {
+    "training_performance": {
+      "score": 80.0,
+      "grade": "B"
+    },
+    "model_quality": {
+      "score": 85.0,
+      "grade": "B+"
+    },
+    "system_performance": {
+      "score": 85.0,
+      "grade": "B+"
+    },
+    "knowledge_integration": {
+      "score": 85.0,
+      "grade": "B+"
+    }
+  },
+  "recommendations": [],
+  "criteria": {
+    "excellent_loss_threshold": 0.5,
+    "good_loss_threshold": 1.0,
+    "acceptable_loss_threshold": 2.0,
+    "excellent_perplexity_threshold": 10.0,
+    "good_perplexity_threshold": 20.0,
+    "acceptable_perplexity_threshold": 50.0,
+    "excellent_time_threshold": 30.0,
+    "good_time_threshold": 60.0,
+    "acceptable_time_threshold": 120.0,
+    "excellent_knowledge_threshold": 0.9,
+    "good_knowledge_threshold": 0.8,
+    "acceptable_knowledge_threshold": 0.7
+  }
+}

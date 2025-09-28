@@ -1,0 +1,53 @@
+{
+  "timestamp": 1759033514.869826,
+  "total_tests": 19,
+  "successful_tests": 11,
+  "failed_tests": 8,
+  "methods": {
+    "Text-to-LoRA": {
+      "total_tests": 8,
+      "successful_tests": 8,
+      "success_rate": 1.0,
+      "avg_duration": 0.16549092531204224,
+      "avg_memory_peak": 0.01909637451171875,
+      "avg_accuracy": 0.17500000000000004,
+      "avg_throughput": 6.3152862272669115,
+      "min_duration": 0.14647483825683594,
+      "max_duration": 0.2801659107208252,
+      "errors": []
+    },
+    "Transformer\u00b2": {
+      "total_tests": 8,
+      "successful_tests": 0,
+      "success_rate": 0.0,
+      "avg_duration": 0,
+      "avg_memory_peak": 0,
+      "avg_accuracy": 0,
+      "avg_throughput": 0,
+      "min_duration": 0,
+      "max_duration": 0,
+      "errors": [
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float",
+        "mat1 and mat2 must have the same dtype, but got Half and Float"
+      ]
+    },
+    "System": {
+      "total_tests": 3,
+      "successful_tests": 3,
+      "success_rate": 1.0,
+      "avg_duration": 0.04018521308898926,
+      "avg_memory_peak": 0.01678466796875,
+      "avg_accuracy": 1.0,
+      "avg_throughput": 13.168189973870783,
+      "min_duration": 0.0,
+      "max_duration": 0.0843968391418457,
+      "errors": []
+    }
+  }
+}

@@ -1,0 +1,107 @@
+# Qwen3-Omni Experimentation Configuration
+
+# Model Configuration
+model:
+  path: "./Qwen3-Omni-30B-A3B-Instruct"
+  device: "auto"  # auto, cpu, cuda, mps
+  quantization: "none"  # none, 4bit, 8bit
+  max_memory_gb: null  # null for auto, or specify GB per device
+
+# Generation Parameters
+generation:
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  repetition_penalty: 1.1
+  do_sample: true
+  early_stopping: true
+  pad_token_id: null  # Will use tokenizer.eos_token_id
+  eos_token_id: null  # Will use tokenizer.eos_token_id
+
+# Performance Testing
+benchmark:
+  iterations_per_prompt: 5
+  test_prompts:
+    - "Explain machine learning in simple terms."
+    - "Write a creative short story about space exploration."
+    - "What are the benefits of renewable energy?"
+    - "Describe the process of photosynthesis."
+    - "How does blockchain technology work?"
+
+# Multimodal Testing
+multimodal:
+  enabled: true
+  image_formats: [".jpg", ".jpeg", ".png", ".bmp", ".tiff"]
+  audio_formats: [".wav", ".mp3", ".flac", ".m4a"]
+  video_formats: [".mp4", ".avi", ".mov", ".mkv"]
+  max_image_size: [1024, 1024]
+  max_audio_duration: 30  # seconds
+
+# Test Scenarios
+test_scenarios:
+  basic_text:
+    enabled: true
+    prompts:
+      - "Hello, how are you today?"
+      - "What is artificial intelligence?"
+      - "Explain quantum computing."
+      - "Write a haiku about nature."
+      - "What is the meaning of life?"
+  
+  creative_writing:
+    enabled: true
+    prompts:
+      - "Write a short story about a robot learning to paint."
+      - "Create a dialogue between two characters meeting for the first time."
+      - "Write a poem about the ocean."
+      - "Describe a futuristic city."
+      - "Write a letter from the year 2050."
+  
+  technical_analysis:
+    enabled: true
+    prompts:
+      - "Analyze the pros and cons of different programming languages."
+      - "Explain the differences between machine learning and deep learning."
+      - "What are the security considerations for cloud computing?"
+      - "Describe the architecture of a distributed system."
+      - "How do neural networks learn?"
+  
+  reasoning_tasks:
+    enabled: true
+    prompts:
+      - "If a train leaves at 2 PM traveling 60 mph and another leaves at 3 PM traveling 80 mph, when will they meet?"
+      - "What are the logical steps to solve a Rubik's cube?"
+      - "Explain the concept of recursion with examples."
+      - "How would you design a system to handle 1 million concurrent users?"
+      - "What are the ethical implications of AI in healthcare?"
+
+# Memory and Performance Monitoring
+monitoring:
+  track_memory: true
+  track_inference_time: true
+  track_tokens_per_second: true
+  log_detailed_metrics: true
+  save_results: true
+  results_directory: "./experiment_results"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "qwen_experiments.log"
+  console: true
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+
+# Safety and Ethics
+safety:
+  content_filter: true
+  bias_detection: true
+  toxicity_check: true
+  fact_checking: false  # Requires additional setup
+
+# Export Options
+export:
+  formats: ["json", "csv", "yaml"]
+  include_metadata: true
+  include_performance_metrics: true
+  include_system_info: true

@@ -1,0 +1,63 @@
+{
+  "timestamp": 1759030382.262924,
+  "overall_grade": "F",
+  "overall_score": 50.0,
+  "metrics": {
+    "training_loss": 22.609375,
+    "validation_loss": 0.0,
+    "training_time": 0.27601941823959353,
+    "convergence_epochs": 0,
+    "perplexity": 0.0,
+    "bleu_score": 0.0,
+    "rouge_score": 0.0,
+    "memory_usage": 64.0,
+    "gpu_utilization": 0.0,
+    "throughput": 0.0,
+    "knowledge_retention": 0.0,
+    "domain_accuracy": 0.0,
+    "response_quality": 0.0
+  },
+  "detailed_scores": {
+    "training_performance": {
+      "score": 70.0,
+      "grade": "C"
+    },
+    "model_quality": {
+      "score": 70.0,
+      "grade": "C"
+    },
+    "system_performance": {
+      "score": 30.0,
+      "grade": "F"
+    },
+    "knowledge_integration": {
+      "score": 30.0,
+      "grade": "F"
+    }
+  },
+  "recommendations": [
+    "Consider reducing learning rate or increasing training epochs",
+    "Improve training data diversity and quality",
+    "Add more domain-specific training examples",
+    "Use gradient checkpointing or reduce batch size",
+    "Increase batch size or optimize data loading",
+    "Optimize model architecture or use mixed precision",
+    "Increase knowledge base coverage and quality",
+    "Add more domain-specific examples",
+    "Improve prompt engineering and fine-tuning strategy"
+  ],
+  "criteria": {
+    "excellent_loss_threshold": 0.5,
+    "good_loss_threshold": 1.0,
+    "acceptable_loss_threshold": 2.0,
+    "excellent_perplexity_threshold": 10.0,
+    "good_perplexity_threshold": 20.0,
+    "acceptable_perplexity_threshold": 50.0,
+    "excellent_time_threshold": 30.0,
+    "good_time_threshold": 60.0,
+    "acceptable_time_threshold": 120.0,
+    "excellent_knowledge_threshold": 0.9,
+    "good_knowledge_threshold": 0.8,
+    "acceptable_knowledge_threshold": 0.7
+  }
+}

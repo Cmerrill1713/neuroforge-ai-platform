@@ -1,0 +1,45 @@
+{
+  "timestamp": 1759033565.3403652,
+  "large_model_test": {
+    "success": true,
+    "method": "Text-to-LoRA",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "duration": 0.3399190902709961,
+    "skills": [
+      "code_generation",
+      "debugging"
+    ],
+    "skill_count": 2
+  },
+  "model_comparison": [
+    {
+      "model": "Small (117M)",
+      "path": "microsoft/DialoGPT-small",
+      "duration": 0.15071606636047363,
+      "skills": [
+        "reasoning",
+        "mathematics",
+        "debugging",
+        "optimization"
+      ],
+      "success": true
+    },
+    {
+      "model": "Medium (345M)",
+      "path": "microsoft/DialoGPT-medium",
+      "duration": 0.680945873260498,
+      "skills": [
+        "reasoning",
+        "mathematics",
+        "debugging",
+        "optimization"
+      ],
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_models_tested": 3,
+    "successful_tests": 3,
+    "failed_tests": 0
+  }
+}

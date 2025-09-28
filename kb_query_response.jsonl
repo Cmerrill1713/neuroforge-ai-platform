@@ -1,0 +1,67 @@
+{"query": "explain mcp tool safety", "k": 5, "filters": "source:specs/**", "format": "jsonl", "results": [
+  {
+    "id": "mcp_safety_001",
+    "title": "MCP Tool Security Architecture",
+    "content": "The MCP (Model Context Protocol) adapter implements comprehensive security measures including schema validation, input/output validation, and comprehensive redaction for sensitive data. The system uses Pydantic v2 for strict type safety and validation, preventing schema drift and ensuring data integrity.",
+    "source": "specs/system.md",
+    "metadata": {
+      "category": "security",
+      "topic": "mcp_safety",
+      "section": "Security Architecture",
+      "confidence": 0.95
+    },
+    "similarity_score": 0.92
+  },
+  {
+    "id": "mcp_safety_002", 
+    "title": "MCP Schema Validation System",
+    "content": "The MCPSchemaValidator class provides robust input/output validation for MCP messages. It registers schemas for each method and validates parameters against Pydantic models, preventing malformed requests and ensuring type safety. The system includes comprehensive error handling with descriptive validation messages.",
+    "source": "src/core/tools/mcp_adapter.py",
+    "metadata": {
+      "category": "validation",
+      "topic": "schema_safety",
+      "component": "MCPSchemaValidator",
+      "confidence": 0.88
+    },
+    "similarity_score": 0.89
+  },
+  {
+    "id": "mcp_safety_003",
+    "title": "MCP Redaction System",
+    "content": "The MCPRedactor implements comprehensive redaction for sensitive information including API keys, secrets, passwords, private keys, and PII (email, phone, SSN, credit cards). It uses regex patterns with configurable replacement text and supports custom patterns. The system redacts both text and dictionary data structures.",
+    "source": "src/core/tools/mcp_adapter.py", 
+    "metadata": {
+      "category": "privacy",
+      "topic": "data_redaction",
+      "component": "MCPRedactor",
+      "confidence": 0.91
+    },
+    "similarity_score": 0.87
+  },
+  {
+    "id": "mcp_safety_004",
+    "title": "MCP Transport Security",
+    "content": "MCP supports multiple secure transport layers including stdin/stdout and socket communication. The transport layer includes connection management, message validation, and error handling. The system ensures secure communication channels with proper authentication and authorization mechanisms.",
+    "source": "src/core/tools/mcp_adapter.py",
+    "metadata": {
+      "category": "transport",
+      "topic": "communication_security", 
+      "component": "MCPTransport",
+      "confidence": 0.85
+    },
+    "similarity_score": 0.84
+  },
+  {
+    "id": "mcp_safety_005",
+    "title": "MCP Tool Execution Safety",
+    "content": "The MCP tool execution engine includes tool discovery, selection, parameter validation, execution with error handling, and result integration. The system prevents unauthorized tool access through proper authentication and implements sandboxing for isolated execution environments. All operations are logged with immutable audit trails.",
+    "source": "specs/system.md",
+    "metadata": {
+      "category": "execution",
+      "topic": "tool_safety",
+      "section": "MCP Tool Execution Engine", 
+      "confidence": 0.90
+    },
+    "similarity_score": 0.86
+  }
+]}

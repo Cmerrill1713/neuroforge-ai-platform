@@ -1,0 +1,1036 @@
+{
+  "timestamp": "2025-09-25T23:18:46.670133",
+  "system_info": {
+    "python_version": "3.9.6 (default, Apr 30 2025, 02:07:17) \n[Clang 17.0.0 (clang-1700.0.13.5)]",
+    "torch_version": "2.5.1",
+    "cuda_available": false
+  },
+  "models_discovered": {
+    "ollama_models": [
+      "qwen3:8b",
+      "llama3.1:8b",
+      "qwen2.5:7b",
+      "phi3:3.8b",
+      "mistral:7b",
+      "llama3.2:3b",
+      "llava:7b",
+      "nomic-embed-text:latest",
+      "gpt-oss:20b"
+    ],
+    "lmstudio_models": [
+      {
+        "name": "Qwen3-30B-A3B-Instruct-2507-MLX-4bit",
+        "path": "~/.lmstudio/models/lmstudio-community/Qwen3-30B-A3B-Instruct-2507-MLX-4bit",
+        "size_gb": 17.2,
+        "type": "MLX-4bit",
+        "description": "30B parameter Qwen model optimized for MLX with 4-bit quantization"
+      },
+      {
+        "name": "Dia-1.6B",
+        "path": "~/.lmstudio/models/mlx-community/Dia-1.6B",
+        "size_gb": 6.0,
+        "type": "MLX",
+        "description": "1.6B parameter Dia model for MLX"
+      }
+    ],
+    "huggingface_models": [
+      {
+        "name": "Qwen2-1.5B-Instruct",
+        "path": "~/.cache/huggingface/hub/models--Qwen--Qwen2-1.5B-Instruct",
+        "type": "HuggingFace",
+        "description": "1.5B parameter Qwen2 instruction-tuned model"
+      },
+      {
+        "name": "Qwen2-7B-Instruct",
+        "path": "~/.cache/huggingface/hub/models--Qwen--Qwen2-7B-Instruct",
+        "type": "HuggingFace",
+        "description": "7B parameter Qwen2 instruction-tuned model"
+      },
+      {
+        "name": "Qwen2.5-7B-Instruct",
+        "path": "~/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct",
+        "type": "HuggingFace",
+        "description": "7B parameter Qwen2.5 instruction-tuned model"
+      },
+      {
+        "name": "Qwen3-Omni-30B-A3B-Instruct",
+        "path": "~/.cache/huggingface/hub/models--Qwen--Qwen3-Omni-30B-A3B-Instruct",
+        "type": "HuggingFace",
+        "description": "30B parameter Qwen3 Omni multimodal model"
+      },
+      {
+        "name": "Marvis-TTS-250m-v0.1-MLX-4bit",
+        "path": "~/.cache/huggingface/hub/models--Marvis-AI--marvis-tts-250m-v0.1-MLX-4bit",
+        "type": "TTS-MLX-4bit",
+        "description": "250M parameter text-to-speech model for MLX"
+      },
+      {
+        "name": "Marvis-TTS-250m-v0.1-MLX-8bit",
+        "path": "~/.cache/huggingface/hub/models--Marvis-AI--marvis-tts-250m-v0.1-MLX-8bit",
+        "type": "TTS-MLX-8bit",
+        "description": "250M parameter text-to-speech model for MLX"
+      },
+      {
+        "name": "Marvis-TTS-250m-v0.1-MLX-fp16",
+        "path": "~/.cache/huggingface/hub/models--Marvis-AI--marvis-tts-250m-v0.1-MLX-fp16",
+        "type": "TTS-MLX-fp16",
+        "description": "250M parameter text-to-speech model for MLX"
+      },
+      {
+        "name": "Facebook-MMS-TTS-eng",
+        "path": "~/.cache/huggingface/hub/models--facebook--mms-tts-eng",
+        "type": "TTS",
+        "description": "Facebook's multilingual speech synthesis model"
+      },
+      {
+        "name": "Microsoft-VibeVoice-1.5B",
+        "path": "~/.cache/huggingface/hub/models--microsoft--VibeVoice-1.5B",
+        "type": "TTS",
+        "description": "1.5B parameter voice synthesis model"
+      },
+      {
+        "name": "Microsoft-SpeechT5-TTS",
+        "path": "~/.cache/huggingface/hub/models--microsoft--speecht5_tts",
+        "type": "TTS",
+        "description": "Microsoft's SpeechT5 text-to-speech model"
+      },
+      {
+        "name": "Microsoft-SpeechT5-HiFiGAN",
+        "path": "~/.cache/huggingface/hub/models--microsoft--speecht5_hifigan",
+        "type": "TTS",
+        "description": "HiFiGAN vocoder for SpeechT5"
+      },
+      {
+        "name": "Descript-DAC-44khz",
+        "path": "~/.cache/huggingface/hub/models--descript--dac_44khz",
+        "type": "Audio",
+        "description": "Descript's neural audio codec"
+      },
+      {
+        "name": "Kyutai-Moshiko-PyTorch-bf16",
+        "path": "~/.cache/huggingface/hub/models--kyutai--moshiko-pytorch-bf16",
+        "type": "TTS",
+        "description": "Kyutai's Moshiko speech synthesis model"
+      },
+      {
+        "name": "LMStudio-Qwen3-Coder-30B-A3B-Instruct-MLX-5bit",
+        "path": "~/.cache/huggingface/hub/models--lmstudio-community--Qwen3-Coder-30B-A3B-Instruct-MLX-5bit",
+        "type": "Code-MLX-5bit",
+        "description": "30B parameter Qwen3 Coder model for MLX with 5-bit quantization"
+      },
+      {
+        "name": "Microsoft-DialoGPT-medium",
+        "path": "~/.cache/huggingface/hub/models--microsoft--DialoGPT-medium",
+        "type": "Chat",
+        "description": "Medium-sized conversational AI model"
+      }
+    ],
+    "new_models": [
+      "WAN-2.5",
+      "Qwen-Image-Edit-2509"
+    ]
+  },
+  "integration_results": {
+    "ollama_qwen3:8b": {
+      "status": "working",
+      "response": "Thinking...\nOkay, the user is asking me to introduce myself as Qwen3:8b. First, I need to confirm if...",
+      "error": null
+    },
+    "ollama_llama3.1:8b": {
+      "status": "working",
+      "response": "Greetings human friend. I am Llama 3.1:8b, a highly advanced language model at your service. I posse...",
+      "error": null
+    },
+    "ollama_qwen2.5:7b": {
+      "status": "working",
+      "response": "Hello! I'm Qwen2.5:7B, a large language model developed by Alibaba Cloud. While \"qwen2.5:7b\" might b...",
+      "error": null
+    },
+    "ollama_phi3:3.8b": {
+      "status": "working",
+      "response": "Greetings, I am Phi3:3.8B, an artificial intelligence designed to interact and assist users while re...",
+      "error": null
+    },
+    "ollama_mistral:7b": {
+      "status": "working",
+      "response": "Hello there! I'm Mistral, a 7b model developed by Mistral AI, a cutting-edge AI company based in Par...",
+      "error": null
+    },
+    "ollama_llama3.2:3b": {
+      "status": "working",
+      "response": "I'm here, but I want to clarify that I don't have personal experiences or memories like humans do. I...",
+      "error": null
+    },
+    "ollama_llava:7b": {
+      "status": "working",
+      "response": "Hi there! I'm llava:7b, an AI language model trained on a variety of tasks such as text generation, ...",
+      "error": null
+    },
+    "ollama_nomic-embed-text:latest": {
+      "status": "error",
+      "response": null,
+      "error": "\u001b[?25l\u001b[?2026h\u001b[?25l\u001b[1G\u001b[K\u001b[?25h\u001b[?2026l\u001b[2K\u001b[1G\u001b[?25hError: 400 Bad Request: \"nomic-embed-text:latest\" does not support generate\n"
+    },
+    "ollama_gpt-oss:20b": {
+      "status": "working",
+      "response": "Thinking...\nThe user says \"Hello! You are gpt-oss:20b. Please respond with a brief introduction.\"\n\nT...",
+      "error": null
+    },
+    "lmstudio_Qwen3-30B-A3B-Instruct-2507-MLX-4bit": {
+      "status": "found",
+      "size_gb": 16.010168959386647,
+      "files": [
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "size_mb": 1159.4812955856323,
+          "path": "model-00004-of-00004.safetensors"
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "size_mb": 5073.0775508880615,
+          "path": "model-00001-of-00004.safetensors"
+        },
+        {
+          "name": "added_tokens.json",
+          "size_mb": 0.0006742477416992188,
+          "path": "added_tokens.json"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.009180068969726562,
+          "path": "tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0005846023559570312,
+          "path": "special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0011348724365234375,
+          "path": "config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 10.893491744995117,
+          "path": "tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.00022792816162109375,
+          "path": "generation_config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 1.5944032669067383,
+          "path": "merges.txt"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "size_mb": 5030.432112693787,
+          "path": "model-00003-of-00004.safetensors"
+        }
+      ],
+      "description": "30B parameter Qwen model optimized for MLX with 4-bit quantization",
+      "type": "MLX-4bit"
+    },
+    "lmstudio_Dia-1.6B": {
+      "status": "found",
+      "size_gb": 6.002079623751342,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 6146.128567695618,
+          "path": "model.safetensors"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0009670257568359375,
+          "path": "config.json"
+        }
+      ],
+      "description": "1.6B parameter Dia model for MLX",
+      "type": "MLX"
+    },
+    "huggingface_Qwen2-1.5B-Instruct": {
+      "status": "found",
+      "size_gb": 5.772236809134483,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 2944.438117980957,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/model.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.0012273788452148438,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/tokenizer_config.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.000629425048828125,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 6.702437400817871,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.0002307891845703125,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/generation_config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 1.5943899154663086,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/merges.txt"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 2.6481943130493164,
+          "path": "snapshots/ba1cf1846d7df0a0591d6c00649f57e798519da8/vocab.json"
+        },
+        {
+          "name": "added_tokens.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/ba1cf1846d7df0a0591d6c00649f57e798519da8/added_tokens.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/ba1cf1846d7df0a0591d6c00649f57e798519da8/special_tokens_map.json"
+        },
+        {
+          "name": "adapter_config.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/ba1cf1846d7df0a0591d6c00649f57e798519da8/adapter_config.json"
+        }
+      ],
+      "description": "1.5B parameter Qwen2 instruction-tuned model",
+      "type": "HuggingFace"
+    },
+    "huggingface_Qwen2-7B-Instruct": {
+      "status": "found",
+      "size_gb": 28.391887480393052,
+      "files": [
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "size_mb": 3391.639938354492,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/model-00004-of-00004.safetensors"
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "size_mb": 3762.652275085449,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/model-00001-of-00004.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.00122833251953125,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/tokenizer_config.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0006322860717773438,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 6.702437400817871,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.00023174285888671875,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/generation_config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 1.5943899154663086,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/merges.txt"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "size_mb": 3685.690315246582,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/model-00003-of-00004.safetensors"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 2.6481943130493164,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/vocab.json"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size_mb": 0.02646636962890625,
+          "path": "snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c/model.safetensors.index.json"
+        }
+      ],
+      "description": "7B parameter Qwen2 instruction-tuned model",
+      "type": "HuggingFace"
+    },
+    "huggingface_Qwen2.5-7B-Instruct": {
+      "status": "found",
+      "size_gb": 28.39190547913313,
+      "files": [
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "size_mb": 3391.626045227051,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/model-00004-of-00004.safetensors"
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "size_mb": 3762.6661682128906,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/model-00001-of-00004.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.006966590881347656,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/tokenizer_config.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0006322860717773438,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 6.705899238586426,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.00023174285888671875,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/generation_config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 1.5943899154663086,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/merges.txt"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "size_mb": 3685.690330505371,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/model-00003-of-00004.safetensors"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 2.6481943130493164,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/vocab.json"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size_mb": 0.02646636962890625,
+          "path": "snapshots/a09a35458c702b33eeacc393d103063234e8bc28/model.safetensors.index.json"
+        }
+      ],
+      "description": "7B parameter Qwen2.5 instruction-tuned model",
+      "type": "HuggingFace"
+    },
+    "huggingface_Qwen3-Omni-30B-A3B-Instruct": {
+      "status": "found",
+      "size_gb": 0.00832660123705864,
+      "files": [
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.0070037841796875,
+          "path": "snapshots/26291f793822fb6be9555850f06dfe95f2d7e695/tokenizer_config.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.013037681579589844,
+          "path": "snapshots/26291f793822fb6be9555850f06dfe95f2d7e695/config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 1.5943899154663086,
+          "path": "snapshots/26291f793822fb6be9555850f06dfe95f2d7e695/merges.txt"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 2.6481943130493164,
+          "path": "snapshots/26291f793822fb6be9555850f06dfe95f2d7e695/vocab.json"
+        },
+        {
+          "name": "preprocessor_config.json",
+          "size_mb": 0.0005750656127929688,
+          "path": "snapshots/26291f793822fb6be9555850f06dfe95f2d7e695/preprocessor_config.json"
+        },
+        {
+          "name": "added_tokens.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/26291f793822fb6be9555850f06dfe95f2d7e695/added_tokens.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/26291f793822fb6be9555850f06dfe95f2d7e695/special_tokens_map.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/26291f793822fb6be9555850f06dfe95f2d7e695/tokenizer.json"
+        },
+        {
+          "name": "processor_config.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/26291f793822fb6be9555850f06dfe95f2d7e695/processor_config.json"
+        },
+        {
+          "name": "chat_template.jinja",
+          "size_mb": 0.0,
+          "path": ".no_exist/26291f793822fb6be9555850f06dfe95f2d7e695/chat_template.jinja"
+        }
+      ],
+      "description": "30B parameter Qwen3 Omni multimodal model",
+      "type": "HuggingFace"
+    },
+    "huggingface_Marvis-TTS-250m-v0.1-MLX-4bit": {
+      "status": "found",
+      "size_gb": 0.7797851217910647,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 394.4870853424072,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/model.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.003513336181640625,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0005712509155273438,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.008624076843261719,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 3.36074161529541,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.00027942657470703125,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/generation_config.json"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 0.7635707855224609,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/vocab.json"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size_mb": 0.018172264099121094,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/model.safetensors.index.json"
+        },
+        {
+          "name": "conversational_a.txt",
+          "size_mb": 0.00022029876708984375,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/prompts/conversational_a.txt"
+        },
+        {
+          "name": "conversational_b.txt",
+          "size_mb": 0.00022029876708984375,
+          "path": "snapshots/9f2e5c51750ddad9f9a80489ce6d2a48d1f901a9/prompts/conversational_b.txt"
+        }
+      ],
+      "description": "250M parameter text-to-speech model for MLX",
+      "type": "TTS-MLX-4bit"
+    },
+    "huggingface_Marvis-TTS-250m-v0.1-MLX-8bit": {
+      "status": "found",
+      "size_gb": 1.2489209054037929,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 634.684606552124,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/model.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.003513336181640625,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0005712509155273438,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.008624076843261719,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 3.36074161529541,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.00027942657470703125,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/generation_config.json"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 0.7635707855224609,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/vocab.json"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size_mb": 0.018172264099121094,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/model.safetensors.index.json"
+        },
+        {
+          "name": "conversational_a.txt",
+          "size_mb": 0.00022029876708984375,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/prompts/conversational_a.txt"
+        },
+        {
+          "name": "conversational_b.txt",
+          "size_mb": 0.00022029876708984375,
+          "path": "snapshots/e37301e92380a3572dcbc973ee7714db783a0577/prompts/conversational_b.txt"
+        }
+      ],
+      "description": "250M parameter text-to-speech model for MLX",
+      "type": "TTS-MLX-8bit"
+    },
+    "huggingface_Marvis-TTS-250m-v0.1-MLX-fp16": {
+      "status": "found",
+      "size_gb": 4.247690931893885,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 2170.065878868103,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/model.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.003513336181640625,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0005712509155273438,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.008478164672851562,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 3.36074161529541,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.00027942657470703125,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/generation_config.json"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 0.7635707855224609,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/vocab.json"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size_mb": 0.0072994232177734375,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/model.safetensors.index.json"
+        },
+        {
+          "name": "conversational_a.txt",
+          "size_mb": 0.00022029876708984375,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/prompts/conversational_a.txt"
+        },
+        {
+          "name": "conversational_b.txt",
+          "size_mb": 0.00022029876708984375,
+          "path": "snapshots/8c9103dc00613489ff770879be0220426c280bc3/prompts/conversational_b.txt"
+        }
+      ],
+      "description": "250M parameter text-to-speech model for MLX",
+      "type": "TTS-MLX-fp16"
+    },
+    "huggingface_Facebook-MMS-TTS-eng": {
+      "status": "found",
+      "size_gb": 0.27051180601119995,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 138.49974822998047,
+          "path": "snapshots/c71de0fe7204c83f1c10820a7d696d0b450048ba/model.safetensors"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.00027370452880859375,
+          "path": "snapshots/c71de0fe7204c83f1c10820a7d696d0b450048ba/tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 4.482269287109375e-05,
+          "path": "snapshots/c71de0fe7204c83f1c10820a7d696d0b450048ba/special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0015649795532226562,
+          "path": "snapshots/c71de0fe7204c83f1c10820a7d696d0b450048ba/config.json"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 0.00039386749267578125,
+          "path": "snapshots/c71de0fe7204c83f1c10820a7d696d0b450048ba/vocab.json"
+        },
+        {
+          "name": "added_tokens.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/c71de0fe7204c83f1c10820a7d696d0b450048ba/added_tokens.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/c71de0fe7204c83f1c10820a7d696d0b450048ba/tokenizer.json"
+        },
+        {
+          "name": "chat_template.jinja",
+          "size_mb": 0.0,
+          "path": ".no_exist/c71de0fe7204c83f1c10820a7d696d0b450048ba/chat_template.jinja"
+        },
+        {
+          "name": "b6ca2175b8c7e731f3840b9e23018aa393cdb9c6",
+          "size_mb": 0.00027370452880859375,
+          "path": "blobs/b6ca2175b8c7e731f3840b9e23018aa393cdb9c6"
+        },
+        {
+          "name": "106a9a4c07ec6f37211ce6032423f67e6ed7af16",
+          "size_mb": 4.482269287109375e-05,
+          "path": "blobs/106a9a4c07ec6f37211ce6032423f67e6ed7af16"
+        }
+      ],
+      "description": "Facebook's multilingual speech synthesis model",
+      "type": "TTS"
+    },
+    "huggingface_Microsoft-VibeVoice-1.5B": {
+      "status": "found",
+      "size_gb": 5.1818788051605225e-06,
+      "files": [
+        {
+          "name": "config.json",
+          "size_mb": 0.0026340484619140625,
+          "path": "snapshots/1904eae38036e9c780d28e27990c27748984eafe/config.json"
+        },
+        {
+          "name": "17feb5528f948e364cde8640523c5ff3927131ae",
+          "size_mb": 0.0026340484619140625,
+          "path": "blobs/17feb5528f948e364cde8640523c5ff3927131ae"
+        },
+        {
+          "name": "main",
+          "size_mb": 3.814697265625e-05,
+          "path": "refs/main"
+        }
+      ],
+      "description": "1.5B parameter voice synthesis model",
+      "type": "TTS"
+    },
+    "huggingface_Microsoft-SpeechT5-TTS": {
+      "status": "found",
+      "size_gb": 2.1813701819628477,
+      "files": [
+        {
+          "name": "added_tokens.json",
+          "size_mb": 3.814697265625e-05,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/added_tokens.json"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.00022125244140625,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0002231597900390625,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0019664764404296875,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/config.json"
+        },
+        {
+          "name": "pytorch_model.bin",
+          "size_mb": 558.3542222976685,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/pytorch_model.bin"
+        },
+        {
+          "name": "spm_char.model",
+          "size_mb": 0.22742557525634766,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/spm_char.model"
+        },
+        {
+          "name": "preprocessor_config.json",
+          "size_mb": 0.00041294097900390625,
+          "path": "snapshots/30fcde30f19b87502b8435427b5f5068e401d5f6/preprocessor_config.json"
+        },
+        {
+          "name": "model.safetensors",
+          "size_mb": 558.276985168457,
+          "path": "snapshots/a01d4f293234515125d07f68be3c36d739ccac93/model.safetensors"
+        },
+        {
+          "name": "model.safetensors",
+          "size_mb": 0.0,
+          "path": ".no_exist/30fcde30f19b87502b8435427b5f5068e401d5f6/model.safetensors"
+        },
+        {
+          "name": "sentencepiece.bpe.model",
+          "size_mb": 0.0,
+          "path": ".no_exist/30fcde30f19b87502b8435427b5f5068e401d5f6/sentencepiece.bpe.model"
+        }
+      ],
+      "description": "Microsoft's SpeechT5 text-to-speech model",
+      "type": "TTS"
+    },
+    "huggingface_Microsoft-SpeechT5-HiFiGAN": {
+      "status": "found",
+      "size_gb": 0.18871175684034824,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 48.29475784301758,
+          "path": "snapshots/6f01b211b404df2e0a0a20ca79628a757bb35854/model.safetensors"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.000606536865234375,
+          "path": "snapshots/bb6f429406e86a9992357a972c0698b22043307d/config.json"
+        },
+        {
+          "name": "pytorch_model.bin",
+          "size_mb": 48.32501697540283,
+          "path": "snapshots/bb6f429406e86a9992357a972c0698b22043307d/pytorch_model.bin"
+        },
+        {
+          "name": "model.safetensors",
+          "size_mb": 0.0,
+          "path": ".no_exist/bb6f429406e86a9992357a972c0698b22043307d/model.safetensors"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size_mb": 0.0,
+          "path": ".no_exist/bb6f429406e86a9992357a972c0698b22043307d/model.safetensors.index.json"
+        },
+        {
+          "name": "b171e9bcd8a2b50dc9780040478dfa26783a9ee4be012cf5776914f091d6887b",
+          "size_mb": 48.32501697540283,
+          "path": "blobs/b171e9bcd8a2b50dc9780040478dfa26783a9ee4be012cf5776914f091d6887b"
+        },
+        {
+          "name": "0a7082eeb84ebcfd0ae7cfd9e3ce5939dcbe39c4",
+          "size_mb": 0.000606536865234375,
+          "path": "blobs/0a7082eeb84ebcfd0ae7cfd9e3ce5939dcbe39c4"
+        },
+        {
+          "name": "5e1ae998705b24b74b79b55bd9015f458ee85dbc1e98448aa7f0e0e066eba1bd",
+          "size_mb": 48.29475784301758,
+          "path": "blobs/5e1ae998705b24b74b79b55bd9015f458ee85dbc1e98448aa7f0e0e066eba1bd"
+        },
+        {
+          "name": "main",
+          "size_mb": 3.814697265625e-05,
+          "path": "refs/main"
+        },
+        {
+          "name": "1",
+          "size_mb": 3.814697265625e-05,
+          "path": "refs/refs/pr/1"
+        }
+      ],
+      "description": "HiFiGAN vocoder for SpeechT5",
+      "type": "TTS"
+    },
+    "huggingface_Descript-DAC-44khz": {
+      "status": "found",
+      "size_gb": 0.5709153357893229,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size_mb": 292.3081169128418,
+          "path": "snapshots/c1bc521685adf9cfe247bc39a5ca58917eda1ac4/model.safetensors"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0005159378051757812,
+          "path": "snapshots/c1bc521685adf9cfe247bc39a5ca58917eda1ac4/config.json"
+        },
+        {
+          "name": "6128ebff483a41422b0164d079a3773b0d8d82e64c4293d775994cbf8baf913a",
+          "size_mb": 292.3081169128418,
+          "path": "blobs/6128ebff483a41422b0164d079a3773b0d8d82e64c4293d775994cbf8baf913a"
+        },
+        {
+          "name": "20887784bad88bfaf4dfd10c096f031136ac6e79",
+          "size_mb": 0.0005159378051757812,
+          "path": "blobs/20887784bad88bfaf4dfd10c096f031136ac6e79"
+        },
+        {
+          "name": "main",
+          "size_mb": 3.814697265625e-05,
+          "path": "refs/main"
+        }
+      ],
+      "description": "Descript's neural audio codec",
+      "type": "Audio"
+    },
+    "huggingface_Kyutai-Moshiko-PyTorch-bf16": {
+      "status": "found",
+      "size_gb": 0.7164569944143295,
+      "files": [
+        {
+          "name": "tokenizer-e351c8d8-checkpoint125.safetensors",
+          "size_mb": 366.8259620666504,
+          "path": "snapshots/2bfc9ae6e89079a5cc7ed2a68436010d91a3d289/tokenizer-e351c8d8-checkpoint125.safetensors"
+        },
+        {
+          "name": "09b782f0629851a271227fb9d36db65c041790365f11bbe5d3d59369cf863f50",
+          "size_mb": 366.8259620666504,
+          "path": "blobs/09b782f0629851a271227fb9d36db65c041790365f11bbe5d3d59369cf863f50"
+        },
+        {
+          "name": "main",
+          "size_mb": 3.814697265625e-05,
+          "path": "refs/main"
+        }
+      ],
+      "description": "Kyutai's Moshiko speech synthesis model",
+      "type": "TTS"
+    },
+    "huggingface_LMStudio-Qwen3-Coder-30B-A3B-Instruct-MLX-5bit": {
+      "status": "found",
+      "size_gb": 39.12911255285144,
+      "files": [
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "size_mb": 4830.161712646484,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/model-00004-of-00004.safetensors"
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "size_mb": 5119.272644042969,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/model-00001-of-00004.safetensors"
+        },
+        {
+          "name": "added_tokens.json",
+          "size_mb": 0.0006742477416992188,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/added_tokens.json"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.011828422546386719,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/tokenizer_config.json"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size_mb": 0.0005846023559570312,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/special_tokens_map.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0011644363403320312,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/config.json"
+        },
+        {
+          "name": "tokenizer.json",
+          "size_mb": 10.893491744995117,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/tokenizer.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.000171661376953125,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/generation_config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 1.5944032669067383,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/merges.txt"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "size_mb": 5034.7001848220825,
+          "path": "snapshots/a7d91f62488598d4725c5363a73d0a8f0e1b9329/model-00003-of-00004.safetensors"
+        }
+      ],
+      "description": "30B parameter Qwen3 Coder model for MLX with 5-bit quantization",
+      "type": "Code-MLX-5bit"
+    },
+    "huggingface_Microsoft-DialoGPT-medium": {
+      "status": "found",
+      "size_gb": 0.0027942750602960587,
+      "files": [
+        {
+          "name": "tokenizer_config.json",
+          "size_mb": 0.0005855560302734375,
+          "path": "snapshots/7b40bb0f92c45fefa957d088000d8648e5c7fa33/tokenizer_config.json"
+        },
+        {
+          "name": "config.json",
+          "size_mb": 0.0006122589111328125,
+          "path": "snapshots/7b40bb0f92c45fefa957d088000d8648e5c7fa33/config.json"
+        },
+        {
+          "name": "generation_config_for_conversational.json",
+          "size_mb": 0.0001392364501953125,
+          "path": "snapshots/7b40bb0f92c45fefa957d088000d8648e5c7fa33/generation_config_for_conversational.json"
+        },
+        {
+          "name": "generation_config.json",
+          "size_mb": 0.000118255615234375,
+          "path": "snapshots/7b40bb0f92c45fefa957d088000d8648e5c7fa33/generation_config.json"
+        },
+        {
+          "name": "merges.txt",
+          "size_mb": 0.4351787567138672,
+          "path": "snapshots/7b40bb0f92c45fefa957d088000d8648e5c7fa33/merges.txt"
+        },
+        {
+          "name": "vocab.json",
+          "size_mb": 0.9940156936645508,
+          "path": "snapshots/7b40bb0f92c45fefa957d088000d8648e5c7fa33/vocab.json"
+        },
+        {
+          "name": "bbba90e88e7420153a0b45c26d9d357242f418ff",
+          "size_mb": 0.0006122589111328125,
+          "path": "blobs/bbba90e88e7420153a0b45c26d9d357242f418ff"
+        },
+        {
+          "name": "7398ce6109de2838c2cf0e85cf4c5cc6da152753",
+          "size_mb": 0.0001392364501953125,
+          "path": "blobs/7398ce6109de2838c2cf0e85cf4c5cc6da152753"
+        },
+        {
+          "name": "42319b5e84e92687356f5361cd83c2773675c35a",
+          "size_mb": 0.0005855560302734375,
+          "path": "blobs/42319b5e84e92687356f5361cd83c2773675c35a"
+        },
+        {
+          "name": "226b0752cac7789c48f0cb3ec53eda48b7be36cc",
+          "size_mb": 0.4351787567138672,
+          "path": "blobs/226b0752cac7789c48f0cb3ec53eda48b7be36cc"
+        }
+      ],
+      "description": "Medium-sized conversational AI model",
+      "type": "Chat"
+    },
+    "image_processing": {
+      "status": "working",
+      "response": "PIL operations successful",
+      "error": null
+    }
+  }
+}

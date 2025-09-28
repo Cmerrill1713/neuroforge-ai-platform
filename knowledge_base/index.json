@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "id": "parallel_r1",
+      "title": "Parallel-R1: Towards Parallel Thinking via Reinforcement Learning",
+      "keywords": ["parallel_thinking", "reinforcement_learning", "llm", "reasoning", "curriculum_learning", "progressive_training", "cold_start_problem", "multi_perspective_verification", "exploration_scaffold"],
+      "retrieval_tags": ["parallel", "RL", "reasoning", "LLM"],
+      "domain": "artificial intelligence"
+    },
+    {
+      "id": "ml_basics",
+      "title": "Machine Learning Basics",
+      "keywords": ["machine learning", "AI", "algorithms"],
+      "retrieval_tags": ["ML", "AI", "basics"],
+      "domain": "artificial intelligence"
+    }
+  ]
+}

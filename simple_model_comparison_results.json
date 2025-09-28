@@ -1,0 +1,89 @@
+{
+  "test_results": [
+    {
+      "model": "llama3.1:8b",
+      "test_name": "simple",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00022792816162109375
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test_name": "simple",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.0001609325408935547
+    },
+    {
+      "model": "mistral:7b",
+      "test_name": "simple",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00014400482177734375
+    },
+    {
+      "model": "gpt-oss:20b",
+      "test_name": "simple",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00011205673217773438
+    },
+    {
+      "model": "llama3.1:8b",
+      "test_name": "medium",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.0003001689910888672
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test_name": "medium",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00045299530029296875
+    },
+    {
+      "model": "mistral:7b",
+      "test_name": "medium",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.0001437664031982422
+    },
+    {
+      "model": "gpt-oss:20b",
+      "test_name": "medium",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.0005018711090087891
+    },
+    {
+      "model": "llama3.1:8b",
+      "test_name": "complex",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00025010108947753906
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test_name": "complex",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.0003681182861328125
+    },
+    {
+      "model": "mistral:7b",
+      "test_name": "complex",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00025534629821777344
+    },
+    {
+      "model": "gpt-oss:20b",
+      "test_name": "complex",
+      "status": "error",
+      "error": "No module named 'src.core.models.requests'",
+      "response_time": 0.00016427040100097656
+    }
+  ],
+  "timestamp": "2025-09-25T22:41:22.521322"
+}

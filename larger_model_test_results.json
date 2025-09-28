@@ -1,0 +1,55 @@
+{
+  "complex_reasoning": [
+    {
+      "model": "llama3.1:8b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 3.0994415283203125e-06
+    },
+    {
+      "model": "qwen2.5:7b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 1.4066696166992188e-05
+    },
+    {
+      "model": "mistral:7b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 2.7179718017578125e-05
+    },
+    {
+      "model": "gpt-oss:20b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 2.4080276489257812e-05
+    }
+  ],
+  "speed_tests": [
+    {
+      "model": "llama3.1:8b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 1.1205673217773438e-05
+    },
+    {
+      "model": "qwen2.5:7b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 7.152557373046875e-06
+    },
+    {
+      "model": "mistral:7b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 1.5020370483398438e-05
+    },
+    {
+      "model": "gpt-oss:20b",
+      "status": "error",
+      "error": "parallel_reasoning() got an unexpected keyword argument 'model_override'",
+      "response_time": 1.4781951904296875e-05
+    }
+  ],
+  "timestamp": "2025-09-25T22:40:13.646110"
+}

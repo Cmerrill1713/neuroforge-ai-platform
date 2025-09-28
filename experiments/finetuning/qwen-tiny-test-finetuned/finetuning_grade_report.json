@@ -1,0 +1,58 @@
+{
+  "timestamp": 1759033009.260013,
+  "overall_grade": "D",
+  "overall_score": 60.0,
+  "metrics": {
+    "training_loss": 18.656808035714285,
+    "validation_loss": 0.0,
+    "training_time": 0.06271163225173951,
+    "convergence_epochs": 0,
+    "perplexity": 37.31361607142857,
+    "bleu_score": 0.3,
+    "rouge_score": 0.4,
+    "memory_usage": 39.289093017578125,
+    "gpu_utilization": 75.0,
+    "throughput": 478.38014930902796,
+    "knowledge_retention": 0.6,
+    "domain_accuracy": 0.7,
+    "response_quality": 0.75
+  },
+  "detailed_scores": {
+    "training_performance": {
+      "score": 70.0,
+      "grade": "C"
+    },
+    "model_quality": {
+      "score": 55.0,
+      "grade": "F"
+    },
+    "system_performance": {
+      "score": 65.0,
+      "grade": "D"
+    },
+    "knowledge_integration": {
+      "score": 50.0,
+      "grade": "F"
+    }
+  },
+  "recommendations": [
+    "Consider reducing learning rate or increasing training epochs",
+    "Improve training data diversity and quality",
+    "Use gradient checkpointing or reduce batch size",
+    "Increase knowledge base coverage and quality"
+  ],
+  "criteria": {
+    "excellent_loss_threshold": 0.5,
+    "good_loss_threshold": 1.0,
+    "acceptable_loss_threshold": 2.0,
+    "excellent_perplexity_threshold": 10.0,
+    "good_perplexity_threshold": 20.0,
+    "acceptable_perplexity_threshold": 50.0,
+    "excellent_time_threshold": 30.0,
+    "good_time_threshold": 60.0,
+    "acceptable_time_threshold": 120.0,
+    "excellent_knowledge_threshold": 0.9,
+    "good_knowledge_threshold": 0.8,
+    "acceptable_knowledge_threshold": 0.7
+  }
+}

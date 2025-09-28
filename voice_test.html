@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIA Voice Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: #4CAF50; }
+        .error { background: #f44336; }
+        .info { background: #2196F3; }
+        .warning { background: #ff9800; }
+        #transcript {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 100px;
+            border: 1px solid #555;
+        }
+        #response {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 100px;
+            border: 1px solid #555;
+        }
+        .voice-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎤 DIA Voice Test</h1>
+    
+    <div class="container">
+        <h2>Voice Input Test</h2>
+        <div class="voice-controls">
+            <button id="startBtn" onclick="startListening()">🎤 Start Listening</button>
+            <button id="stopBtn" onclick="stopListening()" disabled>⏹️ Stop Listening</button>
+            <button onclick="clearTranscript()">🗑️ Clear</button>
+        </div>
+        
+        <div id="status" class="status info">Ready to test voice input</div>
+        
+        <h3>Transcript:</h3>
+        <div id="transcript">Click "Start Listening" and speak...</div>
+        
+        <h3>DIA Response:</h3>
+        <div id="response">DIA responses will appear here...</div>
+    </div>
+
+    <div class="container">
+        <h2>Voice Output Test</h2>
+        <div class="voice-controls">
+            <button onclick="testTTS('Hello! This is DIA voice output test.')">🔊 Test TTS</button>
+            <button onclick="testTTS('The weather is sunny today.')">🌤️ Weather</button>
+            <button onclick="testTTS('Why don\'t scientists trust atoms? Because they make up everything!')">😄 Joke</button>
+            <button onclick="stopSpeaking()">⏹️ Stop Speaking</button>
+        </div>
+        
+        <div id="ttsStatus" class="status info">Ready to test voice output</div>
+    </div>
+
+    <div class="container">
+        <h2>DIA Model Test</h2>
+        <div class="voice-controls">
+            <button onclick="testDIAModel('Hello DIA!')">🤖 Test DIA</button>
+            <button onclick="testDIAModel('Tell me a joke')">😄 Ask for Joke</button>
+            <button onclick="testDIAModel('What is 2+2?')">🧮 Math Question</button>
+        </div>
+        
+        <div id="diaStatus" class="status info">Ready to test DIA model</div>
+        <div id="diaResponse">DIA model responses will appear here...</div>
+    </div>
+
+    <script>
+        let recognition = null;
+        let isListening = false;
+        let synthesis = window.speechSynthesis;
+
+        // Initialize speech recognition
+        function initSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window) {
+                recognition = new webkitSpeechRecognition();
+            } else if ('SpeechRecognition' in window) {
+                recognition = new SpeechRecognition();
+            } else {
+                updateStatus('Speech recognition not supported in this browser', 'error');
+                return false;
+            }
+
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.lang = 'en-US';
+
+            recognition.onstart = function() {
+                isListening = true;
+                updateStatus('🎤 Listening... Speak now!', 'success');
+                document.getElementById('startBtn').disabled = true;
+                document.getElementById('stopBtn').disabled = false;
+            };
+
+            recognition.onresult = function(event) {
+                let finalTranscript = '';
+                let interimTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) {
+                        finalTranscript += transcript;
+                    } else {
+                        interimTranscript += transcript;
+                    }
+                }
+
+                document.getElementById('transcript').innerHTML = 
+                    '<strong>Final:</strong> ' + finalTranscript + '<br>' +
+                    '<em>Interim:</em> ' + interimTranscript;
+
+                // Auto-send to DIA if we have a final transcript
+                if (finalTranscript.trim()) {
+                    testDIAModel(finalTranscript);
+                }
+            };
+
+            recognition.onerror = function(event) {
+                updateStatus('Speech recognition error: ' + event.error, 'error');
+                stopListening();
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                document.getElementById('startBtn').disabled = false;
+                document.getElementById('stopBtn').disabled = true;
+                updateStatus('Speech recognition ended', 'info');
+            };
+
+            return true;
+        }
+
+        function startListening() {
+            if (!recognition) {
+                if (!initSpeechRecognition()) {
+                    return;
+                }
+            }
+            
+            try {
+                recognition.start();
+            } catch (e) {
+                updateStatus('Error starting speech recognition: ' + e.message, 'error');
+            }
+        }
+
+        function stopListening() {
+            if (recognition && isListening) {
+                recognition.stop();
+            }
+        }
+
+        function clearTranscript() {
+            document.getElementById('transcript').innerHTML = 'Click "Start Listening" and speak...';
+            document.getElementById('response').innerHTML = 'DIA responses will appear here...';
+        }
+
+        function updateStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function updateTTSStatus(message, type) {
+            const status = document.getElementById('ttsStatus');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function updateDIAStatus(message, type) {
+            const status = document.getElementById('diaStatus');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function testTTS(text) {
+            if (!synthesis) {
+                updateTTSStatus('Speech synthesis not supported', 'error');
+                return;
+            }
+
+            updateTTSStatus('🔊 Speaking: ' + text, 'info');
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.rate = 0.9;
+            utterance.pitch = 1.0;
+            utterance.volume = 1.0;
+
+            utterance.onstart = function() {
+                updateTTSStatus('🔊 Speaking...', 'success');
+            };
+
+            utterance.onend = function() {
+                updateTTSStatus('✅ Finished speaking', 'success');
+            };
+
+            utterance.onerror = function(event) {
+                updateTTSStatus('❌ Speech error: ' + event.error, 'error');
+            };
+
+            synthesis.speak(utterance);
+        }
+
+        function stopSpeaking() {
+            if (synthesis) {
+                synthesis.cancel();
+                updateTTSStatus('⏹️ Speech stopped', 'warning');
+            }
+        }
+
+        async function testDIAModel(prompt) {
+            updateDIAStatus('🤖 Sending to DIA model...', 'info');
+            
+            try {
+                const response = await fetch('http://localhost:11435/api/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: 'dia-1.6b-mlx',
+                        prompt: prompt,
+                        stream: false,
+                        options: {
+                            temperature: 0.7,
+                            num_predict: 100
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const diaResponse = result.response || 'No response';
+                    
+                    document.getElementById('diaResponse').innerHTML = 
+                        '<strong>Prompt:</strong> ' + prompt + '<br>' +
+                        '<strong>DIA Response:</strong> ' + diaResponse + '<br>' +
+                        '<strong>Tokens:</strong> ' + result.eval_count;
+                    
+                    updateDIAStatus('✅ DIA response received', 'success');
+                    
+                    // Auto-speak the response
+                    if (diaResponse.trim()) {
+                        testTTS(diaResponse);
+                    }
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                updateDIAStatus('❌ Error: ' + error.message, 'error');
+                document.getElementById('diaResponse').innerHTML = 'Error: ' + error.message;
+            }
+        }
+
+        // Initialize on page load
+        window.onload = function() {
+            updateStatus('Voice test ready! Click "Start Listening" to begin.', 'info');
+            updateTTSStatus('Text-to-speech ready!', 'info');
+            updateDIAStatus('DIA model test ready!', 'info');
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "agentic-llm-core": {
+      "command": "python3",
+      "args": ["/Users/christianmerrill/Prompt Engineering/cursor_mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "/Users/christianmerrill/Prompt Engineering/src"
+      }
+    }
+  }
+}

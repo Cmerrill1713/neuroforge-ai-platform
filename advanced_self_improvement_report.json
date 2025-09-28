@@ -1,0 +1,84 @@
+{
+  "analysis_result": {
+    "timestamp": "2025-09-28T10:51:29.217407",
+    "analysis_type": "comprehensive",
+    "issues_detected": [
+      "SystemIssue(id='slow_agent_selection_1759074759', type='slow_agent_selection', severity='medium', description='Agent selection too slow: 69.92s', root_cause='inefficient_selection_algorithm', impact='poor_user_experience', detection_method='performance_monitoring', timestamp=datetime.datetime(2025, 9, 28, 10, 52, 39, 136831), metadata={'response_time': 69.91859197616577, 'threshold': 2.0, 'scenario': {'message': 'Create a strategic plan for AI implementation', 'expected_task_type': 'strategic_planning', 'expected_agent': 'heretical_reasoner', 'complexity': 'complex'}}, fix_applied=False, fix_result=None)",
+      "SystemIssue(id='slow_performance_complex_analysis_1759074805', type='slow_performance', severity='medium', description=\"Performance test 'complex_analysis' too slow: 40.78s\", root_cause='inefficient_processing', impact='poor_user_experience', detection_method='performance_testing', timestamp=datetime.datetime(2025, 9, 28, 10, 53, 25, 646851), metadata={'test_name': 'complex_analysis', 'response_time': 40.778501749038696, 'expected_max_time': 5.0, 'task_type': 'analysis'}, fix_applied=False, fix_result=None)",
+      "SystemIssue(id='overall_slow_performance_1759074805', type='overall_slow_performance', severity='high', description='Overall performance too slow: 13.59s average', root_cause='system_performance_degradation', impact='poor_user_experience', detection_method='statistical_analysis', timestamp=datetime.datetime(2025, 9, 28, 10, 53, 25, 647093), metadata={'avg_response_time': 13.593052625656128, 'threshold': 2.0, 'performance_results': [{'test_name': 'simple_text_generation', 'response_time': 0.0004248619079589844, 'expected_max_time': 2.0, 'within_threshold': True, 'task_complexity': 0.05, 'use_parallel_reasoning': False}, {'test_name': 'complex_analysis', 'response_time': 40.778501749038696, 'expected_max_time': 5.0, 'within_threshold': False, 'task_complexity': 0.35, 'use_parallel_reasoning': True}, {'test_name': 'code_generation', 'response_time': 0.00023126602172851562, 'expected_max_time': 3.0, 'within_threshold': True, 'task_complexity': 0.0, 'use_parallel_reasoning': False}]}, fix_applied=False, fix_result=None)",
+      "SystemIssue(id='broad_except_ollama_adapter.py_1759074805', type='broad_exception_handling', severity='medium', description='File ollama_adapter.py contains broad exception handling', root_cause='poor_error_handling', impact='difficult_debugging', detection_method='text_analysis', timestamp=datetime.datetime(2025, 9, 28, 10, 53, 25, 647597), metadata={'file_path': '/Users/christianmerrill/Prompt Engineering/src/core/engines/ollama_adapter.py'}, fix_applied=False, fix_result=None)"
+    ],
+    "performance_metrics": {
+      "avg_response_time": 13.593052625656128,
+      "max_response_time": 40.778501749038696,
+      "success_rate": 1.0,
+      "total_tests": 3,
+      "successful_tests": 3
+    },
+    "system_health": "degraded",
+    "recommendations": [
+      "\u26a1 MEDIUM: Implement response caching, connection pooling, and performance optimization",
+      "\ud83d\udee1\ufe0f MEDIUM: Implement specific exception handling and error recovery"
+    ],
+    "fix_plan": {
+      "immediate_fixes": [],
+      "short_term_fixes": [
+        {
+          "issue_id": "overall_slow_performance_1759074805",
+          "type": "overall_slow_performance",
+          "description": "Overall performance too slow: 13.59s average",
+          "fix_strategy": "manual_review"
+        }
+      ],
+      "long_term_fixes": [
+        {
+          "issue_id": "slow_agent_selection_1759074759",
+          "type": "slow_agent_selection",
+          "description": "Agent selection too slow: 69.92s",
+          "fix_strategy": "manual_review"
+        },
+        {
+          "issue_id": "slow_performance_complex_analysis_1759074805",
+          "type": "slow_performance",
+          "description": "Performance test 'complex_analysis' too slow: 40.78s",
+          "fix_strategy": "manual_review"
+        },
+        {
+          "issue_id": "broad_except_ollama_adapter.py_1759074805",
+          "type": "broad_exception_handling",
+          "description": "File ollama_adapter.py contains broad exception handling",
+          "fix_strategy": "manual_review"
+        }
+      ],
+      "priority_order": [
+        "overall_slow_performance_1759074805",
+        "slow_agent_selection_1759074759",
+        "slow_performance_complex_analysis_1759074805",
+        "broad_except_ollama_adapter.py_1759074805"
+      ]
+    }
+  },
+  "timestamp": "2025-09-28T10:53:25.648541",
+  "system_info": {
+    "config": {
+      "analysis_depth": "deep",
+      "auto_fix_enabled": true,
+      "rollback_enabled": true,
+      "verification_enabled": true,
+      "performance_thresholds": {
+        "max_response_time": 2.0,
+        "min_success_rate": 0.95,
+        "max_error_rate": 0.05,
+        "min_throughput": 1.0
+      },
+      "fix_strategies": {
+        "agent_selection": "rewrite_logic",
+        "model_loading": "implement_caching",
+        "monitoring": "add_missing_attributes",
+        "performance": "optimize_algorithms"
+      }
+    },
+    "issues_detected": 4,
+    "recommendations": 2
+  }
+}

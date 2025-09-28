@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-26T00:00:52.973336",
+  "api_connected": true,
+  "frontend_accessible": true,
+  "models_count": 10,
+  "chat_results": [
+    {
+      "model": "qwen2.5:7b",
+      "success": true,
+      "response_time": 2.396186113357544,
+      "response_length": 805
+    },
+    {
+      "model": "mistral:7b",
+      "success": true,
+      "response_time": 9.084224939346313,
+      "response_length": 2354
+    },
+    {
+      "model": "llama3.2:3b",
+      "success": true,
+      "response_time": 6.123319149017334,
+      "response_length": 3027
+    }
+  ],
+  "integration_status": "complete"
+}

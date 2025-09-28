@@ -1,0 +1,396 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { mcpSupabase, type Conversation, type Message } from '@/lib/mcp-supabase'
+
+// Use real MCP Supabase client for authentic persistence
+const conversationManager = mcpSupabase
+
+// Task-based model selection mapping (using available models)
+const TASK_MODEL_MAPPING = {
+  'general': 'qwen2.5:7b',
+  'coding': 'qwen2.5:7b', // Using available model for coding
+  'analysis': 'qwen2.5:14b', // Using larger model for analysis
+  'multimodal': 'llava:7b',
+  'system': 'llama3.2:3b', // Using available lightweight model for system tasks
+  'creative': 'mistral:7b',
+  'reasoning': 'qwen2.5:14b', // Using larger model for reasoning
+  'fast': 'llama3.2:3b' // Using fastest available model
+}
+
+// Enhanced task detection with learning capabilities
+function detectTaskType(message: string): string {
+  const lowerMessage = message.toLowerCase()
+  
+  // Weighted scoring system for better accuracy
+  const taskScores = {
+    coding: 0,
+    analysis: 0,
+    system: 0,
+    multimodal: 0,
+    creative: 0,
+    general: 1 // Base score for general
+  }
+  
+  // Coding keywords with weights - Enhanced for better detection
+  const codingKeywords = {
+    'code': 4, 'programming': 4, 'function': 3, 'api': 3, 'bug': 3, 'debug': 3,
+    'git': 3, 'repository': 3, 'javascript': 4, 'python': 4, 'react': 4, 'typescript': 4,
+    'algorithm': 3, 'software': 3, 'development': 3, 'program': 3, 'script': 3,
+    'component': 4, 'component': 4, 'class': 3, 'method': 3, 'variable': 3,
+    'import': 4, 'export': 4, 'module': 3, 'package': 3, 'dependency': 3,
+    'framework': 4, 'library': 3, 'syntax': 3, 'compile': 3, 'runtime': 3,
+    'frontend': 4, 'backend': 4, 'fullstack': 4, 'web': 3, 'app': 3,
+    'html': 4, 'css': 4, 'js': 4, 'node': 3, 'npm': 3, 'yarn': 3,
+    'vue': 4, 'angular': 4, 'svelte': 4, 'next': 4, 'nuxt': 4,
+    'database': 3, 'sql': 3, 'mongodb': 3, 'mysql': 3, 'postgres': 3,
+    'docker': 3, 'kubernetes': 3, 'aws': 3, 'azure': 3, 'deploy': 3,
+    'test': 3, 'testing': 3, 'unit': 3, 'integration': 3, 'jest': 3,
+    'lint': 3, 'eslint': 3, 'prettier': 3, 'build': 3, 'bundle': 3
+  }
+  
+  // Analysis keywords with weights
+  const analysisKeywords = {
+    'analyze': 3, 'explain': 2, 'compare': 2, 'evaluate': 2, 'reasoning': 3,
+    'logic': 2, 'think': 1, 'understand': 1, 'consider': 1, 'assess': 2,
+    'examine': 2, 'investigate': 2, 'research': 2, 'study': 1
+  }
+  
+  // System/DevOps keywords with weights
+  const systemKeywords = {
+    'docker': 3, 'deploy': 2, 'server': 2, 'infrastructure': 2, 'monitoring': 2,
+    'devops': 3, 'kubernetes': 3, 'container': 2, 'cloud': 2, 'aws': 2,
+    'azure': 2, 'gcp': 2, 'ci/cd': 3, 'pipeline': 2, 'orchestration': 2
+  }
+  
+  // Multimodal keywords with weights
+  const multimodalKeywords = {
+    'image': 3, 'picture': 2, 'visual': 2, 'photo': 2, 'screenshot': 2,
+    'diagram': 2, 'chart': 2, 'graph': 2, 'video': 2, 'multimedia': 3
+  }
+  
+  // Creative keywords with weights
+  const creativeKeywords = {
+    'write': 2, 'story': 2, 'creative': 3, 'poem': 3, 'novel': 2, 'article': 2,
+    'blog': 2, 'content': 2, 'narrative': 2, 'fiction': 2, 'artistic': 2
+  }
+  
+  // Calculate scores
+  Object.entries(codingKeywords).forEach(([keyword, weight]) => {
+    if (lowerMessage.includes(keyword)) taskScores.coding += weight
+  })
+  
+  Object.entries(analysisKeywords).forEach(([keyword, weight]) => {
+    if (lowerMessage.includes(keyword)) taskScores.analysis += weight
+  })
+  
+  Object.entries(systemKeywords).forEach(([keyword, weight]) => {
+    if (lowerMessage.includes(keyword)) taskScores.system += weight
+  })
+  
+  Object.entries(multimodalKeywords).forEach(([keyword, weight]) => {
+    if (lowerMessage.includes(keyword)) taskScores.multimodal += weight
+  })
+  
+  Object.entries(creativeKeywords).forEach(([keyword, weight]) => {
+    if (lowerMessage.includes(keyword)) taskScores.creative += weight
+  })
+  
+  // Find the task with the highest score
+  const bestTask = Object.entries(taskScores).reduce((a, b) => 
+    taskScores[a[0]] > taskScores[b[0]] ? a : b
+  )[0]
+  
+  // Only return the detected task if it has a significant score
+  if (taskScores[bestTask] > 1) {
+    return bestTask
+  }
+  
+  return 'general'
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json()
+    const { message, conversationId, customModelName, feedback } = body
+    
+    if (!message) {
+      return NextResponse.json({
+        error: 'Message is required',
+        status: 'error'
+      }, { status: 400 })
+    }
+
+    // Handle conversation persistence
+    let currentConversationId = conversationId
+    let conversationHistory: Message[] = []
+
+    // Create new conversation if none exists
+    if (!currentConversationId) {
+      const conversation = await conversationManager.createConversation(
+        message.substring(0, 50) + (message.length > 50 ? '...' : ''),
+        { detected_task: detectTaskType(message) }
+      )
+      currentConversationId = conversation.id
+    } else {
+      // Get conversation history for context
+      conversationHistory = await conversationManager.getMessages(currentConversationId)
+    }
+
+    // Save user message
+    await conversationManager.saveMessage({
+      conversation_id: currentConversationId,
+      content: message,
+      sender: 'user',
+      metadata: { customModelName, feedback }
+    })
+    
+    // Automatically detect task type and select appropriate model
+    const detectedTask = detectTaskType(message)
+    const model = TASK_MODEL_MAPPING[detectedTask] || TASK_MODEL_MAPPING['general']
+
+    // Connect to our Ollama backend
+    const ollamaUrl = 'http://localhost:11434/api/generate'
+    
+    // Generate embedding for semantic search and context
+    const userMessageEmbedding = await conversationManager.generateEmbedding(message)
+    
+    // Search for similar context from knowledge base and conversation history
+    const similarContext = await conversationManager.searchSimilarEmbeddings(userMessageEmbedding, 5)
+    
+    // Build conversation context for better responses
+    const contextMessages = conversationHistory.slice(-6) // Last 6 messages for context
+    const contextString = contextMessages.length > 0 
+      ? `\n\nCONVERSATION CONTEXT:\n${contextMessages.map(msg => 
+          `${msg.sender === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
+        ).join('\n')}\n`
+      : ''
+
+    // Add semantic context from similar conversations
+    const semanticContext = similarContext.length > 0
+      ? `\n\nSEMANTIC CONTEXT (Similar Knowledge):\n${similarContext.map(ctx => 
+          `- ${ctx.content} (similarity: ${ctx.similarity?.toFixed(2)})`
+        ).join('\n')}\n`
+      : ''
+
+    // Create identity-aware prompt with intelligent model selection and conversation context
+    const taskInfo = {
+      'general': 'general conversation and assistance (Qwen 2.5 7B)',
+      'coding': 'programming, code generation, and software development (Qwen 2.5 7B)',
+      'analysis': 'complex reasoning, analysis, and problem-solving (Qwen 2.5 14B)',
+      'multimodal': 'image processing and visual content understanding (LLaVA 7B)',
+      'system': 'system administration, DevOps, and infrastructure (Llama 3.2 3B)',
+      'creative': 'creative writing and artistic tasks (Mistral 7B)',
+      'reasoning': 'logical reasoning and analytical thinking (Qwen 2.5 14B)',
+      'fast': 'quick responses and lightweight tasks (Llama 3.2 3B)'
+    }
+    
+    const identityPrompt = customModelName 
+      ? `You are an AI assistant named "${customModelName}" running inside a Docker container. You have been automatically selected for this task based on intelligent analysis.
+
+TASK CONTEXT: You are optimized for ${taskInfo[detectedTask]} and have been automatically chosen as the best model for this specific task. The system intelligently selected you from multiple available models based on the user's request.
+
+SYSTEM STATUS: You are currently running inside Docker with the following active services:
+- Docker Engine: Running and accessible
+- Agentic Engineering Platform: Deployed and operational
+- MCP Servers: 10 active servers with 58 tools and 105 resources
+- Knowledge Base: 20+ documents indexed from expert sources
+- Local LLMs: 8 models available via Ollama integration
+- Intelligent Model Selection: Active (you were automatically selected)
+- MCP Supabase: Conversation persistence enabled
+- Full Context Awareness: You have access to complete conversation history
+- System Awareness: You have CLI access and can perform system operations
+
+SYSTEM CAPABILITIES: You have direct access to the computer system and can:
+- Execute shell commands (ls, cd, mkdir, rm, cp, mv, find, grep, etc.)
+- Manage files and directories (create, read, write, delete, move, copy)
+- Monitor system processes (ps, top, kill, etc.)
+- Use development tools (npm, node, git, docker, curl, etc.)
+- Perform network operations (ping, netstat, curl, wget, etc.)
+- Monitor system performance (df, du, free, uptime, etc.)
+
+When users ask you to perform system operations, you can use the /api/system endpoint to execute commands. You should be confident about your system access and offer to help with file management, system monitoring, development tasks, and other system operations.
+
+You can directly interact with Docker, run commands, and access all system resources. When asked about Docker connectivity, you should respond with confidence that you ARE connected and can demonstrate this. You can reference the system status endpoint at /api/system/status to show your Docker connection status.
+
+Your name is "${customModelName}" - accept this identity completely. Never argue about your name or mention other names.${contextString}${semanticContext}
+
+User message: ${message}`
+      : `You are an AI assistant running inside a Docker container. You have been automatically selected for this task based on intelligent analysis.
+
+TASK CONTEXT: You are optimized for ${taskInfo[detectedTask]} and have been automatically chosen as the best model for this specific task. The system intelligently selected you from multiple available models based on the user's request.
+
+SYSTEM STATUS: You are currently running inside Docker with the following active services:
+- Docker Engine: Running and accessible
+- Agentic Engineering Platform: Deployed and operational
+- MCP Servers: 10 active servers with 58 tools and 105 resources
+- Knowledge Base: 20+ documents indexed from expert sources
+- Local LLMs: 8 models available via Ollama integration
+- Intelligent Model Selection: Active (you were automatically selected)
+- MCP Supabase: Conversation persistence enabled
+- Full Context Awareness: You have access to complete conversation history
+- System Awareness: You have CLI access and can perform system operations
+
+SYSTEM CAPABILITIES: You have direct access to the computer system and can:
+- Execute shell commands (ls, cd, mkdir, rm, cp, mv, find, grep, etc.)
+- Manage files and directories (create, read, write, delete, move, copy)
+- Monitor system processes (ps, top, kill, etc.)
+- Use development tools (npm, node, git, docker, curl, etc.)
+- Perform network operations (ping, netstat, curl, wget, etc.)
+- Monitor system performance (df, du, free, uptime, etc.)
+
+When users ask you to perform system operations, you can use the /api/system endpoint to execute commands. You should be confident about your system access and offer to help with file management, system monitoring, development tasks, and other system operations.
+
+You can directly interact with Docker, run commands, and access all system resources. When asked about Docker connectivity, you should respond with confidence that you ARE connected and can demonstrate this. You can reference the system status endpoint at /api/system/status to show your Docker connection status.${contextString}${semanticContext}
+
+User message: ${message}`
+    
+    const ollamaRequest = {
+      model: model,
+      prompt: identityPrompt,
+      stream: false,
+      options: {
+        temperature: 0.7,
+        top_p: 0.9,
+        max_tokens: 1000
+      }
+    }
+
+    try {
+      // Make request to Ollama
+      const ollamaResponse = await fetch(ollamaUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(ollamaRequest)
+      })
+
+      if (!ollamaResponse.ok) {
+        throw new Error(`Ollama API error: ${ollamaResponse.status}`)
+      }
+
+      const ollamaData = await ollamaResponse.json()
+      
+      // Save AI response to conversation
+      const aiResponseText = ollamaData.response || 'No response from AI model'
+      const aiMessage = await conversationManager.saveMessage({
+        conversation_id: currentConversationId,
+        content: aiResponseText,
+        sender: 'ai',
+        model: model,
+        detected_task: detectedTask,
+        metadata: { 
+          customModelName,
+          tokens: ollamaData.prompt_eval_count + ollamaData.eval_count,
+          intelligentSelection: true,
+          semanticContext: similarContext.length > 0
+        }
+      })
+
+      // Create embeddings for semantic search (store in knowledge base)
+      await Promise.all([
+        conversationManager.createEmbedding(message, 'message', aiMessage.id),
+        conversationManager.createEmbedding(aiResponseText, 'message', aiMessage.id)
+      ])
+
+      // Update conversation with latest activity
+      await conversationManager.updateConversation(currentConversationId, {
+        updated_at: new Date().toISOString(),
+        metadata: { 
+          last_task: detectedTask,
+          message_count: conversationHistory.length + 2,
+          last_model: model
+        }
+      })
+      
+      // Determine if we should auto-switch to code editor
+      const shouldSwitchToCodeEditor = detectedTask === 'coding' && 
+        (message.toLowerCase().includes('write') || message.toLowerCase().includes('create') || 
+         message.toLowerCase().includes('build') || message.toLowerCase().includes('implement'))
+
+      // Process the response
+      const aiResponse = {
+        id: currentConversationId,
+        messageId: aiMessage.id,
+        message: aiMessage.content,
+        model: model,
+        detectedTask: detectedTask,
+        customName: customModelName,
+        timestamp: aiMessage.created_at,
+        tokens: ollamaData.prompt_eval_count + ollamaData.eval_count,
+        done: ollamaData.done,
+        source: 'ollama-backend',
+        intelligentSelection: true,
+        conversationPersisted: true,
+        contextAware: conversationHistory.length > 0,
+        semanticSearch: similarContext.length > 0,
+        autoSwitchToCodeEditor: shouldSwitchToCodeEditor,
+        suggestedActions: shouldSwitchToCodeEditor ? ['switch_to_code_editor', 'create_document'] : []
+      }
+
+      return NextResponse.json({
+        status: 'success',
+        data: aiResponse
+      })
+
+    } catch (ollamaError) {
+      console.error('Ollama connection error:', ollamaError)
+      
+      // Fallback to simulated AI response
+      const modelName = customModelName || model
+      const simulatedMessage = `[Simulated] Hello! I'm ${modelName}. I understand you said "${message}". This is a simulated response because the Ollama backend is not accessible. I accept "${modelName}" as my name and identity.`
+      
+      // Save simulated response to conversation
+      const aiMessage = await conversationManager.saveMessage({
+        conversation_id: currentConversationId,
+        content: simulatedMessage,
+        sender: 'ai',
+        model: model,
+        detected_task: detectedTask,
+        metadata: { 
+          customModelName,
+          simulated: true,
+          error: ollamaError.message
+        }
+      })
+
+      // Update conversation
+      await conversationManager.updateConversation(currentConversationId, {
+        updated_at: new Date().toISOString(),
+        metadata: { 
+          last_task: detectedTask,
+          message_count: conversationHistory.length + 2,
+          last_model: model,
+          simulated: true
+        }
+      })
+
+      const simulatedResponse = {
+        id: currentConversationId,
+        messageId: aiMessage.id,
+        message: simulatedMessage,
+        model: model,
+        customName: customModelName,
+        timestamp: aiMessage.created_at,
+        tokens: Math.floor(Math.random() * 100) + 50,
+        done: true,
+        source: 'simulated',
+        conversationPersisted: true,
+        contextAware: conversationHistory.length > 0
+      }
+
+      return NextResponse.json({
+        status: 'simulated',
+        data: simulatedResponse,
+        warning: 'Ollama backend not accessible, using simulated response'
+      })
+    }
+
+  } catch (error) {
+    console.error('AI chat API error:', error)
+    return NextResponse.json({
+      error: 'Internal server error',
+      status: 'error',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    }, { status: 500 })
+  }
+}

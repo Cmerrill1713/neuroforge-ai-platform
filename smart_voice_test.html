@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎤 Smart Voice Test - Real Conversational AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .voice-section {
+            background: #333;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #555;
+        }
+        button {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .status {
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .success { background: #4CAF50; }
+        .error { background: #f44336; }
+        .info { background: #2196F3; }
+        .warning { background: #ff9800; }
+        #transcript, #response {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            min-height: 60px;
+            border: 1px solid #555;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .big-button {
+            font-size: 18px;
+            padding: 18px 35px;
+            margin: 15px auto;
+            display: block;
+        }
+        .instructions {
+            background: #444;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+            border-left: 4px solid #4CAF50;
+            font-size: 14px;
+        }
+        .model-selector {
+            background: #444;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        select {
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎤 Smart Voice Test</h1>
+    <p style="text-align: center; color: #ccc; margin-bottom: 30px;">
+        Real conversational AI with voice input/output
+    </p>
+
+    <div class="voice-section">
+        <h2>🤖 AI Model Selection</h2>
+        <div class="model-selector">
+            <label for="modelSelect">Choose AI Model:</label>
+            <select id="modelSelect">
+                <option value="qwen2.5:7b">Qwen2.5 7B (Recommended)</option>
+                <option value="qwen2.5:14b">Qwen2.5 14B (Advanced)</option>
+                <option value="mistral:7b">Mistral 7B</option>
+                <option value="llama3.2:3b">Llama 3.2 3B</option>
+                <option value="dia-1.6b-mlx">DIA 1.6B (Audio Model)</option>
+            </select>
+            <button onclick="testSelectedModel()">Test Selected Model</button>
+        </div>
+        <div id="modelStatus" class="status info">Select a model and click test</div>
+    </div>
+
+    <div class="voice-section">
+        <h2>🎙️ Voice Input Test</h2>
+        <div class="instructions">
+            <strong>Instructions:</strong> Click "Start Listening" and speak clearly. Your speech will be sent to the AI model.
+        </div>
+        
+        <button id="startBtn" onclick="startListening()" class="big-button">
+            🎤 Start Listening
+        </button>
+        <button id="stopBtn" onclick="stopListening()" disabled>
+            ⏹️ Stop Listening
+        </button>
+        <button onclick="clearTranscript()">
+            🗑️ Clear
+        </button>
+        
+        <div id="status" class="status info">Ready to test voice input</div>
+        
+        <h3>What you said:</h3>
+        <div id="transcript">Click "Start Listening" and speak...</div>
+    </div>
+
+    <div class="voice-section">
+        <h2>🔊 Voice Output Test</h2>
+        <div class="instructions">
+            <strong>Instructions:</strong> Click buttons to hear AI responses spoken aloud.
+        </div>
+        
+        <button onclick="speakText('Hello! I am your AI assistant. How can I help you today?')">
+            🔊 "Hello! I am your AI assistant."
+        </button>
+        <button onclick="speakText('The weather is beautiful today! Perfect for a walk outside.')">
+            🌤️ "Weather Report"
+        </button>
+        <button onclick="speakText('Why did the chicken cross the road? To get to the other side!')">
+            😄 "Tell a Joke"
+        </button>
+        <button onclick="speakText('I can help you with questions, tasks, and conversations. What would you like to know?')">
+            💬 "How can I help?"
+        </button>
+        <button onclick="stopSpeaking()">
+            ⏹️ Stop Speaking
+        </button>
+        
+        <div id="ttsStatus" class="status info">Ready to test voice output</div>
+    </div>
+
+    <div class="voice-section">
+        <h2>🤖 AI Conversation Test</h2>
+        <div class="instructions">
+            <strong>Instructions:</strong> Click buttons to send messages to AI and hear responses.
+        </div>
+        
+        <button onclick="testAI('Hello! Please introduce yourself and tell me what you can do.')">
+            🤖 "Hello! Introduce yourself"
+        </button>
+        <button onclick="testAI('Tell me an interesting fact about artificial intelligence.')">
+            🧠 "Tell me about AI"
+        </button>
+        <button onclick="testAI('What is 15 multiplied by 23?')">
+            🧮 "Math Question"
+        </button>
+        <button onclick="testAI('Write a short poem about technology.')">
+            📝 "Write a Poem"
+        </button>
+        
+        <div id="aiStatus" class="status info">Ready to test AI conversation</div>
+        <div id="aiResponse">AI responses will appear here...</div>
+    </div>
+
+    <script>
+        let recognition = null;
+        let isListening = false;
+        let synthesis = window.speechSynthesis;
+
+        // Initialize speech recognition
+        function initSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window) {
+                recognition = new webkitSpeechRecognition();
+            } else if ('SpeechRecognition' in window) {
+                recognition = new SpeechRecognition();
+            } else {
+                updateStatus('❌ Speech recognition not supported in this browser', 'error');
+                return false;
+            }
+
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.lang = 'en-US';
+
+            recognition.onstart = function() {
+                isListening = true;
+                updateStatus('🎤 Listening... Speak now!', 'success');
+                document.getElementById('startBtn').disabled = true;
+                document.getElementById('stopBtn').disabled = false;
+            };
+
+            recognition.onresult = function(event) {
+                let finalTranscript = '';
+                let interimTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) {
+                        finalTranscript += transcript;
+                    } else {
+                        interimTranscript += transcript;
+                    }
+                }
+
+                document.getElementById('transcript').innerHTML = 
+                    '<strong>Final:</strong> ' + finalTranscript + '<br>' +
+                    '<em>Interim:</em> ' + interimTranscript;
+
+                // Auto-send to AI if we have a final transcript
+                if (finalTranscript.trim()) {
+                    testAI(finalTranscript);
+                }
+            };
+
+            recognition.onerror = function(event) {
+                updateStatus('❌ Speech recognition error: ' + event.error, 'error');
+                stopListening();
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                document.getElementById('startBtn').disabled = false;
+                document.getElementById('stopBtn').disabled = true;
+                updateStatus('Speech recognition ended', 'info');
+            };
+
+            return true;
+        }
+
+        function startListening() {
+            if (!recognition) {
+                if (!initSpeechRecognition()) {
+                    return;
+                }
+            }
+            
+            try {
+                recognition.start();
+            } catch (e) {
+                updateStatus('❌ Error starting speech recognition: ' + e.message, 'error');
+            }
+        }
+
+        function stopListening() {
+            if (recognition && isListening) {
+                recognition.stop();
+            }
+        }
+
+        function clearTranscript() {
+            document.getElementById('transcript').innerHTML = 'Click "Start Listening" and speak...';
+            document.getElementById('aiResponse').innerHTML = 'AI responses will appear here...';
+        }
+
+        function updateStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function updateTTSStatus(message, type) {
+            const status = document.getElementById('ttsStatus');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function updateAIStatus(message, type) {
+            const status = document.getElementById('aiStatus');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function updateModelStatus(message, type) {
+            const status = document.getElementById('modelStatus');
+            status.textContent = message;
+            status.className = 'status ' + type;
+        }
+
+        function speakText(text) {
+            if (!synthesis) {
+                updateTTSStatus('❌ Speech synthesis not supported', 'error');
+                return;
+            }
+
+            updateTTSStatus('🔊 Speaking: ' + text.substring(0, 50) + '...', 'info');
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.rate = 0.9;
+            utterance.pitch = 1.0;
+            utterance.volume = 1.0;
+
+            utterance.onstart = function() {
+                updateTTSStatus('🔊 Speaking...', 'success');
+            };
+
+            utterance.onend = function() {
+                updateTTSStatus('✅ Finished speaking', 'success');
+            };
+
+            utterance.onerror = function(event) {
+                updateTTSStatus('❌ Speech error: ' + event.error, 'error');
+            };
+
+            synthesis.speak(utterance);
+        }
+
+        function stopSpeaking() {
+            if (synthesis) {
+                synthesis.cancel();
+                updateTTSStatus('⏹️ Speech stopped', 'warning');
+            }
+        }
+
+        async function testSelectedModel() {
+            const model = document.getElementById('modelSelect').value;
+            updateModelStatus('🤖 Testing model: ' + model, 'info');
+            
+            try {
+                const response = await fetch('http://localhost:11435/api/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: model,
+                        prompt: 'Hello! Please respond with a friendly greeting.',
+                        stream: false,
+                        options: {
+                            temperature: 0.7,
+                            num_predict: 50
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const modelResponse = result.response || 'No response';
+                    
+                    updateModelStatus('✅ Model working: ' + modelResponse.substring(0, 30) + '...', 'success');
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                updateModelStatus('❌ Error: ' + error.message, 'error');
+            }
+        }
+
+        async function testAI(prompt) {
+            const model = document.getElementById('modelSelect').value;
+            updateAIStatus('🤖 Sending to ' + model + '...', 'info');
+            
+            try {
+                const response = await fetch('http://localhost:11435/api/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: model,
+                        prompt: prompt,
+                        stream: false,
+                        options: {
+                            temperature: 0.8,
+                            num_predict: 200
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const aiResponse = result.response || 'No response';
+                    
+                    document.getElementById('aiResponse').innerHTML = 
+                        '<strong>Prompt:</strong> ' + prompt + '<br>' +
+                        '<strong>AI Response:</strong> ' + aiResponse + '<br>' +
+                        '<strong>Model:</strong> ' + model + '<br>' +
+                        '<strong>Tokens:</strong> ' + result.eval_count;
+                    
+                    updateAIStatus('✅ AI response received', 'success');
+                    
+                    // Auto-speak the response
+                    if (aiResponse.trim()) {
+                        speakText(aiResponse);
+                    }
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                updateAIStatus('❌ Error: ' + error.message, 'error');
+                document.getElementById('aiResponse').innerHTML = 'Error: ' + error.message;
+            }
+        }
+
+        // Initialize on page load
+        window.onload = function() {
+            updateStatus('🎤 Voice test ready! Click "Start Listening" to begin.', 'info');
+            updateTTSStatus('🔊 Text-to-speech ready! Click buttons to hear voice.', 'info');
+            updateAIStatus('🤖 AI conversation ready!', 'info');
+            updateModelStatus('Select a model and click test', 'info');
+            
+            // Test TTS immediately
+            setTimeout(() => {
+                speakText('Welcome to Smart Voice Test! I can speak and listen. Try clicking the buttons or speaking to me.');
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

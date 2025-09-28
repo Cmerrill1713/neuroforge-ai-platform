@@ -1,0 +1,123 @@
+{
+  "session_id": "0381f5d2-e281-4dc5-8259-e4d043c23495",
+  "turns": [
+    {
+      "turn_id": "TEST-002",
+      "message_type": "user_multimodal",
+      "content": "Can you identify the components on this board?",
+      "image_path": "samples/board.png",
+      "image_analysis": {
+        "analysis_mode": "component_identification",
+        "description": "Component identification analysis: - Resistor (R): Good condition - Capacitor (C): Good condition - Ic (U): Good condition.",
+        "confidence": 0.8000000000000002,
+        "defects": [],
+        "components": [
+          {
+            "component_type": "Resistor",
+            "identification": "R",
+            "condition": "Good",
+            "location": "Various locations",
+            "confidence": 0.8
+          },
+          {
+            "component_type": "Capacitor",
+            "identification": "C",
+            "condition": "Good",
+            "location": "Various locations",
+            "confidence": 0.8
+          },
+          {
+            "component_type": "Ic",
+            "identification": "U",
+            "condition": "Good",
+            "location": "Various locations",
+            "confidence": 0.8
+          }
+        ],
+        "technical_details": {},
+        "metadata": {
+          "width": 1000,
+          "height": 800,
+          "format": "png",
+          "file_size_bytes": 6004,
+          "color_mode": "RGB",
+          "has_transparency": false,
+          "dpi": null
+        }
+      },
+      "tools_used": [
+        "lc:retriever"
+      ],
+      "tool_results": {
+        "lc:retriever": {
+          "query": "Can you identify the components on this board?",
+          "results": [
+            {
+              "category": "circuit_defects",
+              "content": "Solder bridges are critical defects that can cause short circuits",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "circuit_defects",
+              "content": "Excess solder can cause bridging and component damage",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "circuit_defects",
+              "content": "Missing components will cause circuit malfunction",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "circuit_defects",
+              "content": "Cracked traces can cause open circuits and signal loss",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "circuit_defects",
+              "content": "Contamination can cause corrosion and electrical leakage",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "IPC-A-610 Class 3 is the highest quality standard for electronic assemblies",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "Component placement must be within specified tolerances",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "No foreign material or contamination is allowed",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Visual inspection is the first step in defect detection",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Use magnification to identify small defects",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Verify component orientation and placement",
+              "relevance_score": 0.8
+            }
+          ],
+          "total_results": 11,
+          "context": "Image analysis: Component identification analysis: - Resistor (R): Good condition - Capacitor (C): Good condition - Ic (U): Good condition."
+        }
+      },
+      "timestamp": "2025-09-25 02:13:26.771211+00:00",
+      "metadata": {}
+    }
+  ],
+  "context_summary": "",
+  "created_at": "2025-09-25 02:13:26.771063+00:00",
+  "updated_at": "2025-09-25 02:13:26.771213+00:00",
+  "metadata": {}
+}

@@ -1,0 +1,86 @@
+{
+  "backtest_summary": {
+    "timestamp": "2025-09-25T23:50:56.561732",
+    "duration": "5.15s",
+    "total_tests": 4,
+    "success_rate": "100.00%",
+    "throughput": "0.78 tests/sec"
+  },
+  "performance_metrics": {
+    "total_tests": 4,
+    "passed_tests": 4,
+    "failed_tests": 0,
+    "success_rate": 1.0,
+    "average_execution_time": 1.2865285873413086,
+    "median_execution_time": 1.4688783884048462,
+    "p95_execution_time": 2.2082858085632324,
+    "total_duration": 5.147228,
+    "error_rate": 0.0,
+    "throughput": 0.7771173144069001,
+    "memory_efficiency": 0.85
+  },
+  "model_performance": {
+    "qwen2.5-7b": {
+      "model_name": "qwen2.5-7b",
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "average_response_time": 1.8680839538574219,
+      "median_response_time": 0.0,
+      "p95_response_time": 0.0,
+      "tokens_per_second": 31.047855146036305,
+      "error_count": 0,
+      "memory_usage": 0.0
+    },
+    "phi3-3.8b": {
+      "model_name": "phi3-3.8b",
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "average_response_time": 2.2082788944244385,
+      "median_response_time": 0.0,
+      "p95_response_time": 0.0,
+      "tokens_per_second": 30.340370579624068,
+      "error_count": 0,
+      "memory_usage": 0.0
+    },
+    "llama3.2-3b": {
+      "model_name": "llama3.2-3b",
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "average_response_time": 1.0696346759796143,
+      "median_response_time": 0.0,
+      "p95_response_time": 0.0,
+      "tokens_per_second": 4.67449318190886,
+      "error_count": 0,
+      "memory_usage": 0.0
+    }
+  },
+  "test_results_by_category": {
+    "ollama_generation": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "avg_time": 1.7153475284576416,
+      "success_rate": 1.0
+    },
+    "mcp_tool": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "avg_time": 7.176399230957031e-05,
+      "success_rate": 1.0
+    }
+  },
+  "test_results_by_type": {
+    "performance": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "avg_time": 1.2865285873413086,
+      "success_rate": 1.0
+    }
+  },
+  "failed_tests": [],
+  "recommendations": [
+    "Throughput is 0.78 tests/sec. Consider parallel execution for better performance."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "parallel_r1_paper",
+  "title": "Parallel-R1: Towards Parallel Thinking via Reinforcement Learning",
+  "authors": [
+    "Tong Zheng",
+    "Hongming Zhang",
+    "Wenhao Yu",
+    "Xiaoyang Wang",
+    "Runpeng Dai",
+    "Rui Liu",
+    "Huiwen Bao",
+    "Chengsong Huang",
+    "Heng Huang",
+    "Dong Yu"
+  ],
+  "institutions": [
+    "Tencent AI Lab Seattle",
+    "University of Maryland, College Park",
+    "University of North Carolina at Chapel Hill",
+    "City University of Hong Kong",
+    "Washington University in St. Louis"
+  ],
+  "source_url": "https://arxiv.org/pdf/2509.07980",
+  "github_url": "https://github.com/zhengkid/Parallel-R1",
+  "content": "# Parallel-R1: Towards Parallel Thinking via Reinforcement Learning\n\n**Source**: https://arxiv.org/pdf/2509.07980  \n**Authors**: Tong Zheng, Hongming Zhang, Wenhao Yu, Xiaoyang Wang, Runpeng Dai, Rui Liu, Huiwen Bao, Chengsong Huang, Heng Huang, Dong Yu  \n**Institutions**: Tencent AI Lab Seattle, University of Maryland, University of North Carolina at Chapel Hill, City University of Hong Kong, Washington University in St. Louis  \n**GitHub**: https://github.com/zhengkid/Parallel-R1\n\n## Abstract\n\nParallel thinking has emerged as a novel approach for enhancing the reasoning capabilities of large language models (LLMs) by exploring multiple reasoning paths concurrently. However, activating such capabilities through training remains challenging, as existing methods predominantly rely on supervised fine-tuning (SFT) over synthetic data, which encourages teacher-forced imitation rather than exploration and generalization.\n\nDifferent from them, we propose Parallel-R1, the first reinforcement learning (RL) framework that enables parallel thinking behaviors for complex real-world reasoning tasks. Our framework employs a progressive curriculum that explicitly addresses the cold-start problem in training parallel thinking with RL. We first use SFT on prompt-generated trajectories from easier tasks to instill the parallel thinking ability, then transition to RL to explore and generalize this skill on harder problems.\n\nExperiments on various math benchmarks, including MATH, AMC23, and AIME, show that Parallel-R1 successfully instills parallel thinking, leading to 8.4% accuracy improvements over the sequential thinking model trained directly on challenging tasks with RL. Further analysis reveals a clear shift in the model's thinking behavior: at an early stage, it uses parallel thinking as an exploration strategy, while in a later stage, it uses the same capability for multi-perspective verification. Most significantly, we validate parallel thinking as a mid-training exploration scaffold, where this temporary exploratory phase unlocks a higher performance ceiling after RL, yielding a 42.9% improvement over the baseline on AIME25.\n\n## Key Concepts\n\n### Parallel Thinking\nParallel thinking involves jointly conducting both parallel and sequential thinking. During inference, the model generates in a standard auto-regressive fashion until it emits a special <Parallel> tag. At that point, it spawns multiple threads to explore different solution paths or perspectives, then summarizes their outputs. These contents are merged back into the main context, and generation continues.\n\n### Progressive Curriculum\nThe approach first equips the model with parallel thinking ability on easy math problems and then progressively extends it to more general and difficult problems through reinforcement learning.\n\n### Format Structure\n```\n<Parallel>\n<Path>First reasoning path...</Path>\n<Path>Second reasoning path...</Path>\n</Parallel>\n<Summary>Insights from all paths...</Summary>\n```\n\n## Technical Details\n\n### Training Process\n1. **SFT Phase**: Supervised fine-tuning on simpler problems using Parallel-GSM8K dataset\n2. **RL Phase**: Reinforcement learning on more difficult tasks to explore and generalize\n3. **Cold-start Solution**: High-quality parallel thinking data generated via simple prompting for easier tasks\n\n### Performance Results\n- **8.4% accuracy improvement** over sequential thinking models on challenging RL tasks\n- **42.9% improvement** over baseline on AIME25 through mid-training exploration scaffold\n- Tested on MATH, AMC23, and AIME mathematical benchmarks\n\n### Behavioral Evolution\n- **Early Stage**: Uses parallel thinking as exploration strategy\n- **Late Stage**: Uses parallel thinking for multi-perspective verification\n- **Scaffold Effect**: Temporary exploratory phase unlocks higher performance ceiling\n\n## Challenges Addressed\n\n1. **Cold-start Problem**: Current LLMs haven't seen parallel thinking behavior during pre-training and SFT\n2. **Reward Function Design**: Balancing final correctness with thinking strategy quality\n3. **Generalization**: Moving beyond pattern matching to intrinsic reasoning skills\n4. **Data Quality**: High-quality parallel thinking data for complex problems is rare and difficult to synthesize\n\n## Implementation Notes\n\nThe framework employs a progressive curriculum that explicitly addresses the cold-start problem in training parallel thinking with RL. It begins with supervised fine-tuning on simpler problems, for which high-quality parallel thinking data can be generated easily via simple prompting. This initial stage effectively teaches the model the basic format of parallel thinking before transitioning to reinforcement learning on more difficult tasks.\n\n## Research Impact\n\nThis work demonstrates that parallel thinking can be effectively instilled in LLMs through reinforcement learning, providing a scalable approach that goes beyond test-time strategies. The progressive curriculum approach successfully addresses the cold-start problem, and the behavioral analysis reveals important insights about how models learn and utilize parallel thinking capabilities.\n\n## Open Source\n\nThe authors plan to open-source their model, data, and code at https://github.com/zhengkid/Parallel-R1, making this research accessible for further development and application.\n",
+  "content_hash": "5bb68441d9a0e6c56683c2a8c880d6d5",
+  "document_type": "research_paper",
+  "domain": "artificial_intelligence",
+  "subdomain": "reinforcement_learning",
+  "keywords": [
+    "parallel_thinking",
+    "reinforcement_learning",
+    "llm",
+    "reasoning",
+    "curriculum_learning",
+    "progressive_training",
+    "cold_start_problem",
+    "multi_perspective_verification",
+    "exploration_scaffold"
+  ],
+  "abstract": "Parallel thinking has emerged as a novel approach for enhancing the reasoning capabilities of large language models (LLMs) by exploring multiple reasoning paths concurrently. Parallel-R1 proposes the first reinforcement learning (RL) framework that enables parallel thinking behaviors for complex real-world reasoning tasks.",
+  "key_findings": [
+    "8.4% accuracy improvement over sequential thinking models",
+    "42.9% improvement over baseline on AIME25",
+    "Progressive curriculum addresses cold-start problem",
+    "Behavioral shift from exploration to verification",
+    "Parallel thinking as mid-training exploration scaffold"
+  ],
+  "technical_contributions": [
+    "First RL framework for parallel thinking",
+    "Progressive curriculum approach",
+    "Cold-start problem solution",
+    "Multi-perspective verification system",
+    "Exploration scaffold methodology"
+  ],
+  "created_at": "2025-09-26T00:08:24.660012+00:00",
+  "updated_at": "2025-09-26T00:08:24.660133+00:00",
+  "status": "active",
+  "retrieval_tags": [
+    "parallel_thinking",
+    "reinforcement_learning",
+    "llm_training",
+    "reasoning_enhancement",
+    "curriculum_learning",
+    "multi_agent",
+    "exploration_strategy",
+    "verification_system"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "session_id": "5e265344-019a-4a3e-9981-30487258a73f",
+  "turns": [
+    {
+      "turn_id": "TEST-003",
+      "message_type": "user_multimodal",
+      "content": "Please perform a technical analysis of this circuit board",
+      "image_path": "samples/board.png",
+      "image_analysis": {
+        "analysis_mode": "technical",
+        "description": "Technical analysis: Image resolution: 1000x800 Color mode: RGB Wiring analysis: Circuit traces and connections visible.",
+        "confidence": 0.8,
+        "defects": [],
+        "components": [],
+        "technical_details": {
+          "resolution": "1000x800",
+          "aspect_ratio": 1.25,
+          "color_depth": "RGB",
+          "file_format": "PNG",
+          "wiring_density": "Medium",
+          "trace_visibility": "Good"
+        },
+        "metadata": {
+          "width": 1000,
+          "height": 800,
+          "format": "png",
+          "file_size_bytes": 6004,
+          "color_mode": "RGB",
+          "has_transparency": false,
+          "dpi": null
+        }
+      },
+      "tools_used": [
+        "lc:retriever"
+      ],
+      "tool_results": {
+        "lc:retriever": {
+          "query": "Please perform a technical analysis of this circuit board",
+          "results": [
+            {
+              "category": "circuit_defects",
+              "content": "Missing components will cause circuit malfunction",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "IPC-A-610 Class 3 is the highest quality standard for electronic assemblies",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "Class 3 requires zero defects for critical applications",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "No foreign material or contamination is allowed",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Visual inspection is the first step in defect detection",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Check for proper solder joint formation and wetting",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Look for signs of thermal damage or stress",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Document all findings for quality control",
+              "relevance_score": 0.8
+            }
+          ],
+          "total_results": 8,
+          "context": "Image analysis: Technical analysis: Image resolution: 1000x800 Color mode: RGB Wiring analysis: Circuit traces and connections visible."
+        }
+      },
+      "timestamp": "2025-09-25 02:13:26.771660+00:00",
+      "metadata": {}
+    }
+  ],
+  "context_summary": "",
+  "created_at": "2025-09-25 02:13:26.771500+00:00",
+  "updated_at": "2025-09-25 02:13:26.771661+00:00",
+  "metadata": {}
+}

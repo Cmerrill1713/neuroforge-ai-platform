@@ -1,0 +1,55 @@
+{
+  "session_id": "77ebc6a3-c4ef-4306-9663-57192383858c",
+  "turns": [
+    {
+      "turn_id": "TEST-004",
+      "message_type": "user_text",
+      "content": "What are the common defects in electronic assemblies?",
+      "image_path": null,
+      "image_analysis": null,
+      "tools_used": [
+        "lc:retriever"
+      ],
+      "tool_results": {
+        "lc:retriever": {
+          "query": "What are the common defects in electronic assemblies?",
+          "results": [
+            {
+              "category": "circuit_defects",
+              "content": "Solder bridges are critical defects that can cause short circuits",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "IPC-A-610 Class 3 is the highest quality standard for electronic assemblies",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "ipc_standards",
+              "content": "Class 3 requires zero defects for critical applications",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Visual inspection is the first step in defect detection",
+              "relevance_score": 0.8
+            },
+            {
+              "category": "troubleshooting",
+              "content": "Use magnification to identify small defects",
+              "relevance_score": 0.8
+            }
+          ],
+          "total_results": 5,
+          "context": ""
+        }
+      },
+      "timestamp": "2025-09-25 02:13:26.771904+00:00",
+      "metadata": {}
+    }
+  ],
+  "context_summary": "",
+  "created_at": "2025-09-25 02:13:26.771880+00:00",
+  "updated_at": "2025-09-25 02:13:26.771906+00:00",
+  "metadata": {}
+}

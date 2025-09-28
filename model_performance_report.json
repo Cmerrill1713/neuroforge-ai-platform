@@ -1,0 +1,458 @@
+{
+  "timestamp": "2025-09-25T23:35:54.186629",
+  "evaluation_summary": {
+    "total_models_tested": 10,
+    "top_performer": "Qwen3-30B-A3B-Instruct-2507-MLX-4bit",
+    "top_score": 10.1
+  },
+  "model_rankings": [
+    {
+      "rank": 1,
+      "model": "Qwen3-30B-A3B-Instruct-2507-MLX-4bit",
+      "score": 10.1,
+      "type": "mlx",
+      "details": {
+        "model": "Qwen3-30B-A3B-Instruct-2507-MLX-4bit",
+        "type": "mlx",
+        "scores": {
+          "overall": 10.1
+        },
+        "response_times": {
+          "overall": 2.0
+        },
+        "quality_scores": {},
+        "total_score": 10.1,
+        "size_gb": 16.0
+      }
+    },
+    {
+      "rank": 2,
+      "model": "Dia-1.6B",
+      "score": 7.6,
+      "type": "mlx",
+      "details": {
+        "model": "Dia-1.6B",
+        "type": "mlx",
+        "scores": {
+          "overall": 7.6
+        },
+        "response_times": {
+          "overall": 2.0
+        },
+        "quality_scores": {},
+        "total_score": 7.6,
+        "size_gb": 6.0
+      }
+    },
+    {
+      "rank": 3,
+      "model": "llama3.2:3b",
+      "score": 6.290866881608964,
+      "type": "ollama",
+      "details": {
+        "model": "llama3.2:3b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 7.6000000000000005,
+          "coding": 7.800000000000001,
+          "creative": 6.9,
+          "simple": 4.0
+        },
+        "response_times": {
+          "reasoning": 4.21423602104187,
+          "coding": 1.8646039962768555,
+          "creative": 5.095728874206543,
+          "simple": 0.19075584411621094
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 7.6000000000000005,
+            "response_length": 1210,
+            "response": "To solve this problem, we need to find the time it takes for the two trains to meet. We can do this by first finding the distance each train travels before meeting.\n\nLet's assume that both trains star..."
+          },
+          "coding": {
+            "score": 7.800000000000001,
+            "response_length": 948,
+            "response": "def fibonacci(n):\n    \"\"\"\n    This function calculates the Fibonacci sequence up to n terms.\n\n    Args:\n        n (int): The number of terms in the Fibonacci sequence.\n\n    Returns:\n        list: A li..."
+          },
+          "creative": {
+            "score": 6.9,
+            "response_length": 3062,
+            "response": "In a small, cluttered workshop, a lone robot stood on its metal legs, staring at the canvas in front of it. Its bright blue eyes shone with curiosity as it gazed at the swirling colors and textures th..."
+          },
+          "simple": {
+            "score": 4.0,
+            "response_length": 31,
+            "response": "The capital of France is Paris."
+          }
+        },
+        "total_score": 6.290866881608964
+      }
+    },
+    {
+      "rank": 4,
+      "model": "qwen2.5:7b",
+      "score": 6.045541501045227,
+      "type": "ollama",
+      "details": {
+        "model": "qwen2.5:7b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 7.6000000000000005,
+          "coding": 8.0,
+          "creative": 6.9,
+          "simple": 4.0
+        },
+        "response_times": {
+          "reasoning": 7.684474229812622,
+          "coding": 6.830384731292725,
+          "creative": 8.40885591506958,
+          "simple": 0.2546250820159912
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 7.6000000000000005,
+            "response_length": 1066,
+            "response": "Sure! Let's break down the problem step-by-step to find out when the two trains will meet.\n\n### Step 1: Understand the Problem\n- Train A departs at 2 PM and travels at 60 mph.\n- Train B departs at 3 P..."
+          },
+          "coding": {
+            "score": 8.0,
+            "response_length": 1950,
+            "response": "Certainly! Below is a Python function that calculates and prints the Fibonacci sequence up to `n` terms:\n\n```python\ndef fibonacci(n):\n    \"\"\"\n    Generate and print the Fibonacci sequence up to n term..."
+          },
+          "creative": {
+            "score": 6.9,
+            "response_length": 2976,
+            "response": "In the quiet workshop of Mr. Eliot's Art Forge, nestled among the shelves lined with paints and brushes, there stood a peculiar robot named Nova. Unlike most robots, which moved in mechanical precisio..."
+          },
+          "simple": {
+            "score": 4.0,
+            "response_length": 31,
+            "response": "The capital of France is Paris."
+          }
+        },
+        "total_score": 6.045541501045227
+      }
+    },
+    {
+      "rank": 5,
+      "model": "gpt-oss:20b",
+      "score": 5.985399049520494,
+      "type": "ollama",
+      "details": {
+        "model": "gpt-oss:20b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 8.0,
+          "coding": 8.200000000000001,
+          "creative": 7.1000000000000005,
+          "simple": 5.2
+        },
+        "response_times": {
+          "reasoning": 13.681196212768555,
+          "coding": 6.993396043777466,
+          "creative": 24.296535968780518,
+          "simple": 0.6129097938537598
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 8.0,
+            "response_length": 2611,
+            "response": "Thinking...\nWe need to find meeting time. They start from same location or different? Probably same starting point? Usually one leaves at 2 PM at 60 mph, second leaves at 3 PM at 80 mph, they travel i..."
+          },
+          "coding": {
+            "score": 8.200000000000001,
+            "response_length": 2282,
+            "response": "Thinking...\nThe user asks: \"Write a Python function to calculate the fibonacci sequence up to n terms.\" So likely they want a function, maybe iterative, return list. Provide code snippet with explanat..."
+          },
+          "creative": {
+            "score": 7.1000000000000005,
+            "response_length": 9938,
+            "response": "Thinking...\nWe need to write a short story about a robot learning to paint. It should have some narrative, characters, maybe a robot, a painter, some process. We need to write it in an engaging way, p..."
+          },
+          "simple": {
+            "score": 5.2,
+            "response_length": 154,
+            "response": "Thinking...\nThe user asks a simple factual question: \"What is the capital of France?\" The answer: Paris. Provide concise answer.\n...done thinking.\n\nParis."
+          }
+        },
+        "total_score": 5.985399049520494
+      }
+    },
+    {
+      "rank": 6,
+      "model": "mistral:7b",
+      "score": 5.959687507152558,
+      "type": "ollama",
+      "details": {
+        "model": "mistral:7b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 7.800000000000001,
+          "coding": 7.800000000000001,
+          "creative": 6.7,
+          "simple": 4.0
+        },
+        "response_times": {
+          "reasoning": 11.532936811447144,
+          "coding": 5.603851079940796,
+          "creative": 7.301544189453125,
+          "simple": 0.17416763305664062
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 7.800000000000001,
+            "response_length": 2120,
+            "response": "To find the time when two trains meeting, we need to determine how long it takes for them to cover the distance between their starting points. Let's call the distance D miles.\n\n1. First, let's find ou..."
+          },
+          "coding": {
+            "score": 7.800000000000001,
+            "response_length": 1349,
+            "response": "Here is a simple recursive function to generate Fibonacci sequence up to `n` terms. However, please note that this function has exponential time complexity due to repeated calculations which can be in..."
+          },
+          "creative": {
+            "score": 6.7,
+            "response_length": 2514,
+            "response": "Title: Brushstrokes of Steel\n\nIn the heart of the bustling city of Artopolis, a unique robot named Arty was born in the prestigious laboratory of Professor Ada Vonbrush. Arty was unlike any other robo..."
+          },
+          "simple": {
+            "score": 4.0,
+            "response_length": 31,
+            "response": "The capital of France is Paris."
+          }
+        },
+        "total_score": 5.959687507152558
+      }
+    },
+    {
+      "rank": 7,
+      "model": "llama3.1:8b",
+      "score": 5.9081564307212835,
+      "type": "ollama",
+      "details": {
+        "model": "llama3.1:8b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 7.800000000000001,
+          "coding": 7.800000000000001,
+          "creative": 6.7,
+          "simple": 4.0
+        },
+        "response_times": {
+          "reasoning": 10.336082935333252,
+          "coding": 6.187050104141235,
+          "creative": 9.879826784133911,
+          "simple": 0.2707829475402832
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 7.800000000000001,
+            "response_length": 1952,
+            "response": "To solve this problem, we need to calculate the distance each train travels before they meet. Let's break it down step by step:\n\n**Step 1: Calculate the time difference between the two trains**\n\nThe f..."
+          },
+          "coding": {
+            "score": 7.800000000000001,
+            "response_length": 1803,
+            "response": "**Fibonacci Sequence Function**\n=====================================\n\nHere is a simple and efficient function in Python that calculates the Fibonacci sequence up to `n` terms using memoization.\n\n```p..."
+          },
+          "creative": {
+            "score": 6.7,
+            "response_length": 3432,
+            "response": "In a small workshop nestled in the heart of a bustling city, a team of engineers had been working tirelessly to bring a new project to life. Their creation, a robot named Aria, stood before them, its ..."
+          },
+          "simple": {
+            "score": 4.0,
+            "response_length": 31,
+            "response": "The capital of France is Paris."
+          }
+        },
+        "total_score": 5.9081564307212835
+      }
+    },
+    {
+      "rank": 8,
+      "model": "llava:7b",
+      "score": 5.839842658042908,
+      "type": "ollama",
+      "details": {
+        "model": "llava:7b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 7.6000000000000005,
+          "coding": 7.6000000000000005,
+          "creative": 6.9,
+          "multimodal": 5.0,
+          "simple": 4.0
+        },
+        "response_times": {
+          "reasoning": 11.384379863739014,
+          "coding": 2.668079137802124,
+          "creative": 3.930771827697754,
+          "multimodal": 0.8445181846618652,
+          "simple": 0.18011808395385742
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 7.6000000000000005,
+            "response_length": 1300,
+            "response": "To solve this problem, we need to determine how far each train has traveled by the time it meets with the other. Let's assume that both trains are traveling on parallel tracks that start from the same..."
+          },
+          "coding": {
+            "score": 7.6000000000000005,
+            "response_length": 666,
+            "response": "Here is a Python function that calculates the Fibonacci sequence up to `n` terms:\n```python\ndef fibonacci(n):\n  # create an empty list to store the Fibonacci sequence\n  fib_seq = []\n\n  # initialize th..."
+          },
+          "creative": {
+            "score": 6.9,
+            "response_length": 1621,
+            "response": "Once upon a time, there was a robot named Max. Max was programmed to perform various tasks, from sorting recyclables to assembling gadgets. However, Max had always been curious about art and one day, ..."
+          },
+          "multimodal": {
+            "score": 5.0,
+            "response_length": 337,
+            "response": "The image shows a person standing in front of a microphone, with their back to the camera. They are wearing a dark shirt and appear to be speaking or presenting at an event, as suggested by the presen..."
+          },
+          "simple": {
+            "score": 4.0,
+            "response_length": 31,
+            "response": "The capital of France is Paris."
+          }
+        },
+        "total_score": 5.839842658042908
+      }
+    },
+    {
+      "rank": 9,
+      "model": "qwen3:8b",
+      "score": 5.234100979566575,
+      "type": "ollama",
+      "details": {
+        "model": "qwen3:8b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 8.200000000000001,
+          "coding": 8.0,
+          "creative": 7.1000000000000005,
+          "simple": 6.2
+        },
+        "response_times": {
+          "reasoning": 42.64129710197449,
+          "coding": 23.97659182548523,
+          "creative": 13.88001012802124,
+          "simple": 5.138061761856079
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 8.200000000000001,
+            "response_length": 8618,
+            "response": "Thinking...\nOkay, so there's this problem about two trains leaving stations at different times and speeds, and I need to figure out when they'll meet. Let me try to break it down step by step. \n\nFirst..."
+          },
+          "coding": {
+            "score": 8.0,
+            "response_length": 4685,
+            "response": "Thinking...\nOkay, I need to write a Python function that calculates the Fibonacci sequence up to n terms. Let me think about how to approach this.\n\nFirst, what's the Fibonacci sequence? Oh right, it's..."
+          },
+          "creative": {
+            "score": 7.1000000000000005,
+            "response_length": 4012,
+            "response": "Thinking...\nOkay, the user wants a short story about a robot learning to paint. Let me start by brainstorming some ideas. First, I need a robot character. Maybe give it a name, like Echo. Robots often..."
+          },
+          "simple": {
+            "score": 6.2,
+            "response_length": 1564,
+            "response": "Thinking...\nOkay, the user is asking for the capital of France. Let me think. I remember that France is a country in Europe, and its capital is a well-known city. The main cities in France include Par..."
+          }
+        },
+        "total_score": 5.234100979566575
+      }
+    },
+    {
+      "rank": 10,
+      "model": "phi3:3.8b",
+      "score": 3.4488047242164614,
+      "type": "ollama",
+      "details": {
+        "model": "phi3:3.8b",
+        "type": "ollama",
+        "scores": {
+          "reasoning": 7.800000000000001,
+          "coding": 7.800000000000001,
+          "creative": 0,
+          "simple": 5.0
+        },
+        "response_times": {
+          "reasoning": 3.4178690910339355,
+          "coding": 3.8639228343963623,
+          "creative": 60,
+          "simple": 0.7660191059112549
+        },
+        "quality_scores": {
+          "reasoning": {
+            "score": 7.800000000000001,
+            "response_length": 954,
+            "response": "Step 1: Set up the equation based on distance traveled. In one hour (the difference in departure times), the first train would have covered a certain distance before the second starts moving since it ..."
+          },
+          "coding": {
+            "score": 7.800000000000001,
+            "response_length": 1705,
+            "response": "```python\n\ndef fibonacci(n):\n\n    if n <= 0:\n\n        return \"Please enter a positive integer\"\n\n    elif n == 1:\n\n        return [0]\n\n    elif n == 2:\nin_return[0, 1]\n\n    else:\n\n        sequence = [0..."
+          },
+          "simple": {
+            "score": 5.0,
+            "response_length": 450,
+            "response": "The capital of France is Paris. It is not only a political and cultural hub but also considered one of the most iconic cities in the world, renowned for its art, fashion, gastronomy, and culture. At t..."
+          }
+        },
+        "total_score": 3.4488047242164614
+      }
+    }
+  ],
+  "category_rankings": {
+    "text_generation": [
+      {
+        "model": "Qwen3-30B-A3B-Instruct-2507-MLX-4bit",
+        "score": 10.1
+      },
+      {
+        "model": "Dia-1.6B",
+        "score": 7.6
+      },
+      {
+        "model": "llama3.2:3b",
+        "score": 6.290866881608964
+      },
+      {
+        "model": "qwen2.5:7b",
+        "score": 6.045541501045227
+      },
+      {
+        "model": "gpt-oss:20b",
+        "score": 5.985399049520494
+      },
+      {
+        "model": "mistral:7b",
+        "score": 5.959687507152558
+      },
+      {
+        "model": "llama3.1:8b",
+        "score": 5.9081564307212835
+      },
+      {
+        "model": "qwen3:8b",
+        "score": 5.234100979566575
+      },
+      {
+        "model": "phi3:3.8b",
+        "score": 3.4488047242164614
+      }
+    ],
+    "multimodal": [
+      {
+        "model": "llava:7b",
+        "score": 5.839842658042908
+      }
+    ],
+    "text_to_speech": [],
+    "code_generation": []
+  }
+}

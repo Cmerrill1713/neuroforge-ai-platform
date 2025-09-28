@@ -1,0 +1,1159 @@
+# Tool Catalog Configuration for Agentic LLM Core v0.1
+# This file defines policies, tool specifications, and validation rules
+
+# ============================================================================
+# Tool Catalog Policies
+# ============================================================================
+
+tool_catalog:
+  version: "0.1.0"
+  last_updated: "2024-09-24"
+  description: "Comprehensive tool catalog for Agentic LLM Core MVP"
+  
+  # Tool Categories
+  categories:
+    - name: "file_operations"
+      description: "File system operations and management"
+      priority: "high"
+      offline_compatible: true
+      
+    - name: "database_operations"
+      description: "Database queries and data manipulation"
+      priority: "high"
+      offline_compatible: true
+      
+    - name: "network_operations"
+      description: "Network requests and API calls"
+      priority: "medium"
+      offline_compatible: false
+      
+    - name: "text_processing"
+      description: "Text analysis and manipulation"
+      priority: "high"
+      offline_compatible: true
+      
+    - name: "data_analysis"
+      description: "Data processing and analysis"
+      priority: "medium"
+      offline_compatible: true
+      
+    - name: "security_operations"
+      description: "Security and authentication operations"
+      priority: "critical"
+      offline_compatible: true
+      
+    - name: "utility_operations"
+      description: "General utility functions"
+      priority: "low"
+      offline_compatible: true
+
+# ============================================================================
+# Tool Specifications
+# ============================================================================
+
+tools:
+  # File Operations
+  - name: "file_read"
+    category: "file_operations"
+    description: "Read contents of a file"
+    parameters:
+      - name: "file_path"
+        type: "string"
+        required: true
+        description: "Path to the file to read"
+        validation:
+          pattern: "^[a-zA-Z0-9_/.-]+$"
+          max_length: 255
+      - name: "encoding"
+        type: "string"
+        required: false
+        default: "utf-8"
+        description: "File encoding"
+        validation:
+          enum: ["utf-8", "ascii", "latin-1", "cp1252"]
+    returns:
+      content: "string"
+      size: "integer"
+      encoding: "string"
+    safety_level: "safe"
+    requires_permissions: ["read"]
+    
+  - name: "file_write"
+    category: "file_operations"
+    description: "Write content to a file"
+    parameters:
+      - name: "file_path"
+        type: "string"
+        required: true
+        description: "Path to the file to write"
+        validation:
+          pattern: "^[a-zA-Z0-9_/.-]+$"
+          max_length: 255
+      - name: "content"
+        type: "string"
+        required: true
+        description: "Content to write"
+        validation:
+          max_length: 10485760  # 10MB
+      - name: "encoding"
+        type: "string"
+        required: false
+        default: "utf-8"
+        description: "File encoding"
+    returns:
+      success: "boolean"
+      bytes_written: "integer"
+      file_path: "string"
+    safety_level: "moderate"
+    requires_permissions: ["write"]
+    
+  - name: "file_delete"
+    category: "file_operations"
+    description: "Delete a file"
+    parameters:
+      - name: "file_path"
+        type: "string"
+        required: true
+        description: "Path to the file to delete"
+        validation:
+          pattern: "^[a-zA-Z0-9_/.-]+$"
+    returns:
+      success: "boolean"
+      file_path: "string"
+    safety_level: "dangerous"
+    requires_permissions: ["delete"]
+    
+  # Database Operations
+  - name: "db_query"
+    category: "database_operations"
+    description: "Execute a database query"
+    parameters:
+      - name: "query"
+        type: "string"
+        required: true
+        description: "SQL query to execute"
+        validation:
+          pattern: "^(SELECT|WITH)\\s+"
+          max_length: 10000
+      - name: "database"
+        type: "string"
+        required: false
+        default: "default"
+        description: "Database name"
+      - name: "parameters"
+        type: "object"
+        required: false
+        description: "Query parameters"
+    returns:
+      results: "array"
+      row_count: "integer"
+      execution_time: "float"
+    safety_level: "moderate"
+    requires_permissions: ["read"]
+    
+  - name: "db_execute"
+    category: "database_operations"
+    description: "Execute a database command (INSERT, UPDATE, DELETE)"
+    parameters:
+      - name: "command"
+        type: "string"
+        required: true
+        description: "SQL command to execute"
+        validation:
+          pattern: "^(INSERT|UPDATE|DELETE|CREATE|DROP|ALTER)\\s+"
+      - name: "database"
+        type: "string"
+        required: false
+        default: "default"
+        description: "Database name"
+      - name: "parameters"
+        type: "object"
+        required: false
+        description: "Command parameters"
+    returns:
+      success: "boolean"
+      affected_rows: "integer"
+      execution_time: "float"
+    safety_level: "dangerous"
+    requires_permissions: ["write"]
+    
+  # Network Operations
+  - name: "http_get"
+    category: "network_operations"
+    description: "Make an HTTP GET request"
+    parameters:
+      - name: "url"
+        type: "string"
+        required: true
+        description: "URL to request"
+        validation:
+          pattern: "^https?://"
+      - name: "headers"
+        type: "object"
+        required: false
+        description: "HTTP headers"
+      - name: "timeout"
+        type: "integer"
+        required: false
+        default: 30
+        description: "Request timeout in seconds"
+    returns:
+      status_code: "integer"
+      headers: "object"
+      body: "string"
+      response_time: "float"
+    safety_level: "moderate"
+    requires_permissions: ["network"]
+    
+  - name: "http_post"
+    category: "network_operations"
+    description: "Make an HTTP POST request"
+    parameters:
+      - name: "url"
+        type: "string"
+        required: true
+        description: "URL to request"
+        validation:
+          pattern: "^https?://"
+      - name: "data"
+        type: "object"
+        required: true
+        description: "Request body data"
+      - name: "headers"
+        type: "object"
+        required: false
+        description: "HTTP headers"
+    returns:
+      status_code: "integer"
+      headers: "object"
+      body: "string"
+      response_time: "float"
+    safety_level: "moderate"
+    requires_permissions: ["network"]
+    
+  # Text Processing
+  - name: "text_extract"
+    category: "text_processing"
+    description: "Extract text from various formats"
+    parameters:
+      - name: "input_data"
+        type: "string"
+        required: true
+        description: "Input text or file path"
+      - name: "format"
+        type: "string"
+        required: false
+        default: "auto"
+        description: "Input format"
+        validation:
+          enum: ["auto", "text", "html", "markdown", "pdf", "docx"]
+    returns:
+      extracted_text: "string"
+      format_detected: "string"
+      confidence: "float"
+    safety_level: "safe"
+    requires_permissions: ["read"]
+    
+  - name: "text_summarize"
+    category: "text_processing"
+    description: "Generate a summary of text"
+    parameters:
+      - name: "text"
+        type: "string"
+        required: true
+        description: "Text to summarize"
+        validation:
+          min_length: 100
+          max_length: 100000
+      - name: "max_length"
+        type: "integer"
+        required: false
+        default: 200
+        description: "Maximum summary length"
+      - name: "style"
+        type: "string"
+        required: false
+        default: "extractive"
+        description: "Summary style"
+        validation:
+          enum: ["extractive", "abstractive", "bullet_points"]
+    returns:
+      summary: "string"
+      original_length: "integer"
+      summary_length: "integer"
+      compression_ratio: "float"
+    safety_level: "safe"
+    requires_permissions: []
+    
+  # Data Analysis
+  - name: "data_analyze"
+    category: "data_analysis"
+    description: "Analyze structured data"
+    parameters:
+      - name: "data"
+        type: "array"
+        required: true
+        description: "Data to analyze"
+      - name: "analysis_type"
+        type: "string"
+        required: true
+        description: "Type of analysis"
+        validation:
+          enum: ["descriptive", "correlation", "trend", "anomaly", "clustering"]
+      - name: "columns"
+        type: "array"
+        required: false
+        description: "Columns to analyze"
+    returns:
+      results: "object"
+      insights: "array"
+      confidence: "float"
+      processing_time: "float"
+    safety_level: "safe"
+    requires_permissions: []
+    
+  # Security Operations
+  - name: "encrypt_data"
+    category: "security_operations"
+    description: "Encrypt sensitive data"
+    parameters:
+      - name: "data"
+        type: "string"
+        required: true
+        description: "Data to encrypt"
+      - name: "algorithm"
+        type: "string"
+        required: false
+        default: "AES-256-GCM"
+        description: "Encryption algorithm"
+        validation:
+          enum: ["AES-256-GCM", "AES-256-CBC", "ChaCha20-Poly1305"]
+      - name: "key_id"
+        type: "string"
+        required: false
+        description: "Key identifier"
+    returns:
+      encrypted_data: "string"
+      key_id: "string"
+      algorithm: "string"
+      iv: "string"
+    safety_level: "critical"
+    requires_permissions: ["encrypt"]
+    
+  - name: "decrypt_data"
+    category: "security_operations"
+    description: "Decrypt encrypted data"
+    parameters:
+      - name: "encrypted_data"
+        type: "string"
+        required: true
+        description: "Encrypted data"
+      - name: "key_id"
+        type: "string"
+        required: true
+        description: "Key identifier"
+    returns:
+      decrypted_data: "string"
+      success: "boolean"
+    safety_level: "critical"
+    requires_permissions: ["decrypt"]
+    
+  # Utility Operations
+  - name: "uuid_generate"
+    category: "utility_operations"
+    description: "Generate a UUID"
+    parameters:
+      - name: "version"
+        type: "integer"
+        required: false
+        default: 4
+        description: "UUID version"
+        validation:
+          enum: [1, 3, 4, 5]
+    returns:
+      uuid: "string"
+      version: "integer"
+    safety_level: "safe"
+    requires_permissions: []
+    
+  - name: "timestamp_now"
+    category: "utility_operations"
+    description: "Get current timestamp"
+    parameters:
+      - name: "format"
+        type: "string"
+        required: false
+        default: "iso"
+        description: "Timestamp format"
+        validation:
+          enum: ["iso", "unix", "rfc2822", "custom"]
+      - name: "timezone"
+        type: "string"
+        required: false
+        default: "UTC"
+        description: "Timezone for timestamp"
+    returns:
+      timestamp: "string"
+      unix_timestamp: "integer"
+      timezone: "string"
+    safety_level: "safe"
+    requires_permissions: []
+
+# ============================================================================
+# Validation Rules
+# ============================================================================
+
+validation:
+  # Global validation rules
+  global_rules:
+    - name: "parameter_validation"
+      description: "All parameters must be validated against their schemas"
+      severity: "error"
+      
+    - name: "permission_check"
+      description: "Tool execution requires appropriate permissions"
+      severity: "error"
+      
+    - name: "safety_level_check"
+      description: "Tools with dangerous/critical safety levels require extra validation"
+      severity: "warning"
+      
+    - name: "offline_compatibility"
+      description: "Tools must be compatible with offline operation"
+      severity: "info"
+  
+  # Tool-specific validation rules
+  tool_rules:
+    file_operations:
+      - name: "path_sanitization"
+        description: "File paths must be sanitized and validated"
+        severity: "error"
+      - name: "permission_verification"
+        description: "File operation permissions must be verified"
+        severity: "error"
+        
+    database_operations:
+      - name: "sql_injection_prevention"
+        description: "SQL queries must be protected against injection"
+        severity: "error"
+      - name: "query_validation"
+        description: "Database queries must be validated"
+        severity: "warning"
+        
+    network_operations:
+      - name: "url_validation"
+        description: "URLs must be validated and sanitized"
+        severity: "error"
+      - name: "timeout_limits"
+        description: "Network timeouts must be within safe limits"
+        severity: "warning"
+        
+    security_operations:
+      - name: "key_management"
+        description: "Encryption keys must be properly managed"
+        severity: "error"
+      - name: "audit_logging"
+        description: "Security operations must be logged"
+        severity: "error"
+
+# ============================================================================
+# Tool Policies
+# ============================================================================
+
+policies:
+  # Execution policies
+  execution:
+    max_concurrent_tools: 10
+    default_timeout: 30
+    retry_attempts: 3
+    retry_delay: 1.0
+    
+  # Security policies
+  security:
+    require_authentication: true
+    audit_all_operations: true
+    encrypt_sensitive_data: true
+    redact_logs: true
+    
+  # Performance policies
+  performance:
+    max_memory_usage: "1GB"
+    max_cpu_usage: "80%"
+    rate_limiting: true
+    cache_enabled: true
+    
+  # Offline policies
+  offline:
+    prefer_local_tools: true
+    cache_network_results: true
+    fallback_to_cached: true
+    sync_when_online: true
+
+# ============================================================================
+# Model Policy Configuration
+# ============================================================================
+
+model_policy:
+  version: "0.1.0"
+  last_updated: "2024-09-24"
+  description: "Model selection and routing policies for Agentic LLM Core"
+  
+  # Optimized Model Configuration for Apple Silicon
+  models:
+    large_reasoning:
+      name: "gpt-oss-20b"
+      type: "text_only"
+      description: "Large 20B parameter model for complex reasoning and analysis"
+      capabilities:
+        - "text_generation"
+        - "logical_reasoning"
+        - "strategic_planning"
+        - "code_generation"
+        - "mathematical_reasoning"
+      performance:
+        context_length: 16384
+        max_output_tokens: 4096
+        latency_ms: 6000
+        memory_gb: 13.0
+        gpu_required: false
+      optimization:
+        precision: "int4"
+        quantization: "dynamic"
+        batch_size: 1
+        use_cache: true
+      ollama_name: "gpt-oss:20b"
+      use_cases: ["complex_reasoning", "system_analysis", "architectural_decisions", "detailed_analysis"]
+      
+    primary:
+      name: "qwen2.5-7b"
+      type: "multimodal"
+      description: "Primary model optimized for Apple Silicon with Ollama"
+      capabilities:
+        - "text_generation"
+        - "text_embedding"
+        - "code_generation"
+        - "instruction_following"
+        - "mathematical_reasoning"
+      performance:
+        context_length: 32000
+        max_output_tokens: 2048
+        latency_ms: 500
+        memory_gb: 4.7
+        gpu_required: false
+      optimization:
+        precision: "int8"
+        quantization: "dynamic"
+        batch_size: 4
+        use_cache: true
+      ollama_name: "qwen2.5:7b"
+      
+    multimodal:
+      name: "llava-7b"
+      type: "multimodal"
+      description: "Multimodal model for vision and text tasks"
+      capabilities:
+        - "text_generation"
+        - "vision_to_text"
+        - "multimodal_reasoning"
+        - "image_analysis"
+      performance:
+        context_length: 32000
+        max_output_tokens: 2048
+        latency_ms: 800
+        memory_gb: 4.7
+        gpu_required: false
+      optimization:
+        precision: "int8"
+        quantization: "dynamic"
+        batch_size: 2
+        use_cache: true
+      ollama_name: "llava:7b"
+      
+    coding:
+      name: "phi3-3.8b"
+      type: "text_only"
+      description: "Specialized coding model for development tasks"
+      capabilities:
+        - "text_generation"
+        - "code_generation"
+        - "code_analysis"
+        - "instruction_following"
+      performance:
+        context_length: 32000
+        max_output_tokens: 2048
+        latency_ms: 300
+        memory_gb: 2.2
+        gpu_required: false
+      optimization:
+        precision: "int8"
+        quantization: "dynamic"
+        batch_size: 8
+        use_cache: true
+      ollama_name: "phi3:3.8b"
+      
+    lightweight:
+      name: "llama3.2-3b"
+      type: "text_only"
+      description: "Lightweight model for fast responses"
+      capabilities:
+        - "text_generation"
+        - "instruction_following"
+        - "simple_reasoning"
+      performance:
+        context_length: 32000
+        max_output_tokens: 2048
+        latency_ms: 200
+        memory_gb: 2.0
+        gpu_required: false
+      optimization:
+        precision: "int8"
+        quantization: "dynamic"
+        batch_size: 8
+        use_cache: true
+      ollama_name: "llama3.2:3b"
+
+    hrm:
+      name: "hrm-logic-7b"
+      type: "text_only"
+      description: "Heiretical reasoning model tuned for puzzles and lateral thinking"
+      capabilities:
+        - "text_generation"
+        - "logical_reasoning"
+        - "strategic_planning"
+        - "mathematical_reasoning"
+      performance:
+        context_length: 64000
+        max_output_tokens: 2048
+        latency_ms: 650
+        memory_gb: 6.0
+        gpu_required: false
+      optimization:
+        precision: "int4"
+        quantization: "dynamic"
+        batch_size: 2
+        use_cache: true
+      ollama_name: "hrm-logic:7b"
+
+    qwen3_30b:
+      name: "qwen3-omni-30b"
+      type: "multimodal"
+      description: "Advanced 30B MoE model with hybrid reasoning capabilities"
+      capabilities:
+        - "text_generation"
+        - "logical_reasoning"
+        - "multimodal_reasoning"
+        - "strategic_planning"
+        - "code_generation"
+        - "mathematical_reasoning"
+      performance:
+        context_length: 32768
+        max_output_tokens: 4096
+        latency_ms: 4000
+        memory_gb: 20.0
+        gpu_required: false
+      optimization:
+        precision: "int4"
+        quantization: "dynamic"
+        batch_size: 1
+        use_cache: true
+      ollama_name: "qwen3-30b"
+      use_cases: ["complex_reasoning", "multimodal_tasks", "long_context", "advanced_analysis", "creative_problem_solving"]
+
+  # Intelligent Model Routing Rules
+  routing_rules:
+    - name: "complex_reasoning_tasks"
+      condition: "task_type in ['complex_reasoning', 'system_analysis', 'architectural_decisions', 'detailed_analysis', 'strategic_planning'] or input_length > 1000 or complexity_score > 0.8"
+      action: "use_primary"
+      priority: 1
+      description: "Use gpt-oss:20b for complex reasoning and analysis tasks"
+      
+    - name: "multimodal_vision_tasks"
+      condition: "input_type in ['image', 'multimodal', 'vision']"
+      action: "use_multimodal"
+      priority: 2
+      description: "Use LLaVA for vision and multimodal tasks"
+      
+    - name: "coding_tasks"
+      condition: "task_type in ['code_generation', 'code_analysis', 'debugging', 'refactoring']"
+      action: "use_coding"
+      priority: 3
+      description: "Use Phi3 for coding and development tasks"
+      
+    - name: "fast_responses"
+      condition: "latency_requirement < 500"
+      action: "use_lightweight"
+      priority: 4
+      description: "Use Llama3.2 for fast, lightweight responses"
+
+    - name: "general_tasks"
+      condition: "task_type in ['text_generation', 'analysis', 'reasoning', 'instruction_following']"
+      action: "use_primary"
+      priority: 5
+      description: "Use Qwen2.5 for general text tasks"
+      
+    - name: "memory_constraint_fallback"
+      condition: "available_memory < 5"
+      action: "use_lightweight"
+      priority: 5
+      description: "Use lightweight model when memory is constrained"
+      
+    - name: "gpu_unavailable_fallback"
+      condition: "gpu_available == false"
+      action: "use_fallback"
+      priority: 5
+      description: "Use fallback model when GPU is unavailable"
+      
+    - name: "default_primary"
+      condition: "true"
+      action: "use_primary"
+      priority: 10
+      description: "Default to primary model for all other cases"
+
+  # Model Selection Logic
+  selection_logic:
+    algorithm: "rule_based"
+    evaluation_order: "priority_ascending"
+    conflict_resolution: "highest_priority_wins"
+    fallback_strategy: "graceful_degradation"
+    
+    # Performance thresholds
+    thresholds:
+      max_latency_ms: 5000
+      min_memory_gb: 4
+      max_context_ratio: 0.8
+      min_confidence_score: 0.7
+      
+    # Load balancing
+    load_balancing:
+      enabled: true
+      strategy: "round_robin"
+      health_check_interval: 30
+      max_concurrent_requests: 10
+      
+    # Caching strategy
+    caching:
+      enabled: true
+      cache_size_mb: 1024
+      ttl_seconds: 3600
+      cache_keys:
+        - "input_hash"
+        - "model_name"
+        - "parameters_hash"
+
+  # Model Configuration
+  configuration:
+    # Apple Silicon optimization
+    apple_silicon:
+      use_mps: true
+      mps_fallback: true
+      memory_pressure_handling: true
+      thermal_throttling: true
+      
+    # Precision settings
+    precision:
+      default: "float16"
+      fallback_precision: "int8"
+      mixed_precision: true
+      
+    # Memory management
+    memory:
+      max_memory_usage: 0.8
+      memory_cleanup_interval: 300
+      swap_enabled: false
+      
+    # Performance monitoring
+    monitoring:
+      enabled: true
+      metrics_collection: true
+      performance_logging: true
+      alert_thresholds:
+        latency_ms: 3000
+        memory_usage_percent: 85
+        error_rate_percent: 5
+
+  # Security and Compliance
+  security:
+    model_validation: true
+    input_sanitization: true
+    output_filtering: true
+    audit_logging: true
+    
+    # Content filtering
+    content_filters:
+      enabled: true
+      categories:
+        - "harmful_content"
+        - "personal_information"
+        - "sensitive_data"
+      action: "block_and_log"
+      
+    # Rate limiting
+    rate_limiting:
+      enabled: true
+      requests_per_minute: 60
+      burst_limit: 10
+      cooldown_period: 300
+
+  # Error Handling
+  error_handling:
+    retry_policy:
+      max_retries: 3
+      backoff_strategy: "exponential"
+      base_delay_ms: 1000
+      max_delay_ms: 10000
+      
+    fallback_chain:
+      - "primary_model"
+      - "fallback_model"
+      - "cached_response"
+      - "error_response"
+      
+    error_recovery:
+      auto_fallback: true
+      graceful_degradation: true
+      user_notification: true
+
+# ============================================================================
+# Security Policy Configuration
+# ============================================================================
+
+security_policy:
+  version: "0.1.0"
+  last_updated: "2024-09-24"
+  description: "Comprehensive security policies for Agentic LLM Core"
+  
+  # Data Redaction Rules
+  redaction:
+    enabled: true
+    mode: "strict"  # strict, moderate, lenient
+    
+    # Sensitive Data Patterns
+    patterns:
+      api_keys:
+        enabled: true
+        patterns:
+          - "api[_-]?key"
+          - "apikey"
+          - "access[_-]?token"
+          - "bearer[_-]?token"
+          - "auth[_-]?token"
+          - "secret[_-]?key"
+          - "private[_-]?key"
+        replacement: "[REDACTED_API_KEY]"
+        case_sensitive: false
+        
+      secrets:
+        enabled: true
+        patterns:
+          - "password"
+          - "passwd"
+          - "pwd"
+          - "secret"
+          - "private[_-]?key"
+          - "credential"
+          - "auth[_-]?secret"
+          - "jwt[_-]?secret"
+          - "session[_-]?secret"
+        replacement: "[REDACTED_SECRET]"
+        case_sensitive: false
+        
+      emails:
+        enabled: true
+        patterns:
+          - "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+          - "email[_-]?address"
+          - "e[_-]?mail"
+        replacement: "[REDACTED_EMAIL]"
+        case_sensitive: false
+        
+      # Additional sensitive patterns
+      credit_cards:
+        enabled: true
+        patterns:
+          - "\\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3[0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})\\b"
+        replacement: "[REDACTED_CC]"
+        case_sensitive: false
+        
+      ssn:
+        enabled: true
+        patterns:
+          - "\\b\\d{3}-\\d{2}-\\d{4}\\b"
+          - "\\b\\d{9}\\b"
+        replacement: "[REDACTED_SSN]"
+        case_sensitive: false
+        
+      phone_numbers:
+        enabled: true
+        patterns:
+          - "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b"
+          - "\\b\\(\\d{3}\\)\\s?\\d{3}[-.]?\\d{4}\\b"
+        replacement: "[REDACTED_PHONE]"
+        case_sensitive: false
+    
+    # Redaction Context
+    context:
+      preserve_context: true
+      log_redactions: true
+      audit_trail: true
+      redaction_count: true
+      
+    # Advanced Redaction
+    advanced:
+      partial_redaction: true
+      redaction_length: 4  # Show last 4 characters
+      hash_redaction: false
+      encryption_redaction: false
+
+  # Tool Allowlist Configuration
+  tool_security:
+    mode: "allowlist"  # allowlist, blocklist, open
+    
+    # Allowed Tool Categories
+    allowed_categories:
+      - "mcp"
+      - "langchain"
+      - "utility"
+      - "file_system"
+      - "database"
+      
+    # Specific Tool Allowlist
+    allowed_tools:
+      # MCP Tools
+      - name: "mcp:sql"
+        category: "mcp"
+        description: "SQL database operations via MCP"
+        permissions:
+          - "read"
+          - "write"
+          - "schema_query"
+        restrictions:
+          - "no_drop_table"
+          - "no_delete_all"
+          - "max_query_time: 30s"
+          
+      - name: "mcp:fs"
+        category: "mcp"
+        description: "File system operations via MCP"
+        permissions:
+          - "read"
+          - "write"
+          - "list_directory"
+        restrictions:
+          - "no_system_files"
+          - "no_executable_files"
+          - "max_file_size: 100MB"
+          
+      # LangChain Tools
+      - name: "lc:retriever"
+        category: "langchain"
+        description: "Document retrieval and search"
+        permissions:
+          - "search"
+          - "retrieve"
+          - "embed"
+        restrictions:
+          - "no_personal_data"
+          - "max_results: 100"
+          
+      # Utility Tools
+      - name: "utility:json_parser"
+        category: "utility"
+        description: "JSON parsing and validation"
+        permissions:
+          - "parse"
+          - "validate"
+          - "format"
+        restrictions:
+          - "max_depth: 10"
+          - "max_size: 1MB"
+          
+      - name: "utility:text_processor"
+        category: "utility"
+        description: "Text processing and analysis"
+        permissions:
+          - "tokenize"
+          - "summarize"
+          - "extract"
+        restrictions:
+          - "no_pii_extraction"
+          - "max_length: 1M_chars"
+
+    # Blocked Tools
+    blocked_tools:
+      - name: "system:shell"
+        reason: "Direct shell access not allowed"
+      - name: "network:curl"
+        reason: "Direct network access restricted"
+      - name: "crypto:encrypt"
+        reason: "Encryption operations require special permissions"
+
+    # Tool Execution Policies
+    execution_policies:
+      timeout_seconds: 30
+      max_memory_mb: 512
+      max_cpu_percent: 80
+      sandbox_mode: true
+      isolation_level: "strict"
+      
+      # Resource Limits
+      resource_limits:
+        max_concurrent_tools: 5
+        max_tool_calls_per_session: 100
+        max_tool_calls_per_minute: 20
+        
+      # Security Checks
+      security_checks:
+        input_validation: true
+        output_sanitization: true
+        permission_verification: true
+        resource_monitoring: true
+
+  # Side Effects Configuration
+  side_effects:
+    mode: "log-only"  # log-only, block, allow-with-log
+    
+    # Logging Configuration
+    logging:
+      enabled: true
+      level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+      format: "structured"  # structured, simple, json
+      destination: "file"  # file, console, both
+      file_path: "logs/security.log"
+      max_file_size_mb: 100
+      backup_count: 5
+      
+    # Side Effect Categories
+    categories:
+      data_access:
+        enabled: true
+        log_level: "INFO"
+        include_details: true
+        
+      data_modification:
+        enabled: true
+        log_level: "WARNING"
+        include_details: true
+        
+      external_communication:
+        enabled: true
+        log_level: "WARNING"
+        include_details: true
+        
+      system_changes:
+        enabled: true
+        log_level: "ERROR"
+        include_details: true
+        
+      security_events:
+        enabled: true
+        log_level: "ERROR"
+        include_details: true
+
+    # Audit Trail
+    audit_trail:
+      enabled: true
+      retention_days: 90
+      include_user_context: true
+      include_session_info: true
+      include_tool_parameters: true
+      include_results_summary: true
+      
+    # Real-time Monitoring
+    monitoring:
+      enabled: true
+      alert_thresholds:
+        failed_attempts: 5
+        suspicious_patterns: 3
+        resource_exhaustion: 1
+      notification_channels:
+        - "log"
+        - "console"
+      escalation_policy: "immediate"
+
+  # Access Control
+  access_control:
+    # Authentication
+    authentication:
+      required: true
+      methods: ["api_key", "jwt", "oauth2"]
+      session_timeout: 3600  # seconds
+      max_failed_attempts: 3
+      lockout_duration: 900  # seconds
+      
+    # Authorization
+    authorization:
+      model: "rbac"  # rbac, abac, simple
+      roles:
+        - name: "admin"
+          permissions: ["*"]
+        - name: "user"
+          permissions: ["read", "execute_allowed_tools"]
+        - name: "readonly"
+          permissions: ["read"]
+          
+    # Rate Limiting
+    rate_limiting:
+      enabled: true
+      requests_per_minute: 60
+      requests_per_hour: 1000
+      burst_limit: 10
+      cooldown_period: 300
+      
+    # IP Restrictions
+    ip_restrictions:
+      enabled: false
+      allowed_ips: []
+      blocked_ips: []
+      geo_restrictions: false
+
+  # Data Protection
+  data_protection:
+    # Encryption
+    encryption:
+      at_rest: true
+      in_transit: true
+      algorithm: "AES-256-GCM"
+      key_rotation_days: 90
+      
+    # Data Classification
+    classification:
+      levels: ["public", "internal", "confidential", "restricted"]
+      default_level: "internal"
+      auto_classification: true
+      
+    # Data Retention
+    retention:
+      logs: 90  # days
+      cache: 7  # days
+      temp_files: 1  # days
+      audit_trail: 365  # days
+      
+    # Data Loss Prevention
+    dlp:
+      enabled: true
+      scan_content: true
+      block_sensitive_uploads: true
+      quarantine_suspicious: true
+
+  # Compliance
+  compliance:
+    # Standards
+    standards:
+      - "GDPR"
+      - "CCPA"
+      - "SOC2"
+      - "ISO27001"
+      
+    # Privacy
+    privacy:
+      data_minimization: true
+      purpose_limitation: true
+      storage_limitation: true
+      consent_management: true
+      
+    # Reporting
+    reporting:
+      security_incidents: true
+      data_breaches: true
+      compliance_violations: true
+      audit_reports: true
