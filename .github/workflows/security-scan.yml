@@ -29,8 +29,10 @@ jobs:
       - name: Install security tools
         run: |
           python -m pip install --upgrade pip
-          pip install bandit safety semgrep trivy
+          pip install bandit safety semgrep
           npm install -g audit-ci @cyclonedx/cdxgen
+          # Install Trivy via GitHub releases
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 
       - name: Run Bandit security scan
         run: |
