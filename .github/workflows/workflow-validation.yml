@@ -129,8 +129,8 @@ jobs:
             'actions/cache@v2': 'actions/cache@v3',
             'actions/checkout@v2': 'actions/checkout@v4',
             'actions/setup-python@v3': 'actions/setup-python@v4',
-            'actions/upload-artifact@v2': 'actions/upload-artifact@v3',
-            'actions/download-artifact@v2': 'actions/download-artifact@v3',
+            'actions/upload-artifact@v2': 'actions/upload-artifact@v4',
+            'actions/download-artifact@v2': 'actions/download-artifact@v4',
           }
 
           warnings = []
@@ -234,7 +234,7 @@ jobs:
           "
 
       - name: Upload workflow validation results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: workflow-validation-${{ github.run_id }}
           path: |
