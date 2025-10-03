@@ -1,0 +1,25 @@
+{
+  "id": "github_933823024",
+  "title": "single-file-agents",
+  "description": "What if we could pack single purpose, powerful AI Agents into a single python file?",
+  "url": "https://github.com/disler/single-file-agents",
+  "language": "Python",
+  "stars": 403,
+  "forks": 150,
+  "created_at": "2025-02-16T19:08:01Z",
+  "updated_at": "2025-09-17T17:33:41Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [
+    "python",
+    "ai"
+  ],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

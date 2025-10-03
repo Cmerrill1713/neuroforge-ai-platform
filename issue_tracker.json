@@ -1,0 +1,64 @@
+{
+  "62f6f41392b5": {
+    "id": "62f6f41392b5",
+    "title": "Prevention: Configuration Fix Pattern",
+    "description": "Implementing prevention measures for recurring configuration fixes",
+    "status": "in_progress",
+    "severity": "medium",
+    "created_at": "2025-10-02T19:38:17.835231",
+    "updated_at": "2025-10-02T19:55:07.833394",
+    "fixed_at": null,
+    "verified_at": null,
+    "closed_at": null,
+    "fix_attempts": 4,
+    "recurrence_count": 0,
+    "tags": [
+      "configuration",
+      "prevention"
+    ],
+    "affected_components": [
+      "test",
+      "api",
+      "issue"
+    ],
+    "fix_description": null,
+    "verification_steps": [],
+    "prevention_measures": [
+      "Verify configuration file syntax before applying changes",
+      "Test configuration in isolated environment first",
+      "Document configuration changes with version control",
+      "Implement configuration validation checks",
+      "Verify configuration file syntax before applying changes",
+      "Test configuration in isolated environment first",
+      "Document configuration changes with version control",
+      "Implement configuration validation checks",
+      "Verify configuration file syntax before applying changes",
+      "Test configuration in isolated environment first",
+      "Document configuration changes with version control",
+      "Implement configuration validation checks",
+      "Verify configuration file syntax before applying changes",
+      "Test configuration in isolated environment first",
+      "Document configuration changes with version control",
+      "Implement configuration validation checks"
+    ]
+  },
+  "b76cb819b0ee": {
+    "id": "b76cb819b0ee",
+    "title": "Test Issue",
+    "description": "Test description",
+    "status": "open",
+    "severity": "medium",
+    "created_at": "2025-10-02T20:00:28.022153",
+    "updated_at": "2025-10-02T20:00:28.022157",
+    "fixed_at": null,
+    "verified_at": null,
+    "closed_at": null,
+    "fix_attempts": 0,
+    "recurrence_count": 0,
+    "tags": [],
+    "affected_components": [],
+    "fix_description": null,
+    "verification_steps": [],
+    "prevention_measures": []
+  }
+}

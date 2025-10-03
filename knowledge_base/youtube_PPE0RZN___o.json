@@ -1,0 +1,25 @@
+{
+  "id": "youtube_PPE0RZN___o",
+  "title": "AGE OF AGENTS: How to EVOLVE your o3-mini Prompts into Multi-Tool AI Agents",
+  "description": "🔥 My AI Agents are EDITING VIDEOS NOW – IMAGINE WHATS NEXT!? \n\nBut just because they can doesn't mean they're the best option for compute usage. \n\nWill a powerful o3-mini prompt do the job? What about a chain of o3-mini calls as a prompt chain?\n\nIn this video you find out when to Prompt vs Prompt Chain (agentic workflow) vs build an AI Agent\n\n🎥 Featured Links:  \n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding  \n- Deepseek Personal AI Assistant: https://youtu.be/zoBwIi4ZiTA  \n- One Prompt is Not Enough: https://youtu.be/JjVvYDPVrAQ  \n- Building Effective Agents: https://www.anthropic.com/research/building-effective-agents  \n- Computer Use Tools: https://docs.anthropic.com/en/docs/build-with-claude/computer-use#understand-anthropic-defined-tools  \n- Github Copilot Agent: https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/  \n\n💥 Key Breakdown:  \n- SLICE & DICE: How Uhcut processes 350K-token transcripts into bite-sized AI-editable chunks  \n- PROMPT WARFARE: Why raw prompts FAIL and prompt chains DOMINATE for complex editing tasks  \n- AGENTIC OVERKILL? Discover when AI agents OUTPERFORM chains… and when they’re just expensive toys  \n- BENCHMARK SECRETS: O3-mini vs GPT-4o faceoff – which model delivers 100% accuracy at HALF the cost?  \n\nIn this GenAI focused video, IndyDevDan takes you on a deep dive into the future of video editing with an explosive blend of prompt, prompt chain, and AI agent strategies. Discover how building effective agents using innovative agentic workflows can revolutionize your editing process. Watch as Uhcut—a WIP powerful o3-mini AI Agent—delivers agentic video editing, harnessing insights from openai and anthorpic research for automatic video editing that’s both autonomous and efficient.\n\nEver wondered why one prompt isn’t enough? We break down the evolution from a simple prompt to a robust prompt chain and finally to a fully autonomous ai agent. Through live benchmarking and practical demos, you’ll see firsthand why leveraging these techniques can turn tedious tasks into seamless, scalable workflows. Whether you’re aiming for autonomous video editing or mastering agentic workflow design, this video provides the blueprint you need to get ahead.\n\nDon’t miss out on this bold new era of video editing. Smash that subscribe button and join the revolution with IndyDevDan—because when it comes to ai agent-powered edits, the future is now!\n\nNo matter what...\n\nStay focused and keep building.\n\n📖 Chapters  \n00:00 The Age Of Agents  \n02:15 Uhcut, Agentic Video Editing  \n06:08 The Prompt  \n11:10 The Prompt Chain  \n16:55 The AI Agent  \n23:36 Benchmarks for LLM performance at scale  \n30:18 Big Takeaways for Building Effective Agents  \n\n#aiagent #aiengineering #promptengineering",
+  "url": "https://www.youtube.com/watch?v=PPE0RZN___o",
+  "upload_date": "20250210",
+  "duration": 2246,
+  "view_count": 16789,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "8257c6c0cd605be6a4912aa551dd4519"
+}

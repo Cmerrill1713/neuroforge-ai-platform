@@ -1,0 +1,26 @@
+{
+  "id": "youtube_E3jO8YLc_CI",
+  "title": "Llama 3.2 is INSANE - But Does it Beat GPT as an AI Agent?",
+  "url": "https://www.youtube.com/watch?v=E3jO8YLc_CI",
+  "description": "Meta recently released their latest suite of LLMs - Llama 3.2 - and they are CRUSHING it on the benchmarks! The 11b and 90b parameter versions even have vision capabilities.\n\nBut what I care about the most is how well they do as AI agents - LLMs that are able to send emails, message in Slack, do RAG, etc. Local LLMs have historically been not so great as AI agents (specifically because of poor function calling performance), so when Llama 3.2 came out, I was super excited to see how it fared as a function calling agent. And that's exactly what I test out in this video!\n\nLlama 3.2 90b is pretty on par with GPT-4o-mini according to the benchmarks, so I pit the two models against each other to set a good baseline for seeing how good Llama 3.2 really is. Cage match!\n\n00:00 - Plan of Attack\n01:52 - Showcasing the AI Agent Code\n05:03 - The Agent Capabilities (Tools)\n06:52 - Testing GPT-4o-mini as an Agent\n11:35 - Testing Llama 3.2 90b as an Agent\n15:29 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAll the code for the AI Agent that I used in this video to test Llama 3.2 90b and GPT-4o-mini can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/llm-agent-evaluation-framework\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20240930",
+  "duration": 989,
+  "view_count": 8950,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

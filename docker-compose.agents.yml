@@ -1,0 +1,117 @@
+version: '3.8'
+
+services:
+  # Document Processing Agent
+  document-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    container_name: document-processing-agent
+    environment:
+      - WEAVIATE_HOST=weaviate
+      - WEAVIATE_HTTP_PORT=8080
+      - WEAVIATE_GRPC_PORT=50051
+      - KNOWLEDGE_BASE_URL=http://knowledge-base:8004
+      - REDIS_URL=redis://redis:6379
+      - POSTGRES_URL=postgresql://postgres:password@postgres:5432/agentic_platform
+      - LOG_LEVEL=INFO
+      - AGENT_ID=doc-processor-001
+      - AGENT_ROLE=document_migration
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./scripts:/app/scripts
+    depends_on:
+      - weaviate
+      - redis
+      - postgres
+      - knowledge-base
+    networks:
+      - agentic-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8006/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Knowledge Base Service (existing)
+  knowledge-base:
+    build:
+      context: .
+      dockerfile: Dockerfile.kb
+    container_name: knowledge-base-service
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - POSTGRES_URL=postgresql://postgres:password@postgres:5432/agentic_platform
+      - LOG_LEVEL=INFO
+    ports:
+      - "8004:8004"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - agentic-network
+    restart: unless-stopped
+
+  # Agent Orchestrator
+  agent-orchestrator:
+    build:
+      context: .
+      dockerfile: Dockerfile.orchestrator
+    container_name: agent-orchestrator
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - POSTGRES_URL=postgresql://postgres:password@postgres:5432/agentic_platform
+      - WEAVIATE_HOST=weaviate
+      - LOG_LEVEL=INFO
+    ports:
+      - "8007:8007"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      - redis
+      - postgres
+      - weaviate
+      - document-agent
+    networks:
+      - agentic-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8007/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Agent Monitor Dashboard
+  agent-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile.monitor
+    container_name: agent-monitor
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - POSTGRES_URL=postgresql://postgres:password@postgres:5432/agentic_platform
+    ports:
+      - "8008:8008"
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - redis
+      - postgres
+      - agent-orchestrator
+    networks:
+      - agentic-network
+    restart: unless-stopped
+
+networks:
+  agentic-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

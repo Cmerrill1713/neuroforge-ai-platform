@@ -1,0 +1,26 @@
+{
+  "id": "youtube_iOZpiXLT7iY",
+  "title": "Build AI Agents that EVOLVE Over Time",
+  "url": "https://www.youtube.com/watch?v=iOZpiXLT7iY",
+  "description": "One of the biggest advantages of building AI agents over traditional automations is that they are supposed to act more like a human. But for being so human, they sure have a pretty terrible memory most of the time.\n\nWe want our agents to get smarter over time through interacting with us - remembering goals, instructions, corrections, our preferences, etc.\n\nThis kind of long term memory is when you really start to take your agents to the next level of personalization and human like behavior. In this video, I’ll show you step by step how to build these self-learning AI agents using an open source Python library called Mem0 which is specifically built for this purpose.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAll the Mem0 agent code covered in this video can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/mem0-agent\n\nMem0:\n\nhttps://github.com/mem0ai/mem0\n\nVisit the oTTomator Live Agent Studio and try out the Mem0 agent for yourself for free!\n\nhttps://studio.ottomator.ai/\n\nYou get 100 tokens when you sign up, and tokens are just my way to make sure you don’t drain my bank account testing my agents ;)\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Self-Evolving Agents with Mem0\n01:35 - Using Gemini to Show We Need Mem0\n03:02 - Pydantic AI Mem0 Agent Demo\n04:48 - Mem0 GitHub (100% Open Source)\n05:29 - Our Mem0 Implementation Overview\n06:44 - Version 1 - Basic Mem0 Setup\n10:24 - Version 1 Demo\n12:09 - Version 2 - Mem0 + Supabase Integration \n13:23 - Version 2 Demo\n15:53 - Version 3 - Frontend + Supabase Authentication\n17:44 - Version 3 Demo\n21:26 - Bonus Section - How Mem0 Works\n24:31 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250310",
+  "duration": 1504,
+  "view_count": 67047,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

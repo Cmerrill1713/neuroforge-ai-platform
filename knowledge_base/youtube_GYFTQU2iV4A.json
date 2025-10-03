@@ -1,0 +1,26 @@
+{
+  "id": "youtube_GYFTQU2iV4A",
+  "title": "Are You Building REAL AI Agents or Just Using LLMs?",
+  "url": "https://www.youtube.com/watch?v=GYFTQU2iV4A",
+  "description": "These days it feels like everyone puts an LLM into any program or flow and calls it an agent - but it’s not that simple. There is a key difference between AI agents and a workflow that happens to use AI. It’s an important distinction too because the way you implement agents versus workflows and the place for each are entirely different, so you HAVE to know what you are building. Both are very valuable, but they solve a totally separate set of problems.\n\nIn this video, I break down this difference for you in a super concise way and I’ve built a couple very simple examples of each to make it crystal clear. As a bonus I also break down what an AI agent exactly is, which is surprisingly hard for most to define!\n\nBy the way, I use the term \"Not Agent\" a lot in the video because I am referring specifically to workflows that leverage LLMs in a way that make people think they are AI agents when they aren't actually. \"Not Agent\" is cheesier but more descriptive than just calling these automations workflows.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHuggingFace's Introduction to AI Agents:\n\nhttps://huggingface.co/docs/smolagents/en/conceptual_guides/intro_agents\n\nAnthropic's \"Tips for Building AI Agents\" video (the section I highlighted starts 41 seconds in):\n\nhttps://www.youtube.com/watch?v=LP5OCa20Zpg\n\nn8n template for the long term memory agent I showcased:\n\nhttps://n8n.io/workflows/2872-ai-agent-chatbot-long-term-memory-note-storage-telegram/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Agents and \"Not Agents\"\n01:01 - What Actually is an AI Agent?\n02:42 - Anthropic's Definition of an AI Agent\n04:05 - Visual Representation of an Agent\n05:24 - Agentic Applications Diagram\n06:34 - First \"Not Agent\" in n8n\n09:21 - Agent, Workflow, or Chatbot?\n10:58 - Second \"Not Agent\"\n12:50 - First Agent Example\n15:04 - Second Agent Example\n16:24 - Agent and \"Not Agent\" in the Real World\n17:58 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250224",
+  "duration": 1107,
+  "view_count": 55429,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

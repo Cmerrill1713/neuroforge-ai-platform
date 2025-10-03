@@ -1,0 +1,28 @@
+{
+  "id": "meta_github_123523039",
+  "title": "ci-hud",
+  "description": "HUD for CI activity on `pytorch/pytorch`, provides a top level view for jobs to easily discern regressions",
+  "url": "https://github.com/pytorch/ci-hud",
+  "language": "JavaScript",
+  "stars": 13,
+  "forks": 24,
+  "created_at": "2018-03-02T03:05:11Z",
+  "updated_at": "2025-02-10T01:53:58Z",
+  "topics": [
+    "pytorch",
+    "react"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

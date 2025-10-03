@@ -1,0 +1,26 @@
+{
+  "id": "youtube_G7gK8H6u7Rs",
+  "title": "This MCP Server for AI Coding Assistants Will 10x Your Productivity",
+  "url": "https://www.youtube.com/watch?v=G7gK8H6u7Rs",
+  "description": "There is no denying that AI coding assistants like Cursor and Windsurf are extremely powerful, but their biggest limitation right now is they hallucinate a LOT when working with specific tools and frameworks.\n\nWe need a way to easily provide documentation for our favorite frameworks and tools to the AI coding assistant in a way it can truly understand, and I have found a tool (an MCP server) that does exactly this - Context7!\n\nIn this video, I'll show you how you can get up and running with Context7 in minutes (for free) in any AI coding assistant to level up your AI coding game.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Scrimba if you're serious about mastering full stack development. AI coding assistants are a powerful way to get you started, but it's more crucial then ever to have a solid foundation for frontend and backend development!\n\nhttps://scrimba.com/?via=colemedin\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nContext7:\n\nhttps://context7.com/\n\nContext7 MCP Server:\n\nhttps://github.com/upstash/context7-mcp\n\nMy video covering my full AI coding process:\n\nhttps://youtu.be/SS5DYx6mPw8\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Context7\n00:50 - Overview of Context7\n01:30 - The Power of Context7\n03:19 - Why Context7 is Better than Cursor Custom Docs\n03:46 - Context7 MCP Server\n05:17 - Understanding the Tools for the MCP Server\n06:54 - My Setup for Coding with Context7 + Windsurf\n08:24 - Scrimba\n10:12 - Coding an AI Agent with Context7\n12:20 - Demo of Our Agent\n14:57 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250421",
+  "duration": 931,
+  "view_count": 97253,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

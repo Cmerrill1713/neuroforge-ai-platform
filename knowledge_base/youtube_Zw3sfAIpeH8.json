@@ -1,0 +1,26 @@
+{
+  "id": "youtube_Zw3sfAIpeH8",
+  "title": "Build and Ship Any MCP Server in MINUTES (Full Guide)",
+  "url": "https://www.youtube.com/watch?v=Zw3sfAIpeH8",
+  "description": "Building MCP servers that actually work in production requires a completely different approach than the localhost examples you see in most tutorials. MCP has evolved significantly - we now have streamable HTTP, real authentication, production monitoring, and platforms to deploy remote MCP servers. This is certainly a step above my last video where I showed how to build MCP servers!\n\nIn this video, I walk you through how to build production ready MCPs with a template you can use as a blueprint right now. I'll show you the complete implementation and walk you through a straightforward deployment to Cloudflare step by step. And when I say complete implementation I mean it - authentication with GitHub OAuth, production monitoring with Sentry, following best practices for security, and a single command deployment to production.\n\nI'm thinking of making a follow up video where I cover using my context engineering strategy to create another MCP server based on this template so you can see the full process. Let me know in the comments if you'd be interested in that!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nKey resources:\n\n- Check out Sentry for production monitoring of your MCP servers and other applications:\n\nhttps://sentry.io/\n\n- GitHub repository for the MCP server template:\n\nhttps://github.com/coleam00/remote-mcp-server-with-auth\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nOther resources mentioned in the video:\n\n- Cloudflare guide to building remote MCP servers:\nhttps://developers.cloudflare.com/agents/guides/remote-mcp-server/\n\n- Cloudflare guide to MCP (includes section for authorization):\nhttps://developers.cloudflare.com/agents/model-context-protocol/\n\n- Cloudflare remote MCP server demo with GitHub OAuth:\nhttps://github.com/cloudflare/ai/tree/main/demos/remote-mcp-github-oauth\n\n- Sentry guide to monitoring MCP servers:\nhttps://blog.sentry.io/monitoring-mcp-server-sentry/\n\n- Sentry MCP server (example of an MCP in production):\nhttps://github.com/getsentry/sentry-mcp/tree/main\n\n- TypeScript SDK for MCP in GitHub:\nhttps://github.com/modelcontextprotocol/typescript-sdk\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Production Ready MCP is Here\n01:47 - Introducing My Template for Building Production Ready MCPs\n02:31 - The MCP We're Building + Deploying in this Video\n03:58 - Run this MCP Server Yourself\n04:58 - Understanding the Core of MCP (Basic Example)\n07:55 - Demo of Our Simple MCP with Claude Desktop\n09:51 - Running Our Remote MCP Server Locally\n11:24 - Demoing our MCP Server (in Claude Desktop)\n13:23 - How this MCP Server Works (GitHub OAuth, Cloudflare, Security)\n20:39 - Sentry Integration for Production MCP Monitoring\n23:40 - Deploying Our Remote MCP Server to Cloudflare (Easy Mode)\n27:03 - Using Our Fully Remote MCP in Claude Desktop\n29:16 - Final Thoughts & Using AI Coding Assistants to Build MCPs\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250710",
+  "duration": 1860,
+  "view_count": 50162,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

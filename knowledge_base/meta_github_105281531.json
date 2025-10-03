@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_105281531",
+  "title": "glow",
+  "description": "Compiler for Neural Network hardware accelerators",
+  "url": "https://github.com/pytorch/glow",
+  "language": "C++",
+  "stars": 3314,
+  "forks": 699,
+  "created_at": "2017-09-29T14:28:18Z",
+  "updated_at": "2025-09-25T07:41:54Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "neural network"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

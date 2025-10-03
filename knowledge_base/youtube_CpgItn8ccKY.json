@@ -1,0 +1,28 @@
+{
+  "id": "youtube_CpgItn8ccKY",
+  "title": "Learn Anything With AI: HTMX - FLASK - AIDER (asmr devlog)",
+  "description": "Crazy HTMX fact: it has been known to reduce code base sizes by 67% when compared with React 🤯😅👋.\n\n🔥 Welcome to our latest ASMR devlog, where we dive into the world of AI-powered coding with AIDER, Flask, and HTMX! 🔥\n\nIn this video, we're learning HTMX with AI. We explore the power of AI in programming using AIDER, a GPT-powered coding assistant, to generate a Flask app that helps us understand, learn and master HTMX.\n\n🚀 HTMX is a simple and refreshing tool that brings modern user interfaces to HTML. It provides access to AJAX, CSS Transitions, WebSockets, and Server Sent Events directly in HTML, using attributes. This allows you to build modern user interfaces with the simplicity and power of hypertext and hypermedia. HTMX is small, dependency-free, extendable, IE11 compatible, and has been known to reduce code base sizes by 67% when compared with React.\n\n🤖 AIDER is a command-line chat tool that leverages OpenAI’s GPT models to help you write and edit code. Whether you're starting a new project or modifying code in your existing git repo, AIDER makes it easy to commit, diff, and undo changes proposed by GPT without copy/pasting. It also has features that help GPT-4 understand and modify larger codebases.\n\n🌐 Flask is a powerful web application framework written in Python. Flask is based on the Werkzeug WSGI toolkit and the Jinja2 template engine. We barely tap into the full potential of flask in this video, just know there's a lot more to flask you can do if you need it.\n\nAI Programming is here, stay on the edge of what's possible. Like, share, and subscribe for more content like this.\n\n🎥 Become an AI Programmer\nhttps://youtu.be/MPYFPvxfGZs\n\n💻 Tech & Tools:\nFLASK: https://flask.palletsprojects.com/en/2.3.x/\nHTMX: https://htmx.org/\nAIDER: https://aider.chat/\nVSCODE: https://code.visualstudio.com/\n\n🖥 Equipment\n\n- Mac Book Pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n📚 Chapters\n\n00:00 Setup Python App\n01:40 AI Generate Flask App\n02:25 Use AI to create HTMX examples\n04:00 Test the App!\n04:30 Learn HTMX - Click Trigger\n09:25 Learn HTMX - Polling\n11:00 Learn HTMX - Mouseenter & Animation\n12:25 Learn HTMX - Search & Filter\n15:35 Learn HTMX - Loading Indicator\n17:15 Learn HTMX - Content Swap\n18:04 Recap Our HTMX App\n\n#frontend #html #aiprogramming",
+  "url": "https://www.youtube.com/watch?v=CpgItn8ccKY",
+  "upload_date": "20230724",
+  "duration": 1132,
+  "view_count": 2161,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "react",
+    "ai",
+    "coding",
+    "programming",
+    "frontend",
+    "git"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "b3b530890ee0175a6eb8f0caf4df77d5"
+}

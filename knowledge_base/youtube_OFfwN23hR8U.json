@@ -1,0 +1,26 @@
+{
+  "id": "youtube_OFfwN23hR8U",
+  "title": "My Top 20 Lessons from Building 100s of AI Agents (Super Actionable)",
+  "url": "https://www.youtube.com/watch?v=OFfwN23hR8U",
+  "description": "I've built hundreds of AI agents over the past couple of years and learned MANY lessons through doing so - a lot of them the hard way. I put a ton of effort into condensing all of these lessons in the top 20 for you so that you can learn from my grind and my mistakes. The goal here is to save you dozens if not hundreds of hours learning them all yourself like I had to do!\n\nThis content is from one of the special Dynamous Launch Week events and is super value packed and actionable. I'm releasing this on my YouTube channel in celebration of the Archon Beta launch and reaching 1,000 members this weekend in the Dynamous community!\n\nI hope you get a lot out of this and let me know in the comments if you want me to make a full video on any of the lessons or tips I cover here!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you're looking for an AI coding assistant that's fast, feature rich, and can handle complex coding problems, check out Windsurf:\nhttps://wind.surf/colemedin\n\n- If you're looking to join a community for early AI adopters to master AI Coding & AI Agents and transform your career or business, check out Dynamous:\nhttps://dynamous.ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing my Top 20 Agent Lessons\n00:43 - Gameplan for the Event\n02:11 - Clearly Defining an AI Agent\n05:28 - The Biggest Challenging Developing AI Agents\n08:17 - Tip #1: Use Agents to Save Time, not Replace You\n10:44 - Tip #2: Don't Skimp on Planning & Prototyping\n12:00 - Tip #3: Beware the Hallucination Blow Up\n14:27 - Windsurf (Agentic Coding Assistant)\n15:56 - Tip #4: Reduce Hallucinations with Agent Guardrails\n19:22 - Tip #5: Reduce Hallucinations with Specialized Agents\n21:20 - Tip #6: Reduce Hallucinations with EXAMPLES\n23:12 - Tip #7: Avoid Negatives in System Prompts\n25:21 - Tip #8: Avoid Contradictions in System Prompts\n28:41 - Tip #9: Version Your System Prompts!\n30:08 - Tip #10: Swapping LLMs can be Dangerous\n32:11 - Tip #11: Your Favorite LLM isn't Always the Best\n33:32 - Tip #12: LLMs - Watch Your Context Lengths\n35:28 - Tip #13: Previous Hallucinations Likely Repeat\n37:29 - Tip #14: Long Term Memory is Just Another RAG\n39:06 - Tip #15: Include Tool Calls in Conversation History\n41:06 - Tip #16: Tool Descriptions are KEY\n42:51 - Tip #17: Give Examples for Complex Tools\n43:35 - Tip #18: Always Catch & Return Tool Errors\n45:10 - Tip #19: Tools - Only Return what the LLM Needs to Know\n46:39 - Tip #20: The Anatomy of a Good Tool\n49:18 - Dynamous Community Q&A\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least once a week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250821",
+  "duration": 3814,
+  "view_count": 15596,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

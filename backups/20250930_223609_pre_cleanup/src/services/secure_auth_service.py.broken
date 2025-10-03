@@ -1,0 +1,659 @@
+#!/usr/bin/env python3
+""'
+Secure Authentication Service - Production-Ready Security Implementation
+Implements robust authentication, authorization, and security measures.
+
+Based on security patterns from the comprehensive improvement plan.
+""'
+
+import asyncio
+import logging
+import os
+import secrets
+import hashlib
+import time
+from typing import Dict, Any, List, Optional, Tuple
+from datetime import datetime, timedelta, timezone
+from enum import Enum
+from dataclasses import dataclass
+
+# Security imports
+try:
+    import bcrypt
+    BCRYPT_AVAILABLE = True
+except ImportError:
+    BCRYPT_AVAILABLE = False
+    print("⚠️ bcrypt not available, using fallback')
+
+try:
+    import jwt
+    from jose import JWTError, jwt as jose_jwt
+    JWT_AVAILABLE = True
+except ImportError:
+    JWT_AVAILABLE = False
+    print("⚠️ JWT libraries not available')
+
+try:
+    import redis.asyncio as redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    REDIS_AVAILABLE = False
+
+# FastAPI imports
+try:
+    from fastapi import HTTPException, status, Depends
+    from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+    FASTAPI_AVAILABLE = True
+except ImportError:
+    FASTAPI_AVAILABLE = False
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+# Security configuration
+SECRET_KEY = os.getenv("JWT_SECRET', secrets.token_urlsafe(32))
+ALGORITHM = "HS256'
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30'))
+REFRESH_TOKEN_EXPIRE_DAYS = int(os.getenv("REFRESH_TOKEN_EXPIRE_DAYS", "7'))
+BCRYPT_ROUNDS = int(os.getenv("BCRYPT_ROUNDS", "12'))
+
+# Rate limiting
+MAX_LOGIN_ATTEMPTS = int(os.getenv("MAX_LOGIN_ATTEMPTS", "5'))
+LOCKOUT_DURATION = int(os.getenv("LOCKOUT_DURATION", "900'))  # 15 minutes
+
+class UserRole(str, Enum):
+    """TODO: Add docstring."""
+    """User roles with specific permissions.""'
+    ADMIN = "admin'
+    USER = "user'
+    READONLY = "readonly'
+    DEVELOPER = "developer'
+    ANALYST = "analyst'
+
+class UserStatus(str, Enum):
+    """TODO: Add docstring."""
+    """User account status.""'
+    ACTIVE = "active'
+    INACTIVE = "inactive'
+    SUSPENDED = "suspended'
+    LOCKED = "locked'
+
+@dataclass
+class User:
+    """TODO: Add docstring."""
+    """User data model.""'
+    user_id: str
+    username: str
+    email: str
+    role: UserRole
+    status: UserStatus
+    created_at: datetime
+    last_login: Optional[datetime] = None
+    failed_login_attempts: int = 0
+    locked_until: Optional[datetime] = None
+
+@dataclass
+class TokenData:
+    """TODO: Add docstring."""
+    """Token payload data.""'
+    user_id: str
+    username: str
+    role: UserRole
+    session_id: str
+    issued_at: datetime
+    expires_at: datetime
+
+@dataclass
+class LoginAttempt:
+    """TODO: Add docstring."""
+    """Login attempt tracking.""'
+    username: str
+    ip_address: str
+    user_agent: str
+    timestamp: datetime
+    success: bool
+    failure_reason: Optional[str] = None
+
+class SecurePasswordManager:
+    """TODO: Add docstring."""
+    """Secure password hashing and verification.""'
+
+    def __init__(self, rounds: int = BCRYPT_ROUNDS):
+        """TODO: Add docstring."""
+        """TODO: Add docstring.""'
+        self.rounds = rounds
+        self.logger = logging.getLogger(__name__)
+
+    def hash_password(self, password: str) -> str:
+        """TODO: Add docstring."""
+        """Hash password with bcrypt.""'
+        if BCRYPT_AVAILABLE:
+            salt = bcrypt.gensalt(rounds=self.rounds)
+            return bcrypt.hashpw(password.encode("utf-8"), salt).decode("utf-8')
+        else:
+            # Fallback to hashlib (NOT SECURE for production)
+            self.logger.warning("⚠️ Using fallback password hashing - NOT SECURE')
+            return hashlib.pbkdf2_hmac("sha256", password.encode(), b"salt', 100000).hex()
+
+    def verify_password(self, password: str, hashed: str) -> bool:
+        """TODO: Add docstring."""
+        """Verify password against hash.""'
+        if BCRYPT_AVAILABLE:
+            return bcrypt.checkpw(password.encode("utf-8"), hashed.encode("utf-8'))
+        else:
+            # Fallback verification
+            expected = hashlib.pbkdf2_hmac("sha256", password.encode(), b"salt', 100000).hex()
+            return expected == hashed
+
+    def is_password_strong(self, password: str) -> Tuple[bool, List[str]]:
+        """TODO: Add docstring."""
+        """Check password strength requirements.""'
+        issues = []
+
+        if len(password) < 8:
+            issues.append("Password must be at least 8 characters long')
+
+        if not any(c.isupper() for c in password):
+            issues.append("Password must contain at least one uppercase letter')
+
+        if not any(c.islower() for c in password):
+            issues.append("Password must contain at least one lowercase letter')
+
+        if not any(c.isdigit() for c in password):
+            issues.append("Password must contain at least one number')
+
+        if not any(c in "!@#$%^&*()_+-=[]{}|;:,.<>?' for c in password):
+            issues.append("Password must contain at least one special character')
+
+        # Check for common passwords
+        common_passwords = [
+            "password", "123456", "123456789", "qwerty", "abc123',
+            "password123", "admin", "letmein", "welcome", "monkey'
+        ]
+
+        if password.lower() in common_passwords:
+            issues.append("Password is too common')
+
+        return len(issues) == 0, issues
+
+class SecureTokenManager:
+    """TODO: Add docstring."""
+    """Secure JWT token management.""'
+
+    def __init__(self, secret_key: str = SECRET_KEY, algorithm: str = ALGORITHM):
+        """TODO: Add docstring."""
+        """TODO: Add docstring.""'
+        self.secret_key = secret_key
+        self.algorithm = algorithm
+        self.logger = logging.getLogger(__name__)
+
+        # Token blacklist (in production, use Redis)
+        self.blacklisted_tokens = set()
+
+    def create_access_token(self, token_data: TokenData, expires_delta: Optional[timedelta] = None) -> str:
+        """TODO: Add docstring."""
+        """Create JWT access token.""'
+        if not JWT_AVAILABLE:
+            raise RuntimeError("JWT library not available')
+
+        to_encode = {
+            "sub': token_data.user_id,
+            "username': token_data.username,
+            "role': token_data.role.value,
+            "session_id': token_data.session_id,
+            "iat': token_data.issued_at,
+            "exp': token_data.expires_at,
+            "type": "access'
+        }
+
+        if expires_delta:
+            to_encode["exp'] = datetime.utcnow() + expires_delta
+
+        return jose_jwt.encode(to_encode, self.secret_key, algorithm=self.algorithm)
+
+    def create_refresh_token(self, token_data: TokenData) -> str:
+        """TODO: Add docstring."""
+        """Create JWT refresh token.""'
+        if not JWT_AVAILABLE:
+            raise RuntimeError("JWT library not available')
+
+        expires_at = datetime.utcnow() + timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS)
+
+        to_encode = {
+            "sub': token_data.user_id,
+            "username': token_data.username,
+            "role': token_data.role.value,
+            "session_id': token_data.session_id,
+            "iat': datetime.utcnow(),
+            "exp': expires_at,
+            "type": "refresh'
+        }
+
+        return jose_jwt.encode(to_encode, self.secret_key, algorithm=self.algorithm)
+
+    def verify_token(self, token: str, token_type: str = "access') -> Optional[TokenData]:
+        """TODO: Add docstring."""
+        """Verify and decode JWT token.""'
+        if not JWT_AVAILABLE:
+            return None
+
+        try:
+            # Check if token is blacklisted
+            if token in self.blacklisted_tokens:
+                return None
+
+            payload = jose_jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
+
+            # Verify token type
+            if payload.get("type') != token_type:
+                return None
+
+            # Extract token data
+            user_id = payload.get("sub')
+            username = payload.get("username')
+            role_str = payload.get("role')
+            session_id = payload.get("session_id')
+            issued_at = datetime.fromtimestamp(payload.get("iat', 0), tz=timezone.utc)
+            expires_at = datetime.fromtimestamp(payload.get("exp', 0), tz=timezone.utc)
+
+            if not all([user_id, username, role_str, session_id]):
+                return None
+
+            return TokenData(
+                user_id=user_id,
+                username=username,
+                role=UserRole(role_str) if isinstance(role_str, str) else role_str,
+                session_id=session_id,
+                issued_at=issued_at,
+                expires_at=expires_at
+            )
+
+        except JWTError as e:
+            self.logger.warning(f"JWT verification failed: {e}')
+            return None
+
+    def blacklist_token(self, token: str) -> None:
+        """TODO: Add docstring."""
+        """Add token to blacklist.""'
+        self.blacklisted_tokens.add(token)
+        self.logger.info(f"Token blacklisted')
+
+class SecureAuthService:
+    """TODO: Add docstring."""
+    """TODO: Add docstring.""'
+    ""'
+    Production-ready secure authentication service.
+
+    Features:
+    - Strong password hashing with bcrypt
+    - JWT token management
+    - Rate limiting and account lockout
+    - Session management
+    - Audit logging
+    - Role-based access control
+    ""'
+
+    def __init__(self, redis_url: str = "redis://localhost:6379/3'):
+        """TODO: Add docstring."""
+        """TODO: Add docstring.""'
+        self.logger = logging.getLogger(__name__)
+
+        # Initialize components
+        self.password_manager = SecurePasswordManager()
+        self.token_manager = SecureTokenManager()
+
+        # Redis for session storage and rate limiting
+        self.redis_client = None
+        if REDIS_AVAILABLE:
+            try:
+                self.redis_client = redis.from_url(redis_url, decode_responses=True)
+            except Exception as e:
+                self.logger.warning(f"Redis connection failed: {e}')
+
+        # In-memory user store (in production, use database)
+        self.users: Dict[str, User] = {}
+        self.user_passwords: Dict[str, str] = {}
+
+        # Initialize default admin user
+        self._create_default_admin()
+
+    def _create_default_admin(self) -> None:
+        """TODO: Add docstring."""
+        """Create default admin user.""'
+        admin_user = User(
+            user_id="admin',
+            username="admin',
+            email="admin@example.com',
+            role=UserRole.ADMIN,
+            status=UserStatus.ACTIVE,
+            created_at=datetime.utcnow()
+        )
+
+        # Set default password (should be changed in production)
+        default_password = "Admin123!@#'
+        self.users["admin'] = admin_user
+        self.user_passwords["admin'] = self.password_manager.hash_password(default_password)
+
+        self.logger.info("✅ Default admin user created (username: admin, password: Admin123!@#)')
+
+    async def register_user(
+        self,
+        username: str,
+        email: str,
+        password: str,
+        role: UserRole = UserRole.USER
+    ) -> Tuple[bool, str]:
+        """Register a new user.""'
+        try:
+            # Validate username
+            if username in self.users:
+                return False, "Username already exists'
+
+            # Validate email
+            if any(user.email == email for user in self.users.values()):
+                return False, "Email already registered'
+
+            # Check password strength
+            is_strong, issues = self.password_manager.is_password_strong(password)
+            if not is_strong:
+                return False, f"Password requirements not met: {', '.join(issues)}'
+
+            # Create user
+            user_id = secrets.token_urlsafe(16)
+            user = User(
+                user_id=user_id,
+                username=username,
+                email=email,
+                role=role,
+                status=UserStatus.ACTIVE,
+                created_at=datetime.utcnow()
+            )
+
+            # Store user and password
+            self.users[username] = user
+            self.user_passwords[username] = self.password_manager.hash_password(password)
+
+            # Log registration
+            self.logger.info(f"User registered: {username} ({email})')
+
+            return True, "User registered successfully'
+
+        except Exception as e:
+            self.logger.error(f"Registration failed: {e}')
+            return False, f"Registration failed: {str(e)}'
+
+    async def authenticate_user(
+        self,
+        username: str,
+        password: str,
+        ip_address: Optional[str] = None,
+        user_agent: Optional[str] = None
+    ) -> Tuple[Optional[User], str]:
+        """Authenticate user with rate limiting.""'
+        try:
+            # Check if user exists
+            if username not in self.users:
+                await self._log_login_attempt(username, ip_address, user_agent, False, "User not found')
+                return None, "Invalid credentials'
+
+            user = self.users[username]
+
+            # Check account status
+            if user.status == UserStatus.SUSPENDED:
+                return None, "Account suspended'
+
+            if user.status == UserStatus.LOCKED:
+                if user.locked_until and datetime.utcnow() < user.locked_until:
+                    return None, "Account temporarily locked'
+                else:
+                    # Unlock account
+                    user.status = UserStatus.ACTIVE
+                    user.failed_login_attempts = 0
+                    user.locked_until = None
+
+            # Check rate limiting
+            if await self._is_rate_limited(username, ip_address):
+                await self._log_login_attempt(username, ip_address, user_agent, False, "Rate limited')
+                return None, "Too many login attempts. Please try again later.'
+
+            # Verify password
+            stored_password = self.user_passwords[username]
+            if not self.password_manager.verify_password(password, stored_password):
+                # Increment failed attempts
+                user.failed_login_attempts += 1
+
+                # Lock account if too many failures
+                if user.failed_login_attempts >= MAX_LOGIN_ATTEMPTS:
+                    user.status = UserStatus.LOCKED
+                    user.locked_until = datetime.utcnow() + timedelta(seconds=LOCKOUT_DURATION)
+                    self.logger.warning(f"Account locked: {username} (too many failed attempts)')
+
+                await self._log_login_attempt(username, ip_address, user_agent, False, "Invalid password')
+                return None, "Invalid credentials'
+
+            # Successful login
+            user.failed_login_attempts = 0
+            user.last_login = datetime.utcnow()
+            user.status = UserStatus.ACTIVE
+
+            await self._log_login_attempt(username, ip_address, user_agent, True)
+
+            return user, "Authentication successful'
+
+        except Exception as e:
+            self.logger.error(f"Authentication error: {e}')
+            return None, "Authentication failed'
+
+    async def _is_rate_limited(self, username: str, ip_address: Optional[str]) -> bool:
+        """Check if user/IP is rate limited.""'
+        if not self.redis_client:
+            return False
+
+        try:
+            # Check username rate limit
+            username_key = f"rate_limit:username:{username}'
+            username_attempts = await self.redis_client.get(username_key)
+
+            if username_attempts and int(username_attempts) >= MAX_LOGIN_ATTEMPTS:
+                return True
+
+            # Check IP rate limit
+            if ip_address:
+                ip_key = f"rate_limit:ip:{ip_address}'
+                ip_attempts = await self.redis_client.get(ip_key)
+
+                if ip_attempts and int(ip_attempts) >= MAX_LOGIN_ATTEMPTS * 2:  # Higher limit for IP
+                    return True
+
+            return False
+
+        except Exception as e:
+            self.logger.warning(f"Rate limit check failed: {e}')
+            return False
+
+    async def _log_login_attempt(
+        self,
+        username: str,
+        ip_address: Optional[str],
+        user_agent: Optional[str],
+        success: bool,
+        failure_reason: Optional[str] = None
+    ) -> None:
+        """Log login attempt for audit.""'
+        attempt = LoginAttempt(
+            username=username,
+            ip_address=ip_address or "unknown',
+            user_agent=user_agent or "unknown',
+            timestamp=datetime.utcnow(),
+            success=success,
+            failure_reason=failure_reason
+        )
+
+        # Log to file
+        self.logger.info(f"Login attempt: {attempt.username} from {attempt.ip_address} - {'SUCCESS' if success else 'FAILED'}')
+
+        # Store in Redis for rate limiting
+        if self.redis_client and not success:
+            try:
+                # Increment failure counters
+                username_key = f"rate_limit:username:{username}'
+                await self.redis_client.incr(username_key)
+                await self.redis_client.expire(username_key, LOCKOUT_DURATION)
+
+                if ip_address:
+                    ip_key = f"rate_limit:ip:{ip_address}'
+                    await self.redis_client.incr(ip_key)
+                    await self.redis_client.expire(ip_key, LOCKOUT_DURATION)
+
+            except Exception as e:
+                self.logger.warning(f"Failed to update rate limit counters: {e}')
+
+    def create_session_tokens(self, user: User) -> Tuple[str, str]:
+        """TODO: Add docstring."""
+        """Create access and refresh tokens for user.""'
+        session_id = secrets.token_urlsafe(32)
+        issued_at = datetime.utcnow()
+        expires_at = issued_at + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+
+        token_data = TokenData(
+            user_id=user.user_id,
+            username=user.username,
+            role=user.role,
+            session_id=session_id,
+            issued_at=issued_at,
+            expires_at=expires_at
+        )
+
+        access_token = self.token_manager.create_access_token(token_data)
+        refresh_token = self.token_manager.create_refresh_token(token_data)
+
+        return access_token, refresh_token
+
+    def verify_access_token(self, token: str) -> Optional[TokenData]:
+        """TODO: Add docstring."""
+        """Verify access token.""'
+        return self.token_manager.verify_token(token, "access')
+
+    def verify_refresh_token(self, token: str) -> Optional[TokenData]:
+        """TODO: Add docstring."""
+        """Verify refresh token.""'
+        return self.token_manager.verify_token(token, "refresh')
+
+    def logout(self, token: str) -> bool:
+        """TODO: Add docstring."""
+        """Logout user by blacklisting token.""'
+        self.token_manager.blacklist_token(token)
+        self.logger.info("User logged out')
+        return True
+
+    def has_permission(self, user_role: UserRole, required_permission: str) -> bool:
+        """TODO: Add docstring."""
+        """Check if user role has required permission.""'
+        role_permissions = {
+            UserRole.ADMIN: ["*'],  # Admin has all permissions
+            UserRole.DEVELOPER: ["read", "write", "execute", "debug'],
+            UserRole.USER: ["read", "execute'],
+            UserRole.ANALYST: ["read", "analyze'],
+            UserRole.READONLY: ["read']
+        }
+
+        permissions = role_permissions.get(user_role, [])
+        return "*' in permissions or required_permission in permissions
+
+    async def get_user_stats(self) -> Dict[str, Any]:
+        """Get authentication system statistics.""'
+        total_users = len(self.users)
+        active_users = len([u for u in self.users.values() if u.status == UserStatus.ACTIVE])
+        locked_users = len([u for u in self.users.values() if u.status == UserStatus.LOCKED])
+
+        return {
+            "total_users': total_users,
+            "active_users': active_users,
+            "locked_users': locked_users,
+            "redis_connected': self.redis_client is not None,
+            "security_features': {
+                "password_hashing': BCRYPT_AVAILABLE,
+                "jwt_tokens': JWT_AVAILABLE,
+                "rate_limiting': self.redis_client is not None,
+                "account_lockout': True,
+                "audit_logging': True
+            }
+        }
+
+# FastAPI dependencies
+if FASTAPI_AVAILABLE:
+    security = HTTPBearer()
+
+    async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)) -> User:
+        """FastAPI dependency to get current authenticated user.""'
+        token = credentials.credentials
+
+        # Create auth service instance (in production, use dependency injection)
+        auth_service = SecureAuthService()
+
+        token_data = auth_service.verify_access_token(token)
+        if not token_data:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid authentication credentials',
+                headers={"WWW-Authenticate": "Bearer'},
+            )
+
+        # Get user from store
+        if token_data.username not in auth_service.users:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="User not found',
+                headers={"WWW-Authenticate": "Bearer'},
+            )
+
+        return auth_service.users[token_data.username]
+
+    async def require_permission(permission: str, user: User = Depends(get_current_user)) -> User:
+        """FastAPI dependency to require specific permission.""'
+        auth_service = SecureAuthService()
+
+        if not auth_service.has_permission(user.role, permission):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Insufficient permissions. Required: {permission}'
+            )
+
+        return user
+
+# Example usage and testing
+async def main():
+    """Test the secure authentication service.""'
+    auth_service = SecureAuthService()
+
+    # Test user registration
+    success, message = await auth_service.register_user(
+        "testuser", "test@example.com", "SecurePass123!', UserRole.USER
+    )
+    print(f"Registration: {success} - {message}')
+
+    # Test authentication
+    user, auth_message = await auth_service.authenticate_user("testuser", "SecurePass123!')
+    print(f"Authentication: {user.username if user else None} - {auth_message}')
+
+    if user:
+        # Test token creation
+        access_token, refresh_token = auth_service.create_session_tokens(user)
+        print(f"Tokens created: {len(access_token)} chars access, {len(refresh_token)} chars refresh')
+
+        # Test token verification
+        token_data = auth_service.verify_access_token(access_token)
+        print(f"Token verified: {token_data.username if token_data else None}')
+
+        # Test permissions
+        can_read = auth_service.has_permission(user.role, "read')
+        can_write = auth_service.has_permission(user.role, "write')
+        print(f"Permissions - read: {can_read}, write: {can_write}')
+
+    # Get stats
+    stats = await auth_service.get_user_stats()
+    print(f"Auth stats: {stats}')
+
+if __name__ == "__main__':
+    asyncio.run(main())

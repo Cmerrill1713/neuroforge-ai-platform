@@ -1,0 +1,26 @@
+{
+  "id": "youtube_U6LbW2IFUQw",
+  "title": "This is Hands Down the BEST Way to Build AI Agents",
+  "url": "https://www.youtube.com/watch?v=U6LbW2IFUQw",
+  "description": "This is the ultimate deep dive into building AI agents with Pydantic AI and LangGraph - my two favorite frameworks for building agents that pair extremely well together. In this video, I’ll show you how to create powerful, production-ready AI agent systems that can do virtually anything—even build other AI agents.\n\nForget the overcomplicated abstractions of some frameworks - we're harnessing the simplicity and power of Pydantic AI combined with the flexibility of LangGraph to unlock an infinite number of possibilities.\n\nI’ll also show you an insanely cool related project (Archon, linked below) I’ve been working on a bit behind the scenes that I’m even thinking of turning into a community driven open source initiative soon. I’ve got a lot of big plans that I’m starting to get out there now, so definitely check it out.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Archon, an AI Agent that builds other AI Agents with Pydantic AI and LangGraph here:\n\nhttps://github.com/coleam00/Archon\n\nThis is the agent I'll be building out to teach Pydantic AI and LangGraph!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nLangGraph:\n\nhttps://langchain-ai.github.io/langgraph/\n\nPydantic AI:\n\nhttps://ai.pydantic.dev/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the BEST AI Agent Combo\n01:47 - Pydantic AI - the Best Agent Framework\n03:12 - LangGraph - the Best Agent Orchestration Framework\n04:40 - Example Agentic Workflow\n06:43 - Word of Warning for Overengineering\n08:13 - Introducing Archon - Pydantic AI + LangGraph Agent\n11:03 - Archon V1 - Why We Need Agentic Workflows\n18:45 - Archon V2 - Unveiling Raw Power\n22:55 - Full Archon Build w/ Pydantic AI + LangGraph\n48:38 - Archon Demo\n50:41 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250213",
+  "duration": 3083,
+  "view_count": 159420,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,485 @@
+name: Performance Monitoring
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run performance tests daily at 6 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  performance-baseline:
+    runs-on: ubuntu-latest
+    outputs:
+      performance-results: ${{ steps.performance-test.outputs.results }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-minimal.txt
+          pip install pytest pytest-asyncio pytest-benchmark locust
+
+      - name: Run performance benchmarks
+        id: performance-test
+        run: |
+          echo "🏃 Running comprehensive performance benchmarks..."
+
+          # Create performance test results
+          python -c "
+          import json
+          import time
+          import statistics
+          import sys
+          sys.path.insert(0, 'src')
+
+          results = {
+              'timestamp': time.time(),
+              'tests': []
+          }
+
+          # Test 1: Configuration loading performance
+          print('📊 Testing configuration performance...')
+          start_time = time.time()
+
+          try:
+              from src.core.config.env_config import get_config
+              config = get_config()
+
+              # Test multiple config accesses
+              for i in range(1000):
+                  _ = config.get('OLLAMA_MODEL', 'qwen2.5:7b')
+
+              config_time = time.time() - start_time
+              results['tests'].append({
+                  'name': 'Configuration Loading',
+                  'metric': '1000_accesses_time',
+                  'value': config_time,
+                  'unit': 'seconds',
+                  'status': 'pass' if config_time < 1.0 else 'fail'
+              })
+              print(f'✅ Config loading: {config_time:.4f}s for 1000 accesses')
+
+          except Exception as e:
+              results['tests'].append({
+                  'name': 'Configuration Loading',
+                  'status': 'error',
+                  'error': str(e)
+              })
+              print(f'❌ Config loading failed: {e}')
+
+          # Test 2: Import performance
+          print('📦 Testing import performance...')
+          start_time = time.time()
+
+          try:
+              from src.core.engines.ollama_adapter import OllamaAdapter
+              from src.core.config.env_config import get_config
+
+              import_time = time.time() - start_time
+              results['tests'].append({
+                  'name': 'Core Module Imports',
+                  'metric': 'import_time',
+                  'value': import_time,
+                  'unit': 'seconds',
+                  'status': 'pass' if import_time < 2.0 else 'fail'
+              })
+              print(f'✅ Core imports: {import_time:.4f}s')
+
+          except Exception as e:
+              results['tests'].append({
+                  'name': 'Core Module Imports',
+                  'status': 'error',
+                  'error': str(e)
+              })
+              print(f'❌ Import performance failed: {e}')
+
+          # Test 3: Memory usage baseline
+          print('🧠 Testing memory usage...')
+          try:
+              import psutil
+              import os
+
+              process = psutil.Process(os.getpid())
+              memory_mb = process.memory_info().rss / 1024 / 1024
+
+              results['tests'].append({
+                  'name': 'Memory Usage Baseline',
+                  'metric': 'rss_memory',
+                  'value': memory_mb,
+                  'unit': 'MB',
+                  'status': 'pass' if memory_mb < 500 else 'warn'
+              })
+              print(f'✅ Memory usage: {memory_mb:.2f} MB')
+
+          except Exception as e:
+              print(f'⚠️ Memory test skipped: {e}')
+
+          # Save results
+          with open('performance-baseline.json', 'w') as f:
+              json.dump(results, f, indent=2)
+
+          # Set output
+          print(f'::set-output name=results::{json.dumps(results)}')
+
+          # Print summary
+          passed = sum(1 for t in results['tests'] if t.get('status') == 'pass')
+          failed = sum(1 for t in results['tests'] if t.get('status') == 'fail')
+          errors = sum(1 for t in results['tests'] if t.get('status') == 'error')
+
+          print(f'\\n📈 Performance Test Summary:')
+          print(f'   ✅ Passed: {passed}')
+          print(f'   ❌ Failed: {failed}')
+          print(f'   ⚠️ Errors: {errors}')
+
+          if failed > 0 or errors > 0:
+              sys.exit(1)
+          "
+
+      - name: Upload performance baseline
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-baseline-${{ github.run_id }}
+          path: performance-baseline.json
+
+  api-performance-test:
+    runs-on: ubuntu-latest
+    needs: performance-baseline
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_DB: ai_system
+          POSTGRES_USER: ai_user
+          POSTGRES_PASSWORD: ai_password
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+      redis:
+        image: redis:7-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install locust pytest-asyncio
+
+      - name: Start services
+        run: |
+          # Start backend service
+          python fixed_chat_backend.py &
+          BACKEND_PID=$!
+
+          # Wait for services to be ready
+          echo "Waiting for backend to start..."
+          for i in {1..30}; do
+            if curl -f http://localhost:8004/api/system/health >/dev/null 2>&1; then
+              echo "✅ Backend ready"
+              break
+            fi
+            sleep 2
+          done
+
+          # Store PID for cleanup
+          echo $BACKEND_PID > backend.pid
+
+      - name: Run Locust load test
+        run: |
+          echo "🐛 Running Locust load testing..."
+
+          # Create Locust test file
+          cat > locustfile.py << 'EOF'
+          from locust import HttpUser, task, between
+          import json
+
+          class AIPlatformUser(HttpUser):
+              wait_time = between(1, 3)
+
+              @task(3)
+              def test_chat_endpoint(self):
+                  """Test the main chat endpoint"""
+                  payload = {
+                      "message": "Hello, how are you?",
+                      "max_tokens": 50
+                  }
+                  self.client.post("/api/chat/", json=payload, timeout=30)
+
+              @task(2)
+              def test_health_endpoint(self):
+                  """Test health check endpoint"""
+                  self.client.get("/api/system/health")
+
+              @task(1)
+              def test_rag_search(self):
+                  """Test RAG search endpoint"""
+                  payload = {
+                      "query_text": "test query",
+                      "limit": 5
+                  }
+                  self.client.post("/api/rag/enhanced/search", json=payload, timeout=15)
+
+              @task(1)
+              def test_evolutionary_status(self):
+                  """Test evolutionary optimization status"""
+                  self.client.get("/api/evolutionary/stats", timeout=10)
+          EOF
+
+          # Run Locust test
+          locust --headless --users 10 --spawn-rate 2 --run-time 2m --host http://localhost:8004 --csv results
+
+          # Generate performance report
+          python -c "
+          import csv
+          import json
+          import statistics
+
+          results = {
+              'timestamp': time.time(),
+              'summary': {},
+              'details': []
+          }
+
+          try:
+              # Read Locust results
+              with open('results_stats.csv', 'r') as f:
+                  reader = csv.DictReader(f)
+                  stats = list(reader)
+
+              if stats:
+                  row = stats[0]
+                  results['summary'] = {
+                      'total_requests': int(row.get('Total Request Count', 0)),
+                      'failure_count': int(row.get('Total Failure Count', 0)),
+                      'avg_response_time': float(row.get('Average Response Time', 0)),
+                      'median_response_time': float(row.get('Median Response Time', 0)),
+                      'min_response_time': float(row.get('Min Response Time', 0)),
+                      'max_response_time': float(row.get('Max Response Time', 0)),
+                      'requests_per_second': float(row.get('Requests/s', 0)),
+                      'failure_percentage': float(row.get('Total Failure Count', 0)) / max(1, int(row.get('Total Request Count', 0))) * 100
+                  }
+
+                  print('📊 Load Test Results:')
+                  print(f'   Total Requests: {results[\"summary\"][\"total_requests\"]}')
+                  print(f'   Failures: {results[\"summary\"][\"failure_count\"]} ({results[\"summary\"][\"failure_percentage\"]:.1f}%)')
+                  print(f'   Avg Response Time: {results[\"summary\"][\"avg_response_time\"]:.2f}ms')
+                  print(f'   Requests/sec: {results[\"summary\"][\"requests_per_second\"]:.2f}')
+                  print(f'   P95 Response Time: {results[\"summary\"][\"median_response_time\"]:.2f}ms')
+
+                  # Performance criteria check
+                  if results['summary']['avg_response_time'] < 5000:  # 5 seconds for AI responses
+                      results['summary']['status'] = 'pass'
+                      print('✅ Performance requirements met')
+                  else:
+                      results['summary']['status'] = 'fail'
+                      print('❌ Performance requirements not met')
+              else:
+                  print('⚠️ No performance data collected')
+                  results['summary']['status'] = 'no_data'
+
+          except Exception as e:
+              print(f'❌ Performance analysis failed: {e}')
+              results['summary']['status'] = 'error'
+
+          # Save results
+          with open('api-performance-results.json', 'w') as f:
+              json.dump(results, f, indent=2)
+          "
+
+      - name: Stop services
+        run: |
+          # Stop backend
+          if [ -f backend.pid ]; then
+            kill $(cat backend.pid) 2>/dev/null || true
+            rm backend.pid
+          fi
+
+      - name: Upload API performance results
+        uses: actions/upload-artifact@v3
+        with:
+          name: api-performance-${{ github.run_id }}
+          path: |
+            api-performance-results.json
+            results_*.csv
+
+  performance-regression-check:
+    runs-on: ubuntu-latest
+    needs: [performance-baseline, api-performance-test]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download previous performance results
+        uses: actions/download-artifact@v3
+        with:
+          name: performance-baseline-${{ github.event.before }}
+          path: previous-results/
+        continue-on-error: true
+
+      - name: Compare performance results
+        run: |
+          echo "📈 Comparing performance against previous runs..."
+
+          python -c "
+          import json
+          import os
+          import sys
+
+          comparison = {
+              'timestamp': time.time(),
+              'regression_detected': False,
+              'improvements': [],
+              'regressions': [],
+              'summary': {}
+          }
+
+          try:
+              # Load current results
+              if os.path.exists('performance-baseline.json'):
+                  with open('performance-baseline.json') as f:
+                      current = json.load(f)
+
+              # Load previous results if available
+              previous = None
+              if os.path.exists('previous-results/performance-baseline.json'):
+                  with open('previous-results/performance-baseline.json') as f:
+                      previous = json.load(f)
+
+              if previous and current:
+                  print('🔄 Comparing with previous run...')
+
+                  for current_test in current.get('tests', []):
+                      test_name = current_test['name']
+                      current_value = current_test.get('value')
+
+                      # Find corresponding previous test
+                      prev_test = next((t for t in previous.get('tests', [])
+                                       if t['name'] == test_name), None)
+
+                      if prev_test and current_value and prev_test.get('value'):
+                          prev_value = prev_test['value']
+                          change_percent = ((current_value - prev_value) / prev_value) * 100
+
+                          if abs(change_percent) > 10:  # 10% change threshold
+                              if change_percent > 0:
+                                  comparison['regressions'].append({
+                                      'test': test_name,
+                                      'change': f'+{change_percent:.1f}%',
+                                      'current': current_value,
+                                      'previous': prev_value
+                                  })
+                              else:
+                                  comparison['improvements'].append({
+                                      'test': test_name,
+                                      'change': f'{change_percent:.1f}%',
+                                      'current': current_value,
+                                      'previous': prev_value
+                                  })
+
+                  # Set regression flag
+                  comparison['regression_detected'] = len(comparison['regressions']) > 0
+
+                  print(f'📊 Performance Comparison:')
+                  print(f'   🔺 Regressions: {len(comparison[\"regressions\"])}')
+                  print(f'   📈 Improvements: {len(comparison[\"improvements\"])}')
+
+                  if comparison['regressions']:
+                      print('⚠️ Performance regressions detected:')
+                      for reg in comparison['regressions'][:3]:
+                          print(f'   - {reg[\"test\"]}: {reg[\"change\"]}')
+
+              else:
+                  print('ℹ️ No previous results to compare against')
+
+              # Load API performance if available
+              if os.path.exists('api-performance-results.json'):
+                  with open('api-performance-results.json') as f:
+                      api_perf = json.load(f)
+                      comparison['api_performance'] = api_perf.get('summary', {})
+
+          except Exception as e:
+              print(f'❌ Comparison failed: {e}')
+              comparison['error'] = str(e)
+
+          # Save comparison
+          with open('performance-comparison.json', 'w') as f:
+              json.dump(comparison, f, indent=2)
+
+          # Exit with failure if regressions detected
+          if comparison.get('regression_detected'):
+              print('❌ Performance regression detected!')
+              sys.exit(1)
+          else:
+              print('✅ No performance regressions detected')
+          "
+
+      - name: Create performance issue (if regression detected)
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+
+            let comparison = {};
+            if (fs.existsSync('performance-comparison.json')) {
+              comparison = JSON.parse(fs.readFileSync('performance-comparison.json', 'utf8'));
+            }
+
+            if (comparison.regression_detected) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `⚠️ Performance Regression Detected`,
+                body: `## Performance Regression Alert
+
+                **Regressions Detected:** ${comparison.regressions?.length || 0}
+
+                ### Details:
+                ${comparison.regressions?.slice(0, 5).map(r => `- **${r.test}**: ${r.change} (Current: ${r.current}, Previous: ${r.previous})`).join('\\n') || 'No details available'}
+
+                ### Actions Required:
+                1. Review the performance comparison in workflow artifacts
+                2. Investigate the cause of performance degradation
+                3. Optimize affected components
+                4. Consider reverting recent changes if critical
+
+                **Workflow Run:** ${context.payload.workflow_run?.html_url || 'N/A'}`,
+                labels: ['performance', 'regression', 'urgent']
+              });
+            }
+
+      - name: Upload performance comparison
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-comparison-${{ github.run_id }}
+          path: |
+            performance-comparison.json
+            performance-baseline.json
+            api-performance-results.json

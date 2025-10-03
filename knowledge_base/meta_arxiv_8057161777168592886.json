@@ -1,0 +1,22 @@
+{
+  "id": "meta_arxiv_8057161777168592886",
+  "title": "The Distribution Shift Problem in Transportation Networks using Reinforcement Learning and AI",
+  "description": "The use of Machine Learning (ML) and Artificial Intelligence (AI) in smart transportation networks has increased significantly in the last few years. Among these ML and AI approaches, Reinforcement Learning (RL) has been shown to be a very promising approach by several authors. However, a problem with using Reinforcement Learning in Traffic Signal Control is the reliability of the trained RL agents due to the dynamically changing distribution of the input data with respect to the distribution of the data used for training. This presents a major challenge and a reliability problem for the trained network of AI agents and could have very undesirable and even detrimental consequences if a suitable solution is not found. Several researchers have tried to address this problem using different approaches. In particular, Meta Reinforcement Learning (Meta RL) promises to be an effective solution. In this paper, we evaluate and analyze a state-of-the-art Meta RL approach called MetaLight and show that, while under certain conditions MetaLight can indeed lead to reasonably good results, under some other conditions it might not perform well (with errors of up to 22%), suggesting that Meta RL schemes are often not robust enough and can even pose major reliability problems.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.15291",
+  "authors": "Authors:\nFederico Taschin, \n      \n      Abderrahmane Lazaraq, \n      \n      Ozan K. Tonguz, \n      \n      Inci Ozgunes",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "research",
+    "machine learning"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

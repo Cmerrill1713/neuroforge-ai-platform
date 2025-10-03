@@ -1,0 +1,26 @@
+{
+  "id": "youtube_PxcOIINgiaA",
+  "title": "Make RAG 100x Better with Real-Time Knowledge Graphs",
+  "url": "https://www.youtube.com/watch?v=PxcOIINgiaA",
+  "description": "Retrieval Augmented Generation (RAG) is the standard for giving our documents and data to our AI agents, but it's VERY static. We constantly have to keep our data source in sync with our RAG knowledge base, and that process is inefficient and unreliable.\n\nIn order for RAG to truly keep up, we need a way to build up a knowledge graph that can be as dynamic as our data, business, or platform. The solution for this is Graphiti, an open source platform for building real-time knowledge graphs. With it, I feel like my RAG AI agents are 100x more powerful, especially combined with other RAG strategies I talk about in this video!\n\nGetting started with Graphiti is a piece a cake and I walk you through the whole process in this video, along with a live demo showing how powerful it is.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Graphiti on GitHub here:\n\nhttps://github.com/getzep/graphiti\n\nGraphiti's official documentation:\n\nhttps://help.getzep.com/graphiti/graphiti/overview\n\nAll code I cover in this video for Graphiti is here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/graphiti-agent\n\nThe Local AI Package (includes Neo4j for Graphiti):\n\nhttps://github.com/coleam00/local-ai-packaged\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Graphiti\n01:25 - Graphiti Overview\n04:09 - Graphiti vs. GraphRAG/LightRAG\n05:38 - Graphiti Quickstart\n14:25 - Graphiti Demo\n16:49 - Graphiti AI Agent with Pydantic AI\n20:02 - Live Demo - The True Power of Graphiti\n24:46 - Graphiti and Agentic RAG (+ Other RAG Strategies)\n26:06 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250529",
+  "duration": 1600,
+  "view_count": 89821,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

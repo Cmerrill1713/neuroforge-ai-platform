@@ -1,0 +1,24 @@
+{
+  "id": "youtube_gS5u3j1OXjg",
+  "title": "\"With this prompt, I learned Pytest in 12 minutes\" - Learn ANYTHING with LLMs",
+  "description": "\"Give a man a fish, and you feed him for a day; teach a man to *code* and you feed him for a lifetime.\"\n\nAs an engineer, nothing is more important than your ability to learn. With modern AI tech, ChatGPT and GPT-4, we learn how to learn anything with the Fisherman's Prompt. Use this to learn pytest, rust, solidjs, htmx, and anything that your LLM has knowledge of. With GPT-4's boosted memory to January 2022 you have even more topics available to you. With the explosion of remote work and LLM tech, it's become clear that AI tutors and AI teachers are going to be a critical part of how we learn. Stay sharp, keep learning, and always utilize the best learning methods available to you.\n\n🐟 The Fisherman's Prompt\n\n---\n\nI'm a [your level] [profession] and I want to learn [topic] so I can [objective]. Follow the RULES below to generate a comprehensive yet concise mini-course for rapid learning. The course should contain chapters that teach me about these SUB_TOPICS. Make sure the chapters fit my level, profession and topic. Ask for clarification if you need more information about my knowledge.\n\nSUB_TOPICS\n- [topic 1]\n- [topic 2]\n- [topic 3]\n\nRULES\n- Use concrete examples to explain every concept\n- Use emojis to add expression\n- Generate Generate one chapter at a time\n- Ask for feedback at the end of each chapter\n- Ask if I need clarification at the end of each chapter\n- With each concept, explain real world use cases\n- After we complete every sub topic, present a list of additional topics we can explore that align with my level, profession, topic and objective.\n\n---\n\n\n✅ 3 Instantly Useful Prompt Engineering Techniques\nhttps://youtu.be/PwWvMvZa7zQ\n\n🤖 Hungry For More AI Driven Development?\nhttps://youtu.be/PPR675_JSM8\n\n📖 Do you use Notion to boost your learning potential? Try transforming your pages into personal podcasts for rapid learning.\nhttps://subvolver.com/\n\n🖥 Equipment\n\n- Mac book pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n\nChapters\n\n00:00 Great Engineers Learn How to Learn\n00:32 The Fisherman's Prompt - Learn Anything w/LLMs\n02:00 Example Chapter 1 - Pytest Fundamentals\n05:00 Example Chapter 2 - Pytest Faster Testing\n06:20 Example Chapter 3 - Pytest Advanced Testing\n07:30 Why AI tutors are great - JUDGEMENT FREE ZONE\n08:32 Why Fisherman's Prompt is Great - Flexible Learning\n10:00 Push it to the Limit\n10:50 Learning Before and After LLMs\n11:38 Software Engineering is about Change & Learning\n12:10 Stay Sharp, Keep Learning\n\n#️⃣ Hashtags\n#promptengineering #metalearning #pytest",
+  "url": "https://www.youtube.com/watch?v=gS5u3j1OXjg",
+  "upload_date": "20230925",
+  "duration": 761,
+  "view_count": 5005,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "software engineering",
+    "api"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "ec977b1b4b09e4c6f3ccffdfd0715fe0"
+}

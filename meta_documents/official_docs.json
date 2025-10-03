@@ -1,0 +1,37 @@
+[
+  {
+    "metadata": {
+      "url": "https://pytorch.org/docs/",
+      "title": "Page Redirection",
+      "category": "official_docs",
+      "source_type": "pytorch",
+      "scraped_at": "2025-09-28T18:06:32.216091",
+      "word_count": 30,
+      "status": "success"
+    },
+    "content": "Page Redirection\nIf you are not redirected automatically, follow this\nlink to the latest documentation\n.\nIf you want to view documentation for a particular version, follow this\nlink\n.",
+    "raw_html": "<!DOCTYPE HTML>\n\n<html lang=\"en-US\">\n<head>\n<meta charset=\"utf-8\"/>\n<meta content=\"1; url=/docs/stable/index.html\" http-equiv=\"refresh\"/>\n<script type=\"text/javascript\">\n      window.location.href = \"/docs/stable/index.html\"\n    </script>\n<title>Page Redirection</title>\n</head>\n<body>\n<!-- Google Tag Manager (noscript) -->\n<noscript><iframe height=\"0\" src=\"https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS\" style=\"display:none;visibility:hidden\" width=\"0\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n\n    If you are not redirected automatically, follow this <a href=\"/docs/stable/index.html\">link to the latest documentation</a>.\n    <br/>\n    If you want to view documentation for a particular version, follow this <a href=\"versions.html\">link</a>.\n  </body>\n</html>\n"
+  },
+  {
+    "metadata": {
+      "url": "https://ai.meta.com/",
+      "title": "Error 400",
+      "category": "official_docs",
+      "status": "error",
+      "error": "HTTP 400"
+    },
+    "content": "",
+    "raw_html": ""
+  },
+  {
+    "metadata": {
+      "url": "https://research.facebook.com/",
+      "title": "Error 400",
+      "category": "official_docs",
+      "status": "error",
+      "error": "HTTP 400"
+    },
+    "content": "",
+    "raw_html": ""
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "id": "youtube_pytSbBRoFw8",
+  "title": "My Framework for LLM Use Cases and AI Tooling (With Phi-4, Gemini 2.0, Llama 3.3)",
+  "description": "This framework will SIMPLIFY how you USE LLMs and AI tooling FOREVER!\n\n🎥 Featured Media:\n- PHI 4: https://techcommunity.microsoft.com/blog/aiplatformblog/introducing-phi-4-microsoft's-newest-small-language-model-specializing-in-comple/4357090\n- PHI 4 OLLAMA: https://ollama.com/vanilj/Phi-4\n- LLAMA 3.3: https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/\n- GEMINI 2.0 FLASH: https://ai.google.dev/gemini-api/docs/models/gemini#gemini-2.0-flash\n\nWith the explosive growth in new Generative AI models like Phi-4, Gemini 2.0 Flash, and Llama 3.3, it's crucial to have a framework for understanding and implementing LLM use cases effectively. This video breaks down the essential categories that will accelerate your approach to engineering in the Generative AI age.\n\n🚀 Discover the six fundamental categories of LLM use cases:\n- Expansion: Generate content and ideas\n- Compression: Summarize and distill information\n- Conversion: Transform between formats\n- Seeker: Extract specific information\n- Action: Execute real-world commands\n- Reasoning: Make decisions and provide insights\n\n🔍 Why This Framework Matters:\n- Simplifies decision-making in AI development\n- Helps select the right tools for specific use cases\n- Creates reusable benchmarks\n- Guides agentic design and workflow creation\n\n💡 Whether you're building AI agents, developing applications, or exploring new LLM capabilities, this framework will help you move faster and make better decisions in the rapidly evolving AI landscape.\n\n🎯 Watch as we demonstrate real examples using the latest models:\n- See Phi-4's impressive 14B parameter performance\n- Experience Gemini 2.0 Flash's lightning speed\n- Explore Llama 3.3's powerful capabilities\n\nDon't miss out on this game-changing framework that's helping developers and engineers build more effective AI solutions. Like and subscribe for more insights into AI development, prompt engineering, and agentic workflows.\n\nStay Focused and Keep Building\n\n📖 Chapters\n00:00 Gemini 2.0 Flash, Phi-4, Llama 3.3\n01:36 LLM Use Case Framework\n03:40 Who cares? Why use frameworks?\n05:25 Expand, Compress, Convert, Seek, Act, Reason\n14:58 Takeaways - Categorize for simplicity\n\n#llm #ai #promptengineering",
+  "url": "https://www.youtube.com/watch?v=pytSbBRoFw8",
+  "upload_date": "20241216",
+  "duration": 1148,
+  "view_count": 31215,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d3124a38edcba00db55de24ceccfd8a5"
+}

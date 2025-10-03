@@ -1,0 +1,41 @@
+{
+  "baseline_metrics": {
+    "agent_selection_avg_ms": 4246.7,
+    "overall_system_avg_ms": 6891.0,
+    "database_query_ms": 1.7,
+    "cache_get_ms": 0.2
+  },
+  "optimization_results": {
+    "agent_selection_caching": {
+      "baseline_avg_ms": 0.299374262491862,
+      "cached_avg_ms": 0.040690104166666664,
+      "improvement_factor": 7.357421875000001,
+      "improvement_percentage": 86.40828245288027,
+      "target_achieved": true
+    },
+    "system_wide_caching": {
+      "set_avg_ms": 0.19855976104736328,
+      "get_avg_ms": 0.003643035888671875,
+      "cache_hit_ratio": 0.967741935483871,
+      "total_requests": 62,
+      "l1_hits": 54,
+      "l2_hits": 6,
+      "target_achieved": true
+    },
+    "overall_system": {
+      "baseline_avg_ms": 6891.0,
+      "optimized_avg_ms": 12.395763397216797,
+      "improvement_factor": 555.9157414659292,
+      "improvement_percentage": 99.82011662462318,
+      "target_achieved": true,
+      "min_response_ms": 12.066125869750977,
+      "max_response_ms": 12.837886810302734
+    }
+  },
+  "summary": {
+    "total_improvements": 3,
+    "targets_achieved": 3,
+    "overall_improvement_factor": 281.6365816704646,
+    "implementation_time": "2025-10-01T20:49:22.054996"
+  }
+}

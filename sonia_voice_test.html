@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonia Voice Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .voice-select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+        .text-input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; min-height: 100px; }
+        .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .btn:hover { background: #0056b3; }
+        .btn:disabled { background: #ccc; cursor: not-allowed; }
+        .status { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .audio-player { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Sonia Voice Test</h1>
+        <p>Test the Sonia voice integration directly in your browser!</p>
+        
+        <div>
+            <label for="voice">Select Voice:</label>
+            <select id="voice" class="voice-select">
+                <option value="sonia_clean">Sonia Clean - Smooth British female voice</option>
+                <option value="assistant">Assistant - Friendly assistant voice</option>
+                <option value="sultry">Sultry - Sultry feminine voice</option>
+                <option value="seductive">Seductive - Seductive feminine voice</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="text">Text to speak:</label>
+            <textarea id="text" class="text-input" placeholder="Enter text for Sonia to speak...">Hello! This is Sonia speaking. I'm your AI assistant with a smooth British accent. How can I help you today?</textarea>
+        </div>
+        
+        <button id="speakBtn" class="btn">🎵 Speak with Sonia</button>
+        
+        <div id="status"></div>
+        <div id="audioPlayer" class="audio-player"></div>
+    </div>
+
+    <script>
+        const voiceSelect = document.getElementById('voice');
+        const textInput = document.getElementById('text');
+        const speakBtn = document.getElementById('speakBtn');
+        const statusDiv = document.getElementById('status');
+        const audioPlayerDiv = document.getElementById('audioPlayer');
+
+        function showStatus(message, type = 'success') {
+            statusDiv.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+
+        async function synthesizeSpeech() {
+            const text = textInput.value.trim();
+            const voice = voiceSelect.value;
+            
+            if (!text) {
+                showStatus('Please enter some text to speak!', 'error');
+                return;
+            }
+
+            speakBtn.disabled = true;
+            speakBtn.textContent = '🔄 Generating...';
+            showStatus('Generating speech with Sonia...');
+
+            try {
+                const response = await fetch('/api/voice/synthesize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: text,
+                        voice: voice
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showStatus(`✅ Success! Generated with ${data.engine} engine`);
+                    
+                    // Play the audio file
+                    if (data.audio_file) {
+                        const audio = new Audio(`/${data.audio_file}`);
+                        audioPlayerDiv.innerHTML = `
+                            <h3>🎵 Generated Audio:</h3>
+                            <audio controls>
+                                <source src="/${data.audio_file}" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p><strong>File:</strong> ${data.audio_file}</p>
+                            <p><strong>Engine:</strong> ${data.engine}</p>
+                            <p><strong>Voice:</strong> ${data.voice}</p>
+                        `;
+                        
+                        // Auto-play the audio
+                        audio.play().catch(e => console.log('Auto-play prevented:', e));
+                    }
+                } else {
+                    showStatus(`❌ Error: ${data.error}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`❌ Network error: ${error.message}`, 'error');
+            } finally {
+                speakBtn.disabled = false;
+                speakBtn.textContent = '🎵 Speak with Sonia';
+            }
+        }
+
+        speakBtn.addEventListener('click', synthesizeSpeech);
+        
+        // Load available voices on page load
+        async function loadVoices() {
+            try {
+                const response = await fetch('/api/voice/options');
+                const data = await response.json();
+                
+                voiceSelect.innerHTML = '';
+                data.voices.forEach(voice => {
+                    const option = document.createElement('option');
+                    option.value = voice.id;
+                    option.textContent = `${voice.name} - ${voice.description}`;
+                    voiceSelect.appendChild(option);
+                });
+                
+                // Set default to Sonia
+                voiceSelect.value = 'sonia_clean';
+                showStatus('✅ Voices loaded successfully! Sonia is ready.');
+            } catch (error) {
+                showStatus('⚠️ Could not load voices, using defaults', 'error');
+            }
+        }
+
+        loadVoices();
+    </script>
+</body>
+</html>

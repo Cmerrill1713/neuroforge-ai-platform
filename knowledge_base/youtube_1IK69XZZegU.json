@@ -1,0 +1,25 @@
+{
+  "id": "youtube_1IK69XZZegU",
+  "title": "AI Coding Devlog - Aider ON Sonnet 3.5 - CURATE your ELITE information DIET",
+  "description": "Want to ESCAPE the ENDLESS scroll and CURATE a TOP TIER information diet? \n\nIn this AI coding devlog, we're building \"Zero Noise,\" an agentic workflow that filters content for you using the power of AI!\n\n🚀 We'll be using Aider AI with the powerful Sonnet 3.5 model to code a tool that scrapes your favorite websites, blogs and changelogs and alerts QUITELY Notifies you to new and relevant updates.\n\n🔥 Learn how to:\n- Leverage AI coding assistants for faster, more efficient software engineering.\n- Implement agentic workflows to automate tasks and boost productivity.\n- Craft effective prompts and prompt chains to get the most out of Sonnet 3.5.\n- Build a personalized content curation system to filter out the noise.\n\n💡 This video covers key concepts like:\n- Live showing of AI coding best practices and techniques.\n- Aider AI setup and usage for AI-powered development.\n- Agentic engineering structures for building intelligent systems.\n- Prompt engineering in markdown format for optimal AI interaction and readability.\n\nDon't waste time sifting through irrelevant information. \n\nLike - Sub - Join the journey as we become Agentic Engineers.\n\n🔗 Resources\n- Part 3 - Auto Updating Blog - https://youtu.be/F0eOYrA6ggY\n- Part 2 - Prompt Chains - https://youtu.be/UOcYsrnSNok\n- Part 1 - Master the prompt - https://youtu.be/4hSFcjspGOw\n- Start Coding With AI: https://aider.chat\n\n📖 Chapters\n00:00 AI Coding a Zero Noise Info Curation Tool\n01:19 Reviewing scraping and streamlit\n02:05 Using Aider and Sonnet 3.5\n04:01 Importance of Curating Information\n07:37 Prompting Agentics Prompt Chains (lol)\n10:30 Markdown Prompt Chains\n13:35 Aider generates Pydantic Models from JSON\n19:17 Detecting Changes in Content\n20:27 SUCCESS - Updates detected\n21:00 Act Step in the Agentic Workflow\n22:34 Running the Workflow\n23:35 Adding Aider blog json with Aider",
+  "url": "https://www.youtube.com/watch?v=1IK69XZZegU",
+  "upload_date": "20240708",
+  "duration": 1603,
+  "view_count": 14975,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "software engineering",
+    "api"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "fcb6ff602f06a43d363922427099801a"
+}

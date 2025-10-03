@@ -1,0 +1,26 @@
+{
+  "id": "youtube__R-ff4ZMLC8",
+  "title": "The Future of RAG is Agentic - Learn this Strategy NOW",
+  "url": "https://www.youtube.com/watch?v=_R-ff4ZMLC8",
+  "description": "Buckle up - HUGE amount of value in this video for building RAG AI Agents that actually work. Honestly I could have made this video into an entire course but I wanted to give it away to you for free. :)\n\nRAG is the most common approach for providing external knowledge to an LLM. The problem is, once you have your own curated data in a vector database as a knowledgebase for your LLM, often times these RAG setups can be very underwhelming. The wrong text is returned from the search, the LLM ignores the context provided, etc. The logic of RAG makes sense in your head but it just doesn’t work in practice.\n\nAnd you certainly aren’t alone! That’s why there is a TON of research in the industry for how to essentially just do RAG better. There are a lot of strategies out there, but out of all the ones I’ve researched and tried myself, agentic RAG is the most obvious, works the best, and is what I’m going to introduce you to and show you exactly how to implement in this video.\n\nIn the last video on my channel, I showed you how to use Crawl4AI, an open source LLM-friendly web crawler, to scrape entire websites for RAG SUPER fast. We used the entire documentation for my favorite agent framework, Pydantic AI, as an example. Now we’re taking this MUCH further by:\n\n1. Putting all the documentation in a database for RAG\n2. Creating an agentic RAG agent to use this knowledgebase with Pydantic AI\n3. Building a frontend to chat with our agent using Streamlit\n\nI’ll explain exactly what Agentic RAG is, what makes it so powerful, and then this AI agent we’ll build in the video will be the perfect example!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nTry GPUStack for free - it's open source and you can find their GitHub repo here:\n\nhttps://github.com/gpustack/gpustack\n\nI don't have the pleasure of being sponsored by open source projects often, so this was a treat! It's the best GPU cluster manager for LLM inference that I have seen and a very honest recommendation! Here is their main site as well:\n\nhttps://gpustack.ai/\n\nKey features of GPUStack: \n\n1. Heterogeneous GPU cluster management including Linux, Mac and Windows with Nvidia, and Apple Silicon. AMD coming soon!\n\n2. Distributed inference with smart scheduling: GPUStack can distribute a big model to multiple heterogeneous workers. Automatically calculates and decide whether distributed inference is required and configure it automatically.\n\n3. Rich model types support: GPUStack supports LLM, VLM, Image Generation, Embedding, Rerank, TTS&STT models.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nPrevious video with Crawl4AI:\n\nhttps://youtu.be/JWfNLF_g_V0\n\nAll code for this Agentic RAG Agent can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/crawl4AI-agent\n\nTry this agent yourself right now on the Live Agent Studio (called the \"Pydantic AI Expert\")!\n\nhttps://studio.ottomator.ai\n\nDiagram to follow along with the knowledgebase creation flow:\n\nhttps://claude.site/artifacts/f4dca1c3-f137-4b82-9254-dfa01ca43802\n\nWeaviate Article on Agentic RAG:\n\nhttps://weaviate.io/blog/what-is-agentic-rag\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Agentic RAG - the Holy Grail of RAG\n02:18 - What is Agentic RAG?\n06:22 - Breaking our Agent Down Step by Step\n08:33 - Try this Agent Now for Free\n09:00 - Code Overview\n09:58 - Crawl4AI Review\n10:52 - Creating Our Knowledgebase for Supabase\n21:38 - GPUStack\n23:33 - Supabase Setup\n26:08 - Getting Crawl4AI Data into Supabase\n28:09 - Basic RAG AI Agent with Pydantic AI\n33:44 - Testing our Basic RAG Agent\n36:33 - Agentic RAG Implementation\n40:40 - Demo of Our Agentic RAG Agent\n41:37 - Streamlit UI\n44:53 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20250116",
+  "duration": 2748,
+  "view_count": 128216,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

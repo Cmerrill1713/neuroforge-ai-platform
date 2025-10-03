@@ -1,0 +1,24 @@
+{
+  "id": "youtube_XojxD7hfaD4",
+  "title": "5 Agent PATTERNS to SIMPLIFY Your Agentic Coding (Claude Code, Gemini CLI, MCP)",
+  "description": "Agents aren’t \"coming\" — they’re already eating your backlog. If you’re still duct-taping one-off prompts, you’re burning compute and time. ⚠️🔥 Let’s pick the right agent patterns, scale smart, and win week by week with agentic coding.  \n\n🎥 VIDEO REFERENCES\n\nPRINCIPLED AI CODING: https://agenticengineer.com/principled-ai-coding?y=XojxD7hfaD4\n\nCLAUDE CODE SUB AGENTS BREAKDOWN: https://youtu.be/7B2HJr0Y68g\n\nIn this video, IndyDevDan lays out 5 battle-tested agent patterns that simplify agentic coding across Claude Code, gemini cli, and your mcp server stack — plus a bonus \"Application Pattern\" when you need full control. You’ll see how to choose the smallest pattern that solves the problem now, then scale only when the workload demands it. From rapid, iterative human-in-the-loop to reusable prompts, sub-agents, prompt-to-sub-agent orchestration, and wrapper mcp server design, you’ll know exactly when to use which pattern for maximum leverage in ai coding.\n\nWhat you’ll learn\n- The 5 core agent patterns that actually ship: Iterative Human-in-the-Loop, Reusable Prompts, Sub-Agents, Prompt→Sub-Agent, Wrapper MCP Server (plus bonus Application Pattern)\n- How to avoid lock-in while still exploiting claude code advantages with sub-agents and reusable prompts\n- When gemini cli reusable prompts beat ad hoc prompting for repeatable outcomes\n- How a wrapper mcp server becomes your clean interface layer across APIs/CLIs/tools\n- Scaling rules of thumb: specialize, parallelize, then codify\n- Real-world use case: generate and refine images fast with claude code + qwen image edit via mcp server workflows\n\nWhy this matters\n- Agent patterns are your productivity multiplier for ai coding\n- Reusability and specialization reduce context thrash and debugging time\n- Deterministic wrapper layers make your agents reliable, testable, and team-ready\n\nWho this is for\n- Engineers building with claude code, gemini cli, and custom mcp server tools\n- Teams moving from prompts to agent patterns that scale\n- Builders who want practical, low-friction agentic coding that ships outcomes\n\nPro tips\n- Start simple, scale when needed. Complexity should be earned, not assumed.\n- Use sub-agents only when you need specialization + parallelization.\n- Wrap multi-service workflows behind a single, clean mcp server interface with slash-command prompts.\n- Keep a library of reusable prompts per repo to accelerate agent patterns across projects.\n\nCall to action\n- Comment your go-to agent patterns and where you’re using claude code, gemini cli, or a wrapper mcp server\n- Like/subscribe for more hands-on agentic coding from IndyDevDan\n\n📖 Chapters\n00:00 The Best Tool For The Job\n01:08 The Agent Pattern Problem\n03:54 Iterative Human in the Loop\n05:01 Reusable Prompts\n06:43 Sub-Agents Pattern\n09:25 Prompt to Sub-Agent Pattern\n12:01 Wrapper MCP Server Pattern\n16:18 Application Pattern\n17:50 Agent Pattern Decision Framework\n\n#agenticcoding #claudecode #aicoding",
+  "url": "https://www.youtube.com/watch?v=XojxD7hfaD4",
+  "upload_date": "20250825",
+  "duration": 1776,
+  "view_count": 20946,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "9b241c6f6f1173c0c074111050210989"
+}

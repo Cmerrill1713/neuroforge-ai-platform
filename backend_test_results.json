@@ -1,0 +1,20 @@
+{
+  "main_backend": {
+    "status": "healthy",
+    "endpoints_tested": 5
+  },
+  "frontend_integration": {
+    "status": "healthy",
+    "frontend_accessible": true
+  },
+  "autonomous_features": {
+    "status": "healthy",
+    "autonomous_features_tested": 3
+  },
+  "websocket_tests": {
+    "status": "not_implemented",
+    "note": "WebSocket endpoints not currently implemented"
+  },
+  "overall_status": "excellent",
+  "test_duration": 0.15
+}

@@ -1,0 +1,27 @@
+{
+  "id": "youtube_QlUt06XLbJE",
+  "title": "SECRET SAUCE of AI Coding? AI Devlog with Aider, Cursor, Bun and Notion",
+  "description": "What's the secret sauce of HIGH OUTPUT AI Coding?\n\n🔗 More AI Coding with AIDER\nhttps://youtu.be/ag-KxYS8Vuw\n\n🚀 More AI Coding with Cursor\nhttps://youtu.be/V9_RzjqCXP8\n\nIn this video, we showcase the power of the best AI coding assistants, Aider and Cursor. We use them TOGETHER. Whether you're a seasoned engineer or just starting out, this video is packed with insights and techniques to help you ship more code in less time with AI Coding Assistants.\n\n🔧 What You'll Learn:\n- AI Coding Assistants: Discover how Aider and Cursor can handle the heavy lifting for you in a new Bun codebase.\n- Boost Productivity: Learn the secret sauce of AI coding that can significantly enhance your engineering productivity.\n- Configuration Mastery: Get up and running with Aider across codebases using its dot configuration YAML file.\n- TypeScript Tips: Explore efficient ways to manage your TypeScript types and improve your codebase structure.\n- Notion API Integration: Watch as we set up a Notion API wrapper class to run CRUD operations on Notion pages.\n\n💡 Key Highlights:\n- Prompt Caching & Auto Tests: Enable Sonnet 3.5 prompt caching and auto test flags to streamline your coding process.\n- Conventions File: Utilize conventions to guide your AI coding assistant in writing consistent and high-quality code.\n- Multi-File Prompts: Leverage Aider's ability to update multiple files simultaneously, ensuring your code is always validated and error-free.\n- Real-Time Fixes: See how Aider automatically detects and fixes errors, reducing cognitive load and allowing you to focus on the bigger picture.\n\n🔥 Why Watch?\n- AI Coding Efficiency: Experience the future of coding with AI, where tools like Aider and Cursor enable you to think less about individual lines of code and more about the overall architecture and design.\n- Practical Demonstrations: Follow along as we walk through real coding challenges, showcasing the seamless integration of AI coding assistants into your projects.\n- Comprehensive Insights: Gain valuable knowledge on how to use AI tools to their maximum potential, preparing you for the next leap in AI capabilities.\n\n🌟 Stay Ahead of the Curve:\n- Like and Subscribe: Don't miss out on more insights and tutorials on AI coding, engineering productivity, and the latest in AI technology.\n\n📖 Chapters\n00:00 Action Packed AI Coding Devlog\n01:04 Configuring Aider for Optimal AI Coding\n02:03 Conventions File: Guiding AI Code Generation\n02:30 Setting Up the Project Structure\n05:12 First Aider Prompt - setup bun main\n06:10 Creating the Notion Wrapper Class\n07:15 Auto testing with Aider\n9:55 Building a CLI Application with Commander\n11:13 AI Coding ADD, Delete notion block\n13:50 SECRET SAUCE of AI Coding\n15:20 Automatic test resolution with Aider\n20:15 Multi-file prompting - Get page blocks function\n22:17 AI Coding pattern - Documentation as context\n25:25 Improving notion blocks - recursion\n29:26 Not Aider vs Cursor - Aider AND Cursor\n33:52 Use many GenAI Tools not one - think top three\n35:12 Reflections on AI Coding and Future Course Announcement\n\n#aicoding #aiprogramming #coding",
+  "url": "https://www.youtube.com/watch?v=QlUt06XLbJE",
+  "upload_date": "20240909",
+  "duration": 2196,
+  "view_count": 37292,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "typescript",
+    "ai",
+    "tutorial",
+    "coding",
+    "programming",
+    "api"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d9d07d66c358b90308e134e8cad749a7"
+}

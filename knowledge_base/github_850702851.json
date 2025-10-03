@@ -1,0 +1,24 @@
+{
+  "id": "github_850702851",
+  "title": "mermaid-js-ai-agent",
+  "description": "Communicate your work with diagrams in seconds with GenAI + Mermaid",
+  "url": "https://github.com/disler/mermaid-js-ai-agent",
+  "language": "Python",
+  "stars": 162,
+  "forks": 22,
+  "created_at": "2024-09-01T14:43:57Z",
+  "updated_at": "2025-09-27T16:20:46Z",
+  "topics": [],
+  "readme_content": "# Mermaid Diagram AI Agent\n> Communicate your work with diagrams in seconds with GenAI + Mermaid\n\n![Command Diagram](./imgs/mermaid_ai_agent.png)\n\n## Setup\n> Image generated WITH this tool!\n![Setup](./imgs/setup.png)\n\n- Install [uv](https://docs.astral.sh/uv/getting-started/installation/)\n- Install dependencies `uv sync`\n- Set your OpenAI API key as an environment variable `export OPENAI_API_KEY=<your_api_key>`\n- Optionally setup \n  - Optionally set ANTHROPIC_API_KEY, VERTEX_API_KEY, GROQ_API_KEY as environment variables. See `.env.sample` for details.\n    - Update your LLM in the `src/mermaid_agent/modules/llm_module.py: build_model()` function.\n- ✅ To run a single generation: \n  - `uv run main mer -p \"Flowchart of ##setup instructions\" -o \"setup_diagram.png\" -i \"./README.md\"`\n  - `uv run main mer -p \"state diagram of process: build prompt, generate HQ examples, iterate, build dataset, fine-tune, test, iterate, prompt \" -o \"fine_tune_process.png\"`\n  - `uv run main mer -p \"pie chart title: 'Time Spent on Project Tasks', 'Coding': 40, 'Testing': 20, 'Documentation': 20, 'Meetings': 15, 'Learn AI Coding w/IndyDevDan': 5\" -o \"project_time_allocation.png\"`\n- ✅ To run an interactive generation:\n  - `uv run main mer-iter -p \"Flowchart of ##setup instructions\" -o \"setup_diagram.png\" -i \"./README.md\"` \n- ✅ To run a bulk-version based iteration\n  - `uv run main mer-bulk -p \"Flowchart of ##setup instructions\" -o \"setup_diagram.png\" -i \"./README.md\" -c 5` \n  - `uv run main mer-bulk -p \"pie chart title: 'Time Spent on Project Tasks', 'Coding', 'Testing', 'Documentation', 'Meetings', 'Learn AI Coding w/IndyDevDan'\" -o \"project_time_allocation.png\" -c 5`\n\n## Learn AI Coding\n- Watch us code the [mer-bulk command with AIDER](https://youtu.be/ag-KxYS8Vuw)\n\n## Next\n- [] every output/ session id directory for image \n- [] log the mermaid chart text to a /output file\n- [] multiple input files for improved context\n- [] params for size and theme?\n- [] integration into idt?\n\n\n## Resources\n- https://gist.github.com/disler/d51d7e37c3e5f8d277d8e0a71f4a1d2e\n- https://mermaid.ink/\n- https://www.makotemplates.org/\n- https://github.com/simonw/llm\n- https://pypi.org/project/Mako/\n- https://docs.astral.sh/uv/getting-started/features/#python-versions\n- https://mermaid.js.org\n- https://mermaid.js.org/syntax/examples.html\n- https://ai.google.dev/api/models#models_list-shell",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [
+    "ai"
+  ],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

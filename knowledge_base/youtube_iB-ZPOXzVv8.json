@@ -1,0 +1,23 @@
+{
+  "id": "youtube_iB-ZPOXzVv8",
+  "title": "Why Use LangChain? A Blunt Overview for Advanced Engineers",
+  "description": "Hey coders, in this video we explore LangChain, a comprehensive suite of tools designed for developing applications powered by advanced language models. In this unbiased review, we'll break down the key features, strengths, and weaknesses of LangChain to help you make an informed decision on whether it's the right choice for your projects. \n\nBy the end, you'll have a clear understanding of why LangChain may or may not be the ideal choice for your engineering needs. Subscribe for more in-depth AI tool deep dives, insights and evaluations.\n\n💻 If you're interested in the codebase let me know, I can push the repo I used to help you jump into different LangChain use cases.\n\n🦜⛓ Langchain docs:\n\nhttps://python.langchain.com/en/latest/index.html# \n\n1️⃣ How Top Engineers Will Dominate The GPT-X Era: \n\nhttps://youtu.be/d2SEfmqT__4\n\n✅ Use Notion? Love Being Productive? Convert your Notion pages to Personal Audio Books:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=whyuselangchain\n\n📖 Chapters\n00:00 Video Breakdown\n00:59 Models\n05:49 Prompts\n07:24 Indexes\n13:30 Chains\n17:30 Memory\n20:25 Agents\n25:00 Should You Use LangChain?\n\nHashtags\n#engineering #python #chatgpt",
+  "url": "https://www.youtube.com/watch?v=iB-ZPOXzVv8",
+  "upload_date": "20230501",
+  "duration": 1868,
+  "view_count": 2545,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "106724de66b9bb2e19d549fc9ecf9366"
+}

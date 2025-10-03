@@ -1,0 +1,33 @@
+{
+  "id": "youtube_7EA19-D4-Zo",
+  "title": "Copilot Prompt Engineering: 3 UI Frameworks, 2 AI Agents, 1 Coding Assistant (AIDER CCC)",
+  "description": "Code like you're in the future. This is the best way to progress your engineering abilities at a rapid pace. In groundbreaking video, we delve into pair programming assistant AIDER, an AI-driven coding assistant that, with a new technique, can transform the way we approach software development. I've been using this technique and AIDER to write code and ship features faster than ever before. Thanks to the latest GPT-4 Turbo model, AIDER is reshaping our programming capabilities. Our focus? Building vital front-end components for a Postgres data analytics tool. But here's the catch – we're not just coding; we're prompting code into existence using a technique I've honed called TRIPLE C (CCC). This intuitive, in editor, in terminal approach leverages the power of LLMs and prompt engineering, allowing us to generate complex code through natural language.\n\nWe'll see firsthand how AI co-pilots, powered by the latest GPT-4 model, have become incredibly efficient and accurate. To showcase this, we're building the UI in three different frameworks – one of which I've never used before. This isn't just about coding; it's about AI Engineering our way to a minimal viable product for a data analytics frontend. Through 'Comment Copilot Coding', you write the comments, and AIDER fills in the code. It's a perfect blend of simple in editor, in context natual language prompting and AI efficiency. This video isn't just a tutorial; it's a glimpse into the future of software development, where natural language becomes the ultimate programming language. We'll open multiple terminals, run AIDER simultaneously, and utilize our multi-agent Postgres data analytics tool behind a simple python flask API to generate SQL and SQL results directly from our new UIs. Dive into the realm of multi-agent coding, demonstrating that with tools like AIDER and the expansive capabilities of GPT-4 Turbo, the real question shifts from: \"what can I build?\" to \"How quickly can I build\". Let's push the boundaries of AI in software engineering as we take one more step toward agentic engineering.\n\nAider Prompt: \"Read the comments and wherever you see 'code:' generate the request. Keep all code generation in the component.\"\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v8-ccc-ai-engineering-with-aider\n\n🔥 TALK TO YOUR DATABASE\nhttps://talktoyourdatabase.com\n\n🤖💻 AI Engineering Resources\nAider: https://aider.chat/\nVite: https://vitejs.dev/guide/#scaffolding-your-first-vite-project\nBun: https://bun.sh/\nFlask: https://flask.palletsprojects.com/en/3.0.x/\nVercel Flask: https://vercel.com/new/templates/python/flask-hello-world\n\n(1) Watch Part One\nhttps://youtu.be/jmDMusirPKA\n\n(2) Watch Part Two\nhttps://youtu.be/JjVvYDPVrAQ\n    \n(3) Watch Part Three\nhttps://youtu.be/4o8tymMQ5GM\n\n(4) Watch Part Four\nhttps://youtu.be/CKo-czvxFkY\n\n(5) Watch Part Five\nhttps://youtu.be/UA6IVMDPuC8\n\n(6) Watch Part Six\nhttps://youtu.be/XGCWyfA3rgQ\n\n(7) Watch Part Seven\nhttps://youtu.be/KwcrjP3vuy0\n\n📘 Chapters\n00:00 We're not typing this code\n00:57 Vite, Bun, Aider\n01:27 CCC\n03:02 All Roads Lead To AIDER\n04:27 Vue, Svelte, React\n05:15 I've never used Svelte\n06:07 It's not perfect but it's fast and close\n06:31 Integrate our Postgres Data Analytics Tool\n07:57 Hit the API without coding\n10:20 GPT-4 Turbo, AIDER, Multi-Agent Results (LETS GO)\n12:42 Kind of annoying but easily fixable\n13:23 Svelte Reactivity Issue - One Prompt Fix\n14:33 React Issue - Quick Fix - Sweet Results\n16:17 Let's push this further - Local Storage Prompt\n17:37 Vue, Svete, React - Local Storage Prompt\n19:28 Use CCC to build applications faster\n19:57 Add this to your toolbox\n20:30 What's next?\n21:01 Bro what about low code and no code?\n21:56 TTYDB - Talk To Your Database - From Scratch\n22:27 LLMs are changing the way we code\n22:41 Stay on the edge of AI Engineering\n\n🐛 tags\n#promptengineering #aider #copilot",
+  "url": "https://www.youtube.com/watch?v=7EA19-D4-Zo",
+  "upload_date": "20231120",
+  "duration": 1406,
+  "view_count": 9751,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "react",
+    "ai",
+    "tutorial",
+    "coding",
+    "programming",
+    "software engineering",
+    "api",
+    "database",
+    "frontend",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "c5cbdb6df8ac8bab91765f7d12dafef8"
+}

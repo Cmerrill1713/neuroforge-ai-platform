@@ -1,0 +1,28 @@
+{
+  "id": "youtube_20SpUcFzfYI",
+  "title": "Git + AI = DIFFBRO: AI Coding the future of code reviews (python, aider, gpt-4)",
+  "description": "The way we code is changing for good. In this video we explore one of many LLM combinations that change the game. The synergy of Git and AI. Microsoft recently shared a staggering insight: nearly 50% of all code was constructed using GitHub Copilot, emphasizing the undeniable truth that AI-charged engineering is reshaping the domain of software development. \n\nEver heard of diffbro? In today's video, we'll be crafting this AI-powered code review and peer review tool. Diffbro runs various prompts on your git diff output through OpenAI's GPT-4 to give you a personalized peer review like a complete bro would. Giving you the edge in your programming work. But hold on, the essence of this video isn't just about the 'what', it's about the 'how'. The methodologies, the strategies, and tools we use are a testament to the shift from writing code to using AI tools that write code on our behalf. Every piece of code and every AI tool we use like aider are stepping stones toward a new way to build software. This is part one of a series where we not only build and deploy a new python package using Poetry that can improve your pull requests but also practice building and envisioning programming from a futuristic perspective.\n\nJoin us on this AI devlog, as we redefine the future of code reviews with DIFFBRO. Thanks for watching. Remember to subscribe, hit that like button\n\nTry DIFFBRO: Your AI powered Peer Review Bro\ngithub: https://github.com/disler/diffbro\npip: https://pypi.org/project/diffbro/\n\n🤖 Start your AI Driven Development journey.\nhttps://youtu.be/MPYFPvxfGZs\n\n🌎 Links\n\nPoetry: https://python-poetry.org/docs/\nAider: https://aider.chat/\nGit Diff: https://git-scm.com/docs/git-diff\n\n\n🖥 Equipment\n\n- Mac book pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n#️⃣ Hashtags\n#git #aider #aiprogramming",
+  "url": "https://www.youtube.com/watch?v=20SpUcFzfYI",
+  "upload_date": "20230821",
+  "duration": 1190,
+  "view_count": 2318,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "programming",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "e96983745529f9b8227a04545e9ed4e1"
+}

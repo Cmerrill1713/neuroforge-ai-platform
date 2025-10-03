@@ -1,0 +1,23 @@
+{
+  "id": "meta_github_90197765",
+  "title": "clevr-iep",
+  "description": "Inferring and Executing Programs for Visual Reasoning",
+  "url": "https://github.com/facebookresearch/clevr-iep",
+  "language": "Python",
+  "stars": 802,
+  "forks": 213,
+  "created_at": "2017-05-03T22:13:14Z",
+  "updated_at": "2025-09-25T11:58:16Z",
+  "topics": [],
+  "readme_content": "# inferring-and-executing\n\nThis is the code for the paper\n\n **<a href=\"https://arxiv.org/abs/1705.03633\">Inferring and Executing Programs for Visual Reasoning</a>**\n <br>\n <a href='http://cs.stanford.edu/people/jcjohns/'>Justin Johnson</a>,\n <a href='http://home.bharathh.info/'>Bharath Hariharan</a>,\n <a href='https://lvdmaaten.github.io/'>Laurens van der Maaten</a>,\n <a href='http://cs.stanford.edu/~jhoffman/'>Judy Hoffman</a>,\n <a href='http://vision.stanford.edu/feifeili/'>Fei-Fei Li</a>,\n <a href='http://larryzitnick.org/'>Larry Zitnick</a>,\n <a href='http://www.rossgirshick.info/'>Ross Girshick</a>\n <br>\n To appear at [ICCV 2017](http://iccv2017.thecvf.com/)\n\n<div align=\"center\">\n  <img src=\"https://github.com/facebookresearch/clevr-iep/blob/master/img/system.png\" width=\"450px\">\n</div>\n\nIf you find this code useful in your research then please cite\n\n```\n@inproceedings{johnson2017inferring,\n  title={Inferring and Executing Programs for Visual Reasoning},\n  author={Johnson, Justin and Hariharan, Bharath and van der Maaten, Laurens and Hoffman, Judy\n          and Fei-Fei, Li and Zitnick, C Lawrence and Girshick, Ross},\n  booktitle={ICCV},\n  year={2017}\n}\n```\n\n# Setup\n\nAll code was developed and tested on Ubuntu 16.04 with Python 3.5.\n\nYou can set up a virtual environment to run the code like this:\n\n```bash\nvirtualenv -p python3 .env       # Create virtual environment\nsource .env/bin/activate         # Activate virtual environment\npip install -r requirements.txt  # Install dependencies\necho $PWD > .env/lib/python3.5/site-packages/iep.pth # Add this package to virtual environment\n# Work for a while ...\ndeactivate # Exit virtual environment\n```\n\n# Pretrained Models\nYou can download and unzip the pretrained models by running `bash scripts/download_pretrained_models.sh`;\nthe models will take about 1.1 GB on disk.\n\nWe provide two sets of pretrained models:\n- The models in `models/CLEVR` were trained on the CLEVR dataset; these were used to make Table 1 in the paper.\n- The models in `models/CLEVR-Humans` were first trained on CLEVR and then finetuned on the CLEVR-Humans dataset;\n   these models were used to make Table 3 in the paper.\n\n# Running models\n\nYou can easily run any of the pretrained models on new images and questions. As an example, we will run several\nmodels on the following example image from the CLEVR validation set:\n\n<div align='center'>\n <img src='https://github.com/facebookresearch/clevr-iep/blob/master/img/CLEVR_val_000013.png'>\n</div>\n\nAfter downloading the pretrained models, you can use the pretrained model to answer questions about this image with\nthe following command:\n\n```bash\npython scripts/run_model.py \\\n  --program_generator models/CLEVR/program_generator_18k.pt \\\n  --execution_engine models/CLEVR/execution_engine_18k.pt \\\n  --image img/CLEVR_val_000013.png \\\n  --question \"Does the small sphere have the same color as the cube left of the gray cube?\"\n```\n\nThis will print the predicted answer, as well as the program that the model used to produce the answer.\nFor the example command we get the output:\n\n```bash\nQuestion: \"Does the small sphere have the same color as the cube left of the gray cube?\"\nPredicted answer:  yes\n\nPredicted program:\nequal_color\nquery_color\nunique\nfilter_shape[sphere]\nfilter_size[small]\nscene\nquery_color\nunique\nfilter_shape[cube]\nrelate[left]\nunique\nfilter_shape[cube]\nfilter_color[gray]\nscene\n```\n\n# Training\n\nThe procedure for training your own models [is described here](TRAINING.md).\n",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

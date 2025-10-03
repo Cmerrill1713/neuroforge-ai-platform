@@ -1,0 +1,32 @@
+{
+  "id": "meta_github_131213051",
+  "title": "ELF",
+  "description": "ELF: a platform for game research with AlphaGoZero/AlphaZero reimplementation",
+  "url": "https://github.com/pytorch/ELF",
+  "language": "C++",
+  "stars": 3403,
+  "forks": 569,
+  "created_at": "2018-04-26T21:33:33Z",
+  "updated_at": "2025-09-28T13:28:56Z",
+  "topics": [
+    "alpha-zero",
+    "alphago-zero",
+    "go",
+    "reinforcement-learning",
+    "rl",
+    "rl-environment"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "research"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

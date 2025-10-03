@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_150154628",
+  "title": "FBGEMM",
+  "description": "FB (Facebook) + GEMM (General Matrix-Matrix Multiplication) - https://code.fb.com/ml-applications/fbgemm/",
+  "url": "https://github.com/pytorch/FBGEMM",
+  "language": "C++",
+  "stars": 1444,
+  "forks": 654,
+  "created_at": "2018-09-24T19:07:42Z",
+  "updated_at": "2025-09-27T00:18:30Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "facebook"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

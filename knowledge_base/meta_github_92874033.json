@@ -1,0 +1,28 @@
+{
+  "id": "meta_github_92874033",
+  "title": "HVVR",
+  "description": "Hierarchical Visibility for Virtual Reality, which implements a hybrid CPU/GPU ray-caster, suited for real time rendering of effects such as lens distortion.",
+  "url": "https://github.com/facebookresearch/HVVR",
+  "language": "C++",
+  "stars": 115,
+  "forks": 24,
+  "created_at": "2017-05-30T20:37:43Z",
+  "updated_at": "2025-08-27T12:12:57Z",
+  "topics": [
+    "cpp",
+    "raycaster",
+    "rendering-engine",
+    "virtual-reality"
+  ],
+  "readme_content": "# HVVR\nHVVR (Hierarchical Visibility for Virtual Reality) is an optimized software raycaster. It implements a hybrid CPU/GPU raycaster, suited for real-time rendering of effects such as lens distortion.\n\n## Examples\nmodelviewer.vcxproj (vs2015/hvvr.sln) implements a simple model viewer, with optional #defines to enable depth of field and foveated rendering.\n\n## Requirements\nHVVR requires:\n* Windows\n* CUDA-compatible GPU and CUDA SDK (tested on GeForce GTX 1080 and Quadro P6000)\n* CPU with AVX2 support\n* (optional) FBX SDK for importing content\n\n## Building HVVR\n0. Install CUDA SDK (and optionally FBX SDK)\n1. Open vs2015/hvvr.sln\n2. Select the \"Develop/x64\" configuration\n3. Set \"modelviewer\" as the startup project\n4. Build solution\n\nBy default, raycaster.vcxproj is configured to build all .cu files to the compute_61,sm_61 target. If your GPU needs a different code gen target, you can change this in the raycaster project properties.\n\nIf enabling the FBX import path, you'll need to install the FBX SDK, and you'll need to add it to your Microsoft.Cpp.x64.user \"VC++ Directories\" paths. For example, append \"C:\\Program Files\\Autodesk\\FBX\\FBX SDK\\2018.1.1\\include;\" to your \"Include Directories\" and \"C:\\Program Files\\Autodesk\\FBX\\FBX SDK\\2018.1.1\\lib\\vs2015\\x64\\;\" to your \"Library Directories\".\n\n## Running HVVR\n1. Download pre-built scene data files from: https://github.com/facebookresearch/HVVR/releases/latest\n2. Copy pre-built scene data files (for example, sponza.bin) to HVVR/libraries/hvvr/samples_shared/data/scenes\n3. Set gSceneSelect in modelviewer.cpp to match the scene data file you want to load\n\n## Importing content\nTo convert and load your own scenes:\n1. Enable FBX import in HVVR/libraries/hvvr/samples_shared/model_import.h by setting MODEL_IMPORT_ENABLE_FBX to 1\n2. Change the value of scenePath in gOnInit() in HVVR/projects/hvvr_samples/modelviewer/modelviewer.cpp to point at your FBX file\n3. (Optionally, you can also convert the FBX file to .bin for faster loading in the future, see the modelconvert project)\n\n## Full documentation\nSome installations of the CUDA SDK and Visual Studio integration appear to have broken build dependency tracking. If you're seeing behavior after code modification that looks like stale code from header files referenced in .cu files, try cleaning the solution and building from scratch (or install a newer CUDA Toolkit).\n\nThere are several #define macros to be aware of, which control the behavior of the raycaster:\n* DISABLE_MOVEMENT - modelviewer.cpp, disables camera movement and rotation\n* ENABLE_VSYNC - modelviewer.cpp, throttle to monitor refresh rate\n* ENABLE_DEPTH_OF_FIELD - modelviewer.cpp\n* ENABLE_FOVEATED - modelviewer.cpp\n* GAZE_CURSOR_MODE - modelviewer.cpp, controls how the foveated gaze point is set\n* RT_WIDTH and RT_HEIGHT - modelviewer.cpp, sets the render target size in pixels and window client rect size\n* MODEL_IMPORT_ENABLE_FBX - model_import.h, enables FBX model loading (requires FBX SDK)\n* MAX_TRI_INDICES_TO_INTERSECT - magic_constants.h, this controls the size of the intermediate buffer which contains the list of triangles to intersect after BVH traversal. You may need to increase this to avoid a crash/assert in more complex scenes.\n* COLOR_MODE_MSAA_RATE - raycaster_common.h, controls the number of subsamples per ray, valid values are 1 to 32\n* SUPERSHADING_MODE - kernel_constants.h, allows switching between MSAA and SSAA shading\n* JITTER_SAMPLES - kernel_constants.h, enables temporal sample position jitter when combined with foveated rendering\n* FOVEATED_TRIANGLE_FRUSTA_TEST_DISABLE - kernel_constants.h, bug workaround to prevent incorrect triangle culling when foveated rendering is enabled\n* ENABLE_HACKY_WIDE_FOV, HACKY_WIDE_FOV_W, and HACKY_WIDE_FOV_H - kernel_constants.h, forces rendering to a specified wide FoV\n\nEnabling foveated rendering:\n1. Set ENABLE_FOVEATED to 1\n2. (Optional) Set GAZE_CURSOR_MODE to GAZE_CURSOR_MODE_MOUSE\n3. Set JITTER_SAMPLES to 1 to enable temporal sample jitter\n4. Set FOVEATED_TRIANGLE_FRUSTA_TEST_DISABLE to 1\n\nEnabling depth of field:\n1. Set ENABLE_DEPTH_OF_FIELD to 1\n2. (Optional) Adjust \"lensRadius\" and \"focalDistance\" variables in modelviewer.cpp\n\nEnabling wide field of view: (not tested in combination with other config options, yet)\n1. Set ENABLE_HACKY_WIDE_FOV to 1\n2. Set HACKY_WIDE_FOV_W and HACKY_WIDE_FOV_H to desired horizontal and vertical fields of view (in degrees)\n\nBenchmarking vs other raytracers:\n1. Set DISABLE_MOVEMENT to 1 to ensure consistent output\n2. Enable export of the scene and rays in libraries/hvvr/raycaster/render.cpp\n3. Import the scene and rays to https://github.com/anankervis/RaytraceBenchmarking\n\n## Join the HVVR community\nSee the CONTRIBUTING file for how to help out.\n\n## License\nHVVR is BSD-licensed.\n",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

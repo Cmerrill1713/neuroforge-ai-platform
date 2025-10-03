@@ -1,0 +1,26 @@
+{
+  "id": "youtube_Egeuql3Lrzg",
+  "title": "Context Engineering is the New Vibe Coding (Learn this Now)",
+  "url": "https://www.youtube.com/watch?v=Egeuql3Lrzg",
+  "description": "The honeymoon phase for vibe coding is over and context engineering is the new paradigm for AI coding. Earlier this year we all fell for the vibe coding but it completely falls apart when you try to build anything real or scale it up. The biggest problem? AI coding assistants miss context or lack it entirely, and intuition doesn't scale - structure does.\n\nContext engineering treats your instructions, rules, and documentation as an engineered resource requiring careful architecture, just like everything else in real software. It's not just prompt engineering - it's supplying all the relevant facts, knowledge, rules, plans, and tools so an LLM can actually accomplish the task at hand.\n\nIn this video, I dive deep into what context engineering actually looks like and then we jump into the lab with Claude Code to show you how it works with a real practical example. Like Abraham Lincoln said - if you have six hours to chop a tree, spend four sharpening your axe. That's exactly what we're doing here, and the results are infinitely better than diving straight into implementation.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nKey resources:\n\n- Register for the free OWASP Top 10 for LLMs webinar hosted by Snyk to learn about how to create secure code with AI coding assistants:\n\nhttps://snyk.plug.dev/Iynze0s\n\n- GitHub repository for my Context Engineering template:\n\nhttps://github.com/coleam00/context-engineering-intro\n\n- Rasmus' GitHub repo (source of inspiration for this):\n\nhttps://github.com/Wirasm/PRPs-agentic-eng\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nSources from this video:\n\n- Andrej Karpathy - +1 for Context Engineering:\nhttps://x.com/karpathy/status/1937902205765607626\n\n- Tobi Lutke (CEO of Shopify) - Context Engineering over Prompt Engineering: \nhttps://x.com/tobi/status/1935533422589399127\n\n- Qodo state of AI code quality: \nhttps://www.qodo.ai/reports/state-of-ai-code-quality/\n\n- Context Engineering diagram: \nhttps://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md\n\n- Langchain - the rise of “context engineering”: \nhttps://blog.langchain.com/the-rise-of-context-engineering/\n\n- Article on context engineering that mentions structure over intuition:\nhttps://analyticsindiamag.com/ai-features/context-engineering-is-the-new-vibe-coding/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Context Engineering (RIP Vibe Coding)\n03:53 - Context Engineering Explained Visually\n06:25 - My Template for Context Engineering (Free Resource)\n08:21 - Snyk OWASP Top 10 for LLMs\n09:42 - A Practical Example of Context Engineering\n10:02 - Global Rules\n10:33 - Initial Feature Prompt\n12:48 - Creating the Ultimate Project Plan (PRP)\n16:37 - Reviewing Our PRP\n18:10 - Executing Our PRP (The Real Magic)\n19:37 - The Results (Spoiler - it's Freaking Fantastic)\n22:09 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250703",
+  "duration": 1376,
+  "view_count": 310146,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

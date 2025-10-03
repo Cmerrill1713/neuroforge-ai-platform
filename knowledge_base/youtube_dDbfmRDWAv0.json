@@ -1,0 +1,26 @@
+{
+  "id": "youtube_dDbfmRDWAv0",
+  "title": "AI Coding with AIDER Architect: Gemini 2.0 Flash vs Claude 3.5 Sonnet (o1, o3 PLAN)",
+  "description": "🔥 Is Gemini 2.0 Flash the NEW AI Coding King? Or will Claude 3.5 Sonnet REIGN SUPREME? 👑 \n\nWe put them HEAD-TO-HEAD in Aider Architect Mode! Let's see if Gemini 2.0 Flash is a GAME-CHANGER or just a FLASHY new model? (lol)\n\n🎥 VIDEO REFERENCES:\n\nPrincipled AI Coding: https://agenticengineer.com/principled-ai-coding\n\nAiders Polyglot leaderboard: https://aider.chat/docs/leaderboards/#aider-llm-leaderboards\n\nAnthropic building effective agents: https://www.anthropic.com/research/building-effective-agents\n\nLlama 4: https://ai.meta.com/blog/future-of-ai-built-with-llama/\n\nGemini 2.0 Flash: https://ai.google.dev/gemini-api/docs/models/gemini#gemini-2.0-flash\n\nYT DLP: https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#installation\n\nUseful LLM tools: https://davidgasquez.com/useful-llm-tools-2024/\n\n🚀 In this video, we explores the time saving, feature shipping AI coding patterns by pitting Google's Gemini 2.0 Flash against the KING of LLMs Anthropic's Claude 3.5 Sonnet in a real-world test using Aider's Architect Mode. Honestly, it's a close race. Things are heating up. \n\n🛠️ Watch as we use a spec prompt (specification prompt aka plan prompt aka list of prompts) and Aider's architect mode to generate new features in a personal knowledge base. See how Gemini 2.0 Flash and Claude 3.5 Sonnet handle complex tasks like adding YouTube scripts, scraping websites, and retrieving data, all while focusing on the principles of AI coding. We'll break down the performance of each model, weighing the cost, speed, and accuracy to uncover the true power of these AI coding assistants.\n\n💡 Learn how to use the large prompts to make large code changes with your AI Coding Assistant. We use the spec prompt to write three features in a single prompt with our AI Coding Assistant Aider. See first hand how prompt chaining unlocks new levels of agentic workflows. This is about using AI to build more software faster and at a higher quality with powerful AI models like gemini 2.0 flash, claude 3.5 sonnet, and the new o1 and o3 series.\n\n🌟 If you are an engineer, a software developer, or AI enthusiast, this video is critical to staying ahead of the curve. Understand how to leverage the power of AI to build software faster and smarter with tools like Aider.\n\n🤖 Run Aider Architect with two Claude 3.5 Sonnet models\naider --model claude-3-5-sonnet-20241022 --architect --editor-model claude-3-5-sonnet-20241022 --yes-always\n\n🤖 Run Aider Architect with two Gemini 2.0 Flash models\naider --model gemini/gemini-2.0-flash-exp --architect --editor-model gemini/gemini-2.0-flash-exp --yes-always --load .aider\n\n📖 Chapters\n00:00 Reasoning Models Are Coming\n02:16 Leverage Aider Architect with the Spec Prompt\n07:49 Gemini 2.0 Flash vs Claude 3.5 Sonnet\n21:35 Principled AI Coding\n25:41 The most important GenAI question\n\n#aicoding #llm #aiengineer",
+  "url": "https://www.youtube.com/watch?v=dDbfmRDWAv0",
+  "upload_date": "20241223",
+  "duration": 1732,
+  "view_count": 57288,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "423860e60d2b4bf4dfc5bc5dbf87e712"
+}

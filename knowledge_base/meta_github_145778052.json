@@ -1,0 +1,23 @@
+{
+  "id": "meta_github_145778052",
+  "title": "caffe2.github.io",
+  "description": "The caffe2 website.",
+  "url": "https://github.com/pytorch/caffe2.github.io",
+  "language": "HTML",
+  "stars": 3,
+  "forks": 8,
+  "created_at": "2018-08-23T00:28:27Z",
+  "updated_at": "2025-02-10T01:54:48Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

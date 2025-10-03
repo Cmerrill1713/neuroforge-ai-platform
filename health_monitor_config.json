@@ -1,0 +1,53 @@
+{
+  "check_interval": 60,
+  "health_checks": [
+    {
+      "name": "api_health",
+      "component_type": "api",
+      "check_function": "check_api_health",
+      "threshold_warning": 500.0,
+      "threshold_critical": 2000.0,
+      "last_check": "2025-10-02T19:28:30.876200",
+      "last_status": "unknown",
+      "last_value": 0.0,
+      "consecutive_failures": 0,
+      "enabled": true
+    },
+    {
+      "name": "database_health",
+      "component_type": "database",
+      "check_function": "check_database_health",
+      "threshold_warning": 1000.0,
+      "threshold_critical": 5000.0,
+      "last_check": "2025-10-02T19:28:30.876204",
+      "last_status": "unknown",
+      "last_value": 0.0,
+      "consecutive_failures": 0,
+      "enabled": true
+    },
+    {
+      "name": "cache_health",
+      "component_type": "cache",
+      "check_function": "check_cache_health",
+      "threshold_warning": 100.0,
+      "threshold_critical": 500.0,
+      "last_check": "2025-10-02T19:28:30.876206",
+      "last_status": "unknown",
+      "last_value": 0.0,
+      "consecutive_failures": 0,
+      "enabled": true
+    },
+    {
+      "name": "service_health",
+      "component_type": "service",
+      "check_function": "check_service_health",
+      "threshold_warning": 1000.0,
+      "threshold_critical": 3000.0,
+      "last_check": "2025-10-02T19:28:30.876207",
+      "last_status": "unknown",
+      "last_value": 0.0,
+      "consecutive_failures": 0,
+      "enabled": true
+    }
+  ]
+}

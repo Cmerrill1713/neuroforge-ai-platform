@@ -1,0 +1,26 @@
+{
+  "id": "youtube_Ri3iyi3qFlI",
+  "title": "Coding Subagents - The Next Evolution of AI IDEs",
+  "url": "https://www.youtube.com/watch?v=Ri3iyi3qFlI",
+  "description": "Everyone is using an AI IDE for coding like Windsurf or Cursor now. They make you ultra productive and have started to incorporate incredible new features to understand the documentation of our favorite frameworks and integrate with protocols like Claude’s Model Context Protocol (MCP). The problem is, these AI IDEs have just as many flaws as they have strengths. They hallucinate code ALL the time, even when given extensive documentation and instructions.\n\nIt’s time for these AI coding assistants to get a BIG upgrade to tackle these problems, and I think I’ve started to uncover what the next wave of evolution is for this. It all revolves around specialized “subagents” and Claude’s MCP. Just hear me out on this in the video, I think it’s going to be huge and I explain why. I even demonstrate how to take Archon, the AI agent I started recently that creates other AI agents with Pydantic AI and LangGraph, and turn it into an MCP subagent for Windsurf and Cursor! So you get a real example of this concept that I think is going to blow up this year.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nTry out Fish Audio for free today (only takes two minutes, seriously) and see how well it can clone your voice! It’s faster and cheaper than ElevenLabs and certainly has seemed just as powerful to me from my testing. And that’s saying a lot - I’ve used ElevenLabs a lot in the past and been impressed!\n\nhttps://s.fish.audio/Cole-Medin\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAll the code for Archon can be found here on GitHub:\n\nhttps://github.com/coleam00/Archon/tree/main\n\nClaude MCP GitHub repo:\n\nhttps://github.com/modelcontextprotocol/servers\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - The Problem with AI Coding Assistants\n02:49 - The Power of MCP Subagents (Feat. Archon)\n06:36 - Why MCP Subagents?\n08:32 - MCP, not Perfect but Works Great\n10:08 - Fish Audio\n12:14 - The Beauty of MCP\n13:50 - Diving into Archon\n15:13 - How I Built Archon into an MCP Subagent\n19:14 - How to Run Archon as an MCP Server\n21:06 - Full Agent Build with Archon + Windsurf\n25:14 - Testing our Archon Agent\n25:58 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250220",
+  "duration": 1617,
+  "view_count": 42383,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

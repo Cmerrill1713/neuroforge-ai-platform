@@ -1,0 +1,27 @@
+{
+  "id": "youtube_J5B9UGTuNoM",
+  "title": "I’m HOOKED on Claude Code Hooks: Advanced Agentic Coding",
+  "description": "CLAUDE CODE HOOKS just SAVED my codebase from a rogue rm -rf while my parallel agents chat back in real-time! \n\n(secret early bird launch: https://agenticengineer.com/tactical-agentic-coding?y=Kf5-HWJPTIE)\n\nIt's time to upgrade your agentic coding game (again lol). \n\n🎥 VIDEO REFERENCES:\n\nPrincipled AI Coding: https://agenticengineer.com/principled-ai-coding?y=J5B9UGTuNoM_a\n\nClaude Code Hooks Quickstart: https://github.com/disler/claude-code-hooks-mastery\n\nClaude Code Hooks Anthropic Docs: https://docs.anthropic.com/en/docs/claude-code/hooks\n\nUV Single File Scripts Breakdown: https://youtu.be/YAIJV48QlXc\n\nWHAT YOU’LL SEE INSIDE:\n- How these 5 key Hooks give you surgical control over Claude Code, giving you next level observability and control.\n- Real text to speech notifications powered by elevenlabs (or openai or your local device), so your agents literally tell you when a top level task or an agent sub-task is done.\n- A full observability stack for ai coding: pre-tool, post-tool, stop, notification, and sub-agent hooks—all logged and organized for rapid debugging.\n- Why indydevdan calls Claude Code the new engineering primitive and how cursor is scrambling to keep up so much so that they've hired the creators of Claude Code.\n- Step-by-step breakdown of UV single-file scripts that glue anthropic, openai, and custom hooks together for unstoppable agentic coding.\n\nKEY TAKEAWAYS:\n- Agentic coding ≠ “just chat”; with claude code and its hooks you control context, model, prompt like never before.\n- Parallel ai coding means spinning up multiple Claude 4 sub-agents that cooperate (or compete) while you grab coffee.\n- Block, log, notify, speak: plug into any point in the lifecycle of your agentic coding workflow.\n- Text to speech feedback isn’t fluff—it’s the missing UX layer for unattended long-running jobs.\n- Principles beat tools, but right now Claude Code is the fastest path to production-grade Agentic Coding.\n\nReady to turn your terminal into an army of disciplined agents? Smash play, steal the code, and start shipping 100× faster.\n\nNo matter what...\nStay Focused and Keep Building\n\n📖 Chapters\n00:00 Hooked on Claude Code Hooks\n01:10 Claude Code Hooks Breakdown\n06:25 When and Why Use Claude Code Hooks\n10:05 Understanding Uv Python Hooks\n18:57 Agentic Coding Wars\n27:25 Principled AI Coding and Phase 2\n\n#agenticcoding #claudecode #aicoding",
+  "url": "https://www.youtube.com/watch?v=J5B9UGTuNoM",
+  "upload_date": "20250707",
+  "duration": 1850,
+  "view_count": 105080,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "1ffdda224564310ec53732aae737b0cc"
+}

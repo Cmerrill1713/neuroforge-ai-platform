@@ -1,0 +1,25 @@
+{
+  "id": "youtube_iww1O8WngUU",
+  "title": "Fusion Chain: NEED the BEST Prompt Results at ANY COST? Watch this…",
+  "description": "Want to MAXIMIZE the current capabilities of your LLMs for BEYOND SOTA results? LET\"S GOOOOO!\n\n🚀 Yeah so prompt chaining is legit. Let's push it EVEN FURTHER BEYOND and discover the power of fusion chains and multi-chain techniques to maximize the potential of Large Language Models (LLMs) to get next generation LLM performance (GPT-5, Claude 4, and Gemini 2).\n\nIn this video, we explore how prompt chains can transform your approach to AI, allowing you to chain together multiple prompts to enhance reasoning and decision-making. We'll break down the concept of the prompt chain, where the output of one prompt becomes the input of the next, creating a powerful sequence that mimics human workflows. This is nothing new, we've covered it on the channel and if you use GenerativeAI you already utilize prompt chains.\n\nWhat's next is what happens when you multiply the number of chains you have, evaluate and FUSE the outputs to get the best possible result. This takes 'lets think step by step' and multi-agent reasoning to a new level.\n\n🔥 Fusion Chains take your prompt chains a step further by running multiple chains simultaneously and merging their outputs to achieve the best possible result. Imagine having multiple AI agents from OpenAI, Anthropic, and Google working together to provide you with the most accurate and efficient outcomes. This technique, also known as beam chaining or the competition chain, is a game-changer in the world of AI.\n\n🛠️ Watch as we demonstrate practical applications of these techniques, showcasing how to build agentic workflows that operate seamlessly and efficiently. From agentic software to multi-chain outputs, we'll show you how to leverage these advanced patterns to create powerful AI-driven tools and applications.\n\n🌟 Join us as we tackle key questions in the AI community:\n- Does adding multiple chains improve performance?\n- Will future models like GPT-5, Claude 4, and Gemini 2 make prompt chains obsolete?\n- What is the optimal flow for building agentic workflows?\n\n💡 Whether you're a software developer, AI enthusiast, or indydevdan follower (lets goooo), understanding these concepts will position you at the forefront of AI innovation. Discover how prompt chains and fusion chains can elevate your GenAI projects, making your work more impactful and future-proof.\n\nHit the like and subscribe for more insights on how to master prompt chaining and agentic workflows. Stay ahead of the curve and transform your approach to AI with every video. We're on the golden path to building LIVING SOFTWARE.\n\nSubscribe now and join us on this journey to mastering the future of AI!\n\n✅ Let's build Agentic Workflows\nPart 4: https://youtu.be/1IK69XZZegU\nPart 3: https://youtu.be/F0eOYrA6ggY\nPart 2: https://youtu.be/UOcYsrnSNok\n\n🔗 Resources\n\n📝 Minimalist Prompt Chain & FusionChain gist https://gist.github.com/disler/d51d7e37c3e5f8d277d8e0a71f4a1d2e\n🧠 Big AGI Beam https://big-agi.com/blog/beam-multi-model-ai-reasoning\n📚 \"More Agents Is All You Need\" research paper https://arxiv.org/pdf/2402.05120\n\n📖 Chapters\n00:00 The Prompt\n00:34 The Prompt Chain\n02:48 The Fusion Chain\n04:50 Prompt Chaining Questions\n11:05 Minimalist Prompt Chain API\n12:02 Fusion Chain API\n12:50 Zero Noise LEARN Agentic Workflow\n\n#agentic #promptengineering #aiagents",
+  "url": "https://www.youtube.com/watch?v=iww1O8WngUU",
+  "upload_date": "20240715",
+  "duration": 1175,
+  "view_count": 8107,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "954f35e028ed9feb7e16d1291b6f6bac"
+}

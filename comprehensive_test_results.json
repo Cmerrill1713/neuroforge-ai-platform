@@ -1,144 +1,346 @@
 {
-  "hybrid_vector_store": {
-    "status": "success",
-    "features_tested": [
-      "chaos_optimization",
-      "query_hash_generation",
-      "cache_strategy_selection",
-      "adaptive_caching"
-    ],
-    "chaos_applied": false,
-    "query_hash_generated": true,
-    "cache_decision_made": true,
-    "test_time": 0.00015592575073242188,
-    "innovations": [
-      "AI-generated query randomization",
-      "Chaos-driven caching decisions",
-      "Adaptive cache strategy selection",
-      "Hybrid PostgreSQL + Redis architecture"
-    ]
+  "timestamp": "2025-10-03T02:17:02.745643",
+  "overall_status": "ACCEPTABLE",
+  "success_rate": 75.0,
+  "summary": {
+    "total_tests": 28,
+    "passed": 21,
+    "failed": 7,
+    "skipped": 0
   },
-  "dynamic_query_optimization": {
-    "status": "success",
-    "optimizations_performed": 2,
-    "strategies_used": [
-      "adaptive_learning"
-    ],
-    "avg_expected_improvement": 0.05,
-    "avg_confidence": 0.7,
-    "stats": {
-      "total_optimizations": 2,
-      "successful_optimizations": 2,
-      "success_rate": 1.0,
-      "avg_improvement": 0.19945113848295923,
-      "strategy_performance": {
-        "adaptive_learning": 0.19945113848295923
-      },
-      "learned_patterns": 2,
-      "performance_history_size": 2
+  "categories": {
+    "Health Check": {
+      "passed": 2,
+      "failed": 3,
+      "skipped": 0
     },
-    "test_time": 0.00014519691467285156,
-    "innovations": [
-      "Chaos-driven optimization",
-      "Quantum superposition strategy selection",
-      "Adaptive learning from performance",
-      "AI-generated query variations"
-    ]
-  },
-  "chaos_driven_sharding": {
-    "status": "success",
-    "sharding_decisions": 5,
-    "strategies_used": [
-      "hash_based"
-    ],
-    "avg_confidence": 0.9,
-    "avg_load_balance": 0.4787959725489621,
-    "rebalance_performed": false,
-    "chaos_values_range": [
-      0.5014282344465075,
-      0.501965426203522
-    ],
-    "stats": {
-      "total_shards": 4,
-      "current_load_balance": 0.6012054320159286,
-      "total_decisions": 5,
-      "rebalance_operations": 0,
-      "strategy_usage": {
-        "hash_based": 5
-      },
-      "shard_utilization": {
-        "shard_000": {
-          "data_count": 2,
-          "query_load": 2,
-          "avg_response_time": 0.04863547642698399,
-          "hotness_score": 0.18999999997350908,
-          "chaos_factor": 0.10390614000000001
-        },
-        "shard_001": {
-          "data_count": 0,
-          "query_load": 0,
-          "avg_response_time": 0.0,
-          "hotness_score": 0.0,
-          "chaos_factor": 0.0
-        },
-        "shard_002": {
-          "data_count": 2,
-          "query_load": 2,
-          "avg_response_time": 0.08692244930371795,
-          "hotness_score": 0.18999999997350908,
-          "chaos_factor": 0.1434799209213527
-        },
-        "shard_003": {
-          "data_count": 1,
-          "query_load": 1,
-          "avg_response_time": 0.07525570221706283,
-          "hotness_score": 0.1,
-          "chaos_factor": 0.04873860935730939
-        }
-      },
-      "chaos_intensity": 0.2,
-      "distribution_history_size": 5
+    "System Resources": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
     },
-    "test_time": 0.00032401084899902344,
-    "innovations": [
-      "Lorenz attractor chaos generation",
-      "Quantum superposition shard selection",
-      "Adaptive learning from shard performance",
-      "Dynamic rebalancing based on patterns"
-    ]
+    "API Test": {
+      "passed": 4,
+      "failed": 2,
+      "skipped": 0
+    },
+    "Security": {
+      "passed": 4,
+      "failed": 1,
+      "skipped": 0
+    },
+    "Performance": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Data Integrity": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Error Handling": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Load Testing": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Integration": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Monitoring": {
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    },
+    "Backup & Recovery": {
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
   },
-  "self_supervised_parallel_reasoning": {
-    "status": "success",
-    "tasks_processed": 5,
-    "total_reasoning_paths": 15,
-    "learning_interactions": 5,
-    "pattern_memory_size": 4,
-    "self_improvement_score": 0.3963880000000001,
-    "pattern_recognition_accuracy": 0.40141000000000004,
-    "reflection_improvements": 0,
-    "reflection_confidence": 0.0,
-    "stats": {
-      "total_requests": 5,
-      "successful_requests": 5,
-      "success_rate": 1.0,
-      "average_improvement_score": 0.19999999999999996,
-      "recent_trend": "stable",
-      "self_supervised_learning": {
-        "learning_history_size": 5,
-        "pattern_memory_size": 4,
-        "success_patterns_count": 4,
-        "failure_patterns_count": 0,
-        "self_improvement_score": 0.3963880000000001,
-        "pattern_recognition_accuracy": 0.40141000000000004,
-        "adaptive_strategy_success": 0.0082
+  "detailed_results": [
+    {
+      "test_name": "Health Check - backend",
+      "status": "failed",
+      "message": "Service unhealthy (status: 404)",
+      "duration": 0.006489753723144531,
+      "details": {
+        "status_code": 404
       }
     },
-    "test_time": 1.0163390636444092,
-    "innovations": [
-      "Self-supervised learning from outcomes",
-      "Adaptive strategy selection based on patterns",
-      "Automatic self-reflection and improvement",
-      "Pattern memory for task recognition"
-    ]
-  }
+    {
+      "test_name": "Health Check - rag_service",
+      "status": "passed",
+      "message": "Service healthy (response time: 0.00s)",
+      "duration": 0.0018191337585449219,
+      "details": {
+        "response_time": 0.0018191337585449219,
+        "status_code": 200
+      }
+    },
+    {
+      "test_name": "Health Check - tts_service",
+      "status": "passed",
+      "message": "Service healthy (response time: 0.00s)",
+      "duration": 0.0016069412231445312,
+      "details": {
+        "response_time": 0.0016069412231445312,
+        "status_code": 200
+      }
+    },
+    {
+      "test_name": "Health Check - frontend",
+      "status": "failed",
+      "message": "Service unhealthy (status: 404)",
+      "duration": 0.019162893295288086,
+      "details": {
+        "status_code": 404
+      }
+    },
+    {
+      "test_name": "Health Check - ollama",
+      "status": "failed",
+      "message": "Service unhealthy (status: 404)",
+      "duration": 0.002485036849975586,
+      "details": {
+        "status_code": 404
+      }
+    },
+    {
+      "test_name": "System Resources - CPU",
+      "status": "passed",
+      "message": "CPU usage: 18.2%",
+      "duration": 0,
+      "details": {
+        "cpu_percent": 18.2
+      }
+    },
+    {
+      "test_name": "System Resources - Memory",
+      "status": "passed",
+      "message": "Memory usage: 55.7%",
+      "duration": 0,
+      "details": {
+        "memory_percent": 55.7
+      }
+    },
+    {
+      "test_name": "System Resources - Disk",
+      "status": "passed",
+      "message": "Disk usage: 22.1%",
+      "duration": 0,
+      "details": {
+        "disk_percent": 22.1
+      }
+    },
+    {
+      "test_name": "API Test - POST /api/chat",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0.0030410289764404297,
+      "details": {
+        "status_code": 200,
+        "response_time": 0.0030410289764404297
+      }
+    },
+    {
+      "test_name": "API Test - GET /api/system/health",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0.0018291473388671875,
+      "details": {
+        "status_code": 200,
+        "response_time": 0.0018291473388671875
+      }
+    },
+    {
+      "test_name": "API Test - GET /api/system/metrics",
+      "status": "failed",
+      "message": "Status: 500",
+      "duration": 0.0016388893127441406,
+      "details": {
+        "status_code": 500,
+        "response_time": 0.0016388893127441406
+      }
+    },
+    {
+      "test_name": "API Test - POST /api/rag/enhanced/search",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0.001210927963256836,
+      "details": {
+        "status_code": 200,
+        "response_time": 0.001210927963256836
+      }
+    },
+    {
+      "test_name": "API Test - GET /api/evolutionary/stats",
+      "status": "failed",
+      "message": "Status: 404",
+      "duration": 0.0018529891967773438,
+      "details": {
+        "status_code": 404,
+        "response_time": 0.0018529891967773438
+      }
+    },
+    {
+      "test_name": "API Test - POST /api/voice/synthesize",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0.6196351051330566,
+      "details": {
+        "status_code": 200,
+        "response_time": 0.6196351051330566
+      }
+    },
+    {
+      "test_name": "Security - CORS",
+      "status": "failed",
+      "message": "CORS headers: ",
+      "duration": 0,
+      "details": {
+        "cors_headers": {
+          "Date": "Fri, 03 Oct 2025 02:17:02 GMT",
+          "Server": "uvicorn",
+          "Content-Type": "application/json",
+          "x-process-time": "0.0013110637664794922",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Encoding": "gzip",
+          "Vary": "Accept-Encoding",
+          "Transfer-Encoding": "chunked"
+        }
+      }
+    },
+    {
+      "test_name": "Security - Input Validation (<script>alert('xss')...)",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0,
+      "details": {
+        "status_code": 200
+      }
+    },
+    {
+      "test_name": "Security - Input Validation (../../etc/passwd...)",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0,
+      "details": {
+        "status_code": 200
+      }
+    },
+    {
+      "test_name": "Security - Input Validation ('; DROP TABLE users;...)",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0,
+      "details": {
+        "status_code": 200
+      }
+    },
+    {
+      "test_name": "Security - Input Validation (${jndi:ldap://evil.c...)",
+      "status": "passed",
+      "message": "Status: 200",
+      "duration": 0,
+      "details": {
+        "status_code": 200
+      }
+    },
+    {
+      "test_name": "Performance - GET /api/system/health",
+      "status": "passed",
+      "message": "Avg: 0.002s, Max: 0.002s",
+      "duration": 0,
+      "details": {
+        "avg_response_time": 0.001783609390258789,
+        "max_response_time": 0.002193927764892578
+      }
+    },
+    {
+      "test_name": "Performance - POST /api/chat",
+      "status": "passed",
+      "message": "Avg: 0.003s, Max: 0.003s",
+      "duration": 0,
+      "details": {
+        "avg_response_time": 0.0026332616806030275,
+        "max_response_time": 0.0033180713653564453
+      }
+    },
+    {
+      "test_name": "Data Integrity - RAG Results",
+      "status": "passed",
+      "message": "Results: 0, Valid format: True",
+      "duration": 0,
+      "details": {
+        "result_count": 0,
+        "has_required_fields": true
+      }
+    },
+    {
+      "test_name": "Error Handling - 404 Response",
+      "status": "passed",
+      "message": "Status: 404",
+      "duration": 0,
+      "details": {
+        "status_code": 404
+      }
+    },
+    {
+      "test_name": "Error Handling - Invalid JSON",
+      "status": "passed",
+      "message": "Status: 422",
+      "duration": 0,
+      "details": {
+        "status_code": 422
+      }
+    },
+    {
+      "test_name": "Load Testing - Concurrent Requests",
+      "status": "passed",
+      "message": "Success rate: 100.0% (20/20)",
+      "duration": 0.02215886116027832,
+      "details": {
+        "success_rate": 100.0,
+        "duration": 0.02215886116027832
+      }
+    },
+    {
+      "test_name": "Integration - Chat Flow",
+      "status": "passed",
+      "message": "Response received: True, Metadata: True",
+      "duration": 0,
+      "details": {
+        "has_response": true,
+        "has_metadata": true
+      }
+    },
+    {
+      "test_name": "Monitoring - Metrics Endpoint",
+      "status": "failed",
+      "message": "Metrics endpoint failed: 500",
+      "duration": 0,
+      "details": {}
+    },
+    {
+      "test_name": "Backup & Recovery - Data Operations",
+      "status": "passed",
+      "message": "Data operations working",
+      "duration": 0,
+      "details": {
+        "status_code": 200
+      }
+    }
+  ],
+  "recommendations": [
+    "Implement additional security measures and input validation",
+    "Set up comprehensive monitoring and alerting"
+  ]
 }

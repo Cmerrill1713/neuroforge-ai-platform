@@ -1,0 +1,251 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+      actions: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install security tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install bandit safety semgrep trivy
+          npm install -g audit-ci @cyclonedx/cdxgen
+
+      - name: Run Bandit security scan
+        run: |
+          echo "🔍 Running Bandit security scan..."
+          bandit -r src/ -f json -o bandit-report.json --skip B101,B601,B603,B607 || true
+          echo "✅ Bandit scan completed"
+
+      - name: Run Safety dependency check
+        run: |
+          echo "🔍 Running Safety dependency vulnerability scan..."
+          safety check --output json > safety-report.json || true
+          echo "✅ Safety scan completed"
+
+      - name: Run Semgrep security scan
+        run: |
+          echo "🔍 Running Semgrep security scan..."
+          semgrep --config auto --json > semgrep-report.json || true
+          echo "✅ Semgrep scan completed"
+
+      - name: Run Trivy vulnerability scan
+        run: |
+          echo "🔍 Running Trivy container vulnerability scan..."
+          trivy filesystem --format json --output trivy-report.json . || true
+          echo "✅ Trivy scan completed"
+
+      - name: Generate CycloneDX SBOM
+        run: |
+          echo "📦 Generating Software Bill of Materials..."
+          cdxgen -r -o sbom.json . || true
+          echo "✅ SBOM generated"
+
+      - name: AI-specific security checks
+        run: |
+          echo "🤖 Running AI-specific security checks..."
+          python -c "
+          import json
+          import sys
+          import os
+
+          # Check for hardcoded API keys and secrets
+          suspicious_patterns = [
+              'sk-', 'pk_', 'SECRET_KEY', 'API_KEY', 'TOKEN',
+              'password', 'PASSWORD', 'passwd', 'secret'
+          ]
+
+          findings = []
+
+          def scan_file(filepath):
+              try:
+                  with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                      content = f.read()
+                      for pattern in suspicious_patterns:
+                          if pattern.lower() in content.lower():
+                              findings.append(f'{filepath}: Contains potential secret pattern \"{pattern}\"')
+              except:
+                  pass
+
+          for root, dirs, files in os.walk('src'):
+              for file in files:
+                  if file.endswith(('.py', '.js', '.ts', '.json', '.env')):
+                      scan_file(os.path.join(root, file))
+
+          if findings:
+              print('⚠️ Potential security issues found:')
+              for finding in findings[:10]:  # Limit output
+                  print(f'   - {finding}')
+          else:
+              print('✅ No obvious security issues found')
+
+          # Save findings
+          with open('ai-security-checks.json', 'w') as f:
+              json.dump({'findings': findings}, f, indent=2)
+          "
+
+      - name: Analyze results and create summary
+        run: |
+          echo "📊 Analyzing security scan results..."
+
+          python -c "
+          import json
+          import os
+
+          summary = {
+              'bandit': {'high': 0, 'medium': 0, 'low': 0},
+              'safety': {'vulnerabilities': 0},
+              'semgrep': {'findings': 0},
+              'trivy': {'vulnerabilities': 0},
+              'ai_checks': {'findings': 0}
+          }
+
+          # Analyze Bandit results
+          if os.path.exists('bandit-report.json'):
+              with open('bandit-report.json') as f:
+                  bandit_data = json.load(f)
+                  for result in bandit_data.get('results', []):
+                      for issue in result.get('issues', []):
+                          severity = issue.get('issue_severity', 'low')
+                          summary['bandit'][severity] += 1
+
+          # Analyze Safety results
+          if os.path.exists('safety-report.json'):
+              with open('safety-report.json') as f:
+                  safety_data = json.load(f)
+                  summary['safety']['vulnerabilities'] = len(safety_data)
+
+          # Analyze Semgrep results
+          if os.path.exists('semgrep-report.json'):
+              with open('semgrep-report.json') as f:
+                  semgrep_data = json.load(f)
+                  summary['semgrep']['findings'] = len(semgrep_data.get('results', []))
+
+          # Analyze Trivy results
+          if os.path.exists('trivy-report.json'):
+              with open('trivy-report.json') as f:
+                  trivy_data = json.load(f)
+                  summary['trivy']['vulnerabilities'] = len(trivy_data.get('Results', []))
+
+          # Analyze AI checks
+          if os.path.exists('ai-security-checks.json'):
+              with open('ai-security-checks.json') as f:
+                  ai_data = json.load(f)
+                  summary['ai_checks']['findings'] = len(ai_data.get('findings', []))
+
+          # Generate summary report
+          with open('security-summary.json', 'w') as f:
+              json.dump(summary, f, indent=2)
+
+          # Print summary
+          print('🔒 Security Scan Summary:')
+          print(f'   Bandit: {summary[\"bandit\"][\"high\"]} high, {summary[\"bandit\"][\"medium\"]} medium, {summary[\"bandit\"][\"low\"]} low severity issues')
+          print(f'   Safety: {summary[\"safety\"][\"vulnerabilities\"]} dependency vulnerabilities')
+          print(f'   Semgrep: {summary[\"semgrep\"][\"findings\"]} security findings')
+          print(f'   Trivy: {summary[\"trivy\"][\"vulnerabilities\"]} container vulnerabilities')
+          print(f'   AI Checks: {summary[\"ai_checks\"][\"findings\"]} potential issues')
+
+          # Determine overall status
+          critical_issues = summary['bandit']['high'] + summary['safety']['vulnerabilities']
+          if critical_issues > 0:
+              print('❌ Critical security issues found!')
+              sys.exit(1)
+          else:
+              print('✅ No critical security issues found')
+          "
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-reports-${{ github.run_id }}
+          path: |
+            bandit-report.json
+            safety-report.json
+            semgrep-report.json
+            trivy-report.json
+            sbom.json
+            ai-security-checks.json
+            security-summary.json
+
+      - name: Create security issue (if critical issues found)
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+
+            // Read security summary
+            let summary = {};
+            if (fs.existsSync('security-summary.json')) {
+              summary = JSON.parse(fs.readFileSync('security-summary.json', 'utf8'));
+            }
+
+            const criticalIssues = (summary.bandit?.high || 0) + (summary.safety?.vulnerabilities || 0);
+
+            if (criticalIssues > 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🚨 Critical Security Issues Found (${criticalIssues})`,
+                body: `## Security Scan Results
+
+                **Critical Issues Found:** ${criticalIssues}
+
+                ### Details:
+                - **Bandit (Code Security):** ${summary.bandit?.high || 0} high severity issues
+                - **Safety (Dependencies):** ${summary.safety?.vulnerabilities || 0} vulnerabilities
+
+                ### Actions Required:
+                1. Review the security reports in the workflow artifacts
+                2. Address critical security issues immediately
+                3. Consider implementing additional security measures
+
+                **Workflow Run:** ${context.payload.workflow_run?.html_url || 'N/A'}`,
+                labels: ['security', 'critical']
+              });
+            }
+
+  dependency-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pip-audit
+          pip-audit --format json > pip-audit-report.json || true
+
+      - name: Audit Node.js dependencies
+        run: |
+          cd frontend
+          npm audit --audit-level moderate --json > ../npm-audit-report.json || true
+
+      - name: Upload dependency audit reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: dependency-audit-${{ github.run_id }}
+          path: |
+            pip-audit-report.json
+            npm-audit-report.json

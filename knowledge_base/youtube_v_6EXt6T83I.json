@@ -1,0 +1,26 @@
+{
+  "id": "youtube_v_6EXt6T83I",
+  "title": "Claude MCP has Changed AI Forever - Here's What You NEED to Know",
+  "url": "https://www.youtube.com/watch?v=v_6EXt6T83I",
+  "description": "Everyone is starting to realize how big of a deal Claude’s Model Context Protocol (MCP) is - it’s the first ever “standard” for connecting LLMs with services like your database, Slack, GitHub, web search, etc. It’s VERY powerful and not well understood by many, so in this video I break down everything you need to know about MCP at a high level.\n\nI go quick here unlike my usual videos, but I call out a bunch of different resources you can use to dive into anything deeper that you’re curious about - MCP architecture, building your own MCP server, integrating your custom AI agent with MCP, etc.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Stagehand, an incredible tool to crawl and scrape websites with natural language which I used in this video:\n\nhttps://github.com/browserbase/stagehand\n\nAnd here is the Stagehand MCP server that I showcased (you will need a Browserbase API key which is free to start!):\n\nhttps://github.com/browserbase/mcp-server-browserbase/blob/main/stagehand/README.md\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nDocumentation for Claude’s MCP:\n\nhttps://modelcontextprotocol.io/introduction\n\nList of MCP Servers on GitHub:\n\nhttps://github.com/modelcontextprotocol/servers\n\nExample n8n MCP Agent:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/n8n-mcp-agent\n\nn8n Community Node for MCP:\n\nhttps://github.com/nerding-io/n8n-nodes-mcp\n\nExample Pydantic AI MCP Agent:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-ai-mcp-agent\n\nDive deep into the architecture of MCP:\n\nhttps://modelcontextprotocol.io/docs/concepts/architecture\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - MCP is Blowing Up\n01:55 - What is MCP?\n03:12 - Making MCP \"Click\" (Deep Dive with Diagrams)\n05:33 - How Agents Work with MCP\n07:16 - Word of Caution - What MCP Isn't\n08:17 - Where You Can Use MCP\n09:47 - MCP Servers You Can Use NOW\n11:18 - How to Set Up MCP Servers\n12:08 - Using MCP Servers in Claude Desktop\n13:11 - MCP Demo in Claude Desktop (Brave + Stagehand)\n14:09 - Building with MCP (Servers and Clients)\n15:22 - Building Your Own MCP Server\n18:09 - MCP with n8n AI Agents\n20:10 - MCP with Python AI Agents\n21:56 - The Future of MCP\n23:51 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250320",
+  "duration": 1465,
+  "view_count": 170876,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

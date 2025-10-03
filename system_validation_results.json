@@ -1,0 +1,245 @@
+{
+  "services": {
+    "main_api": {
+      "status": "error",
+      "response_time_ms": 6.958723068237305,
+      "status_code": 404,
+      "details": "HTTP 404"
+    },
+    "evolutionary_api": {
+      "status": "working",
+      "response_time_ms": 5.441188812255859,
+      "status_code": 200,
+      "details": "HTTP 200"
+    },
+    "unified_kb": {
+      "status": "error",
+      "response_time_ms": 4.925966262817383,
+      "status_code": 404,
+      "details": "HTTP 404"
+    },
+    "weaviate": {
+      "status": "error",
+      "response_time_ms": 10.004997253417969,
+      "status_code": 404,
+      "details": "HTTP 404"
+    },
+    "redis": {
+      "status": "working",
+      "response_time_ms": 0,
+      "details": "Redis connection successful"
+    },
+    "postgres": {
+      "status": "working",
+      "response_time_ms": 0,
+      "details": "PostgreSQL connection successful"
+    }
+  },
+  "models": {
+    "qwen2.5:72b": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)",
+      "details": "Model test failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)"
+    },
+    "qwen2.5:14b": {
+      "status": "working",
+      "response_time_ms": 9510.45823097229,
+      "size_gb": 9.0,
+      "details": "Model responding correctly"
+    },
+    "qwen2.5:7b": {
+      "status": "working",
+      "response_time_ms": 3250.891923904419,
+      "size_gb": 4.7,
+      "details": "Model responding correctly"
+    },
+    "mistral:7b": {
+      "status": "working",
+      "response_time_ms": 3790.0137901306152,
+      "size_gb": 4.4,
+      "details": "Model responding correctly"
+    },
+    "llama3.2:3b": {
+      "status": "working",
+      "response_time_ms": 2015.472173690796,
+      "size_gb": 2.0,
+      "details": "Model responding correctly"
+    },
+    "llava:7b": {
+      "status": "working",
+      "response_time_ms": 2930.6390285491943,
+      "size_gb": 4.7,
+      "details": "Model responding correctly"
+    },
+    "nomic-embed-text:latest": {
+      "status": "error",
+      "response_time_ms": 16.291141510009766,
+      "status_code": 400,
+      "details": "Model error: 400"
+    },
+    "gpt-oss:20b": {
+      "status": "working",
+      "response_time_ms": 5605.376958847046,
+      "size_gb": 14.0,
+      "details": "Model responding correctly"
+    }
+  },
+  "capabilities": {
+    "vision_analysis": {
+      "working": true,
+      "details": "LLaVA model available and working",
+      "model": "llava:7b"
+    },
+    "voice_tts": {
+      "working": true,
+      "details": "TTS service available",
+      "endpoint": "/api/voice/options"
+    },
+    "voice_stt": {
+      "working": false,
+      "details": "STT service not implemented",
+      "status": "not_implemented"
+    },
+    "web_browsing": {
+      "working": true,
+      "details": "Web browsing capability detected",
+      "response": "I'm unable to browse the web directly since I don't have a browser or internet connection. However, "
+    },
+    "file_operations": {
+      "working": false,
+      "details": "File operations not functional - returns generic response",
+      "response": "Files in /Users/christianmerrill/Prompt Engineering:\n\u2022 . (5728 bytes, Oct 1 21:03)\n\u2022 .. (1472 bytes,"
+    },
+    "calculator": {
+      "working": true,
+      "details": "Calculator capability working",
+      "response": "Calculation: 15 * 23 + 7 = 352"
+    },
+    "rag_search": {
+      "working": false,
+      "details": "RAG search failed: 422",
+      "status_code": 422
+    },
+    "agent_selection": {
+      "working": true,
+      "details": "Agent selection working - Quick Responder",
+      "selection_time_ms": 0.7262229919433594,
+      "agent_name": "Quick Responder"
+    },
+    "evolutionary_optimization": {
+      "working": true,
+      "details": "Evolutionary optimization service available",
+      "status": "idle"
+    }
+  },
+  "performance": {
+    "chat_response_time": {
+      "value": 1500.8543332417805,
+      "times": [
+        1617.7740097045898,
+        1477.7510166168213,
+        1407.0379734039307
+      ],
+      "status": "good"
+    },
+    "agent_selection_time": {
+      "value": 0.5476474761962891,
+      "times": [
+        2.5179386138916016,
+        0.11706352233886719,
+        0.03933906555175781,
+        0.031948089599609375,
+        0.031948089599609375
+      ],
+      "status": "excellent"
+    },
+    "rag_query_time": {
+      "value": 5.239566167195638,
+      "times": [
+        7.579803466796875,
+        4.058837890625,
+        4.080057144165039
+      ],
+      "status": "good"
+    },
+    "model_load_time": {
+      "value": 257.9371929168701,
+      "status": "good"
+    }
+  },
+  "gaps": {
+    "services": [
+      {
+        "service": "main_api",
+        "issue": "Service not working",
+        "priority": "critical"
+      },
+      {
+        "service": "unified_kb",
+        "issue": "Service not working",
+        "priority": "high"
+      },
+      {
+        "service": "weaviate",
+        "issue": "Service not working",
+        "priority": "high"
+      }
+    ],
+    "capabilities": [
+      {
+        "capability": "voice_stt",
+        "issue": "STT service not implemented",
+        "priority": "medium"
+      },
+      {
+        "capability": "file_operations",
+        "issue": "File operations not functional - returns generic response",
+        "priority": "high"
+      },
+      {
+        "capability": "rag_search",
+        "issue": "RAG search failed: 422",
+        "priority": "medium"
+      }
+    ],
+    "performance": []
+  },
+  "priorities": {
+    "critical": [
+      {
+        "service": "main_api",
+        "issue": "Service not working",
+        "priority": "critical"
+      }
+    ],
+    "high": [
+      {
+        "service": "unified_kb",
+        "issue": "Service not working",
+        "priority": "high"
+      },
+      {
+        "service": "weaviate",
+        "issue": "Service not working",
+        "priority": "high"
+      },
+      {
+        "capability": "file_operations",
+        "issue": "File operations not functional - returns generic response",
+        "priority": "high"
+      }
+    ],
+    "medium": [
+      {
+        "capability": "voice_stt",
+        "issue": "STT service not implemented",
+        "priority": "medium"
+      },
+      {
+        "capability": "rag_search",
+        "issue": "RAG search failed: 422",
+        "priority": "medium"
+      }
+    ]
+  }
+}

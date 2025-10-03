@@ -1,0 +1,25 @@
+{
+  "id": "youtube_BgcsVi13e-M",
+  "title": "Nuxt + Vercel KV: Coding an AI Agent Network MVP (flow state devLog)",
+  "description": "Discover how to build an AI agent network MVP using Nuxt 3, Vercel KV Store, and Cytoscapejs. This Devlog serves as a practical guide, showcasing just a fraction of the potential of these technologies. In this video we build out the UI for an AI agent network monitoring system. \n\nIn the future (or should I say present), we'll be using agentic software to write code, develop ideas, work faster, prototype, create business value and much more. This devlog showcases what a simple MVP of an AI agent network could look like, so that we can more easily visualize, manage and understand our AI agent systems.\n\n💻 Tech & Tools:\nNuxt: https://nuxt.com/\nVercel KV: https://vercel.com/docs/storage/vercel-kv\nCytoscape: https://js.cytoscape.org/\nTypescript: https://www.typescriptlang.org/\nVSCode: https://code.visualstudio.com/\nNotion: https://www.notion.so/\n\n✅ Use Notion? Love Being Productive? Convert your Notion pages to Personal Audio Books:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=nuxt_vercelkv_agent\n\n📖 Chapters\n00:00 Preview\n00:25 Get In The Zone\n01:00 Create Nuxt App\n02:30 Nuxt Directories, .vue, types\n04:50 Agents.vue\n21:20 Vercel KV - Store Agents\n28:30 Agent Network\n\n#️⃣ Hashtags\n#webdevelopment #devlog #javascript",
+  "url": "https://www.youtube.com/watch?v=BgcsVi13e-M",
+  "upload_date": "20230515",
+  "duration": 1908,
+  "view_count": 580,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "ai",
+    "coding"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "72dd51d46e510abc47d7dbb246b9e1ce"
+}

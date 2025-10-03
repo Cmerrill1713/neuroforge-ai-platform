@@ -1,0 +1,26 @@
+{
+  "id": "youtube_soC4n-nKWF8",
+  "title": "The MCP Integration EVERYONE is Sleeping On (MCP + Custom AI Agents)",
+  "url": "https://www.youtube.com/watch?v=soC4n-nKWF8",
+  "description": "The Model Context Protocol (MCP) has everyone including myself fired up because of the way it standardizes connecting tools to LLMs. With it, creating powerful AI agents that can do practically anything for you has become MUCH more accessible.\n\nHowever, as powerful as it is, it sucks to be limited to using MCP servers (these sets of AI agent tools) within only the existing clients that support MCP like Claude Desktop, Windsurf, and Cursor. What if you want to use MCP servers as tools for AI agents you build yourself?\n\nThat’s what I’m going to show you how to do in this video - integrate MCP servers with custom AI agents. We’ll use Pydantic AI as our AI agent framework, but this process can be done with really any framework or with no framework at all!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nTry CosmicUp today to get all of the best LLMs in a single place for a very low price:\n\nhttps://cosmicup.me/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe code in this video for the Pydantic AI and MCP integration can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-ai-mcp-agent\n\nPrevious video covering everything you need to know about MCP at a high level:\n\nhttps://youtu.be/v_6EXt6T83I\n\nMCP documentation:\n\nhttps://modelcontextprotocol.io/introduction\n\nList of MCP servers on GitHub:\n\nhttps://github.com/modelcontextprotocol/servers\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Don't Sleep on MCP and Custom AI Agents\n01:25 - Why MCP + Custom AI Agents?\n03:03 - Resources I Used to Connect MCP to My Agents\n03:44 - Step by Step - Integrate MCP with Your AI Agents\n06:29 - The Power of MCP + Pydantic AI\n09:03 - CosmicUp\n10:59 - Covering the Basic Example in the Repo\n11:33 - Building Our Custom MCP Client\n17:47 - Final Demo\n19:22 - How This Integration can be Extended\n20:54 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250327",
+  "duration": 1287,
+  "view_count": 51500,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

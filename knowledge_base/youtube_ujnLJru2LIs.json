@@ -1,0 +1,25 @@
+{
+  "id": "youtube_ujnLJru2LIs",
+  "title": "Prompt Engineering Master Class for ENGINEERS with Ollama and LLM (Q4 2024 Update)",
+  "description": "🚀 Think Prompt Engineering is STILL just a buzzword? Good Sir, that is BEYOND incorrect. \n\nAs we approach 2025, its 100% clear: mastering prompt engineering path to asymmetric results.\n\nIf you can master the prompt, you can master knowledge work itself.\n\n📚 Resources:\n- Four Level Prompt Breakdown + Code Snippet: https://gist.github.com/disler/308edf5cc5df664e72fe9a490836d62e\n- Marimo Video Prompt Library Video: https://youtu.be/PcLkBkQujMI\n- Simon Willison Qwen Post: https://simonwillison.net/2024/Nov/12/qwen25-coder/\n- Aider (Paul) Quantization Post: https://aider.chat/2024/11/21/quantization.html\n- My Plan for 2025 (Max Out Compute): https://youtu.be/4SnvMieJiuw\n- Simon Willison’s LLM CLI Library: https://github.com/simonw/llm\n- Ollama: https://ollama.com/\n\nIn this Prompt Engineering Master Class, we dive deep into the art of crafting effective prompts to unlock the full potential of AI agents and LLMs. It doesn't matter if you are working with LLMs like Qwen 2.5, claude 3.5 models, gemini flash, or powerful o1 reasoning models. The Prompt is the fundamental unit of all of it. 🔥 Whether you're an aspiring prompt engineer or an experienced developer, understanding the nuances of prompt design is crucial for creating agentic workflows and metaprompting strategies.\n\nWe'll walk you through a four-level prompt framework that turns simple prompts into powerful, reusable assets. Using cursor, ollama, and llm as our primary tools, learn how to structure your prompts, provide clear examples, and incorporate dynamic variables to scale your applications.\n\nDiscover how tools like Simon Willison's LLM CLI Library and Ollama can supercharge your development process. Enabling you to rapidly iterate over your prompts. We'll also explore using the Qwen 2.5 model as well as openais, anthropic, and gemini models and discuss how to prepare for the AI innovations of 2025.\n\nJoin IndyDevDan as we explore the future of prompt engineering and AI agents.\n\nDon't miss out on mastering this essential skill that's shaping the future of AI and prompt engineering!\n\nNo matter what...\nStay focused and keep building.\n\n📖 Chapters\n00:00 THE PROMPT\n01:32 Level 1 Prompt - Master the basics\n07:50 Level 2 Prompt - Structure your prompt\n14:38 Level 3 Prompt - CLEAR examples\n22:45 Level 4 Prompt - Dynamic Variables\n26:35 Build your prompt library\n\n#promptengineering #llm #aiagent",
+  "url": "https://www.youtube.com/watch?v=ujnLJru2LIs",
+  "upload_date": "20241125",
+  "duration": 1747,
+  "view_count": 38356,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "51b292e1ee745c1271e576abe102d110"
+}

@@ -1,0 +1,554 @@
+#!/usr/bin/env python3
+""'
+Optimized Response Cache - Multi-Level Caching System
+Implements L1 (memory) + L2 (Redis) caching for API responses.
+
+Based on Google AI documentation patterns from the improvement plan.
+""'
+
+import asyncio
+import hashlib
+import json
+import logging
+import time
+from typing import Dict, Any, List, Optional, Union
+from dataclasses import dataclass, asdict
+from datetime import datetime, timedelta
+from functools import wraps
+
+# Caching imports
+try:
+    import redis.asyncio as redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    REDIS_AVAILABLE = False
+
+try:
+    from cachetools import TTLCache
+    CACHETOOLS_AVAILABLE = True
+except ImportError:
+    CACHETOOLS_AVAILABLE = False
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+@dataclass
+class CacheEntry:
+    """TODO: Add docstring."""
+    """Cache entry with metadata.""'
+    data: Any
+    timestamp: datetime
+    ttl: int
+    hits: int = 0
+    size_bytes: int = 0
+
+    def is_expired(self) -> bool:
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        return datetime.now() - self.timestamp > timedelta(seconds=self.ttl)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        return {
+            "data': self.data,
+            "timestamp': self.timestamp.isoformat(),
+            "ttl': self.ttl,
+            "hits': self.hits,
+            "size_bytes': self.size_bytes
+        }
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "CacheEntry':
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        return cls(
+            data=data["data'],
+            timestamp=datetime.fromisoformat(data["timestamp']),
+            ttl=data["ttl'],
+            hits=data["hits'],
+            size_bytes=data["size_bytes']
+        )
+
+@dataclass
+class CacheStats:
+    """TODO: Add docstring."""
+    """Cache performance statistics.""'
+    l1_hits: int = 0
+    l1_misses: int = 0
+    l2_hits: int = 0
+    l2_misses: int = 0
+    total_requests: int = 0
+    avg_response_time: float = 0.0
+    cache_size_mb: float = 0.0
+
+    @property
+    def l1_hit_rate(self) -> float:
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        total_l1 = self.l1_hits + self.l1_misses
+        return self.l1_hits / total_l1 if total_l1 > 0 else 0.0
+
+    @property
+    def l2_hit_rate(self) -> float:
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        total_l2 = self.l2_hits + self.l2_misses
+        return self.l2_hits / total_l2 if total_l2 > 0 else 0.0
+
+    @property
+    def overall_hit_rate(self) -> float:
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        total_hits = self.l1_hits + self.l2_hits
+        return total_hits / self.total_requests if self.total_requests > 0 else 0.0
+
+class OptimizedResponseCache:
+    """TODO: Add docstring."""
+    """Initialize cache system.""'
+    ""'
+    Multi-level response cache system.
+
+    L1 Cache: In-memory TTL cache (fastest, limited size)
+    L2 Cache: Redis cache (persistent, larger capacity)
+
+    Target: > 80% cache hit rate
+    ""'
+
+    def __init__(
+        """TODO: Add docstring."""
+        self,
+        l1_max_size: int = 1000,
+        l1_ttl: int = 300,  # 5 minutes
+        l2_ttl: int = 3600,  # 1 hour
+        redis_host: str = "localhost',
+        redis_port: int = 6379,
+        redis_db: int = 2  # Use db=2 for response cache
+    ):
+        self.l1_ttl = l1_ttl
+        self.l2_ttl = l2_ttl
+
+        # L1 Cache (Memory)
+        if CACHETOOLS_AVAILABLE:
+            self.l1_cache = TTLCache(maxsize=l1_max_size, ttl=l1_ttl)
+        else:
+            self.l1_cache = {}  # Fallback dict
+            self.l1_max_size = l1_max_size
+
+        # L2 Cache (Redis)
+        self.redis_cache = None
+        if REDIS_AVAILABLE:
+            try:
+                self.redis_cache = redis.Redis(
+                    host=redis_host,
+                    port=redis_port,
+                    db=redis_db,
+                    decode_responses=True,
+                    socket_connect_timeout=5,
+                    socket_keepalive=True,
+                    socket_keepalive_options={}
+                )
+            except Exception as e:
+                logger.warning(f"⚠️ Redis initialization failed: {e}')
+                self.redis_cache = None
+
+        # Statistics
+        self.stats = CacheStats()
+
+        # Cache key prefix
+        self.key_prefix = "response_cache'
+
+        logger.info("🚀 Initializing Optimized Response Cache...')
+
+    async def initialize(self) -> bool:
+        """Initialize the cache system.""'
+        try:
+            # Test Redis connection
+            if self.redis_cache:
+                await self.redis_cache.ping()
+                logger.info("✅ Redis L2 cache connected')
+            else:
+                logger.info("⚠️ Redis L2 cache not available, using L1 only')
+
+            logger.info("🎉 Response cache system ready!')
+            return True
+
+        except Exception as e:
+            logger.error(f"❌ Cache initialization failed: {e}')
+            return False
+
+    async def get(self, key: str) -> Optional[Any]:
+        ""'
+        Get value from cache layers.
+
+        Returns: Cached data or None if not found/expired
+        ""'
+        start_time = time.time()
+
+        try:
+            # L1 Cache check (memory)
+            cache_key = f"{self.key_prefix}:{key}'
+
+            if CACHETOOLS_AVAILABLE:
+                # TTLCache handles expiration automatically
+                if cache_key in self.l1_cache:
+                    entry = self.l1_cache[cache_key]
+                    if isinstance(entry, CacheEntry):
+                        entry.hits += 1
+                        self.stats.l1_hits += 1
+                        self.stats.total_requests += 1
+
+                        logger.debug(f"⚡ L1 cache hit: {key}')
+                        return entry.data
+                    else:
+                        # Legacy entry, convert
+                        self.l1_cache[cache_key] = CacheEntry(
+                            data=entry,
+                            timestamp=datetime.now(),
+                            ttl=self.l1_ttl,
+                            hits=1
+                        )
+                        self.stats.l1_hits += 1
+                        self.stats.total_requests += 1
+                        return entry
+
+                self.stats.l1_misses += 1
+            else:
+                # Fallback dict implementation
+                if cache_key in self.l1_cache:
+                    entry = self.l1_cache[cache_key]
+                    if not entry.is_expired():
+                        entry.hits += 1
+                        self.stats.l1_hits += 1
+                        self.stats.total_requests += 1
+                        return entry.data
+                    else:
+                        del self.l1_cache[cache_key]
+
+                self.stats.l1_misses += 1
+
+            # L2 Cache check (Redis)
+            if self.redis_cache:
+                try:
+                    cached_data = await self.redis_cache.get(cache_key)
+                    if cached_data:
+                        # Deserialize and store in L1
+                        entry_data = json.loads(cached_data)
+                        entry = CacheEntry.from_dict(entry_data)
+
+                        if not entry.is_expired():
+                            # Store in L1 cache
+                            if CACHETOOLS_AVAILABLE:
+                                self.l1_cache[cache_key] = entry
+                            else:
+                                self.l1_cache[cache_key] = entry
+
+                            self.stats.l2_hits += 1
+                            self.stats.total_requests += 1
+
+                            logger.debug(f"⚡ L2 cache hit: {key}')
+                            return entry.data
+                        else:
+                            # Remove expired entry from Redis
+                            await self.redis_cache.delete(cache_key)
+
+                    self.stats.l2_misses += 1
+
+                except Exception as e:
+                    logger.warning(f"⚠️ Redis get failed: {e}')
+                    self.stats.l2_misses += 1
+
+            # Cache miss
+            self.stats.total_requests += 1
+            response_time = time.time() - start_time
+            self._update_avg_response_time(response_time)
+
+            logger.debug(f"❌ Cache miss: {key}')
+            return None
+
+        except Exception as e:
+            logger.error(f"❌ Cache get failed: {e}')
+            return None
+
+    async def set(self, key: str, value: Any, ttl: Optional[int] = None) -> bool:
+        ""'
+        Set value in cache layers.
+
+        Args:
+            key: Cache key
+            value: Data to cache
+            ttl: Time to live in seconds (uses default if None)
+
+        Returns: True if successful, False otherwise
+        ""'
+        try:
+            cache_key = f"{self.key_prefix}:{key}'
+            cache_ttl = ttl or self.l1_ttl
+
+            # Calculate size
+            try:
+                size_bytes = len(json.dumps(value, default=str).encode("utf-8'))
+            except:
+                size_bytes = 0
+
+            # Create cache entry
+            entry = CacheEntry(
+                data=value,
+                timestamp=datetime.now(),
+                ttl=cache_ttl,
+                hits=0,
+                size_bytes=size_bytes
+            )
+
+            # Store in L1 cache
+            if CACHETOOLS_AVAILABLE:
+                self.l1_cache[cache_key] = entry
+            else:
+                # Fallback: manage size manually
+                if len(self.l1_cache) >= self.l1_max_size:
+                    await self._evict_oldest_l1()
+                self.l1_cache[cache_key] = entry
+
+            # Store in L2 cache (Redis)
+            if self.redis_cache:
+                try:
+                    serialized_entry = json.dumps(entry.to_dict())
+                    await self.redis_cache.setex(cache_key, self.l2_ttl, serialized_entry)
+                except Exception as e:
+                    logger.warning(f"⚠️ Redis set failed: {e}')
+
+            logger.debug(f"💾 Cached: {key} ({size_bytes} bytes)')
+            return True
+
+        except Exception as e:
+            logger.error(f"❌ Cache set failed: {e}')
+            return False
+
+    async def _evict_oldest_l1(self) -> None:
+        """Evict oldest entry from L1 cache.""'
+        if not self.l1_cache:
+            return
+
+        # Find oldest entry
+        oldest_key = None
+        oldest_time = datetime.now()
+
+        for key, entry in self.l1_cache.items():
+            if isinstance(entry, CacheEntry) and entry.timestamp < oldest_time:
+                oldest_time = entry.timestamp
+                oldest_key = key
+
+        if oldest_key:
+            del self.l1_cache[oldest_key]
+            logger.debug(f"🗑️ Evicted oldest L1 entry: {oldest_key}')
+
+    def _update_avg_response_time(self, response_time: float) -> None:
+        """TODO: Add docstring."""
+        """Update average response time.""'
+        total = self.stats.total_requests
+        current_avg = self.stats.avg_response_time
+        self.stats.avg_response_time = (
+            (current_avg * (total - 1) + response_time) / total
+        )
+
+    async def invalidate(self, key: str) -> bool:
+        """Invalidate cache entry.""'
+        try:
+            cache_key = f"{self.key_prefix}:{key}'
+
+            # Remove from L1
+            if cache_key in self.l1_cache:
+                del self.l1_cache[cache_key]
+
+            # Remove from L2
+            if self.redis_cache:
+                await self.redis_cache.delete(cache_key)
+
+            logger.debug(f"🗑️ Invalidated cache: {key}')
+            return True
+
+        except Exception as e:
+            logger.error(f"❌ Cache invalidation failed: {e}')
+            return False
+
+    async def clear_all(self) -> bool:
+        """Clear all cache layers.""'
+        try:
+            # Clear L1 cache
+            self.l1_cache.clear()
+
+            # Clear L2 cache
+            if self.redis_cache:
+                # Get all keys with our prefix
+                keys = await self.redis_cache.keys(f"{self.key_prefix}:*')
+                if keys:
+                    await self.redis_cache.delete(*keys)
+
+            logger.info("✅ All caches cleared')
+            return True
+
+        except Exception as e:
+            logger.error(f"❌ Cache clear failed: {e}')
+            return False
+
+    async def get_stats(self) -> Dict[str, Any]:
+        """Get comprehensive cache statistics.""'
+        # Calculate cache size
+        cache_size_bytes = 0
+        for entry in self.l1_cache.values():
+            if isinstance(entry, CacheEntry):
+                cache_size_bytes += entry.size_bytes
+            else:
+                try:
+                    cache_size_bytes += len(json.dumps(entry, default=str).encode("utf-8'))
+                except:
+                    pass
+
+        # Get Redis info
+        redis_info = {}
+        if self.redis_cache:
+            try:
+                redis_stats = await self.redis_cache.info()
+                redis_info = {
+                    "connected': True,
+                    "memory_used": redis_stats.get("used_memory_human", "unknown'),
+                    "keys': await self.redis_cache.dbsize()
+                }
+            except Exception:
+                redis_info = {"connected': False}
+
+        return {
+            "performance': {
+                "total_requests': self.stats.total_requests,
+                "l1_hit_rate': self.stats.l1_hit_rate,
+                "l2_hit_rate': self.stats.l2_hit_rate,
+                "overall_hit_rate': self.stats.overall_hit_rate,
+                "avg_response_time': self.stats.avg_response_time,
+                "target_met': self.stats.overall_hit_rate > 0.8  # 80% target
+            },
+            "cache_layers': {
+                "l1_size': len(self.l1_cache),
+                "l1_size_mb': cache_size_bytes / (1024 * 1024),
+                "l1_ttl': self.l1_ttl,
+                "l2_ttl': self.l2_ttl
+            },
+            "redis': redis_info,
+            "hits_misses': {
+                "l1_hits': self.stats.l1_hits,
+                "l1_misses': self.stats.l1_misses,
+                "l2_hits': self.stats.l2_hits,
+                "l2_misses': self.stats.l2_misses
+            }
+        }
+
+    async def warm_cache(self, warmup_data: Dict[str, Any]) -> int:
+        """Warm up cache with predefined data.""'
+        warmed_count = 0
+
+        for key, value in warmup_data.items():
+            if await self.set(key, value):
+                warmed_count += 1
+
+        logger.info(f"🔥 Cache warmed with {warmed_count} entries')
+        return warmed_count
+
+# Decorator for automatic caching
+def cached_response(cache: OptimizedResponseCache, ttl: Optional[int] = None, key_func=None):
+    """TODO: Add docstring."""
+    """Initialize cache system.""'
+    ""'
+    Decorator to automatically cache function responses.
+
+    Args:
+        cache: OptimizedResponseCache instance
+        ttl: Time to live for cached response
+        key_func: Function to generate cache key from function arguments
+    ""'
+    def decorator(func):
+        """TODO: Add docstring."""
+        """Initialize cache system.""'
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            # Generate cache key
+            if key_func:
+                cache_key = key_func(*args, **kwargs)
+            else:
+                # Default key generation
+                key_parts = [func.__name__]
+                key_parts.extend(str(arg) for arg in args)
+                key_parts.extend(f"{k}={v}' for k, v in sorted(kwargs.items()))
+                cache_key = hashlib.md5("|'.join(key_parts).encode()).hexdigest()
+
+            # Try cache first
+            cached_result = await cache.get(cache_key)
+            if cached_result is not None:
+                return cached_result
+
+            # Execute function
+            result = await func(*args, **kwargs)
+
+            # Cache result
+            await cache.set(cache_key, result, ttl)
+
+            return result
+
+        return wrapper
+    return decorator
+
+# Example usage and testing
+async def main():
+    """Test the optimized response cache.""'
+    cache = OptimizedResponseCache()
+
+    if not await cache.initialize():
+        logger.error("❌ Failed to initialize cache')
+        return
+
+    # Test basic operations
+    test_data = {
+        "user:123": {"name": "John Doe", "email": "john@example.com'},
+        "api:search": {"query": "python", "results": ["result1", "result2']},
+        "config:settings": {"theme": "dark", "language": "en'}
+    }
+
+    # Set test data
+    for key, value in test_data.items():
+        await cache.set(key, value)
+
+    # Test cache hits
+    for key in test_data.keys():
+        result = await cache.get(key)
+        if result:
+            logger.info(f"✅ Cache hit: {key}')
+        else:
+            logger.error(f"❌ Cache miss: {key}')
+
+    # Get statistics
+    stats = await cache.get_stats()
+    logger.info(f"📊 Cache stats:')
+    logger.info(f"   Hit rate: {stats['performance']['overall_hit_rate']:.2%}')
+    logger.info(f"   L1 hit rate: {stats['performance']['l1_hit_rate']:.2%}')
+    logger.info(f"   Target met (>80%): {stats['performance']['target_met']}')
+
+    # Test decorator
+    @cached_response(cache, ttl=60)
+    async def expensive_computation(n: int) -> int:
+        await asyncio.sleep(0.1)  # Simulate work
+        return n * n
+
+    # First call (cache miss)
+    start = time.time()
+    result1 = await expensive_computation(5)
+    time1 = time.time() - start
+
+    # Second call (cache hit)
+    start = time.time()
+    result2 = await expensive_computation(5)
+    time2 = time.time() - start
+
+    logger.info(f"🔢 Computation results: {result1}, {result2}')
+    logger.info(f"⏱️ First call: {time1:.3f}s, Second call: {time2:.3f}s')
+
+if __name__ == "__main__':
+    asyncio.run(main())

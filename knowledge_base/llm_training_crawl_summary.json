@@ -1,0 +1,13 @@
+{
+  "crawl_type": "llm_training_resources",
+  "timestamp": "2025-09-28T21:52:05.033831",
+  "total_items": 9,
+  "github_repos": 0,
+  "training_docs": 9,
+  "sources_crawled": [
+    "meta_llama_repos",
+    "facebook_research_repos",
+    "training_docs",
+    "hugging_face_models"
+  ]
+}

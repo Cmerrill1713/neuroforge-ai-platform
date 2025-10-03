@@ -1,377 +1,77 @@
 {
-  "timestamp": "2025-09-28T10:11:56.734833",
-  "total_tests": 26,
-  "overall_metrics": {
-    "avg_response_time": 4.319332214502188,
-    "min_response_time": 0.0011699199676513672,
-    "max_response_time": 20.003838062286377,
-    "p95_response_time": 20.003531396389008,
-    "success_rate": 0.7692307692307693,
-    "error_rate": 0.23076923076923073,
-    "throughput": 0.2315172694155113
-  },
-  "test_results": [
+  "passed": 8,
+  "failed": 6,
+  "total": 14,
+  "details": [
     {
-      "test_name": "endpoint_availability",
+      "test": "System Health Check",
+      "success": true,
+      "details": "Status: healthy"
+    },
+    {
+      "test": "Voice Health Check",
+      "success": true,
+      "details": "Overall: None, Status: healthy"
+    },
+    {
+      "test": "Voice Options",
+      "success": true,
+      "details": "Available voices: 6"
+    },
+    {
+      "test": "Enhanced RAG Health",
+      "success": true,
+      "details": "Status: healthy"
+    },
+    {
+      "test": "Enhanced RAG Search",
+      "success": true,
+      "details": "Results: 0"
+    },
+    {
+      "test": "Enhanced MCP Health",
       "success": false,
-      "response_time": 0.01782512664794922,
-      "response_size": 1,
-      "error_message": null,
-      "metadata": {
-        "available_endpoints": 1,
-        "total_endpoints": 6,
-        "success_rate": 0.16666666666666666
-      }
+      "details": "HTTP 404"
     },
     {
-      "test_name": "chat_quality_1",
+      "test": "Enhanced MCP Tools",
       "success": true,
-      "response_time": 3.0818350315093994,
-      "response_size": 209,
-      "error_message": null,
-      "metadata": {
-        "message": "Hello, how are you?",
-        "response": "Hello! I'm an AI assistant created by Alibaba Cloud, so I don't have personal feelings or experience...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.75,
-        "response_length": 209
-      }
+      "details": "Available tools: 4"
     },
     {
-      "test_name": "chat_quality_2",
+      "test": "Self-Healing Health",
       "success": true,
-      "response_time": 3.365868091583252,
-      "response_size": 1259,
-      "error_message": null,
-      "metadata": {
-        "message": "Explain machine learning in simple terms",
-        "response": "Sure! Machine learning is like teaching a computer to learn on its own without being explicitly prog...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.9,
-        "response_length": 1259
-      }
+      "details": "Status: healthy"
     },
     {
-      "test_name": "chat_quality_3",
-      "success": true,
-      "response_time": 5.82459282875061,
-      "response_size": 1800,
-      "error_message": null,
-      "metadata": {
-        "message": "Write a Python function to calculate fibonacci numbers",
-        "response": "Certainly! Below is a simple Python function to calculate Fibonacci numbers using both an iterative ...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.9,
-        "response_length": 1800
-      }
-    },
-    {
-      "test_name": "chat_quality_4",
-      "success": true,
-      "response_time": 5.879884958267212,
-      "response_size": 2679,
-      "error_message": null,
-      "metadata": {
-        "message": "What are the benefits of renewable energy?",
-        "response": "Renewable energy sources offer numerous benefits compared to traditional fossil fuels. Here are some...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.75,
-        "response_length": 2679
-      }
-    },
-    {
-      "test_name": "chat_quality_5",
-      "success": true,
-      "response_time": 2.17818021774292,
-      "response_size": 655,
-      "error_message": null,
-      "metadata": {
-        "message": "Debug this code: def add(a, b): return a + b + 1",
-        "response": "The provided Python function `add` is almost correct but seems to have an unintended side effect of ...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.9,
-        "response_length": 655
-      }
-    },
-    {
-      "test_name": "chat_quality_6",
-      "success": true,
-      "response_time": 6.4978930950164795,
-      "response_size": 2573,
-      "error_message": null,
-      "metadata": {
-        "message": "Summarize the key points of artificial intelligence",
-        "response": "Artificial Intelligence (AI) refers to the development of computer systems that can perform tasks th...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.9,
-        "response_length": 2573
-      }
-    },
-    {
-      "test_name": "chat_quality_7",
-      "success": true,
-      "response_time": 6.6983208656311035,
-      "response_size": 2654,
-      "error_message": null,
-      "metadata": {
-        "message": "How does a neural network work?",
-        "response": "Neural networks are complex computational models inspired by the structure and function of biologica...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.75,
-        "response_length": 2654
-      }
-    },
-    {
-      "test_name": "chat_quality_8",
-      "success": true,
-      "response_time": 6.709012985229492,
-      "response_size": 2074,
-      "error_message": null,
-      "metadata": {
-        "message": "Create a recipe for chocolate cake",
-        "response": "Certainly! Here's a simple and delicious recipe for a classic chocolate cake that you can enjoy any ...",
-        "agent_name": "generalist",
-        "confidence": 0.52,
-        "quality_score": 0.9,
-        "response_length": 2074
-      }
-    },
-    {
-      "test_name": "agent_selection_text_generation",
-      "success": true,
-      "response_time": 0.6308231353759766,
-      "response_size": 202,
-      "error_message": null,
-      "metadata": {
-        "message": "What is the weather like?",
-        "expected_task_type": "text_generation",
-        "selected_agent": "generalist",
-        "task_complexity": 0.05,
-        "agent_appropriate": true
-      }
-    },
-    {
-      "test_name": "agent_selection_code_generation",
+      "test": "Self-Healing Stats",
       "success": false,
-      "response_time": 3.3597731590270996,
-      "response_size": 1053,
-      "error_message": null,
-      "metadata": {
-        "message": "Write a Python function to sort a list",
-        "expected_task_type": "code_generation",
-        "selected_agent": "chaos_architect",
-        "task_complexity": 0.0,
-        "agent_appropriate": false
-      }
+      "details": "HTTP 404"
     },
     {
-      "test_name": "agent_selection_analysis",
+      "test": "Vision API Health",
       "success": false,
-      "response_time": 20.003838062286377,
-      "response_size": 0,
-      "error_message": "HTTPConnectionPool(host='localhost', port=8002): Read timed out. (read timeout=20)",
-      "metadata": null
+      "details": "HTTP 404"
     },
     {
-      "test_name": "agent_selection_debugging",
+      "test": "Optimized Models Status",
       "success": false,
-      "response_time": 20.00296187400818,
-      "response_size": 0,
-      "error_message": "HTTPConnectionPool(host='localhost', port=8002): Read timed out. (read timeout=20)",
-      "metadata": null
+      "details": "HTTP 404"
     },
     {
-      "test_name": "agent_selection_reasoning_deep",
-      "success": true,
-      "response_time": 11.652728080749512,
-      "response_size": 1151,
-      "error_message": null,
-      "metadata": {
-        "message": "Explain quantum computing",
-        "expected_task_type": "reasoning_deep",
-        "selected_agent": "quantum_reasoner",
-        "task_complexity": 0.0,
-        "agent_appropriate": true
-      }
-    },
-    {
-      "test_name": "agent_selection_quicktake",
+      "test": "MLX Processing Health",
       "success": false,
-      "response_time": 3.3628690242767334,
-      "response_size": 1437,
-      "error_message": null,
-      "metadata": {
-        "message": "Quick summary of AI trends",
-        "expected_task_type": "quicktake",
-        "selected_agent": "quantum_reasoner",
-        "task_complexity": 0.0,
-        "agent_appropriate": false
-      }
+      "details": "HTTP 404"
     },
     {
-      "test_name": "concurrent_request_0",
-      "success": true,
-      "response_time": 2.2908031940460205,
-      "response_size": 153,
-      "error_message": null,
-      "metadata": {
-        "request_id": 0
-      }
-    },
-    {
-      "test_name": "concurrent_request_3",
-      "success": true,
-      "response_time": 2.6832470893859863,
-      "response_size": 52,
-      "error_message": null,
-      "metadata": {
-        "request_id": 3
-      }
-    },
-    {
-      "test_name": "concurrent_request_1",
-      "success": true,
-      "response_time": 2.6841180324554443,
-      "response_size": 102,
-      "error_message": null,
-      "metadata": {
-        "request_id": 1
-      }
-    },
-    {
-      "test_name": "concurrent_request_4",
-      "success": true,
-      "response_time": 2.683401107788086,
-      "response_size": 135,
-      "error_message": null,
-      "metadata": {
-        "request_id": 4
-      }
-    },
-    {
-      "test_name": "concurrent_request_2",
-      "success": true,
-      "response_time": 2.6842029094696045,
-      "response_size": 42,
-      "error_message": null,
-      "metadata": {
-        "request_id": 2
-      }
-    },
-    {
-      "test_name": "knowledge_search_machine_learning",
-      "success": true,
-      "response_time": 0.001973867416381836,
-      "response_size": 1,
-      "error_message": null,
-      "metadata": {
-        "query": "machine learning",
-        "results_count": 1,
-        "results": [
-          {
-            "entry": {
-              "id": "ml_basics",
-              "title": "Machine Learning Basics",
-              "keywords": [
-                "machine learning",
-                "AI",
-                "algorithms"
-              ],
-              "retrieval_tags": [
-                "ML",
-                "AI",
-                "basics"
-              ],
-              "domain": "artificial intelligence"
-            },
-            "score": 15
-          }
-        ]
-      }
-    },
-    {
-      "test_name": "knowledge_search_AI_algorithms",
-      "success": true,
-      "response_time": 0.001344919204711914,
-      "response_size": 0,
-      "error_message": null,
-      "metadata": {
-        "query": "AI algorithms",
-        "results_count": 0,
-        "results": []
-      }
-    },
-    {
-      "test_name": "knowledge_search_python_programming",
-      "success": true,
-      "response_time": 0.0012049674987792969,
-      "response_size": 0,
-      "error_message": null,
-      "metadata": {
-        "query": "python programming",
-        "results_count": 0,
-        "results": []
-      }
-    },
-    {
-      "test_name": "knowledge_search_data_analysis",
-      "success": true,
-      "response_time": 0.0012850761413574219,
-      "response_size": 0,
-      "error_message": null,
-      "metadata": {
-        "query": "data analysis",
-        "results_count": 0,
-        "results": []
-      }
-    },
-    {
-      "test_name": "knowledge_search_neural_networks",
-      "success": true,
-      "response_time": 0.0011699199676513672,
-      "response_size": 0,
-      "error_message": null,
-      "metadata": {
-        "query": "neural networks",
-        "results_count": 0,
-        "results": []
-      }
-    },
-    {
-      "test_name": "system_monitoring",
+      "test": "Chat Functionality",
       "success": false,
-      "response_time": 0.0034799575805664062,
-      "response_size": 0,
-      "error_message": "Monitoring endpoints failed: agents=False, models=True, metrics=False",
-      "metadata": null
+      "details": "HTTPConnectionPool(host='localhost', port=8004): Read timed out. (read timeout=15)"
+    },
+    {
+      "test": "File Cleanup System",
+      "success": true,
+      "details": "Exit code: 0"
     }
-  ],
-  "recommendations": [
-    "\u26a0\ufe0f MEDIUM: Response time > 2s - Consider response optimization",
-    "\ud83d\udea8 HIGH PRIORITY: Success rate < 90% - Investigate error causes",
-    "\ud83d\udd0d INVESTIGATE: Most common error: Unknown (3 occurrences)",
-    "\ud83d\udcca OPTIMIZE: High P95 response time - Consider load balancing or resource scaling",
-    "\ud83e\udd16 IMPROVE: Agent selection accuracy needs improvement",
-    "\ud83d\udcda EXPAND: Knowledge base has limited content - Consider adding more entries"
-  ],
-  "summary": {
-    "overall_status": "NEEDS_IMPROVEMENT",
-    "successful_tests": 20,
-    "failed_tests": 6,
-    "average_response_time": "4.32s",
-    "success_rate": "76.9%",
-    "throughput": "0.23 requests/second",
-    "key_issues": [
-      null,
-      null,
-      "HTTPConnectionPool(host='localhost', port=8002): Read timed out. (read timeout=20)"
-    ]
-  }
+  ]
 }

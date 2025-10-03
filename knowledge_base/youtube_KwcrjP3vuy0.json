@@ -1,0 +1,27 @@
+{
+  "id": "youtube_KwcrjP3vuy0",
+  "title": "OpenAI Macro & Micro Strategy: Master Assistants API, Threads, Messages, and Runs",
+  "description": "When OpenAI announces a new set of technology - 1000 startups INSTANTLY vanish. Let's minimize the chances that happens to our products by focusing on embracing GPT technology without overcommitting and by reusable, composable building blocks. Today, we answer a critical question of how to use the Assistants API and more importantly, WHEN to use the Assistants API.\n\nIn this video, we delve into GPT-4 Turbo Assistants and their practical applications for builders and engineers. We'll explore a hands-on approach to integrating these technologies into our ongoing project: a Postgres data analytics tool that accelerates the way we interact with our SQL databases. Our focus is on practical, reusable Python structures, offering insights into how GPT-4 Turbo can enhance your product creation process with faster, safer, and more efficient solutions. We discuss the macro and micro implications of OpenAI's latest technologies and how we can stay on the edge of AI product engineering and enhance our personal engineering workflows.\n\nWe'll discuss the question of which technologies to focus on - AutoGen, Assistants API, or simple chat completion calls for your projects. Uncover the ideal solution tailored to your specific application needs, be it for automated tasks, context-rich interactions, or quick, straightforward queries.\n\nThis series isn't just theoretical – we're building real, applicable tools. In this video we create a reusable GPT-4 Turbo Assistant: TURBO4, and demonstrate its integration with our existing postgres multi-agent system. Our approach is clear and structured, aimed at maximizing the return on your investment in learning and applying these new technologies. We'll provide all necessary code links in the description. If you're intrigued by the potential of conversing with your database or eager to be among the first to test our upcoming 'talk to your database' product, the link will be in the description for that as well. Subscribe, like, and stay tuned for on the ground insights into utilizing the incredible power of GPT-4 Turbo for your engineering and product development endeavors.\n\n👍 THE CODEBASE (Turbo4)\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v7-turbo4-assistants-threads-messages\n\n🔥 TALK TO YOUR DATABASE\nhttps://talktoyourdatabase.com\n\n🤖💻 AI Engineering Resources\nOpenAI Assistance API: https://platform.openai.com/docs/assistants/overview\n\n(1) Watch Part One\nhttps://youtu.be/jmDMusirPKA\n\n(2) Watch Part Two\nhttps://youtu.be/JjVvYDPVrAQ\n    \n(3) Watch Part Three\nhttps://youtu.be/4o8tymMQ5GM\n\n(4) Watch Part Four\nhttps://youtu.be/CKo-czvxFkY\n\n(5) Watch Part Five\nhttps://youtu.be/UA6IVMDPuC8\n\n(6) Watch Part Six\nhttps://youtu.be/XGCWyfA3rgQ\n\n📘 Chapters\n00:00 OpenAI Just Killed 1k+ Startups\n01:35 What we can do on a daily basis\n01:00 Recap Our Postgres Data Analytics Tool\n05:05 Assistants API: Break it down\n06:40 Turbo4 - Assistants API Wrapper Class\n10:04 Turbo4 - API Deep Dive\n17:14 Replace AutoGen Data Analytics Team with turbo4\n20:56 Turbo4 Assistant In Action\n24:00 Assistants API vs AutoGen vs Plain LLM\n26:23 OpenAI Macro & Micro Strategy\n27:30 Macro: OpenAI is becoming the Apple for LLMs\n28:40 Micro: Building blocks, Composability, Reusability\n29:50 The Ground Is Shifting Beneath Us\n30:40 Shift and Move with the Ground\n31:37 The Golden Nugget\n32:00 Three Videos Left - 7 / 10\n\n\n🐛 tags\n#agentic #gpt #engineering",
+  "url": "https://www.youtube.com/watch?v=KwcrjP3vuy0",
+  "upload_date": "20231113",
+  "duration": 2009,
+  "view_count": 9360,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "api",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "9132bb33cb2a120394e985dbca4cc1c2"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_hKrl5Gr7hM0",
+  "title": "Create Your Own Private Local AI Cloud Stack in Under 20 Minutes",
+  "url": "https://www.youtube.com/watch?v=hKrl5Gr7hM0",
+  "description": "I've gotten a LOT of requests for this video so I'm really excited for this one!\n\nI’ve covered the Local AI Package a lot on my channel. It’s the easiest way to get all your local AI up and running in a single stack - your LLMs (Ollama), database (Supabase and Qdrant), automation tools (n8n + Flowise), local web search (SearXNG), and user interface (Open WebUI).\n\nBut even with local AI, we don’t always want to run it on our own computer! Sometimes you want others (like your internal team) using your local AI setup, you want it running 24/7, you don’t want the stack hogging resources on your machine, you want access to hardware you don’t have, or all of the above.\n\nIn this video, I’ll show you step by step how to deploy the local AI package to a private cloud instance so you can have all the benefits of local AI without having to run it on your machine. This even includes setting up subdomains for all the services like n8n and Open WebUI and the entire process could NOT be easier with some new additions to the package!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nLocal AI Package (100% free and open source):\n\nhttps://github.com/coleam00/local-ai-packaged\n\nVideo showing how to deploy and use the local AI package on your own computer (similar process, but I also show a simple n8n agent):\n\nhttps://youtu.be/pOsO40HSbOo\n\nVideo where I cover using this package to build a local AI agent with n8n:\n\nhttps://youtu.be/T2QWhXpnT5I\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Why Deploy Your Local AI Stack\n01:38 - Local AI Package Overview\n03:16 - Cloud Hosting Platform Options\n04:59 - Creating our Linux Cloud Instance\n06:44 - Configuring Firewalls\n08:18 - DNS Setup for Subdomains\n09:30 - Installing the Local AI Package\n14:31 - Showcasing the End Result!\n16:17 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250313",
+  "duration": 1009,
+  "view_count": 54272,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

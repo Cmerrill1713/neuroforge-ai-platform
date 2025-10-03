@@ -1,0 +1,26 @@
+{
+  "id": "youtube_T2QWhXpnT5I",
+  "title": "The ULTIMATE n8n RAG AI Agent Template - Local AI Edition",
+  "url": "https://www.youtube.com/watch?v=T2QWhXpnT5I",
+  "description": "Retrieval Augmented Generation (RAG) is the most widely adopted method for giving AI agents access to your knowledge base so they can be domain experts on your documents. Depending on your use case, however, RAG by itself is often not powerful enough. That’s why over the past month I’ve started to cover Agentic RAG, which is one of the best ways to take RAG further for better results and flexibility to work with the different types of documents you have.\n\nRecently on my channel, I showcased my ultimate n8n Agentic RAG AI Agent template, which is available for you to download right now (link below) as a fantastic starting point to build your own agentic RAG system with no code. However, an overwhelming number of you asked for a 100% local version of the agent, so that is what I’m bringing to you now!\n\nIn this video, I’ll walk you through the local n8n Agentic RAG workflow (link to this template below as well), use cases it covers, and how to set it all up so that you have a 100% offline, secure, and powerful RAG agent.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Cartesia and create your free account to check out their insanely fast and natural-sounding voice models:\n\nhttps://cartesia.ai/\n\nCartesia is incredible for building voice agents, so if you're a developer looking to leverage a robust API to build agents with voice built in, definitely check them out!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nDownload the ultimate local n8n RAG agent template here (within the local AI package):\n\nhttps://github.com/coleam00/local-ai-packaged/blob/main/n8n/backup/workflows/V3_Local_Agentic_RAG_AI_Agent.json\n\nLocal AI Package:\n\nhttps://github.com/coleam00/local-ai-packaged/tree/main\n\nDownload the non-local version of the ultimate n8n RAG agent template here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/n8n-agentic-rag-agent\n\nI created an agentic RAG agent in Python as well:\n\nhttps://www.youtube.com/watch?v=_R-ff4ZMLC8\n\nWeaviate article on Agentic RAG:\n\nhttps://weaviate.io/blog/what-is-agentic-rag\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the local n8n RAG Template\n01:28 - What is Agentic RAG?\n04:42 - Overview of the local Agentic RAG Agent\n05:35 - Demo 1 - Basic RAG Lookup\n06:55 - Demo 2 - Specific File Lookup\n08:12 - Demo 3 - CSV SQL Query\n10:43 - Cartesia\n13:05 - Agent Walkthrough Starting with DB Setup \n16:33 - Setting up our Knowledge Base\n24:54 - Building our Agentic RAG Agent\n28:30 - Important Note on n8n + Ollama\n31:23 - Last Demo\n32:07 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250306",
+  "duration": 1959,
+  "view_count": 100459,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

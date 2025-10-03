@@ -1,0 +1,1 @@
+{"detail":[{"type":"float_parsing","loc":["body","speed"],"msg":"Input should be a valid number, unable to parse string as a number","input":"normal"}]}

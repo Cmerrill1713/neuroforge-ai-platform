@@ -1,0 +1,57 @@
+{{bos_token}}{% if messages[0]['role'] == 'system' %}
+    {%- set system_message = messages[0]['content'] %}
+    {%- set loop_messages = messages[1:] %}
+{%- else %}
+    {%- set system_message = 'You are a helpful assistant trained by Liquid AI.' %}
+    {%- set loop_messages = messages %}
+{%- endif %}
+{%- if tools %}
+    {%- set system_message = system_message + '\nList of tools: <|tool_list_start|>' + (tools | tojson) + '<|tool_list_end|>' %}
+{%- endif %}
+{{- '<|im_start|>system\n' + system_message + '<|im_end|>\n'}}
+{%- for message in loop_messages %}
+    {%- if message['role'] == 'user' %}
+        {{- '<|im_start|>user\n' + message['content'] + '<|im_end|>\n'}}
+    {%- elif message['role'] == 'assistant' %}
+        {{- '<|im_start|>assistant\n'}}
+        {%- if message.get('tool_calls') %}
+            {# ───── create a list to append tool calls to ───── #}
+            {%- set tool_calls_ns = namespace(tool_calls=[])%}
+            {%- for tool_call in message['tool_calls'] %}
+                {%- set func_name = tool_call['function']['name'] %}
+                {%- set func_args = tool_call['function']['arguments'] %}
+                {# ───── create a list of func_arg strings to accumulate for each tool call ───── #}
+                {%- set args_ns = namespace(arg_strings=[])%}
+                {%- for arg_name, arg_value in func_args.items() %}
+                    {%- set formatted_arg_value = arg_value %}
+                    {%- if arg_value is string %}
+                      {%- set formatted_arg_value = '"' + arg_value + '"' %}
+                    {%- elif arg_value is mapping %}
+                      {%- set formatted_arg_value = arg_value | tojson %}
+                    {%- elif arg_value is iterable %}
+                      {%- set formatted_arg_value = '[' + arg_value + ']' %}
+                    {%- endif %}
+                    {# ───── format each argument key,value pair ───── #}
+                    {%- set args_ns.arg_strings =  args_ns.arg_strings + [(arg_name + '=' + formatted_arg_value)] %}
+                {%- endfor %}
+                {# ───── append each formatted tool call ───── #}
+                {%- set tool_calls_ns.tool_calls = tool_calls_ns.tool_calls + [(func_name + '(' + (args_ns.arg_strings | join(",")) + ')' )]%}
+            {%- endfor %}
+            {# ───── format the final tool calls ───── #}
+            {{-'<|tool_call_start|>[' + (tool_calls_ns.tool_calls | join(",")) + ']<|tool_call_end|>'}}
+            {%- if message['content'] %}
+                {{-message['content']}}
+            {%- endif %}
+        {%- else %}
+            {{-message['content']}}
+        {%- endif %}
+        {{-'<|im_end|>\n'}}
+    {%- elif message['role'] == 'tool' %}
+        {{-'<|im_start|>tool\n<|tool_response_start|>' + message['content'] + '<|tool_response_end|><|im_end|>\n'}}
+    {%- elif message['role'] == 'system' %}
+        {{-'<|im_start|>system\n' + message['content'] + '<|im_end|>\n'}}
+    {%- endif %}
+{%- endfor %}
+{%- if add_generation_prompt %}
+    {{-'<|im_start|>assistant\n'}}
+{%- endif %}

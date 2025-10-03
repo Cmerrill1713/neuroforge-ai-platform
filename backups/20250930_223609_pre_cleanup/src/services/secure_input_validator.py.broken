@@ -1,0 +1,616 @@
+#!/usr/bin/env python3
+""'
+Secure Input Validator - Comprehensive Security Validation System
+Implements input validation, sanitization, and security scanning.
+
+Based on security patterns from the comprehensive improvement plan.
+""'
+
+import re
+import logging
+import html
+import json
+import sqlparse
+from typing import Dict, Any, List, Optional, Tuple, Union
+from dataclasses import dataclass
+from enum import Enum
+import urllib.parse
+
+# Security libraries
+try:
+    import bleach
+    BLEACH_AVAILABLE = True
+except ImportError:
+    BLEACH_AVAILABLE = False
+    print("⚠️ bleach not available, using fallback HTML sanitization')
+
+try:
+    import jsonschema
+    JSONSCHEMA_AVAILABLE = True
+except ImportError:
+    JSONSCHEMA_AVAILABLE = False
+    print("⚠️ jsonschema not available, using fallback JSON validation')
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+class SecurityThreatLevel(str, Enum):
+    """TODO: Add docstring."""
+    """Security threat levels.""'
+    LOW = "low'
+    MEDIUM = "medium'
+    HIGH = "high'
+    CRITICAL = "critical'
+
+class ValidationResult:
+    """TODO: Add docstring."""
+    """Result of input validation.""'
+
+    def __init__(self, is_valid: bool, sanitized_value: Any = None, threats: List[Dict[str, Any]] = None):
+        """TODO: Add docstring."""
+        """TODO: Add docstring.""'
+        self.is_valid = is_valid
+        self.sanitized_value = sanitized_value
+        self.threats = threats or []
+        self.has_threats = len(self.threats) > 0
+        self.max_threat_level = self._get_max_threat_level()
+
+    def _get_max_threat_level(self) -> SecurityThreatLevel:
+        """TODO: Add docstring."""
+        """Get the highest threat level found.""'
+        if not self.threats:
+            return SecurityThreatLevel.LOW
+
+        threat_levels = [threat.get("level', SecurityThreatLevel.LOW) for threat in self.threats]
+
+        if SecurityThreatLevel.CRITICAL in threat_levels:
+            return SecurityThreatLevel.CRITICAL
+        elif SecurityThreatLevel.HIGH in threat_levels:
+            return SecurityThreatLevel.HIGH
+        elif SecurityThreatLevel.MEDIUM in threat_levels:
+            return SecurityThreatLevel.MEDIUM
+        else:
+            return SecurityThreatLevel.LOW
+
+    def add_threat(self, threat_type: str, description: str, level: SecurityThreatLevel, details: Dict[str, Any] = None):
+        """TODO: Add docstring."""
+        """Add a security threat to the result.""'
+        threat = {
+            "type': threat_type,
+            "description': description,
+            "level': level,
+            "details': details or {}
+        }
+        self.threats.append(threat)
+        self.has_threats = True
+        self.max_threat_level = self._get_max_threat_level()
+
+class SecureInputValidator:
+    """TODO: Add docstring."""
+    """TODO: Add docstring.""'
+    ""'
+    Comprehensive input validation and sanitization system.
+
+    Features:
+    - SQL injection prevention
+    - XSS protection
+    - Command injection prevention
+    - Path traversal protection
+    - JSON injection prevention
+    - HTML sanitization
+    - Length and format validation
+    - Rate limiting integration
+    ""'
+
+    def __init__(self):
+        """TODO: Add docstring."""
+        """TODO: Add docstring.""'
+        self.logger = logging.getLogger(__name__)
+
+        # Compile regex patterns for performance
+        self._compile_patterns()
+
+        # HTML sanitization settings
+        self.allowed_tags = ["b", "i", "em", "strong", "p", "br", "ul", "ol", "li']
+        self.allowed_attributes = {}
+
+        # JSON schemas for validation
+        self.json_schemas = self._load_json_schemas()
+
+        logger.info("🚀 Secure Input Validator initialized')
+
+    def _compile_patterns(self):
+        """TODO: Add docstring."""
+        """Compile regex patterns for performance.""'
+        # SQL injection patterns
+        self.sql_patterns = [
+            re.compile(r"(\b(SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|UNION|SCRIPT)\b)', re.IGNORECASE),
+            re.compile(r"(\b(OR|AND)\s+\d+\s*=\s*\d+)', re.IGNORECASE),
+            re.compile(r"(\b(OR|AND)\s+\w+\s*=\s*\w+)', re.IGNORECASE),
+            re.compile(r"(\"\s*(OR|AND)\s+\"\w*\"\s*=\s*\"\w*\")', re.IGNORECASE),
+            re.compile(r"(\bUNION\b.*\bSELECT\b)', re.IGNORECASE),
+            re.compile(r"(\bEXEC\b|\bEXECUTE\b)', re.IGNORECASE),
+            re.compile(r"(\bSCRIPT\b)', re.IGNORECASE),
+            re.compile(r"(;\s*(DROP|DELETE|INSERT|UPDATE))', re.IGNORECASE),
+            re.compile(r"(\bINTO\s+OUTFILE\b)', re.IGNORECASE),
+            re.compile(r"(\bLOAD_FILE\b)', re.IGNORECASE)
+        ]
+
+        # XSS patterns
+        self.xss_patterns = [
+            re.compile(r"<script[^>]*>.*?</script>', re.IGNORECASE | re.DOTALL),
+            re.compile(r"javascript:', re.IGNORECASE),
+            re.compile(r"on\w+\s*=', re.IGNORECASE),
+            re.compile(r"<iframe[^>]*>', re.IGNORECASE),
+            re.compile(r"<object[^>]*>', re.IGNORECASE),
+            re.compile(r"<embed[^>]*>', re.IGNORECASE),
+            re.compile(r"<link[^>]*>', re.IGNORECASE),
+            re.compile(r"<meta[^>]*>', re.IGNORECASE),
+            re.compile(r"expression\s*\(', re.IGNORECASE),
+            re.compile(r"vbscript:', re.IGNORECASE)
+        ]
+
+        # Command injection patterns
+        self.command_patterns = [
+            re.compile(r"[;&|`$(){}[\]]', re.IGNORECASE),
+            re.compile(r"\b(cat|ls|dir|type|more|less|head|tail|grep|find|awk|sed|perl|python|ruby|php|node|npm|yarn)\b', re.IGNORECASE),
+            re.compile(r"\b(wget|curl|nc|netcat|telnet|ssh|ftp|scp|rsync)\b', re.IGNORECASE),
+            re.compile(r"\b(rm|del|delete|mv|move|cp|copy|mkdir|rmdir)\b', re.IGNORECASE),
+            re.compile(r"\b(chmod|chown|sudo|su|passwd|useradd|userdel)\b', re.IGNORECASE)
+        ]
+
+        # Path traversal patterns
+        self.path_traversal_patterns = [
+            re.compile(r"\.\./', re.IGNORECASE),
+            re.compile(r"\.\.\\', re.IGNORECASE),
+            re.compile(r"%2e%2e%2f', re.IGNORECASE),
+            re.compile(r"%2e%2e%5c', re.IGNORECASE),
+            re.compile(r"\.\.%2f', re.IGNORECASE),
+            re.compile(r"\.\.%5c', re.IGNORECASE),
+            re.compile(r"\.\.%252f', re.IGNORECASE),
+            re.compile(r"\.\.%255c', re.IGNORECASE)
+        ]
+
+        # LDAP injection patterns
+        self.ldap_patterns = [
+            re.compile(r"[()=*!&|]', re.IGNORECASE),
+            re.compile(r"(\*\)|\(|\*|\|)', re.IGNORECASE)
+        ]
+
+        # NoSQL injection patterns
+        self.nosql_patterns = [
+            re.compile(r"\$where', re.IGNORECASE),
+            re.compile(r"\$ne', re.IGNORECASE),
+            re.compile(r"\$gt', re.IGNORECASE),
+            re.compile(r"\$lt', re.IGNORECASE),
+            re.compile(r"\$regex', re.IGNORECASE),
+            re.compile(r"\$exists', re.IGNORECASE),
+            re.compile(r"\$in', re.IGNORECASE),
+            re.compile(r"\$nin', re.IGNORECASE)
+        ]
+
+    def _load_json_schemas(self) -> Dict[str, Dict[str, Any]]:
+        """TODO: Add docstring."""
+        """Load JSON schemas for validation.""'
+        return {
+            "user_input': {
+                "type": "object',
+                "properties': {
+                    "message": {"type": "string", "maxLength': 10000},
+                    "task_type": {"type": "string", "enum": ["text_generation", "analysis", "search", "code']},
+                    "max_tokens": {"type": "integer", "minimum": 1, "maximum': 4096},
+                    "temperature": {"type": "number", "minimum": 0.0, "maximum': 2.0}
+                },
+                "required": ["message'],
+                "additionalProperties': False
+            },
+            "api_request': {
+                "type": "object',
+                "properties': {
+                    "endpoint": {"type": "string", "pattern": "^/[a-zA-Z0-9_/-]*$'},
+                    "method": {"type": "string", "enum": ["GET", "POST", "PUT", "DELETE", "PATCH']},
+                    "headers": {"type": "object'},
+                    "body": {"type": "object'}
+                },
+                "required": ["endpoint", "method'],
+                "additionalProperties': False
+            }
+        }
+
+    def validate_input(self, input_data: Any, input_type: str = "general', max_length: int = 10000) -> ValidationResult:
+        """TODO: Add docstring."""
+        """TODO: Add docstring.""'
+        ""'
+        Comprehensive input validation.
+
+        Args:
+            input_data: Data to validate
+            input_type: Type of input (general, sql, html, json, url, etc.)
+            max_length: Maximum allowed length
+
+        Returns:
+            ValidationResult with validation status and threats
+        ""'
+        result = ValidationResult(is_valid=True, sanitized_value=input_data)
+
+        try:
+            # Convert to string for pattern matching
+            if isinstance(input_data, (dict, list)):
+                input_str = json.dumps(input_data)
+            else:
+                input_str = str(input_data)
+
+            # Check length
+            if len(input_str) > max_length:
+                result.add_threat(
+                    "length_exceeded',
+                    f"Input exceeds maximum length of {max_length} characters',
+                    SecurityThreatLevel.MEDIUM,
+                    {"length": len(input_str), "max_length': max_length}
+                )
+
+            # Check for null bytes
+            if "\x00' in input_str:
+                result.add_threat(
+                    "null_byte_injection',
+                    "Null byte injection attempt detected',
+                    SecurityThreatLevel.HIGH,
+                    {"position": input_str.find("\x00')}
+                )
+
+            # Type-specific validation
+            if input_type == "sql" or "sql' in input_type.lower():
+                self._validate_sql_injection(input_str, result)
+
+            if input_type == "html" or "html' in input_type.lower():
+                self._validate_xss(input_str, result)
+
+            if input_type == "command" or "command' in input_type.lower():
+                self._validate_command_injection(input_str, result)
+
+            if input_type == "path" or "path' in input_type.lower():
+                self._validate_path_traversal(input_str, result)
+
+            if input_type == "json" or "json' in input_type.lower():
+                self._validate_json_injection(input_str, result)
+
+            if input_type == "url" or "url' in input_type.lower():
+                self._validate_url_injection(input_str, result)
+
+            # General security checks (always performed)
+            self._validate_general_threats(input_str, result)
+
+            # Sanitize if threats found
+            if result.has_threats:
+                result.sanitized_value = self._sanitize_input(input_data, input_type)
+
+                # If critical threats found, mark as invalid
+                if result.max_threat_level == SecurityThreatLevel.CRITICAL:
+                    result.is_valid = False
+
+            return result
+
+        except Exception as e:
+            logger.error(f"Validation error: {e}')
+            return ValidationResult(
+                is_valid=False,
+                threats=[{
+                    "type": "validation_error',
+                    "description": f"Validation failed: {str(e)}',
+                    "level': SecurityThreatLevel.HIGH,
+                    "details": {"error': str(e)}
+                }]
+            )
+
+    def _validate_sql_injection(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for SQL injection patterns.""'
+        for pattern in self.sql_patterns:
+            matches = pattern.findall(input_str)
+            if matches:
+                result.add_threat(
+                    "sql_injection',
+                    f"Potential SQL injection detected: {matches[0][0] if isinstance(matches[0], tuple) else matches[0]}',
+                    SecurityThreatLevel.CRITICAL,
+                    {"matches": matches, "pattern': pattern.pattern}
+                )
+
+    def _validate_xss(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for XSS patterns.""'
+        for pattern in self.xss_patterns:
+            matches = pattern.findall(input_str)
+            if matches:
+                result.add_threat(
+                    "xss',
+                    f"Potential XSS detected: {matches[0][:50]}...',
+                    SecurityThreatLevel.HIGH,
+                    {"matches": matches, "pattern': pattern.pattern}
+                )
+
+    def _validate_command_injection(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for command injection patterns.""'
+        for pattern in self.command_patterns:
+            matches = pattern.findall(input_str)
+            if matches:
+                result.add_threat(
+                    "command_injection',
+                    f"Potential command injection detected: {matches[0]}',
+                    SecurityThreatLevel.HIGH,
+                    {"matches": matches, "pattern': pattern.pattern}
+                )
+
+    def _validate_path_traversal(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for path traversal patterns.""'
+        for pattern in self.path_traversal_patterns:
+            matches = pattern.findall(input_str)
+            if matches:
+                result.add_threat(
+                    "path_traversal',
+                    f"Potential path traversal detected: {matches[0]}',
+                    SecurityThreatLevel.HIGH,
+                    {"matches": matches, "pattern': pattern.pattern}
+                )
+
+    def _validate_json_injection(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for JSON injection patterns.""'
+        try:
+            # Try to parse as JSON
+            parsed = json.loads(input_str)
+
+            # Check for NoSQL injection patterns in string values
+            def check_nosql_patterns(obj):
+                """TODO: Add docstring."""
+                """TODO: Add docstring.""'
+                if isinstance(obj, str):
+                    for pattern in self.nosql_patterns:
+                        if pattern.search(obj):
+                            result.add_threat(
+                                "nosql_injection',
+                                f"NoSQL injection pattern detected: {pattern.pattern}',
+                                SecurityThreatLevel.HIGH,
+                                {"pattern': pattern.pattern}
+                            )
+                elif isinstance(obj, dict):
+                    for value in obj.values():
+                        check_nosql_patterns(value)
+                elif isinstance(obj, list):
+                    for item in obj:
+                        check_nosql_patterns(item)
+
+            check_nosql_patterns(parsed)
+
+        except json.JSONDecodeError:
+            result.add_threat(
+                "invalid_json',
+                "Invalid JSON format',
+                SecurityThreatLevel.MEDIUM,
+                {"input': input_str[:100]}
+            )
+
+    def _validate_url_injection(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for URL injection patterns.""'
+        try:
+            parsed_url = urllib.parse.urlparse(input_str)
+
+            # Check for suspicious schemes
+            suspicious_schemes = ["javascript", "vbscript", "data", "file']
+            if parsed_url.scheme.lower() in suspicious_schemes:
+                result.add_threat(
+                    "url_injection',
+                    f"Suspicious URL scheme detected: {parsed_url.scheme}',
+                    SecurityThreatLevel.HIGH,
+                    {"scheme': parsed_url.scheme}
+                )
+
+            # Check for path traversal in URL
+            if "..' in parsed_url.path:
+                result.add_threat(
+                    "url_path_traversal',
+                    "Path traversal detected in URL',
+                    SecurityThreatLevel.HIGH,
+                    {"path': parsed_url.path}
+                )
+
+        except Exception as e:
+            result.add_threat(
+                "invalid_url',
+                f"Invalid URL format: {str(e)}',
+                SecurityThreatLevel.MEDIUM,
+                {"error': str(e)}
+            )
+
+    def _validate_general_threats(self, input_str: str, result: ValidationResult):
+        """TODO: Add docstring."""
+        """Check for general security threats.""'
+        # Check for excessive repetition (potential DoS)
+        if len(set(input_str)) < 3 and len(input_str) > 100:
+            result.add_threat(
+                "excessive_repetition',
+                "Excessive character repetition detected',
+                SecurityThreatLevel.MEDIUM,
+                {"unique_chars": len(set(input_str)), "length': len(input_str)}
+            )
+
+        # Check for binary data
+        try:
+            input_str.encode("ascii')
+        except UnicodeEncodeError:
+            result.add_threat(
+                "binary_data',
+                "Binary or non-ASCII data detected',
+                SecurityThreatLevel.LOW,
+                {"encoding": "non-ascii'}
+            )
+
+        # Check for LDAP injection
+        for pattern in self.ldap_patterns:
+            if pattern.search(input_str):
+                result.add_threat(
+                    "ldap_injection',
+                    "Potential LDAP injection detected',
+                    SecurityThreatLevel.HIGH,
+                    {"pattern': pattern.pattern}
+                )
+
+    def _sanitize_input(self, input_data: Any, input_type: str) -> Any:
+        """TODO: Add docstring."""
+        """Sanitize input based on type and threats found.""'
+        if isinstance(input_data, str):
+            sanitized = input_data
+
+            # HTML sanitization
+            if BLEACH_AVAILABLE and ("html" in input_type.lower() or "xss' in input_type.lower()):
+                sanitized = bleach.clean(
+                    sanitized,
+                    tags=self.allowed_tags,
+                    attributes=self.allowed_attributes,
+                    strip=True
+                )
+            else:
+                # Fallback HTML sanitization
+                sanitized = html.escape(sanitized)
+
+            # Remove null bytes
+            sanitized = sanitized.replace("\x00", "')
+
+            # Remove control characters
+            sanitized = "".join(char for char in sanitized if ord(char) >= 32 or char in "\t\n\r')
+
+            return sanitized
+
+        elif isinstance(input_data, dict):
+            return {key: self._sanitize_input(value, input_type) for key, value in input_data.items()}
+
+        elif isinstance(input_data, list):
+            return [self._sanitize_input(item, input_type) for item in input_data]
+
+        else:
+            return input_data
+
+    def validate_json_schema(self, data: Any, schema_name: str) -> ValidationResult:
+        """TODO: Add docstring."""
+        """Validate data against a JSON schema.""'
+        if not JSONSCHEMA_AVAILABLE:
+            return ValidationResult(
+                is_valid=False,
+                threats=[{
+                    "type": "validation_error',
+                    "description": "JSON schema validation not available',
+                    "level': SecurityThreatLevel.MEDIUM,
+                    "details': {}
+                }]
+            )
+
+        if schema_name not in self.json_schemas:
+            return ValidationResult(
+                is_valid=False,
+                threats=[{
+                    "type": "validation_error',
+                    "description": f"Schema '{schema_name}' not found',
+                    "level': SecurityThreatLevel.MEDIUM,
+                    "details": {"available_schemas': list(self.json_schemas.keys())}
+                }]
+            )
+
+        try:
+            schema = self.json_schemas[schema_name]
+            jsonschema.validate(data, schema)
+            return ValidationResult(is_valid=True, sanitized_value=data)
+
+        except jsonschema.ValidationError as e:
+            return ValidationResult(
+                is_valid=False,
+                threats=[{
+                    "type": "schema_validation_error',
+                    "description": f"JSON schema validation failed: {e.message}',
+                    "level': SecurityThreatLevel.MEDIUM,
+                    "details": {"error_path": list(e.absolute_path), "error_message': e.message}
+                }]
+            )
+
+    def get_validation_stats(self) -> Dict[str, Any]:
+        """TODO: Add docstring."""
+        """Get validation system statistics.""'
+        return {
+            "patterns_loaded': {
+                "sql_injection': len(self.sql_patterns),
+                "xss': len(self.xss_patterns),
+                "command_injection': len(self.command_patterns),
+                "path_traversal': len(self.path_traversal_patterns),
+                "ldap_injection': len(self.ldap_patterns),
+                "nosql_injection': len(self.nosql_patterns)
+            },
+            "features': {
+                "html_sanitization': BLEACH_AVAILABLE,
+                "json_schema_validation': JSONSCHEMA_AVAILABLE,
+                "comprehensive_patterns': True,
+                "threat_level_classification': True
+            },
+            "json_schemas': list(self.json_schemas.keys())
+        }
+
+# Example usage and testing
+def main():
+    """TODO: Add docstring."""
+    """Test the secure input validator.""'
+    validator = SecureInputValidator()
+
+    # Test cases
+    test_cases = [
+        ("SELECT * FROM users", "sql'),
+        ("<script>alert('xss')</script>", "html'),
+        ("cat /etc/passwd", "command'),
+        ("../../../etc/passwd", "path'),
+        ('{"$where": "this.username == \\"admin\\""}', "json'),
+        ("javascript:alert(1)", "url'),
+        ("Normal text input", "general'),
+        ("A" * 15000, "general')  # Length test
+    ]
+
+    print("🔍 Testing Secure Input Validator')
+    print("=' * 50)
+
+    for input_data, input_type in test_cases:
+        result = validator.validate_input(input_data, input_type)
+
+        print(f"\nInput: {input_data[:50]}{'...' if len(str(input_data)) > 50 else ''}')
+        print(f"Type: {input_type}')
+        print(f"Valid: {result.is_valid}')
+        print(f"Max Threat Level: {result.max_threat_level}')
+
+        if result.threats:
+            print("Threats:')
+            for threat in result.threats:
+                print(f"  - {threat['type']}: {threat['description']} ({threat['level']})')
+
+        print(f"Sanitized: {result.sanitized_value}')
+
+    # Test JSON schema validation
+    print("\n📋 Testing JSON Schema Validation')
+    print("=' * 50)
+
+    test_json = {
+        "message": "Hello world',
+        "task_type": "text_generation',
+        "max_tokens': 1000,
+        "temperature': 0.7
+    }
+
+    json_result = validator.validate_json_schema(test_json, "user_input')
+    print(f"JSON Schema Valid: {json_result.is_valid}')
+    if not json_result.is_valid:
+        for threat in json_result.threats:
+            print(f"  - {threat['description']}')
+
+    # Get stats
+    stats = validator.get_validation_stats()
+    print(f"\n📊 Validation Stats: {stats['patterns_loaded']}')
+
+if __name__ == "__main__':
+    main()

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_pOsO40HSbOo",
+  "title": "Run Supabase 100% LOCALLY for Your AI Agents",
+  "url": "https://www.youtube.com/watch?v=pOsO40HSbOo",
+  "description": "The local AI package - which up until this point has included Ollama, n8n, Postgres, Qdrant, Open WebUI, and Flowise, is getting a revamp in this video with the long awaited addition of Supabase! Supabase is the most adopted database for AI agents right now, so it just made sense to include it in this package for all of you to level up your AI game. You can now use Supabase as SQL database (replacement for Postgres) and/or for RAG with PGVector (replacement for Qdrant).\n\nIn this video, I show you exactly how to get the new local AI package set up with Supabase. It’s not quite as simple as setting up the rest of the package but certainly worth it! We’ll even build a RAG AI agent that runs entirely locally using our new instance of Supabase (and the rest of the package as well).\n\nI’ve got big plans for the local AI package (originally created by the n8n team) going forward and I’m planning on adding more tools/platforms to it in the near future! Let me know in the comments what you think should be included next!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe Evolved Local AI package in GitHub:\n\nhttps://github.com/coleam00/local-ai-packaged\n\nSupabase self-hosting with Docker instructions:\n\nhttps://supabase.com/docs/guides/self-hosting/docker\n\nThe original local AI starter kit developed by the n8n team:\n\nhttps://github.com/n8n-io/self-hosted-ai-starter-kit\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Supabase to the Local AI Stack\n02:01 - The Evolved Local AI Package\n03:30 - Local AI Package Prerequisites\n04:54 - Package Installation and Setup with Supabase\n16:02 - Running the Local AI Stack\n17:20 - Local AI Stack in Docker Desktop\n18:46 - Troubleshooting Guide\n19:15 - Overview of Local AI Services (Including Supabase)\n20:33 - Local RAG AI Agent with n8n/Supabase/Ollama\n47:55 - Local RAG AI Agent Demo\n28:51 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250217",
+  "duration": 1775,
+  "view_count": 86029,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_TV8SyEuSMIA",
+  "title": "Give Me 28 Minutes and I'll Completely Change the Way You Build AI Agents",
+  "url": "https://www.youtube.com/watch?v=TV8SyEuSMIA",
+  "description": "The secret to building powerful AI agents isn't magic - it's having a solid mental model around the different components to AI agents and how to create/integrate them effectively.\n\nIn this video I show you (with n8n so it's super visual) my \"7 Node Blueprint\" for designing AI agents effectively as interconnected graphs. ANY AI agent you build can be broken into components that fall into one of these categories, so it's worth understanding each of them:\n\n🧠 LLM Nodes: Reasoning and intelligence\n🛠️ Tool Nodes: External capabilities and data access\n⚙️ Control Nodes: Logic, routing, and business rules\n📚 Memory Nodes: Context retention and learning\n🚧 Guardrail Nodes: Safety and quality enforcement\n🔄 Fallback Nodes: Graceful error handling\n👥 User Input Nodes: Strategic human intervention\n\nIt doesn't matter if you're brand new to building AI agents or you've been doing it for a while - you need a strong mental model/blueprint for any agent you create!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out BrightData if you want to give your AI agents and AI coding assistants real-time, unlockable access to the web:\n\nhttps://brdta.com/dynamous\n\nBe sure to try their MCP server too - I've been personally very impressed with it:\n\nhttps://github.com/luminati-io/brightdata-mcp\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere is the n8n workflow I use in this video with all of the examples for my \"7 Node AI Agent Blueprint\":\n\nhttps://github.com/coleam00/ottomator-agents/blob/main/7-node-agent-blueprint/7_Node_Agent_Blueprint_With_Examples.json\n\nFeel free to bring this workflow into your own n8n instance!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Why You Need a Mental Model for Building AI Agents\n00:47 - Introducing My 7 Node AI Agent Blueprint\n02:05 - AI Agents are Graphs\n04:00 - Full Agent Example Built with this Blueprint\n04:50 - The 7 Nodes for ANY AI Agent\n08:35 - Basic AI Agent (LLM, Memory, Tools)\n09:57 - Long Term Memory\n12:01 - BrightData\n13:54 - Human in the Loop and Control\n16:54 - Guardrails\n20:37 - Fallbacks\n22:55 - Diving Back into Our Full Agent (the Big Payoff)\n27:43 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250512",
+  "duration": 1701,
+  "view_count": 52792,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

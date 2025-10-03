@@ -1,0 +1,26 @@
+{
+  "id": "youtube_mQt1hOjBH9o",
+  "title": "I Built the ULTIMATE n8n RAG AI Agent Template",
+  "url": "https://www.youtube.com/watch?v=mQt1hOjBH9o",
+  "description": "RAG (Retrieval Augmented Generation) is the most popular tool to give AI agents access to your knowledge base so it can be a domain expert for your documents. It’s also very easy to implement in no code tools such as n8n since it’s so widely adopted and supported. It comes with its fair share of shortcomings though because RAG:\n\n- Can't analyze tables well - no ability to calculate averages, sums, or trends\n- Misses the \"big picture\" because documents are split into small pieces\n- Struggles with connecting information across documents and sections\n- Can't dynamically switch between document lookup and data analysis\n\nHow do you solve for all of these limitations? The answer is with Agentic RAG and I show you exactly how to implement this with n8n in this video with a template you can download and use right now (link below).\n\nAgentic RAG gives AI agents the ability to reason more about how it explores the knowledge base, self-improve RAG lookups, and choose between different tools based on the user's question. When asked about trends in a spreadsheet, it uses SQL to calculate precise answers. When context is needed from an entire document, it searches the full text instead of a RAG lookup. The agent intelligently switches between these approaches.\n\nThis gives you:\n\n- Accurate calculations for numerical data\n- Complete document context when needed\n- Connected insights across all your information\n- Dynamic switching between search and analysis\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nDownload the ultimate n8n RAG agent template here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/n8n-agentic-rag-agent\n\nI created an agentic RAG agent in Python as well:\n\nhttps://www.youtube.com/watch?v=_R-ff4ZMLC8\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Unstract, a free and open source tool to turn unstructured documents into structured data as workflows you can deploy as API endpoints or ETL pipelines! Dealing with unstructured data for RAG AI agents is super common so this is a really useful tool for us agent builders to include in our RAG pipelines:\n\nhttps://github.com/Zipstack/unstract\n\nThey have fantastic documentation for using their platform as well:\n\nhttps://docs.unstract.com/unstract/index.html\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Shortcomings of RAG\n01:32 - Introducing the n8n Agentic RAG Template\n05:14 - Agentic RAG Agent Demo\n09:28 - Unstract\n11:30 - Setting up Supabase for Our Agent\n14:23 - RAG Pipeline Deep Dive\n26:26 - Building Our Agent and its RAG Tools\n32:36 - Last Demo\n33:29 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250227",
+  "duration": 2041,
+  "view_count": 164445,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

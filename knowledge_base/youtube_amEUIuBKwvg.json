@@ -1,0 +1,26 @@
+{
+  "id": "youtube_amEUIuBKwvg",
+  "title": "A Complete Guide to Claude Code - Here are ALL the Best Strategies",
+  "url": "https://www.youtube.com/watch?v=amEUIuBKwvg",
+  "description": "Here is everything you need to know to crush building anything with Claude Code! These are the strategies used by top engineers to code reliably and unbelievably fast with AI coding assistants. \n\nWe'll hit on every core feature of Claude Code and how they apply to other AI coding assistants as well - global rules, slash commands, MCP servers, advanced context engineering, subagents, hooks, \"yolo mode\", and parallel agent workflows.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you're looking to join a community for early AI adopters all mastering AI coding and sharing goldmines of resources with each other, check out Dynamous:\nhttps://dynamous.ai\n\n- Come be a part of the Archon beta launch - Saturday the 16th at 9:00 AM CDT! Enable notifications for the livestream here:\nhttps://youtube.com/live/iz9V9dVtRto\n\n- Full Guide to Using Claude Code in GitHub:\nhttps://github.com/coleam00/context-engineering-intro/tree/main/claude-code-full-guide\n\n- Previous video where I dive deep into context engineering:\nhttps://youtu.be/Mk87sFlUG28\n\n- Anthropic's Claude Code best practices:\nhttps://www.anthropic.com/engineering/claude-code-best-practices\n\n- Serena MCP server:\nhttps://github.com/oraios/serena\n\n- Anthropic's guide to devcontainers:\nhttps://docs.anthropic.com/en/docs/claude-code/devcontainer\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Master Claude Code from Start to Finish Here\n01:07 - Overview of the Top Engineering Strategies for Claude Code\n04:50 - #1 - Strategies for Global Rules\n08:38 - Bonus - Important Prompting Strategies\n09:26 - #2 - Permissions for Autonomous Coding\n11:22 - #3 - Slash Commands for Agentic Workflows\n14:31 - #4 - MCP Servers (Unlimited Tools for Claude Code)\n18:13 - Bonus - Archon Overhaul Beta Launch!\n19:24 - #5 - Context Engineering with the PRP Framework\n25:51 - #6 - Claude Code Subagents\n30:23 - #7 - Claude Code Hooks\n33:09 - #8 - GitHub Automations with the GitHub CLI\n37:17 - #9 - Yolo Mode with Devcontainers\n41:20 - #10 -  Parallel Coding Agents\n49:10 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250807",
+  "duration": 3017,
+  "view_count": 97209,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

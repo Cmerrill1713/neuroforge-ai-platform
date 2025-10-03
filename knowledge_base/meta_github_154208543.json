@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_154208543",
+  "title": "QNNPACK",
+  "description": "Quantized Neural Network PACKage - mobile-optimized implementation of quantized neural network operators",
+  "url": "https://github.com/pytorch/QNNPACK",
+  "language": "C",
+  "stars": 1545,
+  "forks": 221,
+  "created_at": "2018-10-22T20:01:29Z",
+  "updated_at": "2025-09-18T20:56:51Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "neural network"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

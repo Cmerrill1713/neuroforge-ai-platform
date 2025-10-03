@@ -1,0 +1,26 @@
+{
+  "id": "youtube_u-7I_4E-SxA",
+  "title": "How to use dynamic css variables to create custom color themes for Timeva.",
+  "description": "⏳ Manage your time 👉 your way 👉 https://timeva.app\n\nUsing css variables to create color themes for the customizable productivity timer, TIMEVA.\n\n📕 My story\n\nHey coders. I'm Dan Isler, an indie developer from Minneapolis, Minnesota.\n\nI've been coding for 10+ years now and after grinding out code for tech companies I decided I wanted to prove to myself that I could build valuable software on my own terms. I quickly learned coding is only a third of the story. I'm learning to put together the remaining pieces in order to become a true indie developer. \n\nFrom May 1st to June 1st 2022 I set out to build an ENTIRE app within 30 days. Can I do it? Let's see.\n\nIn success or failure - I'll see you in the next one!\n\n💻 Software\n\n- Vue3 (setup) https://vuejs.org/\n- Typescript https://www.typescriptlang.org/\n- Electronjs https://www.electronjs.org/\n- Pinia https://pinia.vuejs.org/\n- Vite https://vitejs.dev/\n- SASS https://sass-lang.com/\n- Github copilot https://copilot.github.com/\n- Electron + vite + vue template: https://github.com/cawa-93/vite-electron-builder\n- Color picker https://github.com/Simonwep/pickr\n\n🖥 Equipment\n\n- Mac book pro 16\" 2019 https://support.apple.com/kb/SP809?locale=en_US\n- Dell U-Series 38\" U3818DW https://www.dell.com/en-us/work/shop/dell-ultrasharp-49-curved-monitor-u4919dw/apd/210-arnw/monitors-monitor-accessories?gacd=9646510-1028-5761040-266706306-0&dgc=st&ds_k=DYNAMIC+SEARCH+ADS&ds_rl=1282789&gclid=CjwKCAjw682TBhATEiwA9crl31qIZ4D8ut1OWPvNviY3UE77Poi2-wfi7uM-PY3ucNYCo7Gu7GF63RoCoaUQAvD_BwE&gclsrc=aw.ds&nclid=d5WkuGPFVi5qqqtvpNphRVY0Ys0xjwqFAX7NX8U_6FjGAqScoYJ-teTvdlfdjprM\n- GoPro Hero 9 https://gopro.com/en/us/shop/cameras/hero9-black/CHDHX-901-master.html\n\n✅ Follow me here\n\n- Timeva https://timeva.app/\n- Twitter https://twitter.com/IndyDevDan\n- Instagram https://www.instagram.com/indydevdan/\n- Indiehackers https://www.indiehackers.com/IndyDevDan\n- Pianist https://www.youtube.com/channel/UClqIkmmBrT7dwHhlQpz2S5Q\n- Website https://danisler.com/\n\n\n👥 Hashtags\n\n#components #remotework #balcony",
+  "url": "https://www.youtube.com/watch?v=u-7I_4E-SxA",
+  "upload_date": "20220527",
+  "duration": 1836,
+  "view_count": 66,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "typescript",
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "7e4fe020b88724ffe2f57de4654e8496"
+}

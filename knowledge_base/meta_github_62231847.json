@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_62231847",
+  "title": "CommAI-env",
+  "description": "A platform for developing AI systems as described in A Roadmap towards Machine Intelligence - http://arxiv.org/abs/1511.08130",
+  "url": "https://github.com/facebookresearch/CommAI-env",
+  "language": "Unknown",
+  "stars": 1327,
+  "forks": 202,
+  "created_at": "2016-06-29T14:22:03Z",
+  "updated_at": "2025-08-09T16:02:36Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "ai"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

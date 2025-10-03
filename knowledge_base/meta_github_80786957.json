@@ -1,0 +1,29 @@
+{
+  "id": "meta_github_80786957",
+  "title": "gloo",
+  "description": "Collective communications library with various primitives for multi-machine training.",
+  "url": "https://github.com/pytorch/gloo",
+  "language": "C++",
+  "stars": 1356,
+  "forks": 340,
+  "created_at": "2017-02-03T01:37:01Z",
+  "updated_at": "2025-09-28T08:30:55Z",
+  "topics": [
+    "collectives",
+    "distributed-training",
+    "pytorch"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "ai"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

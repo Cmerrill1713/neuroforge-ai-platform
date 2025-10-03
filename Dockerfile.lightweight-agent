@@ -1,0 +1,48 @@
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install minimal system dependencies including build tools for psutil
+RUN apt-get update && apt-get install -y \
+    curl \
+    gcc \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+# Copy requirements and install only essential packages
+COPY requirements-minimal.txt .
+RUN pip install --no-cache-dir -r requirements-minimal.txt
+
+# Install lightweight agent dependencies
+RUN pip install --no-cache-dir \
+    redis \
+    requests \
+    psutil \
+    fastapi \
+    uvicorn \
+    pydantic
+
+# Copy only essential agent code
+COPY src/agents/lightweight_agent.py /app/agent.py
+COPY config/agent_config.json /app/config.json
+
+# Create minimal directories
+RUN mkdir -p /app/logs /app/temp
+
+# Set environment variables for resource efficiency
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONHASHSEED=random
+
+# Expose agent port
+EXPOSE 8010
+
+# Health check with longer intervals for resource efficiency
+HEALTHCHECK --interval=60s --timeout=10s --start-period=30s --retries=3 \
+    CMD python -c "import requests; requests.get('http://localhost:8010/health')"
+
+# Start the lightweight agent
+CMD ["python", "agent.py"]

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-09-30T21:00:42.520182",
+  "passed": [
+    "Redis Cache",
+    "Hybrid Components",
+    "Embedding Performance"
+  ],
+  "failed": [
+    "Weaviate: Query call with protocol GRPC search failed with message explorer: get class: concurrentTargetVectorSearch): explorer: get class: vector search: object vector search at index knowledgedocument: shard knowledgedocument_LNnefmQ42FeF: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match.",
+    "E2E RAG: Query call with protocol GRPC search failed with message explorer: get class: concurrentTargetVectorSearch): explorer: get class: vector search: object vector search at index knowledgedocument: shard knowledgedocument_LNnefmQ42FeF: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match."
+  ],
+  "info": {
+    "redis_speedup": "1.4x",
+    "hybrid_components": {
+      "weaviate": true,
+      "redis": true,
+      "reranker": true
+    },
+    "embedding_performance": {
+      "single_ms": 42.20914840698242,
+      "batch_speedup": "2.3x"
+    }
+  },
+  "success_rate": 0.6
+}

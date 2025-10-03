@@ -1,0 +1,26 @@
+{
+  "id": "youtube_Nsu9BzQv5C4",
+  "title": "10 n8n Tips in 10 Minutes to 10x Your AI Automations",
+  "url": "https://www.youtube.com/watch?v=Nsu9BzQv5C4",
+  "description": "n8n is my absolute favorite no code AI automation tool, but there are some parts of the platform I see people trip up with a LOT. So in this video, I dive into some super useful tips and tricks I've gathered over my many hours using the platform to save you a ton of headaches and to make sure you get the most out of this incredible open source platform!\n\n10x is of course subjective, but it certainly makes the title roll of the tongue nicely... these tips are certainly going to be well worth your while regardless! I've had so many people struggle with n8n because they didn't understand these things, so I'm super excited to cover as much as I can in a concise way here.\n\nNot every tip is directly related to AI, but as you build out RAG pipelines and workflows for your agent tools, all of these will apply!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n00:47 - Tip 1 - In Memory Chat History/RAG\n01:42 - Tip 2 - Best LLMs for the Job\n02:37 - Tip 3 - RAG with Different File Types\n03:21 - Tip 4 - Using Dynamic Values from Previous Nodes\n04:42 - Tip 5 - Webhook + Chat Trigger Combo for Agents\n05:52 - Tip 6 - Handling Multiple Output Nodes\n07:24 - Tip 7 - Data Pinning\n08:12 - Tip 8 - Error Handling\n09:14 - Tip 9 - Schedule Trigger\n09:54 - Tip 10 - n8n's Incredible Workflow Library\n10:41 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin the Discourse community where I'll be hosting the n8n community soon:\n\nhttps://thinktank.ottomator.ai\n\nI'm building something BIG behind the scenes for you:\n\nhttps://ottomator.ai\n\nCheck out the n8n workflow library (tip #10) here:\n\nhttps://n8n.io/workflows/\n\nIf you want to host n8n yourself to use it entirely free (except for small cloud hosting costs), I recommend doing it with Digital Ocean:\n\nhttps://docs.n8n.io/hosting/installation/server-setups/digital-ocean/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241121",
+  "duration": 670,
+  "view_count": 64082,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

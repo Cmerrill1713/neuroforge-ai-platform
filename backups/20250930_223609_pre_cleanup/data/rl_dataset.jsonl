@@ -1,0 +1,10 @@
+{"request_id": "req_001", "task_type": "code_generation", "agent": "assistant", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.95, "review_required": false, "security_flags": [], "judge_score": 8.5}
+{"request_id": "req_002", "task_type": "analysis", "agent": "analyst", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.87, "review_required": true, "security_flags": ["sensitive_data"], "judge_score": 7.2}
+{"request_id": "req_003", "task_type": "debugging", "agent": "debugger", "model": "qwen3-30b", "fallback_used": true, "confidence": 0.72, "review_required": false, "security_flags": [], "judge_score": 6.8}
+{"request_id": "req_004", "task_type": "documentation", "agent": "writer", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.91, "review_required": false, "security_flags": [], "judge_score": 9.1}
+{"request_id": "req_005", "task_type": "code_review", "agent": "reviewer", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.83, "review_required": true, "security_flags": ["code_quality"], "judge_score": 8.7}
+{"request_id": "req_006", "task_type": "testing", "agent": "tester", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.89, "review_required": false, "security_flags": [], "judge_score": 8.9}
+{"request_id": "req_007", "task_type": "optimization", "agent": "optimizer", "model": "qwen3-30b", "fallback_used": true, "confidence": 0.76, "review_required": false, "security_flags": [], "judge_score": 7.5}
+{"request_id": "req_008", "task_type": "deployment", "agent": "deployer", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.94, "review_required": true, "security_flags": ["production"], "judge_score": 9.3}
+{"request_id": "req_009", "task_type": "monitoring", "agent": "monitor", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.88, "review_required": false, "security_flags": [], "judge_score": 8.6}
+{"request_id": "req_010", "task_type": "security", "agent": "security", "model": "qwen3-30b", "fallback_used": false, "confidence": 0.92, "review_required": true, "security_flags": ["security_scan"], "judge_score": 9.0}

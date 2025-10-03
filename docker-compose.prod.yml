@@ -1,110 +1,328 @@
-# Docker Compose for Production Deployment
 version: '3.8'
 
+# 🚀 Production Docker Compose Configuration - Phase 5
+# Optimized for enterprise deployment with high availability
+
 services:
-  # AI Chat API Server
-  api-server:
-    build: .
+  # ============================================================================
+  # API BACKEND - Production Optimized
+  # ============================================================================
+  neuroforge-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      target: production
+    image: neuroforge/api:latest
+    container_name: neuroforge-api
     ports:
-      - "8002:8002"
+      - "8000:8000"
     environment:
       - ENVIRONMENT=production
-      - DEBUG=false
-      - DATABASE_URL=postgresql://postgres:password@postgres:5432/ai_chat_db
-      - REDIS_URL=redis://redis:6379
-      - SECRET_KEY=${SECRET_KEY}
-      - JWT_SECRET=${JWT_SECRET}
-      - SENTRY_DSN=${SENTRY_DSN}
-    depends_on:
-      - postgres
-      - redis
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - PORT=8000
+      - REDIS_URL=redis://neuroforge-redis:6379
+      - DATABASE_URL=postgresql://neuroforge:neuroforge_pass@neuroforge-postgres:5432/neuroforge
+      - WEAVIATE_URL=http://neuroforge-weaviate:8080
+      - PROMETHEUS_MULTIPROC_DIR=/tmp
     volumes:
-      - ./uploads:/app/uploads
-      - ./logs:/app/logs
-    restart: unless-stopped
+      - ./knowledge_base:/app/knowledge_base:ro
+      - ./configs:/app/configs:ro
+      - ./ssl:/app/ssl:ro
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+        reservations:
+          memory: 1G
+          cpus: '0.5'
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
+      start_period: 60s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
 
-  # PostgreSQL Database
-  postgres:
-    image: postgres:15-alpine
+  # ============================================================================
+  # FRONTEND - Production Optimized
+  # ============================================================================
+  neuroforge-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    image: neuroforge/frontend:latest
+    container_name: neuroforge-frontend
+    ports:
+      - "3000:3000"
     environment:
-      - POSTGRES_DB=ai_chat_db
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "5432:5432"
-    restart: unless-stopped
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=https://api.neuroforge.com
+      - NEXT_PUBLIC_WS_URL=wss://api.neuroforge.com
+      - NEXT_PUBLIC_TTS_ENABLED=true
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
+    depends_on:
+      neuroforge-api:
+        condition: service_healthy
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
 
-  # Redis Cache
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
-    volumes:
-      - redis_data:/data
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # Nginx Reverse Proxy
-  nginx:
-    image: nginx:alpine
+  # ============================================================================
+  # LOAD BALANCER - Production Ready
+  # ============================================================================
+  neuroforge-nginx:
+    image: nginx:1.25-alpine
+    container_name: neuroforge-nginx
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./ssl:/etc/nginx/ssl
+      - ./nginx/prod.nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/ssl/certs:ro
+      - nginx_logs:/var/log/nginx
+    networks:
+      - neuroforge-network
+    restart: always
     depends_on:
-      - api-server
-    restart: unless-stopped
+      - neuroforge-api
+      - neuroforge-frontend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  # Monitoring with Prometheus
-  prometheus:
-    image: prom/prometheus:latest
-    ports:
-      - "9090:9090"
+  # ============================================================================
+  # DATABASES - Production Optimized
+  # ============================================================================
+  neuroforge-postgres:
+    image: postgres:15-alpine
+    container_name: neuroforge-postgres
+    environment:
+      - POSTGRES_DB=neuroforge
+      - POSTGRES_USER=neuroforge
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-neuroforge_prod_pass}
+      - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/postgres-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '0.5'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U neuroforge -d neuroforge"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  neuroforge-redis:
+    image: redis:7-alpine
+    container_name: neuroforge-redis
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.25'
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  neuroforge-weaviate:
+    image: semitechnologies/weaviate:1.24.0
+    container_name: neuroforge-weaviate
+    environment:
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - DEFAULT_VECTORIZER_MODULE=none
+      - CLUSTER_HOSTNAME=node1
+      - AUTOSCHEMA_ENABLED=false
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v1/meta"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # ============================================================================
+  # MONITORING & OBSERVABILITY - Production Stack
+  # ============================================================================
+  neuroforge-prometheus:
+    image: prom/prometheus:latest
+    container_name: neuroforge-prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/etc/prometheus/console_libraries'
       - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=30d'
       - '--web.enable-lifecycle'
-    restart: unless-stopped
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '0.5'
 
-  # Grafana Dashboard
-  grafana:
+  neuroforge-grafana:
     image: grafana/grafana:latest
-    ports:
-      - "3001:3000"
+    container_name: neuroforge-grafana
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
     volumes:
       - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    networks:
+      - neuroforge-network
+    restart: always
     depends_on:
-      - prometheus
-    restart: unless-stopped
+      - neuroforge-prometheus
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.25'
+
+  # ============================================================================
+  # LOGGING & BACKUP - Enterprise Features
+  # ============================================================================
+  neuroforge-fluentd:
+    image: fluent/fluentd:latest
+    container_name: neuroforge-fluentd
+    volumes:
+      - ./monitoring/fluentd.conf:/fluentd/etc/fluentd.conf:ro
+      - fluentd_logs:/fluentd/log
+    networks:
+      - neuroforge-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.25'
+
+  # ============================================================================
+  # BACKUP SERVICE - Automated Backups
+  # ============================================================================
+  neuroforge-backup:
+    build:
+      context: .
+      dockerfile: Dockerfile.backup
+    image: neuroforge/backup:latest
+    container_name: neuroforge-backup
+    environment:
+      - BACKUP_INTERVAL=24h
+      - RETENTION_DAYS=30
+      - S3_BUCKET=${BACKUP_BUCKET:-neuroforge-backups}
+    volumes:
+      - ./backups:/app/backups
+      - postgres_data:/var/lib/postgresql/data:ro
+      - weaviate_data:/var/lib/weaviate:ro
+    networks:
+      - neuroforge-network
+    restart: always
+    profiles:
+      - backup
+
+# ============================================================================
+# NETWORKS & VOLUMES - Production Optimized
+# ============================================================================
+networks:
+  neuroforge-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: neuroforge-net
 
 volumes:
   postgres_data:
+    driver: local
   redis_data:
+    driver: local
+  weaviate_data:
+    driver: local
   prometheus_data:
+    driver: local
   grafana_data:
+    driver: local
+  nginx_logs:
+    driver: local
+  fluentd_logs:
+    driver: local
+
+# ============================================================================
+# CONFIGURATIONS - Production Profiles
+# ============================================================================
+x-production-config: &production-config
+  restart: always
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "100m"
+      max-file: "5"
+  deploy:
+    resources:
+      limits:
+        memory: 1G
+        cpus: '0.5'
+
+x-healthcheck-config: &healthcheck-config
+  healthcheck:
+    interval: 30s
+    timeout: 10s
+    retries: 3
+    start_period: 60s

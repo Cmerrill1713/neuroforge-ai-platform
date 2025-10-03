@@ -1,0 +1,26 @@
+{
+  "id": "youtube_ieLdMih5_V0",
+  "title": "I Built a FULL RAG AI Agent with No Code in 4 Minutes with VectorShift",
+  "url": "https://www.youtube.com/watch?v=ieLdMih5_V0",
+  "description": "I love coding my own AI agents, but sometimes you just need something easy to make with no code that just WORKS. And VectorShift is one of my favorite platforms to build exactly that! VectorShift is a drag and drop no code workflow builder similar to n8n with a big focus on AI. So it's the perfect platform for me to show you how you can build a full RAG AI agent in less than 4 minutes!\n\nI call out that n8n is similar so real quick: with n8n it would actually take a good amount longer to build this RAG agent since you would have to set up your own pipeline as a workflow to ingest the documents from Google Drive and create a webpage/API/Slack bot around the agent. That's why I don't use n8n here to build this agent even though I love n8n too!\n\n00:00 - 01:24 - Intro\n01:25 - 02:39 - Getting Started with VectorShift\n02:40 - 06:15 - Building the RAG AI Agent in 4 minutes\n06:16 - 07:26 - Testing the RAG Agent\n07:27 - 08:40 - Deploying the RAG Agent\n08:41 - 09:33 - VectorShift Templates\n09:34 - 10:05 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out VectorShift here (great free tier to get started!):\n\nhttps://vectorshift.ai/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20240928",
+  "duration": 605,
+  "view_count": 14042,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

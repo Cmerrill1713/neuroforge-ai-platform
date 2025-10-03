@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_178292829",
+  "title": "tvm",
+  "description": "TVM integration into PyTorch",
+  "url": "https://github.com/pytorch/tvm",
+  "language": "C++",
+  "stars": 453,
+  "forks": 64,
+  "created_at": "2019-03-28T22:39:20Z",
+  "updated_at": "2025-06-08T07:59:01Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

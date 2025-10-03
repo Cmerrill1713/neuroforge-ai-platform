@@ -1,0 +1,28 @@
+{
+  "id": "youtube_QV6kaNFyoyQ",
+  "title": "7 Prompt Chains for Decision Making, Self Correcting, Reliable AI Agents",
+  "description": "AI Agents are the NAME of the SOFTWARE GAME. Knowing how to build POWERFUL AI Agents is everything in the AGE of AI.\n\nUse these 7 Prompt Chains to build POWERFUL AI AGENTS with the help of Claude, Opus, Haiku or your favorite LLM.\n\nThe name of the game in software engineering is: How can I build agentic software where my AI Agents can do the heavy lifting for me? There are levels to this. You start with a single prompt, then you can chain prompts and code together to create powerful AI Agents that can do the heavy lifting for you. There are so many applications for this, from content creation to research to coding. Every single prompt chain is a potential 5,6,7 figure product. We're only scratching the surface with UIs like ChatGPT, Anthropic, Gemini and other Chat Based UIs. The future is bright for AI Agents and Agentic Applications.\n\nLet's unlock the Prompt Chains that can enhance your prompt engineering abilities to elevate your software's capabilities. We're breaking down seven powerful prompt chains, complete with real-world examples, to show you exactly how to harness LLMs like Claude-3's Opus, Haiku, Sonnet, and whatever your favorite favorite LLM provider is. Discover how u create Agentic software that works tirelessly for you and your users, adding incredible value every step of the way.\n\nThe ideas we'll discuss are at the core of tools like Langchain, langgraph, Autogen, and CrewAI. While these tools are powerful, they're often overkill. Powerful AI Agents can be built simply by combining together several prompts in certain patterns and workflows. Call it prompt chaining, prompt orchestration, prompt graphs or whatever you like. From constructing compelling blog posts with the snowball prompt chain to building entire software modules via the worker pattern, this video is a goldmine for anyone looking to deploy AI in practical, impactful ways. Consider a free AI Prompt Engineering Course where we'll reveal several prompt orchestration patterns like the fallback prompt chain, a pattern than can save you time and money while ensuring your AI Agents are still reliable and effective.\n\nIt doesn't matter what you're building. AI Coding Assistants, Research Assistants, Personal AI Assistants, CLI Tools, all benefit from your ability to build prompts and your ability to compose prompts into useful patterns. Let's walk through seven distinct prompt chains, including the innovative snowball and worker patterns, showing you the path to automated content generation, sophisticated research tools, and even custom AI coding assistants. Discover how to make your software think, adapt, and solve problems with minimal input, unveiling a future where your software development process is as dynamic and intelligent as the market demands.\n\nComposability, and Reusability are a big idea we focus on on the channel. AI Agents are no different. The more you can compose prompts together, the more powerful your AI Agents will be. The more you can reuse prompts, the more efficient your AI Agents will be. This is the future of software engineering. This is the future of AI Agents. This is the future of Agentic Applications.\n\n✏️ Get These 7 Prompt Chains (Gist): https://gist.github.com/disler/409d9685c8b251ed723a7aca43cc4b9b\n\n🗣️ When to use PROMPT CHAINS: https://youtu.be/UOcYsrnSNok\n\n🐍 LLM Python Module: https://llm.datasette.io/en/stable/python-api.html#\n\n🤖 LLM Claude Python Module: https://github.com/simonw/llm-claude-3\n\n🛠️ How to Engineer Multi-Agent Tools: https://youtu.be/q3Ld-MxlXmA\n\n🔮 2024 Predictions (AI, LLM, Coding, Agents): https://youtu.be/UES89QRc3Sk\n\n📚 GPT Research (Worker Prompt Chain): https://github.com/assafelovic/gpt-researcher?tab=readme-ov-file\n\n#aiagents #promptengineering #gpt",
+  "url": "https://www.youtube.com/watch?v=QV6kaNFyoyQ",
+  "upload_date": "20240401",
+  "duration": 1388,
+  "view_count": 32253,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "software engineering",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "01dd506c4db74cdfd7076b12852eafa5"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_oiIN-ljbPI0",
+  "title": "Build VueJS Components While You Sleep: First LLM Agent Network (V2)",
+  "description": "Imagine coding while you sleep. What would you do? What would you build? How much could you accomplish if time wasn't holding you back? Recently, I've been obsessed with this idea of a network of agents working to solve problems while we sleep. In this video we break down the MVP versions of this agent network using VueJS, Nuxt, Cytoscape, and VercelKV. \n\nThe goal is to build agents that code while we sleep. To get there, we have to start small but starting small doesn't mean it can't be valuable. Our first agent enables us to generate Vue 3 script setup components with a single prompt. Join the journey as we look to build the future of engineering.\n\n💻 Tech & Tools:\nGet The VueJS script setup Prompt: https://gist.github.com/disler/e6445c69268d190b8a9e420b61e0b27d\nNuxt: https://nuxt.com/\nVercel KV: https://vercel.com/docs/storage/vercel-kv\nCytoscape: https://js.cytoscape.org/\n\n✅ Use Notion? Love Being Productive? Convert your Notion pages into Personal Audio Books:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=vuejs_llm_agent\n\n#️⃣ Hashtags\n#javascript #vue #automation\n\n📖 Chapters\n00:00 The Vision\n01:05 LLM Agent Network V1\n03:50 LLM Agent Network V2\n08:50 VueGPT Component Prompt\n09:50 Quick Code Breakdown\n12:30 Building in public for V3 V4",
+  "url": "https://www.youtube.com/watch?v=oiIN-ljbPI0",
+  "upload_date": "20230529",
+  "duration": 788,
+  "view_count": 722,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "javascript",
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "45537a22e3d5c8a170f4cdc8a95ef703"
+}

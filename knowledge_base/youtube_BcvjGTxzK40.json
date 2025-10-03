@@ -1,0 +1,26 @@
+{
+  "id": "youtube_BcvjGTxzK40",
+  "title": "The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)",
+  "url": "https://www.youtube.com/watch?v=BcvjGTxzK40",
+  "description": "Support AG-UI by giving them a star on GitHub!\nhttps://github.com/ag-ui-protocol/ag-ui\n\nThere’s a good chance you’re stuck on the idea of building apps or SaaS platforms around agents - but that’s not where the future is heading. The real shift is embedding agents *into* your applications so they become a natural part of the product experience. \n\nWhen the AI hype bubble bursts, what’s going to be left over are the products that are not competing as agents - instead the agent(s) are deeply woven inside a product that delivers its own unique value.\n\nIn this video, I’ll show you how to build these kinds of applications and the tech stack that makes it simple. It all starts with AG-UI, the protocol that standardizes how AI agents connect to applications. You can use any frontend client that supports AG-UI - which I’ll use CopilotKit. And you can pair it with any AI agent framework - which of course I’ll use Pydantic AI here since it’s my favorite!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you want to completely explode your productivity with AI coding assistants in a single session, check out this exclusive workshop I'm hosting soon (limited spots available!):\nhttps://dynamous.ai/ai-coding-workshop\n\n- Pydantic AI + AG-UI + CopilotKit RAG Agent:\nhttps://github.com/coleam00/ottomator-agents/tree/main/ag-ui-rag-agent\n\n- AG-UI Demos I showed in the video (Special thanks to them for working with me on this video!):\nhttps://dojo.ag-ui.com/pydantic-ai\n\n- Pydantic AI docs for AG-UI:\nhttps://ai.pydantic.dev/ag-ui/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - The Future of SaaS is Agentic Experiences\n01:23 - Introducing AG-UI - Connecting AI Agents to Apps\n02:49 - Pydantic AI + AG-UI Integration\n03:26 - Agentic Experiences Demo\n05:51 - AG-UI Quickstart w/ CopilotKit + Pydantic AI\n09:16 - CopilotKit Vibe Coding MCP\n10:59 - Improving Our AG-UI App\n14:34 - The Principles of Agentic Experiences\n16:49 - Building a RAG Agent App with AG-UI\n19:56 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos weekly - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250918",
+  "duration": 1247,
+  "view_count": 22307,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

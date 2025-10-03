@@ -1,0 +1,25 @@
+{
+  "id": "youtube_W6Z0U11nnhA",
+  "title": "BEST Prompt Format: Markdown, XML, or Raw? CONFIRMED on Llama 3.1 & Promptfoo",
+  "description": "Which prompt format is BEST for your AI agents? Is it Markdown, XML, or Raw Prompts?\n\n🚀 Ready to unlock the true potential of your AI agents? In this video, we're diving deep into the world of prompt formats to find out which one reigns supreme: Markdown, XML, or Raw Prompts. Whether you're a seasoned AI engineer or just starting out, understanding the best prompt format can drastically improve your AI workflows and performance.\n\n🔥 In the past few weeks, we've seen incredible advancements in large language models like Llama-3.1 8B, Llama-3.1 405B, and Mistral Nemo. These models are pushing the boundaries of AI capabilities, and we're here to explore how different prompt formats can optimize their performance. Inspired by Anthropic's XML format insights, this video will help you master prompt engineering and choose the best format for your AI agents.\n\n🛠️ We're not just talking theory; we're running real tests with the Prompt Testing Framework Promptfoo! Watch as we compare Markdown, XML, and Raw Prompts across multiple models, including the latest Llama-3.1 405B and Mistral Nemo. We'll show you how each format performs in various scenarios, from simple bullet summaries to complex YouTube chapter summaries and AI command selectors.\n\n🌟 Hit the like and subscribe for more insights on prompt engineering, AI agents, and agentic workflows. Stay ahead of the curve and transform your AI projects with the best prompt formats.\n\n💡 Key takeaways:\n- Prompt Format: Discover why XML tags might be the best format for maximizing prompt performance and accuracy.\n- Surprising Results: See how well raw prompts perform against structured formats (hint: it's not as bad as you think)\n- Markdown Prompt: Learn when to use Markdown for readability and ease of use.\n- Raw Prompts: See how raw, unformatted prompts stack up against structured formats.\n- Llama-3.1: Get insights into the latest models like Llama-3.1 8B and 405B, and how they handle different prompt formats.\n- Mistral Nemo: Explore the performance of Mistral Nemo in various prompt scenarios.\n- AI Agent: Understand how to build robust AI agents with the right prompt formats.\n- Agentic Workflow: Learn how to optimize your agentic workflows for better results.\n\nJoin us as we put these prompt formats to the test and find out which one is the best for your AI agents. Whether you're working on AI coding assistants, personal AI assistants, or complex agentic workflows, this video is packed with actionable insights to help you succeed.\n\n🔗 Resources\n📄 Why use XML tags https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags#why-use-xml-tags\n🧪 Start testing your prompts https://github.com/disler/elm-itv-benchmark\n🎥 Previous promptfoo testing video https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags#why-use-xml-tags\n🎓 GPT-4o mini SOTA Accuracy TRICK https://www.youtube.com/watch?v=0Z2BQPuUY50\n📢 Mistral AI large enough https://mistral.ai/news/mistral-large-2407/\n\n📖 Chapters\n00:00 Wow Llama 3.1, Mistral Large 2, and Gpt-4o mini\n01:25 What's the best prompt format?\n02:48 Promptfoo Test 1 - Bullet Summary\n05:00 Promptfoo Test 2 - YouTube chapter summaries\n07:18 Promptfoo Test 3 - Personal AI Commands\n10:03 Promptfoo Test 4 - Nuxt Vue Component Generation\n11:11 Promptfoo Test 5 - Code Debugging\n14:20 Promptfoo Test 6 - Update Config File\n15:50 Promptfoo Test 7 - QA Chatbot\n17:03 Promptfoo Test 8 - Script to Key Ideas\n18:30 Why use XML? Why use Markdown?\n\n#prompt #agentic #testing",
+  "url": "https://www.youtube.com/watch?v=W6Z0U11nnhA",
+  "upload_date": "20240729",
+  "duration": 1341,
+  "view_count": 20838,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "786a34c194a13c77016532e6fc5d7b9e"
+}

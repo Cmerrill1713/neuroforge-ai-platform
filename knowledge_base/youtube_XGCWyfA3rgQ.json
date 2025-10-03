@@ -1,0 +1,25 @@
+{
+  "id": "youtube_XGCWyfA3rgQ",
+  "title": "Using AUTOGEN & GUIDANCE to code LLM Control Flow & JSON Agents (No Prompt Engineering)",
+  "description": "These may be the two MOST IMPORTANT AI AGENT types. If you've ever created a prompt with something like \"choose between only [x, y, z]...\" and \"please respond in this JSON format\" and received inconsistent results, you've found the video you've been looking for. In this video we build on our multi-agent postgres data analytics tool and create two new mission critical agent types using AutoGen and Guidance.\n\nBy combining AutoGen and Guidance we're going to build the Decision Agent and the Structured JSON Agent. Big shout out to the code bros at Microsoft once again.\n\nThanks to our agent orchestrator, conversation types, multi-agent team capabilities, instruments and validators we easily build these new agents with minimal changes. To build agentic systems you need systems and agents that can make decisions and drive the flow of your application while providing useful, structured responses. That's the key issue we solve in this video.\n\nThe structured responses and useful syntax from guidance allows us to side step some prompt engineering hassles. By integrating a control flow agent, we prevent our downstream teams from burning cash by running OpenAIs GPT-4 prompts that SHOULD NOT RUN if the prompt is invalid. We then generate novel SQL insights based on the incoming prompts and return in a structured JSON format using a custom guidance agent.\n\nDon't miss out - Like, Sub and Join the journey as we tap into the future of engineering, today.\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v6-control-flow-and-structured-response\n\n🔥 TALK TO YOUR DATABASE\nhttps://talktoyourdatabase.com\n\n🤖💻 AI Engineering Resources\nMicrosoft's Autogen: https://microsoft.github.io/autogen/\nMicrosoft's Guidance: https://github.com/guidance-ai/guidance\n\n(1) Watch Part One\nhttps://youtu.be/jmDMusirPKA\n\n(2) Watch Part Two\nhttps://youtu.be/JjVvYDPVrAQ\n    \n(3) Watch Part Three\nhttps://youtu.be/4o8tymMQ5GM\n\n(4) Watch Part Four\nhttps://youtu.be/CKo-czvxFkY\n\n(5) Watch Part Five\nhttps://youtu.be/UA6IVMDPuC8\n\n\n📘 Chapters\n00:00 PREVIEW\n00:29 Two Of The Most Important AI Agents\n01:48 AutoGen and GUIDANCE\n02:30 Recap Our Multi-Agent Data Analytics Tool\n05:14 Flow Control With Agents\n07:40 SCRUM MASTER AGENT\n11:40 The Gate Team Lowers GPT-4 Costs\n12:44 Creating a new multi-agent team\n14:25 Data Insights Team\n15:43 Round Robin Conversation Type\n17:40 Structured JSON Responses\n20:20 Novel SQL Insights in JSON\n22:00 Our Agentic Building Blocks are stacking up\n22:22 Let's Light Some Money On Fire\n24:29 THE CODEBASE - couple words on the code\n25:26 What is this series leading up to?\n\n\n🐛 tags\n#dataanalytics #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=XGCWyfA3rgQ",
+  "upload_date": "20231106",
+  "duration": 1610,
+  "view_count": 11246,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d58b85572ef96bc5d3e9e546130beb47"
+}

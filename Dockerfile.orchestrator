@@ -1,0 +1,47 @@
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install additional dependencies
+RUN pip install --no-cache-dir \
+    redis \
+    psycopg2-binary \
+    requests \
+    asyncio \
+    aiohttp \
+    fastapi \
+    uvicorn \
+    pydantic \
+    python-multipart
+
+# Copy orchestrator code
+COPY src/agents/ /app/src/agents/
+COPY config/ /app/config/
+
+# Create necessary directories
+RUN mkdir -p /app/logs
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+
+# Expose orchestrator port
+EXPOSE 8007
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD python -c "import requests; requests.get('http://localhost:8007/health')"
+
+# Start the orchestrator
+CMD ["python", "src/agents/orchestrator.py"]

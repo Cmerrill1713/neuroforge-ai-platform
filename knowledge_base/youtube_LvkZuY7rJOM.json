@@ -1,0 +1,25 @@
+{
+  "id": "youtube_LvkZuY7rJOM",
+  "title": "Voice to Claude Code: SPEAK to SHIP Agentic Coding AI Assistant",
+  "description": "STOP typing every line of code! ⌨️🚫 You can SPEAK TO SHIP.\n\n🔥 The future of ai coding isn't about fancier IDE extensions... It's about harnessing agentic coding to turn your voice into shippable code!\n\nIn this video, indydevdan reveals a game-changing approach to building a personal ai assistant that leverages Claude Code and Realtime Speech to Text to allow you to build software just by talking.\n\n🎥 VIDEO REFERENCES\n\n- PRINCIPLED AI CODING:\nhttps://agenticengineer.com/principled-ai-coding?y=LvkZuY7rJOM\n\n- WEB SEARCH TOOL:\nhttps://docs.anthropic.com/en/docs/build-with-claude/tool-use/web-search-tool\n\n- REALTIME STT:\nhttps://github.com/KoljaB/RealtimeSTT\n\n- CLAUDE CODE CREATORS:\nhttps://www.youtube.com/watch?v=zDmW5hJPsvQ\n\n- CLAUDE CODE:\nhttps://www.anthropic.com/claude-code?ref=blog.mozilla.ai\n\n- HN POST:\nhttps://news.ycombinator.com/item?id=43931409\n\n- CLAUDE CODE WITH MAX PLAN:\nhttps://support.anthropic.com/en/articles/11145838-using-claude-code-with-your-max-plan\n\n🚀 Discover how we built a custom personal ai assistant in just 700 lines of code, connecting realtime stt (speech-to-text) as the 'ears', Claude Code as the 'brain', and OpenAI TTS as the 'voice'. This isn't just a demo; it's a blueprint for a new ai agent powered workflow that maximizes your ai compute. P.S - we also use OpenAI gpt-4.1-mini as a compression model to simplify our responses from Claude Code before using OpenAI TTS to convert the responses into natural language. This keeps the response concise.\n\n🛠️ See firsthand how this voice to code system handles real engineering tasks: generating starter code in multiple languages, modifying existing files based on natural language commands, reading documentation to draft new plans, and implementing complex features like the Anthropic web search tool—all just by speaking!\n\n💡 While other tools like Cursor or Windsurf offer great ai coding features, none match the programmable, Agentic Coding power of Claude Code. We compare claude code to tools like Codex and explain why its ability to accept arbitrary tool calls directly from prompts makes it the leading platform for scaling your engineering impact in the age of AI.\n\n💰 Yes, we address the cost! Using powerful tools like Claude Code isn't free, but we break down the compute = success equation and discuss why the value generated far outweighs the expense for serious engineers. Learn why you should embrace spending more to get more done. We also touch on the new Max Plan and its implications for heavy users.\n\n🌟 Join the journey to embrace Agentic Coding and unlock your engineering potential. Whether you're a senior engineer or just starting out, understanding how to build and leverage a personal ai assistant fueled by Claude Code and speech to text is crucial for staying ahead.\n\nCheck out the codebase linked below to build your own voice to code system! 👇 And don't forget to explore Principled AI Coding for foundational skills in AI coding and agentic workflows.\n\n📖 Chapters\n00:00 Voice to Claude Code\n01:20 RealtimeSTT, Claude Code, OpenAI TTS\n04:05 Anthropic Web Search AI Plan Draft\n11:44 Voice to Code - Merge and Delete\n17:00 Thank you - 50k subs soon\n21:00 Claude Code COSTS\n25:50 Breakdown Voice to Claude Code\n\n#aicoding #agenticcoding #claudecode",
+  "url": "https://www.youtube.com/watch?v=LvkZuY7rJOM",
+  "upload_date": "20250512",
+  "duration": 1761,
+  "view_count": 18088,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "66257a7d46b115d036cd069476e494e5"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_Mk87sFlUG28",
+  "title": "Context Engineering 101 - The Simple Strategy to 100x AI Coding",
+  "url": "https://www.youtube.com/watch?v=Mk87sFlUG28",
+  "description": "Context Engineering is the new big thing for AI coding - not because the concept is new, but because we're finally reaching the point where everyone realizes that putting in the effort to provide extensive, engineered context to AI coding assistants is what separates real results from vibe coding. \n\nMost people are still playing around with these ideas without a true systematic process, so I'm about to show you how to actually implement context engineering for real production builds with a strategy called PRPs (Product Requirements Prompts).\n\nUnderstanding the idea is one thing - watching it demolish a non-trivial project from start to finish is something completely different. And that's exactly what we're doing today. I'm taking everything from my previous context engineering video and putting it into practice by building a production-ready MCP server from scratch. No shortcuts, no simple demos - we're talking about real code that follows security best practices, handles errors properly, and ships to production.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- Check out Lindy if you want to easily build AI automations with no code that scale *unbelievably* well thanks to their new Agent Swarms:\nhttps://go.lindy.ai/cole-m\n\n- If you're looking to join a community for early AI adopters to master AI Coding & AI Agents and transform your career or business, check out Dynamous:\nhttps://dynamous.ai\n\n- Context Engineering template for building MCP servers:\nhttps://github.com/coleam00/context-engineering-intro/tree/main/use-cases/mcp-server\n\n- Rasmus' YouTube channel (he's posting content regularly!):\nhttps://www.youtube.com/@RasmusWiding\n\n- Rasmus’ PRP GitHub:\nhttps://github.com/Wirasm/PRPs-agentic-eng\n\n- Previous video on context engineering:\nhttps://www.youtube.com/watch?v=Egeuql3Lrzg\n\n- Previous video on building production ready MCP servers:\nhttps://www.youtube.com/watch?v=Zw3sfAIpeH8\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Context Engineering with PRPs\n01:35 - What We're Building in this Video (My Template for You)\n03:29 - The PRP Process in a Nutshell\n04:52 - Demo of the MCP Server We Build with the PRP Template\n08:45 - Lindy\n10:24 - Conversation with Rasmus (Creator of the PRP Framework)\n25:36 - Building an MCP Server from Scratch with the Template\n26:41 - Writing our INITIAL.md\n28:53 - Generating and Validating our PRP\n32:48 - Executing our PRP (Building the MCP Server)\n34:34 - Testing Our MCP Server\n37:03 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250717",
+  "duration": 2264,
+  "view_count": 56134,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

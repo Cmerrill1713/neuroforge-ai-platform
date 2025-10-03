@@ -1,0 +1,26 @@
+{
+  "id": "youtube_xfFyAumTjT0",
+  "title": "Let's Settle the o3-mini Vs. R1 Debate for Coding ONCE and for ALL",
+  "url": "https://www.youtube.com/watch?v=xfFyAumTjT0",
+  "description": "After the release of DeepSeek R1, an incredible open source reasoning LLM, OpenAI almost immediately fired back with the public release of o3-mini, the next generation of their own reasoning LLMs. \n\nSo now we have these two incredible reasoning LLMs and one of the big questions on everyone’s mind is: which is better at coding? That’s what we’re going to dive into in this video with the help of bolt.diy, our open source AI coding assistant.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHead on over to RepoCloud with the link below and check out all the incredible open source platforms you can deploy with one click (including bolt.diy, n8n, and Open WebUI!):\n\nhttps://repocloud.io/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe Community Voting period of the oTTomator Hackathon is open! Head on over to the Live Agent Studio now and test out the submissions and vote for your favorite agents. There are so many incredible projects to try out!\n\nhttps://studio.ottomator.ai\n\nCheck out bolt.diy and get this open source AI coding assistant running on your machine for free in minutes:\n\nhttps://bolt.diy\n\nWe also have an incredible community for bolt.diy here:\n\nhttps://thinktank.ottomator.ai\n\nHere is the HuggingFace article on o3-mini versus R1:\n\nhttps://huggingface.co/blog/prithivMLmods/o3-mini-vs-deepseek-r1\n\nFULL prompt that I used for creating the AI Agent Chat App:\n\nhttps://docs.google.com/document/d/1pJD2J2dAXMuABRc6S-fHetP-6MBkI5SydqYjE3LgFdE\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing our Coding Showdown Competitors\n01:57 - Comparing o3-mini to R1\n03:31 - Using bolt.diy to Test o3-mini and R1\n06:01 - Building our First App with o3-mini\n07:06 - Building our First App with R1\n08:25 - RepoCloud.io\n10:39 - Prompt for our AI Agent Chat App\n11:23 - AI Agent Chat App with o3-mini\n13:14 - AI Agent Chat App with R1\n15:19 - Chess App with o3-mini\n16:51 - Chess App with R1\n18:18 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250206",
+  "duration": 1152,
+  "view_count": 47613,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

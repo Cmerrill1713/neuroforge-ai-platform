@@ -1,0 +1,30 @@
+{
+  "id": "meta_github_156293205",
+  "title": "xla",
+  "description": "Enabling PyTorch on XLA Devices (e.g. Google TPU)",
+  "url": "https://github.com/pytorch/xla",
+  "language": "Python",
+  "stars": 2689,
+  "forks": 565,
+  "created_at": "2018-11-05T22:42:04Z",
+  "updated_at": "2025-09-27T13:32:32Z",
+  "topics": [
+    "compiler",
+    "deep-learning",
+    "pytorch",
+    "xla"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

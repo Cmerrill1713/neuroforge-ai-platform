@@ -1,0 +1,26 @@
+{
+  "id": "youtube_AeASAsPp9LE",
+  "title": "I'm DONE writing tests - using AI copilot AIDER to AUTOMATE testing.",
+  "description": "Testing your code is great, AND IT SUCKS. It can be insanely time consuming since you have to rewrite, mock, and patch code over and over. Even with testing fixtures new code brings new functions, classes, and modules and that means more mocking. What if there was a way to automate the hard part of writing tests? Or even all of it?\n\nIn this video, we walk you through a simple Python app designed to write to and read from a Notion page and database. But here's where things get exciting: instead of the traditional (time sucking) testing methods, we use GPT powered, AI coding assistant AIDER for test automation on our Notion Python module. Ever wondered how efficient AI can be in catching and correcting errors? You're in for a treat as we showcase how, with the /run command, AIDER not only identifies errors but also self-corrects them in the tests 🤯🤯🤯.\n\nIn our deep dive, you'll see how you can use AIDER with pytest while building the principles and techniques to use AI coding copilots with any testing framework out there, be it jest, vitest, or others. So, whether you're an Front-End engineer, prompt engineer, a passionate Python developer, or just curious about the future of AI engineering, this video has something for every coder. Join us in exploring the next frontier in app development and testing! Don't forget to sub for more cutting-edge content.\n\n🤖 Learn AIDER and become an AI engineer\nhttps://youtu.be/MPYFPvxfGZs\n\n⚙️ Learn the Notion API\nhttps://www.youtube.com/playlist?list=PLS_o2ayVCKvDwzhB-wdzBTvpQwgArrHlY\n\n💻 Tech\n\n- Aider https://aider.chat/\n- Pytest https://docs.pytest.org/en/7.4.x/\n- Notion API https://developers.notion.com/\n\n🖥 Equipment\n\n- Mac Book Pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Dell U-Series 38\" U3818DW https://www.dell.com/en-us/work/shop/dell-ultrasharp-49-curved-monitor-u4919dw/apd/210-arnw/monitors-monitor-accessories?gacd=9646510-1028-5761040-266706306-0&dgc=st&ds_k=DYNAMIC+SEARCH+ADS&ds_rl=1282789&gclid=CjwKCAjw682TBhATEiwA9crl31qIZ4D8ut1OWPvNviY3UE77Poi2-wfi7uM-PY3ucNYCo7Gu7GF63RoCoaUQAvD_BwE&gclsrc=aw.ds&nclid=d5WkuGPFVi5qqqtvpNphRVY0Ys0xjwqFAX7NX8U_6FjGAqScoYJ-teTvdlfdjprM\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n📖 Chapters\n00:00 Testing Burns Your Time\n01:00 Notion App Overview \n02:20 AI Testing With AIDER\n03:40 Bro, Failed Tests?\n04:00 Self Correcting AI Testing\n05:15 Memory Explosion\n06:05 AI AUTOMATED TESTS\n07:15 Push AIDER with parametrization\n09:00 Better test\n10:20 The Productivity Boost Is Real\n10:37 Two issues with AIDER and LLMs\n11:56 Ty for the support",
+  "url": "https://www.youtube.com/watch?v=AeASAsPp9LE",
+  "upload_date": "20230807",
+  "duration": 750,
+  "view_count": 5555,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "api",
+    "database"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "7d82514d83b8a58b28407852831726f6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "youtube_7B2HJr0Y68g",
+  "title": "My Claude Code Sub Agents BUILD THEMSELVES",
+  "description": "Are you using Claude Code Sub Agents the WRONG way? I have a BIG IDEA for you.\n\n(secret early bird launch: https://agenticengineer.com/tactical-agentic-coding?y=Kf5-HWJPTIE)\n\nSub Agents just changed EVERYTHING about AI coding. With the right approach, your agents can now BUILD THEMSELVES.\n\n🎥 Featured Links:\n\n- Claude Code Sub Agents Codebase: https://github.com/disler/claude-code-hooks-mastery\n\n- Claude Code Hooks Full Breakdown: https://youtu.be/J5B9UGTuNoM\n\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=7B2HJr0Y68g_a\n\n- Claude Code Sub Agents Docs: https://docs.anthropic.com/en/docs/claude-code/sub-agents#explicit-invocation\n\n- Elevenlabs MCP server: https://github.com/elevenlabs/elevenlabs-mcp\n\n🚀 In this agentic coding video, IndyDevDan dives into Claude Code Sub Agents. Watch as we work through the fundamentals of Sub Agents and then work up to the Meta Agent - a powerful sub agent that literally builds other agents for you. This isn't just another AI feature; it's a way you can scale your impact in a massive way. We of course - stick to great principles AI coding to scale your impact.\n\n💡 Discover the two CRITICAL mistakes engineers are making with sub agents that could derail your entire workflow. Learn why understanding the flow of information between your primary agent and sub agents is absolutely essential for scaling your agentic coding to multi-agent systems.\n\n🔥 What You'll Master:\n\n- The TRUE architecture of Claude Code Sub Agents and why they don't work like you think\n- How to build a Meta Agent that creates specialized agents automatically\n- Context preservation strategies that prevent pollution of your main conversation\n- The power of delegation patterns in multi-agent orchestration\n- Why your sub agent prompts are actually system prompts (and why this matters)\n- Real-world example: Building a text-to-speech notification agent from scratch\n\n⚡ Key Insights:\n\nSub agents respond to your PRIMARY agent, not to you directly. This changes everything about how you write prompts and structure your workflows. Master this concept and you'll unlock extreme productivity gains that most engineers will miss.\n\n🛠️ Whether you're using Sonnet or any other model, these patterns will transform how you approach AI coding. From simple hello world agents to complex multi-agent systems, this video equips you with the knowledge to build powerful, scalable agentic workflows.\n\nDon't get left behind in the agentic revolution. Your fine-tuned prompts and Claude Code sub agents can yield extreme value - but only if you avoid the pitfalls I reveal in this video.\n\n📖 Chapters\n00:00 Ship more with Sub Agents\n01:15 Claude Code Sub Agents\n06:50 Chaining Sub Agent Workflows\n10:24 The Meta Agent\n20:58 Sub Agent Pros and Cons\n\n#aicoding #claudecode #agenticoding",
+  "url": "https://www.youtube.com/watch?v=7B2HJr0Y68g",
+  "upload_date": "20250728",
+  "duration": 1838,
+  "view_count": 82949,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "99a8eaf451c33a209da5616e18a81c2a"
+}

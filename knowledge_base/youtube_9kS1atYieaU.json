@@ -1,0 +1,27 @@
+{
+  "id": "youtube_9kS1atYieaU",
+  "title": "Using Apple Vision Pro & LLM Agents to Code Youtube Automation Tools (Proof Of Concept)",
+  "description": "Developers, experience the future as we combine AR with LLMs with content AUTOMATION.\n\nIn this video we use the Apple Vision Pro to DISCOVER how AI agents and LLM technologies are POWERING the next wave of YOUTUBE content creation.\n\nImagine enhancing your content creation workflow with the cutting-edge capabilities of AI coding and multi-agent systems. Our latest video unveils how you can use multi-agent principles with a practical example: YouTube metadata automation, deeply integrated with LLM agents and AI technologies. We utilize python and poetry as our language and package manager of choice. This tool is not just about streamlining your upload process; it's about leveraging the advanced features of AI agents to transform the cumbersome task of generating metadata for any type of digital assets. In this video we create the Proof Of Concept of your LLM Powered YouTube metadata generation tool in a modular, reusable fashion.\n\nDive into an in-depth exploration of this tool and the application of principles for building agentic applications. We utilize the Apple Vision Pro to create a new generation of youtube developer content. By combining the concepts of agentic engineering and AI coding, we demonstrate how YouTube automation becomes not just a possibility but a practical tool in your creative arsenal fueled by your LLM agents. This video goes beyond a simple Apple Vision Pro review; it's a comprehensive guide that sits in the intersect of AR/VR with the Apple Vision Pro, LLM Agents, and applying engineering principles to automate and enhance your YouTube content strategy, offering a glimpse into a future where creators can focus more on creativity and less on manual tasks.\n\n🔗 Part 1: Principles for building Multi-Agent Applications\nhttps://youtu.be/q3Ld-MxlXmA\n\n⏰ Stop wasting time writing SQL\nhttps://talktoyourdatabase.com/\n\n⚙️ Faster-Whisper - Transcribe Audio/Video FAST\nhttps://github.com/SYSTRAN/faster-whisper",
+  "url": "https://www.youtube.com/watch?v=9kS1atYieaU",
+  "upload_date": "20240212",
+  "duration": 1411,
+  "view_count": 2695,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "57bb8d121fcea13edb737e70a000a732"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "youtube_0vVtbMdmbds",
+  "title": "pip install YOUR-PACKAGE: Building your first python with Poetry, AIDER, and ChatGPT",
+  "description": "Want to master Python package creation with AI's assistance? Want to discover a new way to learn new technology? Nice click, in this video we break down the process using Poetry, AIDER, and ChatGPT to create our very own python package. \n\nStarting off, we delve into \"how to create Python packages\" by using the package dependency manager, Poetry, to deploy a new Python CLI application. But here's the twist: we employ a dynamic duo for this project. ChatGPT, using GPT-4, offers precise instructions on how to publish python packages while AIDER acts as our coding assistant, swiftly turning those guidelines into code. \n\nAs we conclude, we'll guide you through the deployment of our application to testpypi and also shed light on the steps to introduce it to pypi. If you're keen on crafting Python Packages while learning how to accelerate your learning experiences with modern AI tech this tutorial is tailored for you\n\n\n🤖 Hungry For More AI Driven Development?\nhttps://youtu.be/PPR675_JSM8\n\n🌎 Links\n\nTestPyPI: https://test.pypi.org/\nPyPI: https://pypi.org/\nPoetry: https://python-poetry.org/docs/\nAider: https://aider.chat/\nChatGPT: https://chat.openai.com/\n\n\n🖥 Equipment\n\n- Mac book pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n#️⃣ Hashtags\n#softwareengineering #gpt #javascript",
+  "url": "https://www.youtube.com/watch?v=0vVtbMdmbds",
+  "upload_date": "20230814",
+  "duration": 839,
+  "view_count": 1719,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "javascript",
+    "ai",
+    "tutorial",
+    "coding",
+    "deployment"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "dd18573329b7b95752f5474c2224dcc0"
+}

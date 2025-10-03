@@ -1,0 +1,25 @@
+{
+  "id": "youtube_8wSH4XukcH8",
+  "title": "Agent OS: LLM OS Micro Architecture for Composable, Reusable AI Agents",
+  "description": "Agent OS is an architecture for building AI agents that focuses on IMMEDIATE results for today and over the long term.\n\nThe LLM Ecosystem is ever evolving so in order to keep up, you'll need an architecture that has interchangeable parts that can be swapped in and out as needed. This is where the Agent OS comes in.\n\nA great architecture, can future proof your AI agents and make them more adaptable.\n\nThe Agent OS is a micro architecture based off of Andrej Kaparthy's LLM OS. It's comprises three primary components: the Language Processing Unit (LPU), Input/Output (IO), and Random Access Memory (RAM). Each serves a unique purpose in the construction of AI agents, enabling you, the developer, to create systems that are not only efficient but also adaptable to the rapidly changing landscape of AI/LLM technology. The LPU, positioned at the core of the architecture, integrates model providers, individual models, prompts, and prompt chains into a cohesive unit. By storing all llm, and prompt related functionality into one component, the LPU, we can focus on prompt engineering and prompt testing around this unit of this Agent. This integration facilitates the creation of AI agents capable of solving specific problems with high precision. Thanks to the layered architecture, each piece can be swapped out. So when GPT-4.5 or GPT-5 rolls out, you can easily upgrade your AI agent without having to rebuild the entire system from scratch. \n\nThe RAM component enables your AI agent to operate on state, allowing it to adapt to changing inputs and produce novel results. The IO layer, on the other hand, provides the tools (function calling) necessary for your AI agent to interact with the real world. This includes making web requests, interacting with databases, and monitoring the agent's performance through spyware. By monitoring your AI agent's state, inputs, and outputs, you can identify issues and make improvements to the system.\n\nIn this video we dig into ideas of creating composable agents where the input of one agent can be the output of another agent. This is a powerful concept that can be used to create complex agents that can solve a wide range of problems. It's the evolution of the core idea agentic engineering is built on: The prompt is the new fundamental unit of programming and knowledge work. First you have llms, then prompts, then prompt chains, then AI Agents, and then Agentic Workflows. This is the future of programming and knowledge work.\n\n\n🧠 Andrej Karpathy’s LLM OS\nhttps://youtu.be/zjkBMFhNj_g?si=lY10VSHBUGDPA8Hs\n\n\n🔗 7 Prompt Chains for Powerful AI Agents\nhttps://youtu.be/QV6kaNFyoyQ\n\n\n💻  Everything is a Function\nhttps://youtu.be/q3Ld-MxlXmA\n\n\n🔍 Multi Agent Spyware\nhttps://youtu.be/UA6IVMDPuC8\n\n\n📖 Chapters\n00:00 Best way to build AI Agents?\n00:39 Agent OS\n01:58 Big Ideas (Summary) \n02:48 Breakdown Agent OS: LPU, RAM, I/O\n04:03 Language Processing Unit (LPU) \n05:42 Is this over engineering?\n07:30 Memory, Context, State (RAM)\n08:20 Tools, Function Calling, Spyware (I/O) \n10:22 How do you know your Architecture is good? \n13:27 Agent Composability \n16:40 What's missing from Agent OS? \n18:53 The Prompt is the...\n\n\n#aiagent #llm #architecture",
+  "url": "https://www.youtube.com/watch?v=8wSH4XukcH8",
+  "upload_date": "20240408",
+  "duration": 1224,
+  "view_count": 16058,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "programming",
+    "api",
+    "database"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "a90b0e2f7beeb7de35e796b67f8322ba"
+}

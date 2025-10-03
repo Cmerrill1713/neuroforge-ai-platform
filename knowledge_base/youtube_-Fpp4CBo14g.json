@@ -1,0 +1,26 @@
+{
+  "id": "youtube_-Fpp4CBo14g",
+  "title": "Build an ARMY of AI Agents on Autopilot with Archon, Here's How",
+  "url": "https://www.youtube.com/watch?v=-Fpp4CBo14g",
+  "description": "Archon is the first agent of its kind - an open source AI agent that literally creates other AI agents from scratch.\n\nI’ve been constantly working on Archon the past couple of months, and I’ve been making a LOT of progress! In this video, I show you how I used it to create an army of specialized AI agents that each use an MCP server to connect my primary agent to a bunch of services, including Slack, Brave, Airtable, GitHub, my file system, and Firecrawl.\n\nIt’s the beginning of the ultimate personal assistant and I didn’t even have to code it myself - that's the power of Archon.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Vectorize to make your RAG pipelines a piece of cake. Stop guessing the best way to get your documents into your vector database:\n\njoin.vectorize.io/keh2qtvgygib\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAI Agent Army on GitHub:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/mcp-agent-army\n\nTry Archon yourself (I'd appreciate a star on the repo too!):\n\nhttps://github.com/coleam00/Archon\n\nPydantic AI MCP documentation:\n\nhttps://ai.pydantic.dev/mcp/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the MCP AI Agent Army\n01:21 - Overview of Archon\n02:33 - The Many Agents I've Built with Archon\n03:14 - Diving into the MCP AI Agent Army\n04:51 - Showing the Power of the AI Agent Army\n06:00 - Demo of Complex Agent Requests\n08:20 - Vectorize\n10:05 - How the MCP AI Agent Army Works\n13:34 - How I Used Archon to Build the AI Agent Army\n15:39 - Recent Releases of Archon\n17:45 - Exciting Plans for Archon\n19:03 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250403",
+  "duration": 1185,
+  "view_count": 45655,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

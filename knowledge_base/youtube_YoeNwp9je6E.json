@@ -1,0 +1,25 @@
+{
+  "id": "youtube_YoeNwp9je6E",
+  "title": "Yup, QwQ is CRACKED: Prompt Chaining with Qwen and QwQ reasoning model (Ollama + LLM)",
+  "description": "Yup, QwQ is 100%, certified, CRACKED: Alibaba's QWQ and Marco-o1 LLMs are making powerful AND local LLMs a reality TODAY.\n\nQ DUB IS INSANE BUT it's hard to use. Let's fix that.\n\n🎥 Featured Media\n- QwQ Prompt Chaining Gist: https://gist.github.com/disler/7798d826102091649824adfd05c55080\n- Four Levels of the Prompt Video: https://youtu.be/ujnLJru2LIs\n- Fusion Chain Video: https://youtu.be/iww1O8WngUU\n- Prompt Chaining Video: https://youtu.be/UOcYsrnSNok\n- QwQ Blog: https://qwenlm.github.io/blog/qwq-32b-preview/\n- Ollama Model: https://ollama.com/library/qwq:32b\n- LLM Library: https://github.com/simonw/llm\n\n🚀 Alibaba's new QWQ LLM (Qwen with Questions) is shaking up the AI world by bringing reasoning capabilities right to your device. But is the QWQ model all it's cracked up to be?\n\n🔥 Discover why QWQ, also known as Quinn with Questions, stands out as the first local reasoning model with incredible on-device capabilities. We'll break down its strengths and weaknesses, from its impressive reasoning abilities to its pesky tendencies like excessive looping and unexpected language outputs. Learn how to overcome these challenges with effective prompt chaining strategies that make QWQ instantly useful.\n\n🛠️ We showcase a powerful two-model prompt chain pattern that leverages QWQ for generating rich, contextual outputs and a high-quality base model like O1 Mini for extracting clean, actionable results. Watch as we demonstrate real-world applications, including content generation, architecture design, and more, all while keeping everything running smoothly on your local machine.\n\n🌟 Don't let the flaws hold you back! By mastering prompt chaining with QWQ and integrating it with tools like Ollama and the LLM library, you can supercharge your NLP projects right today. Stay ahead of the curve with practical examples, hands-on demos, and expert tips that turn powerful but tricky models into your go-to AI solution.\n\n💡 Whether you're building personal AI assistants, enhancing your generative AI stack, or exploring the future of local models, this video provides the knowledge and tools to elevate your AI game. Join us as we push the boundaries of what's possible with QWQ and prompt chaining!\n\n📖 Chapters\n00:00 QWQ is insane BUT...\n00:00 Unlocking Local Reasoning Models\n04:15 Understand the Prompt Chain\n08:53 Prompt Chaining QWQ and Qwen Coder\n13:45 Important Pattern for Reasoning Models\n\n#promptengineering #promptchaining #reasoningmodel",
+  "url": "https://www.youtube.com/watch?v=YoeNwp9je6E",
+  "upload_date": "20241202",
+  "duration": 983,
+  "view_count": 23405,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "aws",
+    "ai",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "0f9426316f0045a20ba6b426dc85cea6"
+}

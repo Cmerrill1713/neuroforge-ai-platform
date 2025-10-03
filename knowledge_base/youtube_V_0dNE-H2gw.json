@@ -1,0 +1,26 @@
+{
+  "id": "youtube_V_0dNE-H2gw",
+  "title": "Run ALL Your AI Locally in Minutes (LLMs, RAG, and more)",
+  "url": "https://www.youtube.com/watch?v=V_0dNE-H2gw",
+  "description": "Update! Follow up video for deploying this app to the cloud! \n\nhttps://youtu.be/259KgP3GbdE?si=nUt90VMv63iVMQMe\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nIn this video I show you an INCREDIBLE packaged local AI solution with Ollama for the LLMs, Qdrant for RAG, Postgres for the SQL database, and n8n for the no code workflow automations. This package is SO easy to set up and use! I walk you through the setup quick and then even show you how to use it to build a RAG AI Agent that runs entirely locally!\n\nOne really important thing to keep in mind is that while I created a no code AI agent with n8n in this video, this whole local AI setup could be used to actually code your AI agents! It doesn't have to be \"no code\" n8n for the actual agent. A custom coded RAG AI agent with n8n for the accompanying workflow automations (agent tools!) is another fantastic use of this local AI package.\n\nHardware: I am actually using a laptop for this video - with a 3070 laptop GPU and an i7-12700H CPU with 14 cores and 20 threads. So nothing crazy at all! It takes up to 5 minutes for me to get a response from Llama 3.1 8b including RAG. Definitely not fast enough for a chatbot though those kind of speeds could be okay for some agentic workloads. Typically though you will want a GPU with at least 8GB of VRAM for an 8b model, and at least 16GB of VRAM for a 70b model like Llama 3.1 70b.\n\n00:00 - 01:17 - Unveiling the Local AI Package\n01:18 - 06:38 - Installing the Local AI Package\n06:39 - 07:45 - Exploring the Docker Containers\n07:46 - 18:07 - Creating a Local RAG AI Agent\n18:08 - 19:18 - Testing the Local RAG AI Agent\n19:19 - 20:19 - Outro + Future Ideas\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nMy version of the local AI starter kit with my improvements, as well as the template for the n8n RAG AI Agent workflow I created in the video, can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/local-ai-packaged\n\nLink to the Local AI Starter Kit by n8n:\n\nhttps://github.com/n8n-io/self-hosted-ai-starter-kit\n\nI recommended GitHub Desktop and Docker Desktop in the video - here are the links for both:\n\nhttps://desktop.github.com/download/\nhttps://www.docker.com/products/docker-desktop/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20240916",
+  "duration": 1219,
+  "view_count": 565971,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "youtube_KhINc5XwhKs",
+  "title": "Test Driven PROMPT Engineering: Using Promptfoo to COMPARE Prompts, LLMs, and Providers.",
+  "description": "Wouldn't it be great if you KNEW your prompt was CHEAP, FAST, and ACCURATE? Relying on trial and error isn't enough when you're using prompts in production tools and applications. What you need is a methodical approach to prompt evaluation and testing. 'Test Driven PROMPT Engineering' is your key to unlocking this potential. This video showcases how Promptfoo can be a game-changer in comparing and optimizing your prompts, LLMs, and providers. Gain insights into cost-effective LLM choices, learn about prompt testing essentials to ensure your prompts are as efficient, cheap and accurate as they can be. This tutorial is straightforward and packed with value, designed for prompt engineers, full stack engineers, and product builders who want to make informed, confident, data-driven decisions in prompt engineering.\n\nWhat might surprise you is how simple prompt testing can be (shout out to the promptfoo developers). Promptfoo will enhance your prompt engineering skills and AI Agents with simple yet customizable LLM testing and evaluation. Promptfoo even has support for testing the new OpenAI Assistants API! It doesn't matter if you're using AutoGen, Assistants API, ollama, ChatDev, Aider, custom agents, multi agent systems or really any other prompt engineering tool. At the end of the day every tool is driven by prompts and that means llm testing and evaluations will help you gain confidence, cut costs, and optimize the results from your prompts.\n\nThis tutorial provides a hands-on approach to understanding the intricacies of prompt comparison and optimization. You'll learn token usage, time to completion and how to compare different prompts to choose THE WINNER. Promptfoo enables you to effectively compare and select LLMs, with a focus on achieving the best balance between speed, accuracy, and cost. We discuss key strategies for testing prompts in various scenarios, highlighting the importance of prompt evaluation and testing by looking at real llm test cases using GPT-4 Turbo and GPT-3 Turbo.\n\nLet me know if you're interested in more prompt testing tutorials, frameworks, and methodologies.\n\n📺 Quick Start LLM Testing\nhttps://github.com/disler/llm-prompt-testing-quick-start\n\n🔗 LINKS:\nPromptfoo: https://promptfoo.dev/\nTalk To Your Database: https://talktoyourdatabase.com (Beta Passcode 7777)\n\n📖 CHAPTERS:\n00:00 Are your prompts even good?\n00:45 For real apps, prompt FEEL is not enough.\n01:14 Cheaper, Faster, Accurate Prompts with PROMPTFOO\n01:35 Quick Start LLM Testing\n03:20 Immediate Results with GPT-4-Turbo vs GPT-3-Turbo\n04:00 Clean and Reusable testing structures\n06:00 Asserts and Test Cases\n07:45 Learn these 3 components and you're good to go\n09:35 LLM Evaluation and Testing 2nd Run\n10:00 GPT-4 is breaking the bank and our timeline\n12:33 Promptfoo has a lot more to offer for llm testing\n13:12 Promptfoo has a OpenAI, Anthropic, Ollama, and soon Gemini Providers\n13:30 Three reasons you should test your prompts\n14:42 Test Driven Prompts\n\n💬 Hashtags\n#gpt #promptengineering #aiagents",
+  "url": "https://www.youtube.com/watch?v=KhINc5XwhKs",
+  "upload_date": "20231211",
+  "duration": 996,
+  "view_count": 12146,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "tutorial",
+    "api",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d42c47ce10a03e99ea9fad44c4e5f6e5"
+}

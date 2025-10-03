@@ -1,0 +1,26 @@
+{
+  "id": "youtube_9ijnN985O_c",
+  "title": "I Can SEE EVERYTHING: Claude Code Hooks for Multi Agent Observability",
+  "description": "Multi-agent systems are SILENTLY EXPLODING, but there's a MASSIVE problem nobody's talking about...\n\nOnce you scale beyond one Claude Code agent, chaos ensues. How do you track what 5, 10, or 20+ agents are doing simultaneously? This ONE idea will completely change your agentic coding workflows for the better.\n\n🎥 Featured Links:\n\n- Codebase: https://github.com/disler/claude-code-hooks-multi-agent-observability\n\n- Previous Claude Code Hooks Video: https://youtu.be/J5B9UGTuNoM\n\n- Programmable Agentic Coding: https://youtu.be/2TIXl2rlA6Q\n\n- Claude Code Hooks Docs: https://docs.anthropic.com/en/docs/claude-code/hooks\n\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=9ijnN985O_c\n\n🚀 In this agentic engineering video, IndyDevDan reveals how Claude Code Hooks enable unprecedented multi-agent observability. Watch as multiple AI agents work in parallel while a sleek observability system tracks EVERY move they make in real-time.\n\n🔥 Discover the power of multi-agent observability as we showcase:\n- Real-time event streaming from multiple Claude Code instances\n- Live activity pulse showing agent workloads at a glance  \n- Automatic event summarization using fast LLMs like Haiku\n- One-way data architecture for maximum simplicity\n- Session tracking across different codebases and devices\n\n💡 This isn't just monitoring - it's about scaling your impact as an engineer. See how Claude Code hooks integrate seamlessly with a minimal client-server architecture to give you complete visibility into your agentic coding workflows.\n\n🛠️ Whether you're running specialized agents for web scraping, deep research, or complex builds, this multi-agent observability system ensures you never lose track of what your Agentic Workflows and AI workforce is accomplishing.\n\n🌟 The future of engineering isn't about writing every line of code - it's about orchestrating armies of specialized AI agents. This video shows you exactly how to maintain control as you scale.\n\nDon't get left behind in the agentic coding wave. Master multi-agent observability and unlock the true potential of Claude Code AT SCALE.\n\nNo matter what...\n\nStay Focused and Keep Building\n\n📖 Chapters\n00:00 Claude Code Observability\n00:50 Multi-Agent Observability\n02:57 Application UI/UX\n11:48 Codebase Architecture Breakdown\n17:40 None of this matters if...\n\n#claudecode #multiagent #aicoding",
+  "url": "https://www.youtube.com/watch?v=9ijnN985O_c",
+  "upload_date": "20250714",
+  "duration": 1208,
+  "view_count": 27349,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "03b848a3ef80430532592efc138da103"
+}

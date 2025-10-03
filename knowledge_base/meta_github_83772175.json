@@ -1,0 +1,30 @@
+{
+  "id": "meta_github_83772175",
+  "title": "cpuinfo",
+  "description": "CPU INFOrmation library (x86/x86-64/ARM/ARM64, Linux/Windows/Android/macOS/iOS)",
+  "url": "https://github.com/pytorch/cpuinfo",
+  "language": "C",
+  "stars": 1124,
+  "forks": 374,
+  "created_at": "2017-03-03T07:46:54Z",
+  "updated_at": "2025-09-28T14:36:38Z",
+  "topics": [
+    "cpu",
+    "cpu-cache",
+    "cpu-model",
+    "cpu-topology",
+    "cpuid",
+    "instruction-set"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

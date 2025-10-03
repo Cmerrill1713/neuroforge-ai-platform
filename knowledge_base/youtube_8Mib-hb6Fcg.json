@@ -1,0 +1,26 @@
+{
+  "id": "youtube_8Mib-hb6Fcg",
+  "title": "AI Code That Fixes Itself (An MCP You Can Try Now)",
+  "url": "https://www.youtube.com/watch?v=8Mib-hb6Fcg",
+  "description": "AI coding assistants (even the best ones like Claude Code) constantly make frustrating mistakes - wrong function names, incorrect syntax, endless debugging loops. \n\nHere I introduce a breakthrough solution that is still very experimental: indexing open source projects into knowledge graphs that enable AI to self-correct in real-time. Instead of guessing at APIs/SDK syntax and getting stuck in infinite debugging loops, AI coding assistants can now query exact syntax, validate its code against actual codebases, and heal itself automatically.\n\nI even give a live demonstration showing how this knowledge graph approach eliminates hallucinations and creates truly reliable AI coding. This isn't just incremental improvement - it's the foundation for taking AI coding assistants to the next level of reliability and usefulness.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Director to easily create browser automations in real time with natural language (get started for free!): \n\nhttps://browserbase.plug.dev/h04lnzt\n\nDirector and the open source Stagehand browser automation framework are both created by Browserbase:\n\nhttps://browserbase.plug.dev/JpoDwdP\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCrawl4AI RAG MCP Server:\n\nhttps://github.com/coleam00/mcp-crawl4ai-rag\n\nArchon (V2 Overhaul Coming Soon):\n\nhttps://github.com/coleam00/Archon\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Fixing AI Coding Hallucinations with Knowledge Graphs?!\n01:19 - What's in the Knowledge Graph?\n02:44 - Detecting Hallucinations in Action\n06:56 - When this Strategy is Useful (or not)\n11:51 - Hallucination Detection in the Crawl4AI RAG MCP Server\n15:38 - Knowledge Graphs + Claude Code = $$$\n20:04 - Results of One Shotting an AI Agent with Our Strategy\n22:40 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos weekly - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250619",
+  "duration": 1406,
+  "view_count": 51383,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

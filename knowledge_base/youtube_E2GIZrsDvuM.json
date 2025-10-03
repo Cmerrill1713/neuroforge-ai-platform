@@ -1,0 +1,26 @@
+{
+  "id": "youtube_E2GIZrsDvuM",
+  "title": "Use Open WebUI with Your N8N AI Agents - Voice Chat Included!",
+  "url": "https://www.youtube.com/watch?v=E2GIZrsDvuM",
+  "description": "I have added Open WebUI into the local AI starter kit developed by the N8N team AND created the custom functionality to make it possible to chat with your N8N workflows directly in Open WebUI just like you would any Ollama model! Using Open WebUI, you can even use voice to chat with your N8N agents, it's pretty slick!\n\nThe goal here is to continue to build on this local AI stack to make it SUPER easy for anyone to download, run, and get started with running everything needed for AI locally - LLMs, RAG, an interface, a SQL DB, and workflow automations!\n\nSee the links below to get started!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n01:56 - Overview of the Local AI Stack\n05:27 - How to Run the Local AI Stack w/ Open WebUI\n09:35 - RAG AI Agent N8N Workflow Walkthrough\n15:26 - Integrating Open WebUI with N8N\n22:09 - Chatting with our N8N Agent in Open WebUI\n24:04 - Voice Chat with our N8N Agent\n25:33 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nDownload this local AI stack and get started now (go to the root of the repo to clone it)!\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/local-ai-packaged\n\nHere is the README with all the instructions I cover in the video:\n\nhttps://github.com/coleam00/ai-agents-masterclass/blob/main/local-ai-packaged/README.md\n\nHere is the function I created in Open WebUI to integrate with N8N!\n\nhttps://openwebui.com/f/coleam/n8n_pipe\n\nGet Docker Desktop (one of the many ways to get Docker on your machine):\n\nhttps://www.docker.com/products/docker-desktop/\n\nOriginal local AI starter kit repo by the N8N team:\n\nhttps://github.com/n8n-io/self-hosted-ai-starter-kit\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241024",
+  "duration": 1566,
+  "view_count": 123103,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

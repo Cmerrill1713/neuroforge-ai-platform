@@ -1,0 +1,27 @@
+{
+  "id": "youtube_PPR675_JSM8",
+  "title": "Writing code without coding - Browser TTS with AIDER (ASMR DEVLOG)",
+  "description": "GPT powered coding is changing how software engineers write code. If you've had the chance to experience GitHub Copilot, you'd understand the true potential of utilizing Artificial Intelligence to expedite the coding process.\n\nIn this video we manage to create an in-browser, text-to-speech proof of concept application with absolutely zero lines of manually written code. Thanks to the AI-driven programming assistant, AIDER, that leverages GPT technology, a task that would have required in depth reading, testing and tweaking over several hours was done in minutes.\n\nI think we've entered a new era. The era of AI Product Engineering. AI Product Engineering is a rocket ship, hyper-leveraged by AI and automated coding assistance tools like AIDER, GPT-Engineer, AutoGPT,  Copilot, and many others. \n\nStay ahead of the curve by embracing AI programming tools such as AIDER, GPT-4, and the latest breakthroughs from OpenAI. Become an AI Product Engineer and ship code in minutes, not hours. \n\n💻 Try Aider\nAider https://aider.chat/\n\n🤖 How Top AI Engineers will excel in the LLM Era.\nhttps://youtu.be/d2SEfmqT__4\n\n✅ Use Notion? Want to study faster with less effort? Convert your Notion pages into Personal Audio Books today:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=codeischanging\n\n💻 Software & Docs\n\n- Aider https://aider.chat/\n- In Browser Text To Speech https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#speech_synthesis\n\n🖥 Equipment\n\n- Mac book pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n#️⃣ Hashtags\n#softwareengineering  #gpt #promptengineering",
+  "url": "https://www.youtube.com/watch?v=PPR675_JSM8",
+  "upload_date": "20230717",
+  "duration": 558,
+  "view_count": 3283,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "programming",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "b82b6e4e3f49d9b11c5bfed18b299f9c"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "meta_github_80774092",
+  "title": "TPRNN",
+  "description": "TargetProp for RNNs",
+  "url": "https://github.com/facebookresearch/TPRNN",
+  "language": "Lua",
+  "stars": 27,
+  "forks": 10,
+  "created_at": "2017-02-02T22:17:08Z",
+  "updated_at": "2025-01-26T03:49:23Z",
+  "topics": [],
+  "readme_content": "# Target Propagation for Recurrent Neural Networks (TPRNN)\n\nThis is a self contained software accompanying the paper titled: Training\nLanguage Models using Target-Propagation, available at https://arxiv.org/abs/1702.04770.\nThe code allows you to reproduce our results on two language modeling\ndatasets, Penntree Bank (character and word) and wikitext, using various training methods.\n\n\nThe code implements the following training algorithsm for RNNs:\n\n- Standard BPTT training\n- Penalty Method (PM)\n- Alternating Direction Method of Multipliers (ADMM)\n- Augmented Lagrangian Method (ALM)\n\nIt also allows you to play around with various hyper-parameters,\nincluding the recurrent model architecture, learning rates and others.\n\n## Examples\nHere are some of the examples of how to use the code.\n\n* To train a single layer LSTM with standard BPTT training for word-level language modeling on PenntreeBank dataset with following hyper-parameters:\n  - hidden units: 100\n  - minibatch size: 32\n  - learning rate: 0.05\n\ntype:\n```\nth -i train_lm_bptt.lua -dset ptbw -model LSTM -nhid 100 -nlayer 1 batchsize 32 -lr 0.05\n```\n\n* To train a single layer GRU with ADMM for word-level language modeling on\nText8 with following hyper-parameters:\n\n  - hidden units: 100\n  - block size: 10\n  - minibatch size: 32\n  - parameter learning rate: 0.05\n  - hidden learning rate: 1\n\ntype:\n```\nth -i train_lm_admm.lua -dset text8w -model GRU -nhid 100 -block_size 10 -batchsz 32 -param_lr 0.05 -h_lr 1\n```\n\n* To train a single layer GRU with ALM for word-level language modeling on\nText8 with following hyper-parameters:\n- hidden units: 100\n- block size: 10\n- minibatch size: 32\n- parameter learning rate: 0.05\n- hidden learning rate: 1\n\ntype:\n```\nth -i train_lm_admm.lua -dset text8w -model GRU -nhid 100 -block_size 10 -batchsz 32 -param_lr 0.05 -h_lr 1 -alm\n```\n\n* To train a single layer GRU with PM for word-level language modeling on\nText8 with following hyper-parameters:\n- hidden units: 100\n- block size: 10\n- minibatch size: 32\n- parameter learning rate: 0.05\n- hidden learning rate: 1\n\ntype:\n```\nth -i train_lm_admm.lua -dset text8w -model GRU -nhid 100 -block_size 10 -batchsz 32 -param_lr 0.05 -h_lr 1 -u_startupdate 50000\n```\n\nTo list all the options available, you need to type\n```\nth train_lm_bptt.lua --help\n```\nor\n\n```\nth train_lm_admm.lua --help\n```\n\n\n## Requirements\nThe software requires you to have the following two packages already\ninstalled on your systems:\n\n- Torch 7\n- cudnn\n- torchnet\n- Installation instructions for both on Ubuntu 14.04 are here: https://github.com/facebook/fbcunn/blob/master/INSTALL.md\n\n\n## Installing\nDownload the files in an appropriate directory and run the code from there. See below.\n\n\n## How Target Propagation for Recurrent Neural Networks Software works\nThe top level file for standard BPTT training is called train_lm_bptt.lua\nThe top level file for target-prop training is called train_lm_admm.lua\n\nIn order to run the code you need to run the file using torch. For example:\n\n```\nth -i train_lm_bptt.lua -<option1_name> option1_val -<option2_name> option2_val ...\n```\nor\n\n```\nth -i train_lm_admm.lua -<option1_name> option1_val -<option2_name> option2_val ...\n```\n\nIn order to check what all options are available, type\n\n```\nth -i train_lm_bptt.lua --help\n```\nor\n\n```\nth -i train_lm_admm.lua --help\n```\n\n\n## License\nTarget Propagation for Recurrent Neural Networks (TPRNN) is CC-NC licensed.\n\n\n## Other Details\nSee the CONTRIBUTING file for how to help out.\n",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

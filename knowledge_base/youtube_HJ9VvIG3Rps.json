@@ -1,0 +1,26 @@
+{
+  "id": "youtube_HJ9VvIG3Rps",
+  "title": "I Built My Claude Code Subagents DREAM TEAM to Create Any AI Agent",
+  "url": "https://www.youtube.com/watch?v=HJ9VvIG3Rps",
+  "description": "Here's how I used Claude Code subagents along with Archon to build my dream team of agentic coders to create any AI Agent. This template is available for you to try right now - link below!\n\nYou just have to describe at a high level the agent you want to create, and then Claude Code spins up an entire workflow to plan, create, and validate the agent.\n\nThe highly structured approach to defining and executing subagents in Claude Code is a thing of beauty. And with Archon, we can give them the knowledge they need and split tasks for our project between them. This, my friend, is next level agentic engineering.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- Check out Lindy if you want to easily build AI automations with no code that scale *unbelievably* well:\nhttps://go.lindy.ai/cole-med\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you're looking to join a community for early AI adopters all mastering AI coding and sharing goldmines of resources with each other, check out Dynamous:\nhttps://dynamous.ai\n\n- GitHub repo for this subagent dream team:\nhttps://github.com/coleam00/context-engineering-intro/tree/main/use-cases/agent-factory-with-subagents\n\n- Try Archon now (free and open source):\nhttps://archon.diy\n\n- Archon intro video:\nhttps://youtu.be/8pRc_s2VQIo\n\n- Links to crawl with Archon for this template:\nClaude Code: https://docs.anthropic.com/en/docs/claude-code/sub-agents\nPydantic AI: https://ai.pydantic.dev/llms-full.txt\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the Claude Code Subagent Dream Team\n00:52 - Subagent Workflow Architecture for Creating AI Agents\n01:57 - The Planner Subagent\n02:52 - The Parallel Subagents (Prompts, Tools, Dependencies)\n03:42 - The Validator Subagent\n04:02 - Orchestrating the Subagents with Global Rules\n05:36 - How to Build and Use Claude Code Subagents\n07:17 - Creating Our First Subagent\n09:56 - Creating Subagents with Archon\n11:18 - Lindy\n13:08 - Markdown for Subagent Communication\n15:16 - Setting Up Our Project (Archon + Prompt)\n18:47 - FULL AI Agent Build with Our Subagent Team + Archon\n24:25 - Final Result & Agent Demo\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250828",
+  "duration": 1594,
+  "view_count": 35167,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

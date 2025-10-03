@@ -1,0 +1,252 @@
+{
+  "test_timestamp": "2025-10-02T19:34:46.432878",
+  "backend_tests": {
+    "cors_middleware": {
+      "status": "passed",
+      "tests": {
+        "preflight_request": {
+          "status": "passed",
+          "status_code": 200,
+          "cors_headers": {
+            "Access-Control-Allow-Origin": "http://localhost:3000",
+            "Access-Control-Allow-Methods": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT",
+            "Access-Control-Allow-Headers": "Content-Type"
+          },
+          "all_cors_headers_present": true
+        },
+        "cors_request": {
+          "status": "passed",
+          "status_code": 200,
+          "cors_headers": {
+            "Access-Control-Allow-Origin": "http://localhost:3000"
+          },
+          "origin_allowed": true
+        }
+      },
+      "summary": {}
+    },
+    "gzip_middleware": {
+      "status": "failed",
+      "tests": {
+        "gzip_compression": {
+          "status": "passed",
+          "content_encoding": "gzip",
+          "response_size": 207,
+          "compression_applied": true
+        },
+        "no_compression": {
+          "status": "failed",
+          "content_encoding": "gzip",
+          "response_size": 207,
+          "compression_not_applied": false
+        }
+      },
+      "summary": {}
+    },
+    "performance_middleware": {
+      "status": "passed",
+      "tests": {
+        "performance_timing": {
+          "status": "passed",
+          "process_time_header": "0.00015783309936523438",
+          "actual_request_time": 0.0016908645629882812,
+          "header_present": true,
+          "timing_reasonable": true
+        }
+      },
+      "summary": {}
+    },
+    "exception_handlers": {
+      "status": "passed",
+      "tests": {
+        "404_handling": {
+          "status": "passed",
+          "status_code": 404,
+          "error_format_valid": true
+        },
+        "validation_error": {
+          "status": "passed",
+          "status_code": 422,
+          "validation_error_handled": true
+        }
+      },
+      "summary": {}
+    },
+    "request_validation": {
+      "status": "passed",
+      "tests": {
+        "valid_request": {
+          "status": "passed",
+          "status_code": 200,
+          "request_accepted": true
+        },
+        "invalid_request": {
+          "status": "passed",
+          "status_code": 422,
+          "validation_rejected": true
+        }
+      },
+      "summary": {}
+    },
+    "response_formatting": {
+      "status": "passed",
+      "tests": {
+        "response_format": {
+          "status": "passed",
+          "content_type": "application/json",
+          "json_valid": true,
+          "required_fields": true
+        }
+      },
+      "summary": {}
+    }
+  },
+  "frontend_tests": {
+    "api_proxy_middleware": {
+      "status": "passed",
+      "tests": {
+        "health_proxy": {
+          "status": "passed",
+          "status_code": 200,
+          "proxy_working": true
+        },
+        "chat_proxy": {
+          "status": "passed",
+          "status_code": 200,
+          "proxy_working": true
+        }
+      },
+      "summary": {}
+    },
+    "cors_headers": {
+      "status": "passed",
+      "tests": {
+        "cors_headers": {
+          "status": "passed",
+          "cors_headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+            "Access-Control-Allow-Headers": "Content-Type"
+          },
+          "headers_present": true
+        }
+      },
+      "summary": {}
+    },
+    "sentry_middleware": {
+      "status": "passed",
+      "tests": {
+        "sentry_config": {
+          "status": "passed",
+          "config_file_exists": true,
+          "sentry_available": true
+        }
+      },
+      "summary": {}
+    },
+    "error_handling": {
+      "status": "passed",
+      "tests": {
+        "error_handling": {
+          "status": "passed",
+          "status_code": 400,
+          "error_handled": true
+        }
+      },
+      "summary": {}
+    },
+    "request_routing": {
+      "status": "passed",
+      "tests": {
+        "route_accessibility": {
+          "status": "passed",
+          "route_results": {
+            "/api/system/health": {
+              "status_code": 200,
+              "accessible": true
+            },
+            "/api/chat": {
+              "status_code": 405,
+              "accessible": true
+            },
+            "/api/voice/options": {
+              "status_code": 200,
+              "accessible": true
+            }
+          }
+        }
+      },
+      "summary": {}
+    }
+  },
+  "integration_tests": {
+    "backend_frontend_communication": {
+      "status": "passed",
+      "tests": {
+        "communication": {
+          "status": "passed",
+          "backend_direct": true,
+          "frontend_proxy": true,
+          "communication_working": true
+        }
+      },
+      "summary": {}
+    },
+    "service_proxy_middleware": {
+      "status": "passed",
+      "tests": {
+        "voice_proxy": {
+          "status": "passed",
+          "status_code": 200,
+          "service_proxy_working": true
+        }
+      },
+      "summary": {}
+    },
+    "load_balancing": {
+      "status": "passed",
+      "tests": {
+        "concurrent_requests": {
+          "status": "passed",
+          "total_requests": 5,
+          "successful_requests": 5,
+          "load_handling": true
+        }
+      },
+      "summary": {}
+    },
+    "circuit_breaker": {
+      "status": "passed",
+      "tests": {
+        "error_handling": {
+          "status": "passed",
+          "status_code": 404,
+          "error_handled": true
+        }
+      },
+      "summary": {}
+    },
+    "rate_limiting": {
+      "status": "passed",
+      "tests": {
+        "rapid_requests": {
+          "status": "passed",
+          "total_requests": 10,
+          "successful_requests": 10,
+          "rate_limiting_reasonable": true
+        }
+      },
+      "summary": {}
+    }
+  },
+  "overall_status": "excellent",
+  "summary": {
+    "total_tests": 16,
+    "passed_tests": 15,
+    "failed_tests": 1,
+    "success_rate": 93.75,
+    "backend_tests": "5/6",
+    "frontend_tests": "5/5",
+    "integration_tests": "5/5"
+  }
+}

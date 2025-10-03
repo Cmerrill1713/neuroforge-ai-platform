@@ -1,0 +1,27 @@
+{
+  "id": "youtube_Ma0jPYj9hyc",
+  "title": "The Javascript Ecosystem Killer: Using Bun, to Learn Bun (with AIDER)",
+  "description": "Is Bun just another JavaScript hype train, or a legit tool to replace node, jest, ts-node, dotenv, vite, deno, bundlers like webpack, and package managers such as npm, pnpm, yarn, and more? These are the burning questions on every engineer's mind. Today we aim to answer this question and 3 critical questions great engineers ask themselves when considering new technology. We use bun and it's array of commands including bun init, bun test, bun run, and bun install to see if it's truly the all-in-one JavaScript replacement it claims to be. Stand by as we delve into whether Bun is the future of JavaScript and TypeScript engineering or just another hype train mirage.\n\nIn this video we use Bun to learn Bun. Using our favorite AI engineering tool, Aider, we build a rapid learning application and auto generate runnable code to help us prove Bun's ability to run .ts, .js, .tsx, .jsx files effortlessly out of the box. The good news? Bun is a potential all-in-one JavaScript substitute. Just imagine calling one command to handle everything from bundling, testing, installing, and executing your code! However, it's not all good news. We also discuss a major risk that Bun poses.\n\n🤖 Learn AIDER and become an AI engineer\nhttps://youtu.be/MPYFPvxfGZs\n\n\n🖥 Equipment\n\n- Mac Book Pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n\n📖 Chapters\n00:00 The Javascript Ecosystem Killer\n00:23 Great Engineers Ask These 3 Questions\n00:40 Bun init\n01:05 Bun install\n01:15 Bun run \n01:30 Already replaced half the ecosystem\n02:00 Our App\n05:15 Axios Scrap\n06:30 Cheerio Parse Html\n08:55 Bun file writing\n11:25 Our Favorite AI Tool AIDER \n14:15 Learning Bun With AI Example 2 \n15:05 OpenAI trying to rob us \n17:05 AI Generated Bun Testing \n18:50 Bun test \n19:05 Everything just works\n19:50 Can Bun Do It?\n20:25 CommonJS and ES6 Modules In Same File\n21:30 The REAL selling point bun bun bun bun bun\n23:50 The biggest risk\n25:00 I'll be using BUN\n\n\n#javascript #coding #aider",
+  "url": "https://www.youtube.com/watch?v=Ma0jPYj9hyc",
+  "upload_date": "20230918",
+  "duration": 1568,
+  "view_count": 2133,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "ai",
+    "coding",
+    "api",
+    "git"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "98da16c8474832798209f4ad16ef7a7a"
+}

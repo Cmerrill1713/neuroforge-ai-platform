@@ -1,0 +1,134 @@
+# CURSOR MANDATORY RULES
+# These rules are ENFORCED and cannot be bypassed
+
+## 🚨 MANDATORY PRE-WORK REQUIREMENTS
+
+### 1. DOCUMENTATION READING (REQUIRED)
+Before ANY work, you MUST:
+- Read SYSTEM_OVERVIEW_MASTER.md completely
+- Read SYSTEM_ARCHITECTURE_MAP.md for architecture details  
+- Read FEATURE_DEPENDENCY_MAP.md for feature dependencies
+- Read CURSOR_WORK_REQUIREMENTS.md for development requirements
+
+### 2. SYSTEM VALIDATION (REQUIRED)
+Before ANY work, you MUST run:
+```bash
+python3 MANDATORY_SYSTEM_VALIDATOR.py
+```
+This validates:
+- All required documentation exists
+- System state is valid
+- Ports are available
+- Dependencies are met
+- Services are healthy
+
+### 3. PREFLIGHT CHECK (REQUIRED)
+Before ANY work, you MUST run:
+```bash
+python3 CURSOR_MANDATORY_PREFLIGHT.py
+```
+This enforces:
+- Documentation has been read recently
+- System validation has passed
+- All requirements are met
+
+## 🚫 FORBIDDEN ACTIONS
+
+### NEVER DO THESE:
+- Start work without reading required documentation
+- Start work without running system validation
+- Start work without running preflight check
+- Make changes without understanding dependencies
+- Skip health checks before/after changes
+- Work on multiple features simultaneously
+- Ignore error logs or warnings
+- Make changes without testing
+
+### ALWAYS DO THESE:
+- Read all required documentation first
+- Run system validation before starting
+- Check system state before making changes
+- Test changes incrementally
+- Check logs for errors
+- Update documentation after changes
+- Verify other features still work
+
+## 🔧 MANDATORY WORKFLOW
+
+### Before Starting ANY Work:
+1. Run: `python3 MANDATORY_SYSTEM_VALIDATOR.py`
+2. Run: `python3 CURSOR_MANDATORY_PREFLIGHT.py`
+3. Read: All required documentation
+4. Check: System state with `python3 system_cli.py`
+5. Verify: Port availability and dependencies
+
+### During Work:
+1. Work on ONE feature at a time
+2. Test changes after each modification
+3. Check logs for errors
+4. Verify other features still work
+5. Follow feature-specific requirements
+
+### After Work:
+1. Run health checks
+2. Test all affected features
+3. Update documentation if needed
+4. Verify performance targets
+5. Document any issues or solutions
+
+## 📋 MANDATORY CHECKS
+
+### System State Check:
+```bash
+python3 system_cli.py
+```
+
+### Health Check:
+```bash
+curl http://localhost:8004/api/system/health
+```
+
+### Port Check:
+```bash
+lsof -i :8004  # Backend
+lsof -i :3000  # Frontend  
+lsof -i :11434 # Ollama
+```
+
+## 🎯 SUCCESS CRITERIA
+
+### Work is only complete when:
+- All tests pass
+- No errors in logs
+- Performance targets met
+- Documentation updated
+- Other features still work
+- System validation passes
+
+## 🚨 ENFORCEMENT
+
+These rules are MANDATORY and enforced through:
+- System validation scripts
+- Preflight checks
+- Documentation requirements
+- Workflow enforcement
+- Success criteria validation
+
+### Violation Consequences:
+- Work is blocked until requirements are met
+- System validation must pass
+- All documentation must be read
+- All checks must pass
+
+## 📞 SUPPORT
+
+If you encounter issues:
+1. Check the documentation first
+2. Run system validation
+3. Check logs for errors
+4. Follow troubleshooting guides
+5. Ask for help only after trying these steps
+
+---
+
+**⚠️ CRITICAL**: These rules are NON-NEGOTIABLE. They exist to prevent recurring issues and ensure system stability. Follow them exactly or work will be blocked.

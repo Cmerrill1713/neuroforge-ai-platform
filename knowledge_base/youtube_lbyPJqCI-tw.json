@@ -1,0 +1,26 @@
+{
+  "id": "youtube_lbyPJqCI-tw",
+  "title": "The ULTIMATE Guide to Building Your Own MCP Servers (Free Template)",
+  "url": "https://www.youtube.com/watch?v=lbyPJqCI-tw",
+  "description": "Everyone is starting to realize how big of a deal Anthropic's Model Context Protocol (MCP) is - it’s the first ever “standard” for connecting LLMs with services like your database, Slack, GitHub, web search, etc.\n\nThere are a LOT of MCP servers available to us already, but the true power comes from building our own so our agents can do exactly what we want them to do.\n\nIn this video, I cover the full process for building your own MCP servers with Python, including how to use AI to make it a breeze! After this guide, not only will you be able to build MCP servers to connect your agents to anything, you’ll be able to take my template (linked below) for yourself and use it to build any server easily.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe waitlist is now OPEN for Dynamous AI Mastery - an exclusive community for early AI adopters like you to master AI & AI Agents and transform your career and business:\n\nhttps://dynamous.ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nMCP Server Template (Mem0 MCP):\n\nhttps://github.com/coleam00/mcp-mem0\n\nMCP Python SDK:\n\nhttps://github.com/modelcontextprotocol/python-sdk\n\nOfficial MCP Documentation:\n\nhttps://modelcontextprotocol.io/introduction\n\nMCP Servers GitHub:\n\nhttps://github.com/modelcontextprotocol/servers\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Leverage the True Power of MCP\n01:05 - Resources for Building an MCP Server\n02:20 - The What and Why of Building MCP Servers\n05:00 - Demo of the Mem0 MCP Server (Template for You)\n07:22 - Introducing the Python MCP Server Template\n10:53 - Basics of an MCP Server\n13:11 - Using AI Coding Assistants to Build MCP Servers\n15:36 - MCP Server Template Deep Dive (Code Walkthrough)\n21:02 - Demystifying the MCP Transport Options\n24:10 - Running Our Mem0 MCP Server\n25:49 - Demo of Our Mem0 MCP Server\n27:23 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250414",
+  "duration": 1673,
+  "view_count": 61510,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

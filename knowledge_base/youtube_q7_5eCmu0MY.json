@@ -1,0 +1,26 @@
+{
+  "id": "youtube_q7_5eCmu0MY",
+  "title": "OpenAI's Swarm - a GAME CHANGER for AI Agents",
+  "url": "https://www.youtube.com/watch?v=q7_5eCmu0MY",
+  "description": "OpenAI recently released an incredible AI agent framework called Swarm. Swarm is an open source AI agent orchestration tool that allows you to write super clean and simple Python code to create a bunch of agents and seamlessly connect them together to do a lot of absolutely mind blowing things.\n\nIn this video, I show you how to build a \"swarm\" of AI agents with OpenAI's Swarm to manage a SQL database. I'm talking about AI agents to extract insights from your data with SQL queries (based on natural language prompts), table creation, cleaning your data, and much more. My example is simple to keep it really straightforward, but you could extend this to do anything you want with your data. And Swarm makes it really easy to do that!\n\nI also did a collab for Chat2DB which you will see in this video! Chat2DB is an awesome platform for using AI to interact with, extract insights from, and manage your SQL databases. It's also open source which is a HUGE reason I picked them for a collab! OpenAI's Swarm is great, but if you don't have the time/desire to create the setup I cover in this video yourself but you want to use AI for your data, Chat2DB is a fantastic option.\n\nAlso, Chat2DB Local is set to launch on Product Hunt on October 22nd. I'm super excited for that - a lot of AI platforms aren't open source and able to run locally, so Chat2DB is really doing things right. Check out the links below!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - What is Swarm?\n01:48 - Overview of Swarm and it's Purpose\n03:55 - Fancy Diagram for What We'll Build with Swarm\n07:25 - Chat2DB\n08:24 - Creating our Database for our Swarm of Agents\n10:45 - Coding our Agents with Swarm\n18:00 - Testing our Agent Swarm!\n20:17 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere is the link to all the code for the AI agent swarm for managing a SQL database with OpenAI's Swarm!\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/sql-ai-agent\n\nCheck out Chat2DB, an awesome platform to get up and running managing your SQL databases in minutes:\n\nhttps://chat2db.ai/\n\nChat2DB Local is launching on October 22nd:\n\nhttps://www.producthunt.com/products/chat2db-local\n\nLink to the OpenAI Swarm repo:\n\nhttps://github.com/openai/swarm/tree/main\n\nAnd finally, here is the AI agent cookbook I referenced from the Swarm repo README (definitely worth a read!):\n\nhttps://cookbook.openai.com/examples/orchestrating_agents\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241017",
+  "duration": 1247,
+  "view_count": 60328,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

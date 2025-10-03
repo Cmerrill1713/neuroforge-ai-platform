@@ -1,0 +1,26 @@
+{
+  "id": "youtube_2-2eJM5ZS_w",
+  "title": "My Top 6 Modern Vue.js VSCode Snippets",
+  "description": "Today, I'm sharing something that could take your Vue.js development experience to the next level. I've put together my Top 6 Vue.js VSCode snippets for that I use daily. Collectively, I've cut hours of my development time so I'm positive these can be time saving, game-changers for you too. Although snippets are simple, they're typically pretty underutilized. \n\nRemember, coding is all about getting the job done, and the front-end framework we choose is merely the means to that end. Your snippets should empower you to speed through your chosen language, shifting your focus onto logic, features and user value rather than syntax.\n\nMy top Vue.js snippets:\n1. Generate a new, modern Vue Instance\n2. Generate a new composable function (vue hook)\n3. Generate a vue ref\n4. Generate a vue computed property\n5. Consume a composable function\n6. On Mounted Lifecycle Hook\n\n💻 Get every VSCode Vue.js snippets free:\nMy most used, biggest time saving vuejs vscode snippets: https://gist.github.com/disler/127a992a077a656e7a3a248101b009de\n\n🔗 Learn how to setup vscode snippets: https://code.visualstudio.com/docs/editor/userdefinedsnippets\n\n✅ Use Notion? Love Being Productive? Convert your Notion pages into Personal Audio Books:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=vue_snip\n\n#️⃣ Hashtags\n#frontend #vscode #vuejs",
+  "url": "https://www.youtube.com/watch?v=2-2eJM5ZS_w",
+  "upload_date": "20230612",
+  "duration": 285,
+  "view_count": 1094,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "frontend",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "f2948136262746f074b307271a2bc204"
+}

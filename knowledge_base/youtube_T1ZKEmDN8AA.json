@@ -1,0 +1,26 @@
+{
+  "id": "youtube_T1ZKEmDN8AA",
+  "title": "Effortless RAG in n8n - Use ALL Your Files (PDFs, Excel, and More)",
+  "url": "https://www.youtube.com/watch?v=T1ZKEmDN8AA",
+  "description": "Do you really have a real RAG pipeline if it can't even handle all the different file types you want to bring into your knowledge base? In this video, I show you how to extend your RAG AI agent in n8n to work with PDF and Excel documents, and I show how you can extend it even further to work with other file types as well! n8n doesn't give a single node you can use to extract text from any file type, so the problem isn't trivial. But I break it down simply so you can get it set up in just minutes!\n\n0:00 - Intro\n01:31 - RAG AI Agent Overview\n03:56 - Ingesting PDFs and Excel Documents for RAG\n11:19 - Adding a PDF File to the Knowledge Base\n14:39 - Adding an Excel File to the Knowledge Base\n17:07 - Briefly Testing the Agent\n17:47 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe workflow from the video can be downloaded here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/n8n-rag-pdfs-excel\n\nHere is a link to the \"mimeType\" Google documentation I referenced in the video:\n\nhttps://developers.google.com/drive/api/guides/ref-export-formats\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241010",
+  "duration": 1096,
+  "view_count": 110533,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_JyolNYRbAcs",
+  "title": "Build a FULL Stack App for your n8n AI Agent in 20 Minutes",
+  "url": "https://www.youtube.com/watch?v=JyolNYRbAcs",
+  "description": "N8n is an incredibly powerful tool for building AI agents without code, but you still need a frontend to interact with your agent! Sure, you can just use the chat widget provided by n8n, but often times you need something much more to have a good user experience. Not to mention for any real use case you need much more robust security...\n\nIn this video, I show you how to use my favorite combo (Claude + Streamlit + Supabase) to build an incredibly clean and secure frontend with authentication to interact with your n8n AI agents. Take this as a huge head start and just run with it! What I should you how to build can be extended to include a payment system and rate limiting as well since this setup puts the n8n agent behind an authentication wall so you can manage the LLM usage for each user super easily.\n\nI will also be putting on a LOT more content on n8n in the near future, so stay tuned! Lot of amazing use cases I want to cover, and I'll even show how to use other platforms like OpenWebUI and v0 in the near future to create frontends in other ways for n8n agents.\n\n00:00 - Why full stack for n8n agents?\n02:09 - Creating a basic full stack app for the n8n agent\n08:26 - Testing the n8n agent app\n10:47 - Adding authentication to our n8n agent app\n18:56 - Testing the full n8n agent app\n19:52 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere's a link to the video where I dive a lot deeper into setting of up the RAG AI agent in n8n and configuring Supabase:\n\nhttps://www.youtube.com/watch?v=PEI_ePNNfJQ\n\nI didn't talk about deploying Streamlit applications in the video, but check out this resource and see how easy it is to deploy these apps to production!\n\nhttps://docs.streamlit.io/deploy\n\nThe prompts, code, and n8n workflows in the video can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/n8n-streamlit-agent\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241003",
+  "duration": 1225,
+  "view_count": 89951,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

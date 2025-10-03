@@ -1,0 +1,21 @@
+{
+  "id": "meta_arxiv_6524996338802924169",
+  "title": "Why Johnny Can't Use Agents: Industry Aspirations vs. User Realities with AI Agent Software",
+  "description": "There is growing imprecision about what \"AI agents\" are, what they can do, and how effectively they can be used by their intended users. We pose two key research questions: (i) How does the tech industry conceive of and market \"AI agents\"? (ii) What challenges do end-users face when attempting to use commercial AI agents for their advertised uses? We first performed a systematic review of marketed use cases for 102 commercial AI agents, finding that they fall into three umbrella categories: orchestration, creation, and insight. Next, we conducted a usability assessment where N = 31 participants attempted representative tasks for each of these categories on two popular commercial AI agent tools: Operator and Manus. We found that users were generally impressed with these agents but faced several critical usability challenges ranging from agent capabilities that were misaligned with user mental models to agents lacking the meta-cognitive abilities necessary for effective collaboration.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.14528",
+  "authors": "Authors:\nPradyumna Shome, \n      \n      Sashreek Krishnan, \n      \n      Sauvik Das",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "research"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

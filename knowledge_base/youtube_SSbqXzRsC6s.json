@@ -1,0 +1,26 @@
+{
+  "id": "youtube_SSbqXzRsC6s",
+  "title": "I'm ADDICTED to Claude Code: RATE LIMITS, Agent Models, and CC Alternatives",
+  "description": "🔥 Are you a Claude Code ADDICT like me? These new rate limits just dropped and they're about to change EVERYTHING about how we use agent models.\n\n🎥 RESOURCES FOR YOUR ENGINEERING:\n\n- Get these Agents + Prompts: https://github.com/disler/claude-code-hooks-mastery\n\n- Master the Principles of AI Coding: https://agenticengineer.com/principled-ai-coding?y=SSbqXzRsC6s\n\n- Qwen3-Coder: https://qwenlm.github.io/blog/qwen3-coder/\n\n- Cerebras Code: https://www.cerebras.ai/blog/introducing-cerebras-code\n\n- Anthropic Revokes OpenAI Access: https://www.wired.com/story/anthropic-revokes-openais-access-to-claude/\n\n- Claude Code New Rate Limits by Portkey: https://portkey.ai/blog/claude-code-limits/\n\n- Claude Code New Rate Limits HN Post: https://news.ycombinator.com/item?id=44713757\n\n- Claude Code: https://www.anthropic.com/claude-code\n\nSomeone watching the IndyDevDan channel took the infinite agentic loop, parallelized it and ran it 24/7 - ruining it for the rest of us! But here's the thing... this wake-up call is EXACTLY what we needed.\n\n🚀 In this video, I'm running 12 sub-agents in parallel across Haiku, Sonnet, and Opus models conducting crypto research. Watch as I demonstrate the WEAK, BASE, STRONG agent model stack that's LETTING AS AVOID RATE LIMITS and use the RIGHT MODEL FOR THE JOB. This isn't just about avoiding rate limits - it's about understanding when you actually need that expensive Opus compute vs when Sonnet or Haiku will do just fine.\n\n💡 What You'll Learn:\n- How to implement the agent model stack pattern with Claude Code models\n- Why sub agent models are the key to scaling your agentic workflows\n- Real-world crypto research example using 12 parallel agents\n- The exact trade-offs between Haiku, Sonnet 4, and Opus performance\n- Why we DESPERATELY need Claude Code alternatives (and what's coming)\n\n🔥 The truth? We're all overexposed to Claude Code. Too many eggs in one basket. While Claude 4 and the anthropic models continue to dominate, smart engineers are already preparing for what's next. I'll show you exactly how to diversify your agentic coding toolkit while still maximizing Claude Code's incredible capabilities.\n\n⚡ Key Insights:\n- Model overkill vs model underperformance - finding the sweet spot\n- How to ABC test your prompts across different sub agent models\n- The hidden fourth dimension: API rate limits\n- Why Sonnet 4 thinking beats Opus 4 base (and when to use each)\n- The reusable prompt pattern that will save you thousands in compute costs\n\n🎯 Whether you're building AI coding assistants, research tools, or complex multi-agent workflows, understanding model selection is CRITICAL. Don't get caught off guard by rate limits or cost overruns - master the agent model stack today.\n\nRemember: The compute is there for you to use. Spend to win. But spend SMART.\n\n📖 Chapters\n00:00 Agent Model Stack\n04:17 Claude Code Models\n09:05 Crypto Research Prompt\n13:21 Sub Agent Crypto Responses\n18:15 Haiku, Sonnet, Opus\n20:10 Claude Code Alternative Discussion\n\n⚠️ DISCLAIMER: This video is for educational and entertainment purposes only. Nothing in this video constitutes financial, investment, trading, or legal advice. Cryptocurrency and trading involve substantial risk of loss and are not suitable for all investors. Past performance is not indicative of future results. Always do your own research and consult with a qualified financial advisor before making any investment decisions. The creator of this video is not responsible for any losses you may incur.\n\n#claudecode #aicoding #agenticcoding",
+  "url": "https://www.youtube.com/watch?v=SSbqXzRsC6s",
+  "upload_date": "20250804",
+  "duration": 1463,
+  "view_count": 25917,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "0915f8e88d5f7d22f91edd8b77933acc"
+}

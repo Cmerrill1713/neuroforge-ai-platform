@@ -1,0 +1,47 @@
+# ============================================================================
+# NeuroForge Frontend Development Dockerfile
+# Optimized for development with hot reload
+# ============================================================================
+
+FROM node:18-alpine
+
+# Install dependencies for development
+RUN apk add --no-cache \
+    git \
+    curl \
+    && rm -rf /var/cache/apk/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S neuroforge -u 1001
+
+# Set permissions
+RUN chown -R neuroforge:nodejs /app
+USER neuroforge
+
+# Environment variables
+ENV NODE_ENV=development \
+    NEXT_PUBLIC_API_URL=http://localhost:8000 \
+    NEXT_PUBLIC_WS_URL=ws://localhost:8000
+
+# Expose port
+EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:3000/api/health || exit 1
+
+# Development command with hot reload
+CMD ["npm", "run", "dev"]

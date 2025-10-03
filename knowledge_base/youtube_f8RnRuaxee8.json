@@ -1,0 +1,25 @@
+{
+  "id": "youtube_f8RnRuaxee8",
+  "title": "Claude 4 ADVANCED AI Coding: How I PARALLELIZE Claude Code with Git Worktrees",
+  "description": "Look, MOST developers have NO IDEA how to truly unlock Claude 4's INSANE power... They're leaving MASSIVE productivity gains on the table!\n\nIndyDevDan just dropped the DIRTIEST agentic coding trick that lets you generate 3+ versions of your codebase SIMULTANEOUSLY while you sip coffee. \n\nThis is ADVANCED multi-agent engineering that 99% of devs don't even know exists! 🚀🔥\n\n🎥 VIDEO REFERENCES\n\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=f8RnRuaxee8\n- Benchy Codebase: https://github.com/disler/benchy\n- Claude 4: https://www.anthropic.com/news/claude-4\n- Claude Code: https://www.anthropic.com/claude-code\n- AI Coding is Not Enough: https://youtu.be/2TIXl2rlA6Q\n\nWhy this changes EVERYTHING\n\n- Claude 4 Opus and Sonnet just dropped, making this the PERFECT time to parallelize your agentic coding workflows\n- Git worktrees let you run multiple Claude Code instances on ISOLATED branches - no merge conflicts, no chaos\n- LLMs are non-deterministic by nature - run 3 agents and pick the BEST version instead of settling for one shot\n- While one agent might fail, another creates gold. This is how you HEDGE against model failures on complex tasks\n- See IndyDevDan demo a complete UI rewrite with THREE parallel Claude 4 Opus agents churning through 80k+ tokens each\n\nThe POWER moves\n\n- One plan, multiple futures: Write your spec ONCE and let parallel agents create different versions of tomorrow\n- Real-time comparison: Boot up all versions side-by-side and cherry-pick the winner\n- Merge the best: Take agent #2's clean UI, combine with agent #3's performance optimizations\n- Scale to infinity: This works with 3, 5, 10+ agents. Your only limit is compute budget\n\nAdvanced Agentic Coding reality check\n\n- This isn't cheap - we're talking serious token usage with Claude 4 Opus\n- You NEED clear plans. No iterative prompting allowed in parallel workflows\n- Perfect for UI work where multiple \"correct\" solutions exist\n- Game-changing for complex features where one agent might fail\n\nIndyDevDan shows the EXACT commands, the complete setup, and walks through merging the best git worktree back to main. This is what separates hobby coders from PRODUCTION engineers shipping at SCALE.\n\nStop coding like it's 2023. Start parallelizing your agentic coding like the future demands. 💪🤖\n\n📖 Chapters\n00:00 Claude 4 Opus, Sonnet and Claude Code\n01:32 Parallel Claude 4\n03:35 Initialize Git Worktrees\n07:36 Setup Parallel Agentic Coding\n09:30 Kick off Parallel Claude Code\n11:43 Why use Parallel Agentic Coding?\n16:44 When to use Parallel Agentic Coding?\n18:16 Parallel Claude Code COMPLETE\n19:15 View Multiple Versions of the Front End\n22:00 Merge Best Git Worktree\n25:48 Principled AI Coding\n\n#agenticcoding #claudecode #aicoding",
+  "url": "https://www.youtube.com/watch?v=f8RnRuaxee8",
+  "upload_date": "20250526",
+  "duration": 1698,
+  "view_count": 48873,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "aab59c098cef619d0be7fb92f94e1570"
+}

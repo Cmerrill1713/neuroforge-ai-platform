@@ -1,0 +1,26 @@
+{
+  "id": "youtube_p1YvKuRfEhg",
+  "title": "I'm Building the BEST Open Source AI Coding Assistant with YOUR Help",
+  "url": "https://www.youtube.com/watch?v=p1YvKuRfEhg",
+  "description": "Every AI content creator and their mom has put out a video on Bolt.new. It makes sense - Bolt.new is an incredible open source platform to build full stack apps with AI. So I've done something way different with it that you WON'T see anywhere else AND it's a way for us to work on something awesome together as a community!\n\nI forked Bolt.new and made it way better by fixing the two problems I have with the platform: it costs too much (and those annoying token limits) and you can only ever use one LLM.\n\nI already made a video introducing this Bolt.new fork, so in this video I cover all the improvements that have been made both by me and all of you! This fork is turning into a community project and I am so stoked about that! I also talk about future work for the project and my vision for it, pretty exciting stuff :D\n\nThis is available for you to download and use below right now! My gift to you :)\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro - We're Building Something Incredible\n02:05 - Overview of the Bolt.new Fork\n03:34 - Showcasing the Amazing Community Improvements\n09:01 - Demoing the New & Improved Bolt.new Fork\n10:54 - Future Improvements for the Project\n15:45 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere is the link to Bolt.diy (this fork which was originally called oTToDev) on GitHub. Check out the README to see future improvements planned!\n\nhttps://github.com/stackblitz-labs/bolt.diy\n\nInstall Ollama to run any local LLM you could dream of as an AI coding assistant for free:\n\nhttps://ollama.com/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241021",
+  "duration": 981,
+  "view_count": 46949,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

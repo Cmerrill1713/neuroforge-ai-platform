@@ -1,0 +1,118 @@
+{
+  "cache_performance": {
+    "set_operations": {
+      "count": 100,
+      "avg_time_ms": 10.230846405029297,
+      "min_time_ms": 0.13303756713867188,
+      "max_time_ms": 1005.6400299072266,
+      "p95_time_ms": 0.3000497817993164
+    },
+    "get_operations": {
+      "count": 100,
+      "avg_time_ms": 0.003421306610107422,
+      "min_time_ms": 0.0026226043701171875,
+      "max_time_ms": 0.010013580322265625,
+      "p95_time_ms": 0.0040531158447265625
+    },
+    "cache_hits": {
+      "count": 100,
+      "avg_time_ms": 0.003330707550048828,
+      "min_time_ms": 0.0026226043701171875,
+      "max_time_ms": 0.004291534423828125,
+      "p95_time_ms": 0.0040531158447265625
+    },
+    "cache_stats": "CacheStats(l1_hits=201, l1_misses=2, l2_hits=3, l2_misses=2, total_requests=206, avg_response_time_ms=0.002487203680962643, cache_hit_ratio=0.9902912621359223)"
+  },
+  "agent_selection_performance": {
+    "selection_times": {
+      "count": 30,
+      "avg_time_ms": 0.055480003356933594,
+      "min_time_ms": 0.02288818359375,
+      "max_time_ms": 0.37407875061035156,
+      "p95_time_ms": 0.32123327255249023
+    },
+    "confidence_scores": {
+      "avg_confidence": 0.7666666666666667,
+      "min_confidence": 0.7,
+      "max_confidence": 0.8
+    },
+    "target_achieved": true,
+    "improvement_over_baseline": 1260.2738963472282
+  },
+  "vector_search_performance": {
+    "search_times": {
+      "count": 5,
+      "avg_time_ms": 100.0,
+      "min_time_ms": 100.0,
+      "max_time_ms": 100.0,
+      "p95_time_ms": 100.0
+    },
+    "result_counts": {
+      "avg_results": 0,
+      "min_results": 0,
+      "max_results": 0
+    },
+    "target_achieved": false,
+    "vector_store_stats": {
+      "total_queries": 5,
+      "avg_query_time_ms": 3.9461612701416016,
+      "avg_results_count": 0.0,
+      "cache_hit_ratio": 0.0,
+      "avg_connection_time_ms": 0.0,
+      "index_usage_ratio": 0.0,
+      "pool_size": 20,
+      "pool_available": 5
+    }
+  },
+  "overall_performance": {
+    "request_times": {
+      "count": 20,
+      "avg_time_ms": 0.45195817947387695,
+      "min_time_ms": 0.1678466796875,
+      "max_time_ms": 4.960060119628906,
+      "p95_time_ms": 4.960060119628906
+    },
+    "target_achieved": true,
+    "system_health": "SystemHealth(overall_score=100, cpu_usage=14.7, memory_usage=63.4, disk_usage=1.1321379484379157, network_latency=1.0831356048583984, database_connections=5, cache_hit_ratio=0.85, error_rate=0.0, response_time_p95=0.0, timestamp=datetime.datetime(2025, 10, 1, 20, 46, 4, 171709), alerts=['cache_hit_ratio exceeded threshold: 0.85 > 0.70'])"
+  },
+  "comparison_with_baseline": {
+    "baseline_performance": {
+      "agent_selection": 69.92,
+      "complex_analysis": 40.78,
+      "overall_average": 13.59,
+      "vector_search": 2000.0,
+      "cache_operations": 50.0
+    },
+    "optimized_performance": {
+      "agent_selection": 5.548000335693359e-05,
+      "vector_search": 100.0,
+      "cache_get": 0.003421306610107422,
+      "overall_average": 0.000451958179473877
+    },
+    "improvements": {
+      "agent_selection": {
+        "baseline": 69.92,
+        "optimized": 5.548000335693359e-05,
+        "improvement_factor": 1260273.8963472282,
+        "improvement_percentage": 99.99992065216912
+      },
+      "overall_average": {
+        "baseline": 13.59,
+        "optimized": 0.000451958179473877,
+        "improvement_factor": 30069.153778387357,
+        "improvement_percentage": 99.99667433274854
+      },
+      "vector_search": {
+        "baseline": 2000.0,
+        "optimized": 100.0,
+        "improvement_factor": 20.0,
+        "improvement_percentage": 95.0
+      }
+    },
+    "summary": {
+      "total_improvement_factor": 430121.0167085386,
+      "targets_achieved": 3,
+      "total_targets": 3
+    }
+  }
+}

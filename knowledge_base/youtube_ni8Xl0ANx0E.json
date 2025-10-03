@@ -1,0 +1,26 @@
+{
+  "id": "youtube_ni8Xl0ANx0E",
+  "title": "Build ANY AI Agent with this Context Engineering Blueprint",
+  "url": "https://www.youtube.com/watch?v=ni8Xl0ANx0E",
+  "description": "Using AI coding assistants to build AI agents should be straightforward - but if you’ve ever tried it yourself you know it’s not. There’s a lot more than you’d think that goes into creating truly production ready AI agents with tools like Cursor and Claude Code!\n\nThe problem isn't your coding assistant or the LLM - it's the context you're providing. Throwing requests out without engineered context is what leads to broken code. Context engineering solves this by giving your AI coding assistant a comprehensive blueprint upfront to follow detailed patterns, best practices, examples, and requirements that plausibly produce production-ready code from the start.\n\nIn this video, I show you how it all works by building a complete Pydantic AI agent using context engineering with Rasmus’ PRP (Product Requirements Prompts) framework. It’s not rocket science but boy is it powerful. I’ll walk you through the entire process of creating an AI agent from start to finish with a PRP blueprint I’ve personally crafted specifically for building AI agents.\n\nThe best part? I'm open-sourcing the complete Pydantic AI PRP template so you can use this systematic approach for any AI agent you want to build. Just like what I did with MCP servers in the last video! No matter what kind of agent you’re building, this template gives you the foundational, engineered context that makes AI coding assistants actually effective.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheckout Scrimba's fullstack courses here: https://scrimba.com/t0fullstack?via=colemedin\n\nThe 100+ hour Fullstack Developer Path I showcased https://scrimba.com/fullstack-path-c0fullstack?via=colemedin (sign up to Scrimba with my links and get an extra 20% off a Scrimba subscription when you upgrade, even greater savings if you choose annual)\n\nPydantic AI Context Engineering Template:\nhttps://github.com/coleam00/context-engineering-intro/tree/main/use-cases/pydantic-ai\n\nThe Pydantic AI Agent I Built with this Template:\nhttps://github.com/coleam00/PydanticAI-Research-Agent\n\nRasmus’ YouTube channel:\nhttps://www.youtube.com/@RasmusWiding\n\nContext Engineering Repo:\nhttps://github.com/coleam00/context-engineering-intro/tree/main\n\nPrevious video on the context engineering template for MCP servers:\nhttps://youtu.be/Mk87sFlUG28\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. \n\nI'll be uploading videos weekly - at least every Wednesday at 7:00 PM CDT!",
+  "upload_date": "20250724",
+  "duration": 1491,
+  "view_count": 26793,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_UA6IVMDPuC8",
+  "title": "AutoGen SPYWARE: Coding Systems for SUCCESSFUL AI Agents (Postgres Data Analytics)",
+  "description": "Every great piece of software has a TIGHT feedback loop. This feedback loop tells the engineer exactly if things are working well and if not, what exactly is going wrong. \n\nWe're half way through the series and our AutoGen based, multi-agent postgres application is NEARLY ready to add on new agent teams with unique SQL insight functionality. Before we can expand the application however, we need to better understand what's going on between our agents. \n\nThis is where SPYWARE comes into the picture. The core value proposition of agentic software and multi-agent systems is that they solve problems for you on your behalf. With the incredible reasoning capabilities of GPT-4 and the ability to call functions, AI agents are giving us the ability to solve build systems that solve problems AUTONOMOUSLY. This is insanely incredible. Applications like AgentGPT, ChatDev, BabyGPT, and some of the groupchat workflows of AutoGen attempt to give us this new autonomous super power for free (minus the GPT-4 costs of course). They're all a great step in the right direction but in order to truly build agentic software we need to take control and build systems that produce successful ai agent systems.\n\nIn this video we code 3 key systems/patterns to tighten the feedback loop of python postgres data analytics tool. We start by  adding spyware to peek into our agent conversations. We then add a validation pattern to know with 100% certainty that our agents accomplished their task. Lastly, we great a pinia, redux, solidjs store like structure called 'instruments' that unifies our the state and functionality for our agents into a single python class.\n\nJoin the journey as we run down the path toward agentic engineering. As the world changes, our engineering must change with it.\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v5-autogen-spyware-coding-systems-for-successful-ai\n\n✅ Watch Part Four - Reduce your GPT-4 token costs\nhttps://youtu.be/CKo-czvxFkY\n\n🤖💻 AI Engineering Resources\nMicrosoft's Autogen: https://microsoft.github.io/autogen/\nFree Postgres Hosting With Neon: https://neon.tech/\nPython pattern matching: https://peps.python.org/pep-0636/\n\n🤖 Want to write code without coding?\nhttps://youtu.be/MPYFPvxfGZs\n\n📘 Chapters\n00:00 My favorite negative comment\n01:07 Are your agents doing their job?\n02:15 Recap Our Previous 4 Videos So far \n05:28 Data Driven Development \n06:15 AI Agent SPYWARE \n10:35 Validating Multi-Agent Results \n19:07 Python Match on New Agent Result Type\n23:17 One More Major Improvement \n24:30 Postgres Agent INSTRUMENTS \n30:49 The value of what we're building\n32:43 What's Next? We're half way through the series\n\n🐛 tags\n#dataanalytics #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=UA6IVMDPuC8",
+  "upload_date": "20231030",
+  "duration": 2019,
+  "view_count": 8294,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "9b5053adbd1cedf11eddb2d0fdaa335e"
+}

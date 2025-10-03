@@ -1,0 +1,27 @@
+[
+  {
+    "test": "Health Check",
+    "success": true,
+    "status": "\u2705 PASSED"
+  },
+  {
+    "test": "Supported Formats",
+    "success": true,
+    "status": "\u2705 PASSED"
+  },
+  {
+    "test": "Processing Status",
+    "success": true,
+    "status": "\u2705 PASSED"
+  },
+  {
+    "test": "Enhanced Processor",
+    "success": true,
+    "status": "\u2705 PASSED"
+  },
+  {
+    "test": "API Endpoints",
+    "success": false,
+    "status": "\u274c FAILED"
+  }
+]

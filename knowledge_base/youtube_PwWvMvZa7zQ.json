@@ -1,0 +1,26 @@
+{
+  "id": "youtube_PwWvMvZa7zQ",
+  "title": "Advanced Prompt Engineering Techniques for FRONT-END Engineers",
+  "description": "Are you still writing your Vue, React, Svelte, or SolidJS UI components from scratch? The world of software engineering is changing, it's time to change with it. Unlock the power to generate new components with a single prompt. This video is designed specifically to expand the way you approach front-end development. This isn't just about writing code - it's about harnessing the potential of Large Language Models (LLMs) to create, innovate, and streamline your front end development.\n\nThis video places the spotlight on four prompt engineering techniques: Role, Purpose, Requirements, and Memory. These provide a blueprint for you to effectively build prompts with accurate responses. 'Role' will guide you to designate a specific part for your LLM to play, whereas 'Purpose' fine-tunes that role to accomplish precise goals. 'Requirements' transforms your ideas into explicit instructions for LLMs, ensuring they deliver exactly what you envision. Finally, with 'Memory', you'll learn how to utilize examples and syntax to enhance the LLM’s performance and fill in gaps left by newer updates post LLM training. We use ChatGPT with GPT-4 for optimal results, but you can use any LLM you have access to.\n\nPrompts, create AI agents, and AI agents create autonomous value. It all starts with your prompts. Step into the future of front-end engineering with us. Subscribe, like, and share this video to help share these prompt engineering techniques with other engineers. Don't forget to hit the bell icon to stay updated on the latest AI driven development tools, techniques and strategies.\n\nLet's Cook.\n\n✅ Get the Front-End Component Prompt\nhttps://gist.github.com/disler/be972a12d63844e2d79a95daa9c72cda\n\n🤖 Hungry For More AI Driven Development?\nhttps://youtu.be/PPR675_JSM8\n\n🖥 Equipment\n\n- Mac book pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n#️⃣ Hashtags\n#softwareengineering  #gpt #promptengineering",
+  "url": "https://www.youtube.com/watch?v=PwWvMvZa7zQ",
+  "upload_date": "20230731",
+  "duration": 395,
+  "view_count": 3724,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "react",
+    "ai",
+    "software engineering",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "13379ddaf91c6962c8deb0c0df1aff6c"
+}

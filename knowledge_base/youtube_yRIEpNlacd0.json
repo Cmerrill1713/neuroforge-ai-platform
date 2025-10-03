@@ -1,0 +1,26 @@
+{
+  "id": "youtube_yRIEpNlacd0",
+  "title": "INSANE New Strategy for Building AI Agent Apps",
+  "url": "https://www.youtube.com/watch?v=yRIEpNlacd0",
+  "description": "I get asked a lot how I build my full scale AI agents, so I’m kicking off a mini series showing my entire process! In this series, we’ll build AI agent that can consume entire GitHub repositories so you can ask it questions about all the code in the repo. We’ve built the agent so far in the series, now it’s time for the custom frontend.\n\nI love using AI coding assistants to help me build my frontends, but they all have their downsides. bolt.diy is open source, free to use with the right models, and you can use any LLM! But since we’re focused on working with so many LLMs, we don’t have the opportunity as much to optimize for a single LLM like with bolt.new or Lovable. So often times starting a project from scratch you get the best results with those platforms. And then AI IDEs like Windsurf or Cursor are great, especially for getting you to the finish line, but the in-browser AI assistants like bolt just get you started on a full-stack app way faster.\n\nIf only there was a way to combine these tools together into a single process to get the best of all worlds - powerful, free, and easy to work with throughout the entire process of building an app.\n\nWell in this video I show you exactly that! Together we’ll take the AI Agent we’ve been building throughout the series and create a prototype frontend to chat with it - complete with conversation and chat history! And this is a strategy that a LOT of people in the bolt.diy community have started to use recently!\n\nPlaylist for this AI Agent series:\n\nhttps://www.youtube.com/playlist?list=PLyrg3m7Ei-MrSXWv90oXXbuSsbdOP9j2n\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nRegister now for the oTTomator AI Agent Hackathon with a $6,000 prize pool!\n\nhttps://studio.ottomator.ai/hackathon/register\n\nCheck out bolt.diy here:\n\nhttps://bolt.diy\n\nAnd join our bolt.diy community over in the oTTomator Think Tank!\n\nhttps://thinktank.ottomator.ai\n\nAll code for this Pydantic GitHub AI agent can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-github-agent\n\nFULL prompt that I used for creating the initial app with Lovable:\n\nhttps://docs.google.com/document/d/1pJD2J2dAXMuABRc6S-fHetP-6MBkI5SydqYjE3LgFdE\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - The Ultimate AI App Workflow\n02:10 - Starting Point for our Agent\n03:52 - AI App Workflow Overview\n06:36 - Prompt for Lovable (Full Explanation)\n12:09 - Starting our App with Lovable\n14:20 - Publishing our App to GitHub\n15:18 - Installing bolt.diy\n19:10 - Iterating on our App with bolt.diy\n22:23 - Downloading our bolt.diy App\n23:52 - Final Demo + Windsurf/Cursor\n26:01 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250120",
+  "duration": 1620,
+  "view_count": 33277,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

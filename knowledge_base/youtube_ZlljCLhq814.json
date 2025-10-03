@@ -1,0 +1,24 @@
+{
+  "id": "youtube_ZlljCLhq814",
+  "title": "Best LLM for Parallel Function Calling: 14 LLM, 420 Prompt, 1 Winner Benchmark",
+  "description": "🤯 Are you REALLY using the BEST LLM for parallel function calling? I ran a benchmark with 14 LLMs, 420 prompts, and there was 1 clear winner!\n\n🎥 Featured Media:\n- Live Benchmark Codebase (WIP): https://github.com/disler/benchy\n- Autocomplete Benchmark Video: https://youtu.be/1ObiaSiA8BQ\n- My Plan for 2025 - MAX AI COMPUTE: https://youtu.be/4SnvMieJiuw\n\nWhat's the secret to creating powerful, long-running agentic workflows?  It all comes down to parallel function calling.  In this video, we discuss a benchmark comparing 14 LLMs across 420 prompts to uncover the BEST LLM and tool-calling techniques for reliable, efficient, and cost-effective parallel function calls.  This isn't just theory—we're showing you LIVE benchmark results, breaking down execution time, cost, and accuracy for each LLM, including Gemini Experimental, Gemini Flash, Claude 3.5 Sonnet, Claude 3.5 Haiku, GPT-4o, o1-mini, and more.\n\n🚀 We'll explore two critical elements for building robust agentic workflows: specialized AI agents and reliable tool-calling mechanisms.  You'll see how to design prompts that trigger multiple tools in parallel, testing chains of 1, 2, 3, all the way up to 15 parallel function calls!  The results are eye-opening, revealing which LLMs excel at handling long chains of tool calls and which ones fall short.\n\n🔥 We'll also uncover a surprising yet common trick: using JSON prompts to give LLMs *without* native function calling the ability to execute parallel tool calls.  We'll compare this technique against built-in function calling capabilities and see which approach delivers the best performance. This is critical for maximizing the efficiency and cost-effectiveness of your agentic workflows.  Don't waste your resources on underperforming LLMs – this benchmark will show you the path to optimized AI performance.\n\n🛠️ This video is packed with actionable insights for anyone building agentic systems, personal AI assistants, or any application requiring robust parallel function calling.  We'll discuss the importance of benchmarking, testing, and evaluating your AI tools to make data-driven decisions and maximize your ROI. Plus, we'll share tips on prompt design and structuring JSON prompts for optimal results.  Join us as we unlock the secrets to building next-level agentic applications with the best LLM for parallel function calling.\n\nStay focused and KEEP BUILDING\n\n📖 Chapters\n00:00 - Two Elements for Agentic Workflows\n01:05 - Parallel Function Calling\n01:36 - Parallel Function Length 1\n02:41 - Parallel Function Length 2\n04:11 - Parallel Function Length 3\n04:47 - Parallel Function Length 4\n06:31 - Gemini 1.5 Flash is insane\n07:30 - Parallel Function Length 5\n09:50 - Parallel Function Length 7\n12:12 - Structured Outputs and JSON prompts\n14:45 - Parallel Function Length 10\n16:15 - JSON Prompts beating Function Calling\n18:20 - Parallel Function Length 15\n19:20 - You have options for parallel function calling\n20:40 - Live Benchmarks are insanely VALUABLE\n\n#agentic #promptengineering #llm",
+  "url": "https://www.youtube.com/watch?v=ZlljCLhq814",
+  "upload_date": "20241118",
+  "duration": 1404,
+  "view_count": 14077,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "31179b298a74c2bf115ebec06a2a4a38"
+}

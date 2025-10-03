@@ -1,0 +1,25 @@
+{
+  "id": "youtube_sb9wSWeOPI4",
+  "title": "ZERO Cost AI Agents: Are ELMs ready for your prompts? (Llama3, Ollama, Promptfoo, BUN)",
+  "description": "🚀 Are Efficient Language Models (ELMs) READY for On-Device Use? \n\nHow do know when it is?\n\nUsing the ITV Benchmark with Llama 3, Gemma, PHI 3, you can be 100% sure that the ELM is ready for your use case.\n\nLet's make 1 thing absolutely clear: The cost of the prompt is going to ZERO.\n\nThe world of AI is evolving at a BREAKNECK pace, and the latest advancements in efficient language models (ELMs) like Llama 3, Gemma, OpenELM, and PHI 3 are pushing the boundaries of what's possible with on-device AI. 🤖💡\n\nLLama 3 8b, and Llama 3 70b have hit the top 20 on the LMSYS Chatbot Arena Leaderboard in less than a week of launch. You can bet that the open source LLM community is tweaking and tuning llama3 to make it even better. It's likely we'll see the 8k context window improved to 32k and above in a matter of days.\n\nBut with so many options and rapid developments, how do you know if an ELM (efficient language model aka on device language model) is truly ready for YOUR specific use case? 🤔\n\nEnter this video and the ITV Benchmark - a powerful tool that helps you quickly assess the viability of an ELM for your needs. 📊💪\n\nIn this video, we dive deep into the world of ELMs, exploring:\n\n✅ The key attributes you should consider when evaluating an ELM, including accuracy, speed, memory consumption, and context window\n✅ How to set your personal standards for each metric to ensure the ELM meets your requirements\n✅ A detailed breakdown of the ITV Benchmark and how it can help you determine if an ELM (llama3, phi3, gemma, etc) is ready for prime time\n✅ Real-world examples of running the ITV Benchmark on Llama 3 and Gemma to see how they stack up 🥊\n✅ Gain access to a hyper modern, minimalist prompt testing framework built on top of Bun, Promptfoo, and Ollama\n\nWe'll also discuss the game-changing implications of ELMs for your agentic tools and products. Imagine running prompts directly on your device, reducing the cost of building to ZERO! 💸\n\nBy the end of this video, you'll have a clear understanding of how to evaluate ELMs for your specific use case and be well-equipped to take advantage of these incredible advancements for both LLMs and ELMs. 🚀\n\nELMs, setting standards and clean prompt testing enable you to stay ahead of the curve and unlock the full potential of on-device AI! 🔓💡\n\nLike and subscribe for more cutting-edge insights into the world of AI, and let's continue pushing the boundaries of what's possible together! 👍🌟\n\n💻 Reduce your agentic costs with the ELM-ITV Codebase\nhttps://github.com/disler/elm-itv-benchmark\n\n🔗 Links:\nBun  https://bun.sh/\nOllama https://ollama.com/\nPromptfoo https://promptfoo.dev/\nApples OpenELM https://machinelearning.apple.com/research/openelm\n\n📚 Chapters:\n00:00 The cost of agentic tools is going to ZERO\n00:48 Are ELMs ready for on device use?\n02:28 Setting standards for ELMs\n04:05 My (IndyDevDan) personal standards for ELMs\n06:36 The ITV benchmark\n07:05 ELM benchmark codebase\n09:30 Bun, Ollama, Promptfoo, llama3, phi3, Gemma\n12:10 Llama3, Phi3, Gemma, GPT3 TEST Results\n16:10 New LLM class system\n18:45 On Device PREDICTION\n19:05 Make this prompt testing codebase your own\n19:45 The cost of the prompt is going to ZERO\n20:15 How do you know if ELMs are ready for your use case?\n\n#promptengineering #aiagents #llama3",
+  "url": "https://www.youtube.com/watch?v=sb9wSWeOPI4",
+  "upload_date": "20240429",
+  "duration": 1297,
+  "view_count": 6524,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "cf20c2d2fd73c509a72706cea6ca8431"
+}

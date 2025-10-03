@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_141632287",
+  "title": "cppdocs",
+  "description": "PyTorch C++ API Documentation",
+  "url": "https://github.com/pytorch/cppdocs",
+  "language": "HTML",
+  "stars": 237,
+  "forks": 37,
+  "created_at": "2018-07-19T21:24:46Z",
+  "updated_at": "2025-09-28T06:23:10Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

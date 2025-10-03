@@ -1,0 +1,22 @@
+{
+  "id": "github_735184524",
+  "title": "lllm",
+  "description": "Local LLMs in One Line Of Code (thanks to llamafile)",
+  "url": "https://github.com/disler/lllm",
+  "language": "Shell",
+  "stars": 42,
+  "forks": 10,
+  "created_at": "2023-12-24T01:00:19Z",
+  "updated_at": "2025-08-08T21:45:08Z",
+  "topics": [],
+  "readme_content": "# LLLM - Local LLMs with llamafile\n\n![local llms with llamafile](img/local-llms-with-llamafile.png)\n\n## Quick setup\n> Get up and running quickly with these instructions\n- Download these files from the [docs](https://github.com/Mozilla-Ocho/llamafile?tab=readme-ov-file#other-example-llamafiles) and place them in this directory\n  - [mistral-7b-instruct-v0.1-Q4_K_M-main.llamafile](https://huggingface.co/jartine/mistral-7b.llamafile/resolve/main/mistral-7b-instruct-v0.1-Q4_K_M-main.llamafile?download=true)\n  - [mistral-7b-instruct-v0.1-Q4_K_M-server.llamafile](https://huggingface.co/jartine/mistral-7b.llamafile/resolve/main/mistral-7b-instruct-v0.1-Q4_K_M-server.llamafile?download=true)\n  - [wizardcoder-python-13b-main.llamafile](https://huggingface.co/jartine/wizardcoder-13b-python/resolve/main/wizardcoder-python-13b-main.llamafile?download=true)\n- Run the commands below\n\n## Commands\n> Run these commands from this directory\n- Run a prompt on mistral-7b, no logging\n  - `./mistral-7b-instruct-v0.1-Q4_K_M-main.llamafile -p \"list 5 pros and cons of python\" --log-disable`\n- Run the self contained, web server UI for mistral-7b\n  - `./mistral-7b-instruct-v0.1-Q4_K_M-server.llamafile`\n- Run wizard coder\n  - `./wizardcoder-python-13b-main.llamafile`\n\n\n## Reusable bash function (local_llm.sh:lllm())\n> Let's build a reusable local llm function to call local LLMs from anywhere.\n> \n> There are many better ways to do this, but heres a simple, quick way to get local LLMs anywhere in your terminal’\n> \n> I recommend checking out [‘LLM’](https://github.com/simonw/llm) for a complete in terminal, LLM solution.\n- Test out the lllm() function with `source local_llm.sh`\n- Example commands\n  - `lllm \"Explain LLM architecture\"`\n  - `lllm \"list 5 pros and cons of python\" mistral 0.9`\n  - `lllm \"count items in list that are str and bool types\" wizard`\n- Move the lllm function into your .bashrc or .zshrc or .bash_profile\n- Now you can call lllm() from anywhere in your terminal\n\n## Resources\n- watch the devlog where we create this repo\n    - https://youtu.be/XnoKvdeZAN8\n- llamafile codebase\n    - https://github.com/Mozilla-Ocho/llamafile/tree/0.3\n- Original llamafile introduction\n    - https://hacks.mozilla.org/2023/11/introducing-llamafile/\n- Core author - creator of [llamafile](https://github.com/Mozilla-Ocho/llamafile) * [cosmopolitan](https://github.com/jart/cosmopolitan)\n    - https://justine.lol/\n- Original Blog Post\n    - https://justine.lol/oneliners/\n- How llamafile works\n    - https://github.com/Mozilla-Ocho/llamafile/tree/0.3?tab=readme-ov-file#how-llamafile-works\n\n",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

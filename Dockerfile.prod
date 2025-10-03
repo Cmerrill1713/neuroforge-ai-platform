@@ -1,0 +1,179 @@
+# ============================================================================
+# NeuroForge Production Dockerfile - Phase 5
+# Multi-stage build optimized for production deployment
+# ============================================================================
+
+# ============================================================================
+# BUILD STAGE - Compile and install dependencies
+# ============================================================================
+FROM python:3.11-slim as builder
+
+# Install system dependencies for compilation
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gcc \
+    g++ \
+    libffi-dev \
+    libssl-dev \
+    curl \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create virtual environment
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Install additional production dependencies
+RUN pip install --no-cache-dir \
+    gunicorn \
+    uvicorn[standard] \
+    prometheus-client \
+    structlog \
+    sentry-sdk
+
+# ============================================================================
+# RUNTIME STAGE - Minimal production image
+# ============================================================================
+FROM python:3.11-slim as runtime
+
+# Install only runtime system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    tini \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user
+RUN groupadd --gid 1000 neuroforge && \
+    useradd --uid 1000 --gid neuroforge --shell /bin/bash --create-home neuroforge
+
+# Copy virtual environment from builder
+COPY --from=builder /opt/venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Set working directory
+WORKDIR /app
+
+# Copy application code
+COPY --chown=neuroforge:neuroforge . .
+
+# Create necessary directories
+RUN mkdir -p /app/logs /app/uploads /app/cache && \
+    chown -R neuroforge:neuroforge /app/logs /app/uploads /app/cache
+
+# Switch to non-root user
+USER neuroforge
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# Expose port
+EXPOSE 8000
+
+# Use tini as init system
+ENTRYPOINT ["/usr/bin/tini", "--"]
+
+# Default command - can be overridden
+CMD ["gunicorn", \
+     "--bind", "0.0.0.0:8000", \
+     "--workers", "4", \
+     "--worker-class", "uvicorn.workers.UvicornWorker", \
+     "--access-logfile", "-", \
+     "--error-logfile", "-", \
+     "--log-level", "info", \
+     "src.api.main:app"]
+
+# ============================================================================
+# PRODUCTION STAGE - Final optimized image
+# ============================================================================
+FROM runtime as production
+
+# Environment variables for production
+ENV ENVIRONMENT=production \
+    PYTHONPATH=/app \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONOPTIMIZE=1 \
+    GUNICORN_CMD_ARGS="--max-requests=1000 --max-requests-jitter=50 --worker-tmp-dir=/tmp"
+
+# Additional production configurations
+COPY --chown=neuroforge:neuroforge docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+# Pre-compile Python bytecode for faster startup
+RUN python -m compileall -b .
+
+# Default production command
+CMD ["/usr/local/bin/docker-entrypoint.sh"]
+
+# ============================================================================
+# DEVELOPMENT STAGE - For development and debugging
+# ============================================================================
+FROM runtime as development
+
+# Switch back to root for development
+USER root
+
+# Install development dependencies
+RUN apt-get update && apt-get install -y \
+    vim \
+    htop \
+    net-tools \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install development Python packages
+RUN pip install --no-cache-dir \
+    pytest \
+    pytest-cov \
+    pytest-asyncio \
+    black \
+    isort \
+    flake8 \
+    mypy
+
+# Switch back to neuroforge user
+USER neuroforge
+
+# Development command
+CMD ["uvicorn", \
+     "--host", "0.0.0.0", \
+     "--port", "8000", \
+     "--reload", \
+     "--log-level", "debug", \
+     "src.api.main:app"]
+
+# ============================================================================
+# BACKUP STAGE - For backup operations
+# ============================================================================
+FROM python:3.11-slim as backup
+
+# Install backup tools
+RUN apt-get update && apt-get install -y \
+    postgresql-client \
+    redis-tools \
+    curl \
+    awscli \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy virtual environment
+COPY --from=builder /opt/venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Create backup user
+RUN useradd --create-home --shell /bin/bash backup
+
+WORKDIR /app
+
+# Copy backup scripts
+COPY scripts/backup/ /app/backup/
+
+# Switch to backup user
+USER backup
+
+# Backup command
+CMD ["/app/backup/run_backup.sh"]

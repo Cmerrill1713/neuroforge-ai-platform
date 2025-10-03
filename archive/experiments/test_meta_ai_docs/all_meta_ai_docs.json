@@ -1,0 +1,38 @@
+{
+  "test_research": [
+    {
+      "metadata": {
+        "url": "https://ai.meta.com/research/",
+        "title": "Error",
+        "category": "test_research",
+        "content_hash": "",
+        "word_count": 0,
+        "scraped_at": "2025-09-28T18:04:01.333664",
+        "status": "error",
+        "error": "400 Client Error: Bad Request for url: https://ai.meta.com/research/"
+      },
+      "structured_content": {},
+      "insights": [],
+      "specifications": [],
+      "raw_html": ""
+    }
+  ],
+  "test_llama": [
+    {
+      "metadata": {
+        "url": "https://ai.meta.com/llama/",
+        "title": "Error",
+        "category": "test_llama",
+        "content_hash": "",
+        "word_count": 0,
+        "scraped_at": "2025-09-28T18:04:03.409907",
+        "status": "error",
+        "error": "400 Client Error: Bad Request for url: https://ai.meta.com/llama/"
+      },
+      "structured_content": {},
+      "insights": [],
+      "specifications": [],
+      "raw_html": ""
+    }
+  ]
+}

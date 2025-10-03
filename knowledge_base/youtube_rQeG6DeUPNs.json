@@ -1,0 +1,26 @@
+{
+  "id": "youtube_rQeG6DeUPNs",
+  "title": "Notion API in 5 Minutes: How to Read Notion Databases in Python",
+  "description": "Grab the source code: https://danisler.com/dev/notion-in-5-minutes\n\n✅ Not sure how to get started? Watch the auth, write, and read videos here.\nNotion Authenticate: https://youtu.be/KyllgpvQFuI\nNotion Write: https://youtu.be/KENSTonsiEc\nNotion Read: https://youtu.be/GSPpYqBgIko\n\n💻 Documentation\n\nGet the code: https://danisler.com/dev/notion-in-5-minutes\nNotion Developer Documentation:  https://developers.notion.com/\nPython Library: https://github.com/ramnes/notion-sdk-py\n\n🗣 Convert your notion pages to lifelike speech: https://subvolver.com\n\n⏳ Manage your time your way: https://timeva.app\n\n#️⃣ Hashtags\n\n#notion #notionapi #api",
+  "url": "https://www.youtube.com/watch?v=rQeG6DeUPNs",
+  "upload_date": "20230205",
+  "duration": 308,
+  "view_count": 7255,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "api",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "f07c02dfbfa2daa18bb5beb73df4bb8f"
+}

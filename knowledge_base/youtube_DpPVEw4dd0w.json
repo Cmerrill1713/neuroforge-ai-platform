@@ -1,0 +1,26 @@
+{
+  "id": "youtube_DpPVEw4dd0w",
+  "title": "If You’re Serious About Building AI Agents, This is Your Secret Weapon",
+  "url": "https://www.youtube.com/watch?v=DpPVEw4dd0w",
+  "description": "A lot of AI agent development these days is just guesswork - it’s clear that most people aren’t serious about building AI agents that are useful in the real world. Want to stand out and actually build production ready AI agents? Well then I have your secret weapon to do so - Langfuse.\n\nLangfuse is an LLM engineering platform that allows you to monitor every action your agent is taking, the cost of each request, how long each response and action takes, and every conversation users are having with your agent.\n\nWithout a platform like Langfuse, you’ll be flying completely blind when you agent is of running in the wild. When it fails, you’ll often have no idea why. You won’t know how much you’re spending, and most importantly, you won’t know how to iterate on your agent to improve it. So in this video, I show you how to use Langfuse to solve for all of this.\n\nNote that this video is NOT sponsored by Langfuse - I genuinely like them the most out of all agent observability platforms (especially since they are open source) and I have been wanting to add Langfuse to the local AI package for a long time now!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nI'm hosting a special Q&A livestream this Saturday (the 26th) at 9:00 AM CDT in celebration of the launch of our Dynamous AI Mastery Community! Enable notifications by visiting the scheduled stream here:\n\nhttps://www.youtube.com/watch?v=jSDLMYZAfac\n\nThe Local AI Package with Langfuse:\n\nhttps://github.com/coleam00/local-ai-packaged\n\nMy Langfuse examples (including the Pydantic AI template):\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-ai-langfuse\n\nLangfuse Documentation:\n\nhttps://langfuse.com/docs\n\nLangfuse Self-Hosting Guide:\n\nhttps://langfuse.com/self-hosting\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Langfuse\n01:32 - So Many Video Ideas for Langfuse!\n02:01 - Platform Overview\n03:27 - Self-Hosting Langfuse (including the Local AI Package)\n04:35 - Langfuse Demo (So Many Features!)\n07:30 - Langfuse Quickstart (Basic Example)\n10:02 - Basic Example in Action\n11:42 - Integrating Langfuse into Pydantic AI Agents\n14:18 - Monitoring a Pydantic AI Agent Demo\n16:50 - Main Pydantic AI + Langfuse Template\n19:55 - Monitoring Example with MANY Tool Calls\n24:02 - Sessions and Users in Langfuse\n25:21 - Langfuse + n8n\n27:09 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250424",
+  "duration": 1669,
+  "view_count": 28318,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

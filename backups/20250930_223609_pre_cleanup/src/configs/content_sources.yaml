@@ -1,0 +1,191 @@
+# Content Sources Configuration for MCP Automated Processing
+# This file defines the sources that will be automatically crawled and processed
+
+sources:
+  # Academic Research Sources
+  arxiv_ml:
+    name: "arXiv Machine Learning"
+    url: "https://arxiv.org/search/?query=machine+learning&searchtype=all"
+    type: "arxiv"
+    priority: 9
+    enabled: true
+    crawl_interval: 3600  # 1 hour
+    filters:
+      categories: ["cs.LG", "cs.AI", "cs.CV", "cs.CL", "cs.NE"]
+      max_results: 100
+    
+  arxiv_ai:
+    name: "arXiv Artificial Intelligence"
+    url: "https://arxiv.org/search/?query=artificial+intelligence&searchtype=all"
+    type: "arxiv"
+    priority: 8
+    enabled: true
+    crawl_interval: 3600
+    filters:
+      categories: ["cs.AI", "cs.LG", "cs.CL", "cs.RO"]
+      max_results: 50
+    
+  papers_with_code:
+    name: "Papers with Code"
+    url: "https://paperswithcode.com/"
+    type: "research"
+    priority: 7
+    enabled: true
+    crawl_interval: 7200  # 2 hours
+    filters:
+      domains: ["computer_vision", "natural_language_processing", "machine_learning"]
+      max_results: 50
+
+  # Code and Development Sources
+  github_trending:
+    name: "GitHub Trending"
+    url: "https://github.com/trending"
+    type: "github"
+    priority: 8
+    enabled: true
+    crawl_interval: 1800  # 30 minutes
+    filters:
+      languages: ["python", "javascript", "typescript", "rust", "go"]
+      max_results: 30
+    
+  github_ai_repos:
+    name: "GitHub AI Repositories"
+    url: "https://github.com/search?q=artificial+intelligence&type=repositories&s=stars"
+    type: "github"
+    priority: 7
+    enabled: true
+    crawl_interval: 3600
+    filters:
+      languages: ["python", "javascript", "typescript"]
+      stars: ">100"
+      max_results: 25
+
+  # Community and Discussion Sources
+  stackoverflow_trending:
+    name: "Stack Overflow Trending"
+    url: "https://stackoverflow.com/questions/tagged/python?tab=Votes"
+    type: "qa"
+    priority: 6
+    enabled: true
+    crawl_interval: 1800
+    filters:
+      tags: ["python", "machine-learning", "ai", "tensorflow", "pytorch"]
+      max_results: 20
+    
+  reddit_machinelearning:
+    name: "Reddit Machine Learning"
+    url: "https://www.reddit.com/r/MachineLearning/"
+    type: "discussion"
+    priority: 5
+    enabled: true
+    crawl_interval: 3600
+    filters:
+      sort: "hot"
+      max_results: 15
+
+  # News and Industry Sources
+  techcrunch_ai:
+    name: "TechCrunch AI"
+    url: "https://techcrunch.com/category/artificial-intelligence/"
+    type: "news"
+    priority: 6
+    enabled: true
+    crawl_interval: 7200
+    filters:
+      max_results: 20
+    
+  venturebeat_ai:
+    name: "VentureBeat AI"
+    url: "https://venturebeat.com/ai/"
+    type: "news"
+    priority: 5
+    enabled: true
+    crawl_interval: 7200
+    filters:
+      max_results: 15
+
+  # Educational and Tutorial Sources
+  youtube_ai_tutorials:
+    name: "YouTube AI Tutorials"
+    url: "https://www.youtube.com/results?search_query=machine+learning+tutorial"
+    type: "youtube"
+    priority: 6
+    enabled: true
+    crawl_interval: 10800  # 3 hours
+    filters:
+      duration: "medium"  # 4-20 minutes
+      max_results: 10
+    
+  medium_ai:
+    name: "Medium AI Articles"
+    url: "https://medium.com/tag/artificial-intelligence"
+    type: "blog"
+    priority: 5
+    enabled: true
+    crawl_interval: 7200
+    filters:
+      max_results: 20
+
+# Processing Configuration
+processing:
+  max_parallel_sources: 5
+  quality_threshold: 0.6
+  relevance_threshold: 0.5
+  auto_update_knowledge_base: true
+  
+  # Content filtering
+  filters:
+    min_content_length: 100
+    max_content_length: 50000
+    exclude_duplicates: true
+    language: "en"
+  
+  # Quality assessment weights
+  quality_weights:
+    readability: 0.2
+    technical_depth: 0.25
+    completeness: 0.2
+    accuracy_indicators: 0.2
+    relevance_to_domain: 0.15
+
+# Model Configuration
+models:
+  quality_assessment: "llama3.1:8b"
+  tag_extraction: "llama3.2:3b"
+  embeddings: "nomic-embed-text:latest"
+  categorization: "qwen2.5:7b"
+
+# Storage Configuration
+storage:
+  vector_store:
+    provider: "postgresql"
+    connection_string: "postgresql://user:password@localhost:5432/vector_db"
+    table_name: "content_embeddings"
+  
+  knowledge_base:
+    provider: "supabase"
+    table_name: "processed_content"
+    
+  cache:
+    enabled: true
+    ttl: 3600  # 1 hour
+    max_size: 10000
+
+# Monitoring and Logging
+monitoring:
+  enable_metrics: true
+  log_level: "INFO"
+  save_processing_logs: true
+  alert_on_failures: true
+  
+  # Performance monitoring
+  track_processing_times: true
+  track_quality_scores: true
+  track_source_performance: true
+
+# Rate Limiting
+rate_limiting:
+  requests_per_minute: 60
+  requests_per_hour: 1000
+  respect_robots_txt: true
+  delay_between_requests: 1.0  # seconds

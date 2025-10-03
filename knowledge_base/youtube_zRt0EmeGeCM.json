@@ -1,0 +1,25 @@
+{
+  "id": "youtube_zRt0EmeGeCM",
+  "title": "Sora + Gemini 1.5: INFINITE Content + INFINITE Context (Building ADAPTive LLM apps)",
+  "description": "Back to Back AI Milestones: From Gemini Pro 1.5 to Sora, What's Next?\n\nThe AI landscape is evolving at an unimaginable pace, and staying ahead requires not just insight but a principled, forward-thinking approach. In our latest exploration, we dive into the extraordinary feats accomplished by Gemini Pro 1.5 and Sora, deciphering how these breakthroughs signal a shift in the way we develop, interact, and use LLM technology.\n\nThe announcement of Google's Gemini Pro 1.5 and OpenAI's Sora, the ground breaking text to video model, represents more than just technological advancements; they symbolize a tidal wave of changes set to redefine the landscape of AI Agents. With unique insights and a focus on what this means on both a macro and micro level, in this video aims to prepare you for the impact of these innovations.\n\nAs engineers and product builders, the rapid acceleration of these technologies presents both exhilarating opportunities and formidable challenges. Our LLM Agents, AI Copilots and AI Powered Tools can do more than ever before, and the pace is NOT slowing down. So how do we harness this incredible power? Which tools should we adopt to stay ahead in the game? This video dives deep into what Gemini Pro 1.5 and Sora mean for us, offering actionable insights and a toolkit designed to keep you at the cutting edge.\n\nFacing the wave of AI advancements head-on, we delve into the critical decisions facing today's engineers and developers: choosing the right technologies, building adaptive tools, and focusing our attention where it truly matters. Join us as we outline a agentic toolkit, indydevtools, built from our comprehensive three-part video series, designed to reveal patterns and principles for building multi-agent apps to ensure you remain at the forefront of this technological tsunami. We'll discuss the implications of these developments, from the way we prompt engineer to how we approach the very act of innovation, ensuring you have the tools and knowledge to build incredible AI Agents to help us thrive in this new ever expanding era of AI.\n\n🌌 OpenAI Sora, Infinite Content Generator\nhttps://openai.com/sora\n\n🔮 Gemini 1.5 Pro: 1 Million Token Context Window\nhttps://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/#performance \n\n🛠️ IndyDevTools\nhttps://github.com/disler/indydevtools\n\n📄 Attention Is All You Need\nhttps://arxiv.org/abs/1706.03762\n\n📚 Chapters\n00:00 Keeping pace with Gemini, Sora, and what's next\n02:00 Gemini 1.5 Pro - INFINITE context\n09:46 Sora - INFINITE content\n15:00 Micro - Principles to keep up - IndyDevTools\n\n#LLMAgents #YouTubeAutomation #GeminiPro",
+  "url": "https://www.youtube.com/watch?v=zRt0EmeGeCM",
+  "upload_date": "20240219",
+  "duration": 1446,
+  "view_count": 3393,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d23c3b94e23a33e4113476694d9f0fe0"
+}

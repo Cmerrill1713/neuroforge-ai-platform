@@ -1,0 +1,26 @@
+{
+  "id": "youtube_IsxXO3EbIqc",
+  "title": "OpenAI's o1 is Barely Usable, but I Fixed it...",
+  "url": "https://www.youtube.com/watch?v=IsxXO3EbIqc",
+  "description": "Artificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nIn this video I cover some of the really unfortunate limitations of OpenAI's new super powerful o1 model and how I've built a custom solution to fix those limitations with their API! I show you EXACTLY how to build a custom implementation of function calling so you can use o1 to create AI Agents. Without this, o1 doesn't actually support function calling so you basically can't use it to develop any real AI application at this point.\n\nTheoretically, in the future when o1 is out of beta preview it will support all the usual API features like system messages, function calling, streaming, etc., but for now you need something like what I've shown in this video so I hope you find it super valuable!\n\nOne thing to note is that I believe you need to be on a certain OpenAI API \"tier\" (based on API usage) to use the o1 models with the API right now. That should be going away really soon though! Just another limitation of o1 right now... But the model is incredible so don't get me wrong there!\n\n00:00 - 02:00 - Limitations of OpenAI's o1\n02:01 - 03:11 - Overview of o1 Agent Code\n03:12 - 18:04 - Coding the o1 AI Agent with Tool Calling\n18:05 - 23:49 - o1 AI Agent Demo\n23:50 - 24:46 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAll code for this custom function calling o1 AI Agent can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/o1-ai-agent\n\nOpenAI article on the new o1 models I showed in the video that also covers the limitations:\n\nhttps://platform.openai.com/docs/guides/reasoning\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20240919",
+  "duration": 1486,
+  "view_count": 6576,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

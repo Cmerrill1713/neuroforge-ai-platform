@@ -1,0 +1,26 @@
+{
+  "id": "youtube_2Ai7_5G70xY",
+  "title": "Deploying Billions of AI Agents is Easier than You Think",
+  "url": "https://www.youtube.com/watch?v=2Ai7_5G70xY",
+  "description": "Mark Zuckerberg predicted in an interview recently that before we know it, there are going to be BILLIONS of AI agents - more agents than people who walk the Earth. He's spot on, especially considering how easy it is to deploy and scale AI agents in a very configurable way. Imagine a world where businesses have a core set of AI agents to choose from, and they can instantly have any number of them configured and deployed instantly. Dozens or even hundreds of AI agents deployed for millions of businesses - that is the billions of agents Mark is talking about.\n\nNow I’m not giving you a grandiose introduction where I deploy hundreds of AI agents at once. But what I will do in this video is show you how simple it is to take ANY AI agent you built yourself and deploy it to the cloud in a way that can scale without you lifting a finger. The kind of guide that’s super practical for you looking to deploy your agents now, and so that you can use your imagination to see how this kind of process could be taken to the extreme for people like you to partake in deploying billions of agents to take over the world.\n\nIt all revolves around my favorite tool for deploying any code - Docker. And this video is a part of my series showing you my entire process for building AI agents, so we will be using Docker to deploy the GitHub expert we’ve been working on that can consume entire repositories for code Q&A. And I’ll show you how to deploy it completely for free!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out the full Mark Zuckerberg interview on Rowan Cheung’s channel:\n\nhttps://www.youtube.com/watch?v=Vy3OkbtUa5k\n\nI used Agent 0 a lot in this video for a quick frontend. If you want to use it for yourself to instantly have a free frontend for your agent, check out:\n\nhttps://studio.ottomator.ai/agent-zero-guide\n\nAll the code for the AI agent (including the Docker setup), can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-github-agent\n\nFrontend code built with Lovable and bolt.diy:\n\nhttps://github.com/coleam00/midnight-converse\n\nRender docs for Docker:\n\nhttps://render.com/docs/docker\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Scaling AI Agents is Easy\n02:34 - Covering the AI Agent We'll be Deploying\n04:11 - Why Docker Slaps (plus setup)\n06:40 - Testing our Agent Container Locally\n09:40 - Deploying our AI Agent with Render\n13:17 - Demo of our Deployed Agent\n15:14 - Deploying our Agent Frontend on Render\n18:50 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250130",
+  "duration": 1178,
+  "view_count": 25876,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

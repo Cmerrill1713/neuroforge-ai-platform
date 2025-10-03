@@ -1,0 +1,25 @@
+{
+  "id": "youtube_PoO7Zjsvx0k",
+  "title": "Coding RELIABLE AI Agents: Legit Structured Outputs Use Cases (Strawberry Agent?)",
+  "description": "Reliable AI Agents are HERE. OpenAI's STRUCTURED OUTPUTS are likely powering STRAWBERRY and soon, millions of AI agents.\n\n🔴 Personal AI Assistant Video\nhttps://youtu.be/ikaKpfUOb0U\n\n🔗 OpenAI AI Agent Codebase:\nhttps://github.com/disler/personal-ai-starter-pack/tree/structured-outputs\n\nIn this video, we talk and showcase how you can leverage structured outputs to build highly reliable, domain-specific AI agents.\n\n🚀 What's New?\nOpenAI has introduced structured outputs for function calling and data models, ensuring 100% guaranteed responses in your specified format. Plus, the new GPT-4-O model offers a 50% cost reduction on inputs and a 33% reduction on outputs, making it more affordable to build and run your AI agents.\n\n🔥 Key Highlights:\n1. Structured Outputs for Function Calling: Wrap your method parameters using Pydantic or Zod, and get guaranteed responses in your desired format.\n2. Structured Outputs for Data Models: Specify the exact object structure you want, and receive 100% guaranteed responses.\n3. Cost Reduction: The state-of-the-art GPT-4-O model cuts input costs by 50% and output costs by 33%, making it easier and cheaper to build domain-specific agents.\n\n🛠️ Demo Time!\nWatch as we demonstrate an OpenAI exclusive super agent in action. Using speech-to-text (stt) and text-to-speech (tts) capabilities, our personal AI assistant, Ada, performs tasks like generating images, converting formats, resizing, and opening directories—all through natural language commands. See how easy it is to interact with your digital assistant and get work done faster than ever.\n\n🌟 Why You Should Care:\nBuilding AI agents that are domain-specific and highly reliable has never been simpler. Whether you're a software engineer, a tech enthusiast, or an AI pioneer, understanding and utilizing these new features can position you at the forefront of innovation.\n\n💡 Get Started:\n- Like and Subscribe: Stay ahead of the curve with more insights on AI technology.\n- Code Base: Check out the code base link in the description to get started quickly.\n- Example Code: We've included examples from OpenAI's blog to help you implement these features effortlessly.\n\nJoin us as we explore the future of AI with structured outputs, making your personal AI assistant more powerful and efficient. Let's innovate together and transform your approach to AI with every video.\n\nStay focused and keep building.\n\n📖 Chapters\n00:00 OpenAI is the monopoly for AI Agents\n01:38 AI Agent Demo with Structured Outputs\n04:05 Breakdown OpenAI Personal AI Assistant \n07:07 Is Strawberry a GPT Next AI Agent?\n09:25 Reflect, Improve, Act - What's after AI Agents?\n\n#aiagents #aicoding #aiassistant",
+  "url": "https://www.youtube.com/watch?v=PoO7Zjsvx0k",
+  "upload_date": "20240812",
+  "duration": 673,
+  "view_count": 9488,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "b77515124dcb9574fe0af651ece805b3"
+}

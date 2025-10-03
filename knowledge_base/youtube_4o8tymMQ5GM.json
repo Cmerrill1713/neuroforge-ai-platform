@@ -1,0 +1,26 @@
+{
+  "id": "youtube_4o8tymMQ5GM",
+  "title": "Make AutoGen Consistent: CONTROL your LLM agents for ACCURATE Postgres AI Data Analytics",
+  "description": "Prompt Engineering is only the FIRST STEP. What comes next is learning to CONTROL multi-agent conversations. To building agentic software that works on your behalf, we must guide the conversations of our agents. Microsoft's AutoGen takes a brief shot at this with the GroupChat and GroupChatManager python classes but this is not enough for all use cases. \n\nIf you're an engineer looking to build your own multi-agent applications like our Postgres AI Data Analytics tool, then ensuring consistency with your LLM agents is vital. In this video we dive into how we can CONTROL agent conversations and orchestrate agent function calls with precision. Building on our previous two AutoGen postgres data analytics video and codebase, we reveal two architectural patterns to help you get control of your agents. The key? A robust python orchestrator class which guides agentic engineering by helping us manage our LLM agents. With this, we guide agent conversations and ensure seamless function calls. We establish principles of LLM agent orchestrations and agent conversations aided by gpt-4, openai function calls, and AutoGen.\n\nDiscover, experiment, and learn with us. From mastering prompt engineering to multi-agent conversations powered by AutoGen we push our Postgres AI Data  Analytics tool further. For those seeking insights into ai engineering and aspiring to build their own agentic software, this video was made for you. Let’s steer AI agents with precision, and learn to harness the power of agentic engineering.\n\nHuge shout out for all the likes and subs on the previous two videos. Feel free to join the journey - we're just getting started.\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v3-make-autogen-consistent-control-your-llm\n\n✅ Watch Part Two - Using AutoGen to code a multi-agent postgres ai tool\nhttps://youtu.be/jmDMusirPKA\n\n🤖💻 AI Engineering Resources\nMicrosoft's Autogen: https://microsoft.github.io/autogen/\n\nAutogen group chat example: https://github.com/microsoft/autogen/blob/main/notebook/agentchat_groupchat_research.ipynb\n\nFree Postgres Hosting With Neon: https://neon.tech/\n\n🤖 ZERO Touch coding with AIDER? YUP\nhttps://youtu.be/MPYFPvxfGZs\n\n\n📘 Chapters\n00:00 The channel has exploded BUT\n00:45 What this channel is about\n01:30 Recap our Postgres Multi-Agent Tool\n03:00 The PROBLEM With AUTOGEN\n03:43 Control Multi-Agent Conversations\n05:24 Running the Data Eng Agent Team\n09:45 The Sequential Conversation\n11:20 The Broadcast Conversation\n16:05 Multi-Agents with unique functions\n17:55 Running the Data Viz Agent Team\n20:19 Compose our two Multi-Agent Teams\n24:50 Engineering is all about building blocks\n25:20 The Order of Agent conversations matters\n27:15 Where we're headed next\n\n🐛 tags\n#postgresql #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=4o8tymMQ5GM",
+  "upload_date": "20231016",
+  "duration": 1737,
+  "view_count": 30897,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "3b09ff995a5f93eb34cf6239c660dda1"
+}

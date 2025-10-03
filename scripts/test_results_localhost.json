@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-09-30T20:58:01.437749",
+  "results": [
+    {
+      "test": "Weaviate (localhost:8090)",
+      "passed": true,
+      "message": "Connected! Found 1 collections",
+      "duration_ms": 617.293119430542
+    },
+    {
+      "test": "Elasticsearch (localhost:9200)",
+      "passed": false,
+      "message": "elasticsearch not installed: pip install elasticsearch",
+      "duration_ms": 0.18215179443359375
+    },
+    {
+      "test": "Redis (localhost:6379)",
+      "passed": true,
+      "message": "Connected! Read/write OK",
+      "duration_ms": 59.27300453186035
+    },
+    {
+      "test": "PostgreSQL (localhost:5433)",
+      "passed": false,
+      "message": "Failed: connection to server at \"localhost\" (::1), port 5433 failed: FATAL:  password authentication failed for user \"postgres\"\n",
+      "duration_ms": 43.20406913757324
+    },
+    {
+      "test": "RAG Service (localhost)",
+      "passed": true,
+      "message": "Weaviate store ready",
+      "duration_ms": 306.03790283203125
+    },
+    {
+      "test": "Embeddings (sentence-transformers)",
+      "passed": true,
+      "message": "Generated 384-dim embedding (norm: 1.000)",
+      "duration_ms": 9108.57105255127
+    },
+    {
+      "test": "Weaviate Query",
+      "passed": false,
+      "message": "Failed: Query call with protocol GRPC search failed with message could not find class DocChunk in schema.",
+      "duration_ms": 1504.4867992401123
+    }
+  ],
+  "passed": 4,
+  "failed": 3
+}

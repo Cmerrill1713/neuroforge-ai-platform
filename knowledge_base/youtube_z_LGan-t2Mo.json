@@ -1,0 +1,26 @@
+{
+  "id": "youtube_z_LGan-t2Mo",
+  "title": "The EASIEST Possible Strategy for Accurate RAG (Step by Step Guide)",
+  "url": "https://www.youtube.com/watch?v=z_LGan-t2Mo",
+  "description": "The most important thing to understand with this guide is the strategies I cover here can be combined with others I have shown like agentic RAG and knowledge graphs. You don't have to just use one!\n\nBasic Retrieval Augmented Generation (RAG) is simply not enough. If you're building AI agents that need accurate information retrieval, you know this and you've probably learned it the hard way. One of the biggest problems is you lose crucial context when chunking documents - and I have a solution for that!\n\nThis video is a step by step guide where I'll show you in n8n how to implement Contextual Retrieval (specifically contextual embeddings) - a technique introduced by Anthropic that reduces retrieval failures significantly, especially combined with a couple other techniques. The best part is it's super simple to implement!\n\nThis approach works with any vector database, any LLM, and any set of documents or data you have for RAG. I even show quickly at the end of this video how I implemented Contextual Retrieval in Python for my Crawl4AI RAG MCP server!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIf you want to build production AI agents and applications with a highly scalable and reliable database, check out Neon (serverless Postgres):\n\nhttps://fyi.neon.tech/1cm\n\nAnd here is their MCP server to manage your database with natural language:\n\nhttps://github.com/neondatabase-labs/mcp-server-neon\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe Contextual Retrieval RAG AI agent built in this video:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/contextual-retrieval-n8n-agent\n\nAnthropic article on Contextual Retrieval:\n\nhttps://www.anthropic.com/news/contextual-retrieval\n\nThe Crawl4AI RAG MCP Server:\n\nhttps://github.com/coleam00/mcp-crawl4ai-rag\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Understanding Basic RAG and Why It's not Enough\n02:27 - Introducing Contextual Retrieval\n04:21 - How Contextual Retrieval Works\n08:09 - Contextual Retrieval Implementation in n8n\n16:28 - My Choice of a Database\n18:25 - Our RAG AI Agent\n20:11 - Testing Our Agent with Contextual Retrieval\n22:11 - Future Improvements to Build on Contextual Retrieval\n23:25 - Adding Contextual Retrieval to the Crawl4AI RAG MCP Server\n25:37 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250508",
+  "duration": 1582,
+  "view_count": 48735,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

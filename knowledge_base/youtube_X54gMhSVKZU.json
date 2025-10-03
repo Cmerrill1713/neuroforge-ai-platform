@@ -1,0 +1,26 @@
+{
+  "id": "youtube_X54gMhSVKZU",
+  "title": "Survive the AI age: Managing AI generated content with Notion, Python, Vercel, and Cron.",
+  "description": "OpenAI has placed the power of AI at your fingertips, but how will you manage it?\nHow you manage your AGC will likely determine your success.\nIn this video we break down a simple yet effective approach to managing AI generated content.\nWith the help of Python, Notion, Vercel, Qstash, and of course - OpenAI's GPT APIs, we program a solution for AGC management.\n\nWe've built this code base up over several videos (link below) so the complexity is increasing. Feel free to ask any questions if you're curious or something doesn't make sense.\n\nStay focused.\nKeep Building.\n\n1️⃣ Build this Notion-Twitter app from scratch:\nhttps://youtu.be/M_nkH94X0Z0\n\n✅ Use Notion? Love Being Productive? Convert your Notion pages to Personal Audio Books\n\nhttps://subvolver.com\n\n📊 Get started with the Notion API:\nhttps://youtu.be/KyllgpvQFuI\n\n📄 Documentation\n\nVercel Serverless Functions: https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python\nNotion Developer Documentation: https://developers.notion.com/\nPython Library: https://github.com/ramnes/notion-sdk-py\nTwitter Library: https://github.com/tweepy/tweepy\n\n#️⃣ Hashtags\n\n#chatgpt #gpt #python",
+  "url": "https://www.youtube.com/watch?v=X54gMhSVKZU",
+  "upload_date": "20230320",
+  "duration": 1644,
+  "view_count": 299,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "6b461daf7958124a1d54520d4df44060"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "youtube_PcLkBkQujMI",
+  "title": "Engineer your Prompt Library: Marimo Notebooks with o1-mini, Claude, Gemini",
+  "description": "This tool will change how you PROMPT.\n\n✅ Marimo Reactive Notebooks\nhttps://marimo.io/\n\n🔗 Build Your Reusable, Interactive Prompt Library\nhttps://github.com/disler/marimo-prompt-library\n\n💡 \"We Were right\" - o1 Reasoning Mode\nhttps://youtu.be/GUVrOa4V8iE\n\n💻 Master AI Coding\nhttps://youtu.be/ag-KxYS8Vuw\n\nIf it's not clear, the prompt is everything. Your ability to create, reuse and iterate on your prompts may be THE deciding factor in your success as an engineer in the age of LLMs and generative AI.\n\nIn this video I have 3 course special that can help you build your personal prompt library.\n\nIt all starts with Marimo.\n\nIn this video, we introduce Marimo, the next-gen Python notebook designed to replace traditional Jupyter Notebooks. Discover how Marimo Reactive Notebooks empower you to reuse, iterate, and visualize your prompts effortlessly. Whether you're using o1-mini, o1-preview, Claude, or Gemini, Marimo provides the perfect platform for prompt design and agentic engineering.\n\nLearn how to build and maintain a robust prompt library with reusable prompt templates and prompt variables, enhancing your productivity as an engineer in the generative AI age. Marimo's interactive features allow you to run individual prompts across multiple large language models with just a click, making prompt engineering more efficient and effective than ever before but that's just one idea. It's a python notebook, so you can build ANYTHING YOU CAN IMAGINE.\n\nFrom rapid prototyping to interactive data visualization, Marimo Notebook is your ultimate tool for mastering AI coding. Join us as we dive into the features that make Marimo a game-changer for engineers looking to stay ahead in the age of generative AI. Don't miss out on building a powerful and scalable prompt library that will elevate your AI projects to the next level!\n\n📖 Chapters\n00:00 Introducing Marimo - Next-Gen Python Notebooks\n01:15 Goodbye Jupyter Notebooks, Marimo First Look\n02:13 Marimo Reactive Notebooks - Reuse, Iterate, Visualize\n06:25 Instant Prompt Notebook with o1, Claude, Gemini\n14:22 Engineer Your Prompt Library with Marimo\n24:11 Marimo - Version Control and AI Codable\n\n#marimo #promptengineering #agentic",
+  "url": "https://www.youtube.com/watch?v=PcLkBkQujMI",
+  "upload_date": "20240923",
+  "duration": 1603,
+  "view_count": 16840,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "react",
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "5dff2afcfd8268c81a25c90d46cb092f"
+}

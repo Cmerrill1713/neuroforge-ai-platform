@@ -1,0 +1,26 @@
+{
+  "id": "youtube_zoBwIi4ZiTA",
+  "title": "Deepseek AI Assistant: ALWAYS ON Python AI Agent for Engineers that SHIP",
+  "url": "https://www.youtube.com/watch?v=zoBwIi4ZiTA",
+  "description": "🔥 Is your Personal AI Assistant truly ALWAYS ON? Discover how Ada, powered by DeepSeek V3, is revolutionizing the way engineers ship code! 🚀\n\n🎥 Resources for you:\n\n- Always On Personal AI Assistant: https://github.com/disler/always-on-ai-assistant\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding\n- POWERFUL STT Library: https://github.com/KoljaB/RealtimeSTT?tab=readme-ov-file\n- Python Typer CLI: https://typer.tiangolo.com/\n- DeepSeek: https://www.deepseek.com/\n- ElevenLabs: https://elevenlabs.io/\n\n🚀 In this video, we're unveiling Ada—an ALWAYS ON Personal AI Assistant that's designed to help engineers focused on shipping code. Powered by DeepSeek V3 and local, opensource, real-time speech-to-text (STT), this version of Ada can take your productivity to the next level.\n\n🧠 Discover how leveraging an always-on compute system like Ada can supercharge your engineering workflow. We'll dive deep into the three essential elements of a personal AI assistant:\n\n- Ears (NEAR Real-Time STT): Utilizing the POWERFUL LOCAL STT library for real-time speech-to-text, Ada listens continuously, ready to execute your commands.\n- Brain (DeepSeek V3): With DeepSeek's advanced AI agent capabilities, Ada understands and processes your requests efficiently.\n- Voice (ElevenLabs): Experience seamless interaction with Ada's natural-sounding voice powered by ElevenLabs.\n\n💡 We'll explore the innovative 'Scratch Pad' pattern that gives Ada active memory, allowing for more dynamic and context-aware interactions. See firsthand how Ada executes complex commands, manages tasks, and integrates seamlessly with the Typer CLI agent to boost your productivity.\n\n🎯 Whether you're an engineer, developer, or AI enthusiast, this video is packed with actionable insights on how to implement an always-on compute system using RealtimeSTT as the ears and DeepSeek V3 as the brain. Join me, IndyDevDan, as we peer into the world of agentic personal AI assistants and multiply your engineering productivity.\n\n🔥 Get ahead and embrace the next wave of Generative AI with personal AI assistants and transform your engineering workflow with compute that never sleeps 💀💀💀!\n\n👍 If you found this video helpful, make sure to like and subscribe for more cutting-edge content on AI agents, personal assistants, and engineering productivity.\n\n📖 Chapters\n00:00 Building with Ada\n01:03 Always On AI Assistant\n07:32 Active Memory\n14:06 Realtime Speech To Text (STT)\n17:24 Python Typer AI Agent\n\n#aiassistant #aiagent #engineering",
+  "upload_date": "20250113",
+  "duration": 1402,
+  "view_count": 53552,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "indydevdan",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "indydevdan",
+    "2025"
+  ]
+}

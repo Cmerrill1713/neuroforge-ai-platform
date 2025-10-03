@@ -1,0 +1,26 @@
+{
+  "id": "youtube_0c05ijEmk2g",
+  "title": "The KING of No Code AI Agent Builders?!",
+  "url": "https://www.youtube.com/watch?v=0c05ijEmk2g",
+  "description": "Most no code AI agent builders out there are just one big \"black box\" - you don't truly understand how everything is working, and you aren't given much control. That certainly isn't the case with Voiceflow, though! Voiceflow makes it super easy to build powerful AI agents while still giving you all the control you need to manage how the AI agent handles different conversations, integrations with your tools, etc.\n\nIn this video, I give a super quick overview of Voiceflow and then show you how to build an AI agent within the platform that integrates with an N8N workflow so the agent can use Slack at a very basic level. I then even create a frontend around the Voiceflow agent with oTToDev, our Bolt.new fork!\n\nI'll be doing a livestream this Sunday, November 10th, at 7:00 PM CDT for some huge announcements for oTToDev, our Bolt.new fork! See you there! Here is the link for that for you to enable notifications for it when I go live:\n\nhttps://youtube.com/live/_YzTntvUWN4\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n01:41 - Voiceflow Overview\n02:41 - Voiceflow's Awesome Courses to Get Started\n03:50 - Diving into Voiceflow Features\n08:12 - Building an AI Agent with Voiceflow\n16:40 - Building a Frontend for Our Agent with oTToDev\n18:37 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAs I mentioned in the video, I collabed with Voiceflow for this video. It was a pleasure to learn about the platform directly from them so I could create this agent to demonstrate how capable Voiceflow is to all of you!\n\nCheck out Voiceflow with the link below and see what kind of agents you can build!\n\nhttps://www.voiceflow.com/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nI'm building something BIG behind the scenes:\n\nhttps://ottomator.ai/\n\nHere is the link to oTToDev on GitHub (repo will be renamed soon), ready for you to run locally and use LLMs from Ollama, Anthropic, OpenAI, OpenRouter, Gemini, Groq, and more! Check out the README to see future improvements planned!\n\nhttps://github.com/coleam00/bolt.new-any-llm\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241109",
+  "duration": 1154,
+  "view_count": 21510,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

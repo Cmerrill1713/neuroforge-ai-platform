@@ -1,0 +1,26 @@
+{
+  "id": "youtube_W5X34-QmdEQ",
+  "title": "Local vs. Cloud LLMs/RAG - Let's FINALLY End this Debate",
+  "url": "https://www.youtube.com/watch?v=W5X34-QmdEQ",
+  "description": "Artificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nIn this video I walk you through the decision of deciding if you should go with a local or cloud (managed services) solution for your AI application. This includes your LLMs, RAG pipeline, databases, etc. \n\nManaged services (GPT, Claude, Pinecone, etc.) are NOT always the best answer, but neither is local (Ollama, HuggingFace, Chroma, etc.). There IS a time and place for both! A hybrid approach is also great. Lot to cover here so let's dive in!\n\nCloud === Managed Services - I just use \"Cloud\" in the title + thumbnail since it's more concise.\n\n00:00 - 01:12 - Intro\n01:13 - 02:23 - Local Tech Stack\n02:24 - 03:12 - Cloud Tech Stack\n03:13 - 09:12 - Local vs. Cloud Decision Tree\n09:13 - 10:13 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nYou can download the local vs. managed services decision tree here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/local-or-managed-llm-rag\n\nAnd view the decision tree diagram easily with this link:\n\nhttps://drive.google.com/file/d/1Tj_WupPososWl4_r5dj0c1shzYB1ojIx/view\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos twice a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20240912",
+  "duration": 613,
+  "view_count": 5575,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

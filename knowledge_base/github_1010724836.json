@@ -1,0 +1,24 @@
+{
+  "id": "github_1010724836",
+  "title": "agentic-coding-tool-eval",
+  "description": "Simple ideas to compare Agentic Coding Tools",
+  "url": "https://github.com/disler/agentic-coding-tool-eval",
+  "language": "Vue",
+  "stars": 27,
+  "forks": 5,
+  "created_at": "2025-06-29T17:13:19Z",
+  "updated_at": "2025-09-25T12:45:13Z",
+  "topics": [],
+  "readme_content": "# Agentic Coding Tool Evals\n> Micro apps to compare and evaluate Agentic Coding Tools in a hands on way.\n\n## Apps\n\n`apps/ui_component_eval/*` - Which Agentic Coding Tool can adhere to the prompts (`apps/ui_component_eval/README.md`) and build the best UI component?\n\n## Setup\n\nUsing Claude Code, run the custom slash command `/trees \"claude_code,gemini_cli\"` to create the worktrees.\n\n## Requirements\n\n- Claude Code (or setup git worktrees manually)\n- Git\n- bun | npm | yarn | pnpm\n- .env (copy .env.sample to .env)\n\n---\n\n## Agentic Coding Tools\n> Tools we want to evaluate\n>\n> Beware, we're running these tools will run in permisssionless mode.\n\nClaude Code - `claude --dangerously-skip-permissions` - https://docs.anthropic.com/en/docs/claude-code/overview\n\nGemini CLI - `gemini --yolo` - https://github.com/google-gemini/gemini-cli\n\nCodex CLI - `codex --dangerously-auto-approve-everything` - https://github.com/openai/codex\n\n## Master AI Coding \nLearn to code with AI with foundational [Principles of AI Coding](https://agenticengineer.com/principled-ai-coding?y=agtooleval)\n\nFollow the [IndyDevDan youtube channel](https://www.youtube.com/@indydevdan) for more AI coding tips and tricks.",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [
+    "coding"
+  ],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

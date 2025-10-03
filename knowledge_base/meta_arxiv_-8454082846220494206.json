@@ -1,0 +1,21 @@
+{
+  "id": "meta_arxiv_-8454082846220494206",
+  "title": "Robot Learning with Sparsity and Scarcity",
+  "description": "Unlike in language or vision, one of the fundamental challenges in robot learning is the lack of access to vast data resources. We can further break down the problem into (1) data sparsity from the angle of data representation and (2) data scarcity from the angle of data quantity. In this thesis, I will discuss selected works on two domains: (1) tactile sensing and (2) rehabilitation robots, which are exemplars of data sparsity and scarcity, respectively. Tactile sensing is an essential modality for robotics, but tactile data are often sparse, and for each interaction with the physical world, tactile sensors can only obtain information about the local area of contact. I will discuss my work on learning vision-free tactile-only exploration and manipulation policies through model-free reinforcement learning to make efficient use of sparse tactile information. On the other hand, rehabilitation robots are an example of data scarcity to the extreme due to the significant challenge of collecting biosignals from disabled-bodied subjects at scale for training. I will discuss my work in collaboration with the medical school and clinicians on intent inferral for stroke survivors, where a hand orthosis developed in our lab collects a set of biosignals from the patient and uses them to infer the activity that the patient intends to perform, so the orthosis can provide the right type of physical assistance at the right moment. My work develops machine learning algorithms that enable intent inferral with minimal data, including semi-supervised, meta-learning, and generative AI methods.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.16834",
+  "authors": "Authors:\nJingxi Xu",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "machine learning"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_pC17ge_2n0Q",
+  "title": "We've Been Building AI Agents WRONG Until Now",
+  "url": "https://www.youtube.com/watch?v=pC17ge_2n0Q",
+  "description": "The whole idea of creating AI Agents is so new that frameworks (like LangChain, Phidata, CrewAI, Swarm, etc.) and especially no code agent builders aren't actually good enough for mature and production ready AI agents without a LOT of additional work.\n\nBut with Pydantic AI, we're seeing that change in incredible ways. Pydantic AI implements a ton of SUPER important and often overlooked features for an agent framework - context management (for things like API keys and database sessions), logging/monitoring, testing/evaluation capabilities, error handling, and LLM output validation, just to name a few. And it's open source and free to use!\n\nPydantic AI is incredible but in many ways isn't actually the focus of this video. Who knows if something better is going to be released next month! The important thing to focus on here is how Pydantic AI implements a lot of these \"production grade\" AI agent features that any framework going forward should implement, and you should understand how to leverage.\n\nIn this video I demonstrate the power of Pydantic AI by creating a web search agent (running locally with Ollama!) from scratch using the Brave browser API. Super useful agent you could take and extend in a million ways! Instructions to run this yourself are in the link below to GitHub.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAll the Pydantic AI agent code I cover in the video and instructions to run it yourself can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/pydantic-ai\n\nPydantic AI:\n\nhttps://ai.pydantic.dev/\n\nI'm building something BIG behind the scenes, launching soon!\n\nhttps://ottomator.ai\n\nCome join the oTTomator Think Tank - home of the oTToDev community!\n\nhttps://thinktank.ottomator.ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - What Separates Pydantic AI?\n01:33 - Pydantic AI Overview\n03:14 - Key Features for Production Grade Agents\n06:47 - Building an Agent with Pydantic AI\n14:25 - Agent Demo (Running Locally)\n15:36 - Advanced Agent with Streamlit UI\n17:48 - Advanced Agent Demo\n19:06 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241209",
+  "duration": 1191,
+  "view_count": 71606,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

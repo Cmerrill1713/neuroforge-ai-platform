@@ -1,0 +1,17 @@
+{
+  "total_documents": 309,
+  "successful": 309,
+  "failed": 0,
+  "errors": [],
+  "categories": {
+    "system_architecture": 83,
+    "frontend_docs": 29,
+    "testing_docs": 37,
+    "deployment_docs": 26,
+    "api_docs": 64,
+    "config_docs": 14,
+    "performance_docs": 34,
+    "voice_docs": 11,
+    "mcp_docs": 11
+  }
+}

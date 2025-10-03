@@ -1,0 +1,20 @@
+{
+  "id": "wiki_GitHub",
+  "title": "GitHub",
+  "url": "https://en.wikipedia.org/wiki/GitHub",
+  "content": "GitHub (/ˈɡɪthʌb/ ⓘ) is a proprietary developer platform that allows developers to create, store, manage, and share their code. It uses Git to provide distributed version control and GitHub itself provides access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project.[9] GitHub has been a subsidiary of Microsoft since 2018 and its headquarters are located in San Francisco.[10]\n\nIt is commonly used to host open source software development projects.[11] As of January 2023,[update] GitHub reported having over 100 million developers and more than 420 million repositories, including at least 28 million public repositories.[12] It is the world's largest source code host as of June 2023.[update] Over five billion developer contributions were made to more than 500 million open source projects in 2024.[13]",
+  "source_type": "wikipedia_summary",
+  "domain": "general_knowledge",
+  "keywords": [
+    "wikipedia",
+    "ai",
+    "programming",
+    "github"
+  ],
+  "retrieval_tags": [
+    "wikipedia",
+    "summary",
+    "ai",
+    "programming"
+  ]
+}

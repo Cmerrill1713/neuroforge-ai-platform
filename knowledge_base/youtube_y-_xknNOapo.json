@@ -1,0 +1,25 @@
+{
+  "id": "youtube_y-_xknNOapo",
+  "title": "Claude Code INSIDERS: Codex FIRST Look and 5 AI Coding INSIGHTS",
+  "description": "Choosing ONE AI Coding tool is a mistake. OpenAI's new Codex, sits at the opposite end of the AI Coding Spectrum from Anthropic's Claude Code. \n\nKnowing the difference between the two is key to using as much compute as possible to ship your best engineering work.\n\n🎥 VIDEO REFERENCES  \n\nLatent Space Claude Code Interview: https://www.youtube.com/watch?v=zDmW5hJPsvQ\n\nPAIC - Master AI Coding: https://agenticengineer.com/principled-ai-coding?y=y-_xknNOapo\n\nCodex: https://openai.com/index/introducing-codex/\n\nClaude Code: https://www.anthropic.com/claude-code\n\nClaude Code is Programmable: https://github.com/disler/claude-code-is-programmable/blob/main/claude_code_is_programmable_4.py\n\n🔥 What’s Inside:\n- A live demo of Codex orchestrating parallel AI coding tasks  \n- 5 breakthrough insights from the Latent Space podcast with the Claude Code creators  \n- Why terminal AI coding always wins over web-only IDEs  \n- How composability and background tasks redefine agentic coding workflows  \n- The power of simplicity-first engineering: ship small, prove value, then scale  \n\n💡 What You’ll Learn:\n- Why terminal-based tools deliver maximum control and performance  \n- How Claude Code leverages compute to run background tasks and parallel agents  \n- Key differences between Codex’s web app model and Claude’s CLI-native approach  \n- Best practices for agentic coding, AI coding, and scaling your engineering output  \n- How IndyDevDan uses these insights to build living software that works while you sleep  \n\n👍 Don’t miss out on the future of ai coding and agentic coding! Like, subscribe, and hit the bell to stay ahead of the curve with exclusive insights on Claude Code, Codex, OpenAI, Anthropic, and most importantly, maximizing your compute.\n\nStay focused and keep building! 💡⚡️  \n\n📖 Chapters\n00:00 Claude Code and Codex\n01:42 Codex First Look\n06:22 Claude Code Creators\n07:22 AI Coding Spectrum\n10:10 Do the simple thing first\n14:30 Product Managing and Leadership\n16:45 Aider and Claude Code Relationship\n19:50 Claude Costs And Intelligence\n23:34 Codex Background Tasks\n27:23 Future of engineering\n32:00 Planning vs Prototyping\n33:10 Parallel Compute\n35:45 The Context Window Problem\n\n#aiengineer #claudecode #aicoding",
+  "url": "https://www.youtube.com/watch?v=y-_xknNOapo",
+  "upload_date": "20250519",
+  "duration": 2344,
+  "view_count": 21862,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "9495f8c6ea8926e1892c4d632a79c10b"
+}

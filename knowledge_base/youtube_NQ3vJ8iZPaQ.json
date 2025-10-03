@@ -1,0 +1,26 @@
+{
+  "id": "youtube_NQ3vJ8iZPaQ",
+  "title": "Knowledge Graphs in n8n are FINALLY Here!",
+  "url": "https://www.youtube.com/watch?v=NQ3vJ8iZPaQ",
+  "description": "It's finally here - knowledge graphs in n8n with the Graphiti MCP server! So many of you have been asking for me to include knowledge graphs in the RAG template I've been building on my channel so I finally got around to making it happen. It wasn't trivial to find the easiest way to do this with n8n so I hope you appreciate it!\n\nKnowledge graphs help you agent search through the relationships you have in your data - something traditional RAG with vector databases fails at quite often. And the best part is we aren't scrapping our previous strategies - knowledge graphs are added on top to make our agent even more of a beast.\n\nSee the bottom of the description for the steps to copy and paste that I cover in the video.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you're looking to join a community for early AI adopters all mastering AI agents and transforming their careers and businesses together, check out Dynamous: https://dynamous.ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- Here is the n8n knowledge graph template on GitHub!\nhttps://github.com/coleam00/ottomator-agents/tree/main/n8n_knowledge_graph_rag\n\n- n8n RAG Agent template playlist:\nhttps://www.youtube.com/playlist?list=PLyrg3m7Ei-Mo1t_H9KHoeqXkg0pnfkX-S\n\n- Graphiti MCP Setup Guide:\nhttps://help.getzep.com/graphiti/getting-started/mcp-server\n\n- n8n MCP community node:\nhttps://www.npmjs.com/package/n8n-nodes-mcp\n\n- n8n installation on DigitalOcean guide:\nhttps://docs.n8n.io/hosting/installation/server-setups/digital-ocean/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\nGraphiti MCP Configuration Steps for You to Copy and Paste:\n\n### Step 1: Add host mapping to n8n docker-compose.yml\n\n```yaml\nservices:\n  n8n:\n    # ... existing config ...\n    extra_hosts:\n      - \"host.docker.internal:host-gateway\"\n```\n\n### Step 2: Restart n8n\n\n```bash\nsudo docker compose down\nsudo docker compose up -d\n```\n\n### Step 3: Find your n8n container name\n\n```bash\nsudo docker ps | grep n8n\n```\n\n### Step 4: Get n8n container's network info\n\n```bash\n# Go into n8n container\nsudo docker exec -it [your-n8n-container-name] /bin/sh\n\n# Check the network gateway IP\nip route | grep default\n```\n\n### Step 5: Configure firewall for that network range\n\n```bash\n# Exit the container first, then on host:\nsudo ufw allow from [network-range] to any port 8000\n\n# Example: if gateway was 172.18.0.1, use:\nsudo ufw allow from 172.18.0.0/16 to any port 8000\n```\n\n### Step 6: Use in n8n\n\nURL: `http://host.docker.internal:8000/sse`\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing n8n + Knowledge Graphs with Graphiti\n00:24 - What do Knowledge Graphs Give Us?\n03:25 - Demo of Our Agentic RAG System with KGs\n04:42 - What I've Added to the Template for KGs\n05:46 - Graphiti MCP Server Setup Guide\n13:12 - Setting Up the Graphiti MCP in n8n\n17:22 - RAG Pipeline + KG Demo\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250923",
+  "duration": 1135,
+  "view_count": 19803,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

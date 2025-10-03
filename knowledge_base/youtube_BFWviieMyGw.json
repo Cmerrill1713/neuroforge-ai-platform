@@ -1,0 +1,26 @@
+{
+  "id": "youtube_BFWviieMyGw",
+  "title": "AG-UI Just Released: The NEW WAVE of AI Agent Apps",
+  "url": "https://www.youtube.com/watch?v=BFWviieMyGw",
+  "description": "2025 is more than just the year of AI agents - it's the year of AI agent protocols. We have Anthropic's MCP to connect tools to agents, Google's A2A to connect agents to other agents... and now we have AG-UI to easily connect agents to our frontends using a standard that makes it super easy to build full agentic applications. This is the future of building insanely feature rich and interactive AI agents.\n\nIn this video, I break down what AG-UI is, why it's so powerful, and I show you a demo of it in action! Building full applications around our agent isn't trivial when you have to deal with token streaming, concurrent requests, dealing with structured output, rendering custom components for agent responses, etc. And AG-UI makes all of that MUCH easier.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIntegrate anything and automate anything with AI agents using Lutra, check it out here and get started for free!\n\nhttps://lutra.ai/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAG-UI Documentation:\n\nhttps://docs.ag-ui.com/introduction\n\nAG-UI GitHub repo with the demo app you can run yourself:\n\nhttps://github.com/ag-ui-protocol/ag-ui\n\nOfficial announcement for AG-UI:\n\nhttps://www.copilotkit.ai/blog/introducing-ag-ui-the-protocol-where-agents-meet-users/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing AG-UI - MCP but for Agent Apps\n01:09 - Why AG-UI? (and MCP + A2A + AG-UI)\n05:10 - AG-UI Quickstart and Demo\n07:48 - Lutra\n09:34 - How AG-UI Works\n15:40 - AG-UI + Python\n18:46 - AG-UI + AI Coding Assistants\n19:44 - Future of AG-UI\n20:53 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250522",
+  "duration": 1299,
+  "view_count": 55055,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

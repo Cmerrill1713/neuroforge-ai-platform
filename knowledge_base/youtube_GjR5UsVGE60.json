@@ -1,0 +1,26 @@
+{
+  "id": "youtube_GjR5UsVGE60",
+  "title": "Introducing Archon - an AI Agent that BUILDS AI Agents",
+  "url": "https://www.youtube.com/watch?v=GjR5UsVGE60",
+  "description": "Archon is the world's first \"Agenteer\" - an AI agent that literally creates other AI agents from scratch! All with pure code so you aren’t tied to any platform, and it’s a specialized agent trained for specific frameworks through documentation and advanced knowledge retrieval practices so you’ll get way better results than the generalist AI coding assistants like Windsurf, Cursor, or Cline.\n\nArchon is in it’s infancy, but I’ve got huge plans for it and I want to bring you along for the ride since it's fully open source! I’m purposefully releasing it in iterations as I develop it instead of releasing the final product at the end because:\n\n1. I want to use it as a tool to teach you how to build super powerful AI agents with Pydantic AI and LangGraph (other frameworks in the future too)\n2. I’m “building Archon in public” so you can see my process of building an advanced AI agent from inception all the way to something insanely powerful\n3. It allows for people like you to contribute since I really want Archon to be a community driven project! It’s a BIG undertaking so I’m looking to you for help!\n\nIn this video, I show you what Archon is, why it’s so powerful, and all the big plans I have to create it into a monster of an AI agent.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Archon on GitHub, try it yourself, and give the repo a star!\n\nhttps://github.com/coleam00/Archon/tree/main\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Unveiling Archon\n02:01 - Overview and Demo\n06:18 - Archon GitHub Repo\n08:01 - Installing Archon (with Custom UI)\n10:28 - Future Plans Page\n11:00 - V5: Multi-Agent Coding Workflow\n12:35 - V6: Tool Library and Example Integration\n13:52 - V7: LangGraph Documentation\n15:02 - V8: Self-Feedback Loop\n15:29 - V9: Self Agent Execution\n16:48 - V10: Multi-Framework Support\n17:11 - V11: Autonomous Framework Learning\n17:56 - V12: Advanced RAG Techniques\n18:22 - V13: MCP Agent Marketplace\n19:05 - Future Integrations\n25:58 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250303",
+  "duration": 1314,
+  "view_count": 69610,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

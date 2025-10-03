@@ -1,0 +1,25 @@
+{
+  "id": "youtube_F0eOYrA6ggY",
+  "title": "USEFUL Agentic Workflow: AUTO-Updating Blog with Claude 3.5 Sonnet",
+  "description": "What if you could build an Agentic Workflows that worked while you slept?\n\nDiscover how to create powerful agentic workflows that can run, prompt, and report automatically by looking at a real use case. This video explores a piece of the future of engineering, showing you how to build systems that work for you while you sleep.\n\n🔬 We dive deep into:\n• The structure of sequential agentic workflows\n• How to use prompt chains for complex reasoning\n• Techniques for auto-updating content with AI\n• Integrating notifications into your agentic workflows\n\n🚀 Learn to harness the power of:\n• Build agentic workflows that can make decisions and take action\n• Claude 3.5 Sonnet insane accuracy and instruction following\n• Prompt engineering for real-world use cases\n\n👨‍💻 Perfect for:\n• Engineers obsessed with automation\n• AI engineers and prompt engineers\n• Developers exploring agentic systems\n\n🔑 Key takeaways:\n• Step-by-step breakdown of agentic workflow components\n• Tips for building robust, self-improving agentic workflows\n• Steps to create \"living software\" that evolves over time\n\nDon't miss this in-depth look at the future of AI development. Like, subscribe, and hit the notification bell to stay updated on the latest in agentic engineering and AI workflows!\n\n🔥 When to use prompt chains:\nhttps://youtu.be/UOcYsrnSNok\n\n✅ Minimalist Prompt Chain Code\nhttps://gist.github.com/disler/d51d7e37c3e5f8d277d8e0a71f4a1d2e\n\n🔗 Resources\nPub/Sub Notifications: https://ntfy.sh/\nPython Schedule: https://schedule.readthedocs.io/en/stable/\n\n📖 Chapters\n00:00 Prompts, Prompt Chains, Agentic Workflows\n01:23 Auto Blog Agentic Workflow Demo\n02:10 NTFY - Crucial Notification Tool\n03:20 Breaking Down the Workflow Steps\n05:43 Agentic Step - Running the Prompt Chain\n10:30 Sequential Agentic Workflow Steps\n14:59 5 Tips for Building Agentic Workflows\n16:54 The Future - Less Code, More Agent Work\n17:40 LLM Killer User Case - Living Software\n\n#agentic #promptengineer #aiagents",
+  "url": "https://www.youtube.com/watch?v=F0eOYrA6ggY",
+  "upload_date": "20240701",
+  "duration": 1107,
+  "view_count": 6928,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "0a87cbf1040021b3605e6e3cc9bcfb04"
+}

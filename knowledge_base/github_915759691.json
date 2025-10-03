@@ -1,0 +1,24 @@
+{
+  "id": "github_915759691",
+  "title": "always-on-ai-assistant",
+  "description": "A pattern for an always on AI Assistant powered by Deepseek-V3, RealtimeSTT, and Typer for engineering",
+  "url": "https://github.com/disler/always-on-ai-assistant",
+  "language": "Python",
+  "stars": 937,
+  "forks": 209,
+  "created_at": "2025-01-12T18:17:51Z",
+  "updated_at": "2025-09-25T10:45:22Z",
+  "topics": [],
+  "readme_content": "# \"Always-On\" Deepseek AI Assistant\n> A pattern for an always on AI Assistant powered by Deepseek-V3, RealtimeSTT, and Typer for engineering\n>\n> Checkout [the demo](https://youtu.be/zoBwIi4ZiTA) where we walk through using this always-on-ai-assistant.\n\n![ada-deepseek-v3.png](./images/ada-deepseek-v3.png)\n\n## Setup\n- `cp .env.sample .env`\n  - Update with your keys `DEEPSEEK_API_KEY` and `ELEVEN_API_KEY`\n- `uv sync`\n- (optional) install python 3.11 (`uv python install 3.11`)\n\n\n## Commands\n\n### Base Assistant Chat Interface\n> See `main_base_assistant.py` for more details.\nStart a conversational chat session with the base assistant:\n\n```bash\nuv run python main_base_assistant.py chat\n```\n\n### Typer Assistant Conversational Commands\n> See `main_typer_assistant.py`, `modules/typer_agent.py`, and `commands/template.py` for more details.\n\n- `--typer-file`: file containing typer commands\n- `--scratchpad`: active memory for you and your assistant\n- `--mode`: determines what the assistant does with the command: ('default', 'execute', 'execute-no-scratch').\n\n1. Awaken the assistant\n```bash\nuv run python main_typer_assistant.py awaken --typer-file commands/template.py --scratchpad scratchpad.md --mode execute\n```\n\n2. Speak to the assistant\nTry this:\n\"Hello! Ada, ping the server wait for a response\" (be sure to pronounce 'ada' clearly)\n\n3. See the command in the scratchpad\nOpen `scratchpad.md` to see the command that was generated.\n\n## Assistant Architecture\n> See `assistant_config.yml` for more details.\n\n### Typer Assistant\n> See `assistant_config.yml` for more details.\n- 🧠 Brain: `Deepseek V3`\n- 📝 Job (Prompt(s)): `prompts/typer-commands.xml`\n- 💻 Active Memory (Dynamic Variables): `scratchpad.txt`\n- 👂 Ears (STT): `RealtimeSTT`\n- 🎤 Mouth (TTS): `ElevenLabs`\n\n### Base Assistant\n> See `assistant_config.yml` for more details.\n- 🧠 Brain: `ollama:phi4`\n- 📝 Job (Prompt(s)): `None`\n- 💻 Active Memory (Dynamic Variables): `none`\n- 👂 Ears (STT): `RealtimeSTT`\n- 🎤 Mouth (TTS): `local`\n\n\n## Resources\n- LOCAL SPEECH TO TEXT: https://github.com/KoljaB/RealtimeSTT\n- faster whisper (support for RealtimeSTT) https://github.com/SYSTRAN/faster-whisper\n- whisper https://github.com/openai/whisper\n- examples https://github.com/KoljaB/RealtimeSTT/blob/master/tests/realtimestt_speechendpoint_binary_classified.py\n- elevenlabs voice models: https://elevenlabs.io/docs/developer-guides/models#older-models",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [
+    "ai"
+  ],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

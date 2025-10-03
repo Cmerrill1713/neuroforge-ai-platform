@@ -1,0 +1,24 @@
+{
+  "id": "youtube_TkBZc6lW9Rs",
+  "title": "useComposable - Vue.js Composable Generator (GCP + Serverless + LLM)",
+  "description": "Want to ship more Vue.js code faster? In this video we create a Vue.js Composable Functions Generator on top of Google Cloud Functions (serverless), and OpenAIs GPT-3.5 and GPT-4 to boost productivity. The idea is simple, prompt for your composable function, get 80-100% of the results, and improve your Vue.js Composable function as needed.\n\nRemember, efficient coding is all about achieving more with less. As AI technology evolves, it's crucial to stay ahead and incorporate these advancements into your personal development tools.\n\n🤖 How Top AI Engineers will excel in 2023 and beyond.\nhttps://youtu.be/d2SEfmqT__4\n\n✅ Use Notion? Want to study faster with less effort? Convert your Notion pages into Personal Audio Books today:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=vue_composable\n\n#️⃣ Hashtags\n#serverless #gpt4 #llm",
+  "url": "https://www.youtube.com/watch?v=TkBZc6lW9Rs",
+  "upload_date": "20230619",
+  "duration": 1225,
+  "view_count": 560,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "gcp",
+    "ai",
+    "coding"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "aa1fd181fb980bacf7c481e70249ec8c"
+}

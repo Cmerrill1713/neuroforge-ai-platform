@@ -1,0 +1,118 @@
+{
+  "cannot_import_name": {
+    "error_type": "import_error",
+    "solution_type": "generic_import_fix",
+    "fix_instructions": [
+      "Check if the class/function exists in the module",
+      "Verify the module path is correct",
+      "Ensure __init__.py files are present",
+      "Check for circular imports"
+    ],
+    "confidence": 0.6,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "cannot import name SimpleKnowledgeBase from src.core.knowledge.simple_knowledge_base"
+    }
+  },
+  "AttributeError:_SomeNewClass_object": {
+    "error_type": "missing_attribute",
+    "solution_type": "add_missing_attribute",
+    "fix_instructions": [
+      "Add the missing attribute/method to the class",
+      "Check if the attribute should be inherited",
+      "Verify the object type is correct"
+    ],
+    "confidence": 0.8,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "AttributeError: SomeNewClass object has no attribute some_missing_method"
+    }
+  },
+  "AttributeError:_CacheManager_object": {
+    "error_type": "missing_attribute",
+    "solution_type": "add_missing_attribute",
+    "fix_instructions": [
+      "Add the missing attribute/method to the class",
+      "Check if the attribute should be inherited",
+      "Verify the object type is correct"
+    ],
+    "confidence": 0.8,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "AttributeError: CacheManager object has no attribute clear_all_entries"
+    }
+  },
+  "module_advanced_analytics": {
+    "error_type": "module_not_found",
+    "solution_type": "install_or_fix_module",
+    "fix_instructions": [
+      "Install the missing module with pip",
+      "Check PYTHONPATH environment variable",
+      "Verify module name and path"
+    ],
+    "confidence": 0.7,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "ModuleNotFoundError: No module named 'advanced_analytics'"
+    }
+  },
+  "import_ComplexAlgorithm_src.algorithms.ml_models": {
+    "error_type": "import_error",
+    "solution_type": "generic_import_fix",
+    "fix_instructions": [
+      "Check if the class/function exists in the module",
+      "Verify the module path is correct",
+      "Ensure __init__.py files are present",
+      "Check for circular imports"
+    ],
+    "confidence": 0.6,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "ImportError: cannot import name 'ComplexAlgorithm' from 'src.algorithms.ml_models'"
+    }
+  },
+  "ModuleNotFoundError:_No_module": {
+    "error_type": "module_not_found",
+    "solution_type": "install_or_fix_module",
+    "fix_instructions": [
+      "Install the missing module with pip",
+      "Check PYTHONPATH environment variable",
+      "Verify module name and path"
+    ],
+    "confidence": 0.7,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "ModuleNotFoundError: No module named missing_module"
+    }
+  },
+  "ImportError:_cannot_import": {
+    "error_type": "import_error",
+    "solution_type": "generic_import_fix",
+    "fix_instructions": [
+      "Check if the class/function exists in the module",
+      "Verify the module path is correct",
+      "Ensure __init__.py files are present",
+      "Check for circular imports"
+    ],
+    "confidence": 0.6,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "ImportError: cannot import name \"ComplexAlgorithm\" from \"src.algorithms.ml_models\""
+    }
+  },
+  "import_TestClass_src.test.module": {
+    "error_type": "import_error",
+    "solution_type": "generic_import_fix",
+    "fix_instructions": [
+      "Check if the class/function exists in the module",
+      "Verify the module path is correct",
+      "Ensure __init__.py files are present",
+      "Check for circular imports"
+    ],
+    "confidence": 0.6,
+    "research_method": "common_solutions",
+    "details": {
+      "error_message": "ImportError: cannot import name 'TestClass' from 'src.test.module'"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_mKEq_YaJjPI",
+  "title": "How I build Agentic MCP Servers for Claude Code (Prompts CHANGE Everything)",
+  "description": "🔥 STOP building MCP servers with just TOOLS - You're leaving 90% of the power on the table! Most engineers completely miss the GAME-CHANGING primitive that turns basic tool calling into true agentic engineering.\n\n🎥 VIDEO REFERENCES:\n\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=mKEq_YaJjPI\n\n- Parallelize AI Coding: https://youtu.be/f8RnRuaxee8\n\n- Quick Data MCP Git Repo: https://github.com/disler/quick-data-mcp\n\n- Claude Code: https://www.anthropic.com/solutions/coding\n\n- MCP Clients: https://modelcontextprotocol.io/clients\n\n- Deepseek R1.1: https://api-docs.deepseek.com/zh-cn/news/news250528\n\n🚀 In this video, IndyDevDan breaks down the THREE critical MCP server primitives that separate basic AI coding from true agentic coding. While everyone's obsessed with tool calling, we're exposing the most underutilized capability that will 10x your engineering velocity with Claude Code and other MCP clients.\n\n💡 Discover why MCP prompts are the ULTIMATE game-changer for agentic engineering. Watch as we build a complete Quick Data MCP server that goes beyond simple tool calls to create guided workflows, compose multiple tools automatically, and provide next-step suggestions that keep you in flow state.\n\n🛠️ You'll learn the tier list of MCP capabilities: Resources are the last, Tools are second, and Prompts are first.\n\nSee firsthand how prompts let you:\n- Prime your agent with everything it needs in seconds\n- Compose sequences of tool calls automatically  \n- Guide the entire discovery and usage experience\n- Create reusable AI developer workflows (ADWs)\n- Build domain-specific solutions that scale\n\n⚡ Whether you're building MCP servers for yourself or your engineering team, mastering MCP prompts is the difference between basic tool calling and true agentic workflows. We'll show you exactly how to structure your MCP server code for maximum impact.\n\n🔥 From finding data sources to correlation analysis to visualization - watch how MCP prompts transform clunky tool interactions into smooth, guided experiences. This isn't just about Claude Code MCP integration - it's about fundamentally rethinking how we build capabilities for our agentic coding tools.\n\n💪 Ready to evolve from AI coding to agentic coding? This video breaks down the exact patterns and code architecture you need. No more jumping between documentation - your MCP server prompts become the guide.\n\nStay focused and keep building with agentic engineering!\n\n📖 Chapters\n00:00 MCP Server Primitives\n01:45 MCP Maxing - Resources, Tools, Prompts\n05:51 MCP Server Prompts\n\n#agenticengineering #claudecode #mcpserver",
+  "url": "https://www.youtube.com/watch?v=mKEq_YaJjPI",
+  "upload_date": "20250602",
+  "duration": 1435,
+  "view_count": 29296,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "5ec3fe79a27a81cceb0944b163672632"
+}

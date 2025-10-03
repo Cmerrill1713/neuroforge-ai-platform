@@ -1,0 +1,241 @@
+name: Workflow Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  validate-workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate workflow YAML syntax
+        run: |
+          echo "🔍 Validating GitHub Actions workflow YAML syntax..."
+
+          # Check if yamllint is available, otherwise use Python yaml validation
+          if command -v yamllint >/dev/null 2>&1; then
+            echo "Using yamllint for validation..."
+            yamllint .github/workflows/ || true
+          else
+            echo "Using Python YAML validation..."
+            python -c "
+            import yaml
+            import os
+            import sys
+
+            workflow_dir = '.github/workflows'
+            if os.path.exists(workflow_dir):
+              for filename in os.listdir(workflow_dir):
+                if filename.endswith('.yml') or filename.endswith('.yaml'):
+                  filepath = os.path.join(workflow_dir, filename)
+                  try:
+                    with open(filepath, 'r') as f:
+                      yaml.safe_load(f)
+                    print(f'✅ {filename}: Valid YAML')
+                  except yaml.YAMLError as e:
+                    print(f'❌ {filename}: Invalid YAML - {e}')
+                    sys.exit(1)
+                  except Exception as e:
+                    print(f'⚠️ {filename}: Error reading file - {e}')
+            else:
+              print('⚠️ No workflows directory found')
+            "
+          fi
+
+      - name: Validate workflow structure
+        run: |
+          echo "🔧 Validating workflow structure and required fields..."
+
+          python -c "
+          import yaml
+          import os
+          import sys
+
+          def validate_workflow(filepath):
+              errors = []
+
+              try:
+                with open(filepath, 'r') as f:
+                  workflow = yaml.safe_load(f)
+
+                # Check required top-level keys
+                required_keys = ['name', 'on']
+                for key in required_keys:
+                  if key not in workflow:
+                    errors.append(f'Missing required key: {key}')
+
+                # Check jobs section
+                if 'jobs' not in workflow:
+                  errors.append('Missing jobs section')
+                else:
+                  jobs = workflow['jobs']
+                  if not jobs:
+                    errors.append('No jobs defined')
+                  else:
+                    for job_name, job_config in jobs.items():
+                      if 'runs-on' not in job_config:
+                        errors.append(f'Job \"{job_name}\": Missing runs-on')
+                      if 'steps' not in job_config:
+                        errors.append(f'Job \"{job_name}\": Missing steps')
+
+              except Exception as e:
+                errors.append(f'Error parsing workflow: {e}')
+
+              return errors
+
+          workflow_dir = '.github/workflows'
+          total_errors = 0
+
+          if os.path.exists(workflow_dir):
+            for filename in sorted(os.listdir(workflow_dir)):
+              if filename.endswith('.yml') or filename.endswith('.yaml'):
+                filepath = os.path.join(workflow_dir, filename)
+                print(f'\\n🔍 Validating {filename}...')
+                errors = validate_workflow(filepath)
+
+                if errors:
+                  for error in errors:
+                    print(f'   ❌ {error}')
+                  total_errors += len(errors)
+                else:
+                  print(f'   ✅ Valid workflow structure')
+
+          if total_errors > 0:
+            print(f'\\n❌ Found {total_errors} validation errors')
+            sys.exit(1)
+          else:
+            print('\\n✅ All workflows are structurally valid')
+          "
+
+      - name: Check for deprecated actions
+        run: |
+          echo "⚠️ Checking for deprecated GitHub Actions..."
+
+          python -c "
+          import yaml
+          import os
+          import re
+
+          deprecated_actions = {
+            'actions/cache@v2': 'actions/cache@v3',
+            'actions/checkout@v2': 'actions/checkout@v4',
+            'actions/setup-python@v3': 'actions/setup-python@v4',
+            'actions/upload-artifact@v2': 'actions/upload-artifact@v3',
+            'actions/download-artifact@v2': 'actions/download-artifact@v3',
+          }
+
+          warnings = []
+
+          def check_workflow(filepath):
+            try:
+              with open(filepath, 'r') as f:
+                content = f.read()
+
+              for old_action, new_action in deprecated_actions.items():
+                if old_action in content:
+                  warnings.append(f'{filepath}: Uses deprecated action {old_action} (should use {new_action})')
+
+            except Exception as e:
+              warnings.append(f'{filepath}: Error checking for deprecated actions - {e}')
+
+          workflow_dir = '.github/workflows'
+          if os.path.exists(workflow_dir):
+            for filename in os.listdir(workflow_dir):
+              if filename.endswith('.yml') or filename.endswith('.yaml'):
+                check_workflow(os.path.join(workflow_dir, filename))
+
+          if warnings:
+            print('⚠️ Deprecated action warnings:')
+            for warning in warnings:
+              print(f'   - {warning}')
+          else:
+            print('✅ No deprecated actions found')
+          "
+
+      - name: Generate workflow documentation
+        run: |
+          echo "📚 Generating workflow documentation..."
+
+          python -c "
+          import yaml
+          import os
+          import json
+
+          workflows = []
+
+          workflow_dir = '.github/workflows'
+          if os.path.exists(workflow_dir):
+            for filename in sorted(os.listdir(workflow_dir)):
+              if filename.endswith('.yml') or filename.endswith('.yaml'):
+                filepath = os.path.join(workflow_dir, filename)
+                try:
+                  with open(filepath, 'r') as f:
+                    workflow = yaml.safe_load(f)
+
+                  # Extract key information
+                  workflow_info = {
+                    'name': workflow.get('name', filename),
+                    'filename': filename,
+                    'description': workflow.get('name', ''),
+                    'triggers': [],
+                    'jobs': []
+                  }
+
+                  # Extract triggers
+                  on_config = workflow.get('on', {})
+                  if isinstance(on_config, list):
+                    workflow_info['triggers'] = on_config
+                  elif isinstance(on_config, dict):
+                    workflow_info['triggers'] = list(on_config.keys())
+
+                  # Extract job information
+                  jobs_config = workflow.get('jobs', {})
+                  for job_name, job_config in jobs_config.items():
+                    job_info = {
+                      'name': job_name,
+                      'runs_on': job_config.get('runs-on', 'unknown'),
+                      'steps_count': len(job_config.get('steps', []))
+                    }
+                    workflow_info['jobs'].append(job_info)
+
+                  workflows.append(workflow_info)
+
+                except Exception as e:
+                  print(f'Error processing {filename}: {e}')
+
+          # Generate markdown documentation
+          with open('WORKFLOW_DOCUMENTATION.md', 'w') as f:
+            f.write('# GitHub Actions Workflows Documentation\\n\\n')
+            f.write('This document provides an overview of all GitHub Actions workflows in this repository.\\n\\n')
+
+            for workflow in workflows:
+              f.write(f'## {workflow[\"name\"]}\\n\\n')
+              f.write(f'**File:** `{workflow[\"filename\"]}`\\n\\n')
+              f.write(f'**Triggers:** {', '.join(workflow[\"triggers\"])}\\n\\n')
+
+              if workflow['jobs']:
+                f.write('### Jobs\\n\\n')
+                for job in workflow['jobs']:
+                  f.write(f'- **{job[\"name\"]}**: Runs on `{job[\"runs_on\"]}`, {job[\"steps_count\"]} steps\\n')
+                f.write('\\n')
+
+              f.write('---\\n\\n')
+
+          print('✅ Workflow documentation generated: WORKFLOW_DOCUMENTATION.md')
+          "
+
+      - name: Upload workflow validation results
+        uses: actions/upload-artifact@v3
+        with:
+          name: workflow-validation-${{ github.run_id }}
+          path: |
+            WORKFLOW_DOCUMENTATION.md

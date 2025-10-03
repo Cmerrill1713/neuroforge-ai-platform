@@ -1,0 +1,561 @@
+#!/usr/bin/env python3
+""'
+Optimized Vector Store - Performance-Optimized Database Layer
+Implements connection pooling, query optimization, and caching for vector operations.
+
+Based on PostgreSQL optimization patterns from the improvement plan.
+""'
+
+import asyncio
+import logging
+import time
+from typing import Dict, Any, List, Optional, Tuple
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+import json
+
+# Database imports
+try:
+    import asyncpg
+    from asyncpg import Pool
+    ASYNCPG_AVAILABLE = True
+except ImportError:
+    ASYNCPG_AVAILABLE = False
+    print("⚠️ asyncpg not available, using fallback')
+
+try:
+    import psycopg2
+    from psycopg2.extras import RealDictCursor
+    PSYCOPG2_AVAILABLE = True
+except ImportError:
+    PSYCOPG2_AVAILABLE = False
+
+# Vector operations
+try:
+    import numpy as np
+    from sentence_transformers import SentenceTransformer
+    NUMPY_AVAILABLE = True
+    SENTENCE_TRANSFORMERS_AVAILABLE = True
+except ImportError:
+    NUMPY_AVAILABLE = False
+    SENTENCE_TRANSFORMERS_AVAILABLE = False
+
+# Caching
+try:
+    import redis.asyncio as redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    REDIS_AVAILABLE = False
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+@dataclass
+class VectorSearchResult:
+    """TODO: Add docstring."""
+    """Result from vector similarity search.""'
+    id: str
+    content: str
+    distance: float
+    metadata: Dict[str, Any]
+    search_time: float = 0.0
+
+@dataclass
+class DatabaseStats:
+    """TODO: Add docstring."""
+    """Database performance statistics.""'
+    total_queries: int = 0
+    avg_query_time: float = 0.0
+    connection_pool_size: int = 0
+    active_connections: int = 0
+    cache_hits: int = 0
+    cache_misses: int = 0
+
+class OptimizedVectorStore:
+    """TODO: Add docstring."""
+    """Initialize connection pool.""'
+    ""'
+    Performance-optimized vector store with connection pooling and caching.
+
+    Features:
+    - Connection pooling with asyncpg
+    - Query optimization with prepared statements
+    - Multi-level caching (Redis + in-memory)
+    - Batch operations
+    - Performance monitoring
+    ""'
+
+    def __init__(
+        """TODO: Add docstring."""
+        self,
+        database_url: str = "postgresql://localhost:5432/trading_platform_dev',
+        min_connections: int = 5,
+        max_connections: int = 20,
+        cache_ttl: int = 3600
+    ):
+        self.database_url = database_url
+        self.min_connections = min_connections
+        self.max_connections = max_connections
+        self.cache_ttl = cache_ttl
+
+        # Connection pool
+        self.pool: Optional[Pool] = None
+
+        # Caching
+        self.redis_cache = None
+        self.memory_cache = {}
+
+        # Performance tracking
+        self.stats = DatabaseStats()
+
+        # Embedding model
+        self.embedding_model = None
+
+        logger.info("🚀 Initializing Optimized Vector Store...')
+
+    async def initialize(self) -> bool:
+        """Initialize the optimized vector store.""'
+        try:
+            # Initialize connection pool
+            if ASYNCPG_AVAILABLE:
+                self.pool = await asyncpg.create_pool(
+                    self.database_url,
+                    min_size=self.min_connections,
+                    max_size=self.max_connections,
+                    command_timeout=60,
+                    server_settings={
+                        "jit": "off'  # Disable JIT for better performance on small queries
+                    }
+                )
+                logger.info(f"✅ Connection pool created: {self.min_connections}-{self.max_connections} connections')
+            else:
+                logger.warning("⚠️ asyncpg not available, using fallback mode')
+
+            # Initialize Redis cache
+            if REDIS_AVAILABLE:
+                try:
+                    self.redis_cache = redis.Redis(
+                        host="localhost', port=6379, db=1,  # Use db=1 for vector store
+                        decode_responses=True, socket_connect_timeout=5
+                    )
+                    await self.redis_cache.ping()
+                    logger.info("✅ Redis cache initialized')
+                except Exception as e:
+                    logger.warning(f"⚠️ Redis connection failed: {e}')
+                    self.redis_cache = None
+
+            # Initialize embedding model
+            if SENTENCE_TRANSFORMERS_AVAILABLE:
+                try:
+                    self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2')
+                    logger.info("✅ Embedding model loaded')
+                except Exception as e:
+                    logger.warning(f"⚠️ Embedding model failed to load: {e}')
+
+            # Create optimized indexes if they don't exist
+            await self._create_optimized_indexes()
+
+            logger.info("🎉 Optimized Vector Store ready!')
+            return True
+
+        except Exception as e:
+            logger.error(f"❌ Initialization failed: {e}')
+            return False
+
+    async def _create_optimized_indexes(self) -> None:
+        """Create optimized indexes for vector operations.""'
+        if not self.pool:
+            return
+
+        try:
+            async with self.pool.acquire() as conn:
+                # Create index for JSONB embeddings (no pgvector needed)
+                await conn.execute(""'
+                    CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_knowledge_embedding_json
+                    ON knowledge_base USING gin (embedding_json)
+                ""')
+
+                # Create partial index for active entries
+                await conn.execute(""'
+                    CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_knowledge_active
+                    ON knowledge_base (created_at)
+                    WHERE active = true
+                ""')
+
+                # Create index for content search
+                await conn.execute(""'
+                    CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_knowledge_content_gin
+                    ON knowledge_base USING gin (to_tsvector("english', content))
+                ""')
+
+                logger.info("✅ Optimized indexes created')
+
+        except Exception as e:
+            logger.warning(f"⚠️ Index creation failed: {e}')
+
+    async def search_similar(
+        self,
+        query: str,
+        limit: int = 10,
+        threshold: float = 0.8,
+        use_cache: bool = True
+    ) -> List[VectorSearchResult]:
+        ""'
+        Perform optimized vector similarity search.
+
+        Target: < 100ms average query time
+        ""'
+        start_time = time.time()
+
+        try:
+            # Generate cache key
+            cache_key = f"vector_search:{hash(query)}_{limit}_{threshold}'
+
+            # Try cache first
+            if use_cache:
+                cached_results = await self._get_from_cache(cache_key)
+                if cached_results:
+                    self.stats.cache_hits += 1
+                    logger.debug(f"⚡ Vector search cache hit: {cache_key}')
+                    return cached_results
+
+            # Perform vector search
+            results = await self._perform_vector_search(query, limit, threshold)
+
+            # Cache results
+            if use_cache:
+                await self._set_cache(cache_key, results)
+
+            # Update stats
+            query_time = time.time() - start_time
+            self._update_query_stats(query_time)
+
+            logger.debug(f"🔍 Vector search completed: {len(results)} results in {query_time:.3f}s')
+
+            return results
+
+        except Exception as e:
+            logger.error(f"❌ Vector search failed: {e}')
+            return []
+
+    async def _perform_vector_search(
+        self,
+        query: str,
+        limit: int,
+        threshold: float
+    ) -> List[VectorSearchResult]:
+        """Perform the actual vector search.""'
+        if not self.pool:
+            raise RuntimeError("Connection pool not initialized')
+
+        # Generate query embedding
+        query_embedding = await self._generate_embedding(query)
+
+        # Query with JSONB embeddings (no pgvector needed)
+        async with self.pool.acquire() as conn:
+            # Simple similarity search using JSONB
+            rows = await conn.fetch(""'
+                SELECT
+                    id,
+                    content,
+                    metadata,
+                    embedding_json
+                FROM knowledge_base
+                WHERE embedding_json IS NOT NULL
+                ORDER BY embedding_json
+                LIMIT $1
+            ""', limit)
+
+            results = []
+            for row in rows:
+                # Calculate similarity using cosine similarity between JSONB embeddings
+                similarity = await self._calculate_similarity(query_embedding, row["embedding_json'])
+                if similarity >= threshold:
+                    results.append(VectorSearchResult(
+                        id=row["id'],
+                        content=row["content'],
+                        distance=1 - similarity,
+                        metadata=row["metadata'] or {}
+                    ))
+
+            return results
+
+    async def _calculate_similarity(self, embedding1: List[float], embedding2: List[float]) -> float:
+        """Calculate cosine similarity between two embeddings.""'
+        import math
+
+        # Convert to numpy arrays if available
+        if NUMPY_AVAILABLE:
+            import numpy as np
+            vec1 = np.array(embedding1)
+            vec2 = np.array(embedding2)
+
+            # Calculate cosine similarity
+            dot_product = np.dot(vec1, vec2)
+            norm1 = np.linalg.norm(vec1)
+            norm2 = np.linalg.norm(vec2)
+
+            if norm1 == 0 or norm2 == 0:
+                return 0.0
+
+            return dot_product / (norm1 * norm2)
+        else:
+            # Fallback implementation without numpy
+            dot_product = sum(a * b for a, b in zip(embedding1, embedding2))
+            norm1 = math.sqrt(sum(a * a for a in embedding1))
+            norm2 = math.sqrt(sum(b * b for b in embedding2))
+
+            if norm1 == 0 or norm2 == 0:
+                return 0.0
+
+            return dot_product / (norm1 * norm2)
+
+    async def _generate_embedding(self, text: str) -> List[float]:
+        """Generate embedding for text.""'
+        if self.embedding_model:
+            # Use sentence transformer
+            embedding = self.embedding_model.encode(text)
+            return embedding.tolist()
+        else:
+            # Fallback: simple hash-based embedding
+            import hashlib
+            hash_obj = hashlib.md5(text.encode())
+            hash_bytes = hash_obj.digest()
+            return [float(b) / 255.0 for b in hash_bytes[:8]]  # 8-dimensional fallback
+
+    async def batch_insert(
+        self,
+        documents: List[Dict[str, Any]],
+        batch_size: int = 100
+    ) -> int:
+        """Insert documents in optimized batches.""'
+        if not self.pool:
+            raise RuntimeError("Connection pool not initialized')
+
+        total_inserted = 0
+
+        # Process in batches
+        for i in range(0, len(documents), batch_size):
+            batch = documents[i:i + batch_size]
+
+            # Generate embeddings for batch
+            batch_data = []
+            for doc in batch:
+                embedding = await self._generate_embedding(doc["content'])
+                batch_data.append((
+                    doc.get("id", f"doc_{i}'),
+                    doc["content'],
+                    embedding,
+                    json.dumps(doc.get("metadata', {})),
+                    datetime.now()
+                ))
+
+            # Batch insert
+            async with self.pool.acquire() as conn:
+                await conn.executemany(""'
+                    INSERT INTO knowledge_base (id, content, embedding_json, metadata, created_at)
+                    VALUES ($1, $2, $3, $4, $5)
+                    ON CONFLICT (id) DO UPDATE SET
+                        content = EXCLUDED.content,
+                        embedding_json = EXCLUDED.embedding_json,
+                        metadata = EXCLUDED.metadata,
+                        updated_at = NOW()
+                ""', batch_data)
+
+            total_inserted += len(batch)
+            logger.debug(f"📝 Inserted batch: {len(batch)} documents')
+
+        logger.info(f"✅ Batch insert completed: {total_inserted} documents')
+        return total_inserted
+
+    async def _get_from_cache(self, cache_key: str) -> Optional[List[VectorSearchResult]]:
+        """Get results from cache layers.""'
+        # Try memory cache first
+        if cache_key in self.memory_cache:
+            entry = self.memory_cache[cache_key]
+            if datetime.now() - entry["timestamp'] < timedelta(seconds=self.cache_ttl):
+                return entry["data']
+            else:
+                del self.memory_cache[cache_key]
+
+        # Try Redis cache
+        if self.redis_cache:
+            try:
+                cached_data = await self.redis_cache.get(cache_key)
+                if cached_data:
+                    # Deserialize results
+                    results_data = json.loads(cached_data)
+                    results = [
+                        VectorSearchResult(
+                            id=r["id'],
+                            content=r["content'],
+                            distance=r["distance'],
+                            metadata=r["metadata']
+                        )
+                        for r in results_data
+                    ]
+
+                    # Store in memory cache
+                    self.memory_cache[cache_key] = {
+                        "data': results,
+                        "timestamp': datetime.now()
+                    }
+
+                    return results
+            except Exception as e:
+                logger.warning(f"⚠️ Redis get failed: {e}')
+
+        return None
+
+    async def _set_cache(self, cache_key: str, results: List[VectorSearchResult]) -> None:
+        """Set results in cache layers.""'
+        # Store in memory cache
+        self.memory_cache[cache_key] = {
+            "data': results,
+            "timestamp': datetime.now()
+        }
+
+        # Store in Redis cache
+        if self.redis_cache:
+            try:
+                # Serialize results
+                results_data = [
+                    {
+                        "id': r.id,
+                        "content': r.content,
+                        "distance': r.distance,
+                        "metadata': r.metadata
+                    }
+                    for r in results
+                ]
+                await self.redis_cache.setex(cache_key, self.cache_ttl, json.dumps(results_data))
+            except Exception as e:
+                logger.warning(f"⚠️ Redis set failed: {e}')
+
+    def _update_query_stats(self, query_time: float) -> None:
+        """TODO: Add docstring."""
+        """Update query performance statistics.""'
+        self.stats.total_queries += 1
+
+        # Update average query time
+        total = self.stats.total_queries
+        current_avg = self.stats.avg_query_time
+        self.stats.avg_query_time = (
+            (current_avg * (total - 1) + query_time) / total
+        )
+
+    async def get_database_stats(self) -> Dict[str, Any]:
+        """Get comprehensive database statistics.""'
+        stats = {
+            "performance': {
+                "total_queries': self.stats.total_queries,
+                "avg_query_time': self.stats.avg_query_time,
+                "cache_hits': self.stats.cache_hits,
+                "cache_misses': self.stats.cache_misses,
+                "cache_hit_rate': (
+                    self.stats.cache_hits /
+                    max(1, self.stats.cache_hits + self.stats.cache_misses)
+                )
+            },
+            "connection_pool': {
+                "min_connections': self.min_connections,
+                "max_connections': self.max_connections,
+                "active_connections': len(self.pool._queue._queue) if self.pool else 0
+            },
+            "cache': {
+                "memory_cache_size': len(self.memory_cache),
+                "redis_connected': self.redis_cache is not None
+            }
+        }
+
+        # Get database-specific stats
+        if self.pool:
+            try:
+                async with self.pool.acquire() as conn:
+                    # Get table stats
+                    table_stats = await conn.fetch(""'
+                        SELECT
+                            schemaname,
+                            tablename,
+                            n_tup_ins as inserts,
+                            n_tup_upd as updates,
+                            n_tup_del as deletes,
+                            n_live_tup as live_tuples
+                        FROM pg_stat_user_tables
+                        WHERE tablename = "knowledge_base'
+                    ""')
+
+                    if table_stats:
+                        stats["database'] = dict(table_stats[0])
+
+                    # Get index stats
+                    index_stats = await conn.fetch(""'
+                        SELECT
+                            indexname,
+                            idx_tup_read,
+                            idx_tup_fetch
+                        FROM pg_stat_user_indexes
+                        WHERE tablename = "knowledge_base'
+                    ""')
+
+                    stats["indexes'] = [dict(row) for row in index_stats]
+
+            except Exception as e:
+                logger.warning(f"⚠️ Database stats query failed: {e}')
+
+        return stats
+
+    async def optimize_database(self) -> None:
+        """Perform database optimization tasks.""'
+        if not self.pool:
+            return
+
+        try:
+            async with self.pool.acquire() as conn:
+                # Update table statistics
+                await conn.execute("ANALYZE knowledge_base')
+
+                # Vacuum if needed
+                await conn.execute("VACUUM ANALYZE knowledge_base')
+
+                logger.info("✅ Database optimization completed')
+
+        except Exception as e:
+            logger.warning(f"⚠️ Database optimization failed: {e}')
+
+    async def close(self) -> None:
+        """Close connections and cleanup resources.""'
+        if self.pool:
+            await self.pool.close()
+            logger.info("✅ Connection pool closed')
+
+        if self.redis_cache:
+            await self.redis_cache.close()
+            logger.info("✅ Redis connection closed')
+
+# Example usage and testing
+async def main():
+    """Test the optimized vector store.""'
+    store = OptimizedVectorStore()
+
+    if not await store.initialize():
+        logger.error("❌ Failed to initialize vector store')
+        return
+
+    # Test vector search
+    test_query = "artificial intelligence machine learning'
+    results = await store.search_similar(test_query, limit=5)
+
+    logger.info(f"🔍 Found {len(results)} similar documents')
+    for result in results:
+        logger.info(f"   - {result.id}: {result.content[:100]}... (distance: {result.distance:.3f})')
+
+    # Get performance stats
+    stats = await store.get_database_stats()
+    logger.info(f"📊 Database stats: {stats['performance']['avg_query_time']:.3f}s avg query time')
+
+    await store.close()
+
+if __name__ == "__main__':
+    asyncio.run(main())

@@ -1,0 +1,22 @@
+{
+  "id": "github_793122886",
+  "title": "elm-itv-benchmark",
+  "description": "Simple, Opinionated benchmark for testing the viability of Efficient Language Models (ELMs) for personal use cases.",
+  "url": "https://github.com/disler/elm-itv-benchmark",
+  "language": "TypeScript",
+  "stars": 48,
+  "forks": 17,
+  "created_at": "2024-04-28T13:47:37Z",
+  "updated_at": "2025-08-07T02:43:56Z",
+  "topics": [],
+  "readme_content": "# Efficient Language Model Personal Viability Benchmarking\n> Simple, Opinionated benchmark for testing the viability of Efficient Language Models (ELMs) for personal use cases.\n>\n> Uses [bun](https://bun.sh/), [promptfoo](https://promptfoo.dev/), and [ollama](https://ollama.com/) for a minimalist, cross-platform, local LLM prompt testing & benchmarking experience.\n\n![Zero Cost Prompts](./imgs/zero-cost-prompts.png)\n\n## Setup\n- [Install Bun](https://bun.sh/docs/installation#macos-and-linux)\n- [Install Ollama](https://ollama.com/download)\n  - [Install llama3](https://ollama.com/library/llama3) `ollama run llama3`\n  - [Install phi3](https://ollama.com/library/phi3) `ollama run phi3`\n  - [Install gemma](https://ollama.com/library/gemma) `ollama run gemma`\n- Setup .env variables\n  - `cp .env.sample .env`\n  - Add your OpenAI API key to the .env file\n- Install dependencies: `bun i`\n- Run the minimal tests: `bun minimal`\n- Open test viewer: `bun view`\n- Run the ELM-ITV tests: `bun elm`\n\n## Guide\n- First, [watch the video](https://youtu.be/sb9wSWeOPI4) where we walk through ELMs and this codebase.\n- To get started take a look at `BENCH__minimal_test_suite/` to get an idea of how to structure a basic test suite.\n- Next take a look at the `BENCH__efficient_language_models/` test suite to get an idea of how you can setup tests for your own viability tests for ELMs.\n- Explore other [ollama based models](https://promptfoo.dev/docs/providers/ollama) you can test\n  - Or [OpenAI models](https://promptfoo.dev/docs/providers/openai)\n  - Or [Anthropic models](https://promptfoo.dev/docs/providers/anthropic)\n  - Or [Groq models](https://promptfoo.dev/docs/providers/groq)\n- Modify the `BENCH__minimal_test_suite/` or `BENCH__efficient_language_models/` to suit your needs\n- Create a new test with the [Create a new test suite](#scripts) script\n\n## Folder Structure\n- `/BENCH__<name of test suite>`\n  - `/prompt.txt` - the prompt(s) to test\n  - `/test.yaml` - variables and assertions\n  - `/promptfooconfig.yaml` - llm model config\n\n## Scripts\n- Create a new test suite: `bun run ./scripts/new_prompt_test`\n- Run a test prompt against a running ollama server `bun run ./scripts/ollama_local_model_call`\n\n## Resources\n- Ollama model library\n  - https://ollama.com/library\n- LMSYS Chatbot Arena Leaderboard\n  - https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard\n- Ollama api.md docs\n  - https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion\n- Promptfoo Ollama Provider\n  - https://promptfoo.dev/docs/providers/ollama\n- Promptfoo LLM Providers\n  - https://www.promptfoo.dev/docs/providers\n- Promptfoo Assertions\n  - https://www.promptfoo.dev/docs/configuration/expected-outputs/",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

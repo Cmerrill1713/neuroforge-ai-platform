@@ -1,0 +1,24 @@
+{
+  "id": "youtube_28zuliyLd5Q",
+  "title": "Llama-3 70b OMNI-complete: AUTO Improving AUTOcomplete Prompt for EVERYTHING (Groq)",
+  "description": "Unlock the Power of LLM Autocompletes: All you need is this PROMPT & LLAMA 3.\n\nWriting autocomplete code is a challenge. Then you have to write it again and again as the business logic changes. 🔥 In this video, I'll show you how to harness the power of LLM Llama 3-70b with Groq to create an OmniComplete – a self-improving, domain-agnostic autocomplete that works across ALL your tools and applications! 🤯\n\nImagine this: Your users start typing, and your OmniComplete instantly suggests relevant completions based on ALL previous user inputs AND your unique domain knowledge. 🤯 No more rigid dropdowns or limited suggestions – this is next-level LLM autocomplete!\n\nHere's what you'll discover:\n- The HUGE difference between traditional autocompletes and LLM-powered autocompletes – and why LLMs are GAME-CHANGING!\n- How LLM AutoCompletes self-improve with every use – watch your autocomplete get smarter over time!\n- Actionable insights from your users – uncover what your audience REALLY cares about, directly from their autocomplete interactions!\n- A simple yet POWERFUL prompt-centered architecture – easily reuse your OmniComplete across different domains with minor prompt tweaks!\nThe complete codebase – get up and running with your OWN OmniComplete today!\n\nPlus, we'll dive deep into:\n- Prompt engineering for autocompletion – craft prompts that deliver spot-on suggestions.\n- One-shot prompts – get accurate completions with just a single example.\n- Building a prompt-centered architecture – design a system that revolves around your prompts for maximum flexibility and reusability.\n- Prompt testing and validation – ensure your OmniComplete is always delivering high-quality results.\n\nReady to supercharge your user experience with AI-powered autocomplete? 🚀 Hit that like button, subscribe, and let's build the future of autocomplete together!\n\n---\n\nWhat do you predict OpenAI will release today (May 12th, 2024) ? My Prediction ⬇️⬇️⬇️\n\nPrediction #1: OpenAI will announce an on device compatible, GPT4 level model.\n\nPrediction #2: OpenAI will announce apple as a partner and discuss plans to deploy ‘GPT4-mini’ on the iPhone.\n\n---\n\n🔗 Resources\nCodebase: https://github.com/disler/omni-complete\nLearn about BAPs (Big Ass Prompts): https://youtu.be/JBgUmTUQx0I\nMaster Prompt Testing: https://youtu.be/sb9wSWeOPI4\nBuild better prompts: https://www.youtube.com/watch?v=wDxZhkQj27Y\nUnocsss: https://unocss.dev/\n\n📖 Chapters\n00:00 Increase your earnings potential\n00:38 Omnicomplete - the autocomplete for everything\n01:16 LLM Autocompletes can self improve\n02:00 Reveal Actionable Information from your users\n03:20 Client - Server - Prompt Architecture\n05:30 LLM Autocomplete DEMO\n06:45 Autocomplete PROMPT\n08:45 Auto Improve LLM / Self Improve LLM\n10:25 Break down codebase\n12:28 Direct prompt testing integration\n14:10 Domain Knowledge Example\n16:00 Interesting Use Case For LLMs in 2024, 2025\n\n#promptengineering #llama3 #autocomplete",
+  "url": "https://www.youtube.com/watch?v=28zuliyLd5Q",
+  "upload_date": "20240513",
+  "duration": 1071,
+  "view_count": 4916,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "b2ce08472a86a2821e6324f6767bbb5f"
+}

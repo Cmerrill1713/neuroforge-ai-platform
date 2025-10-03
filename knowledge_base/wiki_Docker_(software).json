@@ -1,0 +1,20 @@
+{
+  "id": "wiki_Docker_(software)",
+  "title": "Docker (software)",
+  "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+  "content": "Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.[5] The service has both free and premium tiers. The software that hosts the containers is called Docker Engine.[6] It was first released in 2013 and is developed by Docker, Inc.[7]\n\nDocker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.",
+  "source_type": "wikipedia_summary",
+  "domain": "general_knowledge",
+  "keywords": [
+    "wikipedia",
+    "ai",
+    "programming",
+    "docker (software)"
+  ],
+  "retrieval_tags": [
+    "wikipedia",
+    "summary",
+    "ai",
+    "programming"
+  ]
+}

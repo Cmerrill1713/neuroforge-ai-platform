@@ -1,0 +1,28 @@
+{
+  "id": "youtube_jmDMusirPKA",
+  "title": "Prompt Engineering an ENTIRE codebase: Postgres Data Analytics AI Agent",
+  "description": "The way we code is changing and so is the way we interact with our databases.\n\nThis video marks the beginning of a series where we explore the comprehensive process of building an AI agent from the ground up to analyze our data. Understanding the \"how\" is just as vital as knowing the \"what\" in cutting-edge technology. Thus, besides using AI technologies like AIDER, we employ innovative techniques such as prompt engineering to craft our code.\n\nOn this channel, we don't just talk - we think, plan, and build. With the ultimate goal of PULLING the future of programming into the present to accelerate our ability to generate valuable products for both ourselves and the organizations we collaborate with.\n\nWe'll be coding in Python and using Poetry as our dependency manager. Whether you're a software engineer, data analyst, or simply someone intrigued by AI data analytics and prompt engineering, this series will offer a deep dive into AI product engineering (AIPE).\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v1-prompt-engineering-an-entire-codebase\n\n🤖💻 AI Engineering Resources\nPython Class Generator Prompt: https://gist.github.com/disler/57c31dc0dfe6e8839ed067bce8f04ce6\nPython OpenAI LLM Quick Start: https://gist.github.com/disler/c404a68002bcd05ff41023f9e7868af4\nNeon Postgres Hosting: https://neon.tech/\nAIDER: https://aider.chat/\nChatGPT: https://chat.openai.com/\n\n🤖 ZERO Touch coding with AIDER?\nhttps://youtu.be/MPYFPvxfGZs\n\n✅ Learn about Cap Refs and Critical Prompt Engineering Techniques\nhttps://youtu.be/wDxZhkQj27Y\n\n📘 Chapters\n00:00 The Way We Code Is Changing\n00:55 Let's CODE Our AI Agent\n01:20 Create Structure Using Poetry\n02:40 Outline the Application\n05:20 Prompt Engineer an entire Python class\n11:00 OpenAI Starter Code Module\n12:05 Using AIDER to Generate Code\n17:00 Engineering Clean Up With ChatGPT\n20:34 OUR AI AGENT IS BORN\n21:30 You can build like startups do\n22:10 Two more natural language sql query\n23:15 This is the beginning of our ai agents\n\n🐛 tags\n#aider #promptengineering #aiprogramming",
+  "url": "https://www.youtube.com/watch?v=jmDMusirPKA",
+  "upload_date": "20231002",
+  "duration": 1444,
+  "view_count": 28157,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "programming",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "dd15d832e93ff59c39f9560ddef91a7d"
+}

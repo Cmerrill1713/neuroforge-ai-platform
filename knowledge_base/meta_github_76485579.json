@@ -1,0 +1,23 @@
+{
+  "id": "meta_github_76485579",
+  "title": "accimage",
+  "description": "high performance image loading and augmenting routines mimicking PIL.Image interface",
+  "url": "https://github.com/pytorch/accimage",
+  "language": "C",
+  "stars": 319,
+  "forks": 38,
+  "created_at": "2016-12-14T18:21:48Z",
+  "updated_at": "2025-08-20T07:16:27Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

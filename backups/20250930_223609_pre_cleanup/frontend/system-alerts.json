@@ -1,0 +1,70 @@
+{
+  "alerts": [
+    {
+      "id": "alert_1759021528948_14o58opmv",
+      "timestamp": "2025-09-28T01:05:28.948Z",
+      "resolved": false,
+      "type": "container_down",
+      "severity": "critical",
+      "title": "PostgreSQL Container Down",
+      "message": "The PostgreSQL database container has crashed and is not responding",
+      "source": "system-monitor",
+      "metadata": {
+        "container": "postgres",
+        "error": "connection refused"
+      }
+    },
+    {
+      "id": "alert_1759021537785_4xgw1sgtw",
+      "timestamp": "2025-09-28T01:05:37.785Z",
+      "resolved": false,
+      "type": "security_threat",
+      "severity": "critical",
+      "title": "Suspicious Activity Detected",
+      "message": "Multiple failed login attempts detected from unknown IP addresses",
+      "source": "security-agent",
+      "metadata": {
+        "ip_addresses": [
+          "192.168.1.100",
+          "10.0.0.50"
+        ],
+        "attempts": 15,
+        "timeframe": "5 minutes"
+      }
+    }
+  ],
+  "history": [
+    {
+      "id": "alert_1759021528948_14o58opmv",
+      "timestamp": "2025-09-28T01:05:28.948Z",
+      "resolved": false,
+      "type": "container_down",
+      "severity": "critical",
+      "title": "PostgreSQL Container Down",
+      "message": "The PostgreSQL database container has crashed and is not responding",
+      "source": "system-monitor",
+      "metadata": {
+        "container": "postgres",
+        "error": "connection refused"
+      }
+    },
+    {
+      "id": "alert_1759021537785_4xgw1sgtw",
+      "timestamp": "2025-09-28T01:05:37.785Z",
+      "resolved": false,
+      "type": "security_threat",
+      "severity": "critical",
+      "title": "Suspicious Activity Detected",
+      "message": "Multiple failed login attempts detected from unknown IP addresses",
+      "source": "security-agent",
+      "metadata": {
+        "ip_addresses": [
+          "192.168.1.100",
+          "10.0.0.50"
+        ],
+        "attempts": 15,
+        "timeframe": "5 minutes"
+      }
+    }
+  ]
+}

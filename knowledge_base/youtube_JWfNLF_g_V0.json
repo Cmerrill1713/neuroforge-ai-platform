@@ -1,0 +1,26 @@
+{
+  "id": "youtube_JWfNLF_g_V0",
+  "title": "Turn ANY Website into LLM Knowledge in SECONDS",
+  "url": "https://www.youtube.com/watch?v=JWfNLF_g_V0",
+  "description": "One of the biggest challenges we face with LLMs is their knowledge is too general and limited for anything new. That’s why RAG is such a huge topic when it comes to AI right now - it’s a method for providing an LLM with external knowledge you curate so it can become an expert at something it wasn’t before - a specific AI framework, your ecommerce store, you name it. The problem is, that “curate” step can be very difficult and slow.\n\nThat is where Crawl4AI comes in! Crawl4AI is an open source web crawling framework specifically designed for scraping websites and formatting the output in the BEST possible way for an LLM to understand. The best part is it solves a LOT of problems we typically have with systems that crawl websites - usually they are slow, resource intensive, and complicated. But Crawl4AI is VERY fast, intuitive, easy to set up, and extremely memory efficient.\n\nIn this video, I show you how to use Crawl4AI to super easily crawl websites for LLMs in just seconds, and at the end I even show you a RAG AI agent I’ve built to be a “Pydantic AI” framework expert using Crawl4AI to build the knowledgebase. And you could really take this and use it for any website you want. Next video I'll do a deep dive into this agent!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nRegister now for the oTTomator AI Agent Hackathon with a $6,000 prize pool!\n\nhttps://studio.ottomator.ai/hackathon/register\n\nAll code for this Crawl4AI RAG Agent can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/crawl4AI-agent\n\nCrawl4AI GitHub:\n\nhttps://github.com/unclecode/crawl4ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - The Beauty of Crawl4AI\n02:16 - Why Crawl4AI?\n05:25 - Basic Crawl4AI Example - Single Page Crawl\n06:56 - Crawling Multiple Pages\n08:58 - Ethics of Web Scraping\n10:01 - Crawling Multiple Pages Continued\n12:24 - FAST Parallel Page Crawling\n15:19 - Crawl4AI RAG AI Agent\n17:48 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20250113",
+  "duration": 1124,
+  "view_count": 405568,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

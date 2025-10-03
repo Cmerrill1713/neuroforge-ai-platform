@@ -1,0 +1,26 @@
+{
+  "id": "youtube_R6AYmqcOXaw",
+  "title": "Claude Computer Use + Bolt.new - The ULTIMATE AI Coding Combo?!",
+  "url": "https://www.youtube.com/watch?v=R6AYmqcOXaw",
+  "description": "The future of AI coding assistants is building in a sort of RAG so the LLMs have real time knowledge of up to date documentation as they create code. In this video, I show you one way you can start doing that NOW with the Claude computer use API! Computer use is in beta as stated officially by Anthropic, so this entire setup is experimental, but it's insanely cool to see the direction we are headed with all of this.\n\nAI coding assistants, whether in the browser like Bolt.new and oTToDev, or IDEs like Windsurf and Cursor, are all AMAZING and save you hours and hours building a prototype for literally any app you can dream of. However, one huge flaw with these platforms is none of them have external knowledge for crucial things like library documentation.\n\nFor example, Claude 3.5 Sonnet (and any LLM really) doesn't know the latest changes made to the LangChain framework, or how to work with the latest version of Next.js. It would require somehow giving parts of their documentation to the LLM for it to generate working code.\n\nThat is why some form of RAG (retrieval augmented generation) is needed for these models, otherwise we'll always be stuck in 2023, or whatever the training cutoff is for the model, creating our apps! Plus just because documentation existed before the training cutoff for the LLM doesn't mean it knows it. That's usually just for the larger libraries/frameworks.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Video Teaser\n00:14 - The Problem with AI Coding Assistants\n00:52 - Watch Bolt Fail to Build a Simple App\n03:40 - The Solution - Claude Computer Use API\n05:32 - Demoing Bolt.new + Claude Computer Use\n09:28 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin the Discourse community for oTToDev, our fork of Bolt.new:\n\nhttps://thinktank.ottomator.ai\n\nI'm building something BIG behind the scenes for you:\n\nhttps://ottomator.ai\n\nAnthropic article for Claude Computer Use:\n\nhttps://www.anthropic.com/news/developing-computer-use\n\nGitHub repo to try Claude Computer Use:\n\nhttps://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo\n\nBolt.new:\n\nhttps://bolt.new/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241125",
+  "duration": 630,
+  "view_count": 22261,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

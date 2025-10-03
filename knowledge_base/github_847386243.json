@@ -1,0 +1,24 @@
+{
+  "id": "github_847386243",
+  "title": "reusable-openai-fine-tune",
+  "description": "Use this codebase to fine-tune OpenAI models with your own data.",
+  "url": "https://github.com/disler/reusable-openai-fine-tune",
+  "language": "Python",
+  "stars": 70,
+  "forks": 10,
+  "created_at": "2024-08-25T17:17:20Z",
+  "updated_at": "2025-06-18T21:02:55Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "github_repository",
+  "domain": "software_development",
+  "keywords": [
+    "ai"
+  ],
+  "retrieval_tags": [
+    "github",
+    "repository",
+    "code",
+    "development"
+  ]
+}

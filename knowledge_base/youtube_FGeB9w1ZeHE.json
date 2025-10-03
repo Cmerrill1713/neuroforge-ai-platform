@@ -1,0 +1,26 @@
+{
+  "id": "youtube_FGeB9w1ZeHE",
+  "title": "Revealing my COMPLETE AI Agent Blueprint",
+  "url": "https://www.youtube.com/watch?v=FGeB9w1ZeHE",
+  "description": "Join me on December 28th at 9:00 AM CST for my livestream continuing this mini series!\n\nhttps://youtube.com/live/56D91EcaUnM\n\nI get asked a lot what my process looks like for building an AI agent, so I’m kicking off a mini series showing my entire process! In this series, we’ll build AI agent that can consume entire GitHub repositories so you can ask it questions about all the code in the repo - super helpful no matter how non-technical or technical you are!\n\nTo start off the series with this video, I give an overview of my ENTIRE process for you, starting from the basics and going all the way to production!\n\nThen to continue this series, I’m doing a livestream on the 29th at 9:00 AM CST where we’ll do a complete prototype of this GitHub agent together with n8n and Gemini 2.0 Flash!\n\nAnd the best part? I’ll also show how to make the agent work with the oTTomator Live Agent Studio I recently released so we can instantly have an entire frontend to manage our conversations and share this agent with the world. I’ll even publish the agent over at studio.ottomator.ai for you all to try out during the livestream!\n\nThis guide is going to be super helpful for you whether you are using the Live Agent Studio or not. However, I want to focus on it at least a bit because I have a lot of big things coming up for it:\n\n* Christmas present for you related to the Studio on the 25th\n* Livestream as a part of this mini series on the 29th at 9:00 AM CST!\n* A LOT more agents coming to the studio soon!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Voiceflow, I guarantee you'll be able to build some awesome AI agents fast with it. Use the link below to support the Hackathon!\n\nhttps://partners.voiceflow.com/dj9khewo5u34\n\nCheck out an awesome collection of AI Agents over at the oTTomator Live Agent Studio:\n\nhttps://studio.ottomator.ai\n\nAll agents on the Live Agent Studio are open source and well documented! Including examples for you to build agents for the Studio with Python and n8n!\n\nhttps://github.com/coleam00/ottomator-agents\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro to the New Mini Series!\n02:13 - AI Agent Development Overview\n02:39 - Step 1 - Plan the Agent\n03:40 - Step 2 - Agent Prototype\n04:19 - Voiceflow\n06:36 - Step 3 - Database\n07:10 - Step 4 - Moving to Python\n08:12 - Step 5 - Agent UI\n09:23 - Step 6 - Testing the Agent\n10:02 - Step 7 - Deploying the Agent\n11:30 - Step 8 - Agent Monitoring\n12:19 - Step 9 - Agent Evaluation\n13:01 - Step 10 - Advanced Agent Topics\n14:03 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241223",
+  "duration": 878,
+  "view_count": 74273,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

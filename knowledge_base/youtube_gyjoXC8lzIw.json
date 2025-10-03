@@ -1,0 +1,26 @@
+{
+  "id": "youtube_gyjoXC8lzIw",
+  "title": "Agentic Workflows: BEYOND the Chat UI with Claude Code SDK and Gemini Nano Banana",
+  "description": "The Chat UI is a trap. Trapping you in endless back-and-forth prompting. It's time to break free and unlock a new level of AI powered workflow automation.\n\n🎥 VIDEO REFERENCES\n\n- Agentic Drop Zones Codebase: https://github.com/disler/agentic-drop-zones\n\n- Master AI Coding: https://agenticengineer.com/principled-ai-coding?y=gyjoXC8lzIw\n\n🚀 In this video, IndyDevDan reveals a powerful new pattern: Agentic Drop Zones. Forget the chat box! We're using simple folders and files to trigger sophisticated agentic workflows. See how a single drag-and-drop can kick off powerful AI coding and automation tasks, leveraging the incredible Claude Code SDK and Gemini's Nano Banana model for amazing results.\n\n🛠️ Watch as we build a system that automates everything from generating images with Gemini Flash Image to transcribing audio and processing financial data. This is agentic engineering in action. We'll show you how to configure specialized agentic workflows that operate end-to-end, freeing you from the tedious human-in-the-loop process and revolutionizing your approach to AI.\n\n💡 This isn't just about cool tricks; it's a fundamental shift in how we interact with AI. By moving beyond the chat interface, you can build reusable, scalable, and highly efficient systems. We'll dive into the prompt engineering behind these workflows and show you how to build your own programmable agents for ultimate workflow automation. This is the future of agentic coding.\n\n🌟 If you're ready to step outside the chat box and start building truly autonomous AI systems, this video is for you. Don't forget to like and subscribe for more content on the cutting edge of AI development!\n\n📖 Chapters\n00:00 We're stuck in the Chat UI\n01:24 Agentic Drop Zones\n06:20 Reactive Agents\n17:22 Programmable Agents\n\n#agenticcoding #aiengineering #claudecode",
+  "url": "https://www.youtube.com/watch?v=gyjoXC8lzIw",
+  "upload_date": "20250901",
+  "duration": 1481,
+  "view_count": 16285,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "react",
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "3c94362c130013fcd0e19765ef2680c1"
+}

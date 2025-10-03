@@ -1,0 +1,219 @@
+name: AI Model Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'src/core/engines/**'
+      - 'src/core/models/**'
+      - 'mlx_models/**'
+      - 'models/**'
+      - 'requirements*.txt'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'src/core/engines/**'
+      - 'src/core/models/**'
+      - 'mlx_models/**'
+      - 'models/**'
+      - 'requirements*.txt'
+  workflow_dispatch:
+
+jobs:
+  model-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-minimal.txt
+          pip install pytest pytest-asyncio requests
+
+      - name: Validate Ollama connectivity
+        run: |
+          echo "Testing Ollama connectivity..."
+          python -c "
+          import requests
+          import sys
+          try:
+              # Test if Ollama is running locally (skip if not available)
+              response = requests.get('http://localhost:11434/api/tags', timeout=5)
+              if response.status_code == 200:
+                  models = response.json().get('models', [])
+                  print(f'✅ Ollama available with {len(models)} models')
+                  for model in models[:3]:  # Show first 3 models
+                      print(f'   - {model.get(\"name\", \"unknown\")}')
+              else:
+                  print('⚠️ Ollama not available locally - this is expected in CI')
+          except Exception as e:
+              print(f'⚠️ Ollama not available: {e}')
+          "
+
+      - name: Validate MLX models
+        run: |
+          echo "Validating MLX model structure..."
+          if [ -d "mlx_models" ]; then
+            ls -la mlx_models/
+            echo "✅ MLX models directory exists"
+          else
+            echo "⚠️ No MLX models directory found"
+          fi
+
+      - name: Test model loading (mock)
+        run: |
+          echo "Testing model loading capabilities..."
+          python -c "
+          import sys
+          import os
+          sys.path.insert(0, 'src')
+
+          # Test imports without actually loading models
+          try:
+              from src.core.engines.ollama_adapter import OllamaAdapter
+              print('✅ OllamaAdapter import successful')
+
+              # Test configuration loading
+              from src.core.config.env_config import get_config
+              config = get_config()
+              print('✅ Configuration loading successful')
+
+              print('✅ All core imports successful')
+          except Exception as e:
+              print(f'❌ Import error: {e}')
+              sys.exit(1)
+          "
+
+      - name: Validate model configurations
+        run: |
+          echo "Validating model configurations..."
+          python -c "
+          import yaml
+          import json
+          import sys
+
+          # Check for configuration files
+          config_files = ['src/config/settings.py', 'src/core/config/env_config.py']
+
+          for config_file in config_files:
+              if os.path.exists(config_file):
+                  print(f'✅ {config_file} exists')
+              else:
+                  print(f'❌ {config_file} missing')
+                  sys.exit(1)
+
+          print('✅ All configuration files present')
+          "
+
+  performance-benchmark:
+    runs-on: ubuntu-latest
+    needs: model-validation
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-minimal.txt
+          pip install pytest pytest-asyncio pytest-benchmark
+
+      - name: Run model performance benchmarks
+        run: |
+          echo "Running model performance benchmarks..."
+          python -c "
+          import time
+          import sys
+          sys.path.insert(0, 'src')
+
+          # Basic performance test
+          start_time = time.time()
+
+          try:
+              from src.core.config.env_config import get_config
+              config = get_config()
+
+              # Test configuration performance
+              for i in range(100):
+                  test_config = config.get('OLLAMA_MODEL', 'qwen2.5:7b')
+
+              config_time = time.time() - start_time
+              print(f'✅ Configuration loading: {config_time:.4f}s for 100 iterations')
+
+              # Test import performance
+              import_start = time.time()
+              from src.core.engines.ollama_adapter import OllamaAdapter
+              import_time = time.time() - import_start
+              print(f'✅ Module import time: {import_time:.4f}s')
+
+              print('✅ Performance benchmarks completed')
+
+          except Exception as e:
+              print(f'❌ Performance test failed: {e}')
+              sys.exit(1)
+          "
+
+  model-compatibility-test:
+    runs-on: ubuntu-latest
+    needs: model-validation
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11']
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-minimal.txt
+
+      - name: Test compatibility
+        run: |
+          echo "Testing Python ${{ matrix.python-version }} compatibility..."
+          python -c "
+          import sys
+          import os
+
+          print(f'Python version: {sys.version}')
+          print(f'Platform: {sys.platform}')
+
+          # Test core imports
+          sys.path.insert(0, 'src')
+
+          try:
+              from src.core.config.env_config import get_config
+              config = get_config()
+              print('✅ Core configuration compatible')
+
+              from src.core.engines.ollama_adapter import OllamaAdapter
+              print('✅ Ollama adapter compatible')
+
+              print(f'✅ Python ${{ matrix.python-version }} compatibility verified')
+
+          except Exception as e:
+              print(f'❌ Compatibility issue: {e}')
+              sys.exit(1)
+          "

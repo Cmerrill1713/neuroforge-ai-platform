@@ -1,0 +1,26 @@
+{
+  "id": "youtube_8jpVeUTNExI",
+  "title": "Ollama + OpenAI's Swarm - EASILY Run AI Agents Locally",
+  "url": "https://www.youtube.com/watch?v=8jpVeUTNExI",
+  "description": "OpenAI recently released an amazing new tool called Swarm that makes it SUPER easy to build systems that use many AI agents together to do a lot of incredible things. The problem is, you are only able to use OpenAI models like GPT-4o by default.\n\nIn this video, I show you how to set up your AI agents with Swarm to run entirely locally using Ollama for your LLMs! The best part is even the smaller models like Qwen 2.5 3b do really well!\n\nSee the instructions below to run this Ollama + Swarm setup yourself super easily!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n01:17 - How to Make Swarm Work with Ollama\n04:07 - Coding an Ollama Agent Swarm\n07:19 - Overview of the SQL Agent Swarm\n09:54 - Local LLM Swarm Demo\n12:52 - Step by Step Guide to Run this Yourself\n19:24 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nStep by step guide to install and run this yourself!\n\nPrerequisites: Python and Git (easy to Google and install in a minute)\n\n1. Install Ollama (link below)\n2. Pull the models you want to use with the \"ollama pull [model ID]\" command (link to tool models below)\n3. git clone https://github.com/coleam00/ai-agents-masterclass.git\n4. cd ai-agents-masterclass/local-swarm-agent\n5. python -m venv venv\n6. Activate virtual environment (on Windows: .\\venv\\Scripts\\activate, on Mac/Linux: source venv/bin/activate)\n7. pip install -r requirements.txt\n8. Rename .env.example to .env and set your default Ollama model\n9. python load_sql_data.py (loads the test data, covered in previous video)\n10. python run.py\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nLink to the code for the SQL agent swarm:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/local-swarm-agent\n\nInstall Ollama:\n\nhttps://ollama.com/\n\nList of Ollama models that support function calling:\n\nhttps://ollama.com/search?c=tools\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241031",
+  "duration": 1203,
+  "view_count": 34668,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

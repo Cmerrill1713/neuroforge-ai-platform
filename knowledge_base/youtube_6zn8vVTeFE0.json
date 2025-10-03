@@ -1,0 +1,26 @@
+{
+  "id": "youtube_6zn8vVTeFE0",
+  "title": "Build a ChatGPT Style App for Your n8n AI Agents in MINUTES",
+  "url": "https://www.youtube.com/watch?v=6zn8vVTeFE0",
+  "description": "n8n is an incredibly powerful tool for building automations and AI agents without code. There is even a simple chat interface available to talk to the AI agents you create in n8n right within the workflow builder. However, this chat interface is VERY limited - there are almost no customization options and there is no way to view/resume old conversations.\n\nIt would be very nice if we had a full ChatGPT like interface to talk to our n8n agents and store all of our conversations...\n\nWell in this video, that’s exactly what I show you how to do using Open WebUI! I’ll show you how easy it is to integrate your n8n AI agents with Open WebUI so you have a sleek frontend for your agents that you can set up in minutes. Plus I have resources to get you up and running with minimal effort.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nBook a demo with Zams and see how it can transform your business with enterprise level AI agents & automation:\n\nhttps://www.zams.com/demo?utm=787591\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nn8n Template Agent:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/n8n-openwebui-agent\n\nOpen WebUI + n8n Pipeline: https://openwebui.com/f/coleam/n8n_pipe\n\nLocal AI Package: https://github.com/coleam00/local-ai-packaged\n\nOpen WebUI: https://github.com/open-webui/open-webui\n\nn8n: https://n8n.io/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the n8n Agent UI with Open WebUI\n02:02 - Demo of an n8n Agent in Open WebUI\n03:06 - Game Plan for this Guide\n04:05 - Open WebUI Intro & Installation\n05:32 - Open WebUI with the Local AI Package\n06:16 - n8n Function for Open WebUI\n08:17 - n8n Function Config\n09:07 - Zams\n10:57 - Diving into the n8n Agent Template (Webhook First)\n12:15 - Securing Our n8n Agent\n14:52 - Inputs and Outputs for Our Agent\n16:17 - Build Any n8n Agent for Open WebUI\n17:11 - Understanding Open WebUI Metadata\n21:28 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250410",
+  "duration": 1321,
+  "view_count": 67861,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

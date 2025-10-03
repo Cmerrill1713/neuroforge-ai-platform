@@ -1,0 +1,26 @@
+{
+  "id": "youtube_mNcXue7X8H0",
+  "title": "The Ultimate Guide to Local AI and AI Agents (The Future is Here)",
+  "url": "https://www.youtube.com/watch?v=mNcXue7X8H0",
+  "description": "The future of AI and AI agents is running everything locally - your LLMs, databases, agent tooling, knowledge bases, and automation platforms. No cloud dependencies, no data leaving your machine, and full control over your AI infrastructure. There are pros and cons to local vs. cloud AI, but the advantages of cloud AI are diminishing every day and we're heading toward a future where running your own LLMs is a must - so master this now.\n\nIn this masterclass, I'll walk you through everything you need to know about local AI: what it is, why it's critical, how you can run your own LLMs and infrastructure, how to create local AI agents with both n8n and Python, and finally how to deploy everything to a private server so you can productionize your local AI agents.\n\nNothing in this video is sponsored - all platforms, LLMs, and frameworks/tools are my genuine recommendations for running all of your AI locally.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIf you're looking to join a community for early AI adopters to master AI & AI Agents and transform your career or business, check out Dynamous here:\n\nhttps://dynamous.ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThere are a LOT of resources from this masterclass, here they are!\n\nThe Local AI Package:\n\nhttps://github.com/coleam00/local-ai-packaged\n\nThe agents built in this masterclass:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/python-local-ai-agent\n\nThe entire part list for my PC I built to run local LLMs (I did buy the 3090s used for $700 each):\n\nhttps://pcpartpicker.com/user/coleam00/saved/#view=3zHNvK\n\n~~~~~~~\n\nOllama FAQs: https://github.com/ollama/ollama/blob/main/docs/faq.md\n\nOllama OpenAI API compatibility: https://ollama.com/blog/openai-compatibility\n\nSupabase self-hosting docs: https://supabase.com/docs/guides/self-hosting\n\nMy YouTube video for RAG with Local AI: https://youtu.be/T2QWhXpnT5I\n\n~~~~~~~\n\nModels on Ollama referenced in this video:\n\nDeepSeek R1: https://ollama.com/library/deepseek-r1\nQwen 3: https://ollama.com/library/qwen3\nQwen 2.5: https://ollama.com/library/qwen2.5\nMistral: https://ollama.com/library/mistral\nDevstral: https://ollama.com/library/devstral\n\n~~~~~~~\n\nCloud platforms mentioned in this video for hosting the Local AI Package:\n\nDigitalOcean (CPU and GPU instances): https://www.digitalocean.com/\nTensorDocker (GPU instances): https://tensordock.com/\nHostinger (CPU instances): https://www.hostinger.com/vps-hosting\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Welcome to the Local AI Masterclass\n00:41 - Agenda for the Local AI Masterclass\n03:23 - Dynamous AI Agent Mastery\n04:26 - What is Local AI?\n06:08 - Run Your 1st Local LLM in 5 Minutes w/ Ollama\n10:11 - Why Local AI? (Local AI vs. Cloud AI)\n16:26 - Hardware Requirements for Local LLMs\n24:29 - Specific Local LLM Recommendations\n28:07 - Quantization (Run Bigger LLMs)\n33:08 - Downloading Quantized LLMs in Ollama\n35:16 - Offloading (Splitting LLMs between GPU + CPU)\n37:11 - Critical Ollama Configuration\n41:45 - Ollama's OpenAI API Compatibility\n45:58 - OpenAI Compatible Demo\n53:20 - Introducing the Local AI Package\n57:42 - Instructions for Installing the Local AI Package\n1:09:07 - Customizing the Local AI Package\n1:11:59 - Running the Local AI Package\n1:20:24 - Testing Our Local AI Services\n1:24:41 - Testing Ollama within Open WebUI\n1:29:49 - Building a Local n8n AI Agent\n1:47:18 - Building a Local Python AI Agent\n1:57:37 - Containerizing our Local Python Agent\n2:02:31 - Introduction to Deploying & Cloud Provider Options\n2:07:11 - Deploying the Local AI Package to the Cloud\n2:23:18 - Testing Our Deployed Local AI Package\n2:25:32 - Deploying Our Python AI Agent to the Cloud\n2:32:12 - Testing Our Full Agent Setup\n2:36:08 - Additional Resources\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. \n\nI'll be uploading videos every Wednesday at 7:00 PM CDT!",
+  "upload_date": "20250612",
+  "duration": 9517,
+  "view_count": 107876,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

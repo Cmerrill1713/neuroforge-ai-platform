@@ -1,0 +1,27 @@
+{
+  "id": "meta_github_159563524",
+  "title": "extension-script",
+  "description": "Example repository for custom C++/CUDA operators for TorchScript",
+  "url": "https://github.com/pytorch/extension-script",
+  "language": "Python",
+  "stars": 114,
+  "forks": 23,
+  "created_at": "2018-11-28T20:54:55Z",
+  "updated_at": "2025-03-31T09:24:15Z",
+  "topics": [
+    "cpp",
+    "cuda",
+    "pytorch"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_123683042",
+  "title": "extension-cpp",
+  "description": "C++ extensions in PyTorch",
+  "url": "https://github.com/pytorch/extension-cpp",
+  "language": "Python",
+  "stars": 1148,
+  "forks": 243,
+  "created_at": "2018-03-03T10:46:31Z",
+  "updated_at": "2025-09-28T14:48:39Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "youtube_V_SyO0t7TZY",
+  "title": "Has the AI KING Returned? GEMINI PRO vs GPT-3.5 TURBO Prompt Testing",
+  "description": "Is Gemini Pro Worth Your Time? Let's find out by analyzing and prompt testing Gemini Pro vs GPT-3.5 Turbo! It's crucial for engineers and product builders to discern which model reigns supreme for their specific use case. In this showdown, we pierce through the hype to present you with a comprehensive analysis of Gemini Pro and GPT-3.5 Turbo, getting straight to the heart of performance metrics that matter.\n\nIn this in-depth evaluation, we unpack the subtleties between the two second tier, SPEED dominating AI models: Gemini Pro and GPT-3.5 Turbo. Unlike most comparisons, this video draws on real-world testing and the latest industry insights and real benchmarking that speaks directly to senior engineers, and product builders. We reveal the nuances in LLM performance, uncovering slight edges and significant pitfalls across various metrics including speed, language understanding, instructional adherence, and developer experience.\n\nLet's dive deep into a legit analysis based using the incredible testing frameworks Promptfoo. Price, multimodal capabilities, API complexity, AI alignment, and biases - every aspect of Gemini Pro and GPT-3.5 Turbo is revealed to give you insight in to rather or not you should be paying attention to gemini LLM tech.\n\n🔗 Developer Resources\nLLM Prompt Testing Quick Start - https://github.com/disler/llm-prompt-testing-quick-start/tree/v2\nPromptfoo - https://promptfoo.dev/\nPromptfoo Vertex AI - https://promptfoo.dev/docs/providers/vertex\nComparison Blog - https://klu.ai/blog/gemini-pro-vs-gpt-3-5-turbo\nGemini - https://deepmind.google/technologies/gemini/#introduction\nTalk To Your Database - https://talktoyourdatabase.com (7777)\n\n📘 Chapters\n00:03 No Time Wasted, Should You Use Gemini Pro?\n01:00 Gemini Pro vs GPT-3.5 Highlights\n05:43 My Top Priority LLM Benchmarks\n07:23 Gemini Pro Prompt Testing with promptfoo\n11:30 Second Test: Gemini Pro vs GPT-3.5 Turbo\n13:30 Prompt Testing is REALLY important\n14:35 35 Success 4 Failed Test Cases \n14:55 In this test, Gemini Pro's speed blows GPT-3.5 out of the water\n16:30 Prompt Testing Helps You Build Better Products\n17:07 Let's let the hype cycle die \n18:20 Tweak all these tests to your liking\n18:40 Regex prompt assertion match\n19:20 Promptfoo is great for prompt evaluation and testing\n20:24 Why test your prompts?\n22:14 Competition means price goes down benchmarks go up\n\n#promptengineering #googlegemini #gpt",
+  "url": "https://www.youtube.com/watch?v=V_SyO0t7TZY",
+  "upload_date": "20231218",
+  "duration": 1368,
+  "view_count": 1518,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "aws",
+    "ai",
+    "api",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "b9856b3a7d9f3608d60d1c78574ea41a"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_uWDocIoiaXE",
+  "title": "You HAVE to Try Agentic RAG with DeepSeek R1 (Insane Results)",
+  "url": "https://www.youtube.com/watch?v=uWDocIoiaXE",
+  "description": "Deepseek R1 - the latest and greatest open source reasoning LLM - has taken the world by storm and a lot of content creators are doing a great job covering its implications and strengths/weaknesses. What I haven’t seen a lot of though is actually using R1 in agentic workflows to truly leverage its power. So that’s what I’m showing you in this video - we’ll be using the power of R1 to make a simple but super effective agentic RAG setup. We’ll be using Smolagents by HuggingFace to create our agent - it’s the simplest agent framework out there and many of you have been asking me to try it out.\n\nThis agentic RAG setup centers around the idea that reasoning LLMs like R1 are extremely powerful but quite slow. Because of this, a lot of people are starting to experiment with combining the raw power of a model like R1 with a more lightweight and fast LLM to drive the primary conversation/agent flow. Think of basically giving R1 as a tool for an agent to use when it needs more reasoning power at the cost of a slower response (and higher costs). That’s what we’ll be doing here - creating an agent that has an R1 driven RAG tool to extract in depth insights from a knowledgebase.\n\nThe example in this video is meant to be an introduction to these kind of reasoning agentic flows. That’s why I keep it simple with Smolagents and a local knowledgebase. But I’m planning on expanding this much further soon with a much more robust but still similar flow built with Pydantic AI and LangGraph!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe Community Voting period of the oTTomator Hackathon is open! Head on over to the Live Agent Studio now and test out the submissions and vote for your favorite agents. There are so many incredible projects to try out!\n\nhttps://studio.ottomator.ai\n\nAll the code covered in this video + instructions to run it can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/r1-distill-rag\n\nSmolAgents:\n\nhttps://huggingface.co/docs/smolagents/en/index\n\nR1 on Ollama:\n\nhttps://ollama.com/library/deepseek-r1\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Why R1 for Agentic RAG?\n01:56 - Overview of our Agent\n03:33 - SmolAgents - Our Ticket to Fast Agents\n06:07 - Building our Agentic RAG Agent with R1\n14:17 - Creating our Local Knowledgebase w/ Chroma DB\n15:45 - Getting our Local LLMs Set Up with Ollama\n19:15 - R1 Agentic RAG Demo\n21:42 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250203",
+  "duration": 1339,
+  "view_count": 120083,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "trigger": {
+    "consecutive_poor_grades": 3,
+    "accuracy_threshold": 0.7,
+    "response_time_threshold": 5.0,
+    "error_rate_threshold": 0.1,
+    "min_samples": 10
+  },
+  "last_updated": "2025-09-29T19:45:15.460640"
+}

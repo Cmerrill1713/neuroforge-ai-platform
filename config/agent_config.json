@@ -1,0 +1,12 @@
+{
+  "agent_id": "doc-agent-001",
+  "max_memory_mb": 512,
+  "max_cpu_percent": 50,
+  "batch_size": 10,
+  "max_concurrent_tasks": 2,
+  "weaviate_host": "host.docker.internal",
+  "weaviate_http_port": 8090,
+  "knowledge_base_url": "http://host.docker.internal:8001",
+  "redis_url": "redis://host.docker.internal:6379",
+  "log_level": "INFO"
+}

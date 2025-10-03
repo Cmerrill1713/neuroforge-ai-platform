@@ -1,0 +1,26 @@
+{
+  "id": "youtube_F1I9JN0z0w0",
+  "title": "Why is Everyone Missing This with AI Agents?! (Memory + Tools that Scale)",
+  "url": "https://www.youtube.com/watch?v=F1I9JN0z0w0",
+  "description": "Most AI agents are demos that work for one user - you. But what happens when you need to scale to thousands or millions of users, and the agent needs personalized memory and tools for every user? You can’t build personalized AI agents that scale by connecting it to a single Gmail/Asana/Slack account, a single RAG knowledge base, etc. Your agent needs authorization to access user accounts and store memories for individual users.\n\nIn this video, I'll show you how to build production-ready personalized AI agents that scale using LangGraph and Arcade.dev - the platform that solves the authentication and scaling nightmare that breaks every other approach. This is what MCP wish it had - with Arcade, we can build agents that dynamically request user account access with OAuth on-demand and then cache the credentials going forward for a super smooth user experience.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- Get started with Arcade.dev to build AI agents that can actually DO things:\nhttps://arcade.dev.plug.dev/7qAXRal\n\n- Arcade documentation for LangGraph integration:\nhttps://docs.arcade.dev/home/langchain/user-auth-interrupts\n\n- Here is the GitHub repo for the Arcade + LangGraph agent built in this video:\nhttps://github.com/coleam00/arcade-ai-agent\n\n- LangGraph memory documentation:\nhttps://langchain-ai.github.io/langgraph/concepts/memory/#long-term-memory\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - The Problem with Most AI Agents\n02:01 - Hyper Scaling Personalized Agents with LangGraph and Arcade\n02:59 - Demo of Our Agent with Gmail/Asana Auth\n06:48 - Introducing the Codebase for Our Personalized Agent\n09:14 - Code Dive #1 - Intro to Agent Auth with Arcade + LangGraph\n15:57 - Code Dive #2 - Deeper LangGraph + Arcade Integration\n22:12 - Code Dive #3 - Agent Memory and a Nice UI\n25:09 - Final Demo of Our Hyper Personalized Agent\n27:15 - Last Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250731",
+  "duration": 1682,
+  "view_count": 20457,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

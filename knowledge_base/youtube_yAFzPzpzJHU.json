@@ -1,0 +1,26 @@
+{
+  "id": "youtube_yAFzPzpzJHU",
+  "title": "Archon Beta Launch Livestream - What You Missed!",
+  "url": "https://www.youtube.com/watch?v=yAFzPzpzJHU",
+  "description": "Be a part of the launch of the next big tool for AI coding assistants! In this condensed version of the Archon Beta launch livestream (3 hours condensed to ~1.25), I showcase the power of Archon and how you can use it with existing context engineering strategies with the BMAD Method as our core example.\n\nNOTE: The logo has changed for Archon to keep our branding unique! The logo was too similar to some other things before, and it's nice to bring the shield back from the previous Archon.\n\nAs powerful as AI coding assistants are, they almost completely lack two of the most important parts of context engineering - RAG and project management. I built Archon to solve this and completely revolutionize the way we code with AI today. I’m bringing it to you as a beta open source tool that I’m determined to build into the best possible tool for all AI coding. It’s a massive overhaul of my original Archon.\n\nArchon is essentially an entire operating system for AI coding. For you, it's a sleek interface to manage knowledge, context, and tasks for your projects. For the AI coding assistant(s), it's an MCP server to collaborate on and leverage the same knowledge, context, and tasks.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- Join the free webinar hosted by Snyk on Securing Vibe Coding (I'll be there myself!):\nhttps://snyk.plug.dev/jd6kUpp\n\n- If you're looking to join a community for early AI adopters all mastering AI coding and sharing goldmines of resources with each other, check out Dynamous:\nhttps://dynamous.ai\n\n- Archon GitHub Repo:\nhttps://github.com/coleam00/Archon\n\n- Full Archon Beta Launch Party Livestream:\nhttps://youtube.com/live/iz9V9dVtRto\n\n- BMAD Method:\nhttps://github.com/bmad-code-org/BMAD-METHOD\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Condensed Livestream Intro\n02:01 - Start of the Livestream - What We're Covering\n06:43 - Introduction to Archon (+ Quick Setup Guide)\n13:46 - What We're Building with Archon + BMAD\n16:37 - Overview of the BMAD Method\n20:33 - Snyk Event\n21:58 - BMAD Setup and Deep Dive\n29:56 - Integrating the BMAD Analyst with Archon (Brief Creation)\n45:03 - BMAD Project Manager + Archon (PRD Creation)\n53:43 - BMAD Architect + Archon (Task Creation)\n59:57 - Generating Our PRP\n1:06:12 - Executing Our PRP (Implementation)\n1:15:51 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250818",
+  "duration": 4671,
+  "view_count": 23766,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

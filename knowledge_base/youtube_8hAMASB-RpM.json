@@ -1,0 +1,26 @@
+{
+  "id": "youtube_8hAMASB-RpM",
+  "title": "Don't Sleep on the ULTIMATE AI Agent Combo (n8n, LangChain, Python)",
+  "url": "https://www.youtube.com/watch?v=8hAMASB-RpM",
+  "description": "There are huge pros and cons to creating AI Agents with code and no code solutions. But I have found the PERFECT blend of both worlds using my favorite trifecta of tools for developing agents - n8n, Langchain, and Python. In this video, I show you exactly how to create AI agents with this combo. No fluff and a ton of value in just 20 minutes, so stick around because you can accomplish a lot when you create agents in this way...\n\n00:00 - 02:22 - Intro\n02:23 - 07:27 - Slack Conversation Summarization n8n Workflow\n07:28 - 08:14 - Slack Messaging n8n Workflow\n08:15 - 09:21 - Google Doc Upload n8n Workflow\n09:22 - 15:54 - Creating LangChain Tools for Agent\n15:55 - 21:23 - Creating AI Agent with Tools\n21:24 - 24:28 - Demo of Agent\n24:29 - 24:56 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe code and n8n workflows I create in this video can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/n8n-langchain-agent\n\nIf you want to self-host n8n, follow this guide by the n8n team for hosting with DigitalOcean (my honest recommendation, no sponsorship for this):\n\nhttps://docs.n8n.io/hosting/installation/server-setups/digital-ocean/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20240923",
+  "duration": 1496,
+  "view_count": 37396,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

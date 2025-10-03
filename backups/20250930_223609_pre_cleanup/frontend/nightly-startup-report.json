@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-09-28T01:16:37.870Z",
+  "totalDuration": 55581,
+  "phases": 10,
+  "successfulPhases": 9,
+  "failedPhases": 0,
+  "optimizations": 3,
+  "iterations": 5,
+  "systemHealth": 85,
+  "recommendations": [
+    "Review container agentic-platform configuration and health checks",
+    "Review container ollama configuration and health checks"
+  ]
+}

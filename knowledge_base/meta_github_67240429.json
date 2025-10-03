@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_67240429",
+  "title": "builder",
+  "description": "Continuous builder and binary build scripts for pytorch",
+  "url": "https://github.com/pytorch/builder",
+  "language": "Python",
+  "stars": 354,
+  "forks": 230,
+  "created_at": "2016-09-02T17:02:21Z",
+  "updated_at": "2025-09-08T12:31:57Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

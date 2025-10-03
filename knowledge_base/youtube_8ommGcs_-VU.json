@@ -1,0 +1,26 @@
+{
+  "id": "youtube_8ommGcs_-VU",
+  "title": "How to Use Bolt.new for FREE with Local LLMs (And NO Rate Limits)",
+  "url": "https://www.youtube.com/watch?v=8ommGcs_-VU",
+  "description": "Over the last month, together as a community we started oTToDev, a fork of Bolt.new that aims to add a bunch of much needed functionality like being able to use any LLM you want, including local ones with Ollama.\n\nIn this video I give some super important tips and tricks for using local LLMs with oTToDev, some of which can really apply to using any LLM with any AI coding assistant! I also cover my favorite open source LLM to use for coding my AI apps.\n\nEverything I cover in this video I'll be going into more detail in my YouTube livestream I'll be doing this Sunday, November 10th, at 7:00 PM CDT! See you there! Here is the link for that for you to enable notifications for it when I go live:\n\nhttps://youtube.com/live/_YzTntvUWN4\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n02:12 - Getting Started with oTToDev (Bolt.new Fork)\n03:01 - Ollama's Big Problem\n04:26 - Fixing Ollama for oTToDev\n06:55 - FlexiSpot Segment (My New Favorite Chair)\n08:02 - My Favorite Open Source Coding LLM\n10:39 - Using oTToDev to Build an App with a Small Local LLM\n15:26 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAs I mentioned in the video, I collabed with FlexiSpot for a small segment of this video because having an ergonomically correct chair is super important for me since I've dealt with sciatica in the past (seriously not fun), so I wanted to share with all of you, especially if you're a developer sitting a lot like me!\n\nUse my exclusive code 'C750'. If you purchase the C7/C7Max now, you'll get a $50 discount. It's the best time to buy the C7 (or C7Max)!\n\nUS: https://bit.ly/3A3e72Q\nCA: https://bit.ly/3Urh7gp\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nI'm building something BIG behind the scenes:\n\nhttps://ottomator.ai/\n\nHere is the link to Bolt.diy on GitHub. Check out the README to see future improvements planned!\n\nhttps://github.com/stackblitz-labs/bolt.diy\n\nLink to the prompts I used in the video to create the app:\n\nhttps://docs.google.com/document/d/17D2RuUKAftM9OVs_tIe0Qie3Bs8CwT4MuukEn-1g6U8/edit?usp=sharing\n\nYouTube video where I dive into the N8N workflow more:\n\nhttps://www.youtube.com/watch?v=PEI_ePNNfJQ\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241107",
+  "duration": 968,
+  "view_count": 94761,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

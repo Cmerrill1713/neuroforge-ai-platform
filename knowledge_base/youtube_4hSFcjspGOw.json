@@ -1,0 +1,22 @@
+{
+  "id": "youtube_4hSFcjspGOw",
+  "title": "MASTER the Prompt: TOP 5 Elements for Reusable Prompts, AI Agents, Agentic Workflows",
+  "description": "Is your prompt even GOOD? Unlock the Secrets to High-Quality Prompts: WITH 20% EFFORT.\n\nEver wondered which parts of your prompts ACTUALLY MATTER? Let's simplify the sea of prompt engineering tips and tricks with this concise guide on the five essential elements that gives you 80% of the results with 20% of the effort. I've crafted thousands of prompts, and today, I'm sharing the key elements that consistently deliver top-notch outcomes with minimal effort.\n\n🚀 Discover the five crucial components: model, purpose, variables, examples, and output. These elements form the backbone of effective prompt engineering, helping you achieve 80% of the results with just 20% of the effort.\n\n🔗 These elements enable composability between prompts, allowing you to chain together outputs and inputs to build powerful prompt chains. By focusing on the underlying technology and understanding the prompt at its core, you'll be well-equipped to create AI Agents and agentic workflows.\n\n🔥 In this video, we break down each element with clear examples and practical tips:\n\nModel: Learn why the model you choose has the most significant impact on your prompt's performance.\nPurpose: Understand how a clear goal enhances your prompt's effectiveness.\nVariables: Master the use of dynamic and static variables to make your prompts adaptable and reusable.\nExamples: See how concrete examples can guide your AI to produce the exact output you need.\nOutput: Explore the importance of structured outputs, like JSON, for building reliable and consistent AI workflows.\n\n🛠️ We'll showcase practical applications of these elements through detailed examples, including a Nuxt.js component and a comprehensive Omnicomplete prompt. Whether you're a developer, AI enthusiast, or product builder, this video is packed with actionable insights to enhance your prompt engineering skills.\n\n🌟 Hit the like and subscribe for more tips on AI agents, agentic workflows, and prompt chains. Stay ahead of the curve and stay plugged into the latest models like GPT-4o, Gemini 1.5 Pro, and other state-of-the-art models to use their full potential for your prompts, AI Agents, and agentic workflows.\n\nKeep prompting, keep building and stay ahead of the curve.\n\n🔗 Resources\nLlama-3 70b Omnicomplete: https://youtu.be/28zuliyLd5Q\nLLM OS: https://youtu.be/8wSH4XukcH8\n7 Prompt Chains: https://youtu.be/QV6kaNFyoyQ\n\n📖 Chapters\n00:00 Maximizing Prompt Value\n00:34 The Five Key Elements of Prompts\n01:24 E1 - Model - Why the Model Matters Most\n01:59 E2 - Purpose - Defining Your Goal\n02:25 E3 - Variables - Dynamic and Static\n03:32 E4 - Examples - Concrete Examples for Clarity\n05:49 E5 - Output - Structured and Reliable JSON\n07:16 Concise, valuable, reusable prompts\n08:00 Building Prompt Chains and AI Agents\n08:56 Recap - The 80-20 of Prompt Engineering\n09:48 Real Example Prompt - OmniComplete - Static Variables\n12:20 Real Example Prompt - Nuxt / Vue Component\n13:53 Top 5 Elements for Reusable Prompts\n14:30 Focus on the groundwork - the prompt\n\n#promptengineering #aiagents #aiengineering",
+  "url": "https://www.youtube.com/watch?v=4hSFcjspGOw",
+  "upload_date": "20240617",
+  "duration": 947,
+  "view_count": 11756,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "4bd77fd486b2cf2e30d2f39075af838e"
+}

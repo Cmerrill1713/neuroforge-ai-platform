@@ -1,0 +1,26 @@
+{
+  "id": "youtube_BpVuhKbSVS4",
+  "title": "V0 + Claude: A GAME CHANGER for Building AI Apps",
+  "url": "https://www.youtube.com/watch?v=BpVuhKbSVS4",
+  "description": "Artificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nIn this video I show how to use a SUPER powerful AI combo - V0 + Claude - to build a Next.JS frontend for an AI app in just minutes. The app I build a frontend for is the RAG AI Agent I built earlier on my channel with n8n and Supabase that many of you got excited about, so this is a good extension of that walkthrough!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nEverything I go over in the video, including the n8n workflow, all the prompts, and the Next.JS code with my ShadCN components can be found here:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/v0-agent-frontend\n\nHere is everything you need for this walkthrough:\n\n- V0: v0.dev/chat\n- Claude 3.5 Sonnet: claude.ai\n- NPM installed on your computer: https://www.npmjs.com/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos twice a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20240909",
+  "duration": 1298,
+  "view_count": 25259,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

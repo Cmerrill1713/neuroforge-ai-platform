@@ -1,0 +1,62 @@
+[
+  {
+    "issue_id": "test_api_issue",
+    "fix_timestamp": "2025-10-02T19:38:15.827317",
+    "fix_description": "Fix API endpoint routing configuration",
+    "fix_pattern": "configuration",
+    "success": false,
+    "verification_passed": false,
+    "recurrence_time": null,
+    "prevention_applied": false
+  },
+  {
+    "issue_id": "test_api_issue",
+    "fix_timestamp": "2025-10-02T19:38:16.828860",
+    "fix_description": "Fix API endpoint routing configuration",
+    "fix_pattern": "configuration",
+    "success": false,
+    "verification_passed": false,
+    "recurrence_time": 1.001505,
+    "prevention_applied": false
+  },
+  {
+    "issue_id": "test_api_issue",
+    "fix_timestamp": "2025-10-02T19:38:17.834496",
+    "fix_description": "Fix API endpoint routing configuration",
+    "fix_pattern": "configuration",
+    "success": false,
+    "verification_passed": false,
+    "recurrence_time": 1.005628,
+    "prevention_applied": false
+  },
+  {
+    "issue_id": "test_api_issue",
+    "fix_timestamp": "2025-10-02T19:55:05.820823",
+    "fix_description": "Fix API endpoint routing configuration",
+    "fix_pattern": "configuration",
+    "success": false,
+    "verification_passed": false,
+    "recurrence_time": 1007.986325,
+    "prevention_applied": true
+  },
+  {
+    "issue_id": "test_api_issue",
+    "fix_timestamp": "2025-10-02T19:55:06.826350",
+    "fix_description": "Fix API endpoint routing configuration",
+    "fix_pattern": "configuration",
+    "success": false,
+    "verification_passed": false,
+    "recurrence_time": 1.005513,
+    "prevention_applied": true
+  },
+  {
+    "issue_id": "test_api_issue",
+    "fix_timestamp": "2025-10-02T19:55:07.832704",
+    "fix_description": "Fix API endpoint routing configuration",
+    "fix_pattern": "configuration",
+    "success": false,
+    "verification_passed": false,
+    "recurrence_time": 1.006347,
+    "prevention_applied": false
+  }
+]

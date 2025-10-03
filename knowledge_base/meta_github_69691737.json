@@ -1,0 +1,23 @@
+{
+  "id": "meta_github_69691737",
+  "title": "adaptive-softmax",
+  "description": "Implements an efficient softmax approximation as described in the paper \"Efficient softmax approximation for GPUs\" (http://arxiv.org/abs/1609.04309)",
+  "url": "https://github.com/facebookresearch/adaptive-softmax",
+  "language": "Lua",
+  "stars": 397,
+  "forks": 48,
+  "created_at": "2016-09-30T18:29:43Z",
+  "updated_at": "2025-08-07T01:13:11Z",
+  "topics": [],
+  "readme_content": "# Adaptive Softmax\nThe adaptive-softmax project is a Torch implementation of the efficient softmax\napproximation for graphical processing units (GPU), described in the paper\n\"Efficient softmax approximation for GPUs\" (http://arxiv.org/abs/1609.04309).\n\nThis method is useful for training language models with large vocabularies.\nWe provide a script to train large recurrent neural network language models,\nin order to reproduce the results of the paper.\n\n## Dependencies\nThis project depends on the following packages:\n- [cutorch](https://github.com/torch/cutorch)\n- [cunn](https://github.com/torch/cunn)\n- [cudnn](https://github.com/soumith/cudnn.torch)\n- [torch-tds](https://github.com/torch/tds)\n- [torchnet](https://github.com/torchnet/torchnet)\n- [torch-rnnlib](https://github.com/facebookresearch/torch-rnnlib)\n- [penlight](https://github.com/stevedonovan/Penlight)\n\n## Examples\nIn order to train a recurrent neural network language model with default\nparameters, run\n\n```\nth train_big_lstm.lua -data DATA_DIR\n```\n\nwhere `DATA_DIR` is a directory containing three text files, `train.txt`,\n`valid.txt` and `test.txt`.\n\n### Penn TreeBank\n\nIn order to train a language model on PTB, run the command\n\n```\nth train_big_lstm.lua -data PATH/TO/PTB -nhid 512 -isz 512 -dropout 0.5 -usecudnn -cutoff 2000\n```\n\n### Text8\n\nIn order to train a language model on text8, run the command\n\n```\nth train_big_lstm.lua -data PATH/TO/TEXT8 -nhid 512 -isz 512 -dropout 0.25 -batchsize 128 -usecudnn -cutoff 2000,10000\n```\n\n### Billion word benchmark\n\nIn order to train a language model on the billion word benchmark,\nrun the command\n\n```\nth train_big_lstm.lua -data PATH/TO/BILLION/WORD -nhid 2048 -isz 256 -dropout 0.01 -batchsize 128 -testbatchsize 128 -threshold 2 -usecudnn -cutoff 4000,40000,200000\n```\n\n## Usage\n\nWe now briefly discuss how to use the adaptive softmax in your own projects.\nWe provide a Torch layer called `nn.AdaptiveSoftMax` and a corresponding\ncriterion, called `nn.AdaptiveLoss`, which must be used when training with\nthe adaptive softmax. The vocabulary must be sorted by decreasing frequency,\nso that frequent words correspond to small indices.\n\nThe constructor of the `nn.AdaptiveSoftMax` layer takes two arguments:\n`hidden_size`, which is the size of the input of the adaptive softmax\nand `cutoff`, which is a table indicating the limits of the different clusters.\nThe constructor of the `nn.AdaptiveLoss` criterion takes as only argument the\n`cutoff` table.\n\n```lua\nlocal nword       = 44372\nlocal hidden_size = 256\nlocal cutoff      = { 2000, 10000, nword }\n\nlocal decoder   = nn.AdaptiveSoftMax( hidden_size, cutoff )\nlocal criterion = nn.AdaptiveLoss( cutoff )\n```\n\nIn the previous example, we created an adaptive softmax with three clusters.\nThe first cluster contains the words from 1 to 2000, the second cluster\ncontains the words from 2001 to 10,000 and finally, the last cluster contains\nthe word from 10,001 to `nword`.\n\nThe `forward` method of the adaptive softmax takes a 2D tensor as input, and\noutput a table of 2D tensors of scores for each cluster (one tensor per\ncluster). In order to be efficient, the `nn.AdaptiveSoftMax` does not compute\nthe scores for all the word of the vocabulary for all the examples.It is thus\nnecessary to call the method `setTarget` of the `AdaptiveSoftMax` layer before\neach forward pass:\n\n```lua\ndecoder:setTarget( target )\n```\n\nwhere target is a 1D tensor. This ensure that the adaptive softmax will compute\nthe scores for the corresponding targets. It is also possible to call the method\n`getLogProb`, which computes the log probabilities for all the words of the\nvocabulary, given a 2D tensor of hidden vectors.\n\n## Contributing\n\nSee the CONTRIBUTING file for how to help out.\n\n## License\n\nadaptive-softmax is BSD-licensed. We also provide an additional patent grant.\n",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "timestamp": "2025-10-02T19:02:01.359556",
+  "tests": [
+    {
+      "name": "System Health Check",
+      "method": "GET",
+      "url": "http://localhost:8004/api/system/health",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 1.782,
+      "response_data": {
+        "status": "healthy",
+        "version": "2.0.0",
+        "uptime": 0.000657,
+        "components": {
+          "agent_selector": {
+            "status": "healthy",
+            "avg_selection_time": 0.0,
+            "cache_hit_rate": 0.0
+          },
+          "rag_system": {
+            "status": "healthy",
+            "total_documents": 0,
+            "collection_name": "unknown"
+          },
+          "home_assistant": {
+            "status": "healthy",
+            "base_url": "http://localhost:8123",
+            "devices": 0,
+            "automations": 0
+          },
+          "response_cache": {
+            "status": "healthy",
+            "hit_rate": 0.0,
+            "cache_size": 0
+          }
+        },
+        "performance_metrics": {
+          "response_time": 0.000659
+        }
+      }
+    },
+    {
+      "name": "System Metrics",
+      "method": "GET",
+      "url": "http://localhost:8004/api/system/metrics",
+      "status_code": 500,
+      "success": false,
+      "response_time_ms": 1.642,
+      "error": "{\"error\":\"HTTP_ERROR\",\"message\":\"Failed to retrieve system metrics\",\"details\":{\"status_code\":500},\"timestamp\":\"2025-10-02T19:02:01.373204\"}"
+    },
+    {
+      "name": "Voice Health Check",
+      "method": "GET",
+      "url": "http://localhost:8004/api/voice/health",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 6.13,
+      "response_data": {
+        "tts_service": {
+          "status": "healthy",
+          "port": 8086
+        },
+        "whisper_service": {
+          "status": "healthy",
+          "port": 8087
+        },
+        "overall": "healthy"
+      }
+    },
+    {
+      "name": "Voice Options",
+      "method": "GET",
+      "url": "http://localhost:8004/api/voice/options",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.9940000000000001,
+      "response_data": {
+        "voices": [
+          {
+            "id": "sonia_clean",
+            "name": "Sonia Clean",
+            "description": "Smooth British female voice"
+          },
+          {
+            "id": "assistant",
+            "name": "Assistant",
+            "description": "Friendly assistant voice"
+          },
+          {
+            "id": "professional",
+            "name": "Professional",
+            "description": "Professional male voice"
+          },
+          {
+            "id": "narrator",
+            "name": "Narrator",
+            "description": "Clear narrator voice"
+          },
+          {
+            "id": "excited",
+            "name": "Excited",
+            "description": "Energetic and excited voice"
+          },
+          {
+            "id": "calm",
+            "name": "Calm",
+            "description": "Calm and soothing voice"
+          }
+        ],
+        "default": "sonia_clean",
+        "engines": [
+          "chatterbox",
+          "edge_tts"
+        ],
+        "status": "available"
+      }
+    },
+    {
+      "name": "Enhanced RAG Health",
+      "method": "GET",
+      "url": "http://localhost:8004/api/rag/enhanced/health",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 1277.549,
+      "response_data": {
+        "status": "healthy",
+        "system_initialized": true,
+        "deduplication_enabled": true,
+        "hybrid_search_enabled": false,
+        "total_documents": 0,
+        "total_searches": 0,
+        "avg_latency_ms": 0.0,
+        "timestamp": "2025-10-02T19:02:02.659646"
+      }
+    },
+    {
+      "name": "Enhanced RAG Search",
+      "method": "POST",
+      "url": "http://localhost:8004/api/rag/enhanced/search",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 2.4859999999999998,
+      "response_data": {
+        "query": "artificial intelligence",
+        "results": [],
+        "total_found": 0,
+        "unique_results": 0,
+        "duplicates_filtered": 0,
+        "latency_ms": 0.03314018249511719,
+        "retrieval_method": "hybrid",
+        "deduplication_applied": true,
+        "hybrid_search_used": true,
+        "confidence_stats": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "std": 0.0
+        },
+        "timestamp": "2025-10-02T19:02:02.664141"
+      }
+    },
+    {
+      "name": "Enhanced MCP Tools",
+      "method": "GET",
+      "url": "http://localhost:8004/api/mcp/tools",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.864,
+      "response_data": {
+        "tools": [
+          {
+            "name": "web_search",
+            "description": "Search the web using DuckDuckGo",
+            "status": "available",
+            "category": "Web & Search"
+          },
+          {
+            "name": "web_browse",
+            "description": "Browse and preview a specific URL",
+            "status": "available",
+            "category": "Web & Search"
+          },
+          {
+            "name": "file_list",
+            "description": "List files and directories",
+            "status": "available",
+            "category": "File & System"
+          },
+          {
+            "name": "file_read",
+            "description": "Read contents of a file",
+            "status": "available",
+            "category": "File & System"
+          },
+          {
+            "name": "file_write",
+            "description": "Write content to a file",
+            "status": "available",
+            "category": "File & System"
+          },
+          {
+            "name": "directory_browse",
+            "description": "Browse directory structure",
+            "status": "available",
+            "category": "File & System"
+          },
+          {
+            "name": "calculator",
+            "description": "Perform mathematical calculations",
+            "status": "available",
+            "category": "Math & Calculation"
+          },
+          {
+            "name": "math_solver",
+            "description": "No description available",
+            "status": "available",
+            "category": "Math & Calculation"
+          },
+          {
+            "name": "knowledge_search",
+            "description": "Search the knowledge base",
+            "status": "available",
+            "category": "Knowledge & RAG"
+          },
+          {
+            "name": "rag_query",
+            "description": "Query the RAG system",
+            "status": "available",
+            "category": "Knowledge & RAG"
+          },
+          {
+            "name": "system_info",
+            "description": "Get system information",
+            "status": "available",
+            "category": "System & Info"
+          },
+          {
+            "name": "process_list",
+            "description": "List running processes",
+            "status": "available",
+            "category": "System & Info"
+          },
+          {
+            "name": "url_shortener",
+            "description": "Shorten a URL",
+            "status": "available",
+            "category": "Utility"
+          },
+          {
+            "name": "text_processor",
+            "description": "Analyze text (word count, etc.)",
+            "status": "available",
+            "category": "Utility"
+          }
+        ],
+        "total_tools": 14,
+        "timestamp": "2025-10-02T19:02:02.665741"
+      }
+    },
+    {
+      "name": "Self-Healing Health",
+      "method": "GET",
+      "url": "http://localhost:8004/api/healing/health",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.758,
+      "response_data": {
+        "status": "healthy",
+        "healing_system_operational": true,
+        "total_healing_attempts": 0,
+        "success_rate": 0,
+        "known_error_patterns": 6,
+        "timestamp": "2025-10-02T19:02:02.667206"
+      }
+    },
+    {
+      "name": "Self-Healing Stats",
+      "method": "GET",
+      "url": "http://localhost:8004/api/healing/stats",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.759,
+      "response_data": {
+        "total_healing_attempts": 0,
+        "successful_heals": 0,
+        "failed_heals": 0,
+        "success_rate": 0.0,
+        "known_error_types": [
+          "rag_dimension_mismatch",
+          "missing_method",
+          "import_error",
+          "module_not_found",
+          "connection_error",
+          "port_conflict"
+        ],
+        "successful_fixes": [],
+        "failed_fixes": [],
+        "recent_heals": []
+      }
+    },
+    {
+      "name": "Self-Healing Research",
+      "method": "POST",
+      "url": "http://localhost:8004/api/healing/research-unknown-error",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 1.856,
+      "response_data": {
+        "success": true,
+        "solution_found": true,
+        "solution": {
+          "error_type": "import_error",
+          "solution_type": "generic_import_fix",
+          "fix_instructions": [
+            "Check if the class/function exists in the module",
+            "Verify the module path is correct",
+            "Ensure __init__.py files are present",
+            "Check for circular imports"
+          ],
+          "confidence": 0.6,
+          "research_method": "common_solutions",
+          "details": {
+            "error_message": "ImportError: cannot import name \"ComplexAlgorithm\" from \"src.algorithms.ml_models\""
+          }
+        },
+        "fix_implementation": "# Generic import fix for: ImportError: cannot import name \"ComplexAlgorithm\" from \"src.algorithms.ml_models\"",
+        "confidence": 0.6,
+        "research_method": "common_solutions",
+        "execution_time_ms": 0.216,
+        "timestamp": "2025-10-02T19:02:02.671044"
+      }
+    },
+    {
+      "name": "Chat Functionality",
+      "method": "POST",
+      "url": "http://localhost:8004/api/chat/",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 2.939,
+      "response_data": {
+        "response": "Agent general processed: Hello, this is a test message",
+        "agent_used": "general",
+        "confidence": 0.85,
+        "reasoning": "Selected general agent based on task analysis",
+        "performance_metrics": {
+          "complexity_score": 0.0,
+          "reasoning_mode": "standard",
+          "parallel_reasoning": false
+        },
+        "cache_hit": false,
+        "response_time": 0.0006778240203857422,
+        "timestamp": "2025-10-02T19:02:02.674909"
+      }
+    },
+    {
+      "name": "Admin Operations",
+      "method": "GET",
+      "url": "http://localhost:8004/api/admin/",
+      "status_code": 404,
+      "success": false,
+      "response_time_ms": 0.903,
+      "error": "{\"detail\":\"Not Found\"}"
+    },
+    {
+      "name": "Knowledge Base Stats",
+      "method": "GET",
+      "url": "http://localhost:8004/api/knowledge/stats",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.671,
+      "response_data": {
+        "total_documents": 0,
+        "status": "operational",
+        "cache_size": 0
+      }
+    },
+    {
+      "name": "File Cleanup System",
+      "success": true,
+      "details": "Cleanup script exists and is accessible"
+    }
+  ],
+  "summary": {
+    "total_tests": 14,
+    "passed": 12,
+    "failed": 2,
+    "success_rate": 85.71428571428571
+  }
+}

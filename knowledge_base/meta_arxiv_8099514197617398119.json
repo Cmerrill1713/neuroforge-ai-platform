@@ -1,0 +1,21 @@
+{
+  "id": "meta_arxiv_8099514197617398119",
+  "title": "KM-GPT: An Automated Pipeline for Reconstructing Individual Patient Data from Kaplan-Meier Plots",
+  "description": "Reconstructing individual patient data (IPD) from Kaplan-Meier (KM) plots provides valuable insights for evidence synthesis in clinical research. However, existing approaches often rely on manual digitization, which is error-prone and lacks scalability. To address these limitations, we develop KM-GPT, the first fully automated, AI-powered pipeline for reconstructing IPD directly from KM plots with high accuracy, robustness, and reproducibility. KM-GPT integrates advanced image preprocessing, multi-modal reasoning powered by GPT-5, and iterative reconstruction algorithms to generate high-quality IPD without manual input or intervention. Its hybrid reasoning architecture automates the conversion of unstructured information into structured data flows and validates data extraction from complex KM plots. To improve accessibility, KM-GPT is equipped with a user-friendly web interface and an integrated AI assistant, enabling researchers to reconstruct IPD without requiring programming expertise. KM-GPT was rigorously evaluated on synthetic and real-world datasets, consistently demonstrating superior accuracy. To illustrate its utility, we applied KM-GPT to a meta-analysis of gastric cancer immunotherapy trials, reconstructing IPD to facilitate evidence synthesis and biomarker-based subgroup analyses. By automating traditionally manual processes and providing a scalable, web-based solution, KM-GPT transforms clinical research by leveraging reconstructed IPD to enable more informed downstream analyses, supporting evidence-based decision-making.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.18141",
+  "authors": "Authors:\nYao Zhao, \n      \n      Haoyue Sun, \n      \n      Yantian Ding, \n      \n      Yanxun Xu",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "research"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

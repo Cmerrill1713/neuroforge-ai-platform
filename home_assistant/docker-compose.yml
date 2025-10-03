@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - ./config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - "8123:8123"  # Expose Home Assistant port
+    environment:
+      - TZ=America/Los_Angeles
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0  # For Z-Wave devices
+      - /dev/ttyACM0:/dev/ttyACM0  # For Z-Wave devices
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.homeassistant.rule=Host(`homeassistant.local`)"
+      - "traefik.http.services.homeassistant.loadbalancer.server.port=8123"
+
+  # Optional: Add Mosquitto MQTT broker for IoT devices
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto:latest
+    restart: unless-stopped
+    ports:
+      - "1883:1883"  # MQTT port
+      - "9001:9001"  # WebSocket port
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    environment:
+      - TZ=America/Los_Angeles
+
+  # Optional: Add InfluxDB for data storage
+  influxdb:
+    container_name: influxdb
+    image: influxdb:latest
+    restart: unless-stopped
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./influxdb:/var/lib/influxdb2
+    environment:
+      - TZ=America/Los_Angeles
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=homeassistant123
+      - DOCKER_INFLUXDB_INIT_ORG=homeassistant
+      - DOCKER_INFLUXDB_INIT_BUCKET=homeassistant
+
+  # Optional: Add Grafana for visualization
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    ports:
+      - "3001:3000"  # Using 3001 to avoid conflict with our frontend
+    volumes:
+      - ./grafana:/var/lib/grafana
+    environment:
+      - TZ=America/Los_Angeles
+      - GF_SECURITY_ADMIN_PASSWORD=homeassistant123
+    depends_on:
+      - influxdb
+
+volumes:
+  homeassistant_config:
+  mosquitto_data:
+  influxdb_data:
+  grafana_data:

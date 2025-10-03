@@ -1,0 +1,28 @@
+{
+  "id": "meta_github_73328905",
+  "title": "vision",
+  "description": "Datasets, Transforms and Models specific to Computer Vision",
+  "url": "https://github.com/pytorch/vision",
+  "language": "Python",
+  "stars": 17181,
+  "forks": 7158,
+  "created_at": "2016-11-09T23:11:43Z",
+  "updated_at": "2025-09-28T21:23:27Z",
+  "topics": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "computer vision"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

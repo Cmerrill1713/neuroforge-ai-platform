@@ -1,0 +1,26 @@
+{
+  "id": "youtube_T963c-2-COk",
+  "title": "Let Your AI Coding Assistant Write Your Docs (Simple Prompt System)",
+  "description": "Let AI Write Your Engineering DOCS and keep track of your PROMPTS\n\nDiscover how to leverage AI coding assistants to turbocharge your productivity in one critical aspect of software engineering: WRITING DOCUMENTATION. \n\nA hidden use-case of AI coding assistants like Aider and Cursor is their ability to write documentation for you based on your code, and in this video, we'll show you how to do it. We'll also demonstrate this by looking at a real application we're building on the channel: the IndyDevTools, a toolkit built for developers to solve problems in a principle driven, reusable way using LLMs. We'll show you how to use AI to write documentation for your code, and how to keep track of your prompts so you can reuse them in the future. \n\nAI Coding is taking off and we're inside the rocket ship.\n\nBy using AI Coding Assistants to generating documentation you can ship code faster, you can communicate the value and use of your code, feature and product. We also show off the a new tool in the IndyDevTools called the Simple Prompt System, which is a tool that helps you keep track of your prompts and reuse them in the future. This two for one video is a must watch for any developer looking to level up their productivity and understanding of AI coding assistants.\n\nThis is all about your building your ability to use AI to write documentation for your engineering, and this is all about templating your prompts so you can reuse them in the future. \n\nFocus on the signal, not the noise.\n\nSee you in the next one.\n\n🤖 AI Coding Assistant\nhttps://aider.chat/\n\n🛠️ Build your REUSABLE PROMPT SYSTEM\nhttps://github.com/disler/indydevtools\n\n#aicoding #aiengineering #promptengineering",
+  "url": "https://www.youtube.com/watch?v=T963c-2-COk",
+  "upload_date": "20240226",
+  "duration": 718,
+  "view_count": 2527,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "software engineering",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "25e21b53ed09411873ffbaaba559994e"
+}

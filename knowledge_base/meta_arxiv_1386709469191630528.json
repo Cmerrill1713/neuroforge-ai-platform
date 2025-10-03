@@ -1,0 +1,22 @@
+{
+  "id": "meta_arxiv_1386709469191630528",
+  "title": "Evil Vizier: Vulnerabilities of LLM-Integrated XR Systems",
+  "description": "Extended reality (XR) applications increasingly integrate Large Language Models (LLMs) to enhance user experience, scene understanding, and even generate executable XR content, and are often called \"AI glasses\". Despite these potential benefits, the integrated XR-LLM pipeline makes XR applications vulnerable to new forms of attacks. In this paper, we analyze LLM-Integated XR systems in the literature and in practice and categorize them along different dimensions from a systems perspective. Building on this categorization, we identify a common threat model and demonstrate a series of proof-of-concept attacks on multiple XR platforms that employ various LLM models (Meta Quest 3, Meta Ray-Ban, Android, and Microsoft HoloLens 2 running Llama and GPT models). Although these platforms each implement LLM integration differently, they share vulnerabilities where an attacker can modify the public context surrounding a legitimate LLM query, resulting in erroneous visual or auditory feedback to users, thus compromising their safety or privacy, sowing confusion, or other harmful effects. To defend against these threats, we discuss mitigation strategies and best practices for developers, including an initial defense prototype, and call on the community to develop new protection mechanisms to mitigate these risks.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.15213",
+  "authors": "Authors:\nYicheng Zhang, \n      \n      Zijian Huang, \n      \n      Sophie Chen, \n      \n      Erfan Shayegani, \n      \n      Jiasi Chen, \n      \n      Nael Abu-Ghazaleh",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "llama",
+    "language model"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

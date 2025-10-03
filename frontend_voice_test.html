@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Voice Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
+        .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; margin: 10px; }
+        .btn:hover { background: #0056b3; }
+        .status { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Frontend Voice Test</h1>
+        <p>Test if the frontend can now play Sonia's voice!</p>
+        
+        <button id="testBtn" class="btn">🎵 Test Sonia Voice</button>
+        <div id="status"></div>
+        <div id="audioPlayer"></div>
+    </div>
+
+    <script>
+        const testBtn = document.getElementById('testBtn');
+        const statusDiv = document.getElementById('status');
+        const audioPlayerDiv = document.getElementById('audioPlayer');
+
+        function showStatus(message, type = 'success') {
+            statusDiv.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+
+        async function testVoice() {
+            testBtn.disabled = true;
+            testBtn.textContent = '🔄 Testing...';
+            showStatus('Testing frontend voice synthesis...', 'success');
+
+            try {
+                const response = await fetch('/api/voice/synthesize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: "Hello! This is Sonia speaking through the frontend. The voice integration is now working perfectly!",
+                        voice: "sonia_clean"
+                    })
+                });
+
+                if (response.ok) {
+                    const audioBlob = await response.blob();
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    
+                    audioPlayerDiv.innerHTML = `
+                        <h3>🎵 Generated Audio:</h3>
+                        <audio controls style="width: 100%; margin: 10px 0;">
+                            <source src="${audioUrl}" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p><strong>Status:</strong> Audio blob received successfully!</p>
+                    `;
+                    
+                    // Auto-play the audio
+                    const audio = new Audio(audioUrl);
+                    audio.play().then(() => {
+                        showStatus('✅ Success! Audio is playing through the frontend!', 'success');
+                    }).catch(e => {
+                        showStatus('⚠️ Audio generated but auto-play prevented. Click play button above.', 'error');
+                    });
+                } else {
+                    showStatus(`❌ Error: ${response.status} ${response.statusText}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`❌ Network error: ${error.message}`, 'error');
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = '🎵 Test Sonia Voice';
+            }
+        }
+
+        testBtn.addEventListener('click', testVoice);
+    </script>
+</body>
+</html>

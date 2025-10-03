@@ -1,0 +1,26 @@
+{
+  "id": "youtube_259KgP3GbdE",
+  "title": "Deploy ANY AI App to the Cloud FAST",
+  "url": "https://www.youtube.com/watch?v=259KgP3GbdE",
+  "description": "It's fun to build your AI apps locally, but in the end when you want to use it for real with other users on your platform, it can't be stuck in your development environment. Simply put, it has to be made available over the internet for other people to access in a secure way.\n\nSo in this video, I walk you through step by step how to deploy your AI apps to the cloud, using the local AI starter kit by n8n as the example! But this guide will work for really ANY AI app - built with Streamlit, OpenWebUI, Next.js, Docker apps, etc.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Plan of Attack\n01:39 - What I'm Deploying as an Example\n02:52 - Cloud Machine Setup w/ DigitalOcean\n05:59 - Steps 1-2 - Clone repo and cd into it\n06:10 - Steps 3-4 - Edit the .env and docker-compose.yml files\n08:08 - Steps 5-7 - Firewall Setup\n09:08 - Steps 8-13 - Reverse Proxy Setup with Nginx\n12:51 - Step 14 - DNS Record Setup\n14:06 - Steps 15-16 - SSL Certificate Installation\n15:02 - Step 17 - Spin up the Containers!\n16:57 - Testing our AI App Deployment\n20:49 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nBelow are the EXACT steps I cover in the video. This will work on any cloud provider as long as you have a Ubuntu Linux machine. If you don't, some of the steps might have to be a bit different but the process will be very similar. \n\nMost of the steps will be the same regardless of what you are deploying! Steps 1-4 and 17 are specifically for the local AI starter kit, the rest are very app agnostic.\n\nPrerequisite: You have a machine in the cloud with Docker installed.\n\nSTEPS:\n\n1. git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git\n\n2. cd self-hosted-ai-starter-kit\n\n3. Edit the .env file to edit POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, N8N_ENCRYPTION_KEY, and N8N_USER_MANAGEMENT_JWT_SECRET\n\nYou can edit the .env by entering the command \"nano .env\", adding in the contents, and then saving with \"Ctrl/Cmd + X, then enter Y, then hit enter\".\n\n4. Edit the docker-compose.yml file to set the Ollama command on line 44 to:\n\n\"sleep 3; OLLAMA_HOST=ollama:11434 ollama pull llama3.1; OLLAMA_HOST=ollama:11434 ollama pull nomic-embed-text\"\n\n5. sudo ufw enable\n\n6. sudo ufw allow 80 && sudo ufw allow 443\n\n7. sudo ufw reload\n\n8. sudo apt install nginx\n\n9. sudo nano /etc/nginx/sites-available/local-ai-app\n\n10. Put in the following content (with nano just like with the .env file):\n\nserver {\n  listen 80;\n  server_name [your subdomain].[your domain].com;\n  location / {\n    proxy_pass http://localhost:5678;\n    proxy_http_version 1.1;\n    proxy_set_header Upgrade $http_upgrade;\n    proxy_set_header Connection 'upgrade';\n    proxy_set_header Host $host;\n    proxy_cache_bypass $http_upgrade;\n  }\n}\n\nChange localhost:5678 to the port your app runs on if different!\n\n11. sudo ln -s /etc/nginx/sites-available/local-ai-app /etc/nginx/sites-enabled/\n\n12. Run \"sudo nginx -t\" just to verify the config\n\n13. sudo systemctl reload nginx\n\n14. Set DNS record for a subdomain to point to IPv4 of cloud machine (A record, host is your subdomain you want to use, value is the IPv4 of the machine)\n\n15. sudo apt install certbot python3-certbot-nginx\n\n16. sudo certbot --nginx -d [your subdomain].[your domain].com\n\n17. docker compose --profile cpu up -d (can run with Nvidia GPU enabled too)\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere is a link to the Local AI starter kit by n8n!\n\nhttps://github.com/n8n-io/self-hosted-ai-starter-kit\n\nIf you want to host on DigitalOcean like me, here is the link for that as well:\n\nhttps://www.digitalocean.com/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241007",
+  "duration": 1278,
+  "view_count": 26721,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

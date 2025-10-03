@@ -1,0 +1,26 @@
+{
+  "id": "youtube_3PFcAu_oU80",
+  "title": "I Forked Bolt.new and Made it WAY Better",
+  "url": "https://www.youtube.com/watch?v=3PFcAu_oU80",
+  "description": "HUGE Announcement: This Bolt.new fork is now called Bolt.diy and is the official open source version of Bolt.new! Check out the video for this here!\n\nhttps://www.youtube.com/watch?v=p8BTuuTr5iU\n\nEvery AI content creator and their mom has put out a video on Bolt.new. It makes sense - Bolt.new is an incredible open source platform to build full stack apps with AI. So I've done something way different with it that you WON'T see anywhere else. \n\nI forked Bolt.new (and it's now called Bolt.diy!) and made it way better by fixing the two problems I have with the platform: it costs too much (and those annoying token limits) and you can only ever use one LLM.\n\nIn this video, I show you how I've extended Bolt.new so you can run it locally with practically ANY LLM you could dream of using. This includes local models with Ollama (some fine-tuned for coding!), so you can run your own model and use Bolt.new completely for FREE with unlimited usage.\n\nThis is available for you to download and use below right now! My gift to you :)\n\nLet me be clear, Bolt.new is open source so running it locally isn't new - but being able to use more that just Claude is new with this fork and that is what allows you to use the platform for free, forever.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n01:42 - Quick Overview of Bolt.new\n03:20 - Unveiling my Version of Bolt.new\n04:11 - Showing all the LLMs Available\n04:39 - Demoing the Bolt.new Fork\n08:43 - Run this Yourself Right Now\n10:35 - Extending to Use more LLMs\n13:28 - How I Built This\n17:38 - Extending to Use more LLM Providers\n19:00 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin our Discourse community for Bolt.diy!\n\nhttps://thinktank.ottomator.ai\n\nHere is the link to Bolt.diy on GitHub. Check out the README to see future improvements planned!\n\nhttps://github.com/stackblitz-labs/bolt.diy\n\nInstall Ollama to run any local LLM you could dream of as an AI coding assistant for free:\n\nhttps://ollama.com/\n\nNote that this setup assumes you have Ollama hosted on the default port on your computer (http://localhost:11434).\n\nIf you want to extend the providers available in this version of Bolt.new, here is the documentation from the Vercel AI SDK I referenced in the video:\n\nhttps://sdk.vercel.ai/docs/foundations/providers-and-models\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241014",
+  "duration": 1168,
+  "view_count": 122362,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

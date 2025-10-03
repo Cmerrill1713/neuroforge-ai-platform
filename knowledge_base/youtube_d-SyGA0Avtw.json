@@ -1,0 +1,29 @@
+{
+  "id": "youtube_d-SyGA0Avtw",
+  "title": "AI Coding DEVLOG: Claude Code has CHANGED Software Engineering",
+  "description": "Zero hype - AI Coding will never be the same — Claude Code has changed the software engineering game.  \n\nClaude Code represents a paradigm shift in how we code. Or should I say, how we direct our AI coding assistants to code. When you couple Claude Code with MCP, Anthropics Model Context Protocol, you get something that changes the software engineering industry as we know it.\n\n🎥 Featured Links:\n\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=d-SyGA0Avtw\n\n- Pocket Pick (MCP Server): https://github.com/disler/pocket-pick\n- Claude Code Servers: https://github.com/modelcontextprotocol/servers\n- Claude Code Docs (MCP): https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/tutorials#set-up-model-context-protocol-mcp\n- Repomix: https://github.com/yamadashy/repomix\n- UV: https://docs.astral.sh/uv/#uv\n\nClaude Code has hit the scene and completely disrupted the way we approach AI coding. In this hands-on AI coding devlog, I (IndyDevDan) walk you through my journey of adopting Claude Code and the powerful Model Context Protocol (MCP). 🛠️\n\nIn this devlog, you’ll witness how Claude Code and MCP seamlessly enable agentic coding, transforming hours of manual coding into mere minutes. Using the new Claude 3.7 Sonnet, we build Pocket Pick—an MCP-first knowledge base tool—completely from scratch. With tools like Repomix to simplify context gathering, you'll see exactly why this agentic approach is the future of AI agents and software engineering.\n\n🚀 Here's what you'll get in this video:\n\n- How Claude Code leverages the Model Context Protocol (MCP) to revolutionize AI coding.\n- Real-world demonstration building PocketPick, a powerful MCP server for idea reuse and rapid engineering.\n- Clear insights into the importance of upfront planning (spec prompts) for maximizing AI coding efficiency.\n- Practical application of AI agents using Claude 3.7 Sonnet for next-level productivity gains.\n- My candid insights into why combining multiple AI coding tools—Claude Code, Aider, Cursor—provides superior results to sticking with just one.\n\nThis video isn't just theory; it's packed with practical advice, tips, and a complete workflow demonstration that proves Claude Code's place at the forefront of AI coding. If you're serious about staying relevant in the generative AI age, understanding Claude Code, MCP, and agentics isn't optional—it's essential.\n\n💡 Drop your thoughts below! Are you fully onboard with Claude Code and MCP? Or are you still holding back? Let's discuss.\n\nStay focused, keep building, and subscribe to elevate your AI coding journey!\n\n#programming #aicoding #agentics",
+  "url": "https://www.youtube.com/watch?v=d-SyGA0Avtw",
+  "upload_date": "20250310",
+  "duration": 1946,
+  "view_count": 58535,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "tutorial",
+    "coding",
+    "programming",
+    "software engineering",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "633e2af0ef3d2a4c20eede8de4e47ba2"
+}

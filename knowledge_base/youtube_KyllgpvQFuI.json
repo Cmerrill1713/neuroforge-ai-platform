@@ -1,0 +1,28 @@
+{
+  "id": "youtube_KyllgpvQFuI",
+  "title": "Notion API In 5 Minutes: Authentication (Python)",
+  "description": "In this 5 minute video, I'll show you how to easily authenticate with the Notion API. As a senior engineer I've wasted tons of time learning how to authenticate and get started with different APIs. Let me save you the trouble. \n\n\nLet's walk through the process step-by-step in this video and the next, so you can get up and running with the Notion API in no time. Whether you're a beginner or an experienced developer, this quickstart guide will have you authenticating with the Notion API like a pro. \n\n\nDon't waste any more time struggling with authentication – let code and crack the Notion API in just 5 minutes.\n\nGet the code: https://danisler.com/dev/notion-in-5-minutes\nNotion Developer Documentation  https://developers.notion.com/\nPython Library  https://github.com/ramnes/notion-sdk-py\n\n\n📕 My story\n\n\nWhat's up coders. I'm Dan Isler, an indie developer from Minneapolis, Minnesota.\n\n\nI've been coding for 10+ years now and am on a journey to build a small, sustainable software business.\nFollow along the journey as we build apps, discover tech, build integrations and discuss solopreneurship, indie hacking and more.\n\n\n💻 Convert your notion pages to lifelike speech.\n\n\n- Subvolver 👉 https://subvolver.com\n\n\n✅ Follow me here\n\n\n- Website https://danisler.com\n- Twitter https://twitter.com/IndyDevDan\n- Instagram https://www.instagram.com/indydevdan\n- Indie hackers https://www.indiehackers.com/IndyDevDan\n\n\n#️⃣ Hashtags\n\n\n#notion #notionapi #tutorial\n\n\n📖 Chapters\n00:00 Quick Intro\n00:32 Let's Code!\n01:00 Install\n01:28 Notion Client\n01:45 Notion Token\n02:40 Notion Page ID\n02:50 Connect Your Notion Integration\n03:10 Get Your Page ID\n03:40 Make Your First Request\n04:45 Authentication Complete!",
+  "url": "https://www.youtube.com/watch?v=KyllgpvQFuI",
+  "upload_date": "20230109",
+  "duration": 298,
+  "view_count": 4082,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "tutorial",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "e5bd336c6da52da2874b59f08cf85cc6"
+}

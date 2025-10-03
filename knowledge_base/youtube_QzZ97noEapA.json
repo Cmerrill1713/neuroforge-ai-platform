@@ -1,0 +1,27 @@
+{
+  "id": "youtube_QzZ97noEapA",
+  "title": "CRACKED Aider AND Claude Code Combo. Zuck ships Llama4. Gemini 2.5 Pro is SOTA?",
+  "description": "Soon - agents will be controlling agents. Aider AND Claude Code Combo is the first example of this.\n\nWith MCP Servers - we can really start rethinking software engineering. You can truly call ANY existing piece of software including the original, open source, best ai coding assistant: AIDER\n\n🚀 TOOLS AND RESOURCES FOR YOU:\n\nAider MCP Server (experimental): https://github.com/disler/aider-mcp-server\n\nState of AI Coding: https://agenticengineer.com/state-of-ai-coding/engineering-with-exponentials\n\nPrincipled AI Coding: https://agenticengineer.com/principled-ai-coding?y=QzZ97noEapA\n\nAider: https://aider.chat/\n\nClaude Code: https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview\n\nLlama4: https://ai.meta.com/blog/llama-4-multimodal-intelligence/\n\nGemini pricing: https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview\n\n🚀 In this game-changing video, we explore how to get the best of both worlds in AI coding - the power of Claude Code with the cost efficiency of other models like Gemini 2.5 Pro and Llama 4. The secret? Using Aider as an MCP server to delegate AI coding tasks away from Claude's expensive $15/million output tokens to more affordable alternatives.\n\n🔍 Meta just dropped Llama 4 with three incredible models - Behemoth, Maverick, and Scout - which are crushing benchmarks and competing with closed-source models like ChatGPT-4 and Gemini 2.5 Pro. For the first time, we're seeing open source-ish models topping intelligence charts!\n\n⚙️ I demonstrate how to set up an experimental Aider MCP server that lets Claude Code delegate coding tasks to ANY model Aider supports. This gives you three major advantages:\n\n1. Save money by using cheaper models for code generation\n2. Regain control over which model writes your code\n3. Tap into a powerful agentic pattern where Claude acts as orchestrator\n\n💻 Watch as I show this powerful combo in action - Claude Code handles the high-level planning while Aider with Gemini 2.5 Pro handles the actual code changes, creating a perfect editor-reviewer workflow that saves you significant costs while maintaining quality.\n\n🧠 With new models like Llama 4 Behemoth, Maverick, Scout, the mysterious Quasar Alpha, and Google's impressive Gemini 2.5 Pro (which shows an 8% improvement over Claude 3.7 with thinking tokens!), you have more options than ever for powerful, cost-effective compute.\n\n⭐ Aider remains one of the best AI coding tools because it's programmable, customizable, and gives you access to a massive number of models across different providers. This integration showcases the power of thinking in \"ands\" rather than \"ors\" - combining tools creates workflows greater than the sum of their parts.\n\n🔮 The AI landscape is rapidly evolving, but this approach lets you stay flexible and cost-effective while maximizing your compute advantage. Don't miss the State of AI Coding essay in the description for a comprehensive breakdown of where AI coding is headed!\n\n#aicoding #aiagents #indydevdan",
+  "url": "https://www.youtube.com/watch?v=QzZ97noEapA",
+  "upload_date": "20250407",
+  "duration": 1258,
+  "view_count": 22623,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "software engineering",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "870bd9e3474c381833e52a649cd3c29a"
+}

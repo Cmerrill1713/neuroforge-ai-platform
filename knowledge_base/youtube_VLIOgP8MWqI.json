@@ -1,0 +1,25 @@
+{
+  "id": "youtube_VLIOgP8MWqI",
+  "title": "Why fine-tune LLMs? GPT-4o fine-tune for PERFECT FLUX Image Prompts",
+  "description": "Fine-Tuning SOTA GPT-4o: You probably don't need it - BUT when you do, here's how to do it.\n\n🔗 Reusable OpenAI Fine-Tune Codebase\nhttps://github.com/disler/reusable-openai-fine-tune\n\n🔗 Black Forest Labs\nhttps://blackforestlabs.ai/\n\n🧠 OpenAI GPT-4o Fine-Tune\nhttps://openai.com/index/gpt-4o-fine-tuning/\n\n🧠 Replicate Black Forest Labs Flux-Pro\nhttps://replicate.com/black-forest-labs/flux-pro\n\n🚀 Welcome back, engineers! In this video, we dive into the incredible world of fine-tuning with the newly released GPT-4o. Have you ever wondered why you should fine-tune a model and when it makes sense to do so? We’ve got you covered!\n\n🔥 We’ll start with a discussion of the state-of-the-art fine-tuned GPT-4o model by Cosine Genie (ai software engineer) that’s setting new benchmarks on the software engineering verified benchmark. Discover how fine-tuning can bring game-changing performance gains and cost savings, potentially transforming your applications from good to exceptional.\n\n🛠️ Here’s what you can expect:\n- Legit Fine-Tuned Use Case: See a real-world application of a fine-tuned GPT-4o model.\n- When and Why to Fine-Tune: Understand the key scenarios where fine-tuning can be beneficial.\n- Fine-Tuned Code Base: Get hands-on with a code base designed for fine-tuning any OpenAI model, including the latest GPT-4o.\n\n📸 We’ll showcase \"Vision Grid\", an unreleased tool that uses fine-tuned GPT-4o to create stunning image prompts. Watch as we generate INSANELY, STUPIDLY, high-quality images using Black Forest Labs' Flux 1 image generation models, demonstrating the power of fine-tuned models in action.\n\n💡 We're talking prompt to prompt to images so whether you’re a prompt engineer, AI enthusiast, or software developer, this video is packed with insights on leveraging fine-tuning to enhance your GenAI projects. Learn how to reduce token usage, handle complex domain-specific tasks, and achieve consistently specific outputs. \n\n👍 Hit the like button, subscribe, and join us on this journey as we push the boundaries of generative AI. Stay ahead of the curve with cutting-edge techniques and practical applications that make your work more impactful and efficient.\n\n🛠️ Bonus: Get access to our reusable OpenAI fine-tuning codebase to jumpstart your own projects!\n\n🍓🍓 Fusion Prompt Chain\nhttps://youtu.be/0Z2BQPuUY50\n\n🍓 Prompt Chaining\nhttps://youtu.be/UOcYsrnSNok\n\n#promptengineering #midjourney #llm",
+  "url": "https://www.youtube.com/watch?v=VLIOgP8MWqI",
+  "upload_date": "20240826",
+  "duration": 1258,
+  "view_count": 6776,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "software engineering",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "24b28cd0fe33346f2d11dbfecab72c89"
+}

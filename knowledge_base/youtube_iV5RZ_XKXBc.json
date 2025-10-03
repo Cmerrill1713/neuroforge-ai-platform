@@ -1,0 +1,26 @@
+{
+  "id": "youtube_iV5RZ_XKXBc",
+  "title": "Your ULTIMATE n8n RAG AI Agent Template just got a Massive Upgrade",
+  "url": "https://www.youtube.com/watch?v=iV5RZ_XKXBc",
+  "description": "RAG is the go-to solution for giving AI agents access to your knowledge base, but traditional RAG has major limitations - it misses context by splitting key ideas/concepts, can't connect information across documents, and lacks dynamic analysis capabilities.\n\nThis ultimate n8n RAG template solves these issues using three key strategies:\n\n- Agentic RAG - Gives the agent intelligence to reason about how to explore your knowledge base (view full documents, semantic search, or query structured data based on the specific question)\n- Reranking - Expands initial search results then uses a specialized model to return only the most relevant information\n- Agentic Chunking - Uses an LLM to intelligently determine document split boundaries, preserving important context that traditional chunking destroys\n\nThe result is a RAG agent that actually works the way you'd want it to - understanding your documents holistically, connecting related information, and giving you the comprehensive answers you're looking for.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- Try Depot today for blazing fast cloud infrastructure for application builds: https://fandf.co/4247Qys\n- Give the remote agent sandboxes a try for free: https://depot.dev/docs/agents/claude-code/quickstart\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you're looking to join a community for early AI adopters to master AI Agents & RAG and transform your career or business, check out Dynamous:\nhttps://dynamous.ai\n\n- Neon (serverless Postgres I used in this video):\nhttps://get.neon.com/NsowhUM\n\n- Newest n8n RAG AI Agent Template:\nhttps://github.com/coleam00/ottomator-agents/tree/main/ultimate-n8n-rag-agent\n\nNOTE: The Langchain code node used in this template is only available when you self-host n8n. I found this out after posting this unfortunately since I do self-host my own n8n!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the Ultimate n8n RAG Agent Template (V4!)\n00:48 - The Flaws with Traditional (Basic) RAG\n02:08 - The Evolution of Our RAG Agent Template\n02:54 - Our Three RAG Strategies\n03:28 - RAG Strategy #1 - Agentic Chunking\n09:14 - Depot (Remote Agent Sandboxes with Claude Code)\n10:56 - RAG Strategy #2 - Agentic RAG\n14:05 - Agentic RAG in Action\n15:39 - RAG Strategy #3 - Reranking\n18:37 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250904",
+  "duration": 1159,
+  "view_count": 36237,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

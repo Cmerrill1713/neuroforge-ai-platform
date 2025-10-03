@@ -1,0 +1,23 @@
+{
+  "id": "youtube_6wR6xblSays",
+  "title": "Agentic Coding ENDGAME: Build your Claude Code SDK Custom Agents",
+  "description": "The AGENTIC ENDGAME is here. If you're still using one-size-fits-all AI agents, you're leaving MASSIVE value on the table.\n\n(secret launch: https://agenticengineer.com/tactical-agentic-coding?y=6wR6xblSays)\n\n🚀 Hey Engineers, IndyDevDan here - quick update.\n\nThe phase 2 Agentic Coding course (codename TAC) is coming soon.\nI've been working 996 to get this ready and can't wait to share it with you.\n\nNext week, on September 29th, we'll be releasing TAC + AH (extended lessons) right here on the channel.\n\nI'll see you there.\n\n🎥 VIDEO REFERENCES:\n\nPhase 2 is ALMOST here. Get caught up on the fundamentals of phase one of ai coding with Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=6wR6xblSays\n\nClaude Code SDK: https://docs.claude.com/en/docs/claude-code/sdk/sdk-overview\n\nEvery engineer following the ai coding into agentic coding path arrives at the same destination: custom agents. The Claude Code SDK, Codex CLI, and Gemini CLI are incredible tools - but they're built for everyone's codebase, not YOURS. This mismatch costs you hundreds of hours and millions of tokens as your codebase scales.\n\n🚀 In this advanced (sneak peak) lesson, we're going straight to the bare metal with the Claude Code SDK, showcasing 3/8 of the unique custom AI agents that demonstrate how to deploy compute across your entire engineering stack. From simple Pong agents to complex micro SDLC orchestration systems, we're revealing the alpha that exists in the hard, specific problems that out-of-the-box agents can't solve.\n\n💡 What You'll Master:\n- Building specialized custom agents with the Claude Code SDK that work for YOUR domain\n- Controlling the core four elements: system prompts, user prompts, tools, and models\n- Creating multi-agent orchestration systems with real-time UI updates\n- Scaling from better agents to more agents to custom AI agents\n- Understanding when to use custom agents vs. out-of-the-box solutions\n\n🔥 Key Insights:\nThe system prompt is the most important element of your custom agents - it affects EVERY user prompt your agent runs. We demonstrate how modifying just two aspects of an agent changes everything, from simple echo tools to complex agentic workflows handling plan-build-review-ship cycles.\n\n⚡ This is where all the alpha is in agentic engineering - in the specialized, domain-specific problems that require custom solutions. Whether you're building for yourself, your engineering team, or your customers, mastering custom agents with the Claude Code SDK is how you scale compute beyond the rest.\n\n🎯 The Agentic Path Is Clear:\n1. Better agents (optimize what you have)\n2. More agents (scale your compute)\n3. Custom agents (dominate your domain)\n\nRemember: If you're doing one-size-fits-all work, use the out-of-the-box agent. But as your work becomes more specialized, as you deploy agents across all aspects of your engineering, you need custom agents tailored to YOUR constraints and workflows.\n\nI'll see you next week for the launch of TAC + AH.\n\nStay focused and keep building.\n\n📖 Chapters\n00:00 Building Custom Agents\n00:00 Pong Agent\n05:15 Echo Agent\n11:40 Micro SDLC Agents\n15:05 TAC and the Agentic Path\n\n#claudecode #agenticcoding #customagents",
+  "url": "https://www.youtube.com/watch?v=6wR6xblSays",
+  "upload_date": "20250922",
+  "duration": 1016,
+  "view_count": 17116,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d8071ce9cd811071085392c8ec2caee2"
+}

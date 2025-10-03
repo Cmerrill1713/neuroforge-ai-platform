@@ -1,0 +1,23 @@
+{
+  "id": "meta_arxiv_7063827749068009582",
+  "title": "LLM4MG: Adapting Large Language Model for Multipath Generation via Synesthesia of Machines",
+  "description": "Based on Synesthesia of Machines (SoM), a large language model (LLM) is adapted for multipath generation (LLM4MG) for the first time. Considering a typical sixth-generation (6G) vehicle-to-infrastructure (V2I) scenario, a new multi-modal sensing-communication dataset is constructed, named SynthSoM-V2I, including channel multipath information, millimeter wave (mmWave) radar sensory data, RGB-D images, and light detection and ranging (LiDAR) point clouds. Based on the SynthSoM-V2I dataset, the proposed LLM4MG leverages Large Language Model Meta AI (LLaMA) 3.2 for multipath generation via multi-modal sensory data. The proposed LLM4MG aligns the multi-modal feature space with the LLaMA semantic space through feature extraction and fusion networks. To further achieve general knowledge transfer from the pre-trained LLaMA for multipath generation via multi-modal sensory data, the low-rank adaptation (LoRA) parameter-efficient fine-tuning and propagation-aware prompt engineering are exploited. Simulation results demonstrate that the proposed LLM4MG outperforms conventional deep learning-based methods in terms of line-of-sight (LoS)/non-LoS (NLoS) classification with accuracy of 92.76%, multipath power/delay generation precision with normalized mean square error (NMSE) of 0.099/0.032, and cross-vehicular traffic density (VTD), cross-band, and cross-scenario generalization. The utility of the proposed LLM4MG is validated by real-world generalization. The necessity of high-precision multipath generation for system design is also demonstrated by channel capacity comparison.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.14711",
+  "authors": "Authors:\nZiwei Huang, \n      \n      Shiliang Lu, \n      \n      Lu Bai, \n      \n      Xuesong Cai, \n      \n      Xiang Cheng",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "llama",
+    "deep learning",
+    "language model"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

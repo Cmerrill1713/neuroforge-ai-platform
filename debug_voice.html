@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Voice Issue</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
+        .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; margin: 10px; }
+        .btn:hover { background: #0056b3; }
+        .status { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        .log { background: #f8f9fa; color: #495057; padding: 10px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Debug Voice Issue</h1>
+        <p>Let's figure out why Sonia isn't speaking in the frontend...</p>
+        
+        <button id="testBtn" class="btn">🎵 Test Voice</button>
+        <button id="debugBtn" class="btn">🔍 Debug Info</button>
+        <button id="playBtn" class="btn">▶️ Play Test Audio</button>
+        
+        <div id="status"></div>
+        <div id="debugInfo"></div>
+        <div id="audioPlayer"></div>
+        <div id="log"></div>
+    </div>
+
+    <script>
+        const testBtn = document.getElementById('testBtn');
+        const debugBtn = document.getElementById('debugBtn');
+        const playBtn = document.getElementById('playBtn');
+        const statusDiv = document.getElementById('status');
+        const debugDiv = document.getElementById('debugInfo');
+        const audioPlayerDiv = document.getElementById('audioPlayer');
+        const logDiv = document.getElementById('log');
+
+        function log(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.textContent += `[${timestamp}] ${message}\n`;
+            console.log(message);
+        }
+
+        function showStatus(message, type = 'info') {
+            statusDiv.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+
+        async function testVoice() {
+            testBtn.disabled = true;
+            testBtn.textContent = '🔄 Testing...';
+            showStatus('Testing voice synthesis...', 'info');
+            log('Starting voice test...');
+
+            try {
+                const response = await fetch('/api/voice/synthesize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: "Hello! This is Sonia speaking. Can you hear me?",
+                        voice: "sonia_clean"
+                    })
+                });
+
+                log(`Response status: ${response.status}`);
+                log(`Response headers: ${JSON.stringify([...response.headers.entries()])}`);
+
+                if (response.ok) {
+                    const audioBlob = await response.blob();
+                    log(`Audio blob size: ${audioBlob.size} bytes`);
+                    log(`Audio blob type: ${audioBlob.type}`);
+                    
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    log(`Created audio URL: ${audioUrl}`);
+                    
+                    audioPlayerDiv.innerHTML = `
+                        <h3>🎵 Generated Audio:</h3>
+                        <audio controls style="width: 100%; margin: 10px 0;" id="audioElement">
+                            <source src="${audioUrl}" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p><strong>Blob Size:</strong> ${audioBlob.size} bytes</p>
+                        <p><strong>Blob Type:</strong> ${audioBlob.type}</p>
+                    `;
+                    
+                    // Try to play automatically
+                    const audio = new Audio(audioUrl);
+                    audio.preload = 'auto';
+                    
+                    audio.addEventListener('loadstart', () => log('Audio load started'));
+                    audio.addEventListener('loadeddata', () => log('Audio data loaded'));
+                    audio.addEventListener('canplay', () => log('Audio can play'));
+                    audio.addEventListener('play', () => log('Audio started playing'));
+                    audio.addEventListener('pause', () => log('Audio paused'));
+                    audio.addEventListener('ended', () => log('Audio ended'));
+                    audio.addEventListener('error', (e) => log(`Audio error: ${e.message}`));
+                    
+                    try {
+                        await audio.play();
+                        showStatus('✅ Audio is playing!', 'success');
+                        log('Audio play() succeeded');
+                    } catch (playError) {
+                        showStatus('⚠️ Audio generated but play() failed: ' + playError.message, 'error');
+                        log(`Audio play() failed: ${playError.message}`);
+                    }
+                } else {
+                    showStatus(`❌ Error: ${response.status} ${response.statusText}`, 'error');
+                    log(`HTTP Error: ${response.status} ${response.statusText}`);
+                }
+            } catch (error) {
+                showStatus(`❌ Network error: ${error.message}`, 'error');
+                log(`Network error: ${error.message}`);
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = '🎵 Test Voice';
+            }
+        }
+
+        function showDebugInfo() {
+            const info = {
+                userAgent: navigator.userAgent,
+                audioSupport: !!window.Audio,
+                mediaDevices: !!navigator.mediaDevices,
+                autoplayPolicy: 'unknown',
+                audioContext: !!window.AudioContext,
+                webAudioSupport: !!window.AudioContext || !!window.webkitAudioContext
+            };
+
+            // Check autoplay policy
+            const audio = new Audio();
+            audio.muted = true;
+            audio.play().then(() => {
+                info.autoplayPolicy = 'allowed';
+            }).catch(() => {
+                info.autoplayPolicy = 'blocked';
+            });
+
+            debugDiv.innerHTML = `
+                <h3>🔍 Browser Debug Info:</h3>
+                <div class="log">${JSON.stringify(info, null, 2)}</div>
+            `;
+            
+            log('Debug info collected');
+        }
+
+        function playTestAudio() {
+            // Create a simple test tone
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // A4 note
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.5);
+            
+            showStatus('🔊 Playing test tone (440Hz for 0.5s)', 'info');
+            log('Test tone played');
+        }
+
+        testBtn.addEventListener('click', testVoice);
+        debugBtn.addEventListener('click', showDebugInfo);
+        playBtn.addEventListener('click', playTestAudio);
+
+        // Initial debug info
+        showDebugInfo();
+        log('Debug page loaded');
+    </script>
+</body>
+</html>

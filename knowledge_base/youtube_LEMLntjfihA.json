@@ -1,0 +1,28 @@
+{
+  "id": "youtube_LEMLntjfihA",
+  "title": "Making o3 My CEO. Codex RIPS OFF Claude Code?! SOTA LLM Playbook",
+  "description": "OpenAI LEAPS AI FORWARD with o3 and o4-mini BUT their AI coding tool is a HALF BAKED COPY CAT of Claude Code!?\n\nMaybe I'm being too harsh on Codex, but it's clear that OpenAI is rushing to market with this tool. It's a half-baked RUSHED TO MARKET response to Claude Code.\n\n🎥 VIDEO REFERENCES:\n\nJust Prompt MCP Server REPO: https://github.com/disler/just-prompt\n\nPrincipled AI Coding: https://agenticengineer.com/principled-ai-coding?y=LEMLntjfihA\n\nAider MCP Server for Claude Code: https://youtu.be/QzZ97noEapA\n\no3 and o4‑mini: https://openai.com/index/introducing-o3-and-o4-mini/\n\nAider: https://aider.chat/\n\nClaude Code: https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview\n\nOpenAI just double-dropped o3 and o4-mini, establishing themselves as the premium model provider with state-of-the-art capabilities. Greg Brockman emphasized three game-changing insights about these models: they produce legitimately novel ideas, they're AI systems (not just models) with extensive tool-calling capabilities, and they can navigate codebases better than humans.\n\n🚀 In this breakdown, we compare how o3 stacks up against Gemini 2.5 Pro and 2.5 Flash in pricing and performance. While o3 is expensive at $40 per million output tokens, it's still 2/3 the price of o1 and delivers an 8% performance boost over Gemini 2.5 Pro on the Aider Polyglot Coding Leaderboard. The best part? You can combine o3 in high mode with GPT 4.1 to maximize performance while reducing costs.\n\n🛠️ We then dive into OpenAI's new Codex tool, which appears to be a rushed response to Claude Code. Through hands-on testing, we demonstrate how unbaked this tool is - it lacks cost tracking, performs unnecessary system checks, and exposes API keys. Compare this to Aider, Claude Code, Cursor Agent Mode, or even Cline, and Codex falls dramatically short.\n\n💡 Finally, we explore how to use o3 as your \"CEO\" for making hard engineering decisions. Using our MCP server, we can gather multiple model perspectives (like board members) and have o3 synthesize a final decision - perfect for questions like \"Which AI company should I bet on?\" or even simpler decisions like choosing between learning Python or TypeScript.\n\nAs Greg Brockman noted, if o3 is helping research leaders at OpenAI with system architecture and novel ideas, you can be confident it can help solve your engineering problems too.\n\n📖 Chapters\n00:00 o3 and o4-mini by Greg Brockman\n03:10 o3 Pricing, Context, and Aider Benchmark\n08:04 Codex is a Steaming Pile of Garbage\n20:10 o3 as a CEO MCP Server\n\n#aiengineering #aicoding #agenticcoding",
+  "url": "https://www.youtube.com/watch?v=LEMLntjfihA",
+  "upload_date": "20250421",
+  "duration": 1719,
+  "view_count": 27876,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "typescript",
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "61aae876cd6e303b5941052266f7c227"
+}

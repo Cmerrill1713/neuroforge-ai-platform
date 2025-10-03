@@ -1,0 +1,72 @@
+{
+  "timestamp": "2025-10-02T21:19:28.156155",
+  "project_root": "/Users/christianmerrill/Prompt Engineering",
+  "validation_log": [
+    "[21:19:28] [INFO] \ud83d\ude80 Starting MANDATORY system validation...",
+    "[21:19:28] [INFO] ============================================================",
+    "[21:19:28] [INFO] \n\ud83d\udd0d Running: Documentation Exists",
+    "[21:19:28] [INFO] \ud83d\udccb Validating required documentation...",
+    "[21:19:28] [INFO] \u2705 Found: SYSTEM_OVERVIEW_MASTER.md",
+    "[21:19:28] [INFO] \u2705 Found: SYSTEM_ARCHITECTURE_MAP.md",
+    "[21:19:28] [INFO] \u2705 Found: FEATURE_DEPENDENCY_MAP.md",
+    "[21:19:28] [INFO] \u2705 Found: CURSOR_WORK_REQUIREMENTS.md",
+    "[21:19:28] [INFO] \n\ud83d\udd0d Running: Documentation Content",
+    "[21:19:28] [INFO] \ud83d\udcd6 Validating documentation content...",
+    "[21:19:28] [INFO] \n\ud83d\udd0d Running: System State",
+    "[21:19:28] [INFO] \ud83d\udd0d Validating system state...",
+    "[21:19:28] [INFO] \u2705 System CLI executed successfully",
+    "[21:19:28] [INFO] \n\ud83d\udd0d Running: Port Availability",
+    "[21:19:28] [INFO] \ud83d\udd0c Validating port availability and service health...",
+    "[21:19:28] [INFO] \u2705 Port 8004 in use but service is healthy",
+    "[21:19:28] [INFO] \u2705 Port 3000 in use but frontend is accessible",
+    "[21:19:28] [INFO] \u2705 Port 11434 in use but Ollama is healthy",
+    "[21:19:28] [WARNING] \u26a0\ufe0f WARNING: Optional port 8000 is in use",
+    "[21:19:28] [WARNING] \u26a0\ufe0f WARNING: Optional port 8005 is in use",
+    "[21:19:28] [WARNING] \u26a0\ufe0f WARNING: Optional port 8086 is in use",
+    "[21:19:28] [WARNING] \u26a0\ufe0f WARNING: Optional port 8087 is in use",
+    "[21:19:28] [WARNING] \u26a0\ufe0f WARNING: Optional port 8090 is in use",
+    "[21:19:28] [INFO] \n\ud83d\udd0d Running: Dependencies",
+    "[21:19:28] [INFO] \ud83d\udce6 Validating dependencies...",
+    "[21:19:28] [INFO] \u2705 requirements.txt found",
+    "[21:19:28] [INFO] \u2705 frontend/package.json found",
+    "[21:19:28] [INFO] \u2705 Found main entry point: main.py",
+    "[21:19:28] [INFO] \u2705 Found main entry point: consolidated_api_optimized.py",
+    "[21:19:28] [INFO] \n\ud83d\udd0d Running: Service Health",
+    "[21:19:28] [INFO] \ud83c\udfe5 Validating service health...",
+    "[21:19:28] [INFO] \u2705 Main API (8004) is healthy"
+  ],
+  "blocking_errors": [],
+  "warnings": [
+    "Optional port 8000 is in use",
+    "Optional port 8005 is in use",
+    "Optional port 8086 is in use",
+    "Optional port 8087 is in use",
+    "Optional port 8090 is in use"
+  ],
+  "can_proceed": true,
+  "required_docs_status": {
+    "SYSTEM_OVERVIEW_MASTER.md": {
+      "exists": true,
+      "size": 8222,
+      "modified": 1759442047.455874
+    },
+    "SYSTEM_ARCHITECTURE_MAP.md": {
+      "exists": true,
+      "size": 10198,
+      "modified": 1759457394.2614865
+    },
+    "FEATURE_DEPENDENCY_MAP.md": {
+      "exists": true,
+      "size": 8674,
+      "modified": 1759442047.455724
+    },
+    "CURSOR_WORK_REQUIREMENTS.md": {
+      "exists": true,
+      "size": 11182,
+      "modified": 1759457394.2696867
+    }
+  },
+  "system_state": "unknown",
+  "port_status": {},
+  "dependencies_status": "unknown"
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonia Voice Integration Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: rgba(255,255,255,0.1); 
+            padding: 30px; 
+            border-radius: 15px; 
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .status { 
+            padding: 15px; 
+            margin: 15px 0; 
+            border-radius: 8px; 
+            font-weight: bold;
+        }
+        .success { background: rgba(76, 175, 80, 0.3); border: 1px solid #4CAF50; }
+        .error { background: rgba(244, 67, 54, 0.3); border: 1px solid #f44336; }
+        .info { background: rgba(33, 150, 243, 0.3); border: 1px solid #2196F3; }
+        .btn { 
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4); 
+            color: white; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn:disabled { 
+            background: #666; 
+            cursor: not-allowed; 
+            transform: none;
+        }
+        .voice-select { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 10px 0; 
+            border: none; 
+            border-radius: 8px; 
+            background: rgba(255,255,255,0.9);
+            color: #333;
+        }
+        .text-input { 
+            width: 100%; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border: none; 
+            border-radius: 8px; 
+            min-height: 120px; 
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            font-family: inherit;
+        }
+        .audio-player { 
+            margin: 20px 0; 
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        h1 { text-align: center; margin-bottom: 30px; }
+        h2 { color: #FFD700; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Sonia Voice Integration Test</h1>
+        <p style="text-align: center; font-size: 18px;">Test the complete Sonia voice integration through all API layers</p>
+        
+        <div id="status"></div>
+        
+        <h2>🔧 System Status</h2>
+        <div id="systemStatus"></div>
+        
+        <h2>🎵 Voice Test</h2>
+        <div>
+            <label for="voice">Select Voice:</label>
+            <select id="voice" class="voice-select">
+                <option value="sonia_clean">Sonia Clean - Smooth British female voice</option>
+                <option value="assistant">Assistant - Friendly assistant voice</option>
+                <option value="sultry">Sultry - Sultry feminine voice</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="text">Text for Sonia to speak:</label>
+            <textarea id="text" class="text-input" placeholder="Enter text for Sonia to speak...">Hello! This is Sonia speaking. I'm your AI assistant with a smooth British accent. The voice integration is now working perfectly through all API layers!</textarea>
+        </div>
+        
+        <button id="testBtn" class="btn">🎵 Test Sonia Voice</button>
+        <button id="healthBtn" class="btn">🔍 Check System Health</button>
+        
+        <div id="audioPlayer" class="audio-player"></div>
+    </div>
+
+    <script>
+        const voiceSelect = document.getElementById('voice');
+        const textInput = document.getElementById('text');
+        const testBtn = document.getElementById('testBtn');
+        const healthBtn = document.getElementById('healthBtn');
+        const statusDiv = document.getElementById('status');
+        const systemStatusDiv = document.getElementById('systemStatus');
+        const audioPlayerDiv = document.getElementById('audioPlayer');
+
+        function showStatus(message, type = 'info') {
+            statusDiv.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+
+        async function checkSystemHealth() {
+            healthBtn.disabled = true;
+            healthBtn.textContent = '🔄 Checking...';
+            showStatus('Checking system health...', 'info');
+
+            try {
+                const response = await fetch('/api/system/health');
+                const data = await response.json();
+
+                if (data.status === 'healthy') {
+                    showStatus('✅ System is healthy! All services running.', 'success');
+                    
+                    let servicesHtml = '<h3>Service Status:</h3>';
+                    for (const [service, info] of Object.entries(data.services)) {
+                        const status = info.status === 'running' ? '✅' : '❌';
+                        servicesHtml += `<p>${status} <strong>${service}</strong>: ${info.status} (Port ${info.port})</p>`;
+                    }
+                    systemStatusDiv.innerHTML = servicesHtml;
+                } else {
+                    showStatus(`⚠️ System status: ${data.status}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`❌ Health check failed: ${error.message}`, 'error');
+            } finally {
+                healthBtn.disabled = false;
+                healthBtn.textContent = '🔍 Check System Health';
+            }
+        }
+
+        async function testSoniaVoice() {
+            const text = textInput.value.trim();
+            const voice = voiceSelect.value;
+            
+            if (!text) {
+                showStatus('Please enter some text to speak!', 'error');
+                return;
+            }
+
+            testBtn.disabled = true;
+            testBtn.textContent = '🔄 Generating...';
+            showStatus('Generating speech with Sonia...', 'info');
+
+            try {
+                const response = await fetch('/api/voice/synthesize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: text,
+                        voice: voice
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showStatus(`✅ Success! Generated with ${data.engine} engine`, 'success');
+                    
+                    if (data.audio_file) {
+                        const audio = new Audio(`/${data.audio_file}`);
+                        audioPlayerDiv.innerHTML = `
+                            <h3>🎵 Generated Audio:</h3>
+                            <audio controls style="width: 100%; margin: 10px 0;">
+                                <source src="/${data.audio_file}" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="margin-top: 15px;">
+                                <p><strong>File:</strong> ${data.audio_file}</p>
+                                <p><strong>Engine:</strong> ${data.engine}</p>
+                                <p><strong>Voice:</strong> ${data.voice}</p>
+                                <p><strong>Text:</strong> "${data.text}"</p>
+                            </div>
+                        `;
+                        
+                        // Auto-play the audio
+                        audio.play().catch(e => console.log('Auto-play prevented:', e));
+                    }
+                } else {
+                    showStatus(`❌ Error: ${data.error}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`❌ Network error: ${error.message}`, 'error');
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = '🎵 Test Sonia Voice';
+            }
+        }
+
+        testBtn.addEventListener('click', testSoniaVoice);
+        healthBtn.addEventListener('click', checkSystemHealth);
+        
+        // Load available voices on page load
+        async function loadVoices() {
+            try {
+                const response = await fetch('/api/voice/options');
+                const data = await response.json();
+                
+                voiceSelect.innerHTML = '';
+                data.voices.forEach(voice => {
+                    const option = document.createElement('option');
+                    option.value = voice.id;
+                    option.textContent = `${voice.name} - ${voice.description}`;
+                    voiceSelect.appendChild(option);
+                });
+                
+                // Set default to Sonia
+                voiceSelect.value = 'sonia_clean';
+                showStatus('✅ Voices loaded successfully! Sonia is ready.', 'success');
+            } catch (error) {
+                showStatus('⚠️ Could not load voices, using defaults', 'error');
+            }
+        }
+
+        // Auto-check system health on load
+        window.addEventListener('load', () => {
+            loadVoices();
+            setTimeout(checkSystemHealth, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "id": "youtube_Cy1Z8J0anKw",
+  "title": "Last LLM Standing WINS: Groq LPU - Anthropic OPUS - OpenAI - Gemini Pro -  LLM Benchmarks",
+  "description": "WHICH LLM Will Reign Supreme? Here's an LLM Benchmark you can FEEL\n\nEver wondered how leading language models stack up in a head-to-head challenge? In our latest video, we simplify the complex world of LLM benchmarks with a BATTLE ROYALE that pits Grok, Vertex Pro, GPT-3.5 Turbo, and Claude Sonnet against each other. Get ready for an interesting showdown that will change the way you look at language models.\n\nThe rules are simple...\n\nLAST LLM STANDING WINS\n\nJoin us as we show off a unique benchmarking tool built in a couple hours thanks to AI Coding Assistants like Aider and Cursor. Last LLM Standing Wins is a simple LLM benchmarking tool where you utilize prompt testing framework promptfoo to generate your tests and then visualize how they perform in a deterministic visual way. We setup several battles where Grok, Vertex Pro, GPT-3.5 Turbo, and Claude Sonnet battle it out over a series of prompt testing challenges surrounding NLQ to SQL prompt tests. Experience the thrill of live competition and gain insights like never before.\n\nStep into the arena with us as we handpick top language models to face off for speed, accuracy and cost. 'Last LLM Standing Wins' benchmark makes it easy to compare the performance of different models, revealing their strengths and weaknesses. The best part is that it's built ontop of the prompt testing framework promptfoo, which is a testing driven prompt engineering framework that allows you to test your prompts and truly KNOW if  your LLM is performing well or not for your specific use case.\n\nThe battlefield is set, and the contenders are ready. With each model running the same tests, we meticulously evaluate their performance, uncovering strengths and weaknesses. Grok's LPU mixtral model FLASHES through the challenges, bagging the frugal award for least cost, while others vie for the bullseye award for error-free executions. We witness Anthropics Claude models struggling with rate limits and GPT-3.5 Turbo's impressive balance between speed and accuracy.\n\nThe suspense is real as we tally the scores, revealing which LLMs stand tall and which crumble under the pressure. By applying a transparent, simple and easy-to-understand benchmarking tool, we shine a light on the performance of each model, bestowing awards for efficiency and accuracy. Every moment is packed with action and enlightening insights, making it impossible to look away.\n\nThe prompt is the new fundamental unit of knowledge work and programming.\n\nMaster the prompt, and you master the LLM.\n\n🛠️ Prompt Testing\nhttps://promptfoo.dev/\n\n🧪 Testing Driven Prompt Engineering\nhttps://youtu.be/KhINc5XwhKs\n\n🆚 Gemini Pro vs GPT 3.5 turbo LLM Benchmarks\nhttps://youtu.be/KhINc5XwhKs\n\n💬 Text to SQL to Results\nhttps://talktoyourdatabase.com/\n\n🏁 Claude Benchmarks\nhttps://www.anthropic.com/news/claude-3-family\n\n📖 Chapters\n00:00 LLM Benchmarks are biased and complex\n00:36 Last LLM Standing Wins\n02:20 GPT-4 vs Claude Opus\n03:44 Promptfoo Testing Framework\n05:44 Speedster Test - GPT-3.5 Turbo vs GROQ\n09:00 Final Mega LLM Battle\n10:50 Groq LPU Mixtral is insanely fast\n12:20 Benchmark your personal prompts\n13:22 A real production use case\n15:10 KNOW that your prompts are working\n\n#llmbenchmark #bestllm #openai",
+  "url": "https://www.youtube.com/watch?v=Cy1Z8J0anKw",
+  "upload_date": "20240311",
+  "duration": 999,
+  "view_count": 3091,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "programming",
+    "database"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "0e1d879c5cc85f05b153bb93ee882ba9"
+}

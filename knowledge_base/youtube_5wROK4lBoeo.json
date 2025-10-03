@@ -1,0 +1,28 @@
+{
+  "id": "youtube_5wROK4lBoeo",
+  "title": "Talk To Your Database - A GPT Multi Agent Postgres Data Analytics Tool",
+  "description": "The way we code is changing and so is the way we interact with our databases.\n\nThis video marks the END of a series where we explored the comprehensive process of building an AI agent from the ground up to analyze our data. Understanding the \"how\" is just as vital as knowing the \"what\". We built a Multi-Agent Postgres Data analytics tool with new LLM based technologies like GPT-3.5, GPT-4, GPT-4 Turbo, AIDER, AutoGen, Guidance, Assistants API and more. We utilized existing and new prompt engineering to craft our more than 5 versions of our multi-agents data analytics tool. We dove deep in to multi-agent conversation flows, orchestration, memory management, chat monitoring and more. We explored the future of programming and how we can leverage AI to accelerate our ability to generate valuable products for both ourselves and the organizations we collaborate with.\n\nWith every video, every commit and every line of code it's become clear that the landscape of software engineering is changing dramatically. Those that embrace the change will be the ones who thrive in the future. Those that don't will be left behind. \n\nI want to thank everyone at OpenAI for development such incredible technology.\nI also want to thank everyone who built every tool we used throughout this series.\nYou are pushing the world into the future and I'm grateful to be a part of it.\n\nOn this channel, we don't just talk - we think, plan, and build. With the ultimate goal of PULLING the future of programming into the present to accelerate our ability to generate valuable products for both ourselves and the organizations we collaborate with.\n\nThank you for watching and I hope you enjoyed and learned from this series as much as I did.\n\n🚀 TTYDB - Talk To Your Database\nhttps://talktoyourdatabase.com\nor\nhttps://talktoyourdb.com\n\n🤖 The Postgres AI Data Analytics Series\nhttps://www.youtube.com/playlist?list=PLS_o2ayVCKvDzj2YxeFqMq9UbR1PkPEh0\n\n💻 The Codebase\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v10-talk-to-your-database-beta-launch\n\nYoutube Exclusive Beta Launch Code: 9999\n\n📘 Chapters\n00:00 The Way We Interact With Data Is Changing\n00:30 Great Questions Yield Great Outcomes\n01:15 Talk To Your Database\n02:15 Hyper Minimal UI\n03:10 Our first AI Query\n04:05 Insanely concise NLQ - users join job limit 10\n05:40 Let's do some nlq data analytics\n07:12 Copy SQL and Download at anytime\n07:30 Let's be real - ttydb is not perfect\n08:45 Great way to quickly explore data \n09:30 All the value of SQL without the SQL\n10:16 Four words - 10x your database interactions\n12:30 Let's talk about SECURITY \n14:50 Customize your TTYDB Experience \n15:35 Automatic data expirations\n16:13 We keep your data safe but not having it\n16:28 Integrated Community Development\n17:23 Don't be spammy, annoying or angry - TTYDB AI agents will block you\n17:43 I'm actively using TTYDB already\n18:30 We're going to tweak, improve and optimize the AI agents\n18:40 The biggest issue right now \n19:10 What's next for the channel? \n20:00 We took this product from Zero to One\n21:10 Here's what you can expect \n21:35 Prelaunch Deal - 50% off for life \n21:54 The series is over - I'm kinda sad - someones watching\n22:49 One last thing\n\n🐛 tags\n#dataanalytics #promptengineering #aiprogramming",
+  "url": "https://www.youtube.com/watch?v=5wROK4lBoeo",
+  "upload_date": "20231204",
+  "duration": 1485,
+  "view_count": 4893,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "programming",
+    "software engineering",
+    "api",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "d6426da7f8cb3133b440d1e36ed4b5fa"
+}

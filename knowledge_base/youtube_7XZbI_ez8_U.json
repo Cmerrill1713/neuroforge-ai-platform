@@ -1,0 +1,26 @@
+{
+  "id": "youtube_7XZbI_ez8_U",
+  "title": "The GLOW-UP Every AI Agent Needs",
+  "url": "https://www.youtube.com/watch?v=7XZbI_ez8_U",
+  "description": "I get asked a lot what my process looks like for building an AI agent, so I’m kicking off a mini series showing my entire flow! In this series, we’ll build AI agent that can consume entire GitHub repositories so you can ask it questions about all the code in the repo.\n\nIn the last video, we turned our Github agent prototype into a full blown agent with Pydantic AI. But there was no frontend, just a terminal. So in this video, the 4th one in the series, we’ll build an API endpoint around our agent and hook it into a full blow frontend, all in minutes! Best glow up we could give our new friend and it's all using a brand new tool I made as a part of the Live Agent Studio called \"Agent 0\"! \n\nNow there are many other ways to build an agent frontend, and I’ll cover that in the next video in the series through building a custom frontend for our agent with bolt.diy. But I wanted to start with this since it's super simple and a tool I built just as a gift to you. :)\n\nAgent 0 is different than everything else I've seen. I haven’t found another platform that easily allows you to run any agent locally and hook it into a frontend that manages conversation and chat history for you. You could even host your Supabase locally to make the entire conversation 100% local! Open AI assistants and similar tools aren’t local and applications like Open WebUI are actually decently complicated to hook in custom agents.\n\nPlaylist for this AI Agent series:\n\nhttps://www.youtube.com/playlist?list=PLyrg3m7Ei-MrSXWv90oXXbuSsbdOP9j2n\n\nCouple small notes:\n- Agent 0 is called that not to rip on Agent Zero (which I just heard about), but because of the URL for accessing it as the \"0th\" agent on the platform: /agent/0\n- Speaking of URLs, I mean to say forward slash and not black slash for the URLs in the video!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nRegister now for the oTTomator AI Agent Hackathon with a $6,000 prize pool!\n\nhttps://studio.ottomator.ai/hackathon/register\n\nAll code for this Pydantic GitHub AI agent can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-github-agent\n\nHere is the sample Python agent I used as the template in the video:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/~sample-python-agent~\n\nTo use Agent 0, go to studio.ottomator.ai, sign in, and then you'll see Agent 0 in your navigation!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro to Agent 0 for Our Pydantic Agent\n02:43 - AI Agent Roadmap - Where We Are\n04:36 - Live Agent Studio and Agent 0\n08:25 - The Evolution of Our Agent\n09:56 - Supabase Database Setup\n12:44 - Making our Pydantic Agent an API\n25:20 - Setting up Agent 0\n27:19 - Running Our Agent as Agent 0\n30:08 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIf you're more technical: I also mentioned in the video I'd speak to why I'm using the HTTP protocol for the Live Agent Studio. HTTP is slower than other protocols I could use like JSON RPC 2.0 and SSE like Claude's MCP uses to an extent. The reason I'm using anyway is because it's the simplest and right now there are not good practices established for using other protocols for agents at this point. I know that this is a HUGE area of research in the industry (and it is for me!) so at some point I'm almost certainly making a switch but it'll be a lot of work to get there!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20250109",
+  "duration": 1870,
+  "view_count": 21966,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "wikipedia_Docker_(software)",
+  "title": "Docker (software)",
+  "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+  "content": "Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.[5] The service has both free and premium tiers. The software that hosts the containers is called Docker Engine.[6] It was first released in 2013 and is developed by Docker, Inc.[7]\n\nDocker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.\n\nContainers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.[8] Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.[6]\n\nDocker can package an application and its dependencies in a virtual container that can run on any Linux, Windows, or macOS computer. This enables the application to run in a variety of locations, such as on-premises, in public (see decentralized computing, distributed computing, and cloud computing) or private cloud.[10] When running on Linux, Docker uses the resource isolation features of the Linux kernel (such as cgroups and kernel namespaces) and a union-capable file system (such as OverlayFS)[11] to allow containers to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines. Docker on macOS uses a Linux virtual machine to run the containers.[12]\n\nBecause Docker containers are lightweight, a single server or virtual machine can run several containers simultaneously.[13] A 2018 analysis found that a typical Docker use case involves running eight containers per host, and that a quarter of analyzed organizations run 18 or more per host.[14] It can also be installed on a single board computer like the Raspberry Pi.[15]\n\nThe Linux kernel's support for namespaces mostly[16] isolates an application's view of the operating environment, including process trees, network, user IDs and mounted file systems, while the kernel's cgroups provide resource limiting for memory and CPU.[17] Since version 0.9, Docker includes its own component (called libcontainer) to use virtualization facilities provided directly by the Linux kernel, in addition to using abstracted virtualization interfaces via libvirt, LXC and systemd-nspawn.[18][9][10][19]\n\nDocker implements a high-level API to provide lightweight containers that run processes in isolation.[20]\n\nThe Docker software as a service offering consists of three components:\n\nA Dockerfile is a text file that commonly specifies several aspects of a Docker container: the Linux distribution, installation commands for the programming language runtime environment and application source code.\n\nAn example of a Dockerfile:[28]\n\ndotCloud Inc. was founded by Kamel Founadi, Solomon Hykes [fr], and Sebastien Pahl[43] during the Y Combinator Summer 2010 startup incubator group and launched in 2011, and renamed to Docker Inc in 2013.[44] Hykes started the Docker project in France as an internal project within dotCloud, a platform-as-a-service company.[45]\n\nDocker debuted to the public in Santa Clara at PyCon in 2013.[46] It was released as open-source in March 2013.[20] At the time, it used LXC as its default execution environment. One year later, with the release of version 0.9, Docker replaced LXC with its own component, libcontainer, which was written in the Go programming language.[18][47]\n\nIn 2017, Docker created the Moby project [d] for open research and development.[48]",
+  "source_type": "wikipedia_article",
+  "domain": "general_knowledge",
+  "keywords": [
+    "wikipedia",
+    "ai",
+    "programming",
+    "technology",
+    "docker (software)"
+  ],
+  "retrieval_tags": [
+    "wikipedia",
+    "article",
+    "ai",
+    "programming",
+    "knowledge"
+  ]
+}

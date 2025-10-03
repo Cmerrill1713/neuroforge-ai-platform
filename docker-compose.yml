@@ -1,79 +1,54 @@
 version: '3.8'
 
 services:
-  # Redis service
-  redis:
-    image: redis:7-alpine
-    container_name: ai-chat-redis
+  ai-assistant-api:
+    build: .
     ports:
-      - "6380:6379"
-    volumes:
-      - redis_data:/data
-    networks:
-      - ai-chat-network
-    command: redis-server --appendonly yes
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # Backend API service
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile.backend
-    container_name: ai-chat-backend
-    ports:
-      - "8002:8002"
+      - "8004:8004"
     environment:
-      - REDIS_URL=redis://redis:6379
-      - PYTHONUNBUFFERED=1
-    networks:
-      - ai-chat-network
-    depends_on:
-      redis:
-        condition: service_healthy
+      - PYTHONPATH=/app
+      - ENVIRONMENT=production
     volumes:
+      - ./knowledge_base:/app/knowledge_base
       - ./logs:/app/logs
-      - ./knowledge_base:/app/knowledge_base:ro
+    restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8002/"]
+      test: ["CMD", "curl", "-f", "http://localhost:8004/api/system/health"]
       interval: 30s
       timeout: 10s
       retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 4G
 
-  # Frontend service
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: ai-chat-frontend
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=development
-      - REDIS_URL=redis://redis:6379
-      - NEXT_PUBLIC_API_URL=http://localhost:8002
-      - BACKEND_API_URL=http://localhost:8002
-    networks:
-      - ai-chat-network
+      - NEXT_PUBLIC_API_URL=http://localhost:8004
     depends_on:
-      backend:
-        condition: service_healthy
+      - ai-assistant-api
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
-      - /app/.next
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - ai-assistant-api
+      - frontend
+    restart: unless-stopped
 
 volumes:
-  redis_data:
-
-networks:
-  ai-chat-network:
-    driver: bridge
+  knowledge_base:
+  logs:

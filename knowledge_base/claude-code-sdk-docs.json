@@ -1,0 +1,23 @@
+{
+  "id": "claude-code-sdk-docs",
+  "title": "Claude Code SDK Documentation",
+  "url": "https://docs.anthropic.com/s/claude-code-sdk",
+  "content": "​SDK Options\n\nHeadless Mode - For CLI scripts and automation\n\nTypeScript SDK - For Node.js and web applications\n\nPython SDK - For Python applications and data science\n\nStreaming vs Single Mode - Understanding input modes and best practices\n\n​Why use the Claude Code SDK?\n\nContext Management: Automatic compaction and context management to ensure your agent doesn’t run out of context.\n\nRich tool ecosystem: File operations, code execution, web search, and MCP extensibility\n\nAdvanced permissions: Fine-grained control over agent capabilities\n\nProduction essentials: Built-in error handling, session management, and monitoring\n\nOptimized Claude integration: Automatic prompt caching and performance optimizations\n\n​What can you build with the SDK?\n\nSRE agents that diagnose and fix production issues\n\nSecurity review bots that audit code for vulnerabilities\n\nOncall engineering assistants that triage incidents\n\nCode review agents that enforce style and best practices\n\nLegal assistants that review contracts and compliance\n\nFinance advisors that analyze reports and forecasts\n\nCustomer support agents that resolve technical issues\n\nContent creation assistants for marketing teams\n\n​Core Concepts\n\n​Authentication\n\nANTHROPIC_API_KEY\n\nAmazon Bedrock: Set CLAUDE_CODE_USE_BEDROCK=1 environment variable and configure AWS credentials\n\nCLAUDE_CODE_USE_BEDROCK=1\n\nGoogle Vertex AI: Set CLAUDE_CODE_USE_VERTEX=1 environment variable and configure Google Cloud credentials\n\nCLAUDE_CODE_USE_VERTEX=1\n\n​Full Claude Code Feature Support\n\nSubagents: Launch specialized agents stored as Markdown files in ./.claude/agents/\n\n./.claude/agents/\n\nHooks: Execute custom commands configured in ./.claude/settings.json that respond to tool events\n\n./.claude/settings.json\n\nSlash Commands: Use custom commands defined as Markdown files in ./.claude/commands/\n\n./.claude/commands/\n\nMemory (CLAUDE.md): Maintain project context through CLAUDE.md files that provide persistent instructions and context\n\nCLAUDE.md\n\n​System Prompts\n\n​Tool Permissions\n\nallowedTools - Explicitly allow specific tools\n\nallowedTools\n\ndisallowedTools - Block specific tools\n\ndisallowedTools\n\npermissionMode - Set overall permission strategy\n\npermissionMode\n\n​Model Context Protocol (MCP)\n\n​Related Resources\n\nCLI Reference - Complete CLI documentation\n\nGitHub Actions Integration - Automate your GitHub workflow\n\nMCP Documentation - Extend Claude with custom tools\n\nCommon Workflows - Step-by-step guides\n\nTroubleshooting - Common issues and solutions",
+  "source_type": "official_documentation",
+  "domain": "ai_documentation",
+  "keywords": [
+    "anthropic",
+    "claude",
+    "api",
+    "sdk",
+    "documentation",
+    "official"
+  ],
+  "retrieval_tags": [
+    "anthropic",
+    "claude",
+    "docs",
+    "api",
+    "sdk"
+  ]
+}

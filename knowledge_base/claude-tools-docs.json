@@ -1,0 +1,23 @@
+{
+  "id": "claude-tools-docs",
+  "title": "Claude Tools and Function Calling",
+  "url": "https://docs.anthropic.com/en/docs/tools-use",
+  "content": "Page Not Found",
+  "source_type": "official_documentation",
+  "domain": "ai_documentation",
+  "keywords": [
+    "anthropic",
+    "claude",
+    "api",
+    "sdk",
+    "documentation",
+    "official"
+  ],
+  "retrieval_tags": [
+    "anthropic",
+    "claude",
+    "docs",
+    "api",
+    "sdk"
+  ]
+}

@@ -2,9 +2,36 @@
   "mcpServers": {
     "agentic-llm-core": {
       "command": "python3",
-      "args": ["/Users/christianmerrill/Prompt Engineering/cursor_mcp_server.py"],
+      "args": ["/Users/christianmerrill/Prompt Engineering/src/services/cursor_mcp_server.py"],
       "env": {
         "PYTHONPATH": "/Users/christianmerrill/Prompt Engineering/src"
+      }
+    },
+    "knowledge-base": {
+      "command": "python3",
+      "args": ["/Users/christianmerrill/Prompt Engineering/knowledge_base_mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "/Users/christianmerrill/Prompt Engineering"
+      }
+    },
+    "integrated-server": {
+      "command": "python3",
+      "args": ["/Users/christianmerrill/Prompt Engineering/mcp_servers/integrated_mcp_server.py"],
+      "env": {
+        "WEAVIATE_HOST": "localhost",
+        "WEAVIATE_HTTP_PORT": "8090",
+        "WEAVIATE_GRPC_PORT": "50051",
+        "ELASTIC_URL": "http://localhost:9200",
+        "REDIS_URL": "redis://localhost:6379/0"
+      }
+    },
+    "github-server": {
+      "command": "python3",
+      "args": ["/Users/christianmerrill/Prompt Engineering/mcp_servers/github_mcp_server.py"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "GITHUB_REPO_OWNER": "${GITHUB_REPO_OWNER}",
+        "GITHUB_REPO_NAME": "${GITHUB_REPO_NAME}"
       }
     }
   }

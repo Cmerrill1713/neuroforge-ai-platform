@@ -1,0 +1,23 @@
+{
+  "id": "youtube_yi_5AGTnRFo",
+  "title": "Learn Tailwind CSS by making a Cheatsheet | (30 Key CSS Properties)",
+  "description": "⏳ Bookmark the Tailwind CSS Cheatsheet here  👉 https://danisler.com/dev/tailwind-css-cheatsheet\n\nCreating a Tailwind CSS Cheatsheet to help myself and others learn Tailwind CSS.\n\n💻 See how I built my latest app, Timeva from day 1 to day 30\n\nDay 1: https://youtu.be/_8e9dxQZw1o\n\n📕 My story\n\nHey coders. I'm Dan Isler, an indie developer from Minneapolis, Minnesota.\n\nI've been coding for 10+ years now and after grinding out code for tech companies I decided I wanted to prove to myself that I could build valuable software on my own terms. I quickly learned coding is only a third of the story. I'm learning to put together the remaining pieces in order to become a true indie developer. \n\nIn success or failure - I'll see you in the next one!\n\n⌨️ Technology\n\n- Tailwind CSS https://tailwindcss.com/\n- Vite https://vitejs.dev/\n- Vue.js https://vuejs.org/\n\n✅ Follow me here\n\n- Timeva https://timeva.app/\n- Twitter https://twitter.com/IndyDevDan\n- Instagram https://www.instagram.com/indydevdan/\n- Indiehackers https://www.indiehackers.com/IndyDevDan\n- Pianist https://www.youtube.com/channel/UClqIkmmBrT7dwHhlQpz2S5Q\n- Website https://danisler.com/\n\n📖 Chapters\n\n0:00 Intro\n0:20 Create Vue.js app\n1:20 Install Tailwind CSS\n4:40 30 CSS Properties \n5:05 Creating Cheatsheet Component \n6:05 Text color\n9:15 Background color\n11:29 Text size \n13:15 Text alignment \n14:15 Width & height\n18:10 Padding & margin\n21:55 X & Y spacing\n25:35 Visibility\n26:45 Border\n29:14 Border radius\n33:09 Shadow\n35:35 Opacity\n36:40 Cursor pointer\n39:00 Transitions\n44:30 Flex\n47:00 Flex wrap\n49:55 Justify content space between\n51:45 Justify content space around\n53:40 Flex gap\n57:40 Columns\n1:00:45 CSS grid\n1:03:24 Responsive design\n1:07:45 Absolute position\n1:11:25 Fixed position\n1:14:32 Z-index\n1:18:20 Preset themes & Custom themes\n1:22:40 My thoughts on Tailwind CSS\n1:23:17 What do you think?\n\n\n👥 Hashtags\n\n#copilot #vue #tailwindcss",
+  "url": "https://www.youtube.com/watch?v=yi_5AGTnRFo",
+  "upload_date": "20220619",
+  "duration": 5020,
+  "view_count": 347,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "993b4f18e9b659cf4d8b2cdf4c41fc2e"
+}

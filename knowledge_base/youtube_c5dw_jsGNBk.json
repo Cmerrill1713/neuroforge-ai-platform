@@ -1,0 +1,26 @@
+{
+  "id": "youtube_c5dw_jsGNBk",
+  "title": "n8n + Crawl4AI - Scrape ANY Website in Minutes with NO Code",
+  "url": "https://www.youtube.com/watch?v=c5dw_jsGNBk",
+  "description": "Last week I introduced you to Crawl4AI - an open source and LLM friendly web scraper that makes it super easy to crawl any website and format it for a RAG knowledgebase for your AI agent. I even created a full AI agent as a follow up video that leverages this knowledgebase I created with Crawl4AI. A TON of you asked me to do the same thing in n8n, so here it is!\n\nIn this video I show you exactly how to deploy Crawl4AI super easily with Docker and leverage it within your n8n workflows to crawl website pages in seconds. We even build a simple AI agent that uses this knowledgebase to become an expert at the documentation for Pydantic AI - my favorite AI Agent framework right now!\n\nThere are a lot of ways to crawl websites, but many of them are expensive, slow, and/or difficult to work with. Crawl4AI on the other hand is easy to use, fast, and completely free since it is open source. The only thing you have to pay for is the machine in the cloud to run your crawler, and that’s only if you aren’t just running it on your computer!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out TEN Agent now (completely open source!) and see how easy it is to get started building voice AI agents for free:\n\nGitHub repo: https://github.com/TEN-framework/TEN-Agent\nPlayground: https://agent.theten.ai/\n\nIf you aren't aware, voice agents are one of the biggest needs businesses have right now, so if you're a developer looking to make money with AI, tools like TEN Agent are definitely worth learning and using!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere is the n8n workflow I covered in this video! It’s in a folder along with all the other Crawl4AI stuff I’ve done on my channel recently with Python.\n\nhttps://github.com/coleam00/ottomator-agents/blob/main/crawl4AI-agent/n8n-version/Crawl4AI_Agent.json\n\nRegister now for the oTTomator AI Agent Hackathon with a $6,000 prize pool!\n\nhttps://studio.ottomator.ai/hackathon/register\n\nTry the Pydantic AI expert out now on the Live Agent Studio!\n\nhttps://studio.ottomator.ai\n\nCrawl4AI:\n\nhttps://github.com/unclecode/crawl4ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro to Crawl4AI + n8n\n01:45 - Showing off the n8n Workflow\n02:31 - What We're Crawling (and Ethics)\n04:36 - How to Deploy Crawl4AI for n8n\n07:57 - Deploying Crawl4AI with Docker\n13:06 - TEN Agent\n15:27 - Building Crawl4AI into n8n\n29:15 - n8n + Crawl4AI RAG Demo\n32:43 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250127",
+  "duration": 2025,
+  "view_count": 160975,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

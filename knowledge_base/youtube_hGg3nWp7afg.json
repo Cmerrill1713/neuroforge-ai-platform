@@ -1,0 +1,25 @@
+{
+  "id": "youtube_hGg3nWp7afg",
+  "title": "Agentic Claude Code: 3 Codebase Folders for TOP 1% AI Coding",
+  "description": "MOST devs are OVERLOADING their AI tools with USELESS files… and tanking their own productivity. \n\nWant the TOP-1% edge? Slice your repo down to 3 laser-focused folders and watch Claude Code, Codex, Cursor – with ANY SOTA model – crank out features while you sip coffee LIKE A TOP G CODER. 🔥🤯\n\n🎥 VIDEO REFERENCES\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding?y=hGg3nWp7afg_a\n- Pocket Pick: https://github.com/disler/pocket-pick\n- AI Coding is NOT ENOUGH: https://youtu.be/2TIXl2rlA6Q\n- Claude Code: https://www.anthropic.com/claude-code\n\nWhy you should care\n- Context is KING. These 3 folders (ai-docs, specs, .claude) give your agentic coding workflow an instant memory palace, letting any ai coding assistant understand your project in seconds.\n- Turn “prompt engineering” into rocket fuel: reusable commands, self-validating plans, and feature-specific context primes.\n- See IndyDevDan demo real code changes with Claude Code, then rinse-and-repeat the exact same pattern with Codex, Cursor, or your favorite LLM.\n- Inside specs lives the PLAN, and in principled ai coding the plan IS the prompt. Bigger specs = bigger compute swings.\n- Pocket Pick shows how a tiny SQLite MCP server + these folders creates a personal knowledge base that scales across projects and time.\n- Whether you’re shipping micro-features or entire services, this structure keeps your AI on target and your token bill low.\n\nKey Wins\n- Agentic coding supercharges ai coding by adding planning, testing, and tooling loops.\n- Claude code’s slash-commands (aka prompt templates) prove reusable prompts beat ad-hoc iterative ai coding every time.\n- cursor & codex users: drop these folders in and watch your agentic coding tool GET TO WORK FOR YOU.\n\nDeploy the pattern today, level up with principled ai coding tomorrow, and join indydevdan on the road to repos that build themselves. 💪🚀\n\n📖 Chapters\n00:00 Three ESSENTIAL Folders\n01:04 AI Docs - AI Agent Memory\n02:12 Specs - Your AI Coding Plans\n04:38 Dot Claude - Your Reusable Prompts\n08:34 Agentic Coding with Plan Drafting\n15:20 Execute the Plan\n\n#agenticcoding #aicoding #promptengineering",
+  "url": "https://www.youtube.com/watch?v=hGg3nWp7afg",
+  "upload_date": "20250505",
+  "duration": 1471,
+  "view_count": 109325,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "6356dfa9850a4da029dc63261a67b0f8"
+}

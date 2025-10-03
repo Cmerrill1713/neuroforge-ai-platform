@@ -1,0 +1,26 @@
+{
+  "id": "youtube_aZn8PhqUZVU",
+  "title": "bolt.diy: The Future of Open Source AI Coding - What's Next?",
+  "url": "https://www.youtube.com/watch?v=aZn8PhqUZVU",
+  "description": "Join the bolt.diy community over in the oTTomator Think Tank!\n\nhttps://thinktank.ottomator.ai/\n\nLast week I announced a partnership between my platform, oTTomator, and StackBlitz to make bolt.diy (previously oTToDev) the OFFICIAL open source bolt.new! With this announcement, the project and our community completely blew up and I could not be more pumped! But just as important as making this partnership with StackBlitz is keeping up the momentum for bolt.diy so we can keep building the BEST open source AI coding assistant.\n\nAnd we are certainly moving fast. So in this video, I share a bunch of updates, resources, and a revamped roadmap to help keep you in the loop with all the incredible things going on! Our biggest task right now behind the scenes besides pumping out more awesome features is working on the quality of the repository (organizing PRs, setting up releases, improving the project stability, etc.) to truly take the maturity of our open source project to the next level!\n\nSome of the maintainers have also been working SUPER hard building up resources to help you run bolt.diy yourself, host it in the cloud, and troubleshoot common issues, so I showcase that as well!\n\nQuick correction! The debug tab feature was implemented by Stijnus: https://github.com/Stijnus\nSeriously nice work there! Sorry for the wrong attribution in the video!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out the Lyzr Agent Studio and build your first enterprise-grade AI agent for free in just minutes!\n\nhttps://hubs.ly/Q02_mB3Z0\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nDownload and run bolt.diy yourself:\n\nbolt.diy\n\nDustin’s getting started videos I showcase in the video:\n\nhttps://thinktank.ottomator.ai/t/videos-to-get-started/2388\n\nMichael’s guide to deploying [bolt.diy](http://bolt.diy) with Cloudflare Pages:\n\nhttps://thinktank.ottomator.ai/t/deploying-bolt-diy-with-cloudflare-pages-the-easy-way/2403\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Huge Momentum for bolt.diy\n01:36 - bolt.diy's Exciting Roadmap\n08:07 - Lyzer Agent Studio\n09:58 - bolt.diy Getting Started Guides\n11:47 - Self-Host bolt.diy Guide\n12:54 - New bolt.diy Features\n15:46 - Debug Tab\n16:30 - Experimental Optimized Prompt\n17:11 - View Token Usage\n18:04 - Full Screen Preview\n18:25 - Screenshot Capture in Workbench\n19:36 - Come Suggest New Features!\n20:11 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nArtificial Intelligence is no doubt the future of not just software development but the whole world. And I'm on a mission to master it - focusing first on mastering AI Agents.\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241219",
+  "duration": 1246,
+  "view_count": 31962,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

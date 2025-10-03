@@ -1,0 +1,27 @@
+{
+  "id": "youtube_kLi4SKlc4HQ",
+  "title": "MOST Important AGENTIC Application - Speech to Text to AI Agents (TTS, STT, LLM Router)",
+  "description": "What comes next after AI Agents? What's the most useful workflow for your agents?\n\nThe answer is pretty clear, the best way to use your growing collection of AI Agents is in the form of a personal AI assistant.\n\nNot just 'a' personal AI assistant, YOUR personal AI assistant.\n\nImagine a tool so powerful, it feels like an extension of your mind. In this video, we dive into the creation of the most important agentic application we can build and use: Your Personal AI assistant. This tool will be limited only by your imagination, and your ability to hop in your python or typescript code and COOK up great agentic workflows, AI Agents, prompt chains, and individual prompts. Your personal assistant can code for you, research for you, and organizing your digital life. BUT in order to get to that vision we have to take small, incremental steps. Here we look an EARLY prototype of what future personal AI assistants (the next level of VAs) will look like through ADA. ADA is the name of my, personal AI assistant. It's a prototype to show what this technology will be able to do for you.\n\nIn order to make use of your AI Agents and prompt chains in the form of your personal AI assistant, we need a framework for prompting your agents. In this video we introduce two critical frameworks for building your personal AI assistant: the PAR framework, and the simple keyword AI Agent Router (LLM Router). The PAR framework sets an a clean loop for you and your personal AI assistant. First you speak in natural language, we run text-to-speech (TTS) to capture your prompt and convert it into text which becomes your nlp/prompt (natural language prompt). \n\nNext we use an LLM Router called the simple keyword AI Agent Router which takes your prompt and decides which AI Agents to run. Your agents run their individual, isolated workflows, and finally  your personal ai assistant (ai va) responds to you using speech-to-text (STT) completed the PAR framework.\n\nThe beauty of this framework is that it doesn't make any assumptions about your prompts, prompt chains, or agents, all of that runs from the llm router based on your activation keywords based on your prompt. You can run langchain, crewai, autogen, or any other agent framework to build and run your agentic workflows. In future videos we'll be utilizing the AgentOS micro architecture to build reusable, composable AI Agents. Our LLM Router will then route to our individual agents to run dedicated functionality.\n\nThis is just the beginning of the most important agentic application we can build and use: Your Personal AI assistant.\n\nStay focused, and keep building.\n\n\n📝 Personal AI Assistant Gist (Draft/Read Only)\nhttps://gist.github.com/disler/2840f0404c44fc662f7673d783b89f81\n\n🤖 AgentOS - Build reusable, composable agents\nhttps://youtu.be/8wSH4XukcH8\n\n🔍 7 Prompt Chains For Better AI Agents\nhttps://youtu.be/QV6kaNFyoyQ\n\n📖 Chapters\n00:00 The Agentic Pieces are LINING up\n00:33 Your Personal AI Assistant\n00:55 ADA Demo, Proof of Concept\n03:05 Big Ideas, PAR Framework, LLM Router, Flaws\n03:50 Prompt, Agent, Response\n06:25 AI Agent LLM Router\n11:50 Future of Personal AI Assistants\n13:15 Everything we do is STACKING up\n14:07 Improvements, Flaws, vNext\n17:05 More AI Agents, More Prompt Chains\n\n#aiassistant #aiagents #virtualassistant",
+  "url": "https://www.youtube.com/watch?v=kLi4SKlc4HQ",
+  "upload_date": "20240415",
+  "duration": 1074,
+  "view_count": 10230,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "typescript",
+    "aws",
+    "ai",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "5d1f05c76c7ae5653de33b0d8e29bd0c"
+}

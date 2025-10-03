@@ -1,0 +1,54 @@
+{
+  "generations": 2,
+  "best_genomes": [
+    {
+      "score": 0.0,
+      "genome": {
+        "genome_id": "genome_1759359280.683632",
+        "rubric": "You are a helpful AI assistant. Be clear, specific, and actionable.",
+        "cot": true,
+        "temp": 0.7,
+        "max_tokens": 2048,
+        "retriever_topk": 5,
+        "use_consensus": false,
+        "model_key": "primary",
+        "generation": 0,
+        "parent_id": null
+      }
+    },
+    {
+      "score": 0.0,
+      "genome": {
+        "genome_id": "genome_1759359289.618793",
+        "rubric": "You are a helpful AI assistant. Be clear, specific, and actionable.",
+        "cot": true,
+        "temp": 0.7,
+        "max_tokens": 2048,
+        "retriever_topk": 5,
+        "use_consensus": false,
+        "model_key": "primary",
+        "generation": 0,
+        "parent_id": null
+      }
+    }
+  ],
+  "fitness_history": [
+    {
+      "generation": 0,
+      "best_score": 0.0,
+      "mean_score": 0.0,
+      "std_score": 0.0,
+      "best_genome_id": "genome_1759359280.683632",
+      "timestamp": "2025-10-01T17:54:40.685461"
+    },
+    {
+      "generation": 1,
+      "best_score": 0.0,
+      "mean_score": 0.0,
+      "std_score": 0.0,
+      "best_genome_id": "genome_1759359289.618793",
+      "timestamp": "2025-10-01T17:54:49.620570"
+    }
+  ],
+  "timestamp": "2025-10-01T17:54:49.620850"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "meta_arxiv_937450484966833294",
+  "title": "Causal Machine Learning for Surgical Interventions",
+  "description": "Surgical decision-making is complex and requires understanding causal relationships between patient characteristics, interventions, and outcomes. In high-stakes settings like spinal fusion or scoliosis correction, accurate estimation of individualized treatment effects (ITEs) remains limited due to the reliance on traditional statistical methods that struggle with complex, heterogeneous data. In this study, we develop a multi-task meta-learning framework, X-MultiTask, for ITE estimation that models each surgical decision (e.g., anterior vs. posterior approach, surgery vs. no surgery) as a distinct task while learning shared representations across tasks. To strengthen causal validity, we incorporate the inverse probability weighting (IPW) into the training objective. We evaluate our approach on two datasets: (1) a public spinal fusion dataset (1,017 patients) to assess the effect of anterior vs. posterior approaches on complication severity; and (2) a private AIS dataset (368 patients) to analyze the impact of posterior spinal fusion (PSF) vs. non-surgical management on patient-reported outcomes (PROs). Our model achieves the highest average AUC (0.84) in the anterior group and maintains competitive performance in the posterior group (0.77). It outperforms baselines in treatment effect estimation with the lowest overall $ε_{\\text{NN-PEHE}}$ (0.2778) and $ε_{\\text{ATE}}$ (0.0763). Similarly, when predicting PROs in AIS, X-MultiTask consistently shows superior performance across all domains, with $ε_{\\text{NN-PEHE}}$ = 0.2551 and $ε_{\\text{ATE}}$ = 0.0902. By providing robust, patient-specific causal estimates, X-MultiTask offers a powerful tool to advance personalized surgical care and improve patient outcomes. The code is available at https://github.com/Wizaaard/X-MultiTask.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.19705",
+  "authors": "Authors:\nJ. Ben Tamo, \n      \n      Nishant S. Chouhan, \n      \n      Micky C. Nnamdi, \n      \n      Yining Yuan, \n      \n      Shreya S. Chivilkar, \n      \n      Wenqi Shi, \n      \n      Steven W. Hwang, \n      \n      B. Randall Brenn, \n      \n      May D. Wang",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "machine learning"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

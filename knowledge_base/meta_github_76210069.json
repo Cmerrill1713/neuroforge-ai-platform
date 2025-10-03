@@ -1,0 +1,32 @@
+{
+  "id": "meta_github_76210069",
+  "title": "text",
+  "description": "Models, data loaders and abstractions for language processing, powered by PyTorch",
+  "url": "https://github.com/pytorch/text",
+  "language": "Python",
+  "stars": 3560,
+  "forks": 813,
+  "created_at": "2016-12-12T00:56:03Z",
+  "updated_at": "2025-09-24T00:21:38Z",
+  "topics": [
+    "data-loader",
+    "dataset",
+    "deep-learning",
+    "models",
+    "nlp",
+    "pytorch"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "youtube_CKo-czvxFkY",
+  "title": "AutoGen Token Tactics: FIRING AI Agents, USELESS Vector Embeddings, GPT-4 Memory Tricks",
+  "description": "Are you lighting MONEY on FIRE while building prompts and multi-agent systems powered by GPT-4 and AutoGen? 🔥💰🔥\n\nNice, same - LET'S FIX THAT.\n\nGPT-4 and all LLMs have one major flaw: The Context Window. If you've written prompts and have tried to insert tons of data into a single prompt you've likely experienced a TOKEN EXPLOSION. Our Postgres AI data analytics is running into this very issue. We've been building and testing with only 2 tables when in reality, we need to operate on potentially hundreds of postgres tables and millions of rows. In this video, we directly address that issue with two primary techniques. \n\nFirst, we utilize vector embeddings to run a similarity search across all of our table's SQL creation statements against our natural language query. Next we utilize simple string matching that gets the job done 100x better than vector embeddings at the cost of being a bit more verbose in our prompt. If you can solve the problem with a simple solution, start there. This enables us to load only tables relevant to our query into our initial prompt that our multi-agent system takes, generates SQL for, and then obtains the response. It's not all good news though.\n\nIn order to allow potentially millions of rows process through our postgres ai agent system, we have to let go of our AutoGen multi-agent data visualization team. After we add token and price estimation into our orchestrator class we learn that our data viz team is just too expensive to keep on the team in our current inflationary market. We have to let them go and tighten up our multi-agent team. It seems ridiculous but one day we may be making judgement calls on which ai agents we want to keep on our team and which ones we need to let go. This is the beginning of agentic software engineering.\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v4-autogen-token-tactics-firing-ai-agents\n\n✅ Watch Part Three - Make AutoGen Consistent\nhttps://youtu.be/4o8tymMQ5GM\n\n🤖💻 AI Engineering Resources\nMicrosoft's Autogen: https://microsoft.github.io/autogen/\nFree Postgres Hosting With Neon: https://neon.tech/\nBert Word Embeddings: https://is-rajapaksha.medium.com/bert-word-embeddings-deep-dive-32f6214f02bf\n\n🤖 ZERO Touch coding with AIDER? YUP\nhttps://youtu.be/MPYFPvxfGZs\n\n📘 Chapters\n00:00 Push into a new field of agentic engineering\n00:50 Our Postgres tool has one MAJOR problem\n02:00 Let's Review Our Mult-Agent Tool\n03:50 I've been deceptive - here's why\n04:50 CLEAN Refactor\n07:05 Now We'll Light A Dollar On Fire\n08:28 Vector Embeddings Module\n12:55 Embeddings don't always work - try this\n16:55 Keep track of OpenAI GPT-4 Costs\n20:15 Bad News For Our AI Agent Data Viz Team\n22:00 Our new trimmed down multi-agent team\n26:10 Keep stacking your AGENTIC building blocks\n26:50 What's next? API, UI, More Agents, More Conversation Flows\n28:35 Let's discuss top comments\n\n🐛 tags\n#sql #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=CKo-czvxFkY",
+  "upload_date": "20231023",
+  "duration": 2011,
+  "view_count": 12589,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "software engineering",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "e1a2144b13e297ec3c861d948f97f2c5"
+}

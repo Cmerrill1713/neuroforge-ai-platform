@@ -1,0 +1,26 @@
+{
+  "id": "youtube_BdZ_GOaaz7M",
+  "title": "All the BEST RAG Strategies in ONE MCP for AI Coding Assistants",
+  "url": "https://www.youtube.com/watch?v=BdZ_GOaaz7M",
+  "description": "There is no denying that AI coding assistants like Cursor and Windsurf are extremely powerful, but their biggest limitation right now is they hallucinate a LOT when working with specific tools and frameworks.\n\nWell I'm on a mission to solve this problem for you - I'm creating the ultimate MCP server to provide instant RAG (combining many different strategies) to any AI coding assistant or AI agent, and I'm going to keep making it more powerful and also integrate it with Archon (my AI agent builder). I put so much work into this for you - please enjoy it!\n\nThis MCP server is still experimental but I'm working hard to make it the best. 💪\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIf you're looking to join a community for early AI adopters to master AI & AI Agents and transform your career or business, check out Dynamous here:\n\nhttps://dynamous.ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe Crawl4AI RAG MCP Server:\n\nhttps://github.com/coleam00/mcp-crawl4ai-rag\n\nArchon:\n\nhttps://github.com/coleam00/Archon\n\nVercel AI SDK docs:\n\nhttps://ai-sdk.dev/docs/introduction\n\nAnthropic article on contextual retrieval:\n\nhttps://www.anthropic.com/news/contextual-retrieval\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing my Crawl4AI RAG MCP Server\n00:43 - Plans for this MCP and Why We Need it\n01:50 - Setup and Live Demo\n07:49 - Dynamous AI Mastery\n08:26 - RAG Strategy #1 - Contextual Embedding\n10:32 - RAG Strategy #2 - Hybrid Search\n13:28 - RAG Strategy #3 - Agentic RAG\n16:15 - RAG Strategy #4 - Reranking\n18:46 - The Future of Archon and this MCP\n20:25 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250605",
+  "duration": 1268,
+  "view_count": 27222,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

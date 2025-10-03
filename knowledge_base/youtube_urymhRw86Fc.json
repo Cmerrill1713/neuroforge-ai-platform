@@ -1,0 +1,26 @@
+{
+  "id": "youtube_urymhRw86Fc",
+  "title": "Local - ON DEVICE LLMs are the future, but NOT yet - Here’s why",
+  "description": "The future potential of on device, local LLMs (Language Models) IS MASSIVE. This comprehensive analysis offers a candid look into the evolution of local LLMs, highlighting their rapid advancements and the challenges they still face. We discuss the high costs and privacy concerns associated with utilizing LLM APIs, emphasizing the urgent need for more accessible, privacy-conscious alternatives. Despite the growing capabilities of local LLMs, spearheaded by an enthusiastic open-source community, we delve into why they aren't ready for widespread production use yet. This video is a must-watch for anyone interested in the future of AI, whether you're a company, an indie dev, or just AI-curious. You'll get insights into the ongoing battle between cloud-based and local LLMs, including giants like GPT-3 and GPT-4, and rising stars like Mistral and Microsofts Phi-2.\n\nOur video takes a practical approach to understanding the viability of on-device local LLMs. We not only discuss their current limitations in terms of speed, RAM, and GPU requirements but also demonstrate how to effectively test these models using the incredible prompt testing tool, Promptfoo. By comparing local models like Mistral, PHI-2, and Rocket 3B against cloud counterparts in various scenarios, including a natural language query to SQL, we provide a clear picture of where local LLMs stand today. Our hands-on tests reveal the real-world performance of these models, underscoring their potential and pitfalls. We also explore innovative solutions like LlamaFile for running LLMs locally, offering viewers a glimpse into the future of AI technology. This video is an essential guide for developers and tech enthusiasts looking to stay ahead in the rapidly evolving world of local language models. Join us as we unravel the complexities of on-device LLMs and their journey towards becoming a practical, everyday reality.\n\n💻 Prompt Testing Codebase\nhttps://github.com/disler/llm-prompt-testing-quick-start\n\n🔗 Links\nPromptfoo: https://promptfoo.dev/docs/intro\nLLamafile: https://github.com/Mozilla-Ocho/llamafile?tab=readme-ov-file\nLlamafile Quick Start: https://github.com/disler/lllm\nMistral: https://mistral.ai/\n\n💻 Learn Prompt Testing\nhttps://youtu.be/KhINc5XwhKs\n\n🤖 Try Llamafile for local LLMs\nhttps://youtu.be/XnoKvdeZAN8\n\n⭐️ Text to SQL to RESULTS \nhttps://talktoyourdatabase.com/\n\n#llama #llm #googlegemini",
+  "url": "https://www.youtube.com/watch?v=urymhRw86Fc",
+  "upload_date": "20240129",
+  "duration": 1177,
+  "view_count": 3693,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api",
+    "database",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "e4efe090aed6170d21d80d932c435dcf"
+}

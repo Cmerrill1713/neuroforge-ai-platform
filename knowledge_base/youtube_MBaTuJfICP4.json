@@ -1,0 +1,26 @@
+{
+  "id": "youtube_MBaTuJfICP4",
+  "title": "The 3 MUST Have MCP Servers for Any AI Coding (and How to Use Them)",
+  "url": "https://www.youtube.com/watch?v=MBaTuJfICP4",
+  "description": "Everyone knows that if you aren’t using an AI coding assistant, you are going to fall behind no matter what you are developing. But what people usually don’t know is how to actually use AI coding assistants (Windsurf, Cursor, Cline, Roo Code, etc.) effectively.\n\nHaving a well defined process for coding with AI is crucial to consistently get high quality output, and a huge part of that is having the right MCP servers.\n\nIn this video, I'll show you my top 3 MCP servers I swear by that I use no matter what I'm coding. These are the servers I won't live without, and yeah, if you start using them yourself, I'm pretty sure it'll be the same for you. :D\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIf you're a lean business looking to compete with companies 10x your size, check out Databutton - the AI app builder for businesses that you can use to replace an entire development team:\n\nhttps://databutton.com/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nHere is the full RAG AI Agent example I built in this video with Windsurf + my 3 top MCP servers:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/foundational-rag-agent\n\nMy full process for using AI coding assistants:\n\nhttps://youtu.be/SS5DYx6mPw8\n\nAnd here is the Google Doc I cover in that video for my full process:\n\nhttps://docs.google.com/document/d/12ATcyjCEKh8T-MPDZ-VMiQ1XMa9FUvvk2QazrsKoiR8\n\nCrawl4AI (RAG) MCP Server:\n\nhttps://github.com/coleam00/mcp-crawl4ai-rag\n\nBrave MCP Server:\n\nhttps://github.com/modelcontextprotocol/servers/tree/main/src/brave-search\n\nSupabase MCP Server:\n\nhttps://github.com/supabase-community/supabase-mcp\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing My Top 3 MCP Servers\n01:10 - MCP Server for RAG (Documentation Knowledge)\n02:37 - MCP Server for DB Management (like Supabase)\n03:42 - MCP Server for Advanced Web Search\n05:13 - Installing the MCP Servers in Our AI IDE\n07:00 - Databutton\n08:34 - Building a Full AI Agent with Our MCP Servers\n14:28 - Results after Our First Prompt\n15:59 - Final Results & Demo\n19:14 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250515",
+  "duration": 1195,
+  "view_count": 87940,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

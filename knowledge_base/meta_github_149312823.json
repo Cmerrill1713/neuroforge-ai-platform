@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_149312823",
+  "title": "pytorch_sphinx_theme",
+  "description": "PyTorch Sphinx Theme",
+  "url": "https://github.com/pytorch/pytorch_sphinx_theme",
+  "language": "CSS",
+  "stars": 102,
+  "forks": 143,
+  "created_at": "2018-09-18T15:41:35Z",
+  "updated_at": "2025-09-05T17:37:49Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

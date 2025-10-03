@@ -3,15 +3,13 @@
 from .prompt_agent import (
     PromptAgentProfile,
     PromptAgentRegistry,
-    PromptAgentManager,
-    PromptDrivenAgent,
+    PromptAgent,
     PromptBuildError,
 )
 
 __all__ = [
     "PromptAgentProfile",
     "PromptAgentRegistry",
-    "PromptAgentManager",
-    "PromptDrivenAgent",
+    "PromptAgent",
     "PromptBuildError",
 ]

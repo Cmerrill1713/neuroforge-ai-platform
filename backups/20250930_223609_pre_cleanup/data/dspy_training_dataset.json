@@ -1,0 +1,27 @@
+[
+  {
+    "input": "Write a Python function to calculate factorial",
+    "output": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n-1)",
+    "context": "coding"
+  },
+  {
+    "input": "Explain machine learning in simple terms",
+    "output": "Machine learning is a method where computers learn from data to make predictions or decisions without being explicitly programmed for each task.",
+    "context": "explanation"
+  },
+  {
+    "input": "What is artificial intelligence?",
+    "output": "Artificial Intelligence (AI) is the simulation of human intelligence by machines, enabling them to perform tasks that typically require human cognition.",
+    "context": "definition"
+  },
+  {
+    "input": "Debug this code: def add(a,b) return a+b",
+    "output": "The code is missing a colon. Correct version: def add(a, b): return a + b",
+    "context": "debugging"
+  },
+  {
+    "input": "How do neural networks work?",
+    "output": "Neural networks are computing systems inspired by biological brains, consisting of interconnected nodes (neurons) that process information through weighted connections and activation functions.",
+    "context": "technical_explanation"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "meta_github_923596273",
+  "title": "llama-stack-ops",
+  "description": "Ops files for https//github.com/meta-llama/llama-stack",
+  "url": "https://github.com/meta-llama/llama-stack-ops",
+  "language": "Shell",
+  "stars": 11,
+  "forks": 12,
+  "created_at": "2025-01-28T14:34:10Z",
+  "updated_at": "2025-09-07T16:34:27Z",
+  "topics": [],
+  "readme_content": "# Operations (CI, etc.) for Llama Stack\n",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "llama"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

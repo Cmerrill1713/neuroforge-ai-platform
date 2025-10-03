@@ -1,0 +1,26 @@
+{
+  "id": "youtube_Fx3J8k--U3E",
+  "title": "The PROVEN Solution for Unbelievable RAG Performance (LightRAG Guide)",
+  "url": "https://www.youtube.com/watch?v=Fx3J8k--U3E",
+  "description": "Providing our AI Agents with external knowledge through RAG is crucial for a majority of AI applications. But generally, a basic RAG implementation is only going to be 50-75% accurate when retrieving the correct information from your knowledgebase. If you want to build real AI solutions, that just won’t cut it.\n\nI've been researching all the best strategies for making RAG more accurate (and scalable for millions of documents), and enhancing RAG with knowledge graphs has really stuck out to me, specifically using an incredible open source library called LightRAG. LightRAG not only vectorizes your documents like traditional RAG, it also builds up a knowledge graph that connects concepts, entities, and ideas together to take the contextual understanding of your AI agent to a new dimension. \n\nIn this video, we'll build a LightRAG implementation that you can use as a starting point to build some VERY powerful RAG AI agents.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Graphiti (free & open source) if you want to build RAG applications that work with real-time data:\n\nhttps://github.com/getzep/graphiti\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nLightRAG GitHub repo:\n\nhttps://github.com/HKUDS/LightRAG\n\nLink to my LightRAG implementation (with the ChromaDB version too):\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/light-rag-agent\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing LightRAG - Accurate & Scalable RAG\n02:02 - LightRAG Overview & GitHub Repo\n05:07 - LightRAG vs. \"Traditional\" RAG & GraphRAG\n05:53 - Get Started with LightRAG in 2 Minutes\n07:44 - Our LightRAG AI Agent\n09:27 - Graphiti - Real-Time Knowledge Graphs\n10:54 - Testing Our LightRAG vs ChromaDB AI Agents\n13:29 - Building Our LightRAG Knowledge Graph\n16:48 - LightRAG AI Agent Code Deep Dive\n20:09 - Covering the ChromaDB \"Traditional\" RAG Agent\n21:36 - Final Thoughts\n22:34 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250407",
+  "duration": 1384,
+  "view_count": 67956,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

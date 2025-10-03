@@ -1,0 +1,26 @@
+{
+  "id": "youtube_MPYFPvxfGZs",
+  "title": "Let's Get Fired: Using AI Coding Assistant AIDER to do my Engineering Job",
+  "description": "Aider is a huge win for 3 reasons.\n1. Reduced context switching.\n2. Your files are tracked in memory.\n3. Super dev friendly interface\n\nDiscover 'AIDER', the latest advancement in AI-powered coding, as we navigate modifying a Vue.js application with ZERO touch coding. AIDER integrates the genius of OpenAI's GPT-4 directly into your terminal, revolutionizing the process of writing and editing code. It's more than a tool; it's your personal assistant, capable of handling new projects, tweaking existing code in your git repository, and smoothly managing commits, diffs, and undos - all without manual copy/pasting.\n\nImmerse yourself in AIDER's conversational interface, where you can request new features, improvements, bug fixes, or even ask for new test cases and documentation updates directly from your terminal. AIDER applies GPT's suggestions to your source files and automatically commits changes to your local git repo with precise commit messages, providing a seamless coding experience.\n\nExplore AIDER's advanced functionalities, such as coordinating code changes across multiple source files in one go, and giving GPT-4 a comprehensive view of your entire git repo. This allows it to understand and manipulate larger codebases, paving the way for managing complex projects with ease.\n\nExperience the future of coding as AIDER integrates flawlessly with your preferred editor, detecting out-of-band edits and offering to commit them. This synergy allows for a fluid back-and-forth between the AIDER chat and your editor, truly embodying the concept of collaborative coding with AI.\n\n💻 Try Aider\nhttps://aider.chat/\n\n🤖 How Top AI Engineers will excel in 2023 and beyond.\nhttps://youtu.be/d2SEfmqT__4\n\n✅ Use Notion? Want to study faster with less effort? Convert your Notion pages into Personal Audio Books today:\n\nhttps://subvolver.com/?utm_source=youtube&utm_medium=description&utm_campaign=ytmain&utm_content=ztcaider\n\n💻 Software\n\n- Aider https://aider.chat/\n- Vue3 (setup) https://vuejs.org/\n- Typescript https://www.typescriptlang.org/\n- Vite https://vitejs.dev/\n\n🖥 Equipment\n\n- Mac Book Pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Dell U-Series 38\" U3818DW https://www.dell.com/en-us/work/shop/dell-ultrasharp-49-curved-monitor-u4919dw/apd/210-arnw/monitors-monitor-accessories?gacd=9646510-1028-5761040-266706306-0&dgc=st&ds_k=DYNAMIC+SEARCH+ADS&ds_rl=1282789&gclid=CjwKCAjw682TBhATEiwA9crl31qIZ4D8ut1OWPvNviY3UE77Poi2-wfi7uM-PY3ucNYCo7Gu7GF63RoCoaUQAvD_BwE&gclsrc=aw.ds&nclid=d5WkuGPFVi5qqqtvpNphRVY0Ys0xjwqFAX7NX8U_6FjGAqScoYJ-teTvdlfdjprM\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n📖 Chapters\n00:00 Code Faster Than Ever With AIDER\n01:35 Live Updates and File Commit\n02:22 Pushing Aider Further\n04:51 Don't Go Broke Total Tokens\n06:23 Precise CSS Adjustments\n07:25 Three-Position Switcher Component\n09:37 I haven't written a single line of code\n10:40 Pros and Cons of Aider\n\n#️⃣ Hashtags\n#automation  #devlog #javascript",
+  "url": "https://www.youtube.com/watch?v=MPYFPvxfGZs",
+  "upload_date": "20230713",
+  "duration": 770,
+  "view_count": 15724,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "ai",
+    "coding",
+    "git"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "5f802a665bf1ae08e117c9aac0bb4561"
+}

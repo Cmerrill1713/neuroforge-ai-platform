@@ -1,0 +1,26 @@
+{
+  "id": "youtube_5gUR55_gbzc",
+  "title": "This New Protocol Will Change AI Coding Forever (ACP)",
+  "url": "https://www.youtube.com/watch?v=5gUR55_gbzc",
+  "description": "The future of AI coding is here. Zed just introduced ACP (Agent Client Protocol) - an open standard (similar to MCP) that connects any code editor to any AI coding assistant. Zed’s integration is only in beta, but if you want a glimpse into how we’ll all be working with AI in the near future – this is it.\n\nIn this video, I’ll show you ACP in action:\n- Running both Claude Code and Gemini CLI threads in Zed\n- Watching Claude Code make live code changes you can accept or reject (always wished I had this!)\n- How ACP works, why it’s so powerful, and how it builds on protocols like LSP and MCP\n- Spinning up a custom ACP agent so you can build your own coding agents and launch them as threads\n- Bonus: a quick Archon demo, showing how it can manage Claude Code instances through ACP\n\nNote - this video is NOT sponsored by Zed. I'm genuinely blown away by ACP and want to share it with you! :)\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you’re looking for cost effective and hassle free cloud infrastructure to host your applications, check out fly.io:\nhttps://bit.ly/4mW6IFJ\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- If you want to completely explode your productivity with AI coding assistants in a single session, check out this exclusive workshop I'm hosting soon (limited spots available!):\nhttps://dynamous.ai/ai-coding-workshop\n\n- Rasmus' video diving into ACP and the Archon POC: https://www.youtube.com/watch?v=69B3htkGMwc\n\n- Zed’s blog post introducing Claude Code in Zed: https://zed.dev/blog/claude-code-via-acp\n- ACP Documentation: https://agentclientprotocol.com/overview/introduction\n- Zed installation for Windows: https://scoop.sh/#/apps?q=zed-nightly\n- Zed installation for Mac/Linux: https://zed.dev/download\n- Custom ACP agent example: https://github.com/zed-industries/agent-client-protocol/tree/main/typescript/examples\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing the Agent Communication Protocol\n01:17 - Zed's blog post for Claude Code and ACP\n02:17 - ACP Demo (Claude Code and the Gemini CLI)\n05:31 - How ACP Works Under the Hood\n09:41 - Fly.io\n11:25 - Custom Coding Agents with ACP\n13:18 - Custom Agent Demo in Zed\n14:21 - Claude Code + ACP Adapter\n16:12 - Spicy Ideas for Archon + ACP\n21:51 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250911",
+  "duration": 1354,
+  "view_count": 21271,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

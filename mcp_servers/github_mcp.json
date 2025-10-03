@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "github-server": {
+      "command": "python3",
+      "args": ["/app/mcp_servers/github_mcp_server.py"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "GITHUB_REPO_OWNER": "${GITHUB_REPO_OWNER}",
+        "GITHUB_REPO_NAME": "${GITHUB_REPO_NAME}"
+      }
+    }
+  }
+}

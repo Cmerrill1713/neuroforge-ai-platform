@@ -1,0 +1,31 @@
+{
+  "id": "youtube_Uf7cYAXe3eI",
+  "title": "Your AI Agents can SELF-CORRECT: Using Assistants API to AUTO FIX SQL Database Errors",
+  "description": "ENHANCE YOUR SOFTWARE with SELF-CORRECTING AI Agents: A Deep Dive into Assistants API. Hey engineers and product builders. In this video we tap into self-correcting AI agents and see how they can auto correct issues that arise in software. This video provides a focused exploration of using Assistants API, coupled with GPT-4 Turbo, to create autonomous agents capable of identifying and fixing errors in software systems. We will start by looking at the current software architecture of our postgres data analytics tool then build a new code flow with a self correcting assistant built on top of Turbo4. \n\nThe upside of self-correcting agents in software engineering is pretty obvious. Save time, accomplish more while doing less, and worry less. It's a great step toward Agentic software engineering as a whole. Remember, we can't jump to step 10 and just 'build autonomous software'. We take small, sustainable steps the move us toward becoming true Agentic engineers. One experiment at a time. One application at a time. One product at a time. We'll also improve our Vite and Bun charged Vue.js front end with coding assistant AIDER running in the background while we tweak our Python/Flask backend. This is for software engineers and developers, this guide offers insights into enhancing software reliability and efficiency through AI-driven self-correction.\n\nThere's a lot of noise, drama and rapid news in the AI tech space right now and rightfully so. Focus going to be our most valuable tool in the age of AI.\n\nBig shout out to everyone that's been staying focused, watching the channel, getting value, and taking their engineering and product building to the next level.\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v9-self-correcting-assistant\n\n💻 Talk to your database\nhttps://talktoyourdatabase.com/\n\n🤖💻 AI Engineering Resources\nLLM OS: https://www.youtube.com/watch?v=zjkBMFhNj_g\nAssistants API: https://platform.openai.com/docs/assistants/how-it-works/objects\nAI Pair Programming AIDER: https://aider.chat/\n\n(1) Watch Part One\nhttps://youtu.be/jmDMusirPKA\n\n(2) Watch Part Two\nhttps://youtu.be/JjVvYDPVrAQ\n    \n(3) Watch Part Three\nhttps://youtu.be/4o8tymMQ5GM\n\n(4) Watch Part Four\nhttps://youtu.be/CKo-czvxFkY\n\n(5) Watch Part Five\nhttps://youtu.be/UA6IVMDPuC8\n\n(6) Watch Part Six\nhttps://youtu.be/XGCWyfA3rgQ\n\n(7) Watch Part Seven\nhttps://youtu.be/KwcrjP3vuy0\n\n(8) Watch Part Eight\nhttps://youtu.be/7EA19-D4-Zo\n\n📘 Chapters\n0:00 Diagnose, Generate, Execute\n0:10 Tight Feedback Iteration Loops\n0:20 LLMs can auto-correct any output system\n0:33 Don't go all in on GPTs\n0:53 Can LLMs run your software business?\n1:30 Our Postgres Series is almost complete\n1:50 Self Correcting Assistant - Recap\n2:52 Firing off AIDER to work in parallel\n4:25 Application Architecture - current and new\n6:04 Channel 2024 Sneak Peek\n6:25 Postgres Data Analytics Backend\n7:22 An SQL query that will BOMB your database\n8:21 New Self-Correcting Assistant Code\n9:38 Turbo4 Assistants API wrapper class\n14:35 Self-Correcting Assistant - RUN\n16:11 Analyze the LLM corrected results\n17:48 Agent Spyware Chat Conversation\n18:20 Wow, it corrected a different error\n19:25 All Great Devs have TIGHT feedback loops\n20:45 Assistants API Pros, Cons, and Strategies\n21:52 Build USE CASE specific AI Agents\n22:35 The biggest WIN of the Assistants API\n23:40 Assistants API is a heavy step forward\n23:55 Negatives of Assistants API\n25:47 Lot's of risk to our application\n26:54 Should you go all in on Assistants API and GPTs?\n28:00 A real world example of decided against Assistants API\n28:42 Self-Correcting Assistants - Use Cases\n29:15 The Channel has taken off but 2024 is going to be crazy\n29:32 The End of the Series and what to expect\n\n🐛 tags\n#dataanalytics #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=Uf7cYAXe3eI",
+  "upload_date": "20231127",
+  "duration": 1845,
+  "view_count": 6336,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "programming",
+    "software engineering",
+    "api",
+    "database",
+    "backend",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "476f35743af6a16f1c55fa5f5f4d0bf9"
+}

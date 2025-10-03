@@ -1,0 +1,27 @@
+{
+  "id": "youtube_JjVvYDPVrAQ",
+  "title": "One Prompt is NOT enough: Using AutoGen to code a Multi-Agent Postgres AI Tool",
+  "description": "There's only so much you can do with a single prompt. There comes a point in time where you can only do so much with prompt engineering before you hit a wall. Thankfully the code bros at Microsoft have been cooking up AUTOGEN. A simple way to build prompts that work together to solve a problem. AKA a multi-agent framework for problem solving.\n\nIn this video we enhance our AI charged Postgres Data Analytics agent backed by GPT-4 and we make it MULTI-AGENT. By splitting up our BI analytics tool into separate agents we can assign individual roles as if our AI was a small working software data analytics company. We build a data analytics agent, a Sr Data Analytics agent, and a Product Manager Agent. Each agent has a specific role and we can assign them special functions that only they can run.\n\nOf course, we utilize our favorite AI pair programming assistant AIDER to generate a first pass of our code in no time with the help of a couple prompt engineering techniques. We build in python and use poetry as our dependency manager. Our goal is to move closer to the future of AI engineering and build a fully functional AI powered data analytics tool with ZERO code. Agentic software is likely the future, so let's stay on the edge of AI engineering and build a multi-agent data analytics tool with AutoGen.\n\n👍 THE CODEBASE\nhttps://github.com/disler/multi-agent-postgres-data-analytics/tree/v2-using-autogen-to-build-our-multi-agent-tool\n\n✅ Watch Part One - building a Postgres Data Analytics Agent From Scratch\nhttps://youtu.be/jmDMusirPKA\n\n🤖💻 AI Engineering Resources\nMicrosoft's Autogen: https://microsoft.github.io/autogen/\nAutogen group chat example: https://github.com/microsoft/autogen/blob/main/notebook/agentchat_groupchat_research.ipynb\nAIDER: https://aider.chat/\nFree Postgres Hosting With Neon: https://neon.tech/\n\n🤖 ZERO Touch coding with AIDER?\nhttps://youtu.be/MPYFPvxfGZs\n\n📘 Chapters\n00:00 One MAJOR Problem\n00:45 Okay so what is AutoGen?\n02:00 Make our app Multi-Agent with AutoGen\n05:00 Defining our agents\n06:10 Let AI Code for you with AIDER\n08:30 Half way there let's clean it up\n14:04 Our Multi-Agent Analytics App is Born\n18:40 Is AutoGen The Future of AI Engineering?\n20:30 AutoGen Pros\n21:54 AutoGen Cons\n23:10 My take and what's next\n\n🐛 tags\n#dataanalytics  #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=JjVvYDPVrAQ",
+  "upload_date": "20231009",
+  "duration": 1457,
+  "view_count": 66197,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "programming",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "f3b03db2534bfadd5eb1ba573fbbb5aa"
+}

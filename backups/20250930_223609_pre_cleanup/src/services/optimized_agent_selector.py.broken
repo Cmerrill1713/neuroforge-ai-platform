@@ -1,0 +1,470 @@
+#!/usr/bin/env python3
+"""
+Optimized Agent Selector - Performance-Optimized Version
+Implements caching, async processing, and connection pooling to address 69.92s performance bottleneck.
+
+Based on the comprehensive improvement plan patterns.
+"""
+
+import asyncio
+import hashlib
+import logging
+import time
+from typing import Dict, Any, List, Optional, Tuple
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+import json
+
+# Try to import Redis for caching, fall back to in-memory if not available
+try:
+    import redis.asyncio as redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    REDIS_AVAILABLE = False
+    print("⚠️ Redis not available, using in-memory cache")
+
+# Import existing components
+try:
+    from .enhanced_agent_selection import EnhancedAgentSelector
+    ENHANCED_SELECTOR_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠️ EnhancedAgentSelector not available: {e}")
+    ENHANCED_SELECTOR_AVAILABLE = False
+
+try:
+    from ..core.knowledge.simple_knowledge_base import SimpleKnowledgeBase
+    KNOWLEDGE_BASE_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠️ SimpleKnowledgeBase not available: {e}")
+    KNOWLEDGE_BASE_AVAILABLE = False
+
+try:
+    from ..core.parallel_reasoning_engine import ParallelReasoningEngine
+    REASONING_ENGINE_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠️ ParallelReasoningEngine not available: {e}")
+    REASONING_ENGINE_AVAILABLE = False
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
+
+@dataclass
+class CacheEntry:
+    """TODO: Add docstring."""
+    """Cache entry with metadata."""
+    data: Any
+    timestamp: datetime
+    ttl: int  # seconds
+    hits: int = 0
+
+    def is_expired(self) -> bool:
+        """TODO: Add docstring."""
+        """TODO: Add docstring."""
+        return datetime.now() - self.timestamp > timedelta(seconds=self.ttl)
+
+@dataclass
+class AgentSelectionResult:
+    """TODO: Add docstring."""
+    """Optimized agent selection result."""
+    agent_name: str
+    confidence: float
+    reasoning: str
+    performance_metrics: Dict[str, float]
+    cache_hit: bool = False
+    selection_time: float = 0.0
+
+class InMemoryCache:
+    """TODO: Add docstring."""
+    """High-performance in-memory cache with TTL."""
+
+    def __init__(self, max_size: int = 1000, default_ttl: int = 300):
+        """TODO: Add docstring."""
+        """TODO: Add docstring."""
+        self.cache: Dict[str, CacheEntry] = {}
+        self.max_size = max_size
+        self.default_ttl = default_ttl
+        self.hits = 0
+        self.misses = 0
+
+    async def get(self, key: str) -> Optional[Any]:
+        """Get value from cache."""
+        if key in self.cache:
+            entry = self.cache[key]
+            if not entry.is_expired():
+                entry.hits += 1
+                self.hits += 1
+                return entry.data
+            else:
+                # Remove expired entry
+                del self.cache[key]
+
+        self.misses += 1
+        return None
+
+    async def set(self, key: str, value: Any, ttl: Optional[int] = None) -> None:
+        """Set value in cache."""
+        # Evict oldest entries if cache is full
+        if len(self.cache) >= self.max_size:
+            await self._evict_oldest()
+
+        self.cache[key] = CacheEntry(
+            data=value,
+            timestamp=datetime.now(),
+            ttl=ttl or self.default_ttl
+        )
+
+    async def _evict_oldest(self) -> None:
+        """Evict oldest cache entry."""
+        if not self.cache:
+            return
+
+        oldest_key = min(self.cache.keys(), key=lambda k: self.cache[k].timestamp)
+        del self.cache[oldest_key]
+
+    def get_stats(self) -> Dict[str, Any]:
+        """TODO: Add docstring."""
+        """Get cache statistics."""
+        total_requests = self.hits + self.misses
+        hit_rate = self.hits / total_requests if total_requests > 0 else 0
+
+        return {
+            "size": len(self.cache),
+            "max_size": self.max_size,
+            "hits": self.hits,
+            "misses": self.misses,
+            "hit_rate": hit_rate,
+            "entries": [
+                {
+                    "key": k,
+                    "hits": v.hits,
+                    "age_seconds": (datetime.now() - v.timestamp).total_seconds(),
+                    "ttl": v.ttl
+                }
+                for k, v in self.cache.items()
+            ]
+        }
+
+class OptimizedAgentSelector:
+    """TODO: Add docstring."""
+    """TODO: Add docstring."""
+    """
+    Performance-optimized agent selector with caching and async processing.
+
+    Addresses the 69.92s performance bottleneck through:
+    1. Multi-level caching (Redis + in-memory)
+    2. Async parallel processing
+    3. Connection pooling
+    4. Intelligent cache invalidation
+    """
+
+    def __init__(self, config_path: str = "configs/policies.yaml"):
+        """TODO: Add docstring."""
+        """TODO: Add docstring."""
+        self.config_path = config_path
+        self.logger = logging.getLogger(__name__)
+
+        # Initialize caching layers
+        self.memory_cache = InMemoryCache(max_size=1000, default_ttl=300)  # 5 minutes
+        self.redis_cache = None
+
+        # Initialize Redis if available
+        if REDIS_AVAILABLE:
+            try:
+                self.redis_cache = redis.Redis(
+                    host="localhost", port=6379, db=0,
+                    decode_responses=True, socket_connect_timeout=5
+                )
+                logger.info("✅ Redis cache initialized")
+            except Exception as e:
+                logger.warning(f"⚠️ Redis connection failed: {e}")
+                self.redis_cache = None
+
+        # Initialize base components
+        self.base_selector = None
+        self.knowledge_base = None
+
+        # Performance tracking
+        self.selection_stats = {
+            "total_selections": 0,
+            "cache_hits": 0,
+            "cache_misses": 0,
+            "avg_selection_time": 0.0,
+            "fastest_selection": float("inf"),
+            "slowest_selection": 0.0
+        }
+
+        # Async processing pool
+        self.max_workers = 4
+        self.semaphore = asyncio.Semaphore(self.max_workers)
+
+    async def initialize(self) -> bool:
+        """Initialize the optimized agent selector."""
+        try:
+            logger.info("🚀 Initializing Optimized Agent Selector...")
+
+            # Initialize base selector if available
+            if ENHANCED_SELECTOR_AVAILABLE:
+                self.base_selector = EnhancedAgentSelector(self.config_path)
+                logger.info("✅ Base selector initialized")
+            else:
+                logger.warning("⚠️ EnhancedAgentSelector not available, using fallback")
+                self.base_selector = None
+
+            # Initialize knowledge base if available
+            if KNOWLEDGE_BASE_AVAILABLE:
+                self.knowledge_base = SimpleKnowledgeBase()
+                logger.info("✅ Knowledge base initialized")
+            else:
+                logger.warning("⚠️ SimpleKnowledgeBase not available, using fallback")
+                self.knowledge_base = None
+
+            # Test Redis connection
+            if self.redis_cache:
+                try:
+                    await self.redis_cache.ping()
+                    logger.info("✅ Redis connection verified")
+                except Exception as e:
+                    logger.warning(f"⚠️ Redis ping failed: {e}")
+                    self.redis_cache = None
+
+            logger.info("🎉 Optimized Agent Selector ready!")
+            return True
+
+        except Exception as e:
+            logger.error(f"❌ Initialization failed: {e}")
+            return False
+
+    async def select_agent(self, task_request: Dict[str, Any]) -> AgentSelectionResult:
+        """
+        Select the best agent with optimized performance.
+
+        Target: < 2.0s (currently 69.92s)
+        """
+        start_time = time.time()
+
+        try:
+            # Generate cache key
+            cache_key = await self._generate_cache_key(task_request)
+
+            # Try cache layers
+            cached_result = await self._get_from_cache(cache_key)
+            if cached_result:
+                cached_result.cache_hit = True
+                cached_result.selection_time = time.time() - start_time
+
+                # Update stats
+                self.selection_stats["cache_hits"] += 1
+                self.selection_stats["total_selections"] += 1
+
+                logger.info(f"⚡ Cache hit! Selection time: {cached_result.selection_time:.3f}s")
+                return cached_result
+
+            # Cache miss - perform selection
+            logger.info("🔄 Cache miss - performing agent selection...")
+
+            # Use semaphore to limit concurrent selections
+            async with self.semaphore:
+                result = await self._perform_agent_selection(task_request)
+
+            # Cache the result
+            await self._set_cache(cache_key, result)
+
+            # Update performance stats
+            selection_time = time.time() - start_time
+            result.selection_time = selection_time
+            result.cache_hit = False
+
+            self._update_performance_stats(selection_time)
+
+            logger.info(f"✅ Agent selected: {result.agent_name} (confidence: {result.confidence:.3f})")
+            logger.info(f"⏱️ Selection time: {selection_time:.3f}s")
+
+            return result
+
+        except Exception as e:
+            logger.error(f"❌ Agent selection failed: {e}")
+            # Return fallback result
+            return AgentSelectionResult(
+                agent_name="fallback_agent",
+                confidence=0.5,
+                reasoning=f"Fallback due to error: {str(e)}",
+                performance_metrics={"error": True},
+                selection_time=time.time() - start_time
+            )
+
+    async def _generate_cache_key(self, task_request: Dict[str, Any]) -> str:
+        """Generate a consistent cache key for the task request."""
+        # Create a normalized version of the request for caching
+        normalized_request = {
+            "task_type": task_request.get("task_type", "text_generation"),
+            "content": task_request.get("content", "")[:500],  # Limit content length
+            "latency_requirement": task_request.get("latency_requirement", 1000),
+            "max_tokens": task_request.get("max_tokens", 1024),
+            "temperature": round(task_request.get("temperature", 0.7), 1)
+        }
+
+        # Create hash of normalized request
+        request_str = json.dumps(normalized_request, sort_keys=True)
+        request_hash = hashlib.md5(request_str.encode()).hexdigest()
+
+        return f"agent_selection:{request_hash}"
+
+    async def _get_from_cache(self, cache_key: str) -> Optional[AgentSelectionResult]:
+        """Get result from cache layers."""
+        # Try memory cache first
+        result = await self.memory_cache.get(cache_key)
+        if result:
+            return result
+
+        # Try Redis cache
+        if self.redis_cache:
+            try:
+                cached_data = await self.redis_cache.get(cache_key)
+                if cached_data:
+                    # Deserialize and store in memory cache
+                    result = AgentSelectionResult(**json.loads(cached_data))
+                    await self.memory_cache.set(cache_key, result)
+                    return result
+            except Exception as e:
+                logger.warning(f"⚠️ Redis get failed: {e}")
+
+        return None
+
+    async def _set_cache(self, cache_key: str, result: AgentSelectionResult) -> None:
+        """Set result in cache layers."""
+        # Store in memory cache
+        await self.memory_cache.set(cache_key, result, ttl=300)  # 5 minutes
+
+        # Store in Redis cache
+        if self.redis_cache:
+            try:
+                # Serialize result for Redis
+                result_dict = {
+                    "agent_name": result.agent_name,
+                    "confidence": result.confidence,
+                    "reasoning": result.reasoning,
+                    "performance_metrics": result.performance_metrics,
+                    "cache_hit": result.cache_hit,
+                    "selection_time": result.selection_time
+                }
+                await self.redis_cache.setex(cache_key, 3600, json.dumps(result_dict))  # 1 hour
+            except Exception as e:
+                logger.warning(f"⚠️ Redis set failed: {e}")
+
+    async def _perform_agent_selection(self, task_request: Dict[str, Any]) -> AgentSelectionResult:
+        """Perform the actual agent selection using base selector."""
+        if not self.base_selector:
+            raise RuntimeError("Base selector not initialized")
+
+        # Use the existing enhanced selector
+        result = await self.base_selector.select_best_agent_with_reasoning(task_request)
+
+        return AgentSelectionResult(
+            agent_name=result.get("selected_agent", {}).get("name", "unknown"),
+            confidence=result.get("confidence", 0.5),
+            reasoning=result.get("reasoning", "No reasoning provided"),
+            performance_metrics={
+                "complexity_score": result.get("complexity_score", 0.0),
+                "reasoning_mode": result.get("reasoning_mode", "standard"),
+                "parallel_reasoning": result.get("parallel_reasoning_enabled", False)
+            }
+        )
+
+    def _update_performance_stats(self, selection_time: float) -> None:
+        """TODO: Add docstring."""
+        """Update performance statistics."""
+        self.selection_stats["total_selections"] += 1
+        self.selection_stats["cache_misses"] += 1
+
+        # Update average
+        total = self.selection_stats["total_selections"]
+        current_avg = self.selection_stats["avg_selection_time"]
+        self.selection_stats["avg_selection_time"] = (
+            (current_avg * (total - 1) + selection_time) / total
+        )
+
+        # Update min/max
+        self.selection_stats["fastest_selection"] = min(
+            self.selection_stats["fastest_selection"], selection_time
+        )
+        self.selection_stats["slowest_selection"] = max(
+            self.selection_stats["slowest_selection"], selection_time
+        )
+
+    async def get_performance_stats(self) -> Dict[str, Any]:
+        """Get comprehensive performance statistics."""
+        cache_stats = self.memory_cache.get_stats()
+
+        redis_stats = {}
+        if self.redis_cache:
+            try:
+                redis_info = await self.redis_cache.info()
+                redis_stats = {
+                    "connected": True,
+                    "memory_used": redis_info.get("used_memory_human", "unknown"),
+                    "keys": await self.redis_cache.dbsize()
+                }
+            except Exception:
+                redis_stats = {"connected": False}
+
+        return {
+            "selection_stats": self.selection_stats,
+            "memory_cache": cache_stats,
+            "redis_cache": redis_stats,
+            "performance_target_met": self.selection_stats["avg_selection_time"] < 2.0,
+            "cache_efficiency": (
+                self.selection_stats["cache_hits'] /
+                max(1, self.selection_stats["total_selections"])
+            )
+        }
+
+    async def clear_cache(self) -> None:
+        """Clear all cache layers."""
+        self.memory_cache.cache.clear()
+
+        if self.redis_cache:
+            try:
+                await self.redis_cache.flushdb()
+                logger.info("✅ Redis cache cleared")
+            except Exception as e:
+                logger.warning(f"⚠️ Redis clear failed: {e}")
+
+        logger.info("✅ All caches cleared")
+
+# Example usage and testing
+async def main():
+    """Test the optimized agent selector."""
+    selector = OptimizedAgentSelector()
+
+    if not await selector.initialize():
+        logger.error("❌ Failed to initialize selector")
+        return
+
+    # Test task request
+    test_request = {
+        "task_type": "text_generation",
+        "content": "Write a Python function to calculate fibonacci numbers",
+        "latency_requirement": 2000,
+        "max_tokens": 512,
+        "temperature": 0.7
+    }
+
+    # First selection (cache miss)
+    logger.info("🔄 First selection (cache miss)...")
+    result1 = await selector.select_agent(test_request)
+
+    # Second selection (cache hit)
+    logger.info("🔄 Second selection (cache hit)...")
+    result2 = await selector.select_agent(test_request)
+
+    # Get performance stats
+    stats = await selector.get_performance_stats()
+
+    logger.info("📊 Performance Statistics:")
+    logger.info(f"   Average selection time: {stats["selection_stats"]['avg_selection_time']:.3f}s")
+    logger.info(f"   Cache hit rate: {stats["cache_efficiency"]:.2%}")
+    logger.info(f"   Target met (< 2.0s): {stats["performance_target_met"]}")
+
+if __name__ == "__main__':
+    asyncio.run(main())

@@ -1,0 +1,21 @@
+# Modelfile for qwen3-30b-mlx-4bit
+# Migrated from LM Studio: Qwen3-30B-A3B-Instruct-2507-MLX-4bit
+# Description: 30B parameter Qwen model optimized for MLX with 4-bit quantization
+
+FROM .
+
+# Model configuration
+TEMPLATE """{% for message in messages %}{% if message['role'] == 'user' %}{{ message['content'] }}{% elif message['role'] == 'assistant' %}{{ message['content'] }}{% endif %}{% endfor %}"""
+
+# System prompt
+SYSTEM """You are qwen3-30b-mlx-4bit, a helpful AI assistant migrated from LM Studio. You maintain all the capabilities of the original model while being optimized for Ollama usage."""
+
+# Parameters
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER top_k 40
+PARAMETER repeat_penalty 1.1
+
+# Model metadata
+PARAMETER num_ctx 4096
+PARAMETER num_predict 2048

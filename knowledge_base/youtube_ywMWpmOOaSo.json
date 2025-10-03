@@ -1,0 +1,26 @@
+{
+  "id": "youtube_ywMWpmOOaSo",
+  "title": "Google is Quietly Revolutionizing AI Agents (This is HUGE)",
+  "url": "https://www.youtube.com/watch?v=ywMWpmOOaSo",
+  "description": "Google recently introduced the Agent2Agent Protocol (A2A), which provides a standard for AI agents to communicate effectively with each other. It’s very similar to how MCP provides a standard for agents to communicate with tools. And just like MCP, A2A is very revolutionary and certainly not getting the attention it deserves with its initial release!\n\nIn this video, I cover what A2A is, why it’s so powerful, and what the current limitations/concerns are. It’s worth spending the time to understand this protocol now - this is the future of AI agents and the way they will communicate with each other.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Lovable to build the application of your dreams with no code! It's the perfect tool no matter if you're a developer, innovator, business owner, or designer looking to bring your next idea to life. The link supports me as a creator too, so thank you!\n\nhttps://lovable.dev/colemedin\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nA2A GitHub Repository:\n\nhttps://github.com/google/A2A\n\nGoogle’s A2A Announcement:\n\nhttps://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/\n\nMy Simple A2A Code Example:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/google-a2a-agent\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Google's A2A Protocol\n01:27 - Google's Big Announcement\n02:13 - A2A is Starting Out Just Like MCP\n03:21 - Why A2A?\n06:33 - Core Concepts of A2A\n09:14 - Typical A2A Flow Made Simple\n10:55 - A2A + MCP (This is Huge)\n12:03 - Lovable + A2A + MCP - A Standard for Your Whole App\n13:30 - A2A Example with Code\n18:18 - Issues/Concerns with A2A and MCP\n22:14 - Final Thoughts\n22:44 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250417",
+  "duration": 1403,
+  "view_count": 49712,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "meta_github_69855092",
+  "title": "extension-ffi",
+  "description": "Examples of C extensions for PyTorch",
+  "url": "https://github.com/pytorch/extension-ffi",
+  "language": "Python",
+  "stars": 256,
+  "forks": 70,
+  "created_at": "2016-10-03T08:57:52Z",
+  "updated_at": "2025-06-04T15:39:36Z",
+  "topics": [],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "meta_arxiv_-8319429991992420850",
+  "title": "ARE: Scaling Up Agent Environments and Evaluations",
+  "description": "We introduce Meta Agents Research Environments (ARE), a research platform for scalable creation of environments, integration of synthetic or real applications, and execution of agentic orchestrations. ARE provides simple abstractions to build complex and diverse environments, each with their own rules, tools, content, and verifiers, helping to bridge the gap between model development and real-world deployment. We also propose Gaia2, a benchmark built in ARE and designed to measure general agent capabilities. Beyond search and execution, Gaia2 requires agents to handle ambiguities and noise, adapt to dynamic environments, collaborate with other agents, and operate under temporal constraints. Unlike prior benchmarks, Gaia2 runs asynchronously, surfacing new failure modes that are invisible in static settings. Our experiments show that no system dominates across the intelligence spectrum: stronger reasoning often comes at the cost of efficiency, and budget scaling curves plateau, highlighting the need for new architectures and adaptive compute strategies. Perhaps more importantly, ARE abstractions enable continuous extension of Gaia2 to other environments, empowering the community to rapidly create new benchmarks tailored to their domains. In AI's second half, progress increasingly depends on defining meaningful tasks and robust evaluations to drive frontier capabilities forward.\n        △ Less",
+  "url": "https://arxiv.orghttps://arxiv.org/abs/2509.17158",
+  "authors": "Authors:\nPierre Andrews, \n      \n      Amine Benhalloum, \n      \n      Gerard Moreno-Torres Bertran, \n      \n      Matteo Bettini, \n      \n      Amar Budhiraja, \n      \n      Ricardo Silveira Cabral, \n      \n      Virginie Do, \n      \n      Romain Froger, \n      \n      Emilien Garreau, \n      \n      Jean-Baptiste Gaya, \n      \n      Hugo Laurençon, \n      \n      Maxime Lecanu, \n      \n      Kunal Malkan, \n      \n      Dheeraj Mekala, \n      \n      Pierre Ménard, \n      \n      Grégoire Mialon, \n      \n      Ulyana Piterbarg, \n      \n      Mikhail Plekhanov, \n      \n      Mathieu Rita, \n      \n      Andrey Rusakov, \n      \n      Thomas Scialom, \n      \n      Vladislav Vorotilov, \n      \n      Mengjue Wang, \n      \n      Ian Yu",
+  "source_type": "meta_research_paper",
+  "domain": "meta_ai",
+  "keywords": [
+    "meta",
+    "ai",
+    "research"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "research",
+    "paper",
+    "arxiv"
+  ]
+}

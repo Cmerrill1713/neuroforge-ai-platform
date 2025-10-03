@@ -1,0 +1,30 @@
+{
+  "id": "youtube_E6bcyo32zss",
+  "title": "ONE BILLION Row Challenge: AI Coding with Electron, DuckDB, Aider, and Cursor",
+  "description": "Have you heard of the One BILLION Row Challenge? It's a  viral coding trend where engineers calculate min, mean, and max in the least amount of time possible from a text file of 1 BILLION ROWS. \n\nI figured this would be a great opportunity to show off the future of AI-powered coding demonstrating how you can supercharge your software engineering skills using Copilots like Aider, and Cursor and tech like Electron and DuckDB. In our AI Devlog walkthrough, we break down how to tackle the min, mean, and max calculation challenge on a massive dataset using DuckDB. We'll use the latest version of turbo4, an OpenAI assistants API wrapper that enables you to build knowledge bases directly from URLs. Your custom turbo4 assistant can then consume the knowledge base and generate code for you.\n\nThis channel is dedicated to helping you transform from a traditional coder to an Agentic engineer, adept in leveraging the potency of AI-enhanced coding techniques and next-gen tools like the Assistants API from OpenAI to elevate your productivity and capability in the modern coding landscape.\n\nWe start by setting up an Electron app and guide you through using Typescript, the Vuetify framework for Vue UI components, and DuckDB's in-memory database for handling ONE BILLION rows of data efficiently. Our focus is on clear, applied knowledge, we don't care about typescript types we care about learning how to build like we're an engineer of the future. We'll utilize Two AI Coding assistants: Aider and Cursor. We'll talk and show what they're both good at and where they're weak. By following our methodical approach, you'll learn valuable strategies for improving prompt engineering abilities and get ahead of the AI wave that's redefining software engineering. Subscribe to our channel for more professional insights into AI coding, and check out our description for links to Aider, Cursor, and the Assistants API documentation.\n\nMassive shout out to all the engineers who have participated in the One BILLION Row Challenge and all the engineers that's code has been used as a knowledge base to build large language models.\n\n💻 One Billion Row Challenge - Electron Edition\n\nhttps://github.com/disler/1brc-electron\n\n🌎 2024 Predictions For AI & LLM Engineers\n\nhttps://youtu.be/UES89QRc3Sk\n\n🔗 Resources\n\n1 BRC Original - https://www.morling.dev/blog/one-billion-row-challenge/\n1 BRC DuckDB Post - https://rmoff.net/2024/01/03/1%EF%B8%8F%E2%83%A3%EF%B8%8F-1brc-in-sql-with-duckdb/\nDuckDB - https://duckdb.org/\nAider - https://aider.chat/\nCursor - https://cursor.sh/\nElectron Vite Vue Typescript Starter - https://github.com/Deluze/electron-vue-template\nVuetify Server Table - https://vuetifyjs.com/en/components/data-tables/server-side-tables/#examples\nVuetify Pagination - https://vuetifyjs.com/en/components/paginations/#disabled\nElectron - https://www.electronjs.org/\nLLM In CLI - https://github.com/simonw/llm\n\n📖 Chapters\n00:00 - One Billion Row Challenge\n01:28 - Let Cursor Code For You\n04:25 - Let Aider Code For You\n10:44 - Electron IPC\n14:30 - Generating (not quite) 1 Billion Rows\n15:30 - OpenAI Assistants API Via Turbo4\n19:00 - Build Micro Knowledge Bases\n24:00 - Agent DuckDB SQL & Typescript Generation\n27:20 - SWEET DuckDB Commands\n29:26 - Cleaning up pageTable.ts\n31:05 - End to End Electron App\n33:40 - AI Coding the Frontend\n44:47 - One Billion Rows In Electron\n49:00 - Recap & Big Picture Agentic Engineering\n53:55 - Talk To Your Database (text to sql to results)\n\n#promptengineering #aider #copilot",
+  "url": "https://www.youtube.com/watch?v=E6bcyo32zss",
+  "upload_date": "20240108",
+  "duration": 3311,
+  "view_count": 5772,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "typescript",
+    "ai",
+    "coding",
+    "software engineering",
+    "api",
+    "database",
+    "frontend",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "9fabb06270fdc7d603d52f937311d5b8"
+}

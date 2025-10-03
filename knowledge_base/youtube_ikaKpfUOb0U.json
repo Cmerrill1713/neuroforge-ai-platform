@@ -1,0 +1,25 @@
+{
+  "id": "youtube_ikaKpfUOb0U",
+  "title": "CONTROL your Personal AI Assistant with GPT-4o mini & ElevenLabs (AI TTS & STT)",
+  "description": "Personal AI is TOO valuable to leave in the hands of Big Tech. See how EASY it is to build your own personal AI assistant.\n\n🔑 Unlock the power of voice-assisted work with your very own personal AI assistant! In this video, we break down the key components and show you how to build a lightning-fast, customizable AI assistant using cutting-edge speech-to-text and text-to-speech technology.\n\n📊 See real performance benchmarks and find out which setup delivers the fastest results for transcription, thinking, and voice generation.\n\n🔥 We compare three powerful combinations:\n1. Groq + ElevenLabs\n2. Pure OpenAI implementation\n3. AssemblyAI + ElevenLabs\n\nLet's focus in on how to build your own personal AI assistant:\n\n🛠️ Key topics covered:\n- Speech-to-text (STT) and text-to-speech (TTS) technologies\n- Leveraging GPT-4O Mini for rapid responses\n- Voice options with ElevenLabs\n- Building a reusable Personal AI Assistant class\n- Crafting the perfect AI assistant prompt\n\n🧠 Learn how to escape the walled gardens of big tech and take control of your own AI productivity tools. Perfect for software engineers looking to supercharge their workflow!\n\n⚡ Ready to revolutionize your productivity? Hit subscribe and join us as we push the boundaries of what's possible with personal AI assistants. Don't miss out on this game-changing technology that's transforming the way we work!\n\n💻 Personal AI Assistant STARTER PACK\nhttps://github.com/disler/personal-ai-starter-pack\n\n📖 Learn the best prompt format\nhttps://youtu.be/W6Z0U11nnhA\n\n🔗 Resources\nGroq STT: https://console.groq.com/docs/speech-text\nElevenLabs TTS: https://www.elevenlabs.io/\nOpenAI STT: https://platform.openai.com/docs/guides/speech-to-text\nOpenAI TTS: https://platform.openai.com/docs/guides/text-to-speech\nAssemblyAI STT: https://www.assemblyai.com/\n\n🍞 Chapters\n00:00 Groq STT, ElevenLabs TTS, Cringe Assistant\n03:15 Personal AI Assistants\n04:48 Three Key Components of AI Assistants\n05:23 Pure OpenAI AI Assistant\n08:28 Breakdown STT, think, TTS, Assistant Prompt\n12:30 AssemblyAI STT, ElevenLabs TTS Slow Assistant\n14:57 Results - Speed Comparison of AI Assistants\n18:00 High Level Code Breakdown",
+  "url": "https://www.youtube.com/watch?v=ikaKpfUOb0U",
+  "upload_date": "20240805",
+  "duration": 1213,
+  "view_count": 7124,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "a34f225ecef210b3d252dfe69f1883a0"
+}

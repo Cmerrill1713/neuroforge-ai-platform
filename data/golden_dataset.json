@@ -1,0 +1,125 @@
+[
+  {
+    "metadata": {
+      "created_at": "2025-09-30T21:06:54.491293",
+      "total_examples": 8,
+      "version": "1.0"
+    },
+    "examples": [
+      {
+        "query": "Write a Python function to calculate fibonacci numbers",
+        "expected_output": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)",
+        "context": "coding task",
+        "intent": "code_generation",
+        "quality_score": 1.0,
+        "metadata": {
+          "task_type": "coding",
+          "difficulty": "easy"
+        },
+        "added_at": "2025-09-30T21:06:54.469057"
+      },
+      {
+        "query": "Create a REST API endpoint for user authentication",
+        "expected_output": "from fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass LoginRequest(BaseModel):\n    username: str\n    password: str\n\n@app.post(\"/auth/login\")\nasync def login(request: LoginRequest):\n    # Verify credentials\n    if verify_credentials(request.username, request.password):\n        return {\"token\": generate_token(request.username)}\n    raise HTTPException(status_code=401, detail=\"Invalid credentials\")",
+        "context": "API development",
+        "intent": "code_generation",
+        "quality_score": 1.0,
+        "metadata": {
+          "task_type": "coding",
+          "difficulty": "medium"
+        },
+        "added_at": "2025-09-30T21:06:54.469077"
+      },
+      {
+        "query": "Explain how neural networks work",
+        "expected_output": "Neural networks are computational models inspired by the human brain. They consist of layers of interconnected nodes (neurons):\n\n1. Input Layer: Receives raw data\n2. Hidden Layers: Process information through weighted connections\n3. Output Layer: Produces final predictions\n\nKey concepts:\n- Weights: Learned parameters that determine connection strength\n- Activation Functions: Introduce non-linearity (e.g., ReLU, sigmoid)\n- Backpropagation: Algorithm for updating weights based on errors\n- Gradient Descent: Optimization method to minimize loss\n\nTraining involves feeding data through the network, calculating errors, and adjusting weights to improve accuracy.",
+        "context": "educational explanation",
+        "intent": "explanation",
+        "quality_score": 1.0,
+        "metadata": {
+          "task_type": "explanation",
+          "topic": "AI/ML"
+        },
+        "added_at": "2025-09-30T21:06:54.469095"
+      },
+      {
+        "query": "Explain API key rotation best practices",
+        "expected_output": "API Key Rotation Best Practices:\n\n1. **Rotation Frequency**\n   - Critical keys: Every 30 days\n   - Standard keys: Every 90 days\n   - Low-risk keys: Every 180 days\n\n2. **Zero-Downtime Rotation**\n   - Support dual keys temporarily\n   - Gradual transition period\n   - Monitor both keys during transition\n\n3. **Automation**\n   - Scheduled rotation via CI/CD\n   - Automatic secret management (Vault, AWS Secrets Manager)\n   - Alert on rotation failures\n\n4. **Audit Trail**\n   - Log all rotations with timestamps\n   - Track key usage before/after rotation\n   - Maintain rotation history\n\n5. **Emergency Procedures**\n   - Immediate rotation on suspected compromise\n   - Revoke old keys after transition\n   - Notify affected services",
+        "context": "security guidance",
+        "intent": "explanation",
+        "quality_score": 1.0,
+        "metadata": {
+          "prd_id": "ST-108",
+          "domain": "security"
+        },
+        "added_at": "2025-09-30T21:06:54.469197"
+      },
+      {
+        "query": "Analyze the pros and cons of microservices architecture",
+        "expected_output": "Microservices Architecture Analysis:\n\nPROS:\n\u2705 Scalability: Individual services can scale independently\n\u2705 Flexibility: Different tech stacks per service\n\u2705 Resilience: Failures isolated to specific services\n\u2705 Deployment: Independent deployment cycles\n\u2705 Team Autonomy: Teams own specific services\n\nCONS:\n\u274c Complexity: Distributed system challenges\n\u274c Network Overhead: Inter-service communication latency\n\u274c Data Consistency: Managing transactions across services\n\u274c Testing: Integration testing more complex\n\u274c Monitoring: Requires sophisticated observability\n\nBest Use Cases:\n- Large, complex applications\n- Teams with independent release cycles\n- Need for high scalability\n\nAvoid When:\n- Small applications\n- Limited DevOps maturity\n- Tight coupling requirements",
+        "context": "technical analysis",
+        "intent": "analysis",
+        "quality_score": 1.0,
+        "metadata": {
+          "task_type": "analysis",
+          "domain": "software_architecture"
+        },
+        "added_at": "2025-09-30T21:06:54.469109"
+      },
+      {
+        "query": "Generate a backtesting report for a mean reversion strategy",
+        "expected_output": "Backtesting Report: Mean Reversion Strategy\n\nPeriod: 2024-01-01 to 2024-12-31\nInitial Capital: $100,000\n\nPerformance Metrics:\n- Total Return: 23.4%\n- Sharpe Ratio: 1.85\n- Max Drawdown: -8.3%\n- Win Rate: 62%\n- Total Trades: 147\n\nStrategy Parameters:\n- Lookback Period: 20 days\n- Entry Threshold: 2 std deviations\n- Exit Threshold: Mean\n- Position Size: 5% of capital\n\nRisk Metrics:\n- VaR (95%): -2.1%\n- Sortino Ratio: 2.43\n- Calmar Ratio: 2.82\n\nConclusion: Strategy shows consistent performance with acceptable risk levels.",
+        "context": "trading analytics",
+        "intent": "analysis",
+        "quality_score": 1.0,
+        "metadata": {
+          "prd_id": "ST-104",
+          "domain": "trading"
+        },
+        "added_at": "2025-09-30T21:06:54.469185"
+      },
+      {
+        "query": "What's the capital of France?",
+        "expected_output": "Paris",
+        "context": "factual question",
+        "intent": "quicktake",
+        "quality_score": 1.0,
+        "metadata": {
+          "task_type": "factual",
+          "difficulty": "easy"
+        },
+        "added_at": "2025-09-30T21:06:54.469124"
+      },
+      {
+        "query": "Current best practices for React state management?",
+        "expected_output": "Current React State Management Best Practices (2025):\n\n1. **Context API** - For simple global state\n2. **Zustand** - Lightweight, growing popularity\n3. **Redux Toolkit** - Still strong for complex apps\n4. **TanStack Query** - Server state management\n5. **Jotai/Recoil** - Atomic state management\n\nTrend: Move away from Redux for simpler alternatives unless complexity demands it.",
+        "context": "technical advice",
+        "intent": "quicktake",
+        "quality_score": 1.0,
+        "metadata": {
+          "task_type": "technical_advice",
+          "recency": "current"
+        },
+        "added_at": "2025-09-30T21:06:54.469142"
+      }
+    ]
+  },
+  {
+    "user_query": "What is evolutionary optimization?",
+    "context": "Evolutionary optimization uses genetic algorithms to find optimal solutions through natural selection processes.",
+    "rubric": "Explain evolutionary optimization concepts clearly and concisely.",
+    "expected_output": "Evolutionary optimization is a metaheuristic approach that mimics biological evolution to solve optimization problems. It uses genetic algorithms with processes like selection, crossover, and mutation to evolve solutions over generations."
+  },
+  {
+    "user_query": "How does Thompson sampling work in bandit algorithms?",
+    "context": "Thompson sampling is a Bayesian approach to the multi-armed bandit problem that balances exploration and exploitation.",
+    "rubric": "Explain Thompson sampling mechanism and its advantages.",
+    "expected_output": "Thompson sampling works by maintaining a probability distribution over the expected rewards of each arm. It samples from these distributions to select arms, naturally balancing exploration of uncertain arms with exploitation of promising ones."
+  },
+  {
+    "user_query": "What are the benefits of hybrid retrieval in RAG systems?",
+    "context": "Hybrid retrieval combines vector search with keyword search for better document retrieval.",
+    "rubric": "Compare vector and keyword search, explain hybrid benefits.",
+    "expected_output": "Hybrid retrieval combines vector similarity search (semantic understanding) with BM25 keyword search (exact matching). This provides better recall by capturing both semantic meaning and specific terms, improving overall retrieval quality."
+  }
+]

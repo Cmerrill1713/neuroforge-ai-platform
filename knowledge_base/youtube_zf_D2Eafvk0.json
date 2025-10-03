@@ -1,0 +1,26 @@
+{
+  "id": "youtube_zf_D2Eafvk0",
+  "title": "Pydantic AI + DeepSeek V3 - The BEST AI Agent Combo",
+  "url": "https://www.youtube.com/watch?v=zf_D2Eafvk0",
+  "description": "I get asked a lot what my process looks like for building AI agents, so I recently kicked off a mini series showing my entire process! In this series, we’ll build AI agent that can consume entire GitHub repositories so you can ask it questions about all the code in the repo.\n\nIn this video (3rd one in the series), I show you how to take an AI agent prototype built with n8n and turn it into a full custom coded agent EASILY with Pydantic AI. We’ll also use DeepSeek V3 for the LLM so it’s super powerful and still dirt cheap! Keep in mind that the n8n prototype is optional - this can very much be a standalone Pydantic AI guide.\n\nThe best LLM or agent framework could change in a month. I keep this guide high level (while still covering technical details) so there is a lot to get out of this even if you aren't using Pydantic AI or DeepSeek V3 for your LLM.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nRegister now for the oTTomator AI Agent Hackathon with a $6,000 prize pool!\n\nhttps://studio.ottomator.ai/hackathon/register\n\nTry the n8n version of this GitHub agent now on the Live Agent Studio (Pydantic version coming soon):\n\nhttps://studio.ottomator.ai\n\nAll code for this Pydantic GitHub agent can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-github-agent\n\nAnd the n8n version of this agent:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/n8n-github-assistant\n\nPydantic AI documentation:\n\nhttps://ai.pydantic.dev/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Intro\n02:04 - Where We are in the AI Agent Roadmap\n04:11 - n8n Prototype - Our Blueprint\n06:46 - Live Agent Studio GitHub Agent\n07:24 - Pydantic AI's Beautiful Docs\n10:28 - Agent Code Overview\n11:23 - Building our Pydantic AI Agent\n21:23 - Building the Agent Chat Tooling\n25:17 - Testing our Agent\n28:23 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20250106",
+  "duration": 1759,
+  "view_count": 78292,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

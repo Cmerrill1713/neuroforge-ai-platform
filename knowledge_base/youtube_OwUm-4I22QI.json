@@ -1,0 +1,25 @@
+{
+  "id": "youtube_OwUm-4I22QI",
+  "title": "M4 MAX MacBook Pro BENCHMARKED: Deepseek v3 vs Qwen, Phi-4 and Llama on Ollama",
+  "description": "LET'S UNBOX THE M4 MAX MacBook Pro! ngl the m4 max is an absolute beast for LLMs. We BENCHMARKED it against Deepseek v3 with Ollama SLMs like Llama3.2, Qwen2.5, Falcon3-10b, and Phi-4. \n\nReady to see where the limits of local LLMs (SLMs) are on a top of the line M4 Max MacBook Pro (128GB RAM + 16 Cores + 4TB)?\n\n👍 Resources:\n\n- Benchy Codebase: https://github.com/disler/benchy\n- Principled AI Coding: https://agenticengineer.com/principled-ai-coding\n- Previous 2025 Predictions Video: https://youtu.be/BcSuuvWvR-c\n- Four Levels of the Prompt: https://youtu.be/ujnLJru2LIs\n- Promptfoo Testing Framework (Best Prompt Format): https://youtu.be/W6Z0U11nnhA\n- Deepseek: https://www.deepseek.com/\n\nWith Llama4 right around the corner it's time to get ahead of the curve and prepare our benchmarks. Benchmarking is critical for success in the Generative AI Age. Why? Because benchmarks tell you what you can do with local and cloud models. They literally tell you when a model can solve the problem you want solved. In this video we look at common patterns and mental models you can use to build powerful, useful, actionable benchmarks for your language models.\n\n🚀 In this video, we put the M4 MAX MacBook Pro to the ultimate test against the new giant: Deepseek v3! We also compare the M4 MAX to the M2 Max to see if the M4 MacBook Pro is really worth the money (teaser: it is).\n\n💻 Watch as we run powerful local models like Llama3.2, Llama4, Qwen, and Phi-4 on Ollama, and see how the M4 Max stacks up. Using tools like Promptfoo and our own Benchy codebase, we analyze tokens per second, accuracy, and overall performance.\n\n🔬 We'll explore whether the M4 Max is truly the best machine for running local models and small language models (SLMs). Learn about the significance of LLM benchmarks and how they impact AI engineering and development.\n\n🔥 Join me, IndyDevDan, as we uncover the capabilities of the M4 Max MacBook Pro and discuss what this means for AI enthusiasts, developers, and anyone interested in pushing the boundaries of tech in the Generative AI Age.\n\nStay focused and Keep building.\n\n📖 Chapters\n00:00 Unboxing M4 MAX MacBook Pro\n01:48 Prepare for local LLMs with benchmarks\n02:38 M4 Max vs M2 Max\n05:45 Llama3.2:1b M4 vs M2\n07:13 Falcon3:10b M4 vs M2\n08:55 Qwen2.5-coder:32b M4 vs M2\n10:50 Qwen2.5:72b M4 vs M2\n13:53 M4 Benchmarking against Deepseek v3\n30:25 SLM limitations\n\n#macbookpro #aiagent #promptengineering",
+  "url": "https://www.youtube.com/watch?v=OwUm-4I22QI",
+  "upload_date": "20250106",
+  "duration": 2277,
+  "view_count": 62417,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "15211c00ecbb5a36e34f5fb9538a2fcb"
+}

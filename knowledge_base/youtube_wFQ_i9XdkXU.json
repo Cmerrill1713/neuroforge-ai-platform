@@ -1,0 +1,25 @@
+{
+  "id": "youtube_wFQ_i9XdkXU",
+  "title": "My TOP 6 Claude Code PRO tips for AI Coding (MCP + Agents)",
+  "description": "Say goodbye to vibe coding — it's all about AI Coding and Agentic Coding now.\n\n🎥 Video References:\nPrincipled AI Coding: https://agenticengineer.com/principled-ai-coding?y=wFQ_i9XdkXU\nSingle File Agents: https://github.com/disler/single-file-agents  \nAnthropic Text Editor Tool: https://docs.anthropic.com/en/docs/build-with-claude/tool-use/text-editor-tool#text-editor-tool-commands  \nAnthropic Token-efficient Tool Use: https://docs.anthropic.com/en/docs/build-with-claude/tool-use/token-efficient-tool-use  \nFirecrawl: https://www.firecrawl.dev/  \nFirecrawl MCP Server: https://github.com/mendableai/firecrawl-mcp-server  \n\n💻 In this video, I (IndyDevDan) break down my TOP 6 pro tips for using Claude Code with MCP to build AI agents that code FOR you. From context priming to token-efficient workflows, discover how to leverage Claude 3.7 Sonnet, MCP, and powerful AI agents to accelerate your AI coding skills and create systems that build systems.\n\n🔥 You’ll learn how context priming dramatically boosts your efficiency by instantly loading your project structure into Claude's memory. Explore how MCP servers and Anthropic’s token-efficient tools empower you to collect context and execute commands—transforming your AI agents into dynamic, powerful builders. \n\n🚀 Dive deep into single file agents, MCP integrations, and Claude’s new file editing tools, and see how the latest Claude 3.7 Sonnet update is redefining what's possible in the Gen AI age. If you're an engineer or developer looking to level up your coding game, this is your essential guide to mastering Claude 3.7 Sonnet for true agentic workflows.\n\n🛠️ KEY TAKEAWAYS:\n- Agentic Coding: Understand how Claude Code and MCP redefine coding.\n- Claude 3.7 Sonnet: Master the latest AI model enhancements for efficient tool use.\n- MCP Servers: Implement context collectors & executors seamlessly.\n- Single File Agents: Simplify your AI agent architecture.\n- IndyDevDan’s Pro Tips: Actionable techniques to accelerate AI-powered engineering.\n- Context Priming: Unlock the speed and power of priming your Claude instances.\n\n🔑 It's about creating systems that build systems—so you can scale your impact exponentially with every engineering effort. Join IndyDevDan in discovering how the future of coding lies in agentic workflows and powerful AI integrations.\n\nNo matter what.\n\nStay Focused and Keep Building.\n- Idd\n\n#agenticcoding #claudecode #aiagents",
+  "url": "https://www.youtube.com/watch?v=wFQ_i9XdkXU",
+  "upload_date": "20250317",
+  "duration": 1430,
+  "view_count": 46996,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "99030dcc6a03da8020c20fb4d0142937"
+}

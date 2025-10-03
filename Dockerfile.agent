@@ -1,0 +1,49 @@
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install additional agent dependencies
+RUN pip install --no-cache-dir \
+    redis \
+    psycopg2-binary \
+    weaviate-client \
+    requests \
+    asyncio \
+    aiohttp \
+    fastapi \
+    uvicorn \
+    pydantic \
+    python-multipart
+
+# Copy agent code
+COPY src/agents/ /app/src/agents/
+COPY scripts/ /app/scripts/
+COPY config/ /app/config/
+
+# Create necessary directories
+RUN mkdir -p /app/data /app/logs /app/temp
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+
+# Expose agent port
+EXPOSE 8006
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD python -c "import requests; requests.get('http://localhost:8006/health')"
+
+# Start the document processing agent
+CMD ["python", "src/agents/document_agent.py"]

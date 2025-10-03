@@ -1,0 +1,18 @@
+{
+  "consolidated_api_url": "http://localhost:8004",
+  "agentic_platform_url": "http://localhost:8000",
+  "frontend_url": "http://localhost:3000",
+  "tts_url": "http://localhost:8086",
+  "whisper_url": "http://localhost:8087",
+  "ollama_url": "http://localhost:11434",
+  "enable_home_assistant": false,
+  "enable_voice_services": true,
+  "enable_mcp_tools": true,
+  "enable_rag_system": true,
+  "enable_self_healing": true,
+  "request_timeout": 30.0,
+  "max_retries": 3,
+  "retry_delay": 1.0,
+  "use_fallback_responses": true,
+  "log_fallback_usage": true
+}

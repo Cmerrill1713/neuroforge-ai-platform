@@ -1,0 +1,26 @@
+{
+  "id": "youtube_XnoKvdeZAN8",
+  "title": "Run LOCAL LLMs in ONE line of code - AI Coding llamafile with Mistral with  (DEVLOG)",
+  "description": "Local LLMs in one line of code? FAKE NEWS CLICK BAIT RIGHT? No, Llamafile makes it possible.\n\n\n\nI've been blowing off local llms since the beginning. \n\"It's too slow\"\n\"They're to hard to run locally\"\n\"Accuracy is too low\" \nThere WERE many reasons to avoid local LLMs but things are changing.\n\n\nI'm really excited to say llamafile and advancements in local LLM development is rapidly changing my perspective on local LLMs.\n\n\nWith just ONE line of code we can now run local llms. Thanks to  Llamafile, we can now run local large language models (LLMs) with unprecedented simplicity. In this new devlog, we spotlight Llamafile's revolutionary single-command execution for local LLMs, transforming open-source AI accessibility for developers and engineers alike. Discover how you can set up and run local models like Mistral 7b Instruct and Facebook’s Wizard Coder effortlessly, while also learning to establish a reusable bash function for on-the-fly execution of any local Llamafile within your terminal.\n\n\nDon't get me wrong, local LLMs are still not perfect. They are still lacking hard on key LLM benchmarks and the accuracy hangs low but it's not about where they are it's about where they will be. They are rapidly improving and soon, with proper prompt testing, they'll be viable to solve problems. Thanks to llamafile they are also getting easier to run locally.\n\n\nStay ahead in the fast-evolving world of AI with local models that are fast and open-source, made possible by Llamafile. This devlog not only showcases the astonishing ease of initiating local LLMs but also pays credit where it's due to appreciate to Justine's insane coding abilities (she wrote llamafile and cosmopolitan 🤯). We're diving deep into the synergy between stellar engineering and the democratization of AI technology. By the end of this video, you'll be well-equipped to integrate Llamafile into your workflow, enhancing your AI coding projects with the robust capabilities of local models and preparing you for whatever is next for local open source models. Subscribe to stay updated on the latest in AI devlogs, and make sure to like and share for more content on AiDER, local LLMs, and leveraging Llamafile for your development needs.\n\n\n🚀 local llms - llamafile quick start\nhttps://github.com/disler/lllm\n\n\n💻 Incredible Resources\nLLAMAFILE codebase --- https://github.com/Mozilla-Ocho/llamafile/tree/0.3\nCore author --- creator of llamafile & cosmopolitan libc: https://justine.lol/\nOriginal Blog Post --- https://justine.lol/oneliners/\nOriginal llamafile introduction --- https://hacks.mozilla.org/2023/11/introducing-llamafile/\nHow llamafile works --- https://github.com/Mozilla-Ocho/llamafile/tree/0.3?tab=readme-ov-file#how-llamafile-works\n\n\n📖 Chapters\n00:00 Llamafile\n01:24 Local llm in 1 minute\n02:24 Done - this is incredible\n03:55 Run Local LLM Web Server UI\n06:50 lllm - Prompt Engineering Aider\n07:36 Aider\n09:00 lllm - local large language models\n12:11 Add Wizard Coder With AIDER\n12:53 Wizard Coder via llama file\n16:12 lllm - reusable local model bash function\n16:47 Prompt - Why use local open source models?\n\n\n#llm #llama #promptengineering",
+  "url": "https://www.youtube.com/watch?v=XnoKvdeZAN8",
+  "upload_date": "20231225",
+  "duration": 1056,
+  "view_count": 4143,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "e853991c620ae9bfe1cd8f78b216a176"
+}

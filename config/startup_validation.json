@@ -1,0 +1,38 @@
+{
+  "startup_timestamp": "2025-10-02T19:51:53.050589",
+  "configuration": {
+    "config_file": "config/system_config.json",
+    "config_exists": true,
+    "services": {
+      "consolidated_api": "http://localhost:8004",
+      "agentic_platform": "http://localhost:8000",
+      "frontend": "http://localhost:3000",
+      "tts": "http://localhost:8086",
+      "whisper": "http://localhost:8087"
+    },
+    "features": {
+      "home_assistant": false,
+      "voice_services": true,
+      "mcp_tools": true,
+      "rag_system": true,
+      "self_healing": true
+    },
+    "performance": {
+      "request_timeout": 30.0,
+      "max_retries": 3,
+      "retry_delay": 1.0
+    }
+  },
+  "import_status": {
+    "failed_imports": [],
+    "alternatives": {},
+    "fallback_handlers": []
+  },
+  "service_configuration": {
+    "consolidated_api": "http://localhost:8004",
+    "agentic_platform": "http://localhost:8000",
+    "frontend": "http://localhost:3000",
+    "tts": "http://localhost:8086",
+    "whisper": "http://localhost:8087"
+  }
+}

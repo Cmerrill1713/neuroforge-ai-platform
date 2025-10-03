@@ -1,0 +1,26 @@
+{
+  "id": "youtube_KENSTonsiEc",
+  "title": "Notion API in 5 Minutes: Write (Python)",
+  "description": "In 5 minutes, I share how you can write to your Notion pages with the Notion API with less than 50 lines of code.\n\n🤔 Not sure how to get started? Get started here.\nAuthenticate https://youtu.be/KyllgpvQFuI\n\n📄 Documentation\n\nGet the code: https://danisler.com/dev/notion-in-5-minutes\nNotion Developer Documentation https://developers.notion.com/\nPython Library https://github.com/ramnes/notion-sdk-py\n\n💻 Sick Apps\n\n- Notion Text To Speech https://subvolver.com\n- Manage your time your way https://timeva.app\n\n✅ Follow me here\n\n- Website https://danisler.com\n- Twitter https://twitter.com/IndyDevDan\n- Instagram https://www.instagram.com/indydevdan\n- Indie hackers https://www.indiehackers.com/IndyDevDan\n\n#️⃣ Hashtags\n\n#notion #notionapi #api\n\n📖 Chapters\n00:00 Quick Intro\n00:28 Write Documentation\n01:10 Coding Begins\n02:40 Your First Write To Notion!\n03:15 Write Heading\n03:35 Add Block Type\n04:00 List Of Block Types\n04:24 Callout and Todo\n03:40 Make Your First Request\n04:40 Writing Complete!",
+  "url": "https://www.youtube.com/watch?v=KENSTonsiEc",
+  "upload_date": "20230115",
+  "duration": 300,
+  "view_count": 2462,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "78dd280a535021b392cf86e44eaa1e01"
+}

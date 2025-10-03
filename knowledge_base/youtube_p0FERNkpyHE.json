@@ -1,0 +1,26 @@
+{
+  "id": "youtube_p0FERNkpyHE",
+  "title": "Introducing RAG 2.0: Agentic RAG + Knowledge Graphs (FREE Template)",
+  "url": "https://www.youtube.com/watch?v=p0FERNkpyHE",
+  "description": "Traditional RAG systems only scratch the surface of what's possible. In this video, I cover an advanced AI agent I created as a free system for you that combines vector search with knowledge graphs to create a powerhouse of an agent that understands relationships, tracks knowledge changes over time, and reasons about complex connections between pieces of information.\n\nThis agent is very extendable and built with PostgreSQL + pgvector for semantic search and Neo4j + Graphiti for temporal knowledge graphs. It automatically chooses between vector search, graph traversal, or hybrid approaches based on the query.\n\nI built the full package here - a complete implementation including semantic chunking, a vector database/knowledge graph pipeline, a FastAPI backend with streaming responses, and a CLI tool to chat with the agent.\n\nFull source code (linked below!) included with support for multiple LLM providers. This is production-ready RAG.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nNeon's free tier is more than enough to cover what you'll need in this guide! But if you do decide that you need to upgrade, you can sign up through this link and get a $100 credit:\n\nhttps://get.neon.com/2cm\n\nI partnered with Neon to get this for you!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCode and instructions for this Agentic RAG Agent here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/agentic-rag-knowledge-graph\n\nLocal AI Package (includes Neo4j for knowledge graphs):\n\nhttps://github.com/coleam00/local-ai-packaged\n\nGraphiti (open source on GitHub):\n\nhttps://github.com/getzep/graphiti\n\nWeaviate article on Agentic RAG:\n\nhttps://weaviate.io/blog/what-is-agentic-rag\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing Agentic RAG + Knowledge Graphs\n01:05 - Unleashing the Power of the Agent Live\n05:21 - Tech Stack for this Agent (Pydantic AI, Graphiti, Postgres, etc.)\n06:31 - What is Agentic RAG and Why is it so Useful?\n10:36 - Set up this Agentic RAG Agent for Yourself!\n12:53 - Database Setup in Neon\n14:00 - Installing Neo4j\n15:07 - Environment Configuration (LLMs, DB, Neo4j, etc.)\n18:17 - Setting up Our Knowledge Base for RAG\n22:35 - Defining How Your Agent Searches\n24:47 - Running and Testing the AI Agent\n28:11 - How I used Claude Code to Build this Agent\n38:22 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos every week - Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250626",
+  "duration": 2328,
+  "view_count": 113103,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

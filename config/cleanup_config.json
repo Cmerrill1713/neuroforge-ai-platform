@@ -1,0 +1,117 @@
+{
+  "cleanup_schedule": {
+    "daily": true,
+    "time": "02:00",
+    "weekly": true,
+    "weekly_day": "sunday"
+  },
+  "file_retention": {
+    "log_files_days": 7,
+    "temp_files_hours": 24,
+    "cache_files_days": 30,
+    "backup_files_days": 14,
+    "test_files_hours": 12
+  },
+  "directories_to_clean": {
+    "logs": {
+      "path": "logs",
+      "patterns": ["*.log", "*.log.*"],
+      "recursive": true,
+      "max_age_days": 7
+    },
+    "temp": {
+      "path": "temp",
+      "patterns": ["*"],
+      "recursive": true,
+      "max_age_hours": 24
+    },
+    "cache": {
+      "path": "cache",
+      "patterns": ["*.cache", "*.tmp", "*.temp"],
+      "recursive": true,
+      "max_age_days": 30
+    },
+    "backups": {
+      "path": "backups",
+      "patterns": ["*"],
+      "recursive": true,
+      "max_age_days": 14
+    },
+    "test_outputs": {
+      "path": ".",
+      "patterns": ["test_*.wav", "test_*.json", "test_*.txt", "test_*.aiff", "test_*.mp3"],
+      "recursive": false,
+      "max_age_hours": 12
+    },
+    "voice_outputs": {
+      "path": ".",
+      "patterns": ["female_voice_*.wav", "fast_voice_*.aiff", "sonia_*.wav", "chatterbox_*.wav", "community_*.wav"],
+      "recursive": false,
+      "max_age_hours": 6
+    },
+    "experiment_data": {
+      "path": "temp/experiments",
+      "patterns": ["*"],
+      "recursive": true,
+      "max_age_days": 3
+    }
+  },
+  "file_size_limits": {
+    "max_log_file_size_mb": 100,
+    "max_temp_file_size_mb": 50,
+    "max_cache_file_size_mb": 200
+  },
+  "preserve_patterns": [
+    "README.md",
+    "*.py",
+    "*.js",
+    "*.ts",
+    "*.tsx",
+    "*.json",
+    "*.yml",
+    "*.yaml",
+    "*.sh",
+    "*.md",
+    "requirements.txt",
+    "package.json",
+    "Dockerfile*",
+    "docker-compose*.yml",
+    "*.config.js",
+    "*.config.ts",
+    "*.env*",
+    ".gitignore",
+    ".gitattributes",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "*.lock",
+    "yarn.lock",
+    "package-lock.json"
+  ],
+  "cleanup_actions": {
+    "remove_empty_directories": true,
+    "compress_old_logs": true,
+    "clean_python_cache": true,
+    "clean_node_modules_cache": true,
+    "clean_docker_cache": true,
+    "clean_system_temp": true,
+    "clean_voice_files": true,
+    "clean_experiment_data": true
+  },
+  "exclude_patterns": [
+    "node_modules/**",
+    ".git/**",
+    "venv/**",
+    ".venv/**",
+    "__pycache__/**",
+    "*.pyc",
+    "*.pyo",
+    ".DS_Store",
+    "Thumbs.db",
+    "*.swp",
+    "*.swo",
+    "*~",
+    ".vscode/**",
+    ".idea/**"
+  ]
+}

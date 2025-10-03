@@ -1,0 +1,26 @@
+{
+  "id": "youtube_23s2N3ug8B8",
+  "title": "Flowise + n8n - The BEST No Code + Local AI Agent Combo",
+  "url": "https://www.youtube.com/watch?v=23s2N3ug8B8",
+  "description": "The Local AI and n8n sections are LIVE in the oTTomator Think Tank - head and over and come be a part of this super fast growing community!\n\nhttps://thinktank.ottomator.ai\n\nLocal AI Section:\n\nhttps://thinktank.ottomator.ai/c/local-ai/\n\nn8n Section:\n\nhttps://thinktank.ottomator.ai/c/n8n/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIntroducing Flowise to the Local AI Starter Kit - it pairs SUPER well with n8n and in this video I show you exactly how to make the magic happen.\n\nn8n is my favorite no/low code AI automation platform - it's open source, you can host it yourself, it integrates with literally hundreds of applications, and I feel like I can build anything with it.\n\nOne thing I will say though is setting up complex AI agent workflows has a bit of a learning curve... if only there was another platform that made it easier to build these agents while still being able to leverage n8n for your agents to interacts with all your favorite services like Slack and Google Drive...\n\nWell, that's exactly why I'm excited to show you Flowise AND add it to the local AI starter kit I've been building up on my channel. When you combine Flowise's AI-focused workflow builder with n8n's powerful automation capabilities, you can build INCREDIBLY powerful AI agents in the blink of an eye.\n\nIn this video I show you how to exactly that - we'll prototype an AI agent built with Flowise that uses n8n to give the Flowise agent tools to interact with Slack and Google Drive. And the best part is this will all be within the local AI starter kit packaged up with Docker because Flowise is the latest addition after Open WebUI!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nMy version of the local AI starter kit with my improvements, as well as the n8n workflows, Flowise chatflow, and Flowise custom tools:\n\nhttps://github.com/coleam00/ai-agents-masterclass/tree/main/local-ai-packaged\n\nLink to the Local AI Starter Kit by n8n:\n\nhttps://github.com/n8n-io/self-hosted-ai-starter-kit\n\nFlowise:\n\nhttps://flowiseai.com/\n\nI recommended GitHub Desktop and Docker Desktop in the video - here are the links for both:\n\nhttps://desktop.github.com/download/\nhttps://www.docker.com/products/docker-desktop/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Exciting Announcements\n00:30 - Intro - Flowise + n8n\n02:39 - Flowise Overview\n03:55 - Running the Local AI Starter Kit with Flowise Included\n07:06 - Building an Agent with Flowise\n09:53 - Connecting Ollama to Our Agent\n13:35 - Adding Brave Web Search as a Tool\n15:39 - Integrating Flowise with n8n\n22:38 - Souping up our Agent with a Ton of Tools\n25:49 - Testing our Agent!\n28:40 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT! Sundays and Wednesdays are for everything AI, focusing on providing insane and practical educational value. I will also post sometimes on Fridays at 7:00 PM CDT - specifically for platform showcases - sometimes sponsored, always creative in approach!",
+  "upload_date": "20241205",
+  "duration": 1751,
+  "view_count": 60758,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

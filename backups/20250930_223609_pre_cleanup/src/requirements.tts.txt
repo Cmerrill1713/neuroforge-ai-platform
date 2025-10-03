@@ -1,0 +1,17 @@
+# TTS Server Requirements (Linux compatible)
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# TTS Dependencies
+edge-tts==6.1.9
+torch>=2.1.0
+torchaudio>=2.1.0
+chatterbox-tts>=0.1.0
+
+# Utilities
+httpx==0.25.2
+aiofiles==23.2.1
+python-dateutil==2.8.2
+
+# Note: MLX dependencies excluded as they are Apple Silicon specific

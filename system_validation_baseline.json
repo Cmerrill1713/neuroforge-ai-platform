@@ -1,0 +1,187 @@
+{
+  "system_info": {
+    "cpu_cores": 24,
+    "total_memory_gb": 64.0,
+    "available_memory_gb": 39.47,
+    "memory_usage_percent": 38.3,
+    "disk_total_gb": 926.35,
+    "disk_used_gb": 10.49,
+    "disk_usage_percent": 1.13,
+    "docker_containers": [
+      {
+        "name": "lightweight-doc-agent",
+        "status": "Up 2 hours (healthy)",
+        "ports": "0.0.0.0:8010->8010/tcp, [::]:8010->8010/tcp"
+      },
+      {
+        "name": "agentic-engineering-platform-agentic-platform-1",
+        "status": "Up 15 hours (healthy)",
+        "ports": "0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp"
+      },
+      {
+        "name": "unified-knowledge-base",
+        "status": "Up 15 hours (healthy)",
+        "ports": "0.0.0.0:8001->8000/tcp, [::]:8001->8000/tcp"
+      },
+      {
+        "name": "weaviate",
+        "status": "Up 2 hours (healthy)",
+        "ports": "0.0.0.0:50051->50051/tcp, [::]:50051->50051/tcp, 0.0.0.0:8090->8080/tcp, [::]:8090->8080/tcp"
+      },
+      {
+        "name": "agentic-searxng",
+        "status": "Up 15 hours (healthy)",
+        "ports": "0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp"
+      },
+      {
+        "name": "redis-exporter",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:9121->9121/tcp, [::]:9121->9121/tcp"
+      },
+      {
+        "name": "db-exporter",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:9187->9187/tcp, [::]:9187->9187/tcp"
+      },
+      {
+        "name": "db",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp"
+      },
+      {
+        "name": "redis",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp"
+      },
+      {
+        "name": "agentic-alertmanager",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:9093->9093/tcp, [::]:9093->9093/tcp"
+      },
+      {
+        "name": "agentic-node-exporter",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:9100->9100/tcp, [::]:9100->9100/tcp"
+      },
+      {
+        "name": "agentic-nginx",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp"
+      },
+      {
+        "name": "agentic-grafana",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:3002->3000/tcp, [::]:3002->3000/tcp"
+      },
+      {
+        "name": "agentic-kibana",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:5601->5601/tcp, [::]:5601->5601/tcp"
+      },
+      {
+        "name": "agentic-monitoring",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp"
+      },
+      {
+        "name": "agentic-logging",
+        "status": "Up 15 hours",
+        "ports": "0.0.0.0:9200->9200/tcp, [::]:9200->9200/tcp"
+      }
+    ],
+    "timestamp": "2025-10-01T20:47:36.193980"
+  },
+  "api_endpoints": {
+    "main_api": {
+      "url": "http://localhost:8004",
+      "status_code": 200,
+      "response_time_ms": 7.015228271484375,
+      "available": true,
+      "error": null
+    },
+    "evolutionary_api": {
+      "url": "http://localhost:8005",
+      "status_code": 200,
+      "response_time_ms": 4.1370391845703125,
+      "available": true,
+      "error": null
+    },
+    "unified_kb": {
+      "url": "http://localhost:8001",
+      "status_code": 200,
+      "response_time_ms": 2.638101577758789,
+      "available": true,
+      "error": null
+    },
+    "weaviate": {
+      "url": "http://localhost:8090",
+      "status_code": 200,
+      "response_time_ms": 10.235786437988281,
+      "available": true,
+      "error": null
+    }
+  },
+  "database_performance": {
+    "connection_time_ms": 22.00484275817871,
+    "simple_query_time_ms": 1.7473697662353516,
+    "tables": {
+      "knowledge_sources": 3,
+      "system_metrics": 0,
+      "audit_logs": 0,
+      "agents": 0,
+      "workflows": 0
+    },
+    "available": true,
+    "error": null
+  },
+  "cache_performance": {
+    "connection_time_ms": 1.8758773803710938,
+    "set_operation_ms": 1.1491775512695312,
+    "get_operation_ms": 0.2110004425048828,
+    "available": true,
+    "error": null
+  },
+  "agent_selection": {
+    "avg_time_ms": 4246.74596786499,
+    "min_time_ms": 519.9458599090576,
+    "max_time_ms": 16729.36964035034,
+    "p95_time_ms": 16729.36964035034,
+    "total_tests": 5,
+    "successful_tests": 5,
+    "available": true
+  },
+  "overall_system": {
+    "avg_response_time_ms": 6891.010284423828,
+    "min_response_time_ms": 2.671957015991211,
+    "max_response_time_ms": 23328.385829925537,
+    "p95_response_time_ms": 23328.385829925537,
+    "success_rate": 1.0,
+    "total_tests": 5,
+    "successful_tests": 5
+  },
+  "bottlenecks": [
+    {
+      "component": "agent_selection",
+      "severity": "medium",
+      "current_time_ms": 4246.74596786499,
+      "threshold_ms": 2000,
+      "description": "Agent selection taking 4246.7ms (target: <2000ms)"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "component": "agent_selection",
+      "recommendation": "Implement intelligent caching for agent selection results",
+      "expected_improvement": "Reduce selection time by 80-95%",
+      "implementation": "Add Redis cache with 5-minute TTL for agent selection results"
+    },
+    {
+      "priority": "high",
+      "component": "overall_system",
+      "recommendation": "Implement multi-level caching system",
+      "expected_improvement": "Reduce response time by 60-90%",
+      "implementation": "Add L1 (memory) + L2 (Redis) caching with intelligent cache warming"
+    }
+  ]
+}

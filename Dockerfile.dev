@@ -1,0 +1,66 @@
+# ============================================================================
+# NeuroForge Development Dockerfile - Local Usage
+# Optimized for development with hot reload and debugging
+# ============================================================================
+
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create neuroforge user
+RUN useradd --create-home --shell /bin/bash neuroforge
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements first for better caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Install development dependencies
+RUN pip install --no-cache-dir \
+    pytest \
+    pytest-cov \
+    pytest-asyncio \
+    black \
+    isort \
+    flake8 \
+    mypy \
+    uvicorn[standard]
+
+# Copy application code
+COPY . .
+
+# Set permissions
+RUN chown -R neuroforge:neuroforge /app
+
+# Switch to neuroforge user
+USER neuroforge
+
+# Environment variables
+ENV PYTHONPATH=/app \
+    PYTHONUNBUFFERED=1 \
+    ENVIRONMENT=development \
+    DEBUG=true
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD python -c "import requests; requests.get('http://localhost:8000/health')" || exit 1
+
+# Default command
+CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--log-level", "debug"]
+
+# ============================================================================
+# DEVELOPMENT OPTIMIZATIONS
+# ============================================================================
+# Volume mounting for hot reload
+# docker run -v $(pwd):/app neuroforge/api:dev
+# This allows editing code and seeing changes immediately

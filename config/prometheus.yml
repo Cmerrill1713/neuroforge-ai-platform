@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'ai-assistant-api'
+    static_configs:
+      - targets: ['ai-assistant-api:8004']
+    metrics_path: '/api/system/metrics'
+    scrape_interval: 30s

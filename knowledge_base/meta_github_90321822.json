@@ -1,0 +1,33 @@
+{
+  "id": "meta_github_90321822",
+  "title": "audio",
+  "description": "Data manipulation and transformation for audio signal processing, powered by PyTorch",
+  "url": "https://github.com/pytorch/audio",
+  "language": "Python",
+  "stars": 2744,
+  "forks": 727,
+  "created_at": "2017-05-05T00:38:05Z",
+  "updated_at": "2025-09-28T19:00:42Z",
+  "topics": [
+    "audio",
+    "audio-processing",
+    "io",
+    "machine-learning",
+    "python",
+    "pytorch",
+    "speech"
+  ],
+  "readme_content": "",
+  "source_type": "meta_github_repository",
+  "domain": "meta_ai",
+  "keywords": [
+    "pytorch"
+  ],
+  "retrieval_tags": [
+    "meta",
+    "ai",
+    "github",
+    "repository",
+    "research"
+  ]
+}

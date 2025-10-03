@@ -1,0 +1,26 @@
+{
+  "id": "youtube_FQlCWrsUpHo",
+  "title": "Turn ANY Website into LLM Knowledge in Seconds - EVOLVED",
+  "url": "https://www.youtube.com/watch?v=FQlCWrsUpHo",
+  "description": "One of the biggest challenges we face with LLMs is their knowledge is too general and limited for anything new. That’s why RAG is such a huge topic when it comes to AI right now - it’s a method for providing an LLM with external knowledge you curate so it can become an expert at something it wasn’t before - a specific AI framework, your ecommerce store, you name it. The problem is, that “curate” step can be very difficult and slow.\n\nThat is where Crawl4AI comes in! Crawl4AI is an open source web crawling framework specifically designed for scraping websites and formatting the output in the BEST possible way for an LLM to understand. Plus it’s VERY fast (hence turning a website into LLM knowledge in seconds). I’ve covered in on my channel before, but now I’ve evolved how I’ve used it and I want to share that with you! I’ve created a template which I cover in this video that shows you how to use Crawl4AI to pretty much scrape ANY website with a few different strategies!\n\nI’ve got you covered no matter if you are crawling sitemaps, llms.txt pages, or scraping a full site recursively through the navigation!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nSign up for Aqua Voice with the link below and use the code ICEWATER when you check out for a 50% discount! I use Aqua Voice myself everywhere now, especially in my AI coding assistants, so it’s a genuine recommendation from me!\n\nhttps://withaqua.com/r/cole/YTv1\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nMy Crawl4AI Agent (free template for you!):\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/crawl4AI-agent-v2\n\nCrawl4AI Documentation:\n\nhttps://docs.crawl4ai.com/\n\nCrawl4AI GitHub:\n\nhttps://github.com/unclecode/crawl4ai\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - The Magic of Crawl4AI\n01:01 - Crawl4AI Quickstart\n03:23 - Simple Crawl4AI Demo\n05:16 - Crawling Strategy #1 - Sitemaps\n05:53 - Crawling Strategy #2 - Recursive Scraping\n06:17 - Crawling Strategy #3 - llms-full.txt\n07:14 - Introducing my Crawl4AI Templates\n09:34 - Aqua Voice\n11:13 - Main RAG Agent Template\n12:04 - Crawl4AI Strategies in Action\n15:21 - Crawl4AI RAG Demo\n17:15 - Deep Dive into the Crawl4AI Implementations\n23:12 - Important Archon Updates\n25:59 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250501",
+  "duration": 1597,
+  "view_count": 49708,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

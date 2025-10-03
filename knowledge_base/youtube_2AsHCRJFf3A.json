@@ -1,0 +1,27 @@
+{
+  "id": "youtube_2AsHCRJFf3A",
+  "title": "AI Devlog: Coding an AI powered, Code Review, CLI tool | Python, Aider,  ChatGPT",
+  "description": "Learn to code like you're in the future. In this installment, we're advancing the development of \"diffbro,\" our minimal, yet useful CLI tool powered by Python and LLM to get peer reviews BEFORE our peer reviews. For those who've just stumbled upon this, diffbro is designed to enhance your code reviews, ensuring you're ready before the actual peer-review phase. \n\nToday's session is all about integrating GPT model support so we can choose which OpenAI GPT model we use. We'll then add two essential CLI flags that enable diffbro to discern the file types we want to include or exclude for our AI-powered reviews. Across this entire video series you'll notice our emphasis isn't merely on the \"what\" but more so the \"how.\" Our journey leverages the latest, USEFUL AI programming tools. We harness tools like Aider, AI Copilot, ChatGPT, and use Poetry as our python dependency manager. This series is meant to give you insight into the future of AI engineering and GPT engineering on the edge. So, whether you're a seasoned developer or a curious mind, sit back, relax, and immerse yourself in this AI Devlog.\n\n👀 Bro, where can I install diffbro?\ngithub: https://github.com/disler/diffbro\npip: https://pypi.org/project/diffbro/\n\n🤖 Start your AI Driven Development journey.\nhttps://youtu.be/MPYFPvxfGZs\n\n1️⃣ See how diffbro was born.\nhttps://youtu.be/20SpUcFzfYI\n\n🌎 Links\n\nPoetry: https://python-poetry.org/docs/\nAider: https://aider.chat/\nGit Diff: https://git-scm.com/docs/git-diff\n\n\n🖥 Equipment\n\n- Mac book pro 16\" M2 https://support.apple.com/kb/SP890?locale=en_US\n- Fujifilm X-H2s https://fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/\n\n#️⃣ Hashtags\n#aitool #aider #devlog",
+  "url": "https://www.youtube.com/watch?v=2AsHCRJFf3A",
+  "upload_date": "20230828",
+  "duration": 877,
+  "view_count": 1083,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "ai",
+    "coding",
+    "programming",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "902a665de4e8c4e0456c4c66d857ac55"
+}

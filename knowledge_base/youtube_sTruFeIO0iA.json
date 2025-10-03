@@ -1,0 +1,27 @@
+{
+  "id": "youtube_sTruFeIO0iA",
+  "title": "Two-Way Prompts: SIMPLIFY your AI Agents, Agentic Workflows, Personal AI Assistant",
+  "description": "Here's an agentic workflow pattern hiding in PLAIN SIGHT.\n\nIf you've found yourself stuck trying to control the flow of data between you and your AI Agents, this video is for you.\n\nTwo-way prompting is a powerful pattern that can help you build more useful and valuable agentic workflows. It involves a back-and-forth conversation between you and your AI agents to drive outcomes. Two-way prompts are essential multi-step human-in-the-loop interactions. They allow you to provide various types of feedback, such as selecting files, pasting URLs, and giving improvement suggestions to your personal AI assistant, AI Agents, and Agentic Workflows.\n\nAs the engineer, product builder, and user, you are the essential guiding force in your agentic workflows. Focus on driving results for yourself and your users, rather than just building agentic workflows for the sake of it.\n\nEven if you're aiming to build 100% agentic workflows that work without your input, you can use two-way prompts (aka human in the loop) as stepping stones in your engineering while developing fully agentic workflows. Don't hesitate to create partial agentic workflows with human-in-the-loop interactions.\n\nIn this video you'll see firsthand how simple prompts can evolve into a dynamic conversation between you and your AI, turning complex tasks into a seamless dialogue.\n\nUsing v2 Ada, our proof of concept personal AI assistant written in python, we show you the incredible benefits of initiating a two-way, collaborative dialogue. We've added new agentic workflows to our LLM Router to utilize  two-way prompting functionality. From scraping a URL to create usable code to refining a view component with real-time feedback, this video is packed with actionable insights. Using GPT4 Vision model, our AI Assistant is able to build and iterate on a Vue.js component. This idea can be expanded to work on any front-end like react, svelte, raw html, htmx, solid.js, and any front end framework. Using the two-way prompt, our personal ai assistant responds to our needs, making our engineering workflow more efficient and responsive.\n\nJoin us as we demonstrate two-way prompting concept with Ada, breaking down complex processes into simple, conversational steps.\n\nRemember, these new AI patterns with AI Agents and agentic workflows are not about 'using AI' for the sake of it. They are about using AI to drive results for yourself and your users.\n\n📖 Simon Willison’s files-to-prompt:\nhttps://simonwillison.net/2024/Apr/8/files-to-prompt/\n\n🎥 Watch Ada v0 - Personal AI Assistant:\nhttps://youtu.be/kLi4SKlc4HQ\n\n🔬 Personal AI Assistant Gist (Draft/Incomplete v2):\nhttps://gist.github.com/disler/1d926e312b2f46474b1773bace21f014#file-main9_ada_personal_ai_assistant_v02-py\n\n📖 Chapters\n00:00 A Pattern Hiding in Plain Sight\n00:17 Two-Way Prompting\n01:10 Personal AI Assistant Two-Way Prompt\n05:00 Vue Component Agentic Workflow\n08:20 Multi-Step Human In The Loop\n09:04 Essential Insight - You are the asset \n10:09 3 Tiers of Agentic Workflows\n\n#aiagents #agentic #promptengineering",
+  "url": "https://www.youtube.com/watch?v=sTruFeIO0iA",
+  "upload_date": "20240422",
+  "duration": 776,
+  "view_count": 13953,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "python",
+    "react",
+    "ai",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "475f22ecc4303676a6e943d944eae74d"
+}

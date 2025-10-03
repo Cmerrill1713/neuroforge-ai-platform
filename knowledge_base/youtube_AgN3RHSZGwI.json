@@ -1,0 +1,26 @@
+{
+  "id": "youtube_AgN3RHSZGwI",
+  "title": "10x Your AI Agents with this ONE Agent Architecture",
+  "url": "https://www.youtube.com/watch?v=AgN3RHSZGwI",
+  "description": "Complex problems always yield better results when tackled by teams of people with different specializations. The same principle applies to AI agents - individual expertise combined creates exponentially more powerful solutions. Just like people, AI agents perform better the more narrow their role and goals are - it’s all about focus. Taking what could be a single AI agent and fragmenting it into an army of specialized experts.\n\nIn this video, we’ll build a parallel agent architecture using my two favorite frameworks - Pydantic AI and LangGraph, so we can have a group of specialized agents running simultaneously all working to accomplish the same goal.\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nIntegrate anything and automate anything with AI agents using Lutra, check it out here and get started for free!\n\nhttps://lutra.ai/\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nAll the code created in this video can be found here:\n\nhttps://github.com/coleam00/ottomator-agents/tree/main/pydantic-ai-langgraph-parallelization\n\nIf you want to see these AI agent principles used in a full fledged use case (the real deal and it's open source), check out Archon - the AI agent that builds other AI agents using Pydantic AI and LangGraph:\n\nhttps://github.com/coleam00/Archon\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - 10x Your Agents with Agent Specialization\n01:52 - Parallel Agent Architecture Explained Simply\n03:37 - Architecture for Our Travel Planner Assistant\n04:40 - Parallel Specialized Agents Demo\n05:41 - Parallel Agents in Archon\n07:15 - Travel Planner Assistant Overview\n08:33 - Building Our First Specialized Agent\n12:53 - Chatting with Our Specialized Agent\n14:15 - Lutra.ai\n16:51 - The Other Specialized Agents\n18:02 - Synthesizer/Aggregator Agent\n18:50 - Info Gathering Agent\n21:00 - Diving into Our LangGraph Implementation\n22:27 - Defining the State for Our Graph\n23:13 - Creating the Graph Structure\n24:59 - Info Gathering Agent Node\n29:11 - Parallel Specialized Agent Nodes\n31:29 - Synthesizer Agent Node\n32:44 - Finishing Our Graph\n36:06 - Using Our Agent with a Frontend\n38:38 - Final Demo\n40:51 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250324",
+  "duration": 2494,
+  "view_count": 54725,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

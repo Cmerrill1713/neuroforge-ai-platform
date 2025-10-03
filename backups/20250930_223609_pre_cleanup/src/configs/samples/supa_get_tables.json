@@ -1,0 +1,125 @@
+{
+  "test_name": "supabase-rest:postgrestRequest",
+  "description": "Test Supabase PostgREST API to get database tables",
+  "server_type": "supabase-rest",
+  "tool_name": "postgrestRequest",
+  "input_data": {
+    "method": "GET",
+    "endpoint": "/rest/v1/",
+    "headers": {
+      "Accept": "application/json",
+      "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlc3QtcHJvamVjdCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNjQwOTk1MjAwLCJleHAiOjE5NTYzNTUyMDB9.test-key",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlc3QtcHJvamVjdCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNjQwOTk1MjAwLCJleHAiOjE5NTYzNTUyMDB9.test-key"
+    },
+    "params": {
+      "select": "*"
+    },
+    "timeout": 30
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "method": {
+        "type": "string",
+        "enum": ["GET", "POST", "PUT", "DELETE", "PATCH"]
+      },
+      "endpoint": {
+        "type": "string",
+        "pattern": "^/rest/v1/"
+      },
+      "headers": {
+        "type": "object",
+        "properties": {
+          "Accept": {"type": "string"},
+          "apikey": {"type": "string"},
+          "Authorization": {"type": "string"}
+        },
+        "required": ["Accept", "apikey"]
+      },
+      "params": {
+        "type": "object"
+      },
+      "timeout": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 300
+      }
+    },
+    "required": ["method", "endpoint", "headers"]
+  },
+  "expected_response": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["success", "error"]
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "table_name": {
+                "type": "string"
+              },
+              "table_schema": {
+                "type": "string"
+              },
+              "table_type": {
+                "type": "string"
+              }
+            },
+            "required": ["table_name", "table_schema", "table_type"]
+          }
+        },
+        "message": {
+          "type": "string"
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 200,
+          "maximum": 299
+        }
+      },
+      "required": ["status", "data", "status_code"]
+    },
+    "sample_data": {
+      "status": "success",
+      "data": [
+        {
+          "table_name": "users",
+          "table_schema": "public",
+          "table_type": "BASE TABLE"
+        },
+        {
+          "table_name": "posts",
+          "table_schema": "public", 
+          "table_type": "BASE TABLE"
+        },
+        {
+          "table_name": "comments",
+          "table_schema": "public",
+          "table_type": "BASE TABLE"
+        }
+      ],
+      "message": "Tables retrieved successfully",
+      "status_code": 200
+    }
+  },
+  "test_config": {
+    "timeout": 30,
+    "retries": 3,
+    "validate_schema": true,
+    "validate_response": true,
+    "mock_mode": false
+  },
+  "security": {
+    "allowed_methods": ["GET"],
+    "allowed_endpoints": ["/rest/v1/"],
+    "require_auth": true,
+    "rate_limit": {
+      "requests_per_minute": 60
+    }
+  }
+}

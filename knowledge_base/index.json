@@ -21,6 +21,3444 @@
         "LLM"
       ],
       "domain": "artificial intelligence"
+    },
+    {
+      "id": "github_740124302",
+      "title": "1brc-electron",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_1010724836",
+      "title": "agentic-coding-tool-eval",
+      "keywords": [
+        "coding"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_1048048366",
+      "title": "agentic-drop-zones",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_961491303",
+      "title": "aider-mcp-server",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_915759691",
+      "title": "always-on-ai-assistant",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_879340048",
+      "title": "anthropic-computer-use-bash-and-files",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_886283665",
+      "title": "benchy",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_940186339",
+      "title": "claude-3-7-sonnet-starter-pack",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_1014394578",
+      "title": "claude-code-hooks-mastery",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_1019046491",
+      "title": "claude-code-hooks-multi-agent-observability",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_973736537",
+      "title": "claude-code-is-programmable",
+      "keywords": [
+        "coding"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_686670902",
+      "title": "diffbro",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_793122886",
+      "title": "elm-itv-benchmark",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_27191651",
+      "title": "final_stand_1.5",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_758619546",
+      "title": "indydevtools",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_997982750",
+      "title": "infinite-agentic-loop",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_957716837",
+      "title": "just-prompt",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_735184524",
+      "title": "lllm",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_729927728",
+      "title": "llm-prompt-testing-quick-start",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_861351393",
+      "title": "marimo-prompt-library",
+      "keywords": [
+        "react"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_850702851",
+      "title": "mermaid-js-ai-agent",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_714409040",
+      "title": "multi-agent-postgres-data-analytics",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_1035617294",
+      "title": "nano-agent",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_799548764",
+      "title": "omni-complete",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_837984957",
+      "title": "personal-ai-starter-pack",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_868561772",
+      "title": "poc-realtime-ai-assistant",
+      "keywords": [
+        "ai",
+        "api"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_945640412",
+      "title": "pocket-pick",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_994316167",
+      "title": "quick-data-mcp",
+      "keywords": [],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_847386243",
+      "title": "reusable-openai-fine-tune",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "github_933823024",
+      "title": "single-file-agents",
+      "keywords": [
+        "python",
+        "ai"
+      ],
+      "retrieval_tags": [
+        "github",
+        "repository",
+        "code",
+        "development"
+      ],
+      "domain": "software_development",
+      "source_type": "github_repository"
+    },
+    {
+      "id": "youtube_6wR6xblSays",
+      "title": "Agentic Coding ENDGAME: Build your Claude Code SDK Custom Agents",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_luqKnexhpFs",
+      "title": "Agentic Prompt Engineering with Claude Code (For you, your team, and your AGENTS)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Kf5-HWJPTIE",
+      "title": "Elite Context Engineering with Claude Code",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_gyjoXC8lzIw",
+      "title": "Agentic Workflows: BEYOND the Chat UI with Claude Code SDK and Gemini Nano Banana",
+      "keywords": [
+        "react",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_XojxD7hfaD4",
+      "title": "5 Agent PATTERNS to SIMPLIFY Your Agentic Coding (Claude Code, Gemini CLI, MCP)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_mJhsWrEv-Go",
+      "title": "Engineers… Claude Code Output Styles Are Here. Don’t Miss This TREND",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_tcZ3W8QYirQ",
+      "title": "GPT-5 Agentic Coding with Claude Code",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_SSbqXzRsC6s",
+      "title": "I'm ADDICTED to Claude Code: RATE LIMITS, Agent Models, and CC Alternatives",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_7B2HJr0Y68g",
+      "title": "My Claude Code Sub Agents BUILD THEMSELVES",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_6fCqj4xFCZI",
+      "title": "How Claude Code CHANGED Engineering Forever (and what's next)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_9ijnN985O_c",
+      "title": "I Can SEE EVERYTHING: Claude Code Hooks for Multi Agent Observability",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_J5B9UGTuNoM",
+      "title": "I’m HOOKED on Claude Code Hooks: Advanced Agentic Coding",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Go9W_h7kcjE",
+      "title": "No, Gemini CLI CAN’T touch Claude Code BUT I’d NEVER bet against Google",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_nu3VDVzAVaE",
+      "title": "3 ODDLY Useful Claude Code Repos No One Talks About",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_7LWl3EbcFTc",
+      "title": "Yup, Claude Code Plan Mode is here: The Senior Engineer's Workflow",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_9ipM_vDwflI",
+      "title": "I just BROKE Claude Code: Infinite Agentic Coding GLITCH (Don’t try this at work)",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_mKEq_YaJjPI",
+      "title": "How I build Agentic MCP Servers for Claude Code (Prompts CHANGE Everything)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_f8RnRuaxee8",
+      "title": "Claude 4 ADVANCED AI Coding: How I PARALLELIZE Claude Code with Git Worktrees",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_y-_xknNOapo",
+      "title": "Claude Code INSIDERS: Codex FIRST Look and 5 AI Coding INSIGHTS",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_LvkZuY7rJOM",
+      "title": "Voice to Claude Code: SPEAK to SHIP Agentic Coding AI Assistant",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_hGg3nWp7afg",
+      "title": "Agentic Claude Code: 3 Codebase Folders for TOP 1% AI Coding",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_2TIXl2rlA6Q",
+      "title": "AI Coding is NOT ENOUGH: Claude Code's NEXT LEVEL Agentic Coding FEATURE",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_LEMLntjfihA",
+      "title": "Making o3 My CEO. Codex RIPS OFF Claude Code?! SOTA LLM Playbook",
+      "keywords": [
+        "python",
+        "typescript",
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_FPTlP6Adefo",
+      "title": "My SIMPLE FRAMEWORK to PICK the BEST AI Coding Tools (Aider vs Claude Code)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_QzZ97noEapA",
+      "title": "CRACKED Aider AND Claude Code Combo. Zuck ships Llama4. Gemini 2.5 Pro is SOTA?",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_zcHY88VI1oc",
+      "title": "Claude Code's Most IMPORTANT FEATURE: Custom Slash Commands (State of AI Coding)",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_dabeidyv5dg",
+      "title": "BEST Codebase Architecture for AI Coding and AI Agents (Aider, Claude Code, Cursor)",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_wFQ_i9XdkXU",
+      "title": "My TOP 6 Claude Code PRO tips for AI Coding (MCP + Agents)",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_d-SyGA0Avtw",
+      "title": "AI Coding DEVLOG: Claude Code has CHANGED Software Engineering",
+      "keywords": [
+        "ai",
+        "tutorial",
+        "coding",
+        "programming",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_jCVO57fZIfM",
+      "title": "GPT-4.5 FLOP? Claude 3.7 Sonnet STARTER PACK. What is Claude Code REALLY?",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_vq-vTsbSSZ0",
+      "title": "Scale your AI Coding IMPACT with Devin, Cursor, Aider and this ONE Pattern",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_YAIJV48QlXc",
+      "title": "Single File Agents. Python Scripts with Astral UV. AI Coding with Aider Architect",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_PPE0RZN___o",
+      "title": "AGE OF AGENTS: How to EVOLVE your o3-mini Prompts into Multi-Tool AI Agents",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_K5xs669ANQo",
+      "title": "Yup, o3-mini is WORTH your money. Meta Q4 Earnings Prompt. Deepseek and Llama4 Insights",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_UgSGtBZnwEo",
+      "title": "No, Deepseek R1 is NOT \"better\" than o1 BUT you get 25x COMPUTE",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_y_ywOVQyafE",
+      "title": "o1 Architect: AI Coding LIMIT TESTING to prepare for o3-mini (Aider + Deepseek)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_zoBwIi4ZiTA",
+      "title": "Deepseek AI Assistant: ALWAYS ON Python AI Agent for Engineers that SHIP",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_OwUm-4I22QI",
+      "title": "M4 MAX MacBook Pro BENCHMARKED: Deepseek v3 vs Qwen, Phi-4 and Llama on Ollama",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_BcSuuvWvR-c",
+      "title": "AI Coding is here... What’s next? My 2025 GenAI BIG BETS (AI Agents, o3, Paic)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_dDbfmRDWAv0",
+      "title": "AI Coding with AIDER Architect: Gemini 2.0 Flash vs Claude 3.5 Sonnet (o1, o3 PLAN)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_pytSbBRoFw8",
+      "title": "My Framework for LLM Use Cases and AI Tooling (With Phi-4, Gemini 2.0, Llama 3.3)",
+      "keywords": [
+        "ai",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_yZGb9-Z9DG0",
+      "title": "Meta Prompting with o1, o1 Pro Mode, and ChatGPT Pro (Compute on Compute)",
+      "keywords": [
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_YoeNwp9je6E",
+      "title": "Yup, QwQ is CRACKED: Prompt Chaining with Qwen and QwQ reasoning model (Ollama + LLM)",
+      "keywords": [
+        "aws",
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_ujnLJru2LIs",
+      "title": "Prompt Engineering Master Class for ENGINEERS with Ollama and LLM (Q4 2024 Update)",
+      "keywords": [
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_ZlljCLhq814",
+      "title": "Best LLM for Parallel Function Calling: 14 LLM, 420 Prompt, 1 Winner Benchmark",
+      "keywords": [
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_1ObiaSiA8BQ",
+      "title": "Claude 3.5 Haiku are you good bro? LLM Autocomplete Benchmark (Predictive Outputs)",
+      "keywords": [
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_tElgVPUargw",
+      "title": "AI Coding with Aider Architect, Cursor and AI Agents. (Plans for o1 BASED engineering)",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_FxwA0DLxyrw",
+      "title": "Anthropic Computer Use. Where is Claude 3.5 Opus? Sonnet File and Bash Tools",
+      "keywords": [
+        "ai",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_4SnvMieJiuw",
+      "title": "AI Engineering 2025 PLAN: Max out AI COMPUTE for o1 Preview, Realtime API, and AI Assistants",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "api",
+        "database"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_090oR--s__8",
+      "title": "Senior Engineer’s AI Assistant: Realtime API and AI Agents built to SHIP for you",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_vN0t-kcPOXo",
+      "title": "Realtime API with Tool Chaining. ADA is BACK. o1 assistant FILE AI Agents",
+      "keywords": [
+        "python",
+        "ai",
+        "programming",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_VC6QCEXERpU",
+      "title": "How good is llama 3.2 REALLY? Ollama SLM & LLM Prompt Ranking (Qwen, Phi, Gemini Flash)",
+      "keywords": [
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_PcLkBkQujMI",
+      "title": "Engineer your Prompt Library: Marimo Notebooks with o1-mini, Claude, Gemini",
+      "keywords": [
+        "python",
+        "react",
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_GUVrOa4V8iE",
+      "title": "\"We were right\" - How to use o1-preview and o1-mini REASONING models",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_QlUt06XLbJE",
+      "title": "SECRET SAUCE of AI Coding? AI Devlog with Aider, Cursor, Bun and Notion",
+      "keywords": [
+        "typescript",
+        "ai",
+        "tutorial",
+        "coding",
+        "programming",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_ag-KxYS8Vuw",
+      "title": "Cursor is great BUT Aider is the OG AI Coding King (Mermaid Diagram AI Agent)",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_VLIOgP8MWqI",
+      "title": "Why fine-tune LLMs? GPT-4o fine-tune for PERFECT FLUX Image Prompts",
+      "keywords": [
+        "ai",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_V9_RzjqCXP8",
+      "title": "Cursor Composer: MULTI-FILE AI Coding for engineers that SHIP",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_PoO7Zjsvx0k",
+      "title": "Coding RELIABLE AI Agents: Legit Structured Outputs Use Cases (Strawberry Agent?)",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_ikaKpfUOb0U",
+      "title": "CONTROL your Personal AI Assistant with GPT-4o mini & ElevenLabs (AI TTS & STT)",
+      "keywords": [
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_W6Z0U11nnhA",
+      "title": "BEST Prompt Format: Markdown, XML, or Raw? CONFIRMED on Llama 3.1 & Promptfoo",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_0Z2BQPuUY50",
+      "title": "GPT-4o mini Prompt Chain: Legit TRICK for DIRT CHEAP AI with SOTA Accuracy",
+      "keywords": [
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_iww1O8WngUU",
+      "title": "Fusion Chain: NEED the BEST Prompt Results at ANY COST? Watch this…",
+      "keywords": [
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_1IK69XZZegU",
+      "title": "AI Coding Devlog - Aider ON Sonnet 3.5 - CURATE your ELITE information DIET",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_F0eOYrA6ggY",
+      "title": "USEFUL Agentic Workflow: AUTO-Updating Blog with Claude 3.5 Sonnet",
+      "keywords": [
+        "python",
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_UOcYsrnSNok",
+      "title": "When to use Prompt Chains. DITCHING LangChain. ALL HAIL Claude 3.5 Sonnet",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_4hSFcjspGOw",
+      "title": "MASTER the Prompt: TOP 5 Elements for Reusable Prompts, AI Agents, Agentic Workflows",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_2j_fgMPJGM0",
+      "title": "AI Coding Tool Breakdown: AI Copilots vs AI Coding Assistants vs AI Software Engineers",
+      "keywords": [
+        "ai",
+        "tutorial",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_YALpX8oOn78",
+      "title": "ALL ROADS LEAD to AI CODING: Cursor, Aider in the browser, Multi file Prompting",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_2vdVJPIMg6M",
+      "title": "From Prompts to Products: Four KEY Pillars to MAX your GenAI OUTPUT",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_gdrgFCldvrA",
+      "title": "No, ChatGPT SKY is NOT an AI Assistant: How to LEVERAGE GPT-4o, GenAI, and Gemini",
+      "keywords": [
+        "ai",
+        "api",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_28zuliyLd5Q",
+      "title": "Llama-3 70b OMNI-complete: AUTO Improving AUTOcomplete Prompt for EVERYTHING (Groq)",
+      "keywords": [
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_JBgUmTUQx0I",
+      "title": "GPT-5 is coming: 3 ways to prepare for a 100x improvement in SOTA LLMs",
+      "keywords": [
+        "ai",
+        "programming"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_sb9wSWeOPI4",
+      "title": "ZERO Cost AI Agents: Are ELMs ready for your prompts? (Llama3, Ollama, Promptfoo, BUN)",
+      "keywords": [
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_sTruFeIO0iA",
+      "title": "Two-Way Prompts: SIMPLIFY your AI Agents, Agentic Workflows, Personal AI Assistant",
+      "keywords": [
+        "python",
+        "react",
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_kLi4SKlc4HQ",
+      "title": "MOST Important AGENTIC Application - Speech to Text to AI Agents (TTS, STT, LLM Router)",
+      "keywords": [
+        "python",
+        "typescript",
+        "aws",
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_8wSH4XukcH8",
+      "title": "Agent OS: LLM OS Micro Architecture for Composable, Reusable AI Agents",
+      "keywords": [
+        "ai",
+        "programming",
+        "api",
+        "database"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_QV6kaNFyoyQ",
+      "title": "7 Prompt Chains for Decision Making, Self Correcting, Reliable AI Agents",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_P8lQjpTqi50",
+      "title": "Top 3 BEST AI Coding Assistant ONE SHOT Prompts (Claude 3 Opus + Cursor)",
+      "keywords": [
+        "python",
+        "javascript",
+        "typescript",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_9xX5ztto7s4",
+      "title": "Do companies NEED software engineers? Let's talk Devin, Layoffs, AI Coding Assistants.",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Cy1Z8J0anKw",
+      "title": "Last LLM Standing WINS: Groq LPU - Anthropic OPUS - OpenAI - Gemini Pro -  LLM Benchmarks",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming",
+        "database"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Smklr44N8QU",
+      "title": "Is Cursor's Copilot++ BETTER than Github Copilot? FAST AI Coding Master Class",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_T963c-2-COk",
+      "title": "Let Your AI Coding Assistant Write Your Docs (Simple Prompt System)",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_zRt0EmeGeCM",
+      "title": "Sora + Gemini 1.5: INFINITE Content + INFINITE Context (Building ADAPTive LLM apps)",
+      "keywords": [
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_9kS1atYieaU",
+      "title": "Using Apple Vision Pro & LLM Agents to Code Youtube Automation Tools (Proof Of Concept)",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_q3Ld-MxlXmA",
+      "title": "How to Engineer Multi-Agent Tools: Youtube Metadata Automation (LLM Principles)",
+      "keywords": [
+        "ai",
+        "tutorial",
+        "coding",
+        "programming",
+        "api",
+        "database"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_urymhRw86Fc",
+      "title": "Local - ON DEVICE LLMs are the future, but NOT yet - Here’s why",
+      "keywords": [
+        "ai",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_-D-M1etGzPw",
+      "title": "AI Coding Assistants EXPOSED: Tackling 5 BIG Problems (and Solutions) of AI Copilots",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_rwdt6vpUKm8",
+      "title": "Is the GPT Store worth your time? High Output Engineering Macro & Micro Discussion",
+      "keywords": [
+        "ai",
+        "api",
+        "database"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_E6bcyo32zss",
+      "title": "ONE BILLION Row Challenge: AI Coding with Electron, DuckDB, Aider, and Cursor",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "software engineering",
+        "api",
+        "database",
+        "frontend",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_UES89QRc3Sk",
+      "title": "2024 Predictions for Advanced AI & LLM Engineers (Prompts, Job Market, Coding, Big Tech)",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_XnoKvdeZAN8",
+      "title": "Run LOCAL LLMs in ONE line of code - AI Coding llamafile with Mistral with  (DEVLOG)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_V_SyO0t7TZY",
+      "title": "Has the AI KING Returned? GEMINI PRO vs GPT-3.5 TURBO Prompt Testing",
+      "keywords": [
+        "aws",
+        "ai",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_KhINc5XwhKs",
+      "title": "Test Driven PROMPT Engineering: Using Promptfoo to COMPARE Prompts, LLMs, and Providers.",
+      "keywords": [
+        "ai",
+        "tutorial",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_5wROK4lBoeo",
+      "title": "Talk To Your Database - A GPT Multi Agent Postgres Data Analytics Tool",
+      "keywords": [
+        "ai",
+        "programming",
+        "software engineering",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Uf7cYAXe3eI",
+      "title": "Your AI Agents can SELF-CORRECT: Using Assistants API to AUTO FIX SQL Database Errors",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "programming",
+        "software engineering",
+        "api",
+        "database",
+        "backend",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_7EA19-D4-Zo",
+      "title": "Copilot Prompt Engineering: 3 UI Frameworks, 2 AI Agents, 1 Coding Assistant (AIDER CCC)",
+      "keywords": [
+        "python",
+        "react",
+        "ai",
+        "tutorial",
+        "coding",
+        "programming",
+        "software engineering",
+        "api",
+        "database",
+        "frontend",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_KwcrjP3vuy0",
+      "title": "OpenAI Macro & Micro Strategy: Master Assistants API, Threads, Messages, and Runs",
+      "keywords": [
+        "python",
+        "ai",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_XGCWyfA3rgQ",
+      "title": "Using AUTOGEN & GUIDANCE to code LLM Control Flow & JSON Agents (No Prompt Engineering)",
+      "keywords": [
+        "ai",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_UA6IVMDPuC8",
+      "title": "AutoGen SPYWARE: Coding Systems for SUCCESSFUL AI Agents (Postgres Data Analytics)",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_CKo-czvxFkY",
+      "title": "AutoGen Token Tactics: FIRING AI Agents, USELESS Vector Embeddings, GPT-4 Memory Tricks",
+      "keywords": [
+        "ai",
+        "coding",
+        "software engineering",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_4o8tymMQ5GM",
+      "title": "Make AutoGen Consistent: CONTROL your LLM agents for ACCURATE Postgres AI Data Analytics",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_JjVvYDPVrAQ",
+      "title": "One Prompt is NOT enough: Using AutoGen to code a Multi-Agent Postgres AI Tool",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_jmDMusirPKA",
+      "title": "Prompt Engineering an ENTIRE codebase: Postgres Data Analytics AI Agent",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "programming",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_gS5u3j1OXjg",
+      "title": "\"With this prompt, I learned Pytest in 12 minutes\" - Learn ANYTHING with LLMs",
+      "keywords": [
+        "ai",
+        "software engineering",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Ma0jPYj9hyc",
+      "title": "The Javascript Ecosystem Killer: Using Bun, to Learn Bun (with AIDER)",
+      "keywords": [
+        "javascript",
+        "typescript",
+        "ai",
+        "coding",
+        "api",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_wDxZhkQj27Y",
+      "title": "ONE Word Prompts - 3 INSTANTLY useful Prompt Engineering Techniques",
+      "keywords": [
+        "ai",
+        "software engineering",
+        "api",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_5oXh5SvPJ-M",
+      "title": "Introducing DIFFBRO - Your AI powered PEER REVIEWS in one command",
+      "keywords": [
+        "python",
+        "ai",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_2AsHCRJFf3A",
+      "title": "AI Devlog: Coding an AI powered, Code Review, CLI tool | Python, Aider,  ChatGPT",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_20SpUcFzfYI",
+      "title": "Git + AI = DIFFBRO: AI Coding the future of code reviews (python, aider, gpt-4)",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "programming",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_0vVtbMdmbds",
+      "title": "pip install YOUR-PACKAGE: Building your first python with Poetry, AIDER, and ChatGPT",
+      "keywords": [
+        "python",
+        "javascript",
+        "ai",
+        "tutorial",
+        "coding",
+        "deployment"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_AeASAsPp9LE",
+      "title": "I'm DONE writing tests - using AI copilot AIDER to AUTOMATE testing.",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "api",
+        "database"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_PwWvMvZa7zQ",
+      "title": "Advanced Prompt Engineering Techniques for FRONT-END Engineers",
+      "keywords": [
+        "react",
+        "ai",
+        "software engineering",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_CpgItn8ccKY",
+      "title": "Learn Anything With AI: HTMX - FLASK - AIDER (asmr devlog)",
+      "keywords": [
+        "python",
+        "react",
+        "ai",
+        "coding",
+        "programming",
+        "frontend",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_PPR675_JSM8",
+      "title": "Writing code without coding - Browser TTS with AIDER (ASMR DEVLOG)",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_MPYFPvxfGZs",
+      "title": "Let's Get Fired: Using AI Coding Assistant AIDER to do my Engineering Job",
+      "keywords": [
+        "javascript",
+        "typescript",
+        "ai",
+        "coding",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_TkBZc6lW9Rs",
+      "title": "useComposable - Vue.js Composable Generator (GCP + Serverless + LLM)",
+      "keywords": [
+        "gcp",
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_2-2eJM5ZS_w",
+      "title": "My Top 6 Modern Vue.js VSCode Snippets",
+      "keywords": [
+        "ai",
+        "coding",
+        "frontend",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_oiIN-ljbPI0",
+      "title": "Build VueJS Components While You Sleep: First LLM Agent Network (V2)",
+      "keywords": [
+        "javascript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_BgcsVi13e-M",
+      "title": "Nuxt + Vercel KV: Coding an AI Agent Network MVP (flow state devLog)",
+      "keywords": [
+        "javascript",
+        "typescript",
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_iB-ZPOXzVv8",
+      "title": "Why Use LangChain? A Blunt Overview for Advanced Engineers",
+      "keywords": [
+        "python",
+        "ai"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_gcSS8fwq3Co",
+      "title": "FFmpeg, GPT-4 & WhisperX: Convert Horizontal Videos to Vertical (97% AI)",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_d2SEfmqT__4",
+      "title": "Master Disruption: How Top AI Engineers Will Dominate the GPT-X Era",
+      "keywords": [
+        "ai",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_jQvT2LO0Qr8",
+      "title": "The AI Engineer: The Future of Programming",
+      "keywords": [
+        "python",
+        "ai",
+        "programming"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_X54gMhSVKZU",
+      "title": "Survive the AI age: Managing AI generated content with Notion, Python, Vercel, and Cron.",
+      "keywords": [
+        "python",
+        "ai",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_lyBcbJox4FM",
+      "title": "Let’s Break The Internet: ChatGPT API + Notion Infinite Tweet Generator",
+      "keywords": [
+        "python",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_zyZD_1-9hn0",
+      "title": "Serverless Cron Jobs: Automatically Run Your Serverless Functions With QStash And Vercel",
+      "keywords": [
+        "python",
+        "ai",
+        "devops",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_OZTapO1ztPg",
+      "title": "Going Serverless: Using Vercel Functions for our Notion Twitter App",
+      "keywords": [
+        "python",
+        "ai",
+        "devops",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_M_nkH94X0Z0",
+      "title": "Automate Everything: Using The Notion API to automate tweets. Let’s Code",
+      "keywords": [
+        "python",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_JoCdhP0OkAU",
+      "title": "Notion API In 5 Minutes - Database Write (Add new rows in Python)",
+      "keywords": [
+        "python",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_rQeG6DeUPNs",
+      "title": "Notion API in 5 Minutes: How to Read Notion Databases in Python",
+      "keywords": [
+        "python",
+        "api",
+        "database",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_w09BTkakpWk",
+      "title": "The AI Wave: 3 Years 3 Predictions 3 Actions (ChatGPT will be a Joke)",
+      "keywords": [
+        "ai"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_GSPpYqBgIko",
+      "title": "Notion API in 5 Minutes: Read (Python | Copilot)",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_KENSTonsiEc",
+      "title": "Notion API in 5 Minutes: Write (Python)",
+      "keywords": [
+        "python",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_KyllgpvQFuI",
+      "title": "Notion API In 5 Minutes: Authentication (Python)",
+      "keywords": [
+        "python",
+        "ai",
+        "tutorial",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_1OuvEJcVWh8",
+      "title": "Timeva V2 - Customizable Productivity Timer For The Digital Age",
+      "keywords": [
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_dVBuCR-hPVY",
+      "title": "Indie Hackers Most Important Resource: RUNWAY",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_uHMfz3tDAcA",
+      "title": "Achieving Balance as Engineers who want more from life (Raw Discussion)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_9hm1oogzyic",
+      "title": "Is It Hype? Github Copilot (The Future of Programming)",
+      "keywords": [
+        "python",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_7_kltXdgzlQ",
+      "title": "Senior Engineer Codes New App Feature With Vue.js, Copilot, Electron and TS.",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_EcJfPQCxMe0",
+      "title": "Chill Vue.js 3 Coding (Pom Chaining Part 3)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_Ut7oyOwJYMo",
+      "title": "Programming Pomodoro Chaining PART 2 (Vue 3 Hooks Have Changed Me)",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_qW4GrT-mJBU",
+      "title": "Coding Pomodoro Chaining (Vue.js, Electron, Pinia)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_7bOpok3Kces",
+      "title": "Coding Vue.js Components, Hooks, and Pinia State for Timeva v2",
+      "keywords": [
+        "ai",
+        "coding",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_W77ioAv8ecg",
+      "title": "So you have an idea for an app. What's next? (3 Actions You Can Take Now)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_bccDgMuLGME",
+      "title": "Is it Hype? Learn GraphQL by building an Express + GraphQL App (Part 2)",
+      "keywords": [
+        "nodejs",
+        "ai",
+        "coding",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_yLrUAc0vHx8",
+      "title": "Is It Hype? Senior Engineer Learns GraphQL, Rages and Complains About Docs (RAW TAKE - Part 1)",
+      "keywords": [
+        "ai",
+        "coding",
+        "api"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_iieHofTv3cM",
+      "title": "How to use VCCode Macros for Insane Developer Productivity (5x, 10x, 25x, 100x gains)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_JNyZFTyz4m8",
+      "title": "Vue Animations in 3 Lines of Code. (VueUse Motion)",
+      "keywords": [],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_vS1h2LO53zk",
+      "title": "GitHub Copilot being hella useful when coding Electron + Vue.js app",
+      "keywords": [
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_yi_5AGTnRFo",
+      "title": "Learn Tailwind CSS by making a Cheatsheet | (30 Key CSS Properties)",
+      "keywords": [
+        "ai",
+        "coding"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_ynXKm4qeE6I",
+      "title": "Learn Pinia in 10 MINUTES (Vue.js 3)",
+      "keywords": [
+        "javascript",
+        "git"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_VtDNaiwu8_k",
+      "title": "How to build and launch your next app in 30 days",
+      "keywords": [
+        "ai",
+        "coding",
+        "programming"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_QNk9ZanXhn8",
+      "title": "This is the final devlog",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_X9-hdfIF6uE",
+      "title": "Building a minimal account page for my electron + vue.js app",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "api",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_u-7I_4E-SxA",
+      "title": "How to use dynamic css variables to create custom color themes for Timeva.",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_AUtsaGE05-k",
+      "title": "Coding a micro mode progress bar in vue.js on the balcony like a proper digital nomad.",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_CNA7-3mwPGM",
+      "title": "Coding picker components in vue.js for TIMEVA customizability.",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_eQxES-y6NAE",
+      "title": "Zen mode, Hot keys, and circle progress bar in vue.js",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_0TQNJkR7bK4",
+      "title": "Vue + Electron settings menu and switch component wrapper (GitHub Copilot FTW)",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_B6_SKlI3-4o",
+      "title": "Coding a progress bar using vue.js, progressbar.js, pinia, and electron",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube_X-_1pIuk1Cw",
+      "title": "How I code custom components with vue.js, electron and GitHub Copilot (ASMR)",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
+    },
+    {
+      "id": "youtube__8e9dxQZw1o",
+      "title": "Senior developer codes ENTIRE electron app in 30 days (not for beginners)",
+      "keywords": [
+        "typescript",
+        "ai",
+        "coding",
+        "programming",
+        "git",
+        "github"
+      ],
+      "retrieval_tags": [
+        "youtube",
+        "video",
+        "tutorial",
+        "education"
+      ],
+      "domain": "educational_content",
+      "source_type": "youtube_video"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "id": "youtube_-GmEIqi0yNE",
+  "title": "DeepSeek R1 Just Revolutionized AI Forever",
+  "url": "https://www.youtube.com/watch?v=-GmEIqi0yNE",
+  "description": "DeepSeek JUST released a new open source reasoning LLM, R1. This model is insanely powerful - on par and in some cases even BETTER than OpenAI's o1, and there are even local variations you can run yourself that are on par with o1-mini. Absolutely incredible!\n\nWith DeepSeek R1, bolt.diy (our open source AI coding assistant) is literally better than Lovable, and I've NEVER been able to say that before R1. In this video, I show you what you can build with R1, and I'm sure your mind will be blown just like mine was.\n\nI also show you how to run DeepSeek R1 locally both through Ollama and HuggingFace. Lot of value packed in a shorter video!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out bolt.diy here (installation instructions also here):\n\nhttps://bolt.diy\n\nAnd join our bolt.diy community over in the oTTomator Think Tank!\n\nhttps://thinktank.ottomator.ai\n\nFULL prompt that I used with R1 and Claude 3.5 Sonnet:\n\nhttps://docs.google.com/document/d/1_PEa20LjjeJuOfVSReyy18oCz_nNw4Tp__nGbKYn4PE/\n\nDeepSeek R1 Announcement Post:\n\nhttps://api-docs.deepseek.com/news/news250120\n\nReddit Benchmark for DeepSeek R1:\n\nhttps://www.reddit.com/r/LocalLLaMA/comments/1i5q6b9/deepseekr1_and_distilled_benchmarks_color_coded\n\nInstall DeepSeek R1 through Ollama or HuggingFace:\n\nhttps://ollama.com/library/deepseek-r1\nhttps://huggingface.co/deepseek-ai/DeepSeek-R1\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing DeepSeek R1\n01:13 - DeepSeek R1 Performance and Overview\n05:57 - Running R1 Locally - Ollama\n08:58 - Running R1 Locally - HuggingFace\n06:36 - Prompt for Lovable (Full Explanation)\n10:53 - bolt.diy + R1 - the Ultimate Combo\n12:12 - The Prompt for bolt.diy + R1\n14:25 - Building an App with R1\n18:36 - Building an App with Claude 3.5 Sonnet\n20:28 - Outro\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250123",
+  "duration": 1266,
+  "view_count": 72153,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

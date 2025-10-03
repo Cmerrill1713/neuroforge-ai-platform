@@ -1,0 +1,26 @@
+{
+  "id": "youtube_ZoyPqXvnnZ8",
+  "title": "I Built the Ultimate RAG MCP Server for AI Coding (Better than Context7)",
+  "url": "https://www.youtube.com/watch?v=ZoyPqXvnnZ8",
+  "description": "There is no denying that AI coding assistants like Cursor and Windsurf are extremely powerful, but their biggest limitation right now is they hallucinate a LOT when working with specific tools and frameworks.\n\nContext7 is a solution to this problem and I showcased it recently, but the tool is starting to become a mess, it isn't actually open source, and also what if you want to build your own RAG knowledge base so it can be private and specific to your tech stack?\n\nWell in this video, I introduce you to an MCP server I built that replaces Context7 and is completely free and open source. You can use it to crawl ANY website, build up a knowledge base in Supabase, and use it anywhere thanks to the power MCP! \n\nThis is the ultimate solution to provide instant RAG to any AI coding assistant or AI agent, and I'm going to keep making it more powerful and also integrate it with Archon (my AI agent builder). I put so much work into this for you - please enjoy it!\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nCheck out Lindy if you want to easily build AI automations with no code that scale *unbelievably* well thanks to their new Agent Swarms:\n\nhttps://go.lindy.ai/cole-medin\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nThe Crawl4AI RAG MCP Server:\n\nhttps://github.com/coleam00/mcp-crawl4ai-rag\n\nArchon:\n\nhttps://github.com/coleam00/Archon\n\nMy template for building your own MCP servers:\n\nhttps://youtu.be/lbyPJqCI-tw\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n00:00 - Introducing my Crawl4AI RAG MCP Server\n01:38 - Limitations of Context7 (and Other Existing Solutions)\n03:35 - Crawling + RAG in Action (Live Demo)\n09:35 - Results from Using the Crawl4AI MCP Server\n12:03 - Lindy\n13:45 - My Vision for This Server (including Integrating with Archon!)\n17:21 - Diving into the Core Capabilities\n20:05 - Installation Instructions (Use it Yourself!)\n26:58 - Final Thoughts\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nJoin me as I push the limits of what is possible with AI. I'll be uploading videos at least two times a week - Sundays and Wednesdays at 7:00 PM CDT!",
+  "upload_date": "20250505",
+  "duration": 1702,
+  "view_count": 64520,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "colemedin",
+    "youtube",
+    "video",
+    "agentic",
+    "mcp",
+    "2025"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "colemedin",
+    "2025"
+  ]
+}

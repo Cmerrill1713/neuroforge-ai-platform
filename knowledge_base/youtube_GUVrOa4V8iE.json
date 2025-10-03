@@ -1,0 +1,26 @@
+{
+  "id": "youtube_GUVrOa4V8iE",
+  "title": "\"We were right\" - How to use o1-preview and o1-mini REASONING models",
+  "description": "🔥 We were right... OpenAI just proved it. o1 is here... and i'll be honest... This model is NOT easy to use.\n\n📚 Resources:\n- Simon Willison's article: https://simonwillison.net/2024/Sep/12/openai-o1/\n- Simon Willison's LLM: https://github.com/simonw/llm\n- Simon Willison's files-to-prompt: https://github.com/simonw/files-to-prompt/tree/0.3\n- OpenAI Reasoning Models: https://platform.openai.com/docs/guides/reasoning/reasoning\n- OpenAI Announcement Post: https://openai.com/index/introducing-openai-o1-preview/\n- Hacker News Discussion: https://news.ycombinator.com/item?id=41527143\n- Best Prompt Format: https://youtu.be/W6Z0U11nnhA\n- When to Use Prompt Chains: https://youtu.be/UOcYsrnSNok\n- Prompt Chaining Gist: https://gist.github.com/disler/d51d7e37c3e5f8d277d8e0a71f4a1d2e\n\n🚀 In this video, we dive deep into OpenAI's latest o1 reasoning models, o1-preview and o1-mini, showing you exactly how to leverage them before everyone else! We've been championing prompt chaining and chain of thought techniques, and now OpenAI has embedded these patterns into their new o1 series. Join IndyDevDan as we explore how these reasoning models can revolutionize your AI projects—from AI coding to sentiment analysis on platforms like Hacker News.\n\n🔥 We'll walk through three practical examples demonstrating how to use these new reasoning models effectively. But be warned—the o1 models require a different approach to prompt engineering. We'll use tools from one of our favorite engineers, Simon Willison, to help you get the most out of these models.\n\n📈 See how our AI predictions have come true, and learn how to stay ahead in this rapidly evolving field.\n\n🤖 Whether you're into AI prediction, AI coding, Prompt Engineering or just fascinated by the latest advancements from OpenAI, this video is packed with insights you won't want to miss!\n\n📖 Chapters\n00:00 We were right - the prompt chaining based o1 series is here\n01:28 o1-preview vs Claude 3.5 - Generating YouTube Chapters\n02:35 o1-mini - Setup Simonw's CLI LLM library\n07:58 o1-preview - AI Coding Meta Review\n16:35 o1-preview - Hacker News Sentiment Analysis\n27:44 What's Next - The Future with Reasoning Models\n\n#openai #promptengineering #aicoding",
+  "url": "https://www.youtube.com/watch?v=GUVrOa4V8iE",
+  "upload_date": "20240916",
+  "duration": 1982,
+  "view_count": 25713,
+  "transcript": "",
+  "source_type": "youtube_video",
+  "domain": "educational_content",
+  "keywords": [
+    "ai",
+    "coding",
+    "api",
+    "git",
+    "github"
+  ],
+  "retrieval_tags": [
+    "youtube",
+    "video",
+    "tutorial",
+    "education"
+  ],
+  "content_hash": "8dcc172c81ffd45857593b8ed50f06c8"
+}
