@@ -8,6 +8,7 @@ Based on FastAPI best practices from the comprehensive improvement plan.
 
 import asyncio
 import logging
+import requests
 from typing import Dict, Any, List, Optional, Union
 from datetime import datetime
 from pathlib import Path
@@ -251,6 +252,7 @@ class ConsolidatedAPIRouter:
 
                 # Process chat request with intent detection and action execution
                 message_lower = request.message.lower()
+                base_url = "http://localhost:8004"  # Define base URL for internal API calls
                 
                 # Intent detection and action routing
                 if any(keyword in message_lower for keyword in ["system status", "system health", "status", "health"]):
