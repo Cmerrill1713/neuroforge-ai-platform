@@ -1,7 +1,7 @@
 # Core FastAPI dependencies
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
-gunicorn==21.2.0
+gunicorn==22.0.0
 
 # Database dependencies
 sqlalchemy==2.0.23
@@ -15,7 +15,7 @@ slowapi==0.1.9
 # Authentication and security
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-python-multipart==0.0.6
+python-multipart==0.0.18
 
 # Monitoring and logging
 sentry-sdk[fastapi]==1.38.0
@@ -27,8 +27,8 @@ pydantic[email]==2.5.0
 python-dotenv==1.0.0
 
 # AI/ML dependencies (without MLX for Docker)
-torch==2.1.0
-transformers==4.35.2
+torch==2.8.0
+transformers==4.53.0
 ollama==0.1.7
 edge-tts==6.1.9
 torchaudio==2.1.0

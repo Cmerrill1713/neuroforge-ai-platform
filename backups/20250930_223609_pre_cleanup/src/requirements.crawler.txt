@@ -5,14 +5,14 @@
 PyGithub==1.59.1
 
 # YouTube downloading and processing
-yt-dlp==2023.12.30
+yt-dlp==2024.7.7
 
 # Web scraping and parsing
 beautifulsoup4==4.12.2
 lxml==4.9.3
 
 # HTTP client
-aiohttp==3.9.1
+aiohttp==3.12.14
 
 # Additional utilities
 python-dateutil==2.8.2
