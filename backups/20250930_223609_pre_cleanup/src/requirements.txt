@@ -47,7 +47,7 @@ chatterbox-tts==0.1.0
 openai-whisper==20231117
 
 # MLX (Apple Silicon)
-mlx==0.8.1
+mlx==0.29.4
 mlx-lm==0.8.0
 
 # Utilities
