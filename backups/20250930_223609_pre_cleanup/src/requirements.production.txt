@@ -14,6 +14,6 @@ sqlalchemy==2.0.30
 
 # MLX dependencies (if using MLX models)
 mlx-lm==0.0.6
-mlx==0.8.0
+mlx==0.29.4
 numpy==1.24.3
 scikit-learn==1.5.0
